@@ -1,0 +1,14 @@
+/build
+*.aux
+*.idx
+*.lof
+*.log
+*.lot
+*.maf
+*.mtc
+*.mtc*
+*.out
+*.pdf
+*.gz
+*.toc
+*.upa

@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper,twoside,french]{book}
 \RequirePackage[l2tabu, orthodox]{nag}
+\usepackage{minipage-marginpar}
 \usepackage{cmap}
 \usepackage{lmodern}  
 \usepackage[utf8]{inputenc}
@@ -176,9 +177,11 @@
  %%%%********************************************************************
  \def\endfquote
  {%
+    \vspace*{0.35cm}
  	\endgroup\par%
  	\makebox[0pt][l]{%
  	\hspace{0.8\textwidth}%
+ 	\vspace{0.1cm}%
  	\begin{picture}(0,0)(0,0)%
  	\put(15,8){\makebox(0,0){\scalebox{3}{\color{quotemark}''}}}%
  	\end{picture}}%
@@ -192,7 +195,7 @@
   \else%
   \hfill\mbox{}\hfill\tempa,\ \emph{\tempb},\ \tempc%
   \fi\fi\par%
-  \vspace{0.5em}%
+  \vspace{0.7em}%
  	\end{list}%
  }%
  \makeatother
@@ -225,7 +228,9 @@
 
 
 
-
+\makeatletter
+\renewcommand{\fnum@figure}{Fig. \thefigure}
+\makeatother
 
 
 
@@ -336,7 +341,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \interfootnotelinepenalty=10000
-
+\setlength{\parskip}{\baselineskip}
 \begin{document}
 \begin{titlepage}
 \begin{center}
@@ -344,7 +349,6 @@
 \end{center}
 \end{titlepage}
 \clearpage
-%\pageblanche
 
 \dominitoc
 \pagestyle{fancy}

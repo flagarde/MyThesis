@@ -12,3 +12,6 @@
 *.gz
 *.toc
 *.upa
+*.bbl
+*.blg
+*.upb

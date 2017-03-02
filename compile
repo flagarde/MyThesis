@@ -1,0 +1,2 @@
+#!/bin/sh
+pdflatex MyThesis.tex &&  pdflatex MyThesis.tex && bibtex MyThesis && makeindex -s MyThesis.ist MyThesis.idx && pdflatex MyThesis.tex && okular MyThesis.pdf &

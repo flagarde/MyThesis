@@ -1,2 +1,6 @@
 #!/bin/sh
-pdflatex MyThesis.tex &&  pdflatex MyThesis.tex && bibtex MyThesis && makeindex -s MyThesis.ist MyThesis.idx && pdflatex MyThesis.tex && okular MyThesis.pdf &
+pdflatex MyThesis.tex &&  pdflatex MyThesis.tex && bibtex MyThesis && makeindex -s MyThesis.ist MyThesis.idx && pdflatex MyThesis.tex ;
+echo "Compressing"
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=MyThesisCompressed.pdf MyThesis.pdf
+rm ./MyThesis.pdf
+mv ./MyThesisCompressed.pdf ./MyThesis.pdf

@@ -1,8 +1,8 @@
 \documentclass[12pt,a4paper,twoside,french,openright]{book}
 \RequirePackage[l2tabu, orthodox]{nag}
-\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{caption}
 \RequirePackage{etex}
 \usepackage{biblatex}
@@ -15,15 +15,11 @@
 \usepackage[top=2.05cm,bottom=1.1cm,left=0.5cm,right=5.5cm,marginparsep=0.8cm,marginparwidth=4.4cm]{geometry}
 \usepackage{booktabs}
 %\usepackage{vmargin}
-\usepackage{media9}
 \usepackage{layout}
-\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
 %\usepackage[svgnames,x11names]{xcolor}
 \usepackage{titlesec}
 \usepackage{setspace}
-\usepackage{pstricks}% for pdflatex --shell-escape
-\usepackage{pst-pdf}
-\usepackage{pst-eucl}	
 \usepackage{pgf}
 \usepackage{soul}
 \usepackage[outline]{contour}
@@ -50,11 +46,10 @@
 \usepackage{graphicx}
 \usepackage{eso-pic}
 \usepackage{lipsum}
-%\usepackage{subcaption}
 \usepackage[Bjornstrup]{fncychap}
 \usepackage{hyperref}
 \usepackage[all]{hypcap}
-\usepackage[french]{minitoc}
+\usepackage[french,tight]{minitoc}
 \hypersetup{colorlinks=true,breaklinks=true,bookmarksopen=true,urlcolor=black,linkcolor=gray}                                                    
 \setlength{\fboxsep}{0mm}
 \renewcommand {\mtctitle} {}
@@ -111,8 +106,8 @@
   {\endminipage\par\medskip}
 
 
-\setlength{\mtcindent}{0cm}
 \mtcsetdepth{minitoc}{4}
+\mtcsettitle{minitoc}{Contenu :}
 \usepackage{listings}
 \let\oldfootnotesize\footnotesize
 \renewcommand*{\footnotesize}{\oldfootnotesize\fontsize{5}{7}}
@@ -146,7 +141,18 @@
 \newcommand\chapterillustration{}
 \titlespacing*{\chapter}{0pt}{0pt}{135mm}
 
+\newcommand{\repeatcaption}[2]{%
+  \addtocounter{figure}{-1}%
+  \renewcommand{\thefigure}{\ref{#1}}%
+  \captionsetup{list=no, labelformat=simple, labelsep=colon}%
+  \captionof{figure}{#2}%
+}
 
+\newcommand{\repeatsubcaption}[2]{%
+  \renewcommand{\thesubfigure}{\subref{#1}}%
+  \captionsetup{list=no, labelformat=parens, labelsep=space}%
+  \captionof{subfigure}{#2}%
+}
 
 
 
@@ -210,8 +216,7 @@
  }%
  \makeatother
  %%%%********************************************************************
-
-
+%\mtcsetfeature{minitoc}{open}{\vspace{-1.5cm}}
 \setcounter{tocdepth}{5}
 \makeindex
 
@@ -371,13 +376,13 @@
 \bfseries\color{white}
 \fcolorbox{gray!75}{gray!75}{%
    \begin{minipage}{1\textwidth}
-  \textcolor{gray!75}{\Large{L}}\leftmark 
+  \textcolor{gray!75}{\Large{ql}}\leftmark 
    \end{minipage}%
 }
    \begin{minipage}{1\textwidth}
    \vspace{0.01cm}
    \begin{flushright}
-    \vspace{-1cm} \fontsize{60}{10} \selectfont  \textcolor{black!75}{\thechapter}
+    \vspace{-1.5cm} \fontsize{60}{10} \selectfont  \textcolor{black!75}{\thechapter}
    \end{flushright}
    \end{minipage}
 }
@@ -387,7 +392,7 @@
    \begin{minipage}{1\textwidth}
    \vspace{0.01cm}
    \begin{flushright}
-  \leftmark \textcolor{gray!75}{\Large{L}}
+  \leftmark \textcolor{gray!75}{\Large{ql}}
   \end{flushright}
    \end{minipage}%
 }
@@ -453,12 +458,9 @@ Qui addit scienciam addit et dolorem
     \AtPageLowerRight{%
       {\colorbox{gray!30}{%
         \begin{minipage}[b]{5cm}
-        \vspace{\paperheight}
-        \vspace{0.5cm} 
         \colorbox{gray!75}{%
         \begin{minipage}[b]{5cm}
-        \vspace{0.45cm}
-        \textcolor{gray!75}{.}
+        \textcolor{gray!75}{\Large{lg}}
         \end{minipage}}
         \vspace{27cm}
         \textcolor{white}{\hrule}\vspace{0.2cm}
@@ -469,14 +471,11 @@ Qui addit scienciam addit et dolorem
   }
   {
     \AtPageLowerLeft{%
-      {\colorbox{gray!30}{%
+      {\colorbox{gray!30}{% 
         \begin{minipage}[b]{5cm}
-        \vspace{\paperheight}
-        \vspace{0.5cm} 
         \colorbox{gray!75}{%
         \begin{minipage}[b]{5cm}
-        \vspace{0.45cm}
-        \textcolor{gray!75}{\Large{.}}
+        \textcolor{gray!75}{\Large{lg}}
         \end{minipage}}
         \vspace{27cm}
         \textcolor{white}{\hrule}\vspace{0.2cm}

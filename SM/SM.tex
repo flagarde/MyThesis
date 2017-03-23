@@ -67,8 +67,14 @@ Le début du siécle dernier sera une période florissante pour la physique des 
 À partir de la seconde moitiè du XX\ieme siècle, la Physique Subatomique à tâché à valider cette théorie et notament par la découverte des bosons  $W^{+}$,$W^{-}$ et $Z^{0}$ en 1983,le quarks top $t$ en 1995, neutino tauique en 2000 et du boson de Higgs $h$ en 2012. De nombreux efforts sont également mené afin de continuer l'unification des forces entre elles. On sait désormais que le Modèles Standard, bien que jamais mis en défaut, ne peut tout expliquer. Certaines questions reste ouvertes et cette théorie présente même quelques défaults. La technicouleur, des modèles avec des dimensions supplémentaires ou la Supersymmètrie sont des thèorie d'extension du Modèle Standard; Mais aucune n'as pu être encore validé expérimentalement.
 
 \section{Le Modèle Standard de la physique des particules}
-Au début du siècle dernier, tout tendait à faire croire que le monde était simplement composé d'atomes; eux mêmes constitués d'électron tournant autours d'un noyau composé de protons et neutrons. Tous les atomes connus avait été soigneusement classés dans le tableau périodique de Mendeleiev. Cependant, grâce à l'invention d'accélérateur de particules et l'observation des rayons cosmiques, les physiciens découvrirent bientôt q'une pléthore de particules instables pouvait être créées durant des désintégrations. Les Physiciens tentèrent bientôt de créer et classer ces particules en utilisant des énergies de faisceau de plus en plus grandes. Ce qui amena à la découverte d'une sous structure au sein même des nucléons\footnote{Protons et neutrons.} qui compose le noyau, les quarks (\ref{structure}).
-
+ 
+Au début du siècle dernier, tout tendait à faire croire que le monde était simplement composé d'atomes; eux mêmes constitués d'électron tournant autours d'un noyau composé de protons et neutrons. Tous les atomes connus avait été soigneusement classés dans le tableau périodique de Mendeleiev. Cependant, grâce à l'invention d'accélérateurs linéaires, cyclotrons puis synchrotrons de particules et l'observation des rayons cosmiques, les physiciens découvrirent bientôt q'une pléthore de particules instables pouvait être créées durant des désintégrations. Les Physiciens tentèrent bientôt de créer et classer ces particules en utilisant des énergies de faisceau de plus en plus grandes. Ce qui amena à la découverte d'une sous structure au sein même des nucléons\footnote{Protons et neutrons.} qui compose le noyau, les quarks (\ref{structure}).
+\marginpar
+{
+	\includegraphics[width=\marginparwidth]{SM/cyclotron.png}
+    \captionof{figure}{cyclotron de 27 pouces, accélérateur de $^{2}$H à 4 Mev (Université de Berkley, 1932).}
+    	\label{atom}
+}
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.50\textwidth]{SM/structure.jpg}
@@ -89,11 +95,66 @@ Les particules élémentaires du Modèle Standard, supposées indivisibles\footn
 Chaque particule du Modèle Standard possède des nombres quantiques telles que sa masse, sa charge électrique, en fraction de la charge électrique de l'électron e par convention (e=$1.6x10^-19$ C). Dans le cadre de la théorie, à chaque particules correspond une anti-particule\footnote{Une particule peut être sa propre anti-particule.} qui possède la même masse mais dont les nombres quantiques sont opposés.
 
 \subsubsection{Les fermions}
-Les fermions peuvent être classés en deux catégories selon s'ils sont sensibles à l'interaction forte ou non. Dans le premier cas, ils font partis des \textit{quarks}, sinon ce sont des \textit{leptons}. Ces deux catégories sont elles-mêmes divisés en trois \textit{générations}.
+Les fermions peuvent être classés en deux catégories selon s'ils sont sensibles à l'interaction forte ou non. Dans le premier cas, ils font partis des \textit{quarks}, sinon ce sont des \textit{leptons}. Ces deux catégories sont elles-mêmes divisés en trois \textit{générations} \ref{fermions}.
 
 Les leptons ont une charge électrique entière ($\pm$ 1) pour les électrons, muons et tau, et une charge nulle pour les neutrinos électronique, neutrinos muonique et neutrinos tauique.
-
+\marginpar
+{
+\hspace*{-0.5cm}
+\includegraphics[width=1.2\marginparwidth]{SM/shower.png}
+    \captionof{figure}{Schéma d'une gerbe atmosphèrique.}
+    	\label{gerbe}
+}
 Les quarks ont une charge électrique fractionnaire. On associe à chaque quark un nombre quantique appellé "couleur" (Rouge, Vert et Bleu). Dû à la propriètè de confinement de couleur, un quark ne peut être isolés et doivent se combiner avec un ou deux autre quarks afin de former des \textit{mésons} et des \textit{baryons} respectivement. La somme des deux (trois) couleurs des quarks doit constituer un mésons (baryon) "blanc" \footnote{Selon l'analogie avec la synthèse additive des couleurs.}. Les mésons et baryons sont regroupés sous le terme générique de \textit{hadrons}.
+
+La matière qui nous entoure est composée que de particules de la première génération. Tous les atomes sont composés 'électrons et que quarks $u$ et $d$ qui s'assemblent pour donner des protons $p$ et neutrons $n$. Les autres particules peut être créer si l'énergie disponible est suffisante pour les créer (lors de gerbe atmosphérique où un proton vient interagir avec des particules de notre atmosphère par exemple \ref{gerbe} ou dans un collisionneur).
+
+\definecolor{Orange}{HTML}{FFDD00}
+\definecolor{Orange2}{HTML}{FFC000}
+\definecolor{Green}{HTML}{8FB73E}
+\definecolor{Green2}{HTML}{4EA700}
+\definecolor{Red}{HTML}{EF4123}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|l|l|l|}
+\hline 
+\rowcolor{Orange2} Quarks & 1\iere génération & 2\ieme génération & 3\ieme génération \\ 
+\hline 
+\rowcolor{Orange}\makecell{ Nom \\ Notation \\ Charge \\ Masse}&\makecell{ Up \\ $u$,$\bar{u}$ \\ $\pm \frac{2}{3}$ \\ $0.005$ GeV/c$^2$}& \makecell{ Charm \\ $c$,$\bar{c}$ \\ $\pm \frac{2}{3}$ \\ $1.35$ GeV/c$^2$}& \makecell{ Top \\ $t$,$\bar{t}$ \\ $\pm \frac{2}{3}$ \\ $172.6$ GeV/c$^2$}\\ 
+\hline 
+\rowcolor{Orange}\makecell{Nom \\ Notation \\ Charge \\ Masse}& \makecell{Down \\ $d$,$\bar{d}$ \\ $\mp \frac{1}{3}$ \\ $0.01$ GeV/c$^2$}& \makecell{ Strange \\ $s$,$\bar{s}$ \\ $\mp \frac{1}{3}$ \\ $0.1$ GeV/c$^2$}& \makecell{ Bottom \\ $b$,$\bar{b}$ \\ $\mp \frac{1}{3}$ \\ $1.3$ GeV/c$^2$}\\ 
+\hline 
+\rowcolor{Green2} Leptons & 1\iere génération & 2\ieme génération & 3\ieme génération \\ 
+\hline
+\rowcolor{Green}\makecell{ Nom \\ Notation \\ Charge \\ Masse}& 
+\makecell{Électron \\ $e^{\pm}$ \\ $\pm 1$ \\ $0.511$ MeV/c$^2$} & 
+\makecell{ Muon \\ $\mu^{\pm}$ \\ $\pm 1$ \\ $105.7$ MeV/c$^2$}& 
+\makecell{Tau \\ $\tau^{\pm}$ \\ $\pm 1$ \\ $1777$ MeV/c$^2$}\\ 
+\hline 
+\rowcolor{Green}\makecell{ Nom \\ Notation \\ Charge \\ Masse} & 
+\makecell{Neutrino électronique \\ $\nu_{e}$ \\ $0$ \\ $<0.017$ MeV/c$^2$} & 
+\makecell{Neutrino muonique \\ $\nu_{\mu}$ \\ $0$ \\ $<0.27$ MeV/c$^2$} &
+\makecell{Neutrino tauique \\ $\nu_{\tau}$ \\ $0$ \\ $<35$ MeV/c$^2$}\\ 
+\hline 
+\end{tabular} 
+    \captionof{table}{Fermions: Quarks et Leptons.}
+    	\label{fermions}
+\end{table}
+
+\subsubsection{Les bosons}
+La description perturbative du Modèle Standard utilise l'échange de particules virtuelles, les bosons, afin de decrire l'interraction entre deux particules. Les bosons sont les médiateurs des interactions. Les particules de matière (fermions) interagissent donc entre elles par l'échange de particules de spin 1 correspondant à la force responsable de leur interaction.
+
+Chacunes des quatres interactions possédent donc un ou plusieurs bosons appellés bosons de jauge (bosons vecteurs) :
+
+\begin{itemize}
+\item \textbf{L'interaction gravitationnelle} est la première à avoir été découverte et expliquée (Galilée, Newton). Elle est négligeable à l'échelle atomique. Elle est gouverné par la masses des corps mises en jeu et elle domine à grande échelle ( Univers, Galaxies, Planètes, échelle humaine), son rayon d'action est infini. Son boson est encore activement recherché ( expériences Virgo et Ligo). Un pas décisif à été fait grâce à la détection par ces expériences des ondes Gravitationnelle. Cette interaction est la seule à ne pas être intégrée au Modèle Standard. Elle est actuellement décrite par la Relativité Générale qui est une approche non quantique.
+\newline
+\item \textbf{L'interaction électromagnétique} gouverne les interactions entre les particules chargées. C'est l'une des interactions qui nous ait la plus familière car elle est prépondérante dans notre vie quotidienne ( lumière, chimie, frottements ...). Tout comme la gravité, son rayon d'action est infinie. Son boson médiateur et le photon $\lambda$. C'est la seule interaction capable d'être attractive ou répulsive selon la charges des particules mises en jeu.
+\newline
+\item \textbf{L'interaction faible} à était découverte est comprise à travers la désintégration de particules avec changements de saveurs. Elle fait passer d'un fermion à un autre (par exemple lors de la désintégration $\beta$, elle transforme un neutron en un proton en chengeant un quark d en un quark $u$ et la crétaion d'un neutrino et d'un électron). Les bosons médiateurs de l'interaction sont les bosons $W^{+}$ $W^{-}$ $Z^{0}$. Sa portée est de l'ordre de 10$^{-18}$ m dû à la masse des bosons médiateur\footnote{Conséquence de l'incertitude de Heisenberg : $\Delta E \cdot \Delta t \geq \frac{\hbar}{2}$.}.
+\newline
+\item \textbf{L'interaction forte} permet l'échange de couleur entre les quarks et la création et l'annihilation de particules. Elle est résposable de la cohésion du noyau, et elle lie les nucléons entre eux à l'intérieur du noyau atomique. Ses bosons médiateur sont les gluons et sont au nombre de huit. Bien que les gluons soient supposés de masse nulle, la portée de l'interaction est de l'ordre de 10$^{-15}$ m. Cette portée est la conséquence du principe de confinement de couleur et à la liberté asymptotique qui affecte les quarks. En effet, cette interaction à la propriété de voir son interaction augmenter avec la distance, ce qui à tendance à regrouper les quarks entre eux. Cette propriètè est également responsable du processus d'hadronisation des quarks et de la création de jets.
+\end{itemize}
 
 
 

@@ -4,6 +4,9 @@
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{caption}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor,colortbl}
 \RequirePackage{etex}
 \usepackage{biblatex}
 \usepackage{csquotes}
@@ -17,6 +20,7 @@
 %\usepackage{vmargin}
 \usepackage{layout}
 \usepackage{graphicx}
+\usepackage{makecell}
 %\usepackage[svgnames,x11names]{xcolor}
 \usepackage{titlesec}
 \usepackage{setspace}
@@ -36,6 +40,7 @@
 \usepackage{wrapfig}
 \usepackage{framed}
 \usepackage{colortbl}
+\usepackage{tabularx}
 \usepackage{amssymb,mathrsfs}
 \usepackage{makeidx}
 \usepackage{lettrine}
@@ -70,6 +75,8 @@
 \SetWatermarkText{Brouillon}
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
 \renewcommand{\baselinestretch}{1}
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+%{\renewcommand{\arraystretch}{1.2}% for the vertical padding
 
 \newcommand{\ColorSection}[1]{%
     \colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}

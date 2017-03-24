@@ -88,7 +88,7 @@ La physique des particules peut se résumer à la combinaisons des deux démarch
 
 \subsection{Les particules élémentaires}
 Les particules élémentaires du Modèle Standard, supposées indivisibles\footnote{à ce jour}, peuvent être classées en deux catégories selon leur spin (une propriété quantique intrasèque à chaque particule) :
-\begin{itemize}
+\begin{itemize}[label=$\bullet$]
 \item les \textit{fermions}, ils constituent la matières et sont de spin demi-entier.
 \item les \textit{bosons}, ils sont les messagers de l'interaction et sont de spin entier.
 \end{itemize}
@@ -108,51 +108,57 @@ Les leptons ont une charge électrique entière ($\pm$ 1) pour les électrons, m
 Les quarks ont une charge électrique fractionnaire. On associe à chaque quark un nombre quantique appellé "couleur" (Rouge, Vert et Bleu). Dû à la propriètè de confinement de couleur, un quark ne peut être isolés et doivent se combiner avec un ou deux autre quarks afin de former des \textit{mésons} et des \textit{baryons} respectivement. La somme des deux (trois) couleurs des quarks doit constituer un mésons (baryon) "blanc" \footnote{Selon l'analogie avec la synthèse additive des couleurs.}. Les mésons et baryons sont regroupés sous le terme générique de \textit{hadrons}.
 
 La matière qui nous entoure est composée que de particules de la première génération. Tous les atomes sont composés 'électrons et que quarks $u$ et $d$ qui s'assemblent pour donner des protons $p$ et neutrons $n$. Les autres particules peut être créer si l'énergie disponible est suffisante pour les créer (lors de gerbe atmosphérique où un proton vient interagir avec des particules de notre atmosphère par exemple \ref{gerbe} ou dans un collisionneur).
-
 \definecolor{Orange}{HTML}{FFDD00}
 \definecolor{Orange2}{HTML}{FFC000}
 \definecolor{Green}{HTML}{8FB73E}
 \definecolor{Green2}{HTML}{4EA700}
 \definecolor{Red}{HTML}{EF4123}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \begin{table}[h!]
 \centering
-\begin{tabular}{|c|l|l|l|}
+\begin{tabular}{|P{15mm}|P{39mm}|P{39mm}|P{39mm}|}
 \hline 
-\rowcolor{Orange2} Quarks & 1\iere génération & 2\ieme génération & 3\ieme génération \\ 
+\rowcolor{Orange2}Quarks & 1\iere génération & 2\ieme génération & 3\ieme génération \\
 \hline 
-\rowcolor{Orange}\makecell{ Nom \\ Notation \\ Charge \\ Masse}&\makecell{ Up \\ $u$,$\bar{u}$ \\ $\pm \frac{2}{3}$ \\ $0.005$ GeV/c$^2$}& \makecell{ Charm \\ $c$,$\bar{c}$ \\ $\pm \frac{2}{3}$ \\ $1.35$ GeV/c$^2$}& \makecell{ Top \\ $t$,$\bar{t}$ \\ $\pm \frac{2}{3}$ \\ $172.6$ GeV/c$^2$}\\ 
+\cellcolor{Orange2}\shortstack{ Nom \\ Notation \\  Charge  \\  Masse }&
+\cellcolor{Orange}\shortstack{ Up \\ $u$,$\bar{u}$ \\ $\pm \frac{2}{3}$ \\ $0.005$ GeV/c$^2$} & 
+\cellcolor{Orange}\shortstack{ Charm \\ $c$,$\bar{c}$ \\ $\pm \frac{2}{3}$ \\ $1.35$ GeV/c$^2$}&
+\cellcolor{Orange}\shortstack{ Top \\ $t$,$\bar{t}$ \\ $\pm \frac{2}{3}$ \\ $172.6$ GeV/c$^2$}\\
 \hline 
-\rowcolor{Orange}\makecell{Nom \\ Notation \\ Charge \\ Masse}& \makecell{Down \\ $d$,$\bar{d}$ \\ $\mp \frac{1}{3}$ \\ $0.01$ GeV/c$^2$}& \makecell{ Strange \\ $s$,$\bar{s}$ \\ $\mp \frac{1}{3}$ \\ $0.1$ GeV/c$^2$}& \makecell{ Bottom \\ $b$,$\bar{b}$ \\ $\mp \frac{1}{3}$ \\ $1.3$ GeV/c$^2$}\\ 
+\cellcolor{Orange2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse}& 
+\cellcolor{Orange}\shortstack{ Down \\ $d$,$\bar{d}$ \\ $\mp \frac{1}{3}$ \\ $0.01$ GeV/c$^2$}& 
+\cellcolor{Orange}\shortstack{ Strange \\ $s$,$\bar{s}$ \\ $\mp \frac{1}{3}$ \\ $0.1$ GeV/c$^2$}& 
+\cellcolor{Orange}\shortstack{ Bottom \\ $b$,$\bar{b}$ \\ $\mp \frac{1}{3}$ \\ $1.3$ GeV/c$^2$}\\
 \hline 
-\rowcolor{Green2} Leptons & 1\iere génération & 2\ieme génération & 3\ieme génération \\ 
+\rowcolor{Green2} Leptons & 1\iere génération & 2\ieme génération & 3\ieme génération \\
 \hline
-\rowcolor{Green}\makecell{ Nom \\ Notation \\ Charge \\ Masse}& 
-\makecell{Électron \\ $e^{\pm}$ \\ $\pm 1$ \\ $0.511$ MeV/c$^2$} & 
-\makecell{ Muon \\ $\mu^{\pm}$ \\ $\pm 1$ \\ $105.7$ MeV/c$^2$}& 
-\makecell{Tau \\ $\tau^{\pm}$ \\ $\pm 1$ \\ $1777$ MeV/c$^2$}\\ 
+\cellcolor{Green2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse}& 
+\cellcolor{Green}\shortstack{ Électron \\ $e^{\pm}$ \\ $\pm 1$ \\ $0.511$ MeV/c$^2$}& 
+\cellcolor{Green}\shortstack{ Muon \\ $\mu^{\pm}$ \\ $\pm 1$ \\ $105.7$ MeV/c$^2$}& 
+\cellcolor{Green}\shortstack{ Tau \\ $\tau^{\pm}$ \\ $\pm 1$ \\ $1777$ MeV/c$^2$}\\
 \hline 
-\rowcolor{Green}\makecell{ Nom \\ Notation \\ Charge \\ Masse} & 
-\makecell{Neutrino électronique \\ $\nu_{e}$ \\ $0$ \\ $<0.017$ MeV/c$^2$} & 
-\makecell{Neutrino muonique \\ $\nu_{\mu}$ \\ $0$ \\ $<0.27$ MeV/c$^2$} &
-\makecell{Neutrino tauique \\ $\nu_{\tau}$ \\ $0$ \\ $<35$ MeV/c$^2$}\\ 
+\cellcolor{Green2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse }& 
+\cellcolor{Green}\shortstack{ Neutrino électronique \\ $\nu_{e}$ \\ $0$ \\ $<0.017$ MeV/c$^2$}& 
+\cellcolor{Green}\shortstack{ Neutrino muonique \\ $\nu_{\mu}$ \\ $0$ \\ $<0.27$ MeV/c$^2$}&
+\cellcolor{Green}\shortstack{ Neutrino tauique \\ $\nu_{\tau}$ \\ $0$ \\ $<35$ MeV/c$^2$}\\
 \hline 
 \end{tabular} 
-    \captionof{table}{Fermions: Quarks et Leptons.}
-    	\label{fermions}
+\captionof{table}{Fermions: Quarks et Leptons.}
+\label{fermions}
 \end{table}
 
 \subsubsection{Les bosons}
 La description perturbative du Modèle Standard utilise l'échange de particules virtuelles, les bosons, afin de decrire l'interraction entre deux particules. Les bosons sont les médiateurs des interactions. Les particules de matière (fermions) interagissent donc entre elles par l'échange de particules de spin 1 correspondant à la force responsable de leur interaction.
-
+\smallskip
 Chacunes des quatres interactions possédent donc un ou plusieurs bosons appellés bosons de jauge (bosons vecteurs) :
 
-\begin{itemize}
+\begin{itemize}[label=$\bullet$]
 \item \textbf{L'interaction gravitationnelle} est la première à avoir été découverte et expliquée (Galilée, Newton). Elle est négligeable à l'échelle atomique. Elle est gouverné par la masses des corps mises en jeu et elle domine à grande échelle ( Univers, Galaxies, Planètes, échelle humaine), son rayon d'action est infini. Son boson est encore activement recherché ( expériences Virgo et Ligo). Un pas décisif à été fait grâce à la détection par ces expériences des ondes Gravitationnelle. Cette interaction est la seule à ne pas être intégrée au Modèle Standard. Elle est actuellement décrite par la Relativité Générale qui est une approche non quantique.
-\newline
-\item \textbf{L'interaction électromagnétique} gouverne les interactions entre les particules chargées. C'est l'une des interactions qui nous ait la plus familière car elle est prépondérante dans notre vie quotidienne ( lumière, chimie, frottements ...). Tout comme la gravité, son rayon d'action est infinie. Son boson médiateur et le photon $\lambda$. C'est la seule interaction capable d'être attractive ou répulsive selon la charges des particules mises en jeu.
-\newline
+
+\item \textbf{L'interaction électromagnétique} gouverne les interactions entre les particules chargées. C'est l'une des interactions qui nous ait la plus familière car elle est prépondérante dans notre vie quotidienne ( lumière, chimie, frottements ...). Tout comme la gravité, son rayon d'action est infinie. Son boson médiateur et le photon $\gamma$. C'est la seule interaction capable d'être attractive ou répulsive selon la charges des particules mises en jeu.
+
 \item \textbf{L'interaction faible} à était découverte est comprise à travers la désintégration de particules avec changements de saveurs. Elle fait passer d'un fermion à un autre (par exemple lors de la désintégration $\beta$, elle transforme un neutron en un proton en chengeant un quark d en un quark $u$ et la crétaion d'un neutrino et d'un électron). Les bosons médiateurs de l'interaction sont les bosons $W^{+}$ $W^{-}$ $Z^{0}$. Sa portée est de l'ordre de 10$^{-18}$ m dû à la masse des bosons médiateur\footnote{Conséquence de l'incertitude de Heisenberg : $\Delta E \cdot \Delta t \geq \frac{\hbar}{2}$.}.
-\newline
+
 \item \textbf{L'interaction forte} permet l'échange de couleur entre les quarks et la création et l'annihilation de particules. Elle est résposable de la cohésion du noyau, et elle lie les nucléons entre eux à l'intérieur du noyau atomique. Ses bosons médiateur sont les gluons et sont au nombre de huit. Bien que les gluons soient supposés de masse nulle, la portée de l'interaction est de l'ordre de 10$^{-15}$ m. Cette portée est la conséquence du principe de confinement de couleur et à la liberté asymptotique qui affecte les quarks. En effet, cette interaction à la propriété de voir son interaction augmenter avec la distance, ce qui à tendance à regrouper les quarks entre eux. Cette propriètè est également responsable du processus d'hadronisation des quarks et de la création de jets.
 \end{itemize}
 

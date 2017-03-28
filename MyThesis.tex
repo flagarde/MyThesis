@@ -1,7 +1,11 @@
 \documentclass[12pt,a4paper,twoside,french,openright]{book}
+\hyphenpenalty=3500
+\doublehyphendemerits=9000
+\finalhyphendemerits=6000
 \RequirePackage[l2tabu, orthodox]{nag}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
+\usepackage{enumitem}
 \usepackage[utf8]{inputenc}
 \usepackage{caption}
 \usepackage{array}
@@ -61,7 +65,6 @@
 \usepackage{etex}
 \usepackage{ifthen}
 \usepackage{marginnote}
-\usepackage{lipsum}
 \usepackage{chngpage}
 \usepackage{pdfcomment}
 \usepackage{feynmp}
@@ -69,10 +72,6 @@
 \usepackage{wallpaper}
 \pgfplotsset{width=10cm,compat=1.14}
 \usepackage[tight]{shorttoc}
-\usepackage[switch]{lineno}
-\linenumbers
-\usepackage{draftwatermark}
-\SetWatermarkText{Brouillon}
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
 \renewcommand{\baselinestretch}{1}
 \setlength{\tabcolsep}{0.5em} % for the horizontal padding

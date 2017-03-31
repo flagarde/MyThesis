@@ -76,7 +76,7 @@ Au début du siècle dernier, tout tendait à faire croire que le monde était s
 }
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.50\textwidth]{SM/structure.jpg}
+\includegraphics[width=0.75\textwidth]{SM/structure.jpg}
 \captionof{figure}{Structure de la matière à différentes échelles.}
 \label{structure}
 \end{figure}
@@ -123,7 +123,7 @@ La matière qui nous entoure est composée que de particules de la première gé
 \definecolor{Red}{HTML}{EF4123}
 \definecolor{Red2}{HTML}{EF2300}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \begin{tabular}{|P{15mm}|P{39mm}|P{39mm}|P{39mm}|}
 \hline 
@@ -165,6 +165,11 @@ Chacunes des quatres interactions possédent donc un ou plusieurs bosons appell�
 \begin{center}
 \includegraphics[width=\marginparwidth]{SM/solaire.jpg}
 \begin{center}\normalfont\small {(a) Gravité : Système solaire.}\end{center}
+\end{center}
+}
+\marginpar
+{
+\begin{center}
 \includegraphics[width=\marginparwidth]{SM/foudre.jpg}
 \begin{center}\normalfont\small {(b) Électromagnétisme : la foudre.}\end{center}
 \includegraphics[width=\marginparwidth]{SM/beta.png}
@@ -176,7 +181,7 @@ Chacunes des quatres interactions possédent donc un ou plusieurs bosons appell�
 \end{center}
 }
 \begin{itemize}[label=$\bullet$]
-\item \textbf{L'interaction gravitationnelle} est la première à avoir été découverte et expliquée (Galilée, Newton). Elle est négligeable à l'échelle atomique. Elle est gouverné par la masses des corps mises en jeu et elle domine à grande échelle ( Univers, Galaxies, Planètes, échelle humaine), son rayon d'action est infini. Son boson est encore activement recherché ( expériences Virgo et Ligo). Un pas décisif à été fait grâce à la détection par ces expériences des ondes Gravitationnelle. Cette interaction est la seule à ne pas être intégrée au Modèle Standard. Elle est actuellement décrite par la Relativité Générale qui est une approche non quantique.
+\item \textbf{L'interaction gravitationnelle} est la première à avoir été découverte et expliquée (Galilée, Newton). Elle est négligeable à l'échelle atomique. Elle est gouverné par la masses des corps mises en jeu et elle domine à grande échelle ( Univers, Galaxies, Planètes, échelle humaine), son rayon d'action est infini. Son boson est encore activement recherché ( expériences Virgo et Ligo) et serait de spin 2. Un pas décisif à été fait grâce à la détection par ces expériences des ondes Gravitationnelle. Cette interaction est la seule à ne pas être intégrée au Modèle Standard. Elle est actuellement décrite par la Relativité Générale qui est une approche non quantique.
 
 \item \textbf{L'interaction électromagnétique} gouverne les interactions entre les particules chargées. C'est l'une des interactions qui nous ait la plus familière car elle est prépondérante dans notre vie quotidienne ( lumière, chimie, frottements ...). Tout comme la gravité, son rayon d'action est infinie. Son boson médiateur et le photon $\gamma$. C'est la seule interaction capable d'être attractive ou répulsive selon la charges des particules mises en jeu.
 
@@ -215,6 +220,45 @@ Chacunes des quatres interactions possédent donc un ou plusieurs bosons appell�
 \captionof{table}{Bosons : Interactions.}
 \label{bosons}
 \end{table}
+
+\subsubsection{Le boson de Higgs}
+Le boson de Higgs ($H^{0}$) est nécessaire afin de donner la masse des bosons $W^{\pm}$, $Z^{0}$ et des fermions. Bien que postulé en 1964, il n'a été découvert qu'en 2012 par les expériences CMS et ATLAS en 2012. Contrairement au bosons vecteur, le boson de Higgs est de spin 0.
+\newpage
+Toutes ces particules peuvent être résumer dans le tableau suivant : 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.75\textwidth]{SM/bestiaire2.png}
+\captionof{figure}{Classification des quarks, leptons et bosons.}
+\label{bestiaire}
+\end{figure}
+\marginpar
+{
+\begin{center}
+\includegraphics[width=\marginparwidth]{SM/feyn0.png}
+\begin{center}\normalfont\small {(a) Développement à l'arbre.}\end{center}
+\includegraphics[width=\marginparwidth]{SM/feyn1.png}
+\includegraphics[width=\marginparwidth]{SM/feyn2.png}
+\includegraphics[width=\marginparwidth]{SM/feyn3.png}
+\begin{center}\normalfont\small {(b) Développement à l'ordre 1.}\end{center}
+\captionof{figure}{Exemple de diagrammes de Feynman pour le développement en série de la diffusion électron-électron.}
+\label{feyn}
+\end{center}
+}
+\subsection{Le formalisme du Modèle Standard}
+Le Modèle Standard est une théorie non-abélienne où les interactions sont régis par des symétries locales de jauge. Elle repose sur la théorie quantique des champs qui permet de décrire les particules et leurs interactions. Cette théorie est à la fois quantique et relativiste. Elle permet donc de caractériser les interactions par des probabilités de transition d'un état initial à un état final, ainsi que de rendre compte du temps de propagation des interactions, la description des particules à hautes énergie et les créations annihilation de particules.
+
+Dans cette théorie, à chaque type de particule est associé un champ $\psi(\vec{x},t)$ et les interactions sont liées à des propagateurs. La création (l'annihilation) de particules est associé à des opérateurs qui excitent(désexciter) le champ de particules à une position $\vec{x}$ et à un temps $t$. L'un des postulat de la théorie quantique des champs est que l'ensemble des informations de la théorie est contenu dans un Lagrangien $\mathcal{L}$ qui s'exprime en fonction des champs et de leurs dérivées. Il est possible, à partir de ce Lagrangien d'obtenir les équations de mouvements en minimisant sont action $S=\int\mathcal{L}\Diff4{x}$.
+Le Modèle Standard et une théorie perturbative, c'est à dire que les observables sont calculées par une méthode qui s'appuie sur un développement en série dont la précision augmente avec l'ordre. Au premier ordre, l'observable est dite être calculé à l'arbre ou LO (Leading Order). Ce développement en série n'est valable que si les constantes de couplage des interactions reste faible devant l'unité. Ce développement en série peut être schématisé grâce aux diagrammes de Feynmann (fig. \ref{feyn}), qui sont des diagramme représentant des règles de calculs. Chaque types de particules et d'interactions posséde son symbole et à chaque particules doit être connécté par un vertex (représentant une interactions).
+
+Le principe selon lequel les interactions sont gouvernés par des symétries est également un postulat des important du Modèle Standard. De par le théorème de Noether, les symétries continues sont liées à des quantités physique qui se conserve. Le Modèle Standard est basé sur le produit direct du groupe de la chromodynamique quantique, décrivant l'interaction forte, qui impose une conservation de la charge de couleur, $SU(3)_{C}$ et du groupe de la théorie électrofaible, $SU(2)_{L} \otimes U(1)_{Y}$, imposant une symétrie locale de l'isospin $I$ associé au groupe $SU(2)_{L}$ et une symètrie locale de l'hypercharge $Y$ du groupe $U(1)_{Y}$.
+
+\subsection{Lagrangien du modèle standard}
+Le modèle standard est une théorie de Jauge qui se base sur le groupe $SU(3)_{C} \otimes SU(2)_{L} \otimes U(1)_{Y}$ dont le lagrangien peut s'écrire sous la forme :
+
+\begin{equation}
+\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Yukawa}}+\mathcal{L}_{\mathrm{Higgs}}
+\end{equation}
+
 
 
 

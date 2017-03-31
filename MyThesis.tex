@@ -3,6 +3,8 @@
 \doublehyphendemerits=9000
 \finalhyphendemerits=6000
 \RequirePackage[l2tabu, orthodox]{nag}
+\usepackage{float}
+\usepackage{physics}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{enumitem}
@@ -76,6 +78,10 @@
 \renewcommand{\baselinestretch}{1}
 \setlength{\tabcolsep}{0.5em} % for the horizontal padding
 %{\renewcommand{\arraystretch}{1.2}% for the vertical padding
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
+
 
 \newcommand{\ColorSection}[1]{%
     \colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}
@@ -228,7 +234,6 @@
 
 \renewcommand{\LettrineFontHook}{\color{gray}}
 
-\newcommand{\dd}{\mathrm{d}}
 
 \newcommand{\pa}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\de}[2]{\frac{\dd #1}{\dd #2}}

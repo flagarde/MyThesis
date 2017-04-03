@@ -75,7 +75,7 @@ Au début du siècle dernier, tout tendait à faire croire que le monde était s
 }
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.75\textwidth]{SM/structure.jpg}
+\includegraphics[width=0.55\textwidth]{SM/structure.jpg}
 \captionof{figure}{Structure de la matière à différentes échelles.}
 \label{structure}
 \end{figure}
@@ -94,6 +94,10 @@ Chaque particule du Modèle Standard possède des nombres quantiques telles que 
 
 \subsubsection{Les fermions}
 Les fermions peuvent être classés en deux catégories selon qu'ils sont sensibles à l'interaction forte ou non. Dans le premier cas, ils font partis des \textit{quarks}, sinon ce sont des \textit{leptons}. Ces deux catégories sont elles-mêmes divisées en trois \textit{générations} (tab. \ref{fermions}).
+
+Les leptons ont une charge électrique entière ($\pm$ 1) pour les électrons, muons et tau, et une charge nulle pour les neutrinos électroniques, neutrinos muoniques et neutrinos tauiques.
+
+Les quarks ont une charge électrique fractionnaire. On associe à chaque quark un nombre quantique appelé "couleur" (Rouge, Vert et Bleu). Dû à la propriété de confinement de couleur, un quark ne peut être isolé et doit se combiner avec un ou deux autre quarks afin de former des \textit{mésons} (fig.\ref{mésons}) et des \textit{baryons} (fig.\ref{baryons}) respectivement. La somme des deux (trois) couleurs des quarks doit constituer un méson (baryon) "blanc" \footnote{Selon l'analogie avec la synthèse additive des couleurs.}. Les mésons et baryons sont regroupés sous le terme générique de \textit{hadrons}.
 \marginpar
 {
 \centering
@@ -101,10 +105,19 @@ Les fermions peuvent être classés en deux catégories selon qu'ils sont sensib
 \captionof{figure}{Un méson ($\pi^{+}$).}
 \label{mésons}
 }
-Les leptons ont une charge électrique entière ($\pm$ 1) pour les électrons, muons et tau, et une charge nulle pour les neutrinos électroniques, neutrinos muoniques et neutrinos tauiques.
-
-Les quarks ont une charge électrique fractionnaire. On associe à chaque quark un nombre quantique appelé "couleur" (Rouge, Vert et Bleu). Dû à la propriété de confinement de couleur, un quark ne peut être isolé et doit se combiner avec un ou deux autre quarks afin de former des \textit{mésons} (fig.\ref{mésons}) et des \textit{baryons} (fig.\ref{baryons}) respectivement. La somme des deux (trois) couleurs des quarks doit constituer un méson (baryon) "blanc" \footnote{Selon l'analogie avec la synthèse additive des couleurs.}. Les mésons et baryons sont regroupés sous le terme générique de \textit{hadrons}.
-
+\marginpar
+{
+    \includegraphics[width=\marginparwidth]{SM/quarks.png}
+    \captionof{figure}{Un baryon ($p$).}
+    	\label{baryons}
+}	
+\marginpar
+{
+\hspace*{-0.5cm}
+\includegraphics[width=1.2\marginparwidth]{SM/shower.png}
+\captionof{figure}{Schéma d'une gerbe atmosphèrique.}
+\label{gerbe}
+}
 La matière qui nous entoure n'est composée que de particules de la première génération. Tous les atomes sont composés d'électrons et de quarks $u$ et $d$ qui s'assemblent pour donner des protons $p$ et neutrons $n$. Les autres particules peuvent être créées si l'énergie disponible est suffisante (lors de gerbe atmosphérique où un proton vient interagir avec des particules de notre atmosphère par exemple \ref{gerbe} ou dans un collisionneur).
 \definecolor{Orange}{HTML}{FFDD00}
 \definecolor{Orange2}{HTML}{FFC000}
@@ -113,53 +126,27 @@ La matière qui nous entoure n'est composée que de particules de la première g
 \definecolor{Red}{HTML}{EF4123}
 \definecolor{Red2}{HTML}{EF2300}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\begin{minipagewithmarginpars}[H]{\textwidth}
 \begin{table}[H]
 \centering
 \begin{tabular}{|P{15mm}|P{39mm}|P{39mm}|P{39mm}|}
 \hline 
 \rowcolor{Orange2}Quarks & 1\iere génération & 2\ieme génération & 3\ieme génération \\
 \hline 
-\cellcolor{Orange2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse}& 
-\cellcolor{Orange}\shortstack{ Up \\ $u$,$\bar{u}$ \\ $\pm \frac{2}{3}$ \\ $0.005$ GeV/c$^2$} & 
-\cellcolor{Orange}\shortstack{ Charm \\ $c$,$\bar{c}$ \\ $\pm \frac{2}{3}$ \\ $1.35$ GeV/c$^2$}&
-\cellcolor{Orange}\shortstack{ Top \\ $t$,$\bar{t}$ \\ $\pm \frac{2}{3}$ \\ $172.6$ GeV/c$^2$}\\
+\cellcolor{Orange2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse}& \cellcolor{Orange}\shortstack{ Up \\ $u$,$\bar{u}$ \\ $\pm \frac{2}{3}$ \\ $0.005$ GeV/c$^2$} & \cellcolor{Orange}\shortstack{ Charm \\ $c$,$\bar{c}$ \\ $\pm \frac{2}{3}$ \\ $1.35$ GeV/c$^2$}&\cellcolor{Orange}\shortstack{ Top \\ $t$,$\bar{t}$ \\ $\pm \frac{2}{3}$ \\ $172.6$ GeV/c$^2$}\\
 \hline 
-\cellcolor{Orange2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse}& 
-\cellcolor{Orange}\shortstack{ Down \\ $d$,$\bar{d}$ \\ $\mp \frac{1}{3}$ \\ $0.01$ GeV/c$^2$}& 
-\cellcolor{Orange}\shortstack{ Strange \\ $s$,$\bar{s}$ \\ $\mp \frac{1}{3}$ \\ $0.1$ GeV/c$^2$}& 
-\cellcolor{Orange}\shortstack{ Bottom \\ $b$,$\bar{b}$ \\ $\mp \frac{1}{3}$ \\ $1.3$ GeV/c$^2$}\\
+\cellcolor{Orange2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse}& \cellcolor{Orange}\shortstack{ Down \\ $d$,$\bar{d}$ \\ $\mp \frac{1}{3}$ \\ $0.01$ GeV/c$^2$}& \cellcolor{Orange}\shortstack{ Strange \\ $s$,$\bar{s}$ \\ $\mp \frac{1}{3}$ \\ $0.1$ GeV/c$^2$}& \cellcolor{Orange}\shortstack{ Bottom \\ $b$,$\bar{b}$ \\ $\mp \frac{1}{3}$ \\ $1.3$ GeV/c$^2$}\\
 \hline 
 \rowcolor{Green2} Leptons & 1\iere génération & 2\ieme génération & 3\ieme génération \\
 \hline
-\cellcolor{Green2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse}& 
-\cellcolor{Green}\shortstack{ Électron \\ $e^{\pm}$ \\ $\pm 1$ \\ $0.511$ MeV/c$^2$}& 
-\cellcolor{Green}\shortstack{ Muon \\ $\mu^{\pm}$ \\ $\pm 1$ \\ $105.7$ MeV/c$^2$}& 
-\cellcolor{Green}\shortstack{ Tau \\ $\tau^{\pm}$ \\ $\pm 1$ \\ $1777$ MeV/c$^2$}\\
+\cellcolor{Green2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse}& \cellcolor{Green}\shortstack{ Électron \\ $e^{\pm}$ \\ $\pm 1$ \\ $0.511$ MeV/c$^2$}& \cellcolor{Green}\shortstack{ Muon \\ $\mu^{\pm}$ \\ $\pm 1$ \\ $105.7$ MeV/c$^2$}& \cellcolor{Green}\shortstack{ Tau \\ $\tau^{\pm}$ \\ $\pm 1$ \\ $1777$ MeV/c$^2$}\\
 \hline 
-\cellcolor{Green2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse }& 
-\cellcolor{Green}\shortstack{ Neutrino électronique \\ $\nu_{e}$ \\ $0$ \\ $<0.017$ MeV/c$^2$}& 
-\cellcolor{Green}\shortstack{ Neutrino muonique \\ $\nu_{\mu}$ \\ $0$ \\ $<0.27$ MeV/c$^2$}&
-\cellcolor{Green}\shortstack{ Neutrino tauique \\ $\nu_{\tau}$ \\ $0$ \\ $<35$ MeV/c$^2$}\\
-\hline 
+\cellcolor{Green2}\shortstack{ Nom \\ Notation \\ Charge \\ Masse }& \cellcolor{Green}\shortstack{ Neutrino électronique \\ $\nu_{e}$ \\ $0$ \\ $<0.017$ MeV/c$^2$}& \cellcolor{Green}\shortstack{ Neutrino muonique \\ $\nu_{\mu}$ \\ $0$ \\ $<0.27$ MeV/c$^2$}&\cellcolor{Green}\shortstack{ Neutrino tauique \\ $\nu_{\tau}$ \\ $0$ \\ $<35$ MeV/c$^2$}\\
+\hline
 \end{tabular} 
 \captionof{table}{Fermions: Quarks et Leptons.}
 \label{fermions}
 \end{table}	
-\marginpar
-{
-    \includegraphics[width=\marginparwidth]{SM/quarks.png}
-    \captionof{figure}{Un baryon ($p$).}
-    	\label{baryons}
-}	
-\end{minipagewithmarginpars}
-\marginpar
-{
-\hspace*{-0.5cm}
-\includegraphics[width=1.2\marginparwidth]{SM/shower.png}
-\captionof{figure}{Schéma d'une gerbe atmosphèrique.}
-\label{gerbe}
-}
+
 \subsubsection{Les bosons}
 La description perturbative du Modèle Standard utilise l'échange de bosons virtuelles, afin de décrire l'interaction entre deux particules. Les bosons sont les médiateurs des interactions. Les particules de matière (fermions) interagissent donc entre elles par l'échange de particules de spin 1 correspondant à la force responsable de leur interaction.
 \smallskip
@@ -227,7 +214,7 @@ Chacune des quatre interactions possède donc un ou plusieurs bosons appelés bo
 
 \subsubsection{Le boson de Higgs}
 Le boson de Higgs ($H^{0}$) est nécessaire afin de donner la masse des bosons $W^{\pm}$, $Z^{0}$ et des fermions. Bien que postulé en 1964, il n'a été découvert qu'en 2012 par les expériences CMS et ATLAS en 2012. Contrairement au bosons vecteur, le boson de Higgs est de spin 0.
-\newpage
+
 Toutes ces particules peuvent être résumer dans le tableau suivant : 
 \begin{figure}[h!]
 \centering

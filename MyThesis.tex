@@ -75,9 +75,6 @@
 \pgfplotsset{width=10cm}%,compat=1.14}
 \usepackage[tight]{shorttoc}
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
-\renewcommand{\baselinestretch}{1}
-\setlength{\tabcolsep}{0.5em} % for the horizontal padding
-%{\renewcommand{\arraystretch}{1.2}% for the vertical padding
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
@@ -86,9 +83,6 @@
 \newcommand{\ColorSection}[1]{%
     \colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}
     {\hspace{0.2cm}\textcolor{white}{\thesection\ #1}\hspace*{0.5cm}}}}
-\newcommand{\ColorSectionStarred}[1]{%
-    \colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}
-    {#1}}}
 \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
 
 \titleformat{\section}
@@ -98,6 +92,31 @@
 \titleformat{name=\section,numberless}
     {\rmfamily\large\raggedright}                                                
     {}{0pt}{\ColorSectionStarred}       
+
+
+\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}    
+\newcommand{\ColorSubSection}[1]
+{%
+\colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesubsection\ #1}\hspace*{0.5cm}}}
+}
+
+\titleformat{\subsection}{\rmfamily\raggedright}{}{0pt}{\ColorSubSection}     
+\titleformat{name=\subsection,numberless}{\rmfamily\raggedright}{}{0pt}{\ColorSubSection}       
+  
+\titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}    
+\newcommand{\ColorSubSubSection}[1]
+{%
+\colorbox{black!55}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesubsubsection\ #1}\hspace*{0.5cm}}}
+}
+
+\titleformat{\subsubsection}{\rmfamily\raggedright}{}{0pt}{\ColorSubSubSection}
+\titleformat{name=\subsubsection,numberless}{\rmfamily\raggedright}{}{0pt}{\ColorSubSubSection}      
+
+
+
+
+
+
 
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
@@ -118,7 +137,7 @@
   {\endminipage\par\medskip}
 
 
-\mtcsetdepth{minitoc}{4}
+\mtcsetdepth{minitoc}{2}
 \mtcsettitle{minitoc}{Contenu :}
 \usepackage{listings}
 \let\oldfootnotesize\footnotesize
@@ -145,7 +164,7 @@
 \renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\thesection.\thesubsection.{subsubsection}}
+\renewcommand{\thesubsubsection}{}
 
 
 
@@ -229,7 +248,7 @@
  \makeatother
  %%%%********************************************************************
 %\mtcsetfeature{minitoc}{open}{\vspace{-1.5cm}}
-\setcounter{tocdepth}{5}
+\setcounter{tocdepth}{3}
 \makeindex
 
 \renewcommand{\LettrineFontHook}{\color{gray}}

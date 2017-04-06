@@ -4,6 +4,7 @@
 \finalhyphendemerits=6000
 \RequirePackage[l2tabu, orthodox]{nag}
 \usepackage{float}
+\usepackage{amsmath}
 \usepackage{physics}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -16,6 +17,9 @@
 \RequirePackage{etex}
 \usepackage{biblatex}
 \usepackage{csquotes}
+\usepackage{cellspace}
+\cellspacetoplimit=4pt
+\cellspacebottomlimit=4pt
 \usepackage{minipage-marginpar}
 \usepackage{cmap}
 \usepackage{lmodern}  
@@ -75,7 +79,9 @@
 \pgfplotsset{width=10cm}%,compat=1.14}
 \usepackage[tight]{shorttoc}
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
-
+\usepgfplotslibrary{external} 
+\tikzexternalize
+\usepgfplotslibrary{colormaps}
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
 

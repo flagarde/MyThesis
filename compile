@@ -1,6 +1,6 @@
 #!/bin/sh
-pdflatex MyThesis.tex &&  pdflatex MyThesis.tex && bibtex MyThesis && makeindex -s MyThesis.ist MyThesis.idx && pdflatex MyThesis.tex ;
-echo "Compressing"
-gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=MyThesisCompressed.pdf MyThesis.pdf
-rm ./MyThesis.pdf
-mv ./MyThesisCompressed.pdf ./MyThesis.pdf
+latexmk -f -pdf  -latexoption='--shell-escape -interaction=nonstopmode %O %S -file-line-error -synctex=1' -latex=pdflatex ./MyThesis.tex
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf MyThesis.pdf
+rm MyThesis.pdf
+mv output.pdf MyThesis.pdf
+latexmk -c

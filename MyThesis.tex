@@ -74,6 +74,7 @@
 \usepackage{chngpage}
 \usepackage{pdfcomment}
 \usepackage{feynmp}
+\usepackage[mode=build]{standalone}
 \usepackage{pgfplots}
 \usepackage{wallpaper}
 \pgfplotsset{width=10cm}%,compat=1.14}
@@ -85,7 +86,8 @@
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
 
-
+\usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
+\usepackage{etoolbox}
 \newcommand{\ColorSection}[1]{%
     \colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}
     {\hspace{0.2cm}\textcolor{white}{\thesection\ #1}\hspace*{0.5cm}}}}
@@ -527,7 +529,6 @@ Qui addit scienciam addit et dolorem
 \include{CMS/CMS} 
 \include{RPC/RPC}
 \appendix
-\include{AnnexeA/AnnexeA} 
 }
 \AddToShipoutPicture{%
   \ifthenelse{\isodd{\value{page}}}{
@@ -563,9 +564,6 @@ Qui addit scienciam addit et dolorem
 \newpage\null\thispagestyle{empty}\newpage
 \tableofcontents
 \backmatter
-
-
-
 \AddToShipoutPicture{%
   \ifthenelse{\isodd{\value{page}}}{
     \AtPageLowerRight{%
@@ -590,5 +588,5 @@ Qui addit scienciam addit et dolorem
   }
 }
 \printindex
-\newpage\null\thispagestyle{empty}\newpage
+\thispagestyle{empty}
 \end{document}

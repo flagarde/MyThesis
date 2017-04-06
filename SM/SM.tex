@@ -214,19 +214,29 @@ Chacune des quatre interactions possède donc un ou plusieurs bosons appelés bo
 
 \subsubsection{Le boson de Higgs}
 Le boson de Higgs ($H^{0}$) est nécessaire afin de donner la masse des bosons $W^{\pm}$, $Z^{0}$ et des fermions. Bien que postulé en 1964, il n'a été découvert qu'en 2012 par les expériences CMS et ATLAS en 2012. Contrairement au bosons vecteur, le boson de Higgs est de spin 0.
-
+\newpage
 Toutes ces particules peuvent être résumer dans le tableau suivant : 
-\begin{figure}[h!]
+
+\begin{minipagewithmarginpars}[h]{\textwidth}
+\vspace{-0.5cm}
 \centering
-\includegraphics[width=0.75\textwidth]{SM/bestiaire2.png}
+\hspace*{-1.5cm}
+\includestandalone{./SM/bestiaire}
 \captionof{figure}{Classification des quarks, leptons et bosons.}
 \label{bestiaire}
-\end{figure}
 \marginpar
 {
+\vspace*{1.5cm}
 \begin{center}
 \includegraphics[width=\marginparwidth]{SM/feyn0.png}
 \begin{center}\normalfont\small {(a) Développement à l'arbre.}\end{center}
+\end{center}
+}
+\end{minipagewithmarginpars}
+\subsection{Le formalisme du Modèle Standard}
+\marginpar
+{
+\begin{center}
 \includegraphics[width=\marginparwidth]{SM/feyn1.png}
 \includegraphics[width=\marginparwidth]{SM/feyn2.png}
 \includegraphics[width=\marginparwidth]{SM/feyn3.png}
@@ -235,7 +245,6 @@ Toutes ces particules peuvent être résumer dans le tableau suivant :
 \label{feyn}
 \end{center}
 }
-\subsection{Le formalisme du Modèle Standard}
 Le Modèle Standard est une théorie non-abélienne où les interactions sont régis par des symétries locales de jauge. Elle repose sur la théorie quantique des champs qui permet de décrire les particules et leurs interactions. Cette théorie est à la fois quantique et relativiste. Elle permet donc de caractériser les interactions par des probabilités de transition d'un état initial à un état final, ainsi que de rendre compte du temps de propagation des interactions, la description des particules à hautes énergie et les créations annihilation de particules.
 
 Dans cette théorie, à chaque type de particule est associé un champ $\psi(\vec{x},t)$ et les interactions sont liées à des propagateurs. La création (l'annihilation) de particules est associé à des opérateurs qui excitent(désexciter) le champ de particules à une position $\vec{x}$ et à un temps $t$. L'un des postulat de la théorie quantique des champs est que l'ensemble des informations de la théorie est contenu dans un Lagrangien $\mathcal{L}$ qui s'exprime en fonction des champs et de leurs dérivées. Il est possible, à partir de ce Lagrangien d'obtenir les équations de mouvements en minimisant sont action $S=\int\mathcal{L}\Diff4{x}$.
@@ -468,46 +477,101 @@ V(\phi)=\mu^{2}\phi^{\dagger}\phi+\lambda\left(\phi^{\dagger}\phi\right)^2,
 \end{equation}
 et a un profil différent selon les signes de $\mu^{2}$ et de $\lambda$ (Fig. \ref{profile}).
 \marginpar{ 
-\resizebox {\marginparwidth} {!} {
+\resizebox {\marginparwidth} {!} 
+{
 \begin{tikzpicture}
-\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},
- mesh/interior colormap name=hot,
-  colormap/blackwhite,
-]
+\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite]
 \addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:2*pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {-x*x-x*x*x*x});
 \end{axis}
-\end{tikzpicture}}
+\end{tikzpicture}
+}
 \begin{center}\normalfont\small {(a) $\mu^{2}<0$ , $\lambda<0$.}\end{center}
-\resizebox {\marginparwidth} {!} {
+\resizebox {\marginparwidth} {!} 
+{
 \begin{tikzpicture}
-\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},
- mesh/interior colormap name=hot,
-  colormap/blackwhite,
-]
+\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite]
 \addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:2*pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {+x*x+x*x*x*x});
 \end{axis}
-\end{tikzpicture}}
+\end{tikzpicture}
+}
 \begin{center}\normalfont\small {(b) $\mu^{2}>0$ , $\lambda>0$.}\end{center}
-\resizebox {\marginparwidth} {!} {
+\resizebox {\marginparwidth} {!} 
+{
 \begin{tikzpicture}
-\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},
- mesh/interior colormap name=hot,
-  colormap/blackwhite,
-]
+\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite]
 \addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:2*pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {+x*x-x*x*x*x});
 \end{axis}
-\end{tikzpicture}}
+\end{tikzpicture}
+}
 \begin{center}\normalfont\small {(c) $\mu^{2}>0$ , $\lambda<0$.}\end{center}
-\resizebox {\marginparwidth} {!} {
+\resizebox {\marginparwidth} {!} 
+{
 \begin{tikzpicture}
-\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},
- mesh/interior colormap name=hot,
-  colormap/blackwhite,
-]
-\addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:2*pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {-x*x+x*x*x*x});
+\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite]
+\addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:2*pi,z buffer=sort]({x *cos(deg(y))},{x*sin(deg(y))},{-x*x+x*x*x*x});
 \end{axis}
-\end{tikzpicture}}
+\end{tikzpicture}
+}
 \begin{center}\normalfont\small {(d) $\mu^{2}<0$ , $\lambda>0$.}\end{center}
 \captionof{figure}{Les différents profils de $V(\phi)$ selon les signes de $\mu^{2}$ et $\lambda$.}
 \label{profile}
 }
+Les cas où $\mu^{2}>0$ ne possède qu'un minimum en $0$, ce qui est inutile. Le cas $\mu^{2}<0$ n'est pas stable. Il ne reste que le cas où $\mu^{2}<0$ et $\lambda>0$.
+
+\begin{minipagewithmarginpars}[h]{\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite,]
+\addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {-x*x+x*x*x*x});
+\addplot3[->] coordinates{(0,0,0) (0,0,0.2)}node[above] {$V(\phi)$};
+\addplot3[->] coordinates{(0,0,0) (1.0,0,0)}node[above] {$\Re(\phi)$};
+\addplot3[->] coordinates{(0,0,0) (0,1.5,0)}node[above] {$\Im(\phi)$};
+\addplot3[color=black,samples=50,domain=0:2*pi,line width=0.2pt, line cap =round,]({sqrt(0.5)*cos(deg(x))},{sqrt(0.5)*sin(deg(x))},{-0.25});
+\addplot3[dashed]coordinates{(sqrt(0.5),0,-0.25) (sqrt(0.5),0,0)};
+\node (A) at (axis cs:0.70710678118,0,-0.27){$\phi_{0}$};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{Potentiel $V(\phi)$ pour $\mu^{2}<0$ et $\lambda>0$.}
+\label{pot}
+\end{minipagewithmarginpars}
+Le potentiel est donc métastable pour $\phi$=0, et les minimas sont situés sur un cercle de rayon $v=\sqrt{\frac{\mu^{2}}{\lambda}}$. On peut prendre par exemple :
+\begin{equation}
+H_{0}=\frac{1}{\sqrt{2}}\begin{pmatrix} 
+0\\
+v
+\end{pmatrix} \ , v=\sqrt{\frac{\mu^{2}}{\lambda}}
+\end{equation}
+et en développement le doublet $H$ autour de cette état du champs de Higgs qui brise la symétrie $SU(2)_{L}\otimes U(1)_{Y}$ on trouve : 
+\begin{equation}
+H=\frac{1}{\sqrt{2}}\exp^{-i\Theta_{a}T_{a}}\begin{pmatrix} 
+0\\
+h+v
+\end{pmatrix}=\frac{1}{\sqrt{2}}\begin{pmatrix} 
+i\phi_{1}+\phi{2}\\
+h+v-i\phi_{3}
+\end{pmatrix}
+\end{equation}
+où $v=246$ GeV est la densité moyenne d'énergie du vide, $T^{a} (a=1,2,3)$, les générateurs de $SU(2)_{L}$ et $\Theta_{a}$ sont les trois champs de Goldstone de masses nulles qui apparaissent lors de la brisure de la symétrie continue.
+
+Il est possible de définir les bosons $W_{\mu}^{\pm}$,$Z_{\mu}^{0}$,$gamma_{\mu}$ et $\phi^{\pm}$ 
+\begin{equation}
+\begin{split}
+W_{\mu}^{\pm}&=\frac{W_{\mu}^{1}\mp iW_{\mu}^{2}}{\sqrt{2}}\ , \ Z_{\mu}^{0}=-B_{\mu}\sin(\theta_{W})+W_{\mu}^{3}\cos(\theta_{W})\\
+\gamma_{\mu}&=B_{\mu}\cos(\theta_{W})+W_{\mu}^{3}\sin(\theta_{W})\ , \ \phi^{\pm}=\frac{\phi_{1}\mp i\phi_{2}}{\sqrt{2}}
+\end{split}
+\end{equation}
+qui correspondent aux bosons $W^{\pm}$ , $Z^{0}$ et $\gamma$ et au scalaires chargé du champ de Higgs. En choisissant une jauge unitaire, les bosons de Goldstone sont absorbés pour donner les composantes longitudinales des bosons $W^{\pm}$ et $Z^{0}$. Le boson de Higgs acquiert donc sa masse par auto-couplage et les bosons de jauge par interaction avec le champs de Higgs.
+
+L'interaction est contenue dans la partie cinétique du Lagrangien du secteur de Higgs et donne les masses suivantes : 
+\begin{equation}
+\begin{split}
+\ &m_{W^{\pm}}=\frac{g''v}{2} \\
+\ &m_{Z^{0}}=\frac{\sqrt{g''^{2}+g'^{1}}}{2}v \\
+\ &m_{\gamma}=0 \\
+\end{split}
+\end{equation} 
+La théorie ne donne aucun indice sur la constante de couplage $\lambda$, la masse du boson de Higgs ne peut donc pas être déduite.La recherche de ce boson a été une priorité pendant plusieurs décennie. Ce n'est qu'en 2012 grâce au détecteur CMS et ATLAS que la preuve de l'existence du boson de Higgs a été prouvé et que sa masse (125.9 GeV) a pu être reconstruite. 
+
+\subsubsection{Le secteur de Yukawa}
+Le secteur de Yukawa décrit l'interaction entre le champs de Higgs et les champs de fermions.
+

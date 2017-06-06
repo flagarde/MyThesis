@@ -236,14 +236,13 @@ Toutes ces particules peuvent être résumer dans le tableau suivant :
 \subsection{Le formalisme du Modèle Standard}
 \marginpar
 {
-\begin{center}
+\centering
 \includegraphics[width=\marginparwidth]{SM/feyn1.png}
 \includegraphics[width=\marginparwidth]{SM/feyn2.png}
 \includegraphics[width=\marginparwidth]{SM/feyn3.png}
 \begin{center}\normalfont\small {(b) Développement à l'ordre 1.}\end{center}
 \captionof{figure}{Exemple de diagrammes de Feynman pour le développement en série de la diffusion électron-électron.}
 \label{feyn}
-\end{center}
 }
 Le Modèle Standard est une théorie non-abélienne où les interactions sont régis par des symétries locales de jauge. Elle repose sur la théorie quantique des champs qui permet de décrire les particules et leurs interactions. Cette théorie est à la fois quantique et relativiste. Elle permet donc de caractériser les interactions par des probabilités de transition d'un état initial à un état final, ainsi que de rendre compte du temps de propagation des interactions, la description des particules à hautes énergie et les créations annihilation de particules.
 
@@ -520,17 +519,17 @@ Les cas où $\mu^{2}>0$ ne possède qu'un minimum en $0$, ce qui est inutile. Le
 
 \begin{minipagewithmarginpars}[h]{\textwidth}
 \centering
-\begin{tikzpicture}
-\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite,]
-\addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {-x*x+x*x*x*x});
-\addplot3[->] coordinates{(0,0,0) (0,0,0.2)}node[above] {$V(\phi)$};
-\addplot3[->] coordinates{(0,0,0) (1.0,0,0)}node[above] {$\Re(\phi)$};
-\addplot3[->] coordinates{(0,0,0) (0,1.5,0)}node[above] {$\Im(\phi)$};
-\addplot3[color=black,samples=50,domain=0:2*pi,line width=0.2pt, line cap =round,]({sqrt(0.5)*cos(deg(x))},{sqrt(0.5)*sin(deg(x))},{-0.25});
-\addplot3[dashed]coordinates{(sqrt(0.5),0,-0.25) (sqrt(0.5),0,0)};
-\node (A) at (axis cs:0.70710678118,0,-0.27){$\phi_{0}$};
-\end{axis}
-\end{tikzpicture}
+%\begin{tikzpicture}
+%\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite,]
+%\addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {-x*x+x*x*x*x});
+%\addplot3[->] coordinates{(0,0,0) (0,0,0.2)}node[above] {$V(\phi)$};
+%\addplot3[->] coordinates{(0,0,0) (1.0,0,0)}node[above] {$\Re(\phi)$};
+%\addplot3[->] coordinates{(0,0,0) (0,1.5,0)}node[above] {$\Im(\phi)$};
+%\addplot3[color=black,samples=50,domain=0:2*pi,line width=0.2pt, line cap =round,]({sqrt(0.5)*cos(deg(x))},{sqrt(0.5)*sin(deg(x))},{-0.25});
+%\addplot3[dashed]coordinates{(sqrt(0.5),0,-0.25) (sqrt(0.5),0,0)};
+%\node (A) at (axis cs:0.70710678118,0,-0.27){$\phi_{0}$};
+%\end{axis}
+%\end{tikzpicture}
 \captionof{figure}{Potentiel $V(\phi)$ pour $\mu^{2}<0$ et $\lambda>0$.}
 \label{pot}
 \end{minipagewithmarginpars}
@@ -573,9 +572,185 @@ L'interaction est contenue dans la partie cinétique du Lagrangien du secteur de
 La théorie ne donne aucun indice sur la constante de couplage $\lambda$, la masse du boson de Higgs ne peut donc pas être déduite.La recherche de ce boson a été une priorité pendant plusieurs décennie. Ce n'est qu'en 2012 grâce au détecteur CMS et ATLAS que la preuve de l'existence du boson de Higgs a été prouvé et que sa masse (125.9 GeV) a pu être reconstruite. 
 
 \subsubsection{Le secteur de Yukawa}
-Le secteur de Yukawa décrit l'interaction entre le champs de Higgs et les champs de fermions. Il permet aussi de donner une masse aux fermions
+Le secteur de Yukawa décrit l'interaction entre le champs de Higgs et les champs de fermions.
 \begin{equation}
 \begin{split}
-\mathcal{L}_{\mathrm{Yukawa}}&=\mathcal{L}_{L_{L}}+\left(\mathcal{L}_{L_{R}}\righ)+\mathcal{L}_{Q_{L}}+\mathcal{L}_{Q_{R}}\\
-\end{equation}
+\mathcal{L}_{\mathrm{Yukawa}}=-\sum_{f=l,q}\left[\sum_{i,j=1}^{3}\left(\kappa_{ij}^{(f)}\bar{L}_{i}^{(f)}(x)\phi(x)R_{j}^{(f)}(x)+\tilde{\kappa}_{ij}^{(f)}\bar{L}_{i}^{(f)}(x)\phi^{c}(x)\tilde{R}_{j}^{(f)}(x)\right)\right]+ h.c
+\end{split}
+\end{equation} 
+avec $\kappa_{ij}^{(f)}$ et $\tilde{\kappa}_{ij}^{(f)}$ les constantes de couplage de Yukawa, $\phi^{c}(x)=i\tau_{2}\phi^{*}$ l'isospineur charge-conjugué de l'isospineur $\phi(x)$.
 
+Les singlets droits sont divisés en deux groupes, haut $\left(R_{j}\right)$ et bas $\left(\tilde{R}_{j}\right)$ :
+\begin{multline}
+\begin{split}
+&R_j^{(l)}=\left(e_{R},\mu_{R},\tau_{R}\right),\ &R_j^{(q)}=\left(d'_{R},s'_{R},b'_{R}\right))\\
+&\tilde{R}_j^{(l)}=\left(\nu_{eR},\nu_{\mu R},\nu_{\tau R}\right),\ &\tilde{R}_j^{(q)}=\left(u_{R},c_{R},t_{R}\right))
+\end{split}
+\end{multline} 
+
+En remplaçant $\phi^{c}(x)=i\tau_{2}\phi^{*}$ et $\phi(x)$ par leur valeur attendu du vide (VEV) $v$
+\begin{equation}
+\left<0\left|\phi \right|0\right>=\begin{pmatrix} 0\\v\end{pmatrix},\ \left<0\left|\phi^{c} \right|0\right>=\begin{pmatrix} v\\ 0\end{pmatrix}
+\end{equation} on obtient:
+\begin{equation}
+%\mathcal{L}_{\mathrm{Yukawa}}=-\sum_{f=l,q}\left[\sum_{i,j=1}^{3}\left(M^{(f)}_{ij}\bar{L}_{i}^{(f)}(x)R_{j}^{(f)}(x)+%\tilde{M}^{(f)}_{ij}\bar{L}_{i}^{(f)}(x)\tilde{R}_{j}^{(f)}(x)\right)\right]+ h.c
+\end{equation} 
+avec $M^{(f)}_{ij}=v\kappa_{ij}^{(f)}$ et $\tilde{M}^{(f)}_{ij}=v\tilde{\kappa}_{ij}^{(f)}$, composantes des matrices de masses.
+
+Des expériences ont montré que les états propres de masses sont différentes des états propres de saveur. On choisit par convention de considérer les fermions $d'$,$s'$,$b'$,$\nu_{e}$,$\nu_{\mu}$,$\nu_{\tau}$ comme des mélanges d'états. La matrice de masse correspondante au neutrinos $M_{\nu}$ et aux quarks down $M_{q^d}$ n'est donc pas diagonal. La diagonalisation est réalisé grâce au passage de la base des états propres de saveur aux états propres de masses :
+\begin{equation}
+\begin{pmatrix} 
+\nu_{e} \\ 
+\nu_{\mu} \\ 
+\nu_{\tau} 
+\end{pmatrix}=\mathcal{M}^{PMNS}
+\begin{pmatrix} 
+\nu_{1}\\ 
+\nu_{2}\\ 
+\nu_{3}
+\end{pmatrix},\ \begin{pmatrix} 
+d' \\ 
+s' \\ 
+b' 
+\end{pmatrix}=\mathcal{M}^{CKM}
+\begin{pmatrix} 
+d \\ 
+s\\ 
+b
+\end{pmatrix}
+\end{equation} 
+La matrice $\mathcal{M}^{CKM}$ dite de Cabibbo-Kobayashi-Maskawa est une matrice $3\times3$ unitaire. Elle est paramétrisé par trois angles de mélange et une phase qui permet de violer CP :
+\begin{equation}
+\mathcal{M}^{CKM}= 
+\begin{pmatrix} 
+c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta} \\
+-s_{12}c_{23}-c_{12}s_{23}s_{13}e^{i\delta} & c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta} & s_{23}c_{13} \\
+s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{i\delta} & c_{23}c_{13}
+\end{pmatrix}
+\end{equation} 
+ 
+La matrice $\mathcal{M}^{PMNS}$ dite de Pontecorvo-Maki-Nakagawa-Sakata est une matrice $3\times3$ unitaire similaire à la matrice $\mathcal{M}^{CKM}$. Elle est paramétrisé par trois angles de mélange et d'une ou trois phases qui permet de violer CP selon que les neutrinos soient des particules de Dirac ou Majorana :
+\begin{equation}
+\mathcal{M}^{PMNS}= 
+\begin{pmatrix} 
+c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta} \\
+-s_{12}c_{23}-c_{12}s_{23}s_{13}e^{i\delta} & c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta} & s_{23}c_{13} \\
+s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{i\delta} & c_{23}c_{13}
+\end{pmatrix}\times \begin{pmatrix}
+    1 \\
+    & e^{i\frac{\alpha_{21}}{2}} \\
+    & & e^{i\frac{\alpha_{31}}{2}} \\
+\end{pmatrix}
+\end{equation}
+avec $s_{ij}=\sin(\theta_{ij})$, $c_{ij}=\cos(\theta_{ij})$.
+Les valeurs de ces paramètres sont déterminés expérimentalement.
+\section{Les succès du Modèle Standard}
+L'étape essentiel au succès du Modèle standard a été la prédiction et la découverte des bosons $W^{\pm}$ et $Z^{0}$.\marginpar
+{
+\centering
+\includegraphics[width=\marginparwidth]{SM/gargamelle.jpg}
+\captionof{figure}{Gargamelle.}
+\label{GARGAMELLE}
+}
+\marginpar
+{
+\centering
+\includegraphics[width=\marginparwidth]{SM/ua1.jpg}
+\captionof{figure}{UA1.}
+\label{UA1}
+}
+\marginpar
+{
+\centering
+\includegraphics[width=\marginparwidth]{SM/ua2.jpg}
+\captionof{figure}{UA2.}
+\label{UA2}
+}
+\marginpar
+{
+\centering
+\includegraphics[width=\marginparwidth]{SM/HERA.jpg}
+\captionof{figure}{tunnel du collisionneur HERA.}
+\label{HERA}
+}
+\marginpar
+{
+\centering
+\includegraphics[width=\marginparwidth]{SM/slac.jpg}
+\captionof{figure}{Beam line du SLAC.}
+\label{SLAC}
+} Dés 1932 Fermi essaya d'expliquer la désintégration nucléaire $\beta$ et l'interaction electromagnetique par des interactions à 4 points. Cette théorie  s'avérera être une théorie effective qui présente des divergences à haute énergie. Ce n'est que vers la fin des années 1960 que Glashow,Salam and Weinberg crée une théorie convaincante qui prédit la présence d'un courant neutre afin d'annuler les divergence du modèle. En 1973 't Hooft montra que cette théorie est libre renormalisable et parfaitement cohérente d'un point de vue théorique. La découverte expérimentale du courant neutre faible sera faite en 1973 au CERN par la chambre à bulle Gargamelle\ref{GARGAMELLE} conçue pour détecter les neutrinos. En 1983 les trois bosons du secteur électrofaible sont découverts au CERN grâce au expérience UA1\ref{UA1} et UA2\ref{UA2}.
+De nombreuses mesures ont ensuite été effectuées par plusieurs collisionneurs: Large Electron Positron (LEP), Stanford Linear Collider (SLAC)\ref{SLAC}, Tevatron, Hadron-Elektron-Ringanlage (HERA)\ref{HERA}. Les propriétés des bosons $W^{\pm}$ et $Z^{0}$ ont été trouvées conformes au prédictions du Modèle Standard. 
+
+De plus l'ensemble des mesures effectuées jusqu'à présent sont compatibles avec le Modèle Standard: La figure (fig.\ref{mesures}) montre la mesure de certains paramètres ainsi que leur "pull" défini par :
+\begin{equation}
+\frac{O^{mesure}-O^{fit}}{\sigma^{mesure}}
+\end{equation}
+c'est à dire la déviation entre les mesures expérimentales et les prédictions théoriques en unités de l'incertitude expérimentale. Tous les pulls sont inférieur à $3\sigma$. L'expérience et la théorie sont donc en très bon accord.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{SM/mesure.eps}
+\captionof{figure}{Comparaison des résultats d'ajustement avec les mesures directes de certains paramètres du Modèle Standard.}
+\label{mesures}
+\end{figure}
+\section{Les faiblesses du Modèle Standard}
+Le modèle Standard est en accord remarquable avec l'expérience. Cependant, plusieurs problèmes et questions non résolubles amène à considérer le Modèle Standard comme une théorie effective, valable jusqu'à l'échelle du TeV. Une nouvelle physique qui engloberait le Modèle Standard devrait apparaitre à cette échelle d'énergie.
+
+Parmis les principaux problèmes ou faits inexpliqués par le Modèle Standard, on peut citer :
+\begin{itemize}[label=$\bullet$]
+\item Les neutrinos massifs :\marginpar
+{
+\centering
+\includegraphics[width=\marginparwidth]{SM/kamiokande.jpg}
+\captionof{figure}{Intérieur du détecteur Super-Kamiokande.}
+\label{kamiokande}
+}
+\marginpar
+{
+\centering
+\includegraphics[width=\marginparwidth]{SM/chooz.jpg}
+\captionof{figure}{Coeur du détecteur Double Chooz.}
+\label{chooz}
+} Les expérience Super-Kamiokande\ref{kamiokande} et GALLEX portant sur l'observation du flux de neutrinos provenant du Soleil et les expériences Double Chooz\ref{chooz} et K2K pour les flux de neutrinos de sources artificielles terrestres ont mis en évidence l'oscillation des neutrinos entre les saveurs leptoniques. Ces oscillations ne peuvent s'expliquer que si les neutrinos sont massifs et s'il existe des neutrinos droits. Bien que le Modèle Standard considére les neutrinos comme des particules de masse nulle et que de parité gauche, il est facile d'y ajouter un neutrino droit dans chaque famille et les couplages au doublet Higgs correspondant afin de rendre compte de ces faits expérimentaux\footnote{C'est d'ailleurs cette extension du Modèle Standard qui est présenté dans ce chapitre.}. Cependant cela aggrave le problème de la hiérarchie des masses car les masses des particules élémentaires s'étalent sur 10 ordres de grandeur !
+
+\item Le nombre de paramètres libres : Le modèle standard contient 18 paramètres libres : les 3 constantes de couplages, les deux paramètres $\lambda$ et $\mu^2$ du potentiel de Higgs, 9 couplages de Yukawa et les trois angles et une phase pour les quarks dans la matrice CKM ainsi que l'angle associé auwx. Et d'autres encore en ajoutant le fait que les neutrinos soit massif.
+
+\item Le nombre de familles : Le nombre de famille a été expérimentalement obtenu en comparant la section efficace hadronique en fonction de l'énergie du centre de masse expérimentale au prédiction théorique différents nombres de familles de neutrinos de masse négligeable. Actuellement on considère que trois familles\ref{neutrinos}. Cependant le fait que les neutrinos soient massif permet l'existance de plus de trois familles si les neutrinos on une masse supérieur à $m_{Z^{0}}/2$.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.30\textwidth]{SM/neutrinos.png}
+\captionof{figure}{Mesures de la section efficace de production hadronique près de la résonance en Z. Les courbes indiquent les sections efficaces prédites pour deux,trois et quatres espéces de neutrinos avec les couplages du Modèle Standard et de masses négligeables.}
+\label{neutrinos}
+\end{figure}
+
+\item La baryogénèse : Le Modèle Standard est incapable d'expliquer l'asymétrie entre la quantité de baryons (matière) et d'anti-baryons (anti-matière) observés dans l'Univers.
+
+\item La gravitation : Le Modèle Standard ne comporte pas l'interaction gravitationnelle. Aucune formulation quantique de la gravitation n'a encore été trouvé. La meilleur théorie gravitationnelle, la relativité générale et malheureusement incompatible avec le Modèle Standard.
+
+\item Le problème de naturalité : En effet, il paraît naturel de considérer une échelle d'énergie ou le Modèle Standard cesse d'être valide. Or, les ordres supérieur de la théorie perturbative ajoutent des corrections radiatives aux masses des différentes particules. En imposant une échelle d'énergie à la validité du Modèle Standard $\Lambda$, un "cut-off", les corrections vont en dépendre. Pour le boson de Higgs et en considérant les diagramme de la figure fig.\cref{corrections} on peut écrire :
+\begin{equation}
+m_{h}^{2}=m_{0}^{2}-\delta m_{h}^{2}
+\end{equation}
+avec $m_{0}^{2}$ la masse "nue" du boson, $m_{h}^{2}$ la masse effective et $\delta m_{h}^{2}$ les corrections radiative.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{SM/corrections.jpg}
+\captionof{figure}{Correction radiative du premier ordre pour le boson de Higgs.}
+\label{corrections}
+\end{figure}
+La contribution fermionique est de la forme :
+\begin{equation}
+\delta m_{h}^{2}=-\frac{y_{f}^{2}}{16\pi^{2}}\left(2\Lambda^{2}+\cdots\right)
+\end{equation}
+En considérant un cut-off de l'ordre de $\Lambda \sim 10^{16}$GeV il faut donc un accord à $10^{-30}$ entre $m_{0}^{2}$ et $\delta m_{h}^{2}$. Ce problème de hiérarchie, et de réglage fin des paramètres ne semble pas naturel.
+
+\item Matière noire et Énergie noire : Des observations cosmologiques ont mis en évidence la présence de matière dite noire car elle n'émet pas et n'interagît pas avec les radiations électromagnétiques. Bien que n'ayant jamais été directement observé, son existence et certaines de ses propriétés peuvent être étudiés par leur effets gravitationnelles sur le mouvement de la matière visible, elle serait  également à l'origine de la formation des galaxies et des amas de galaxies, et de leurs répartition de façon non uniforme dans l'Univers. D'après les observations du satellite Plank\ref{Plank},
+la matière que nous connaissons ne compose que 4.9\% du totale mass-énergie de l'Univers. La matière noire quant à elle ne compte que pour 26.8\%. Les 68.3\% restant sont composés d'énergie noire. Cette énergie serait responsable de l'accélération de  l'expansion de l'Univers qui à été mis en évidence en 1998 par les projets Supernova Cosmology Project et High-Z supernovae search team. Ni la matière noire ni l'énergie noire ne sont décrites par le Modèle Standard.
+\marginpar
+{
+\centering
+\includegraphics[width=\marginparwidth]{SM/plank.jpg}
+\captionof{figure}{Le satellite Plank.}
+\label{Plank}
+} 
+\end{itemize}

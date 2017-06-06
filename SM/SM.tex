@@ -718,7 +718,7 @@ Parmis les principaux problèmes ou faits inexpliqués par le Modèle Standard, 
 \item Le nombre de familles : Le nombre de famille a été expérimentalement obtenu en comparant la section efficace hadronique en fonction de l'énergie du centre de masse expérimentale au prédiction théorique différents nombres de familles de neutrinos de masse négligeable. Actuellement on considère que trois familles\ref{neutrinos}. Cependant le fait que les neutrinos soient massif permet l'existance de plus de trois familles si les neutrinos on une masse supérieur à $m_{Z^{0}}/2$.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.30\textwidth]{SM/neutrinos.png}
+\includegraphics[width=0.35\textwidth]{SM/neutrinos.png}
 \captionof{figure}{Mesures de la section efficace de production hadronique près de la résonance en Z. Les courbes indiquent les sections efficaces prédites pour deux,trois et quatres espéces de neutrinos avec les couplages du Modèle Standard et de masses négligeables.}
 \label{neutrinos}
 \end{figure}
@@ -734,13 +734,14 @@ m_{h}^{2}=m_{0}^{2}-\delta m_{h}^{2}
 avec $m_{0}^{2}$ la masse "nue" du boson, $m_{h}^{2}$ la masse effective et $\delta m_{h}^{2}$ les corrections radiative.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=1\textwidth]{SM/corrections.jpg}
+\includegraphics[width=0.55\textwidth]{SM/corrections.jpg}
 \captionof{figure}{Correction radiative du premier ordre pour le boson de Higgs.}
 \label{corrections}
 \end{figure}
 La contribution fermionique est de la forme :
 \begin{equation}
-\delta m_{h}^{2}=-\frac{y_{f}^{2}}{16\pi^{2}}\left(2\Lambda^{2}+\cdots\right)
+\label{eq:1}
+\delta m_{h}^{2}=-\frac{y_{f}^{2}}{16\pi^{2}}\left(2\Lambda^{2}+6m_{f}\log\left(\frac{\Lambda}{m_{f}}\right)\cdots\right)
 \end{equation}
 En considérant un cut-off de l'ordre de $\Lambda \sim 10^{16}$GeV il faut donc un accord à $10^{-30}$ entre $m_{0}^{2}$ et $\delta m_{h}^{2}$. Ce problème de hiérarchie, et de réglage fin des paramètres ne semble pas naturel.
 
@@ -753,4 +754,27 @@ la matière que nous connaissons ne compose que 4.9\% du totale mass-énergie de
 \captionof{figure}{Le satellite Plank.}
 \label{Plank}
 } 
+
+\item Non unification des couplages :
+Les constantes de couplages $\alpha_{1}$,$\alpha_{1}$ et $\alpha_{3}$ respectivement de l'interaction electromagnétique, faible et forte dépendent de l'échelle d'énergie. Il s'avére que ces trois constantes se rapprochent l'une de l'autre à haute énergie mais ne concourent pas en un seul point (cf.fig\ref{constantes}). Bien que n'étant pas en soit un problème, la convergence vers une valeur unique à haute énergie et nécessaire à une théorie "du tout" qui unifierait ces trois interactions. Le calcul de l'évolution de ces constantes par la méthode de renormalisation n'aboutissant pas à la convergence de ces trois constantes tend à prouver une lacune du Modèle Standard et son caractère effectif.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\textwidth]{SM/couplageSM.jpg}
+\captionof{figure}{Évolution des constantes de couplage en fonction de l'échelle d'énergie dans le cas du Modèle Standard.}
+\label{constantes}
+\end{figure}
 \end{itemize}
+
+\section{Au delà du Modèle Standard}
+Afin de résoudre certains de ces problèmes, de nombreux modèles théorique ont été développé, cependant aucun d'entre eux n'est capables de répondre à toutes les questions et combler les lacunes du Modèle Standard. Certaines de ces théorie sont des extensions du à ce modèle, d'autre propose des modèles complètement différents.
+
+La majorité des modèles repose sur les symétries du Modèle Standard et cherche à les étendre : Soit en trouvant d'autres symétries internes (Grand Unified Theorries (GUT)), soit en liant les symétries internes et externes ( supersymétrie (SUSY)) voir même modifier la nature même de l'espace temps en ajoutant des dimensions supplémentaires par exemple.
+
+\subsubsection{Les modèles de grande unification}
+Ces modèles s'appuient sur le fait qu'il ait été possible de réunir dans le Modèle Standard trois des quatre interactions que nous connaissons et que leur constantes de couplage se rapprochent l'une de l'autre à haute énergie. Il semble donc logique de vouloir unir ces trois interactions sous une même symétrie. Il n'existerait alors plus qu'un groupe G et qu'une seule constante de couplage. Ces théories doivent bien sûr être renormalisables et leur groupe doit avoir comme sous groupe celui du Modèle Standard $SU(3)\otimes SU(2) \otimes U(1)$. Les groupes $SU(5)$ et $SO(10)$ ont notamment été étudié.
+
+\subsubsection{Modèles à dimensions supplémentaires}
+Ces modèles tentent de supprimer la naturalité et la hiérarchie des échelles d'énergies en faisant tendre l'échelle de Planck vers celle de l'interaction faible. Pour cela ils prennent comme hypothèse que l'espace temps contient des dimensions supplémentaires enroulées compacts. L'interaction gravitationnelle évolue donc dans ces dimension supplémentaires.
+
+\subsubsection{La supersymètrie}
+La supersymètrie a été introduite par Weiss et Zumino en 1974. Elle consiste à supprimer les divergences quadratiques  en les annulant grâce à l'ajout de termes supplémentaires. Pour cela on associe à chacun des fermions $f_{L}$ et $f_{R}$ un partenaire scalaire $\tilde{f}_{L}$ et $\tilde{f}_{R}$ possédant les mêmes nombres leptoniques et baryoniques. Ces partenaires contribuent donc aux diagramme de correction radiative de la masse du Higgs (cf.fig\ref{corrections}). Les boucles scalaires ont une contribution positive contrairement aux boucles fermioniques, il est ainsi possible de supprimer le terme en $\Lambda^2$ de la formule (\ref{eq:1}). La masse du Higgs est varie alors comme le logarithme de l'énergie $\Lambda$. On supprime ainsi le problème du fine-tuning et de la naturalité. Les équations de renormalisation sont également modifiées et il est possible de faire concourir les constantes de couplages en un point. La supersymètrie est donc également un candidat à une théori du "tout". La supersymètrie souffre cependant de certains problèmes, en effet, les particules superpartenaires sont censé être de même masse que les particules élémentaires. Or aucune superparticule n'a encore été detécté expérimentalement. Il faut donc introduire un mécanisme de brisure de la supersymètrie.

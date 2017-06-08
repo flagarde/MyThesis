@@ -3,4 +3,4 @@ latexmk -f -pdf  -latexoption='--shell-escape -interaction=nonstopmode %O %S -fi
 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf MyThesis.pdf
 rm MyThesis.pdf
 mv output.pdf MyThesis.pdf
-latexmk -c
+#latexmk -c

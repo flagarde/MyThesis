@@ -100,20 +100,21 @@ La figure \ref{lhcschema} est une vue schématique du LHC. En vérité le LHC n'
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
   	\centering
-	\includegraphics[width=0.55\textwidth]{LHC/lhc-schematic.jpg}
+	\includegraphics[width=0.75\textwidth]{LHC/lhc-schematic.jpg}
   	\captionof{figure}{Vue schématique des octants du LHC ainsi que des positions des principaux détecteurs le long du LHC. Les faisceaux (en bleu et rouge) circulent en sens inverse l'un de l'autre.}
   	\label{octants}	
 \end{minipagewithmarginpars}
+
 La réutilisation du tunnel du LEP et l'énergie des faisceau (7 TeV) à obligé l'utilisation d'aimant supraconducteur produsant des champs magnétique de 8.4T. De plus l'utilisation de deux faisceaux de protons voyant en sens inverse et l'espace limité dans le tunnel à amené à la création d'un nouveau type d'aimants où les deux tubes contenant les deux faisceaux sont insérés dans un même cryostat (cf.fig\ref{dipole}).
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 \centering
-\includegraphics[width=0.95\textwidth]{LHC/dipole.jpg}
+\includegraphics[width=1\textwidth]{LHC/dipole.jpg}
 \captionof{figure}{Vue en transversale d'un dipole du LHC.}
 \label{dipole}	
 \end{minipagewithmarginpars}
 
-\section{Luminosité des faisceaux}
+\subsection{Luminosité des faisceaux}
 Le nombre d'événement correspondant à un processus donnée que peut produire le LHC peut être exprimé par :
 \begin{equation}
 N=\int \mathcal{L}(t)\sigma \mathrm dt
@@ -137,7 +138,7 @@ avec $\theta_{c}$ l'angle de croisement des faisceaux, $\sigma_{z}$ la moyenne q
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 \centering
-\includegraphics[width=0.5\textwidth]{LHC/collision.png}
+\includegraphics[width=0.3\textwidth]{LHC/collision.png}
 \captionof{figure}{Schéma de colisions de paquets dans le plan transversale.}
 \label{collision}	
 \end{minipagewithmarginpars}
@@ -158,7 +159,7 @@ D'après cette formule on peut remarqué qu'il peut être interéssant de rédui
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 \centering
-\includegraphics[width=0.5\textwidth]{LHC/crab.png}
+\includegraphics[width=0.3\textwidth]{LHC/crab.png}
 \captionof{figure}{Schéma de colisions "en crab" de paquets dans le plan transversale.}
 \label{crabe}	
 \end{minipagewithmarginpars}
@@ -193,3 +194,36 @@ La luminosité intégré pour les collisions protons-protons délivré par le LH
 \includegraphics[width=0.7\textwidth]{LHC/luminosity.png}
     \captionof{figure}{Luminosité intégrée en fonction du jour de l'année 2016 délivrée (bleu) et enregistrée par CMS (orange) pendant les faisceaux stables et pour les collisions pp à 13 TeV d'énergie dans le centre de masse en 2016.}
 \end{minipagewithmarginpars}
+
+\subsection{Collisions protons-protons}
+Le proton n'est pas une particule élémentaire. Il est composé de 3 quarks de valence (uud) et de quarks, antiquarks et gluons regroupés sous le termes de partons (cf.fig\ref{proton})
+
+\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\centering
+\includegraphics[width=0.3\textwidth]{SM/quarks3.png}
+\captionof{figure}{Schéma d'un protons : les quarks (vert) et anti-quarks (bleu) sont en interactions par l'intermédiaire de gluons (noire).}
+\label{proton}	
+\end{minipagewithmarginpars}
+
+Les collisions proton-proton peuvent être rassemblés en trois groupes :
+\begin{itemize}
+	\item \textbf{Les collisions élastiques : } Les collisions élastique préservent l'énergie cinétique totale des protons. Ces collisions ne sont pas intéressante pour la physique est ne font que pollués. Elle correspondes à des collisions de basse quantité de mouvement.
+	\item\textbf{Les collisions diffractives : } Elles se produisent lorsque la quantité de mouvement des deux protons et plus importante. Elle se caractérise par la fragmentation d'un proton pour la diffraction simple ou des deux protons pour la diffraction double.
+	\item \textbf{Les collisions inélastiques : } Ces collisions se produisent lorsque l'un des parton d'un proton interagit avec un parton de l'autre proton. Ce sont ces interactions à haute quantité de mouvement qui sont les plus intéressantes pour la recherche de nouvelle particules.
+\end{itemize}
+
+Les collisions inélastique se produisent entre deux partons qui possèdent une fraction de la quantité de mouvement $x_{1}$ et $x_{2}$ du proton $1$ et $2$. Ces fractions sont décrites par des fonctions de distribution de partons $f(x,Q^{2})$. Il s'agit des densités de probabilités de trouver une particule avec une fraction $x$ de la quantité de mouvement longitudinale du hadron dont l'impulsion est $Q^{2}$. Il existe une fonction de distribution de parton par saveur de quark et une pour les gluons (cf.fig\ref{pdf}). La figure \ref{pdf} représente ces fonctions.
+
+\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+	\centering
+	\includegraphics[width=0.9\textwidth]{LHC/pdf.png}
+	\captionof{figure}{$x$ fois la  distribution de parton non-polarisé $f(x)$ ou $f=u_{v},d_{v},\bar{u},\bar{d},s,c,b,g)$ et leurs incertitudes en utilisant la parametrisation NNLO MSTW2008 à l'échelle $10$GeV$^{2}$ (gauche) $10000$GeV$^{2}$ (droite).}
+	\label{pdf}	
+\end{minipagewithmarginpars}
+ 
+Ces fonctions ne peuvent être déduites que des données expérimentales car l'échelle d'énergie de QCD à laquelle sont soumis les partons au sein du proton ne permet pas d'effectuer un calcul perturbatif. On peut remarquer que la contribution des gluons est la plus importante et que les quarks de valence ont une contribution plus importantes que ceux de la mer de partons.
+
+En utilisant ces fonctions, il est possible de calculer la section efficace d'un événement $A+B\rightarrow X$ par la formule :
+\begin{equation}
+\sigma_{A+B\rightarrow X}=\int \mathrm{d}x_{a}\mathrm{d}x_{b}f_{a/A}(x_{a},\mu^{2})f_{b/B}(x_{b},\mu^{2})\sigma{_{a+a\rightarrow X}}
+\end{equation}

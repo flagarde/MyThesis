@@ -15,6 +15,10 @@
 *.bbl
 *.blg
 *.upb
+*.ilg
+*.fls
+*.ind
+*.fdb_latexmk
 .directory
 *.bcf
 *.xml

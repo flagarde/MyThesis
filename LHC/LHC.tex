@@ -223,7 +223,13 @@ Les collisions inélastique se produisent entre deux partons qui possèdent une 
  
 Ces fonctions ne peuvent être déduites que des données expérimentales car l'échelle d'énergie de QCD à laquelle sont soumis les partons au sein du proton ne permet pas d'effectuer un calcul perturbatif. On peut remarquer que la contribution des gluons est la plus importante et que les quarks de valence ont une contribution plus importantes que ceux de la mer de partons.
 
-En utilisant ces fonctions, il est possible de calculer la section efficace d'un événement $A+B\rightarrow X$ par la formule :
+En utilisant ces fonctions et le théorème de factoriation de QCD, il est possible de calculer la section efficace d'un événement $A+B\rightarrow X$ par la formule :
 \begin{equation}
-\sigma_{A+B\rightarrow X}=\int \mathrm{d}x_{a}\mathrm{d}x_{b}f_{a/A}(x_{a},\mu^{2})f_{b/B}(x_{b},\mu^{2})\sigma{_{a+a\rightarrow X}}
+\sigma_{A+B\rightarrow X}=\sum_{i=q,g}\int_{0}^{1} \mathrm{d}x_{a}\mathrm{d}x_{b}f_{a/A}(x_{a},\mu_{F}^{2})f_{b/B}(x_{b},\mu_{F}^{2})\sigma{_{a+b\rightarrow X}}
+\end{equation}
+L'échelle de factorisation $\mu^{2}$ est la limite entre la partie non perturbative $f_{b/B}(x_{b},\mu^{2})$ et la partie calculable par la théorie perturbative $\sigma{_{a+a\rightarrow X}}$.
+
+Il est ainsi possible de calculer $\sigma{_{a+b\rightarrow X}}$ par la méthode perturbative et de la développer en terme de puissance de la constante de couplage $\alpha_{s}\left(\mu_{R}^{2}\right)$ qui dépend de l'échelle de renormalisation:
+\begin{equation}
+\sigma_{a+a\rightarrow X}=\left[\sigma_{0}+\alpha_{S}\left(\mu_{R}^{2}\right)\sigma_{1}+\cdot\right]_{a+b\rightarrow X}
 \end{equation}

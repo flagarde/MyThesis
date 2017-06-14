@@ -25,6 +25,7 @@
 \cellspacetoplimit=4pt
 \cellspacebottomlimit=4pt
 \usepackage{minipage-marginpar}
+\usepackage{calc}
 \usepackage{lmodern}  
 \usepackage{microtype}
 \usepackage{cleveref} %GEEENIAAAAL!!!
@@ -91,43 +92,56 @@
 
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
 \usepackage{etoolbox}
-\newcommand{\ColorSection}[1]{%
-    \colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}
-    {\hspace{0.2cm}\textcolor{white}{\thesection\ #1}\hspace*{0.5cm}}}}
-\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
 
-\titleformat{\section}
-    {\rmfamily\large\raggedright}                                                
-    {}{0pt}{\ColorSection}     
-
-\titleformat{name=\section,numberless}
-    {\rmfamily\large\raggedright}                                                
-    {}{0pt}{\ColorSectionStarred}       
-
-
-\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}    
-\newcommand{\ColorSubSection}[1]
-{%
-\colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesubsection\ #1}\hspace*{0.5cm}}}
-}
-
+%%%%%Use titlesec to color section subsection subsubsection
+\newcommand{\ColorSection}[1]{\colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesection\ #1}\hspace*{0.5cm}}}}
+\titleformat{\section}{\rmfamily\large\raggedright}{}{0pt}{\ColorSection}     
+\titleformat{name=\section,numberless}{\rmfamily\large\raggedright}{}{0pt}{\ColorSection}       
+\newcommand{\ColorSubSection}[1]{\colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesubsection\ #1}\hspace*{0.5cm}}}}
 \titleformat{\subsection}{\rmfamily\raggedright}{}{0pt}{\ColorSubSection}     
 \titleformat{name=\subsection,numberless}{\rmfamily\raggedright}{}{0pt}{\ColorSubSection}       
-  
-\titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}    
-\newcommand{\ColorSubSubSection}[1]
-{%
-\colorbox{black!55}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesubsubsection\ #1}\hspace*{0.5cm}}}
-}
-
+\newcommand{\ColorSubSubSection}[1]{\colorbox{black!55}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesubsubsection\ #1}\hspace*{0.5cm}}}}
 \titleformat{\subsubsection}{\rmfamily\raggedright}{}{0pt}{\ColorSubSubSection}
-\titleformat{name=\subsubsection,numberless}{\rmfamily\raggedright}{}{0pt}{\ColorSubSubSection}      
-
-
-
-
-
-
+\titleformat{name=\subsubsection,numberless}{\rmfamily\raggedright}{}{0pt}{\ColorSubSubSection}   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
+\titlespacing*{\subsection}{0pt}{\baselineskip}{\baselineskip}
+\titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}
+\newlength{\mylength}
+\setlength{\mylength}{\textheight+\headsep-\paperheight}
+\newcommand{\void}{\vspace*{\paperheight}\textcolor{gray!30}{\hrule}}
+\newcommand{\leftnum}{\vspace*{\paperheight}\textcolor{white}{\hrule}\vspace{0.2cm}\makebox[\textwidth][l]{\hspace{0.5cm}\sffamily\textcolor{white}{ \large{\thepage}}}\vspace{0.5cm}}
+\newcommand{\rightnum}{\vspace*{\paperheight}\textcolor{white}{\hrule}\vspace{0.2cm}\makebox[\textwidth][r]{\sffamily\textcolor{white}{ \large{\thepage}}\hspace{0.5cm}}\vspace{0.5cm}}
+\newcommand{\barre}{\colorbox{gray!75}{\begin{minipage}[b]{5cm}\textcolor{gray!75}{\Large{lg}}\end{minipage}}\vspace{\mylength}}
+\newcommand{\MargeSimple}[2]
+{%
+	\ClearShipoutPicture
+	\AddToShipoutPicture{%
+		\ifthenelse{\isodd{\value{page}}}{
+			\AtPageLowerRight{%
+				{\colorbox{gray!30}{%
+						\begin{minipage}[b]{5cm}
+							\vspace*{\paperheight}
+							#2
+							%\textcolor{gray!30}{\hrule}\vspace{0.2cm}
+						\end{minipage}%
+				}}%
+			}%
+		}
+		{
+			\AtPageLowerLeft{%
+				{\colorbox{gray!30}{%
+						\begin{minipage}[b]{5cm}
+							\vspace*{\paperheight}
+							#1
+							%\textcolor{gray!30}{\hrule}\vspace{0.2cm}
+						\end{minipage}%
+				}}%
+			}%
+		}
+	}
+}
 
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
@@ -136,7 +150,7 @@
                    \@afterindentfalse
                     \secdef\@chapter\@schapter}
 \renewcommand\part{\if@openright\cleardoublepage\else\clearpage\fi
-                    \thispagestyle{empty}%
+                   \thispagestyle{empty}%
                     \global\@topnum\z@
                     \@afterindentfalse
                     \secdef\@part\@spart}
@@ -154,14 +168,9 @@
 \let\oldfootnotesize\footnotesize
 \renewcommand*{\footnotesize}{\oldfootnotesize\fontsize{5}{7}}
 
-\captionsetup{
-  justification=raggedright,
-  labelfont={color=gray,bf,small},
-  font=small}
+\captionsetup{justification=raggedright,labelfont={color=gray,bf,small},font=small}
 
-\newcommand{\ligne}{\color{gray}{\rule{\linewidth}{5pt}}
-\vspace{0.2cm}
-\color{black}}
+\newcommand{\ligne}{\color{gray}{\rule{\linewidth}{5pt}}\vspace{0.2cm}\color{black}}
 
 \makeatletter
 \newcommand\At@Page@Upper@Right[1]{%
@@ -195,8 +204,6 @@
   \captionsetup{list=no, labelformat=parens, labelsep=space}%
   \captionof{subfigure}{#2}%
 }
-
-
 
 %%%%********************************************************************
 % fancy quotes
@@ -268,21 +275,10 @@
 \newcommand{\pa}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\de}[2]{\frac{\dd #1}{\dd #2}}
 
-\newcommand{\image}[4]{\begin{figure}[!ht]
-
-\centering
-
-\includegraphics[scale=#2]{#1}
-\caption{#3} 
-\label{#4}
-\end{figure}}
 \usetikzlibrary{shapes,calc}  
-
 \usepackage{yfonts}
 
 \newcommand{\lettrines}[2]{\lettrine[lines=2, slope= -0.5em, lhang=0.25, loversize=0.25]{#1}{\small #2}}
-
-
 
 \makeatletter
 \renewcommand{\fnum@figure}{Fig. \thefigure}
@@ -331,6 +327,7 @@ Institut de Physique Nucléaire de Lyon (IPNL)\\
 \vspace{2cm}
 %\maketitle
 \end{center}
+\restoregeometry
 \end{titlepage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
@@ -394,66 +391,10 @@ Qui addit scienciam addit et dolorem
 \end{titlepage}
 
 \frontmatter
-\AddToShipoutPicture{%
-  \ifthenelse{\isodd{\value{page}}}{
-    \AtPageLowerRight{%
-      {\colorbox{gray!30}{%
-        \begin{minipage}[b]{5cm}
-        \vspace{\paperheight}
-        \vspace{0cm} 
-        \textcolor{white}{\hrule}\vspace{0.2cm}
-        \sffamily\textcolor{white}{\hspace*{5.0cm}\thepage}\vspace{0.5cm}
-        \end{minipage}%
-      }}%
-    }%
-  }
-  {
-    \AtPageLowerLeft{%
-      {\colorbox{gray!30}{%
-        \begin{minipage}[b]{5cm}
-        \vspace{\paperheight}
-        \vspace{0cm} 
-        \textcolor{white}{\hrule\vspace*{0.2cm}}
-        \sffamily\textcolor{white}{ \hspace*{0.5cm}\vspace*{0.5cm}\thepage}
-        \end{minipage}%
-      }}%
-    }%
-  }
-}
+\MargeSimple{\leftnum}{\rightnum}
 \sommaire
 \mainmatter
-\AddToShipoutPicture{%
-  \ifthenelse{\isodd{\value{page}}}{
-    \AtPageLowerRight{%
-      {\colorbox{gray!30}{%
-        \begin{minipage}[b]{5cm}
-        \colorbox{gray!75}{%
-        \begin{minipage}[b]{5cm}
-        \textcolor{gray!75}{\Large{lg}}
-        \end{minipage}}
-        \vspace{27cm}
-        \textcolor{white}{\hrule}\vspace{0.2cm}
-        \makebox[\textwidth][r]{\sffamily\textcolor{white}{ \large{\thepage}}\hspace{0.5cm}}\vspace{0.5cm}
-        \end{minipage}%
-      }}%
-    }%
-  }
-  {
-    \AtPageLowerLeft{%
-      {\colorbox{gray!30}{% 
-        \begin{minipage}[b]{5cm}
-        \colorbox{gray!75}{%
-        \begin{minipage}[b]{5cm}
-        \textcolor{gray!75}{\Large{lg}}
-        \end{minipage}}
-        \vspace{27cm}
-        \textcolor{white}{\hrule}\vspace{0.2cm}
-        \makebox[\textwidth][l]{\hspace{0.5cm}\sffamily\textcolor{white}{ \large{\thepage}}}\vspace{0.5cm}
-        \end{minipage}%
-      }}%
-    }%
-  }
-}
+\MargeSimple{\barre\leftnum}{\barre\rightnum}
 {\fontsize{11}{11} \selectfont
 \include{SM/SM}
 \include{LHC/LHC}
@@ -461,63 +402,16 @@ Qui addit scienciam addit et dolorem
 \include{RPC/RPC}
 \appendix
 }
-\AddToShipoutPicture{%
-  \ifthenelse{\isodd{\value{page}}}{
-    \AtPageLowerRight{%
-      {\colorbox{gray!30}{%
-        \begin{minipage}[b]{5cm}
-        \vspace{\paperheight}
-        \vspace{0cm} 
-        \textcolor{white}{\hrule}\vspace{0.2cm}
-        \sffamily\textcolor{white}{\hspace*{5.0cm}\thepage}\vspace{0.5cm}
-        \end{minipage}%
-      }}%
-    }%
-  }
-  {
-    \AtPageLowerLeft{%
-      {\colorbox{gray!30}{%
-        \begin{minipage}[b]{5cm}
-        \vspace{\paperheight}
-        \vspace{0cm} 
-        \textcolor{white}{\hrule\vspace*{0.2cm}}
-        \sffamily\textcolor{white}{ \hspace*{0.5cm}\vspace*{0.5cm}\thepage}
-        \end{minipage}%
-      }}%
-    }%
-  }
-}
+\backmatter
+\MargeSimple{\void}{\void}
 \printbibliography
+\fancyhf{} 
 \newpage\null\thispagestyle{empty}\newpage
 \listoffigures
 \newpage\null\thispagestyle{empty}\newpage
 \listoftables
 \newpage\null\thispagestyle{empty}\newpage
 \tableofcontents
-\backmatter
-\AddToShipoutPicture{%
-  \ifthenelse{\isodd{\value{page}}}{
-    \AtPageLowerRight{%
-      {\colorbox{white!30}{%
-        \begin{minipage}[b]{5cm}\vspace{\paperheight}
-        \textcolor{white}{\hrule\vspace*{0.2cm}}
-        \sffamily\textcolor{white}{\hspace*{5.0cm}\vspace*{0.5cm}\thepage }
-        \end{minipage}%
-      }}%
-    }%
-  }
-  {
-    \AtPageLowerLeft{%
-      {\colorbox{white!30}{%
-        \begin{minipage}[b]{5cm}
-        \vspace{\paperheight}
-        \textcolor{white}{\hrule\vspace*{0.2cm}}
-        \sffamily\textcolor{white}{ \hspace*{0.5cm}\vspace*{0.5cm}\thepage}
-        \end{minipage}%
-      }}%
-    }%
-  }
-}
 \printindex
 \thispagestyle{empty}
 \end{document}

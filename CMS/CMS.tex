@@ -36,8 +36,41 @@ Le détécteur CMS se trouve dans une caverne situé au point 5 (P5), proche du 
 	\label{slice}
 }
 
-CMS est une détecteur cylindrique de 24m de long et de 14.6 m de diamètre pour une masse de plus de 16000 tonnes (cf.fig\ref{cmsexploded}). Le design de CMS est motivé par la mesure de l'impulsion transverse des 
+CMS est une détecteur cylindrique de 24m de long et de 14.6 m de diamètre pour une masse de plus de 16000 tonnes (cf.fig\ref{cmsexploded}). Il est composé d'une succession de sous-détecteurs concentriques; En partant du centre verss l'extérieur :
+\begin{itemize}[label=$\bullet$]
+	\item \textbf{Le trajectographe : } C'est le sous-détecteur le plus proche du point d'intéraction. Il permet de reconstruire la trajectoires des particules chargées.
+	 \item \textbf{Le calorimètre électromagnètique (ECAL\footnote{Pour Electromagntic CALorimeter.}): Il permet de mesurer l'énergie des photons et des électrons.}
+	 \item \textbf{Le calorimètre hadronique (HCAL\footnote{Pour Hadronc CALorimeter}): Il permet de mesurer l'énergie des hadrons.}
+	 \item \textbf{L'aimant supr-conducteur : } Il produit un champ de 3.8T est permet de courber la trajectoire des particules chargées.
+	 \item \textbf{Les chambres à muons : } Elles permettent d'identifier reconstruire la trajectoire et mesurer l'énergie des muons. 
+\end{itemize}
+Chaque composant de CMS fera l'objet d'une description plus détaillé dans les paragraphes suivants.
 
+\subsection{Système de coordonnées conventionnel}
+Le système de coordonné utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère est coîncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnée qui suit la convention de la main-droite est determiné par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ est pointe vers le haut. CMS possédant une symmètrie cylindrique, le repère $\left(O,\vec{r},\vec{\theta},\vec{\phi}\right)$ est souvent utilisé. $r$ correspond à la distance entre le an perpendiculaire à l'axe du faisceau (appelé plan tranverse) passant par le point considérer et l'origine du repère $O$; $\theta$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et l'angle polaire $\phi$ est définit par rapport à $z$.
+
+Un troisième type de coordonnées, utilisant le fait que les particules produite au LHC sont relativistes, est également utilisé.
+En décomposant l'impulsion de la particule en une composante transverse et longitudinale (pr rapport au faisceau)
+\begin{equation}
+p=p_{T}+p_{L}=\sqrt{p_{x}^{2}+p_{y}^{2}}+p_{z}
+\end{equation}
+D'où :
+\begin{equation}
+( E/c)^{2}=(mc)^{2}+p^{2} (E/c)^{2}-p_{L}^{2}=(mc)^{2}+(p_{T})^{2}
+\end{equation}
+qu'il est possible de réécrire comme :
+\begin{equation}
+\left( E/c \right)=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\cosh(y), p_{L}=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\sinh(y)
+\end{equation}
+avec $y$ un paramètre appellée rapidité est égale à:
+\begin{equation}
+y=\arctan\left(\frac{p_{l}c}{E}\right)=\frac{1}{2}\log\left(\frac{E+p_{l}c}{E-p_{l}c}\right)
+\end{equation}
+en remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de $E=\sqrt{m^{2}c^{4}+p^{2}c^{2}}$
+\begin{equation}
+y=\frac{1}{2} \log\left(\frac{E+p_{l}c}{E-p_{l}c}\right)=\frac{1}{2}\log\left(\frac{\cos^2 \theta/2+m^{2}c^{2}/4p^{2}+\cdots}{\sin^2 \theta/2+m^{2}c^{2}/4p^{2}+\cdots}\right)\backsimeq-\log\tan\left(\frac{\theta}{2}\right)=\eta
+\end{equation}
+On utilise donc le repère $\left(O,\vec{r},\vec{\theta},\vec{\eta}\right)$ pour décrire la géométrie de CMS.
 \begin{sidewaysfigure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{CMS/cms.png}

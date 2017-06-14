@@ -288,123 +288,51 @@
 \renewcommand{\fnum@figure}{Fig. \thefigure}
 \makeatother
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Page de couverture %%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
-\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
-\def\ligne#1{
-  \hbox to \hsize{
-    \vbox{\centering #1}}}
-
-\def\haut#1#2#3{
-  \hbox to \hsize{
-    \rlap{\vtop{\raggedright #1}}
-    \hss
-    \clap{\vtop{\centering #2}}
-    \hss
-    \llap{\vtop{\raggedleft #3}}}}
-
-\def\bas#1#2#3{
-  \hbox to \hsize{
-    \rlap{\vbox{\raggedright #1}}
-    \hss
-    \clap{\vbox{\centering #2}}
-    \hss
-    \llap{\vbox{\raggedleft #3}}}}
-
-% Titre
-\def\maketitle
-{
-  \vbox to \vsize
-  {
-    \thispagestyle{empty}
-    \newgeometry{left=2.5cm,bottom=1.5cm,right=-1.5cm,top=1.5cm}
-    \begin{center}
-    \includegraphics[width=0.25\textwidth]{Logo/logo_lyon1.jpg}
-    \hspace{5cm}
-    \includegraphics[width=0.25\textwidth]{Logo/logo_ucbl_lyon1.jpg}
-  		\hfill
-  		\end{center}
-    \vfill
-    \haut{}{\large \@blurb}{}
-    \vfill
-    \ligne{\LARGE \@title}
-    \vspace{10mm}
-    \ligne{\LARGE \@author}
-    \vfill
-    \ligne{\Large \@jury}
-    \vfill
-    \begin{center}
-  		\includegraphics[width=0.25\textwidth]{Logo/Logo_IPNL.jpg}
-  		\vspace{2cm}
-  		\end{center}
-  }
-	\restoregeometry
-}
-
-% Date, lieu,...
-\def\date#1{\def\@date{#1}}
-\def\author#1{\def\@author{#1}}
-\def\title#1{\def\@title{#1}}
-\def\location#1{\def\@location{#1}}
-\def\blurb#1{\def\@blurb{#1}}
-\def\jury#1{\def\@jury{#1}}
-\def\email#1{\def\@email{#1}}
-\def\administratif#1{\def\@administratif{#1}}
-%\def\includegraphics#1{\def\@includegraphics{#1}}
-
-% Valeurs par defaut
-\date{\today}
-\author{}
-\title{}
-\location{Villeurbanne}
-\blurb{}
-
-\email{lagarde@ipnl.in2p3.fr}
-
-\makeatother
-\title{\Huge Caractérisation de détecteurs à plaques résistives de verres de basse résistivité en vue de la mise à niveau de CMS}
-\author{\LARGE{ \textsc{LAGARDE} François}}
-\location{Villeurbanne}
-\administratif{
-  %Sous la direction de :\\
-  %Imad  \textsc{Laktineh} et
-}
-\blurb{
-  Th\`ese de l'Universit\'e de Lyon \\
-  \bigskip
-  \'Ecole Doctorale de Physique et Astrophysique de Lyon (PHAST)\\[1em]
-  \bigskip
-  Th\`ese de Doctorat en Physique des Particules \\
-  \bigskip
-  Institut de Physique Nucl\'eaire de Lyon (IPNL)\\
-}
-\jury{
-  \begin{center}
-    \begin{tabular}{lll}
-      JURY~: & Mme. ** \textsc{**} & (examinatrice)\\
-      & Mme. ** \textsc{**}       & (examinatrice)\\
-      & M.  **  \textsc{**}         & (directeur de th\`ese)\\
-      & M.  ** \textsc{**}     & (rapporteur)\\
-      & M.  ** \textsc{**}            & (examinateur)\\
-      & M.  ** \textsc{**}     & (rapporteur)\\
-    \end{tabular}
-  \end{center}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \interfootnotelinepenalty=10000
 \setlength{\parskip}{\baselineskip}
 \addbibresource{bibli.bib}
 \begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page de couverture %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{titlepage}
-\begin{center}
-\maketitle
+\newgeometry{left=2cm,bottom=1.5cm,right=2cm,top=1.5cm,headheight=45pt}
+\thispagestyle{empty}
+\begin{center}	
+\includegraphics[width=0.25\textwidth]{Logo/logo_lyon1.jpg}
+\hspace{5cm}
+\includegraphics[width=0.25\textwidth]{Logo/logo_ucbl_lyon1.jpg}
+\hfill
+\vfill
+Thèse de l'Université de Lyon \\
+\bigskip
+École Doctorale de Physique et Astrophysique de Lyon (PHAST)\\[1em]
+\bigskip
+Thèse de Doctorat en Physique des Particules \\
+\bigskip
+Institut de Physique Nucléaire de Lyon (IPNL)\\
+\vfill
+\Huge Caractérisation de détecteurs à plaques résistives de verres de basse résistivité en vue de la mise à niveau de CMS
+\vspace{10mm}
+\normalsize
+
+\textsc{LAGARDE} François
+\vfill
+\begin{tabular}{lll}
+	JURY~: & Mme. ** \textsc{**} & (examinatrice)\\
+	& Mme. ** \textsc{**}       & (examinatrice)\\
+	& M.  **  \textsc{**}         & (directeur de thèse)\\
+	& M.  ** \textsc{**}     & (rapporteur)\\
+	& M.  ** \textsc{**}            & (examinateur)\\
+	& M.  ** \textsc{**}     & (rapporteur)\\
+\end{tabular}
+\vfill
+\includegraphics[width=0.25\textwidth]{Logo/Logo_IPNL.jpg}
+\vspace{2cm}
+%\maketitle
 \end{center}
 \end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 
 \dominitoc

@@ -79,14 +79,14 @@ On utilise donc le repère $\left(O,\vec{r},\vec{\theta},\vec{\eta}\right)$ pour
 \section{Les sous detecteurs de CMS}
 \subsection{Le trajectographe}
 Le trajectographe de CMS (cf.fig\ref{trajectographe}) est le détecteur le plus proche du faisceau et fu point de collision.Il a pour but de reconstruire les traces des particules chargées issues des collisions grâce à des suites d'impacts enregistrés par les couches du détecteur. La trace reconstruite permet de déterminer la charge et l'impulsion de la particule associée. En effet, une particule de charge $q$ qui se déplace dans un champ magnétique subit une force donné par la formule de Lorentz. La trajectoire de la particule dans le cas d'un champ magnétique d'intensité $B$ est hélicoïdale, de rayon $R_{c}$. Il est ainsi possible dans déduire l'impulsion transverse :
-\begin{eqnarray}
+\begin{equation}
 p_{T}=qBR_{c}
-\end{eqnarray}
+\end{equation}
 En prenant les positions selon r des hits, il est possible d'en déduire l'angle $\theta$, angle entre la trajectoire de la particule est le faisceau et donc de calculé l'impulsion totale:
 \begin{equation}
 p=\frac{p_{T}}{\sin\theta}
 \end{equation}
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{CMS/tracker.png}
 	\captionof{figure}{Schéma du trajectographe de CMS. Chaque trait reprèsente un mosule du détecteur. Les lignes double correspondent à des modules mis dos à dos est produise des hits dit stéréo. Le détécteur à pistes est composé de quatre sous-détecteur: Les tonneaux interne (TIB), les tonneaux externe (TOB), les disques interne (TID) et les bouchons (TEC).}
@@ -95,16 +95,19 @@ p=\frac{p_{T}}{\sin\theta}
 
 Le trajectographe est composé de deux sous-détecteurs : le détecteur à pixels et le trajectographe à micro-piste de silicium.
 \subsubsection{Le détecteur à pixels}
-Le détecteur à pixels de CMS à récemment était remplacé afin de garder un tracking performant à des luminositées au dessus de $2\times10{34}cm^{-2}s^{-1}$ et avec un pile-up de plus de $50$. Ce remplacement à eu lieu du 28 février au 7 mars durant l'arrêt technique de hivernal prolongé (EYETS). Le nouveau détecteur à pixels se compose d'un tonneaux constitué de quatre couche de détection (BPIX) à des distances du faisceau $r=3.0$cm,6.8cm,10.2cm et 16cm et d'une longueur de 548.8mm et de trois bouchons (FPIX) situé à $\pm$29.1cm,$\pm$39.6cm et $\pm$51.6cm pour une couverture radial allant de 4.5 à 16.1cm . Une comparaison entre l'ancien détecteur à pixel et le nouveau est donné fig.\ref{pixel}. L'ajout d'une quatrieme couche de détection dans le barrel assure une redondance lors de la reconnaissance de pattern et permet de réduire le fake rate lors de pile-up important. Il assure également une sécurité au cas où la couche la plus proche du point d'interaction viendrait à se déterioré plus vite que prévu.
-	\begin{figure}[h!]
+Le détecteur à pixels de CMS à récemment était remplacé afin de garder un tracking performant à des luminositées au dessus de $2\times10{34}cm^{-2}s^{-1}$ et avec un pile-up de plus de $50$. Ce remplacement à eu lieu du 28 février au 7 mars durant l'arrêt technique de hivernal prolongé (EYETS). Le nouveau détecteur à pixels se compose d'un tonneaux constitué de quatre couche de détection (BPIX) à des distances du faisceau $r=3.0$cm,6.8cm,10.2cm et 16cm et d'une longueur de 548.8mm et de trois bouchons (FPIX) situé à $\pm$29.1cm,$\pm$39.6cm et $\pm$51.6cm pour une couverture radial allant de 4.5 à 16.1cm . Une comparaison entre l'ancien détecteur à pixel et le nouveau est donné fig.\ref{pixel}.
+
+	\begin{figure}[ht!]
 	\subfloat[]{\includegraphics[width=.48\linewidth]{CMS/pixel.png}}
 	\subfloat[]{\includegraphics[width=.48\linewidth]{CMS/pixel2.png}}
 	\caption{Schéma de gauche : Comparaison entre l'ancien détecteur à pixel (bas) et nouveaux (haut). Schèma de droite : Vue oblique-transverse comparant les couche des tonneaux de 'ancien (gauche) et le nouveau déecteur.}
 	\label{pixel}
 \end{figure}
-L'addition d'une quatrième couche augmente le budget matériel du détecteur, il a donc été nécessaire de repenser le support et les services afin d'être plus léger. 
+
+L'ajout d'une quatrieme couche de détection dans le barrel assure une redondance lors de la reconnaissance de pattern et permet de réduire le fake rate lors de pile-up important. Il assure également une sécurité au cas où la couche la plus proche du point d'interaction viendrait à se déterioré plus vite que prévu.Cependant, elle augmente le budget matériel du détecteur, il a donc été nécessaire de repenser le support et les services afin d'être plus léger. 
 Un nouveau système de refroidessement au $CO2$ ainsi que la déplacement des système passif (connectique plaques d'electronique) hors d'une volume de tracking à également été effectué (cf.fig\ref{pixel2}).
-\begin{figure}[h!]
+
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.55\textwidth]{CMS/pixel3.png}
 	\captionof{figure}{Vue explosée du nouveau détecteur à pixels. La figure montre les positions des différentes partitions FPIX et BPIX ainsi que leur cylindres contenant leur service respectifs. Les services nécessaires au détecteur (connectiques, fibre optique, convertisseur DC-DC sont situés à haut $\eta$, hors du volume de tracking.)}
@@ -112,10 +115,11 @@ Un nouveau système de refroidessement au $CO2$ ainsi que la déplacement des sy
 \end{figure}
 
 Ce détecteur contient plus de 97 millions de pixels (79pour les BPIX et 18 pour les FPIX) mesurant $100\times150\mu m$ de section et $250\mu m$ d'épaisseur. Ces pixels sont regroupés en module (1184 pour BPIX et 672 pour FPIX) (cf.fig\ref{module}) de 66560 pixels  (8$\times$ 2 ROCs) d'une épaisseur de $75\mu m$ pour la premiere couche du BPIX et $250\mu m$ pour les reste du BPIX et FPIX.
-	\begin{figure}[h!]
+
+	\begin{figure}[ht!]
 		\centering
 	\subfloat[Module pour les couches 2 à 4 des BPIX et des FPIX (gauche) et de la couche 1 de BPIX (droite)]{\includegraphics[width=.46\linewidth]{CMS/module.png}}
 	\subfloat[Schéma de l'électronique de lecture d'un module]{\includegraphics[width=.46\linewidth]{CMS/module2.png}}
 	\caption{Modules de pixels.}
-	\label{pixel}
+	\label{module}
 \end{figure}

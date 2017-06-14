@@ -81,7 +81,9 @@
 \usepackage[mode=build]{standalone}
 \usepackage{pgfplots}
 \usepackage{wallpaper}
-\pgfplotsset{width=10cm}%,compat=1.14}
+\pgfplotsset{width=10cm}
+%,compat=1.15}
+%\usepackage{siunitx}
 \usepackage[tight]{shorttoc}
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
 \usepgfplotslibrary{external} 
@@ -92,7 +94,7 @@
 
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
 \usepackage{etoolbox}
-
+\newcolumntype{Y}[1]{>{\centering\arraybackslash}p{#1}}
 %%%%%Use titlesec to color section subsection subsubsection
 \newcommand{\ColorSection}[1]{\colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesection\ #1}\hspace*{0.5cm}}}}
 \titleformat{\section}{\rmfamily\large\raggedright}{}{0pt}{\ColorSection}     
@@ -114,6 +116,8 @@
 \newcommand{\leftnum}{\vspace*{\paperheight}\textcolor{white}{\hrule}\vspace{0.2cm}\makebox[\textwidth][l]{\hspace{0.5cm}\sffamily\textcolor{white}{ \large{\thepage}}}\vspace{0.5cm}}
 \newcommand{\rightnum}{\vspace*{\paperheight}\textcolor{white}{\hrule}\vspace{0.2cm}\makebox[\textwidth][r]{\sffamily\textcolor{white}{ \large{\thepage}}\hspace{0.5cm}}\vspace{0.5cm}}
 \newcommand{\barre}{\colorbox{gray!75}{\begin{minipage}[b]{5cm}\textcolor{gray!75}{\Large{lg}}\end{minipage}}\vspace{\mylength}}
+
+
 \newcommand{\MargeSimple}[2]
 {%
 	\ClearShipoutPicture
@@ -124,7 +128,6 @@
 						\begin{minipage}[b]{5cm}
 							\vspace*{\paperheight}
 							#2
-							%\textcolor{gray!30}{\hrule}\vspace{0.2cm}
 						\end{minipage}%
 				}}%
 			}%
@@ -135,7 +138,6 @@
 						\begin{minipage}[b]{5cm}
 							\vspace*{\paperheight}
 							#1
-							%\textcolor{gray!30}{\hrule}\vspace{0.2cm}
 						\end{minipage}%
 				}}%
 			}%
@@ -168,9 +170,14 @@
 \let\oldfootnotesize\footnotesize
 \renewcommand*{\footnotesize}{\oldfootnotesize\fontsize{5}{7}}
 
-\captionsetup{justification=raggedright,labelfont={color=gray,bf,small},font=small}
+\captionsetup{
+  justification=raggedright,
+  labelfont={color=gray,bf,small},
+  font=small}
 
-\newcommand{\ligne}{\color{gray}{\rule{\linewidth}{5pt}}\vspace{0.2cm}\color{black}}
+\newcommand{\ligne}{\color{gray}{\rule{\linewidth}{5pt}}
+\vspace{0.2cm}
+\color{black}}
 
 \makeatletter
 \newcommand\At@Page@Upper@Right[1]{%
@@ -275,7 +282,16 @@
 \newcommand{\pa}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\de}[2]{\frac{\dd #1}{\dd #2}}
 
+\newcommand{\image}[4]{\begin{figure}[!ht]
+
+\centering
+
+\includegraphics[scale=#2]{#1}
+\caption{#3} 
+\label{#4}
+\end{figure}}
 \usetikzlibrary{shapes,calc}  
+
 \usepackage{yfonts}
 
 \newcommand{\lettrines}[2]{\lettrine[lines=2, slope= -0.5em, lhang=0.25, loversize=0.25]{#1}{\small #2}}
@@ -403,9 +419,9 @@ Qui addit scienciam addit et dolorem
 \appendix
 }
 \backmatter
+\fancyhf{} 
 \MargeSimple{\void}{\void}
 \printbibliography
-\fancyhf{} 
 \newpage\null\thispagestyle{empty}\newpage
 \listoffigures
 \newpage\null\thispagestyle{empty}\newpage

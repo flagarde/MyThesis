@@ -12,7 +12,7 @@ Le programme de ce dernier est surtout basé sur des collisions protons-protons.
 
 Dans le cas de ces collisions, la chaine d'accélération est constituée du Linear Accelerator 3 (LINAC 3), du Low Energy Ion Ring (LEIR) utilisé pour le stockage des ions et leur refroidissement. La chaine d'accélération est ensuite identique à celle pour les collisions proton-proton.
 
-\begin{minipagewithmarginpars}[h]{\textwidth}
+\begin{minipagewithmarginpars}[h]{0.95\textwidth}
   	\centering
 	\includegraphics[scale=0.40]{LHC/complexe.png}
   	\captionof{figure}{Schéma du complexe d'accélération du CERN. La chaine d'injection du LHC est constituée du Linac 2, du Booster, du PS et du SPS}
@@ -70,44 +70,61 @@ Le LHC est un collissioneur de particules non fondamentales (hadrons) à l'inver
 	\label{livingston}	
 \end{minipagewithmarginpars}
 
-La figure \ref{lhcschema} est une vue schématique du LHC. En vérité le LHC n'est pas parfaitement circulaire, mais est composé de $8$ octants composés d'une section droite de longueur $~5$ km et d'un secteur courbe d'une longueur de $~3$ km (fig. \ref{octants}). Afin de courber les faisceaux 1232 aimants dipolaires de 15 mètres de long sont utilisés et 392 aimants quadripolaires de 5 à 7 mètres servent à concentrer les faisceaux. Les sections droites sont utilisées afin de faire collisionner les deux faisceaux de protons venant en sens inverse l'un de l'autre. Il existe $8$ points potentiels d'interactions (P), mais seulement $4$ sont le siège de collisions et possèdent des détecteurs qui analysent les données issues de ces collisions : le point P1 pour ATLAS\footnote{A Toroidal LHC ApparatuS, détecteur généraliste.}, le point P2 pour ALICE\footnote{A Large Ion Collider Experiment, dédié à l'étude du plasma de quarks et gluons.}, le point P5 pour CMS\footnote{Compact Muon Solenoid, détecteur généraliste.} et le point P8 pour LHCb\footnote{Large Hadron Collider beauty experiment, dédié au quark b.}.
+La figure \ref{lhcschema} est une vue schématique du LHC. En vérité le LHC n'est pas parfaitement circulaire, mais est composé de $8$ octants(fig. \ref{octants}) composés d'une section droite de longueur $528$m et d'un secteur courbe d'une longueur de $2.45$ km. Afin de courber les faisceaux 1232 aimants dipolaires de 15 mètres de long sont utilisés et 392 aimants quadripolaires de 5 à 7 mètres servent à concentrer les faisceaux. Chaque section courbes est composée de 23 cellules de 106.9m de long de type "FODO" (cf.fig\ref{fodo}).
+\marginpar
+{
+	\includegraphics[width=\marginparwidth]{LHC/RF.jpg}
+	\captionof{figure}{Photo d'une cavité accélératrice radiofréquence (RF).}
+	\label{atlas}
+}
 
 \marginpar
 {
 	\includegraphics[width=\marginparwidth]{LHC/atlas.png}
-    \captionof{figure}{ATLAS.}
-    	\label{atlas}
+	\captionof{figure}{ATLAS.}
+	\label{atlas}
 }
+
 \marginpar
 {
 	\includegraphics[width=\marginparwidth]{LHC/alice.png}
-    \captionof{figure}{ALICE.}
-    	\label{alice}
+	\captionof{figure}{ALICE.}
+	\label{alice}
 }
+
 \marginpar
 {
 	\includegraphics[width=\marginparwidth]{LHC/cms.png}
-    \captionof{figure}{CMS.}
-    	\label{cms}
+	\captionof{figure}{CMS.}
+	\label{cms}
 }
+
 \marginpar
 {
 	
 	\includegraphics[width=\marginparwidth]{LHC/lhcb.png}
-    \captionof{figure}{LHCb.}
-    	\label{lhcb}
+	\captionof{figure}{LHCb.}
+	\label{lhcb}
 }
+\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+	\centering
+	\includegraphics[width=0.8\textwidth]{LHC/arc.jpg}
+	\captionof{figure}{Structure d'une cellule d'un octant. Deux quadripoles MQ focalisent les faisceau dans le plan vertical et horizontal respectivement, et six dipoles MBA, MBB courbent la trajectoire des particules. Les dipoles sont entourés de sextupoles,octopoles et decapoles afin de compenser les imperfections des champs magnétiques dipolaires. Des sextupoles quadrupoles et octupoles sont egalement positionnés prêt des quadrupoles afin de corriger les aberrations chromatiques.}
+	\label{fodo}	
+\end{minipagewithmarginpars}
+
+Les sections droites sont utilisées afin de faire collisionner les deux faisceaux de protons venant en sens inverse l'un de l'autre. Il existe $8$ points potentiels d'interactions (P), mais seulement $4$ sont le siège de collisions et possèdent des détecteurs qui analysent les données issues de ces collisions : le point P1 pour ATLAS\footnote{A Toroidal LHC ApparatuS, détecteur généraliste.}, le point P2 pour ALICE\footnote{A Large Ion Collider Experiment, dédié à l'étude du plasma de quarks et gluons.}, le point P5 pour CMS\footnote{Compact Muon Solenoid, détecteur généraliste.} et le point P8 pour LHCb\footnote{Large Hadron Collider beauty experiment, dédié au quark b.}.Les sections droites de l'octant 3 et 7 contiennent des systèmes de nettoyage des faisceaux, le 6 un système d'arrêt des faisceaux et le 4 un système radiofréquence pour chaque faisceau. Chaque système radiofréquence est composé de 8 cavités accélératrices ; des résonnateurs électromagnètiques, opérant à 400MHz qui accélerent les particules et compense l'énergie perdue par radiation synchrotron.
 
 \begin{minipagewithmarginpars}[h]{\textwidth}
   	\centering
-	\includegraphics[scale=0.7]{LHC/CERNMap.jpg}
+	\includegraphics[scale=0.75]{LHC/CERNMap.jpg}
   	\captionof{figure}{Vue schématique du LHC.}
   	\label{lhcschema}	
 \end{minipagewithmarginpars}
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
   	\centering
-	\includegraphics[width=0.75\textwidth]{LHC/lhc-schematic.jpg}
+	\includegraphics[width=0.80\textwidth]{LHC/lhc-schematic.jpg}
   	\captionof{figure}{Vue schématique des octants du LHC ainsi que des positions des principaux détecteurs le long du LHC. Les faisceaux (en bleu et rouge) circulent en sens inverse l'un de l'autre.}
   	\label{octants}	
 \end{minipagewithmarginpars}
@@ -116,7 +133,7 @@ La réutilisation du tunnel du LEP et l'énergie des faisceau (7 TeV) à obligé
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 \centering
-\includegraphics[width=0.85\textwidth]{LHC/dipole.jpg}
+\includegraphics[width=1.0\textwidth]{LHC/dipole.jpg}
 \captionof{figure}{Vue en transversale d'un dipole du LHC.}
 \label{dipole}	
 \end{minipagewithmarginpars}
@@ -145,7 +162,7 @@ avec $\theta_{c}$ l'angle de croisement des faisceaux, $\sigma_{z}$ la moyenne q
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 \centering
-\includegraphics[width=0.35\textwidth]{LHC/collision.png}
+\includegraphics[width=0.45\textwidth]{LHC/collision.png}
 \captionof{figure}{Schéma de colisions de paquets dans le plan transversale.}
 \label{collision}	
 \end{minipagewithmarginpars}
@@ -166,7 +183,7 @@ D'après cette formule on peut remarqué qu'il peut être interéssant de rédui
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 \centering
-\includegraphics[width=0.35\textwidth]{LHC/crab.png}
+\includegraphics[width=0.45\textwidth]{LHC/crab.png}
 \captionof{figure}{Schéma de colisions "en crab" de paquets dans le plan transversale.}
 \label{crabe}	
 \end{minipagewithmarginpars}
@@ -198,7 +215,7 @@ Lorsque l'intensité du faisceau devient trop faible pour une prise de données 
 La luminosité intégré pour les collisions protons-protons délivré par le LHC en 2016 ainsi que celle enregistré par  le détecteur CMS est donné par le graphique suivant :
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 \centering
-\includegraphics[width=0.7\textwidth]{LHC/luminosity.png}
+\includegraphics[width=0.6\textwidth]{LHC/luminosity.png}
     \captionof{figure}{Luminosité intégrée en fonction du jour de l'année 2016 délivrée (bleu) et enregistrée par CMS (orange) pendant les faisceaux stables et pour les collisions pp à 13 TeV d'énergie dans le centre de masse en 2016.}
 \end{minipagewithmarginpars}
 
@@ -222,10 +239,10 @@ Les collisions proton-proton peuvent être rassemblés en trois groupes :
 \subsubsection{Collisions inélastiques}
 Les collisions inélastique se produisent entre deux partons qui possèdent une fraction de la quantité de mouvement $x_{1}$ et $x_{2}$ du proton $1$ et $2$. Ces fractions sont décrites par des fonctions de distribution de partons $f(x,Q^{2})$. Il s'agit des densités de probabilités de trouver une particule avec une fraction $x$ de la quantité de mouvement longitudinale du hadron dont l'impulsion est $Q^{2}$. Il existe une fonction de distribution de parton par saveur de quark et une pour les gluons (cf.fig\ref{pdf}). La figure \ref{pdf} représente ces fonctions.
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[h]{0.98\textwidth}
 	\centering
-	\includegraphics[width=0.9\textwidth]{LHC/pdf.png}
-	\captionof{figure}{$x$ fois la  distribution de parton non-polarisé $f(x)$ ou $f=u_{v},d_{v},\bar{u},\bar{d},s,c,b,g)$ et leurs incertitudes en utilisant la parametrisation NNLO MSTW2008 à l'échelle $10$GeV$^{2}$ (gauche) $10000$GeV$^{2}$ (droite).}
+	\includegraphics[width=0.6\textwidth]{LHC/pdf.png}
+	\captionof{figure}{$x$ fois la  distribution de parton non-polarisé $f(x)$ ou $f=u_{v}, d_{v}, \bar{u}, \bar{d}, s, c, b, g$ et leurs incertitudes en utilisant la parametrisation NNLO MSTW2008 à l'échelle $10$GeV$^{2}$ (gauche) $10000$GeV$^{2}$ (droite).}
 	\label{pdf}	
 \end{minipagewithmarginpars}
  
@@ -246,7 +263,7 @@ La figure fig.\ref{crosssection} montre quelques sections efficaces du Modèle S
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 	\centering
-	\includegraphics[width=0.6\textwidth]{LHC/crosssections2008.png}
+	\includegraphics[width=0.60\textwidth]{LHC/crosssections2008.png}
 	\captionof{figure}{Sections efficaces du Modèle Standard pour les collisionneurs LHC et Tevatron en fonction de l'énergie dans le centre de masse $\sqrt{s}$. Les lignes pointillées indiquent les énergies dans le centre de masse à laquelles le Tevatron (1.96TeV) et le LHC (7,10 et 14 TeV) vont foctionner. Les sections efficaces sont exprimées en nanobarn (gauche) et en Hz pour une luminositée instantannée de $\mathrm{L}=10^{33}$cm$^{-2}$s$^{-1}$, luminosité typique des premières années de fonctionnement du LHC.}
 	\label{crosssection}	
 \end{minipagewithmarginpars}
@@ -264,7 +281,7 @@ Les collisions inélastiques sont le siège de plusieurs processus (fig\ref{coll
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 	\centering
-	\includegraphics[width=0.7\textwidth]{LHC/event.jpg}
+	\includegraphics[width=0.99\textwidth]{LHC/event.jpg}
 	\captionof{figure}{Schéma d'une collision proton-proton inélastique. Deux partons venant de deux protons différents interagissent inélastiquement (rouge), d'autres partons de ces deux protons produissent des collisions secondaires (magenta). Les partons ainsi créés s'hadronise (rouge) en creant des jets de particules (vert clair). Ces particules instables se désintégre en cascade en particules stables (vert foncé)}
 	\label{collision2}	
 \end{minipagewithmarginpars}
@@ -274,7 +291,7 @@ Plusieurs collisions proton-proton peuvent avoir lieux lors d'un même croisemen
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 	\centering
-	\includegraphics[width=0.7\textwidth]{LHC/pileup.png}
+	\includegraphics[width=0.60\textwidth]{LHC/pileup.png}
 	\captionof{figure}{Distribution du nombre de collisions par croisement de faisceaux.}
 	\label{pile-up}	
 \end{minipagewithmarginpars}
@@ -284,7 +301,7 @@ De par l'envergure de la machine, du nombre d'expériences nécessitant le bon f
 
 \begin{minipagewithmarginpars}[h]{0.95\textwidth}
 	\centering
-	\includegraphics[width=0.9\textwidth]{LHC/roadmap.png}
+	\includegraphics[width=0.80\textwidth]{LHC/roadmap.png}
 	\captionof{figure}{Calendrier prévisionnel du LHC.}
 	\label{roadmap}	
 \end{minipagewithmarginpars}
@@ -308,27 +325,28 @@ Le but est de produire environ 140 événement de pile-up par croisement de fais
  
  \item Deux nouvelles caverne de service de 300 mètres de long vont être creusés prêt des expérience CMS et ATLAS. Elles abriteront les services nécessaires à ces expériences et ceux sensible aux radiactions (convertisseur de courant, cryogénie etc.)
  
+ \marginpar
+ {
+ 	
+ 	\includegraphics[width=\marginparwidth]{LHC/linac4.jpg}
+ 	\captionof{figure}{Photo du LINAC4.}
+ 	\label{linac4}
+ }
+ 
  \item De nouvelles lignes de transmitions electrique vont également être iinstallé. Ces cables seront fait d'un matériaux superconducteur ( diboride de magnésium) capable de fonctionner à haute température (20K) et beaucoup plus stable que les supraconducteur conventionnels. Il permettront de porter des courants de plus de 100 000 A.
  \item La chaine d'accélération sera elle aussi mise à niveau. Dés 2020, un nouveau Accélérateur linéaire appellé LINAC4 (cf.fig\ref{linac4}) va remplacer le LINAC2. Les trois autres accélerateur de la chaine (PSB, PS ET SPS ) auront également droit à de améliorations.
 \end{itemize}
 
-\marginpar
-{
-	
-	\includegraphics[width=\marginparwidth]{LHC/linac4.jpg}
-	\captionof{figure}{Photo du LINAC4.}
-	\label{linac4}
-}
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[h]{0.98\textwidth}
 	\centering
-	\includegraphics[width=0.95\textwidth]{LHC/man.jpg}
-	\captionof{figure}{Schame montrant les différents types de mise à niveau nécessaire au HL-LHC.}
+	\includegraphics[width=0.60\textwidth]{LHC/man.jpg}
+	\captionof{figure}{Schéma montrant les différents types de mise à niveau nécessaire au HL-LHC.}
 	\label{man}	
 \end{minipagewithmarginpars}
 
 Le tableau \ref{comparaison} donne les différents paramètres selon plusieurs configurations envisagés par rapport au paramètres nominaux actuels du LHC
 
-\begin{table}
+\begin{table}[!ht]
 \tiny
 \centering
 \begin{tabular}{|S{Y{62mm}}|S{Y{15mm}}|S{Y{15mm}}|S{Y{15mm}}|S{Y{15mm}}|}

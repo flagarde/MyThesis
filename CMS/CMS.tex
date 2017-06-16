@@ -98,9 +98,10 @@ Le trajectographe est composé de deux sous-détecteurs : le détecteur à pixel
 Le détecteur à pixels de CMS à récemment était remplacé afin de garder un tracking performant à des luminositées au dessus de $2\times10{34}cm^{-2}s^{-1}$ et avec un pile-up de plus de $50$. Ce remplacement à eu lieu du 28 février au 7 mars durant l'arrêt technique de hivernal prolongé (EYETS). Le nouveau détecteur à pixels se compose d'un tonneaux constitué de quatre couche de détection (BPIX) à des distances du faisceau $r=3.0$cm,6.8cm,10.2cm et 16cm et d'une longueur de 548.8mm et de trois bouchons (FPIX) situé à $\pm$29.1cm,$\pm$39.6cm et $\pm$51.6cm pour une couverture radial allant de 4.5 à 16.1cm . Une comparaison entre l'ancien détecteur à pixel et le nouveau est donné fig.\ref{pixel}.
 
 	\begin{figure}[ht!]
-	\subfloat[]{\includegraphics[width=.48\linewidth]{CMS/pixel.png}}
-	\subfloat[]{\includegraphics[width=.48\linewidth]{CMS/pixel2.png}}
-	\caption{Schéma de gauche : Comparaison entre l'ancien détecteur à pixel (bas) et nouveaux (haut). Schèma de droite : Vue oblique-transverse comparant les couche des tonneaux de 'ancien (gauche) et le nouveau déecteur.}
+	\subfloat[Ancien détecteur à pixel (bas) et nouveaux (haut)]{\includegraphics[width=.45\linewidth]{CMS/pixel.png}}
+	\hfill
+	\subfloat[ Vue oblique-transverse comparant les couche des tonneaux de 'ancien (gauche) et le nouveau déecteur]{\includegraphics[width=.45\linewidth]{CMS/pixel2.png}}
+	\caption{Comparaison entre le nouveau et l'ancien trajectographe à pixels.}
 	\label{pixel}
 \end{figure}
 
@@ -117,9 +118,107 @@ Un nouveau système de refroidessement au $CO2$ ainsi que la déplacement des sy
 Ce détecteur contient plus de 97 millions de pixels (79pour les BPIX et 18 pour les FPIX) mesurant $100\times150\mu m$ de section et $250\mu m$ d'épaisseur. Ces pixels sont regroupés en module (1184 pour BPIX et 672 pour FPIX) (cf.fig\ref{module}) de 66560 pixels  (8$\times$ 2 ROCs) d'une épaisseur de $75\mu m$ pour la premiere couche du BPIX et $250\mu m$ pour les reste du BPIX et FPIX.
 
 	\begin{figure}[ht!]
-		\centering
+	\centering
 	\subfloat[Module pour les couches 2 à 4 des BPIX et des FPIX (gauche) et de la couche 1 de BPIX (droite)]{\includegraphics[width=.46\linewidth]{CMS/module.png}}
 	\subfloat[Schéma de l'électronique de lecture d'un module]{\includegraphics[width=.46\linewidth]{CMS/module2.png}}
 	\caption{Modules de pixels.}
 	\label{module}
 \end{figure}
+\subsubsection{Le détecteur à pistes}
+Le détecteur à pistes mesure 5.5m de long pour 2.4m de diamètre pour une aire active de 198m2 et est le plus grand détecteur au silicium jamais construit.Il comporte en tout 15148 modules pour un totale de 9.3 millions de pistes lus par 76000 chips électroniques. Il peut être décomposé en quatre sous-détecteurs :
+
+\begin{itemize}[label=$\bullet$]
+\item \textbf{Le tonneau interne}Le tonneau interne (TIB) (cf.fig\ref{TIB}) pour  \textit{Tracker Inner Barrel} est composé 2724 modules répartis en quatre couches. Chaque couche se compose de pistes de silicium d'une épaisseur de $320 \mu m$ avec un pas de $80$ à $120\mu m$ pour les deux premières et 2 derniere couches respectivement. Elles sont orientés parallèlement au faisceau. Les deux première couches sont composées de modules dits "stéréos" qui sont la juxstaposition de deux modules collés l'un l'autre avec un angle de $100mrad$ entre les deux. Celui permet d'avoir une résolution de $23$ à $34\mu m$ dansle plan transverse et de $230\mu m$ dans le plan longitudinale. Il s'étend entre 25 et 52 en rayon et $|z|<65cm$.
+
+\item \textbf{Les disques internes} (TID) (cf.fig\ref{TID}) pour \textit{Tracker Inner Disk} sont composés de trois disques parallèles qui vont jusqu'à $75cm<|z|<110cm$.Chaque disques est composé de trois anneaux concentriques. Les 816 modules sont composés de strips d'une épaisseur$320\mu m$ de orienté radialement pour un pas compris entre $81\mu m$ et $158\mu m$. Comme pour le TIB, les deux premier modules sont "stéréos".
+\marginpar
+{
+	\includegraphics[width=\marginparwidth]{CMS/TOB_TEC.png}
+	\captionof{figure}{Différents modules utilisés pour la construction de TOB et TEC.}
+	\label{TOB_TEC}
+}
+\item \textbf{Le tonneau externe } (TOB) (cf.fig\ref{TOB})pour \textit{Tracker Outer Barrel} enroule les TIB et TID pour couvrir un espace entre 60 et 100cm en rayon et $|z|<110cm$. Il est composé de 5208 modules (cf.fig\ref{TOB_TEC}) de pistes orientés parallement au faisceau et de pas compris entre 122 et 183 $\mu m$. Ces modules sont répartis en six couches dont les deux dernieres sont "stéréos". L'épaisseur de ces modules est de $500\mu m$   
+
+\item \textbf{Les bouchons }(TEC) (cf.fig\ref{TEC}) pour \textit{Tracker End-Cap} sont composés de neuf disques chacun, composée de 4 à 7 anneaux concentriques. Il couvre 25-110cm en rayons et 120-275cm en $|z|$. Les deux premier disques ainsi que le cinquieme sont "stéréos". Les trois premier anneaux sont composés de 2512 modules (cf.fig\ref{TOB_TEC}) d'épaisser 320$\mu m$ et de pas inter-pistes compris entre 81 et 158 $\mu m$. Les quatres anneaux suivant, composés de 3888 (cf.fig\ref{TOB_TEC}) en tout d'épaisser $500\mu m$ de pas inter-strip 113-172$\mu m$
+\end{itemize}
+	\begin{figure}[ht!]
+	\centering
+	\subfloat[Photo du TIB.]{\includegraphics[width=.40\linewidth]{CMS/TIB.jpg}\label{TIB}}
+	\subfloat[Photo du TID.]{\includegraphics[width=.40\linewidth]{CMS/TID.jpg}\label{TID}}
+	\\
+	\subfloat[Photo du TOB.]{\includegraphics[width=.40\linewidth]{CMS/TOB.jpg}\label{TOB}}
+	\subfloat[Photo du TEC.]{\includegraphics[width=.40\linewidth]{CMS/TEC.jpg}\label{TEC}}
+	\caption{Photos des différents composants du détecteur à pistes}
+	\label{detecteur}
+\end{figure}
+
+\subsection{Le calorimètre électromagnétique}
+Le calorimètre électromagnètique de CMS ou (ECAL) pour \textit{Electromagnetic CALorimeter} permet de mesurer l'énergie et la direction des particules réagissant à l'interaction électromagnétique. Ce sont surtout les phtons et les électrons qui seront détectés; ils perdent surtout leurs énergies par des processus radiatifs. La distance caractéristique est donnée par la longueur de radiation $X_{0}$, dépendante du matériaux, définie comme le libre parcours moyen pour le processus de radiaction. Des photons de 100GeV perderent à peu prêt toute leurs énergie dans 20*$X_{0}$.
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.90\textwidth]{CMS/ECAL.png}
+	\captionof{figure}{Schéma du ECAL de CMS.}
+	\label{pixel2}
+\end{figure}
+
+\marginpar
+{
+	\includegraphics[width=\marginparwidth]{CMS/Crystaux.png}
+	\captionof{figure}{Photo d'un crystal de PbWO4.}
+	\label{crystaux}
+}
+
+	\marginpar
+{
+	\includegraphics[width=\marginparwidth]{CMS/APD.png}
+	\captionof{figure}{Photo d'un groupe de deux APD.}
+	\label{APD}
+}
+Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{crystaux}) de PbWO4 (11m3, 92tonnes)et peut se décomposé en trois sous-structures :
+\begin{itemize}[label=$\bullet$]
+	\item \textbf{Le tonneau} ou EB (cf.fig\ref{EB}) pour \textit{Electronic Barrel} contient 61200 crystaux de tungstate de plomb. Le tonneau est divisé en 36 supermodules couvrant chacun la moitié de la longueur du tonneau. Chaque super-module contient 1700 crystaux de 22*22 mm2 et de longueur 230mmm. Les crystaux sont arrangée de maniere à formée 170-$\eta$ anneaux contenant 360 crystaux chacun. Un crystal couvre environ 1$\degres$ en $\phi$. Le barrel couvre une zone en pseudorapidité de $|\eta|<1.479$. Les photodiodes à avalanches (cf.fig\ref{APD}) (APD) sont utilisées pour détecter la scintillation.
+	
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.55\textwidth]{CMS/EB.jpg}
+		\captionof{figure}{Photo du EB.}
+		\label{EB}
+	\end{figure}
+	
+	\item \textbf{Les bouchons} (EE) (cf.fig\ref{EE}) pour \textit{Electronic End-cap} Sont perpendiculaire au faisceau et ferme le EB. Ils sont situés à 315cm du point d'interaction et couvre une setcion en $\eta$ allant de 1.479 à 3. Chaque bouchon se décompose en deux demi-disque appellé "Dee" (cf.fig\ref{DEE}). Chaque Dee est constitué de 3662 crystaux de 2.86*2.86cm et de longeur 220mm regroupés en matrices de 5*5 qu'on appelle Super-Crystaux (cf.fig\ref{SP}). La scintillation est detecté par des phototriode à vide (VPT) (cf.fig\ref{VPT})
+	
+   \begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.4\textwidth]{CMS/EE.jpg}
+		\captionof{figure}{Photo d'un EE.}
+		\label{EE}
+	\end{figure}
+	\marginpar
+	{
+		\includegraphics[width=\marginparwidth]{CMS/dee.jpg}
+		\captionof{figure}{Photo d'un "Dee".}
+		\label{DEE}
+	}
+    	\marginpar
+    {
+    	\includegraphics[width=\marginparwidth]{CMS/20SCs.jpg}
+    	\captionof{figure}{Photo du montage de 20 Super-Crystaux sur un des Dee.}
+    	\label{SP}
+    }
+  	\marginpar
+{
+	\includegraphics[width=\marginparwidth]{CMS/VPT.jpg}
+	\captionof{figure}{Photo d'une VPT.}
+	\label{VPT}
+}
+
+   Les crystaux de PbWO4 ont une grande densité ($\rho=$8.28g.cm$^{-3}$) une longueur d'interaction $X_{0}$ assez courte de 0.89cm est un petit rayon de molière ($r_{M}$=2.2cm) ainsi qu'une grande vitesse de radiation (80\% dans 25 ns). 
+	\item \textbf{L'initiateur de gerbe } (cf.fig\ref{PRESHOWER}), appellé \textit{Preshower} est placé entre le EB et le EE. Il consiste en deux couches de détecteurs de silicium de pas 1.9mm intercalé entre deux couches en plomb (2$X_{0}$ devant et 1$X_{0}$ derrière la première couche de silicium ). Il permet d'améliorer la précision de la mesure de la position de la gerbe électromagnétique et le discrimination $\gamma \pi_{0}$. Il couvre une région comprise entre 1.653<$|\eta|$<2.6
+	  \begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.3\textwidth]{CMS/preshower.jpg}
+		\captionof{figure}{Photo d'un des preshower.}
+		\label{PRESHOWER}
+	\end{figure}
+\end{itemize}
+\subsection{Le calorimètre hadronique}

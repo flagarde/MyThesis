@@ -8,43 +8,26 @@ Le détecteur Solénoïde compact à muons abrégé en CMS (pour Compact Muon So
 
 \begin{itemize}[label=$\bullet$]
 	\item \textbf{La recherche du boson de Higgs : } Lors de la conception de CMS dans les années 1990, la détection du boson de Higgs à été prise comme référence afin de tester les performances du design du détecteur. Ce but à été réalisé avec la découverte d'une particule compatible avec le boson de Higgs le 4 juillet 2012 (cf.\ref{higgs}).
-	\begin{figure}[h!]
-		\subfloat[Distribution de la masse invariante en mode diphoton, chaque événement étatnt pondéré par S/(s+b) les traits représente le signal et le bruit de fond. Les bandes rpersente les incertitudes décart type $\pm$1 et $\pm 2$ dans l'estimation du bruit de fond.L'encart montre la partie centrale de la distribution de masse invariante non pondérée]{\includegraphics[width=.48\linewidth]{CMS/higgs1.png}}
-		\subfloat[Distribution de la masse invariante pour $ZZ\rightarrow 4l$/ Les points représentent les données, l'histogramme plein le bruit de fond et l'histogramme creux le signal pour un boson de Higgs de mass $m_{h}=125$ GeV ajouté au bruit de fond/]{\includegraphics[width=.48\linewidth]{CMS/higgs2.png}}
-		\caption{Deux de la masse invariante dans des canaux de désintégration du boson de Higgs montrant sa découverte.[paper]}
-		\label{higgs}
-	\end{figure}
+	%\begin{figure}[h!]
+	%	\centering
+	%	\subfloat[Distribution de la masse invariante en mode diphoton, chaque événement étatnt pondéré par S/(s+b) les traits représente le signal et le bruit de fond. Les bandes rpersente les incertitudes décart type $\pm$1 et $\pm 2$ dans l'estimation du bruit de fond.L'encart montre la partie centrale de la distribution de masse invariante non pondérée]{\includegraphics[width=.48\linewidth]{CMS/higgs1.png}}
+	%	\\
+	%	\subfloat[Distribution de la masse invariante pour $ZZ\rightarrow 4l$/ Les points représentent les données, l'histogramme plein le bruit de fond et l'histogramme creux le signal pour un boson de Higgs de mass $m_{h}=125$ GeV ajouté au bruit de fond/]{\includegraphics[width=.48\linewidth]{CMS/higgs2.png}}
+	%	\caption{Deux de la masse invariante dans des canaux de désintégration du boson de Higgs montrant sa découverte.[paper]}
+	%	\label{higgs}
+	%\end{figure}
 	\item \textbf{Confirmer et préciser les mesures de la physique du Modèle Standard : } Des mesures de précisions dans des domaines tels que la QCD, le couplage électrofaible, et la physique des saveurs pourrait donner des indications d'une physique au-dlà du Modèle Standard.
 	\item \textbf{La recherche de signes de physique au-delà du Modèle Standard : }CMS permet la recherche de particules supersymmétriques ou de nouveaux bosons vecteur massifs ($Z'$) ou encore la recherche de dimensions supplémentaires par exemple.
 	\item \textbf{Étudier les collisions d'ions lourds.}
 \end{itemize}
 
-Afin de répondre à ses objectifs, le "Technical Design Report" (TDR) a fixé le cahier des charges et les caractéristiques essentielles du détecteur CMS, à savoir :
+Afin de répondre à ses objectifs, le "Technical Design Report" (TDR) \cite{Bayatian:922757} a fixé le cahier des charges et les caractéristiques essentielles du détecteur CMS, à savoir :
 \begin{itemize}[label=$\bullet$]
 	\item Une bonne identification des muons et une bonne résolution en impulssion sur une vaste gamme d'impulssion pour la région $|\eta|<2.5$, une bonne résolution en masse pour les dimuons ($\approx 1\%$ à 100GeV/c$^{2}$) et la capacité à déterminé de manière certaine la charge des muons de $p<$ 1TeV/c.
 	\item Une bonne résolution en impulssion pour les particules chargées ainsi qu'une bonne efficacuté de reconstruction dans le trajectographe interne (inner tracker). Un déclenchement et un étiquettage efficace pour les jets venant de quarks $\tau$ et $b$, ce qui requiert un détecteur à pixels proche du point d'interaction.
 	\item Une bonne résolution pour l'énergie électromgnétique, et une bonne résolution en masse pour les diphoton et dielectron  ($\approx 1\%$ à 100GeV/c$^{2}$), une grande couverture géométrique ($|\eta|<2.5$), une mesure de la diraction des photons et/ou une correction localisation du vertex primaire d'interaction ainsi qu'une bonne rejection des $\pi_{0}$ et une isolation des photons et letptons efficace à haute luminosité.
 	\item une bonne résolution en masse des dijets et une bonne résolution en masse de l'énergie transverse manquante $E_{T}^{miss}$. Ceci requiert un calorimètre hadronique hermétique de très grande couverture géométrique ($|\eta|<5$) et une fine segmentation latérale ($\Delta\nu\times\Delta\Psi<0.1\times0.1$)
 \end{itemize} 
-
-\subsection{Description générale de CMS}
-Le détécteur CMS se trouve dans une caverne situé au point 5 (P5), proche du village de Cessy en France. La construction de CMS s'est effectué en surface et par tranches autonomes afin de réduire le temps et les coûts nécessaire à sa construction. Chaque tranche à ensuite été descendu dans la caverne et assemblé à 100 m sous terre (cf.fig\ref{slice}).
-\marginpar
-{
-	\includegraphics[width=\marginparwidth]{CMS/slice.jpg}
-	\captionof{figure}{Descente d'unr tranche de CMS dans la caverne au point P5.}
-	\label{slice}
-}
-
-CMS est une détecteur cylindrique de 24m de long et de 14.6 m de diamètre pour une masse de plus de 16000 tonnes (cf.fig\ref{cmsexploded}). Il est composé d'une succession de sous-détecteurs concentriques; En partant du centre verss l'extérieur :
-\begin{itemize}[label=$\bullet$]
-	\item \textbf{Le trajectographe : } C'est le sous-détecteur le plus proche du point d'intéraction. Il permet de reconstruire la trajectoires des particules chargées.
-	 \item \textbf{Le calorimètre électromagnètique (ECAL\footnote{Pour Electromagntic CALorimeter.}): Il permet de mesurer l'énergie des photons et des électrons.}
-	 \item \textbf{Le calorimètre hadronique (HCAL\footnote{Pour Hadronc CALorimeter}): Il permet de mesurer l'énergie des hadrons.}
-	 \item \textbf{L'aimant supr-conducteur : } Il produit un champ de 3.8T est permet de courber la trajectoire des particules chargées.
-	 \item \textbf{Les chambres à muons : } Elles permettent d'identifier reconstruire la trajectoire et mesurer l'énergie des muons. 
-\end{itemize}
-Chaque composant de CMS fera l'objet d'une description plus détaillé dans les paragraphes suivants.
 
 \subsection{Système de coordonnées conventionnel}
 Le système de coordonné utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère est coîncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnée qui suit la convention de la main-droite est determiné par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ est pointe vers le haut. CMS possédant une symmètrie cylindrique, le repère $\left(O,\vec{r},\vec{\theta},\vec{\phi}\right)$ est souvent utilisé. $r$ correspond à la distance entre le an perpendiculaire à l'axe du faisceau (appelé plan tranverse) passant par le point considérer et l'origine du repère $O$; $\theta$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et l'angle polaire $\phi$ est définit par rapport à $z$.
@@ -71,11 +54,34 @@ en remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de
 y=\frac{1}{2} \log\left(\frac{E+p_{l}c}{E-p_{l}c}\right)=\frac{1}{2}\log\left(\frac{\cos^2 \theta/2+m^{2}c^{2}/4p^{2}+\cdots}{\sin^2 \theta/2+m^{2}c^{2}/4p^{2}+\cdots}\right)\backsimeq-\log\tan\left(\frac{\theta}{2}\right)=\eta
 \end{equation}
 On utilise donc le repère $\left(O,\vec{r},\vec{\theta},\vec{\eta}\right)$ pour décrire la géométrie de CMS.
+
+\subsection{Description générale de CMS}
+Le détécteur CMS se trouve dans une caverne situé au point 5 (P5), proche du village de Cessy en France. La construction de CMS s'est effectué en surface et par tranches autonomes afin de réduire le temps et les coûts nécessaire à sa construction.
+\marginpar
+{
+	\includegraphics[width=\marginparwidth]{CMS/slice.jpg}
+	\captionof{figure}{Descente d'unr tranche de CMS dans la caverne au point P5.}
+	\label{slice}
+}
+Chaque tranche à ensuite été descendu dans la caverne et assemblé à 100 m sous terre (cf.fig\ref{slice}).
+CMS est une détecteur cylindrique de 24m de long et de 14.6 m de diamètre pour une masse de plus de 16000 tonnes (cf.fig\ref{cmsexploded}). Il est composé d'une succession de sous-détecteurs concentriques.
+
 \begin{sidewaysfigure}
 	\centering
-	\includegraphics[width=0.8\textwidth]{CMS/cms.png}
+	\includegraphics[width=0.80\textwidth]{CMS/cms.png}
 	\caption{\label{cmsexploded}Vue éclatée du détecteur CMS.}
 \end{sidewaysfigure}
+\newpage
+En partant du centre vers l'extérieur :
+\begin{itemize}[label=$\bullet$]
+	\item \textbf{Le trajectographe : } C'est le sous-détecteur le plus proche du point d'intéraction. Il permet de reconstruire la trajectoires des particules chargées.
+	 \item \textbf{Le calorimètre électromagnètique (ECAL\footnote{Pour Electromagntic CALorimeter.}): Il permet de mesurer l'énergie des photons et des électrons.}
+	 \item \textbf{Le calorimètre hadronique (HCAL\footnote{Pour Hadronc CALorimeter}): Il permet de mesurer l'énergie des hadrons.}
+	 \item \textbf{L'aimant supr-conducteur : } Il produit un champ de 3.8T est permet de courber la trajectoire des particules chargées.
+	 \item \textbf{Les chambres à muons : } Elles permettent d'identifier reconstruire la trajectoire et mesurer l'énergie des muons. 
+\end{itemize}
+Chaque composant de CMS fera l'objet d'une description plus détaillé dans les paragraphes suivants.
+
 \section{Les sous detecteurs de CMS}
 \subsection{Le trajectographe}
 Le trajectographe de CMS (cf.fig\ref{trajectographe}) est le détecteur le plus proche du faisceau et fu point de collision.Il a pour but de reconstruire les traces des particules chargées issues des collisions grâce à des suites d'impacts enregistrés par les couches du détecteur. La trace reconstruite permet de déterminer la charge et l'impulsion de la particule associée. En effet, une particule de charge $q$ qui se déplace dans un champ magnétique subit une force donné par la formule de Lorentz. La trajectoire de la particule dans le cas d'un champ magnétique d'intensité $B$ est hélicoïdale, de rayon $R_{c}$. Il est ainsi possible dans déduire l'impulsion transverse :
@@ -88,7 +94,7 @@ p=\frac{p_{T}}{\sin\theta}
 \end{equation}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.9\textwidth]{CMS/tracker.png}
+	\includegraphics[width=0.80\textwidth]{CMS/tracker.png}
 	\captionof{figure}{Schéma du trajectographe de CMS. Chaque trait reprèsente un mosule du détecteur. Les lignes double correspondent à des modules mis dos à dos est produise des hits dit stéréo. Le détécteur à pistes est composé de quatre sous-détecteur: Les tonneaux interne (TIB), les tonneaux externe (TOB), les disques interne (TID) et les bouchons (TEC).}
 	\label{trajectographe}
 \end{figure}

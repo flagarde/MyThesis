@@ -46,6 +46,7 @@ Anaxagore (~500-428 av. J.C.) pronait que toute chose est formée de particules 
     \captionof{figure}{Dessins de divers atomes et molécules tirés de l'ouvrage \textit{A New System of Chemical Philosophy}}
     	\label{atom}
 }
+
 \marginpar
 {
 	\vspace{2cm}
@@ -178,7 +179,8 @@ Chacune des quatre interactions possède donc un ou plusieurs bosons appelés bo
 
 \item \textbf{L'interaction forte} permet l'échange de couleur entre les quarks et la création et l'annihilation de particules. Elle est responsable de la cohésion du noyau, et elle lie les nucléons entre eux à l'intérieur du noyau atomique. Ses bosons médiateur sont les gluons et sont au nombre de huit. Bien que les gluons soient supposés de masse nulle, la portée de l'interaction est de l'ordre de 10$^{-15}$ m. Cette portée est la conséquence du principe de confinement de couleur qui affecte les quarks. En effet, cette interaction a la propriété de voir son intensité augmenter avec la distance, ce qui à tendance à regrouper les quarks entre eux. Cette propriété est également responsable du processus d'hadronisation des quarks et de la création de jets.
 \end{itemize}
-\smallskip
+
+\vspace{1cm}
 \begin{table}[h!]
 \centering
 \begin{tabular}{|S{Y{33mm}}|S{Y{26mm}}|S{Y{22mm}}|S{Y{52mm}}|}
@@ -518,17 +520,17 @@ Les cas où $\mu^{2}>0$ ne possède qu'un minimum en $0$, ce qui est inutile. Le
 
 \begin{minipagewithmarginpars}[h]{\textwidth}
 \centering
-%\begin{tikzpicture}
-%\begin{axis}[view={15}{15},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite,]
-%\addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {-x*x+x*x*x*x});
-%\addplot3[->] coordinates{(0,0,0) (0,0,0.2)}node[above] {$V(\phi)$};
-%\addplot3[->] coordinates{(0,0,0) (1.0,0,0)}node[above] {$\Re(\phi)$};
-%\addplot3[->] coordinates{(0,0,0) (0,1.5,0)}node[above] {$\Im(\phi)$};
-%\addplot3[color=black,samples=50,domain=0:2*pi,line width=0.2pt, line cap =round,]({sqrt(0.5)*cos(deg(x))},{sqrt(0.5)*sin(deg(x))},{-0.25});
-%\addplot3[dashed]coordinates{(sqrt(0.5),0,-0.25) (sqrt(0.5),0,0)};
-%\node (A) at (axis cs:0.70710678118,0,-0.27){$\phi_{0}$};
-%\end{axis}
-%\end{tikzpicture}
+\begin{tikzpicture}
+\begin{axis}[view={7}{7},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite,]
+\addplot3[surf,shader=faceted,samples=50,fill opacity=0.5,opacity=0.4,domain=0:1.05,y domain=0:pi,z buffer=sort]({x * cos(deg(y))}, {x * sin(deg(y))}, {-x*x+x*x*x*x});
+\addplot3[->] coordinates{(0,0,0) (0,0,0.2)}node[above] {$V(\phi)$};
+\addplot3[->] coordinates{(0,0,0) (1.0,0,0)}node[above] {$\Re(\phi)$};
+\addplot3[->] coordinates{(0,0,0) (0,1.5,0)}node[above] {$\Im(\phi)$};
+\addplot3[color=black,samples=50,domain=0:2*pi,line width=0.2pt, line cap =round,]({sqrt(0.5)*cos(deg(x))},{sqrt(0.5)*sin(deg(x))},{-0.25});
+\addplot3[dashed]coordinates{(sqrt(0.5),0,-0.25) (sqrt(0.5),0,0)};
+\node (A) at (axis cs:0.70710678118,0,-0.27){$\phi_{0}$};
+\end{axis}
+\end{tikzpicture}
 \captionof{figure}{Potentiel $V(\phi)$ pour $\mu^{2}<0$ et $\lambda>0$.}
 \label{pot}
 \end{minipagewithmarginpars}
@@ -562,11 +564,7 @@ qui correspondent aux bosons $W^{\pm}$ , $Z^{0}$ et $\gamma$ et au scalaires cha
 
 L'interaction est contenue dans la partie cinétique du Lagrangien du secteur de Higgs et donne les masses suivantes : 
 \begin{equation}
-\begin{split}
-\ &m_{W^{\pm}}=\frac{g''v}{2} \\
-\ &m_{Z^{0}}=\frac{\sqrt{g''^{2}+g'^{1}}}{2}v \\
-\ &m_{\gamma}=0 \\
-\end{split}
+m_{W^{\pm}}=\frac{g''v}{2} \quad m_{Z_{0}}=\frac{\sqrt{g''^{2}+g'^{1}}}{2}v \quad m_{\gamma}=0 
 \end{equation} 
 La théorie ne donne aucun indice sur la constante de couplage $\lambda$, la masse du boson de Higgs ne peut donc pas être déduite.La recherche de ce boson a été une priorité pendant plusieurs décennie. Ce n'est qu'en 2012 grâce au détecteur CMS et ATLAS que la preuve de l'existence du boson de Higgs a été prouvé et que sa masse (125.9 GeV) a pu être reconstruite. 
 
@@ -580,19 +578,16 @@ Le secteur de Yukawa décrit l'interaction entre le champs de Higgs et les champ
 avec $\kappa_{ij}^{(f)}$ et $\tilde{\kappa}_{ij}^{(f)}$ les constantes de couplage de Yukawa, $\phi^{c}(x)=i\tau_{2}\phi^{*}$ l'isospineur charge-conjugué de l'isospineur $\phi(x)$.
 
 Les singlets droits sont divisés en deux groupes, haut $\left(R_{j}\right)$ et bas $\left(\tilde{R}_{j}\right)$ :
-\begin{multline}
-\begin{split}
-&R_j^{(l)}=\left(e_{R},\mu_{R},\tau_{R}\right),\ &R_j^{(q)}=\left(d'_{R},s'_{R},b'_{R}\right))\\
-&\tilde{R}_j^{(l)}=\left(\nu_{eR},\nu_{\mu R},\nu_{\tau R}\right),\ &\tilde{R}_j^{(q)}=\left(u_{R},c_{R},t_{R}\right))
-\end{split}
-\end{multline} 
+\begin{equation}
+R_j^{(l)}=\left(e_{R},\mu_{R},\tau_{R}\right),\quad R_j^{(q)}=\left(d'_{R},s'_{R},b'_{R}\right)) \quad \tilde{R}_j^{(l)}=\left(\nu_{eR},\nu_{\mu R},\nu_{\tau R}\right),\quad \tilde{R}_j^{(q)}=\left(u_{R},c_{R},t_{R}\right))
+\end{equation} 
 
 En remplaçant $\phi^{c}(x)=i\tau_{2}\phi^{*}$ et $\phi(x)$ par leur valeur attendu du vide (VEV) $v$
 \begin{equation}
 \left<0\left|\phi \right|0\right>=\begin{pmatrix} 0\\v\end{pmatrix},\ \left<0\left|\phi^{c} \right|0\right>=\begin{pmatrix} v\\ 0\end{pmatrix}
 \end{equation} on obtient:
 \begin{equation}
-%\mathcal{L}_{\mathrm{Yukawa}}=-\sum_{f=l,q}\left[\sum_{i,j=1}^{3}\left(M^{(f)}_{ij}\bar{L}_{i}^{(f)}(x)R_{j}^{(f)}(x)+%\tilde{M}^{(f)}_{ij}\bar{L}_{i}^{(f)}(x)\tilde{R}_{j}^{(f)}(x)\right)\right]+ h.c
+\mathcal{L}_{\mathrm{Yukawa}}=-\sum_{f=l,q}\left[\sum_{i,j=1}^{3}\left(M^{(f)}_{ij}\bar{L}_{i}^{(f)}(x)R_{j}^{(f)}(x)+\tilde{M}^{(f)}_{ij}\bar{L}_{i}^{(f)}(x)\tilde{R}_{j}^{(f)}(x)\right)\right]+ h.c
 \end{equation} 
 avec $M^{(f)}_{ij}=v\kappa_{ij}^{(f)}$ et $\tilde{M}^{(f)}_{ij}=v\tilde{\kappa}_{ij}^{(f)}$, composantes des matrices de masses.
 
@@ -644,60 +639,63 @@ s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{
 avec $s_{ij}=\sin(\theta_{ij})$, $c_{ij}=\cos(\theta_{ij})$.
 Les valeurs de ces paramètres sont déterminés expérimentalement.
 \section{Les succès du Modèle Standard}
-L'étape essentiel au succès du Modèle standard a été la prédiction et la découverte des bosons $W^{\pm}$ et $Z^{0}$.\marginpar
+L'étape essentiel au succès du Modèle standard a été la prédiction et la découverte des bosons $W^{\pm}$ et $Z^{0}$.Dés 1932 Fermi essaya d'expliquer la désintégration nucléaire $\beta$ et l'interaction electromagnetique par des interactions à 4 points. Cette théorie  s'avérera être une théorie effective qui présente des divergences à haute énergie. Ce n'est que vers la fin des années 1960 que Glashow,Salam and Weinberg crée une théorie convaincante qui prédit la présence d'un courant neutre afin d'annuler les divergence du modèle. En 1973 't Hooft montra que cette théorie est libre renormalisable et parfaitement cohérente d'un point de vue théorique. La découverte expérimentale du courant neutre faible sera faite en 1973 au CERN par la chambre à bulle Gargamelle\ref{GARGAMELLE} conçue pour détecter les neutrinos. En 1983 les trois bosons du secteur électrofaible sont découverts au CERN grâce au expérience UA1\ref{UA1} et UA2\ref{UA2}. De nombreuses mesures ont ensuite été effectuées par plusieurs collisionneurs: Large Electron Positron (LEP), Stanford Linear Collider (SLAC)\ref{SLAC}, Tevatron, Hadron-Elektron-Ringanlage (HERA)\ref{HERA}. Les propriétés des bosons $W^{\pm}$ et $Z^{0}$ ont été trouvées conformes au prédictions du Modèle Standard. 
+\marginpar
 {
-\centering
-\includegraphics[width=\marginparwidth]{SM/gargamelle.jpg}
-\captionof{figure}{Gargamelle.}
-\label{GARGAMELLE}
+	\centering
+	\includegraphics[width=\marginparwidth]{SM/gargamelle.jpg}
+	\captionof{figure}{Gargamelle.}
+	\label{GARGAMELLE}
 }
 \marginpar
 {
-\centering
-\includegraphics[width=\marginparwidth]{SM/ua1.jpg}
-\captionof{figure}{UA1.}
-\label{UA1}
+	\centering
+	\includegraphics[width=\marginparwidth]{SM/ua1.jpg}
+	\captionof{figure}{UA1.}
+	\label{UA1}
 }
 \marginpar
 {
-\centering
-\includegraphics[width=\marginparwidth]{SM/ua2.jpg}
-\captionof{figure}{UA2.}
-\label{UA2}
+	\centering
+	\includegraphics[width=\marginparwidth]{SM/ua2.jpg}
+	\captionof{figure}{UA2.}
+	\label{UA2}
 }
 \marginpar
 {
-\centering
-\includegraphics[width=\marginparwidth]{SM/HERA.jpg}
-\captionof{figure}{tunnel du collisionneur HERA.}
-\label{HERA}
+	\centering
+	\includegraphics[width=\marginparwidth]{SM/HERA.jpg}
+	\captionof{figure}{tunnel du collisionneur HERA.}
+	\label{HERA}
 }
 \marginpar
 {
-\centering
-\includegraphics[width=\marginparwidth]{SM/slac.jpg}
-\captionof{figure}{Beam line du SLAC.}
-\label{SLAC}
-} Dés 1932 Fermi essaya d'expliquer la désintégration nucléaire $\beta$ et l'interaction electromagnetique par des interactions à 4 points. Cette théorie  s'avérera être une théorie effective qui présente des divergences à haute énergie. Ce n'est que vers la fin des années 1960 que Glashow,Salam and Weinberg crée une théorie convaincante qui prédit la présence d'un courant neutre afin d'annuler les divergence du modèle. En 1973 't Hooft montra que cette théorie est libre renormalisable et parfaitement cohérente d'un point de vue théorique. La découverte expérimentale du courant neutre faible sera faite en 1973 au CERN par la chambre à bulle Gargamelle\ref{GARGAMELLE} conçue pour détecter les neutrinos. En 1983 les trois bosons du secteur électrofaible sont découverts au CERN grâce au expérience UA1\ref{UA1} et UA2\ref{UA2}.
-De nombreuses mesures ont ensuite été effectuées par plusieurs collisionneurs: Large Electron Positron (LEP), Stanford Linear Collider (SLAC)\ref{SLAC}, Tevatron, Hadron-Elektron-Ringanlage (HERA)\ref{HERA}. Les propriétés des bosons $W^{\pm}$ et $Z^{0}$ ont été trouvées conformes au prédictions du Modèle Standard. 
+	\centering
+	\includegraphics[width=\marginparwidth]{SM/slac.jpg}
+	\captionof{figure}{Beam line du SLAC.}
+	\label{SLAC}
+}
 
 De plus l'ensemble des mesures effectuées jusqu'à présent sont compatibles avec le Modèle Standard: La figure (fig.\ref{mesures}) montre la mesure de certains paramètres ainsi que leur "pull" défini par :
 \begin{equation}
 \frac{O^{mesure}-O^{fit}}{\sigma^{mesure}}
 \end{equation}
 c'est à dire la déviation entre les mesures expérimentales et les prédictions théoriques en unités de l'incertitude expérimentale. Tous les pulls sont inférieur à $3\sigma$. L'expérience et la théorie sont donc en très bon accord.
+
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.45\textwidth]{SM/mesure.eps}
+\includegraphics[width=0.50\textwidth]{SM/mesure.eps}
 \captionof{figure}{Comparaison des résultats d'ajustement avec les mesures directes de certains paramètres du Modèle Standard.}
 \label{mesures}
 \end{figure}
+
 \section{Les faiblesses du Modèle Standard}
 Le modèle Standard est en accord remarquable avec l'expérience. Cependant, plusieurs problèmes et questions non résolubles amène à considérer le Modèle Standard comme une théorie effective, valable jusqu'à l'échelle du TeV. Une nouvelle physique qui engloberait le Modèle Standard devrait apparaitre à cette échelle d'énergie.
 
 Parmis les principaux problèmes ou faits inexpliqués par le Modèle Standard, on peut citer :
 \begin{itemize}[label=$\bullet$]
-\item \textbf{Les neutrinos massifs :}\marginpar
+\item \textbf{Les neutrinos massifs :}
+\marginpar
 {
 \centering
 \includegraphics[width=\marginparwidth]{SM/kamiokande.jpg}
@@ -710,14 +708,15 @@ Parmis les principaux problèmes ou faits inexpliqués par le Modèle Standard, 
 \includegraphics[width=\marginparwidth]{SM/chooz.jpg}
 \captionof{figure}{Coeur du détecteur Double Chooz.}
 \label{chooz}
-} Les expérience Super-Kamiokande\ref{kamiokande} et GALLEX portant sur l'observation du flux de neutrinos provenant du Soleil et les expériences Double Chooz\ref{chooz} et K2K pour les flux de neutrinos de sources artificielles terrestres ont mis en évidence l'oscillation des neutrinos entre les saveurs leptoniques. Ces oscillations ne peuvent s'expliquer que si les neutrinos sont massifs et s'il existe des neutrinos droits. Bien que le Modèle Standard considére les neutrinos comme des particules de masse nulle et que de parité gauche, il est facile d'y ajouter un neutrino droit dans chaque famille et les couplages au doublet Higgs correspondant afin de rendre compte de ces faits expérimentaux\footnote{C'est d'ailleurs cette extension du Modèle Standard qui est présenté dans ce chapitre.}. Cependant cela aggrave le problème de la hiérarchie des masses car les masses des particules élémentaires s'étalent sur 10 ordres de grandeur !
+} 
+Les expérience Super-Kamiokande\ref{kamiokande} et GALLEX portant sur l'observation du flux de neutrinos provenant du Soleil et les expériences Double Chooz\ref{chooz} et K2K pour les flux de neutrinos de sources artificielles terrestres ont mis en évidence l'oscillation des neutrinos entre les saveurs leptoniques. Ces oscillations ne peuvent s'expliquer que si les neutrinos sont massifs et s'il existe des neutrinos droits. Bien que le Modèle Standard considére les neutrinos comme des particules de masse nulle et que de parité gauche, il est facile d'y ajouter un neutrino droit dans chaque famille et les couplages au doublet Higgs correspondant afin de rendre compte de ces faits expérimentaux\footnote{C'est d'ailleurs cette extension du Modèle Standard qui est présenté dans ce chapitre.}. Cependant cela aggrave le problème de la hiérarchie des masses car les masses des particules élémentaires s'étalent sur 10 ordres de grandeur !
 
 \item \textbf{Le nombre de paramètres libres :} Le modèle standard contient 18 paramètres libres : les 3 constantes de couplages, les deux paramètres $\lambda$ et $\mu^2$ du potentiel de Higgs, 9 couplages de Yukawa et les trois angles et une phase pour les quarks dans la matrice CKM ainsi que l'angle associé auwx. Et d'autres encore en ajoutant le fait que les neutrinos soit massif.
 
 \item \textbf{Le nombre de familles :} Le nombre de famille a été expérimentalement obtenu en comparant la section efficace hadronique en fonction de l'énergie du centre de masse expérimentale au prédiction théorique différents nombres de familles de neutrinos de masse négligeable. Actuellement on considère que trois familles\ref{neutrinos}. Cependant le fait que les neutrinos soient massif permet l'existance de plus de trois familles si les neutrinos on une masse supérieur à $m_{Z^{0}}/2$.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.35\textwidth]{SM/neutrinos.png}
+\includegraphics[width=0.48\textwidth]{SM/neutrinos.png}
 \captionof{figure}{Mesures de la section efficace de production hadronique près de la résonance en Z. Les courbes indiquent les sections efficaces prédites pour deux,trois et quatres espéces de neutrinos avec les couplages du Modèle Standard et de masses négligeables.}
 \label{neutrinos}
 \end{figure}
@@ -733,7 +732,7 @@ m_{h}^{2}=m_{0}^{2}-\delta m_{h}^{2}
 avec $m_{0}^{2}$ la masse "nue" du boson, $m_{h}^{2}$ la masse effective et $\delta m_{h}^{2}$ les corrections radiative.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.55\textwidth]{SM/corrections.jpg}
+\includegraphics[width=0.40\textwidth]{SM/corrections.jpg}
 \captionof{figure}{Correction radiative du premier ordre pour le boson de Higgs.}
 \label{corrections}
 \end{figure}
@@ -757,7 +756,7 @@ la matière que nous connaissons ne compose que 4.9\% du totale mass-énergie de
 \item \textbf{La non unification des couplages : }Les constantes de couplages $\alpha_{1}$,$\alpha_{1}$ et $\alpha_{3}$ respectivement de l'interaction electromagnétique, faible et forte dépendent de l'échelle d'énergie. Il s'avére que ces trois constantes se rapprochent l'une de l'autre à haute énergie mais ne concourent pas en un seul point (cf.fig\ref{constantes}). Bien que n'étant pas en soit un problème, la convergence vers une valeur unique à haute énergie et nécessaire à une théorie "du tout" qui unifierait ces trois interactions. Le calcul de l'évolution de ces constantes par la méthode de renormalisation n'aboutissant pas à la convergence de ces trois constantes tend à prouver une lacune du Modèle Standard et son caractère effectif.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.6\textwidth]{SM/couplageSM.jpg}
+\includegraphics[width=0.50\textwidth]{SM/couplageSM.jpg}
 \captionof{figure}{Évolution des constantes de couplage en fonction de l'échelle d'énergie dans le cas du Modèle Standard.}
 \label{constantes}
 \end{figure}

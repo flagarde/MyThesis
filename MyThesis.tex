@@ -25,7 +25,7 @@
 \usepackage{enumitem}
 \usepackage[utf8]{inputenc}
 \usepackage{caption}
-\usepackage{array}
+\usepackage{collcell}
 \usepackage{booktabs}
 \usepackage{xcolor,colortbl}
 \usepackage[backend=biber, natbib=true,style=numeric,sorting=none,hyperref=true]{biblatex}
@@ -91,7 +91,7 @@
 \usepackage{wallpaper}
 \pgfplotsset{width=10cm}
 %,compat=1.15}
-%\usepackage{siunitx}
+\usepackage{siunitx}
 \usepackage[tight]{shorttoc}
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
 \pgfplotsset{compat=newest}
@@ -109,7 +109,10 @@
 
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
 \usepackage{etoolbox}
-\newcolumntype{Y}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}[1]{>{\centering\arraybackslash}p{#1}<{\centering\arraybackslash}}
+\newcolumntype{L}{>{\arraybackslash\vspace{0.1cm}}Cc<{\vspace{0.1cm}\arraybackslash}}
+\newcolumntype{O}{>{\centering\arraybackslash}Cc<{\centering\arraybackslash}}
+\newcolumntype{N}{@{}m{0pt}@{}}
 %%%%%Use titlesec to color section subsection subsubsection
 \newcommand{\ColorSection}[1]{\colorbox{black!65}{\parbox[c][1.5em][c]{\dimexpr\textwidth-2\fboxsep}{\hspace{0.2cm}\textcolor{white}{\thesection\ #1}\hspace*{0.5cm}}}}
 \titleformat{\section}{\rmfamily\large\raggedright}{}{0pt}{\ColorSection}     

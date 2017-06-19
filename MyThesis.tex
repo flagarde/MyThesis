@@ -1,4 +1,15 @@
 \documentclass[12pt,a4paper,twoside,french,openright]{book}
+
+\makeatletter
+\let\latex@include\include
+\def\include#1{\include@aux#1\@nil}
+\def\include@aux#1/#2\@nil{\@mkdir{#1}\latex@include{#1/#2}}
+\ifnum\pdfshellescape=\@ne
+\def\@mkdir#1{\immediate\write18{mkdir -p ./build/#1}}
+\else
+\def\@mkdir{\typeout{Expect errors}}
+\fi
+
 \hyphenpenalty=3500
 \doublehyphendemerits=9000
 \finalhyphendemerits=6000
@@ -83,8 +94,15 @@
 %\usepackage{siunitx}
 \usepackage[tight]{shorttoc}
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
+\pgfplotsset{compat=newest}
 \usepgfplotslibrary{external} 
 \tikzexternalize
+\tikzset{%
+	external/system call={pdflatex \tikzexternalcheckshellescape --halt-on-error --interaction=batchmode --output-directory=./build --jobname "\image" "\texsource"},
+	/pgf/images/include external/.code={%
+		\includegraphics{build/#1}%
+	},
+}
 \usepgfplotslibrary{colormaps}
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}

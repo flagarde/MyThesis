@@ -1,10 +1,8 @@
 #!/bin/sh
-pdflatex -draftmode --shell-escape -file-line-error MyThesis
-biber MyThesis
-pdflatex -draftmode --shell-escape -interaction=batchmode -file-line-error MyThesis
-pdflatex --shell-escape -interaction=batchmode -file-line-error -synctex=1 MyThesis
-#latexmk -f -pdf  -latexoption='--shell-escape -interaction=nonstopmode %O %S -file-line-error -synctex=1' -latex=pdflatex ./MyThesis.tex
-#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf MyThesis.pdf
-#rm MyThesis.pdf
-#mv output.pdf MyThesis.pdf
-#latexmk -c
+mkdir -p ./build
+pdflatex -output-directory=build -draftmode --shell-escape -file-line-error MyThesis
+biber --output-directory=build MyThesis
+pdflatex -output-directory=build -draftmode --shell-escape -interaction=batchmode -file-line-error MyThesis
+pdflatex -output-directory=build --shell-escape -interaction=batchmode -file-line-error -synctex=1 MyThesis
+mv ./build/MyThesis.pdf ./MyThesis.pdf
+#gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=Compressed.pdf ./build/MyThesis.pdf

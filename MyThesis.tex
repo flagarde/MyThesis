@@ -17,7 +17,6 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{xcolor,colortbl}
-\RequirePackage{etex}
 \usepackage[backend=biber, natbib=true,style=numeric,sorting=none,hyperref=true]{biblatex}
 \usepackage{csquotes}
 \usepackage{cellspace}
@@ -71,7 +70,6 @@
 \hypersetup{colorlinks=true,breaklinks=true,bookmarksopen=true,urlcolor=gray,citecolor=gray,linkcolor=gray}                                                    
 \setlength{\fboxsep}{0mm}
 \renewcommand {\mtctitle} {}
-\usepackage{etex}
 \usepackage{ifthen}
 \usepackage{marginnote}
 \usepackage{chngpage}
@@ -304,45 +302,16 @@
 \addbibresource{bibli.bib}
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page de garde %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}	
+	\include{PG/PG}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Page de couverture %%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{titlepage}
-\newgeometry{left=2cm,bottom=1.5cm,right=2cm,top=1.5cm,headheight=45pt}
-\thispagestyle{empty}
-\begin{center}	
-\includegraphics[width=0.25\textwidth]{Logo/logo_lyon1.jpg}
-\hspace{5cm}
-\includegraphics[width=0.25\textwidth]{Logo/logo_ucbl_lyon1.jpg}
-\hfill
-\vfill
-Thèse de l'Université de Lyon \\
-\bigskip
-École Doctorale de Physique et Astrophysique de Lyon (PHAST)\\[1em]
-\bigskip
-Thèse de Doctorat en Physique des Particules \\
-\bigskip
-Institut de Physique Nucléaire de Lyon (IPNL)\\
-\vfill
-\Huge Caractérisation de détecteurs à plaques résistives de verres de basse résistivité en vue de la mise à niveau de CMS
-\vspace{10mm}
-\normalsize
-
-\textsc{LAGARDE} François
-\vfill
-\begin{tabular}{lll}
-	JURY~: & Mme. ** \textsc{**} & (examinatrice)\\
-	& Mme. ** \textsc{**}       & (examinatrice)\\
-	& M.  **  \textsc{**}         & (directeur de thèse)\\
-	& M.  ** \textsc{**}     & (rapporteur)\\
-	& M.  ** \textsc{**}            & (examinateur)\\
-	& M.  ** \textsc{**}     & (rapporteur)\\
-\end{tabular}
-\vfill
-\includegraphics[width=0.25\textwidth]{Logo/Logo_IPNL.jpg}
-\vspace{2cm}
-%\maketitle
-\end{center}
-\restoregeometry
+	\include{MPG/MPG}	
 \end{titlepage}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage

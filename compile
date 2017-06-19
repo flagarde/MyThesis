@@ -4,5 +4,5 @@ pdflatex -output-directory=build -draftmode --shell-escape -file-line-error MyTh
 biber --output-directory=build MyThesis
 pdflatex -output-directory=build -draftmode --shell-escape -interaction=batchmode -file-line-error MyThesis
 pdflatex -output-directory=build --shell-escape -interaction=batchmode -file-line-error -synctex=1 MyThesis
-mv ./build/MyThesis.pdf ./MyThesis.pdf
+cp ./build/MyThesis.pdf ./MyThesis.pdf
 #gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.7 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=Compressed.pdf ./build/MyThesis.pdf

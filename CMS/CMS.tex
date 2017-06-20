@@ -7,15 +7,7 @@
 Le détecteur Solénoïde compact à muons abrégé en CMS (pour Compact Muon Solenoid) est avec ATLAS une expérience généraliste qui a comme buts majeurs :
 
 \begin{itemize}[label=$\bullet$]
-	\item \textbf{La recherche du boson de Higgs : } Lors de la conception de CMS dans les années 1990, la détection du boson de Higgs à été prise comme référence afin de tester les performances du design du détecteur. Ce but à été réalisé avec la découverte d'une particule compatible avec le boson de Higgs le 4 juillet 2012 (cf.\ref{higgs}).
-	%\begin{figure}[h!]
-	%	\centering
-	%	\subfloat[Distribution de la masse invariante en mode diphoton, chaque événement étatnt pondéré par S/(s+b) les traits représente le signal et le bruit de fond. Les bandes rpersente les incertitudes décart type $\pm$1 et $\pm 2$ dans l'estimation du bruit de fond.L'encart montre la partie centrale de la distribution de masse invariante non pondérée]{\includegraphics[width=.48\linewidth]{CMS/higgs1.png}}
-	%	\\
-	%	\subfloat[Distribution de la masse invariante pour $ZZ\rightarrow 4l$/ Les points représentent les données, l'histogramme plein le bruit de fond et l'histogramme creux le signal pour un boson de Higgs de mass $m_{h}=125$ GeV ajouté au bruit de fond/]{\includegraphics[width=.48\linewidth]{CMS/higgs2.png}}
-	%	\caption{Deux de la masse invariante dans des canaux de désintégration du boson de Higgs montrant sa découverte.[paper]}
-	%	\label{higgs}
-	%\end{figure}
+	\item \textbf{La recherche du boson de Higgs : } Lors de la conception de CMS dans les années 1990, la détection du boson de Higgs à été prise comme référence afin de tester les performances du design du détecteur. Ce but à été réalisé avec la découverte d'une particule compatible avec le boson de Higgs le 4 juillet 2012.
 	\item \textbf{Confirmer et préciser les mesures de la physique du Modèle Standard : } Des mesures de précisions dans des domaines tels que la QCD, le couplage électrofaible, et la physique des saveurs pourrait donner des indications d'une physique au-dlà du Modèle Standard.
 	\item \textbf{La recherche de signes de physique au-delà du Modèle Standard : }CMS permet la recherche de particules supersymmétriques ou de nouveaux bosons vecteur massifs ($Z'$) ou encore la recherche de dimensions supplémentaires par exemple.
 	\item \textbf{Étudier les collisions d'ions lourds.}
@@ -59,6 +51,7 @@ On utilise donc le repère $\left(O,\vec{r},\vec{\theta},\vec{\eta}\right)$ pour
 Le détécteur CMS se trouve dans une caverne situé au point 5 (P5), proche du village de Cessy en France. La construction de CMS s'est effectué en surface et par tranches autonomes afin de réduire le temps et les coûts nécessaire à sa construction.
 \marginpar
 {
+	\centering
 	\includegraphics[width=\marginparwidth]{CMS/slice.jpg}
 	\captionof{figure}{Descente d'unr tranche de CMS dans la caverne au point P5.}
 	\label{slice}
@@ -139,6 +132,7 @@ Le détecteur à pistes mesure 5.5m de long pour 2.4m de diamètre pour une aire
 \item \textbf{Les disques internes} (TID) (cf.fig\ref{TID}) pour \textit{Tracker Inner Disk} sont composés de trois disques parallèles qui vont jusqu'à $75cm<|z|<110cm$.Chaque disques est composé de trois anneaux concentriques. Les 816 modules sont composés de strips d'une épaisseur$320\mu m$ de orienté radialement pour un pas compris entre $81\mu m$ et $158\mu m$. Comme pour le TIB, les deux premier modules sont "stéréos".
 \marginpar
 {
+	\centering
 	\includegraphics[width=\marginparwidth]{CMS/TOB_TEC.png}
 	\captionof{figure}{Différents modules utilisés pour la construction de TOB et TEC.}
 	\label{TOB_TEC}
@@ -155,7 +149,6 @@ Le détecteur à pistes mesure 5.5m de long pour 2.4m de diamètre pour une aire
 	\subfloat[Photo du TOB.]{\includegraphics[width=.40\linewidth]{CMS/TOB.jpg}\label{TOB}}
 	\subfloat[Photo du TEC.]{\includegraphics[width=.40\linewidth]{CMS/TEC.jpg}\label{TEC}}
 	\caption{Photos des différents composants du détecteur à pistes}
-	\label{detecteur}
 \end{figure}
 
 \subsection{Le calorimètre électromagnétique}
@@ -164,14 +157,15 @@ Le calorimètre électromagnètique de CMS ou (ECAL) pour \textit{Electromagneti
 	\centering
 	\includegraphics[width=0.90\textwidth]{CMS/ECAL.png}
 	\captionof{figure}{Schéma du ECAL de CMS.}
-	\label{pixel2}
+	\label{ECAL}
 \end{figure}
 
-Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{crystaux}) de PbWO4 (11m3, 92tonnes)et peut se décomposé en trois sous-structures :
+Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{crystaux}) de PbWO4 (11m3, 92tonnes)et peut se décomposé en trois sous-structures (cf.fig\ref{ECAL}) :
 \begin{itemize}[label=$\bullet$]
 	\item \textbf{Le tonneau} ou EB (cf.fig\ref{EB}) pour \textit{Electronic Barrel} contient 61200 crystaux de tungstate de plomb. Le tonneau est divisé en 36 supermodules couvrant chacun la moitié de la longueur du tonneau. Chaque super-module contient 1700 crystaux de 22*22 mm2 et de longueur 230mmm. Les crystaux sont arrangée de maniere à formée 170-$\eta$ anneaux contenant 360 crystaux chacun. Un crystal couvre environ 1$\degres$ en $\phi$. Le barrel couvre une zone en pseudorapidité de $|\eta|<1.479$. Les photodiodes à avalanches (cf.fig\ref{APD}) (APD) sont utilisées pour détecter la scintillation.
-		\marginpar
+	\marginpar
 	{
+		\centering
 		\includegraphics[width=\marginparwidth]{CMS/Crystaux.png}
 		\captionof{figure}{Photo d'un crystal de PbWO4.}
 		\label{crystaux}
@@ -179,51 +173,37 @@ Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{c
 	
 	\marginpar
 	{
+		\centering
 		\includegraphics[width=\marginparwidth]{CMS/APD.png}
 		\captionof{figure}{Photo d'un groupe de deux APD.}
 		\label{APD}
 	}
 	\marginpar
 	{
+		\centering
 		\includegraphics[width=\marginparwidth]{CMS/dee.jpg}
 		\captionof{figure}{Photo d'un "Dee".}
 		\label{DEE}
 	}
 	\marginpar
 	{
+		\centering
 		\includegraphics[width=\marginparwidth]{CMS/20SCs.jpg}
 		\captionof{figure}{Photo du montage de 20 Super-Crystaux sur un des Dee.}
 		\label{SP}
 	}
 	\marginpar
 	{
+		\centering
 		\includegraphics[width=\marginparwidth]{CMS/VPT.png}
 		\captionof{figure}{Photo d'une VPT.}
 		\label{VPT}
 	}
-	%\begin{figure}[ht!]
-	%	\centering
-	%	\includegraphics[width=0.55\textwidth]{CMS/EB.jpg}
-	%	\captionof{figure}{Photo du EB.}
-	%	\label{EB}
-	%\end{figure}
 	
 	\item \textbf{Les bouchons} (EE) (cf.fig\ref{EE}) pour \textit{Electronic End-cap} Sont perpendiculaire au faisceau et ferme le EB. Ils sont situés à 315cm du point d'interaction et couvre une setcion en $\eta$ allant de 1.479 à 3. Chaque bouchon se décompose en deux demi-disque appellé "Dee" (cf.fig\ref{DEE}). Chaque Dee est constitué de 3662 crystaux de 2.86*2.86cm et de longeur 220mm regroupés en matrices de 5*5 qu'on appelle Super-Crystaux (cf.fig\ref{SP}). La scintillation est detecté par des phototriode à vide (VPT) (cf.fig\ref{VPT})
 
-   %\begin{figure}[ht!]
-	%	\centering
-	%	\includegraphics[width=0.4\textwidth]{CMS/EE.jpg}
-	%	\captionof{figure}{Photo d'un EE.}
-	%	\label{EE}
-	%\end{figure}
    Les crystaux de PbWO4 ont une grande densité ($\rho=$8.28g.cm$^{-3}$) une longueur d'interaction $X_{0}$ assez courte de 0.89cm est un petit rayon de molière ($r_{M}$=2.2cm) ainsi qu'une grande vitesse de radiation (80\% dans 25 ns). 
 	\item \textbf{L'initiateur de gerbe } (cf.fig\ref{PRESHOWER}), appellé \textit{Preshower} est placé entre le EB et le EE. Il consiste en deux couches de détecteurs de silicium de pas 1.9mm intercalé entre deux couches en plomb (2$X_{0}$ devant et 1$X_{0}$ derrière la première couche de silicium ). Il permet d'améliorer la précision de la mesure de la position de la gerbe électromagnétique et le discrimination $\gamma \pi_{0}$. Il couvre une région comprise entre 1.653<$|\eta|$<2.6
-	 % \begin{figure}[ht!]
-	%	\centering
-	%	\includegraphics[width=0.3\textwidth]{CMS/preshower.jpg}
-	%	\captionof{figure}{Photo d'un des preshower.}
-	%	\label{PRESHOWER}
-	%\end{figure}
 \end{itemize}
 \begin{figure}[ht!]
 	\centering
@@ -232,6 +212,76 @@ Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{c
 	\subfloat[Photo d'un EE.]{\includegraphics[width=.40\linewidth]{CMS/EE.jpg}\label{EE}}
 	\subfloat[Photo d'un des preshower.]{\includegraphics[width=.40\linewidth]{CMS/preshower.jpg}\label{PRESHOWER}}
 	\caption{Photos des différents composants du Calorimètre électromagnètique.}
-	\label{detecteur}
 \end{figure}
 \subsection{Le calorimètre hadronique}
+	\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{CMS/LAITON.jpg}
+	\captionof{figure}{Photo de douilles de la marine russe réutiliser pour la construction du HCAL.}
+	\label{LAITON}
+}
+	\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{CMS/SCINTI.png}
+	\captionof{figure}{Photo d'une tuile du HO avec des fibres WLS insérées dans les 4 $\sigma$-rainures.}
+	\label{SCINTI}
+}
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{CMS/HPD.png}
+	\captionof{figure}{Photo d'une HPD.}
+	\label{HPD}
+}
+
+Le calorimètre hadronique de CMS ou (HCAL) pour \textit{Hadronic CALorimeter} (cf.fig\ref{HCAL}) permet de mesurer l'énergie et la direction des hadrons issus de l'hadronisation des quarks et gluons produits lors des collisions. Ce détecteur à une grande compacité spaciale et énergétique et est très compacte car il se trouve pour une grande parti entre le ECAL et l'aimant supraconducteur. Cet disposition à nécessité de maximiser la quantité d'absorbeur et de minimisé les parties actives du détecteur. L'absorbeur est constitué de laiton (cf.fig\ref{LAITON}) qui possséde une faible longeur d'interaction $\lambda_{l}$ et un faible taux de diffusion multiples. Les hadrons perde majoritairement leurs énergie par interaction nucléaire avec l'absorbeur. La plupart des hadrons sont stoppés avec 9$\lambda_{l}$. Le laiton est également non magnétique ce qui est nécessaire vu l'emplacement du calorimètre. Le matériau actif est composé de feuilles de scintillateurs fluorescents (cf.fig\ref{SCINTI}). La scintillation est ensuite récolté par des fibre optique qui décale la longueur d'onde de la lumière (WLS). Le signal est ensuite lu par des photodiodes hybrid (HPD) (cf.fig\ref{HPD}) (cf.fig\ref{HPD}).
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.90\textwidth]{CMS/HCALSCHEME.png}
+	\captionof{figure}{Schéma d'un quart d'une coupe du HCAL de CMS.}
+	\label{HCAL}
+\end{figure}
+
+Le calorimètre hadronique couvre une zone en pseudo-rapidité jusqu'à $|\eta|<5.0$. Il posséde plus de 70000 feuilles de scintillateurs. Il est composé de 4 sous-détecteurs subdividsés en tours : 
+\begin{itemize}[label=$\bullet$]
+	\item \textbf{Le tonneau} HB pour \textit{Hadronic Barrel calorimeter} (cf.fig\ref{HB}) couvre les régions en pseudo rapidité $|\eta|<1.3$. Il est constitué de 36 quartiers couvrant 20degree en $\psi$ découpé en quatre sous secteur de 5degree en $\psi$ et 16 secteur en $\eta$. Un quartier possède 16 couches qui sont des empilements de scintillateurs de 9mm d'épaisseur pour les couches les plus externes et 3.7mm pour les autres et d'absorbeur (40 mm de fer pour la premiere couche, 50.5mm pour les de laiton pour les huits suivantes, 56.5mm de laiton pour les six suivantes et 75mm de fer pour la dernière). Les tours on une segmentation de $\Delta\eta\times\Delta\Phi=0.087\times0.087$.
+	\item \textbf{Les deux bouchons} HE pour \textit{Hadronic End-cap calorimeter} (cf.fig\ref{HE}) couvre les régions comprise entre $|\eta|>1.3$ et $|\eta|>3.0$. Une zone inclinée à 53degrée par rapport à l'axe du faisceau et ne pointant pas vers le point d'interaction est laisser libre afin de permettre le passage des cables et systèmes nécessaire au trajectographe et au calorimètre électromagnétique. Les bouchons sont segmentés en 18quartier de 20degeee en $\phi$ chacun conposé de 14 tours en $\eta$. Les tours sont des empilement de sintillateurs de 3.7mm d'épaisseur et d'une couche d'absorbeur (9mm pour la premiere couche et 7.5mm pour les suivantes). Une tour possée 19 couches de  scintillateurs en tout; les 5 tours $|\eta|<1.74$ on une segmentation de $\Delta\eta\times\Delta\Phi=0.087\times0.087$ alors que les 8 première $1.74<|\eta|<3.0$ ont des segmentations allant de $\Delta\eta\times\Delta\Phi=0.09\times0.174$ à $\Delta\eta\times\Delta\Phi=0.35\times0.174$.
+	\item \textbf{Le calorimètre externe }HO pour \textit{Hadronic Outward calorimeter} (cf.fig\ref{HO}) est placé à l'exterièeur de l'aimant supraconducteur. Il est constitué de couches de scintillateurs de 10mm d'épaisseur et couvre les régions $|\eta|<1.26$.Ce sous-détecteur permet de récupérer l'énergie des sortante du HB et assure une longueur d'intéraction de plus de 10$\lambda_{l}$. Le HO est composé de 5 anneaux de 2.536m de long selon $z$ 
+	numèrotés -2,-1,0,+1,+2 et de centre $z=-5.324,2.686,0,2.686.5.324m$ respectivement. Le premier anneaux est composé de deux couches de scienillateurs de 10mm d'épaisseur  placé en r=3.82m et 4.07m. Les autres anneaux ne posséde qu'une couche de scintillateur placé à r=4.07m. Chaque anneaux sont segmentés en 12 secteurs en $\phi$. Et chaque secteur est segmentés en 8,6et5 tuiles de scintillateurs (cf.fig\ref{SCINTI}) pour les anneaux 0,$\pm1$,$\pm2$ respectivement.
+	\item \textbf{Les calorimètres très à l'avant} HF pour \textit{Hadronic Forward calorimeter} couvre une zone en psudo-rapidité comprise entre $|\eta|>3.0$ et $|\eta|<5.0$ et $12.5<r<130cm$. Ils sont situé à une distance $|z|=11.2m$ est font 1.65m de long. Ils consiste en un absorbeur de fer qui intègre des fibres de quarks de "radiation-hard" qui assure la collection rapide de la lumière Cherenkov.La moitié de ces fibres font toute le longueur du détecteur (1.65m) alors que d'autres commence à 22cm (soit 143cm de long) du bord placé vers l'intérieur de CMS. Elles sont placé alternativement à une sistance de 5mm l'une de l'autre en $r$  avec segmentation de $\Delta\eta\times\Delta\Phi=0.175\times0.175$. Cette différences de longueur permet de séparés les cascade électromagnétique des cascades hadroniques. La lumière est ensuite collectée par des tubes photo-multiplicateur (PMT). Le HF est composé de 18 secteur de 20 degrees en $\phi$. Chaque secteur comporte 13 anneaux en $\nu$.
+\end{itemize}
+\begin{figure}[ht!]
+\centering
+\subfloat[Photo du HB.]{\includegraphics[width=.40\linewidth]{CMS/HB.jpg}\label{HB}}
+\subfloat[Photo d'un des HE.]{\includegraphics[width=.40\linewidth]{CMS/HE.jpg}\label{HE}}
+\\
+\subfloat[Photo de l'installation du HO.]{\includegraphics[width=.40\linewidth]{CMS/HO.jpg}\label{HO}}
+%http://cms.desy.de/e53612/e155171/e155181/
+\subfloat[Photo d'un des HF.]{\includegraphics[width=.40\linewidth]{CMS/HF.jpg}\label{HF}}
+\caption{Photos des différents composants du calorimètre hadronique.}
+\end{figure}	
+\subsection{L'aimant supraconducteur}
+L'aimant supraconducteur de CMS (cf.fig\ref{MAGNET}) est le cœur de la machine.C'est un solénoïde de 5.9m de diamètre pour 12.9m de long qui a été prévu pour créer un champ magnétique de 4T à un courant de 19.14kA. A pleine puissance, il stocke une énergie de 2.7GJ. Il est composé de 5 bobines en nobium-titane composés de 2168 spires, refroidies à une température de 4.2 K par de l'hélium liquide. Une structures de retour de champ en fer de 11500t, composée de 5 culasses(cf.fig\ref{CULASSE}) et 2 bouchons, chacun composé de 3 disques, l'entourent et servent de structures de maintient des chambres à muons. L'épaisseur totale du retour est d'environ 1.5m (l'épaisseur du troisième disque du end-cap et du premier anneaux du barrel sont de 30cm ) et les autres disques du end-cap ainsi que les deuxième et troisième anneaux du barrel font 60cm. L'épaisseur à été étudié afin d'être assez épais pour absorber les hadrons qui traverseraient les calorimètres et l'aimant tout en restant assez fin pour éviter les pertes radiatives pour les muons.
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{CMS/CULASSE.jpg}
+	\captionof{figure}{Photo d'une Cullasse.}
+	\label{CULASSE}
+}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.50\textwidth]{CMS/MAGNET.png}
+	\captionof{figure}{Schéma de l'aumant supra-conducteur de CMS.}
+	\label{MAGNET}
+\end{figure}
+\newpage
+La figure \ref{CHAMP} montre une simulation par élément-finis de la valeur du champ magnétique en fonction de la position.
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.90\textwidth]{CMS/CHAMP.png}
+	\captionof{figure}{Valeur du champ magnétique (gauche) et lignes de champs (droite) selon une couche longitudinale du détecteur CMS, prédits par la simulation. Pour une densité de flux central de 3.8T.}
+	\label{CHAMP}
+\end{figure}

@@ -106,6 +106,26 @@
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
 
+
+
+%"Bugfix" for fncychap:
+%Without this code there will be an overfull hbox by 10pt on every chapter
+%I don't remember where I found this, but it seems to be unrelated to 
+%the problem sice the header looks the same when commented out.     
+%--------------------------------------------------------------------------
+
+\renewcommand{\DOCH}{%
+	\settowidth{\py}{\CNoV\thechapter}
+	%\addtolength{\py}{-2pt}      % Amount of space by which the
+	%                                % number is shifted right
+	\fboxsep=0pt%
+	\colorbox[gray]{.85}{\rule{0pt}{40pt}\parbox[b]{\textwidth}{\hfill}}%
+	\kern-\py\raise20pt%
+	\hbox{\color[gray]{.5}\CNoV\thechapter}\\%
+}
+
+
+
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
 \usepackage{etoolbox}
 \newcolumntype{Y}[1]{>{\centering\arraybackslash}p{#1}<{\centering\arraybackslash}}

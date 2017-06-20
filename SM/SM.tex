@@ -109,14 +109,15 @@ Les quarks ont une charge électrique fractionnaire. On associe à chaque quark 
 }
 \marginpar
 {
+	\centering
     \includegraphics[width=\marginparwidth]{SM/quarks.png}
     \captionof{figure}{Un baryon ($p$).}
     	\label{baryons}
 }	
 \marginpar
 {
-\hspace*{-0.5cm}
-\includegraphics[width=1.2\marginparwidth]{SM/shower.png}
+\centering
+\includegraphics[width=0.95\marginparwidth]{SM/shower.png}
 \captionof{figure}{Schéma d'une gerbe atmosphèrique.}
 \label{gerbe}
 }
@@ -531,7 +532,7 @@ et a un profil différent selon les signes de $\mu^{2}$ et de $\lambda$ (Fig. \r
 }
 Les cas où $\mu^{2}>0$ ne possède qu'un minimum en $0$, ce qui est inutile. Le cas $\mu^{2}<0$ n'est pas stable. Il ne reste que le cas où $\mu^{2}<0$ et $\lambda>0$.
 
-\begin{minipagewithmarginpars}[h]{\textwidth}
+\begin{minipagewithmarginpars}[h]{0.95\textwidth}
 \centering
 \begin{tikzpicture}
 \begin{axis}[view={7}{7},yticklabels={,,},xticklabels={,,},zticklabels={,,},mesh/interior colormap name=hot,colormap/blackwhite,]
@@ -547,6 +548,7 @@ Les cas où $\mu^{2}>0$ ne possède qu'un minimum en $0$, ce qui est inutile. Le
 \captionof{figure}{Potentiel $V(\phi)$ pour $\mu^{2}<0$ et $\lambda>0$.}
 \label{pot}
 \end{minipagewithmarginpars}
+
 Le potentiel est donc métastable pour $\phi$=0, et les minimas sont situés sur un cercle de rayon $v=\sqrt{\frac{\mu^{2}}{\lambda}}$. On peut prendre par exemple :
 \begin{equation}
 H_{0}=\frac{1}{\sqrt{2}}\begin{pmatrix} 

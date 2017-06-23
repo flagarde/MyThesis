@@ -22,16 +22,9 @@ Afin de répondre à ses objectifs, le "Technical Design Report" (TDR) \cite{Bay
 \end{itemize} 
 
 \subsection{Système de coordonnées conventionnel}
-Le système de coordonné utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère est coîncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnée qui suit la convention de la main-droite est determiné par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ est pointe vers le haut. CMS possédant une symmètrie cylindrique, le repère $\left(O,\vec{r},\vec{\theta},\vec{\phi}\right)$ est souvent utilisé. $r$ correspond à la distance entre le an perpendiculaire à l'axe du faisceau (appelé plan tranverse) passant par le point considérer et l'origine du repère $O$; $\theta$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et l'angle polaire $\phi$ est définit par rapport à $z$.
-
-Un troisième type de coordonnées, utilisant le fait que les particules produite au LHC sont relativistes, est également utilisé.
-En décomposant l'impulsion de la particule en une composante transverse et longitudinale (pr rapport au faisceau)
+Le système de coordonné utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère est coïncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnée qui suit la convention de la main-droite est déterminé par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ est pointe vers le haut. CMS possédant une symétrie cylindrique, le repère $\left(O,\vec{r},\vec{\theta},\vec{\phi}\right)$ est souvent utilisé. $r$ correspond à la distance entre le an perpendiculaire à l'axe du faisceau (appelé plan transverse) passant par le point considérer et l'origine du repère $O$; $\theta$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et l'angle polaire $\phi$ est définit par rapport à $z$. Un troisième type de coordonnées, utilisant le fait que les particules produite au LHC sont relativistes, est également utilisé.En décomposant l'impulsion de la particule en une composante transverse et longitudinale $p=p_{T}+p_{L}=\sqrt{p_{x}^{2}+p_{y}^{2}}+p_{z}$ :
 \begin{equation}
-p=p_{T}+p_{L}=\sqrt{p_{x}^{2}+p_{y}^{2}}+p_{z}
-\end{equation}
-D'où :
-\begin{equation}
-( E/c)^{2}=(mc)^{2}+p^{2} (E/c)^{2}-p_{L}^{2}=(mc)^{2}+(p_{T})^{2}
+( E/c)^{2}=(mc)^{2}+p^{2} (E/c)^{2}-p_{L}^{2}=(mc)^{2}+(p_{T})^{2} 
 \end{equation}
 qu'il est possible de réécrire comme :
 \begin{equation}
@@ -45,7 +38,7 @@ en remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de
 \begin{equation}
 y=\frac{1}{2} \log\left(\frac{E+p_{l}c}{E-p_{l}c}\right)=\frac{1}{2}\log\left(\frac{\cos^2 \theta/2+m^{2}c^{2}/4p^{2}+\cdots}{\sin^2 \theta/2+m^{2}c^{2}/4p^{2}+\cdots}\right)\backsimeq-\log\tan\left(\frac{\theta}{2}\right)=\eta
 \end{equation}
-On utilise donc le repère $\left(O,\vec{r},\vec{\theta},\vec{\eta}\right)$ pour décrire la géométrie de CMS.
+$\eta$ est appellé pseudo-rapidité. On utilise donc le repère $\left(O,\vec{r},\vec{\theta},\vec{\eta}\right)$ pour décrire la géométrie de CMS.
 
 \subsection{Description générale de CMS}
 Le détécteur CMS se trouve dans une caverne situé au point 5 (P5), proche du village de Cessy en France. La construction de CMS s'est effectué en surface et par tranches autonomes afin de réduire le temps et les coûts nécessaire à sa construction.
@@ -53,7 +46,7 @@ Le détécteur CMS se trouve dans une caverne situé au point 5 (P5), proche du 
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/slice.jpg}
-	\captionof{figure}{Descente d'unr tranche de CMS dans la caverne au point P5.}
+	\captionof{figure}{Descente d'une tranche de CMS.}
 	\label{slice}
 }
 Chaque tranche à ensuite été descendu dans la caverne et assemblé à 100 m sous terre (cf.fig\ref{slice}).
@@ -109,7 +102,7 @@ Un nouveau système de refroidessement au $CO2$ ainsi que la déplacement des sy
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.55\textwidth]{CMS/pixel3.png}
+	\includegraphics[width=0.60\textwidth]{CMS/pixel3.png}
 	\captionof{figure}{Vue explosée du nouveau détecteur à pixels. La figure montre les positions des différentes partitions FPIX et BPIX ainsi que leur cylindres contenant leur service respectifs. Les services nécessaires au détecteur (connectiques, fibre optique, convertisseur DC-DC sont situés à haut $\eta$, hors du volume de tracking.)}
 	\label{pixel2}
 \end{figure}
@@ -231,15 +224,21 @@ Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{c
 \marginpar
 {
 	\centering
+	\includegraphics[width=\marginparwidth]{CMS/MPPC.png}
+	\captionof{figure}{Photo d'une MPPC.}
+	\label{MPPC}
+}
+\marginpar
+{
+	\centering
 	\includegraphics[width=\marginparwidth]{CMS/HPD.png}
 	\captionof{figure}{Photo d'une HPD.}
 	\label{HPD}
 }
-
-Le calorimètre hadronique de CMS ou (HCAL) pour \textit{Hadronic CALorimeter} (cf.fig\ref{HCAL}) permet de mesurer l'énergie et la direction des hadrons issus de l'hadronisation des quarks et gluons produits lors des collisions. Ce détecteur à une grande compacité spaciale et énergétique et est très compacte car il se trouve pour une grande parti entre le ECAL et l'aimant supraconducteur. Cet disposition à nécessité de maximiser la quantité d'absorbeur et de minimisé les parties actives du détecteur. L'absorbeur est constitué de laiton (cf.fig\ref{LAITON}) qui possséde une faible longeur d'interaction $\lambda_{l}$ et un faible taux de diffusion multiples. Les hadrons perde majoritairement leurs énergie par interaction nucléaire avec l'absorbeur. La plupart des hadrons sont stoppés avec 9$\lambda_{l}$. Le laiton est également non magnétique ce qui est nécessaire vu l'emplacement du calorimètre. Le matériau actif est composé de feuilles de scintillateurs fluorescents (cf.fig\ref{SCINTI}). La scintillation est ensuite récolté par des fibre optique qui décale la longueur d'onde de la lumière (WLS). Le signal est ensuite lu par des photodiodes hybrid (HPD) (cf.fig\ref{HPD}) (cf.fig\ref{HPD}).
+Le calorimètre hadronique de CMS ou (HCAL) pour \textit{Hadronic CALorimeter} (cf.fig\ref{HCAL}) permet de mesurer l'énergie et la direction des hadrons issus de l'hadronisation des quarks et gluons produits lors des collisions. Ce détecteur à une grande compacité spaciale et énergétique et est très compacte car il se trouve pour une grande parti entre le ECAL et l'aimant supraconducteur. Cet disposition à nécessité de maximiser la quantité d'absorbeur et de minimisé les parties actives du détecteur. L'absorbeur est constitué de laiton (cf.fig\ref{LAITON}) qui possséde une faible longeur d'interaction $\lambda_{l}$ et un faible taux de diffusion multiples. Les hadrons perde majoritairement leurs énergie par interaction nucléaire avec l'absorbeur. La plupart des hadrons sont stoppés avec 9$\lambda_{l}$. Le laiton est également non magnétique ce qui est nécessaire vu l'emplacement du calorimètre. Le matériau actif est composé de feuilles de scintillateurs fluorescents (cf.fig\ref{SCINTI}). La scintillation est ensuite récolté par des fibre optique qui décale la longueur d'onde de la lumière (WLS). Le signal est ensuite lu par des Multi-Pixel Photon Counter (MPPC) (cf.fig\ref{MPPC}) pour le sous-détecteur Hadronic Outward calorimeter et photodiodes hybrid (HPD) (cf.fig\ref{HPD}) pour les autres sous-détecteurs.
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.90\textwidth]{CMS/HCALSCHEME.png}
+	\includegraphics[width=0.95\textwidth]{CMS/HCALSCHEME.png}
 	\captionof{figure}{Schéma d'un quart d'une coupe du HCAL de CMS.}
 	\label{HCAL}
 \end{figure}
@@ -365,4 +364,35 @@ Le spectographe à muons, est composé de 3 sous-détecteurs :
 	\caption{Photos des différents composants du spectrographe à muons.}
 \end{figure}
 
-\section{Le système de trigger}
+\section{Le système de déclenchement et d'acquisition de données}
+Chaque types de particules lors de sont passage dans CMS va créer des types de traces particulières qui vont être enregistrer sous forme électronique par les sous-détecteur le composant.La figure \ref{particules} montre une vue schématique des traces laissé par différents types de particules dans les sous-détecteurs de CMS.
+
+	  \begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.50\textwidth]{CMS/particles.png}
+	\captionof{figure}{Schéma des traces laissées par différents types de particules dans les sous détecteurs de CMS.}
+	\label{particules}
+\end{figure}
+
+Les faisceaux ont une fréquence de croisement de 40MHz, chaque événement créer lors de ces collision ont une taille de l'ordre du Méga-octets. Le flux de donnée est bien trop important pour être stocké (~40TB/s). Le flux de données doit donc être réduit, il est donc nécessaire de rejeter des événements afin d'obtenir une fréquence d'acquisition de l'ordre de 300Hz tout en continuant d'enregistrer les événements intéressants pour la physique. Cette étape est réaliser par le système de déclenchement ou \textit{trigger}. La réduction d'un facteur $10^{5}$ de l'acquisition des données est impossible à réaliser en une seule fois, le trigger est donc constituer de deux étapes appelées \textit{Level-1 Trigger} (L1) qui réduit le flux d'événement à 100kHz et \textit{High-Level Trigger} (HLT) qui réduit ensuite ce flux à 300Hz.
+
+\subsection{Le déclenchement de niveau I (L1)}
+Le trigger de niveau I (L1) (cf.fig\ref{L1}) opére à la fréquence de collision des faisceaux (40MHz). L'électronique des détecteurs lisent est stockent les  signaux electriques et les stockent dans une mémoire tampon de 128 événement de collision soit 3.2$\mu s$. Le système de déclenchement possède donc 3.2$\mu s$ pour  décider s'il doit envoyer les données au déclenchement de haut niveau HLT. Chaque 25ns, un nouvel événement rentre dans la mémoire tampon et la décision de garder ou non l'événement arrivé 3.2$\mu s$ plus tôt est prise. Ces 3.2$\mu s$ correspondent à l'envois des données depuis l'électronique des calorimètres et du spectrographe à muons vers la caverne de services qui contient les processeurs gérant la prise de décision, le retour d'un signal pour le rejet ou l'acceptation de l'événement, le délai de synchronisation entre les parties du détecteur ainsi que le tempos de prise de décision. ($\sim1\mu s$). 
+
+	  \begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.45\textwidth]{CMS/L1.png}
+	\captionof{figure}{Schéma du L1.}
+	\label{L1}
+\end{figure}
+
+Chacun des trois sous-détecteur du spectrographe à muons utilise sont propre trigger. Les DT et CSC ont créent des segments de traces. Ces segments sont conservé que s'il pointent vers le point d'interaction. Deux (trois) traces par DT(CSC) sont envoyé au Drift Tube Track Finder (DTTF) (Cathode Strip Chamber Track Finder (CSCTF)) qui cherchent des correspondance entre les traces et assigne un niveau de qualité  au valeur $\eta$ $\phi$ à la charge et à la quantité de mouvement trouvé par ces correspondance et envoie 4 candidat muons au Global Muon Trigger (GMT). Pour le RPC, la sélection est basé sur une coïncidence spatial est temporelle entre les différentes couches. Le Pattern Comparator compare les signaux venant des 4 stations à des patron prédéfini afin de trouver les candidats muons et 8 d'entre eux (4 pour les bouchon 4 pour le tonneau) sont envoyé au GMT. Le GMT reçoit tous ces candidats et combinent ceux trouver dans plusieurs sous-detecteurs. Il assigne ensuite un niveau de qualité à ces nouveau candidats et envois les 4 meilleurs d'enre eux au Global Trigger (GT).
+
+Pour les calorimètre, ils sont réunis en tours de déclenchement qui correspondent aux supercrystaux pour le ECAL. Un candidat est trouvé pour chaque tour du ECAL et HCAL.Le Trigger Primitive Generator est responsable de sommer les énergies venant des différents composant des tours.  Le Regional Calorimeter Trigger (RCT) reçoit les candidats du ECAL et HCAL qui sont répartit en 18 crates qui couvre la moitié des détecteur en $z$ et 40 degree en $\phi$ et fournissent au Global Calorimeter Trigger chacun 4 candidats $e/\gamma$ isolée et 4 candidats non-isolés. Le GCT fournit des informations sur l'isolation et la compatibilité avec des particules d'ionisation minimale au système trigger des muons et classe les candidats $e/\gamma$ par niveau de qualité et envoi les 4 meilleurs isolés et 4 non-isolé au GT. Le GT possèdent également des informations sur les jets, l'énergie transverse totale etc.
+
+La décison finale est faite par le Gloabl Trigger à partir de conditions programmables demandant la présence d'objects ou d'énergie en quantité ou valeurs prédéfinies. Ces conditions forment un chemein de déclenchement. Le Gloabl Trigger permet de programmer et de tester jusqu'à 128 chemins en parallèle. 
+
+\subsection{Le déclenchement de haut niveau (HLT)}
+Si l'événement est sélectionné par le L1, il est envoyé au déclenchement de haut niveau (HLT) et les données sont transmises à une ferme de calcul de plusieurs milliers d'ordinateurs  dont chaque processeur exécute le même code de déclenchement (\textit{HLT Menu}) exécuter séquentiellement afin de réduire le temps nécessaire à l'élimination d'un événement et d'améliorer le temps de décision qui doit être de l'ordre de 100ms par événement. Il permet de passer à un flux de donnée de 300Hz. Durant cette phase, les données dui tracker sont utilisés contrairement au L1.
+
+\section{Mises à niveaux et amélioration de CMS}

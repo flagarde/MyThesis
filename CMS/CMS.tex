@@ -311,3 +311,58 @@ Le spectographe à muons (cf.fig\ref{CMS1},fig\ref{CMS2}) a pour but d'identifie
 \end{figure}
 
 Le spectographe à muons, est composé de 3 sous-détecteurs :
+\begin{itemize}[label=$\bullet$]
+	\item \textbf{Les chambres à dérive} DT pour \textit{Drift Tube} (cf.fig\ref{DT}) sont présents seulement dans le tonneau ou le flux de muon est faible tout comme le bruit de font des neutrons; Le champ magnétique est également assez faible (~0.4T) et uniforme. Ce détecteur est constitué de 250 chambres inséré dans la culasse de CMS.Il sont disposés en 4 couches selon r à des distances r=4.0,4.9,5.9 et 7.0m. La culasse est composé selon l'axe $z$ de 5 roues numéroté de -2 à 2, chacune comportant 12 (sauf pour MB4 qui en posséde 14) secteurs dans le plan transverse numéroté à partir de $\phi=0$ couvrant 30 degrees. Ce détecteur couvre une zone en pseudo rapidité $\eta<1.2$. Chaque chambre est constituée de 8 couches de tubes (cf.fig\ref{DT1}) mesurant la courbure de la trajectoire des muons selon $\phi$ est 4 couches pour la courbure selon $\eta$. Chaque ensemble de 4couches est appellé super-couche \textit{superlayer}. Les deux super-couche mesurant $\psi$ sont séparé par 20cm d'aluminium en nid d'abeille. Seul les chambre de MB4 ne possede pas de superlayer mesurant $\eta$ bien que la distance entre les deux superlayer restant reste la même.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.50\textwidth]{CMS/DTchamber.png}
+		\captionof{figure}{Schéma d'une chambre à dérive.}
+		\label{DT1}
+	\end{figure}
+
+    Les tubes d'une couche de la chambre sont constitué de 5 électrodes : un fil d'acier inoxydable au centre du tube composant l'anode, 2 pistes servant de cathodes et 2 pistes servant d'électrode et à mettre en forme le champ électrique. Ces deux électrodes améliore l'uniformité du champ à l'intérieur du tube loin du fil et améliore ainsi la résolution spatiale. Le tube est rempli d'un gaz de ArCO2 85/15. Lorsqu'une particule traverse le tube, elle ionise le gaz qui libère des électrons qui sont ensuite accélérer vers l'anode. Une avalanche se crée prêt du fil, ou le champ électrique est intense, ce qui induit un signal sur le fil. Le temps maximal nécessaire à la propagation du signal est de 380ns. 
+    
+    	\begin{figure}[ht!]
+    	\centering
+    	\includegraphics[width=0.50\textwidth]{CMS/DTTUBE.png}
+    	\captionof{figure}{Schéma d'un tube d'une chambre à dérive.}
+    	\label{DT2}
+    	\end{figure}
+    En estimant le temps d'arrivée des électrons sur l'anode, en supposant le temps d'interaction connu et en ayant trois couche d'un superlayer touché, il est possible d'estimer la position et le temps de la trace. dans un superlayer une resolution de 20mrad en angle 1.5mm en résolution spatial et quelques ns de résolution temporelle sont atteints.
+    
+    \item \textbf{Les chambres à pistes cathodiques }CSC pour \textit{Cathode Strip Chambers} (cf.fig\ref{CSC}) sont présent dans les bouchons où le flux de muons ainsi que le bruit de fond sont imoportant, le champ magnétique est également non-uniforme. Ces chambre on un temps de réponse très court, une granularité fine et sont presque insensible à la non-uniformité du champ magnétique. Ce détecteur couvre les zones de pseudo-rapidité $0.9<=|\eta|<=2.4$ et consiste en 468 chambres installé dans les bouchons. Chaque bouchons comprends 4 stations nommé ME1 ME2 ME3 et ME4. chaque stations comprends 2 anneaux (sauf ME1 qui en comprends 3) segmenter en 36 chambres couvrant chacunes un angle de 20degree en $\phi$.
+    
+    Les chambres (cf.fig\ref{CSC2}) sont cosntitués de 6 couches contenant un mélange de gaz (40\% Ar 50\%CO2 qui assure un bon gain et 10\%CF4 afin d'empecher la polymerisation pret des fils.) ainsi q'un plan de pistes de cathode radiale et de fils séparés de 3mm constituant les anodes placés orthogonalement aux pistes (sauf pour les premier anneaux de ME1 ou les fils sont orienté à 26degree afin de compenser la force de Lorentz du au champ magnétique de 4T dans cette zone). Les nombres total de pistes est de 220 000 et plus de 2 millions de fils.
+    
+    Lorqu'une particule chargée traverse une CSC, elle ionise le gaz. Les electrons sont accéléré vers le fils à anode. Le mouvement de ces charges induit un signal sur les pistes cathode et les fils anode de la chambre. Le temps dérive est beaucoup plus rapide que pous les DT mais la résolution spatiale est faible : 200um dans le plan tansverse et 10mrad dans le plan longitudinal.
+    \begin{figure}[ht!]
+    	\centering
+    	\includegraphics[width=0.50\textwidth]{CMS/CSC2.png}
+    	\captionof{figure}{Schéma d'une chambre CSC.}
+    	\label{CSC2}
+    \end{figure}
+    
+    
+    
+	\item \textbf{Les chambres à plaques résistives} RPC pour \textit{Resistive plate Chambers} (cf.fig\ref{RPC}) forment un système très efficace pour trigger sur les muons même à bas $p_{T}$ et sur une zone en pseudo rapidité très large ($|\eta<1.6|$). grâce à sont excellente résolution temporelle (~ns) et compléte les détecteurs CSC et DT dont les résolutions spatiales sont beaucoup plus éleve. Les RPC permettent d'assigner avec une plus grande précision le bon temps de croisement de faisceau pour les muons. Elles sont présentes à la fois dans le tonneaux et les bouchons. Dans le tonneau 480 sont réparti en 6 couches, 2 pour MB1 et MB2 et 1 pour MB3 et MB4. La redondance en MB1 et MB2 permet  de trigger sur les muons de bas $p_{T}$ qui pourrait êttre arrêtés avant d'atteindre MB3. Pour les bouchons, les 432 chambres sont répartis en trois disque noté RE1 RE2 RE3 pour chaque bouchon. Chaque disque est composés de 3 anneaux RE*/1 RE*/2 RE*/3 avec * représentant le numéro du disque. Seul les anneaux 2 et 3 sont instrumentés. Chaque anneaux est ségmenté en 18 chambres couvrant $\phi=20$.
+	
+	Les RPC sont des chambres à double gap (cf.fig\ref{RPC2}) qui opèrent en mode avalanche afin de fonctionner même à haut rate de particules $~qq centaine de Hz/cm2$. Un gap est constitué de deux plates de bakélite qui servent  dans lequel circule un gaz. Des pistes de lectures sont inséré entre les deux gaps. Le système des RPC dans CMS ainsi que le fonctionnement d'unr RPC est expliqué dans le prochain chapitre.
+	  \begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.60\textwidth]{CMS/RPC2.jpg}
+		\captionof{figure}{Schéma en vue éclaté d'un gap d'une RPC et des pistes de lecture.}
+		\label{RPC2}
+	\end{figure}
+	
+	
+\end{itemize}
+    \begin{figure}[ht!]
+	\centering
+	\subfloat[Photo d'une cassette contenant une chambre DT et RPC.]{\includegraphics[width=0.40\linewidth]{CMS/DT.jpg}\label{DT}}
+	\subfloat[Photo d'une chambre CSC.]{\includegraphics[width=.40\linewidth]{CMS/CSC.jpg}\label{CSC}}
+	\\
+	\subfloat[Photo d'une chambre RPC.]{\includegraphics[width=.80\linewidth]{CMS/RPC.jpg}\label{RPC}}
+	\caption{Photos des différents composants du spectrographe à muons.}
+\end{figure}
+
+\section{Le système de trigger}

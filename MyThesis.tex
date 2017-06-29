@@ -9,11 +9,23 @@
 \else
 \def\@mkdir{\typeout{Expect errors}}
 \fi
-
 \hyphenpenalty=3500
 \doublehyphendemerits=9000
 \finalhyphendemerits=6000
 \RequirePackage[l2tabu, orthodox]{nag}
+\usepackage{latexgit}
+\usepackage{draftwatermark}
+\SetWatermarkLightness{0.6}
+\SetWatermarkText
+{
+\begin{varwidth}{75cm}
+This is commit \gitcommithash. \\
+The latest commit was by \gitcommitauthorname{}.\\
+\textit{\gitcommithash{} : \gitcommitmsg}
+\end{varwidth}
+}
+\SetWatermarkScale{0.3}
+  
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{float}
@@ -103,8 +115,6 @@
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
-
-
 
 %"Bugfix" for fncychap:
 %Without this code there will be an overfull hbox by 10pt on every chapter

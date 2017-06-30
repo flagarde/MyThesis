@@ -49,7 +49,7 @@ The latest commit was by \gitcommitauthorname{}.\\
 \usepackage{calc}
 \usepackage{lmodern}  
 \usepackage{microtype}
-\usepackage[top=2.05cm,bottom=1.1cm,left=0.5cm,right=5.5cm,marginparsep=0.8cm,marginparwidth=4.4cm]{geometry}
+\usepackage[top=2.05cm,bottom=1.1cm,left=1cm,right=5cm,marginparsep=0.50cm,marginparwidth=4.25cm]{geometry}
 \usepackage{booktabs}
 %\usepackage{vmargin}
 \usepackage{layout}
@@ -156,10 +156,16 @@ The latest commit was by \gitcommitauthorname{}.\\
 \titlespacing*{\subsubsection}{0pt}{\baselineskip}{\baselineskip}
 \newlength{\mylength}
 \setlength{\mylength}{\textheight+\headsep-\paperheight}
+
+\makeatletter
+\newlength\myrightmargin
+\setlength\myrightmargin{\Gm@rmargin}
+\makeatother 
+
 \newcommand{\void}{\vspace*{\paperheight}\textcolor{gray!30}{\hrule}}
 \newcommand{\leftnum}{\vspace*{\paperheight}\textcolor{white}{\hrule}\vspace{0.2cm}\makebox[\textwidth][l]{\hspace{0.5cm}\sffamily\textcolor{white}{ \large{\thepage}}}\vspace{0.5cm}}
 \newcommand{\rightnum}{\vspace*{\paperheight}\textcolor{white}{\hrule}\vspace{0.2cm}\makebox[\textwidth][r]{\sffamily\textcolor{white}{ \large{\thepage}}\hspace{0.5cm}}\vspace{0.5cm}}
-\newcommand{\barre}{\colorbox{gray!75}{\begin{minipage}[b]{5cm}\textcolor{gray!75}{\Large{lg}}\end{minipage}}\vspace{\mylength}}
+\newcommand{\barre}{\colorbox{gray!75}{\begin{minipage}[b]{\dimexpr\myrightmargin-0.5\marginparsep\relax}\textcolor{gray!75}{\Large{lg}}\end{minipage}}\vspace{\mylength}}
 
 
 \newcommand{\MargeSimple}[2]
@@ -169,7 +175,7 @@ The latest commit was by \gitcommitauthorname{}.\\
 		\ifthenelse{\isodd{\value{page}}}{
 			\AtPageLowerRight{%
 				{\colorbox{gray!30}{%
-						\begin{minipage}[b]{5cm}
+						\begin{minipage}[b]{\dimexpr\myrightmargin-0.5\marginparsep\relax}
 							\vspace*{\paperheight}
 							#2
 						\end{minipage}%
@@ -179,7 +185,7 @@ The latest commit was by \gitcommitauthorname{}.\\
 		{
 			\AtPageLowerLeft{%
 				{\colorbox{gray!30}{%
-						\begin{minipage}[b]{5cm}
+						\begin{minipage}[b]{\dimexpr\myrightmargin-0.5\marginparsep\relax}
 							\vspace*{\paperheight}
 							#1
 						\end{minipage}%

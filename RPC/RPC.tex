@@ -139,5 +139,22 @@ Les RPC repose sur la perte d'énergie par ionisation et excitation. Cette perte
 \end{figure}
 
 \subsection{Les modes de fonctionnement des RPC}
+Selon l'intensité du champ électrique appliqué  entre les électrodes il est possible de choisir le mode de fonctionnement. La composition du mélange gazeux est également un élément déterminant dans le mode de fonctionnement des chambres. On distingue généralement deux modes de fonctionnement; le mode avalanche et le mode streamer.
 
+\subsubsection{Le mode avalanche}
+Le mode avalanche est le premier mode de fonctionnement qui apparait lorsqu'on augment la tension entre les électrodes.L'ionisation du gaz crée quelques pairs d'ion-électrons qui sont ensuite accéléré par le champ électrique. Les électrons, qui sont beaucoup plus rapides que les ions de par eur masse plus faible vont à leur tours ioniser les molécules du gaz. Cette multiplication des charges est appellé avalanche. Ce déplacement va créée par effet capacitif un signal de l'ordre de la nanoseconde qui peut etre récolter. Les charges vont ensuite atteindres les électrodes et s'y accumuler, et vont être neutarliser en quelques millisecondes grâce au courant fourni par le générateur de haute tension appliquant la différence de potentiel (cf.fig\ref{avalanche}). Le temps mort de ce mode est donc assez faible et permet donc une détection efficace des particules mêle à des flux assez elevée, la résistivité du matériaux est déterminante pour ce temps de neutralisation des charges.
+
+
+\begin{figure}[ht!]
+\centering
+\subfloat[Des molècules du gaz sont ionisé par le passage d'une particule.]{\includegraphics[width=.49\linewidth]{RPC/avalanche-streamer-1.png}\label{avalanche-1}}
+\hfill
+\subfloat[La taille de l'avalanche influence le champ électrique local de la couche de gaz.]{\includegraphics[width=.49\linewidth]{RPC/avalanche-2.png}\label{avalanche-2}}
+\\
+\subfloat[Les électrons atteignent l'anode. Les ions sont beaucoup plus lent ]{\includegraphics[width=.49\linewidth]{RPC/avalanche-3.png}\label{avalanche-3}}
+\hfill
+\subfloat[Les ions atteignent la cathode. Les charges de la couche résistive induise un temps mort.]{\includegraphics[width=.49\linewidth]{RPC/avalanche-4.png}\label{avalanche-4}}
+\caption{Vue schématique d'un développement d'une avalanche. Le champ électrique appliqué au électrode est noté $E_{0}$, les électrons sont en bleu et les ions en rouge.}
+\label{avalanche}
+\end{figure}
 

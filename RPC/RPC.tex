@@ -2,3 +2,142 @@
 \renewcommand\chapterillustration{RPC/rpc}
 \ThisULCornerWallPaper{1}{\chapterillustration}
 \minitoc
+
+\lettrine[lines=4, slope=-0.5em]{D}{ans} ce chapitre se veut une description générale des chambres à plaques résistive (RPC) ainsi qu'une description détaillée des chambres RPC utilisées dans CMS ainsi que de leurs électronique. Une description des mise à niveaux se rapportant à ces détecteurs, notamment dans les bouchons sera également présentée.
+
+\section{Les chambres à plaques résistives (RPC)}
+
+ \marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/Geiger.png}
+	\captionof{figure}{Photo d'un des premiers tubes Geiger-Muller fabriqué en 1932 par Hans Geiger pour une utilisation en laboratoire.}
+	\label{Geiger}
+}
+Les RPC pour \textit{Resistive Plate Chambers} font partie d'une famille de détecteurs appelé détecteur gazeux. Ces détecteurs ont joué un rôle dès le début de la Physique de Haute Énergie dans la détection de nouvelle particules. Depuis le premier détecteur gazeux, le compteur proportionnel à un seul fil \textit{Single-wire proportional counter} inventé par Rutherford et Geiger, puis le compteur Geiger-Mueller (cf.fig\ref{Geiger}) présenté en 1928, les détecteurs gazeux n'ont cessé de se perfectionner et devenir plus rapide, efficaces et permettent de couvrir de grande surface de détections à des coûts très modestes.
+
+\subsection{Les détecteurs gazeux}
+Les détecteurs gazeux repose tous sur le même principe simple. Lorsqu'une particule traverse un gaz, elle l'ionise. Les ions et électrons créés lors de cette ionisation peuvent être accéléré grâce à une champ électrique. En choisissant judicieusement l'intensité du champ électrique, c'est à dire en appliquant une tension aux bornes des électrodes, les électrons peuvent gagner assez d'énergie pour ionisé le gaz à leur tours (seconde ionisation) et commencé une multiplication de charge. Le nombres de charge libéré détermine le mode de fonctionnement du détecteur. Le gas est également un élément important du détecteur est à un rôle important sur le mode de fonctionnement de celui-ci. Le déplacement des ces charges à l'intérieur du gaz induit un déplacement de charges sur les électrodes, et crée un signal qui peut être récupéré par une électronique et donner une information sur le temps et la position de la trajectoire de la particule incidente. Ces charges peuvent donner lieux à un mode dit "streamer" voir donner lieux à la création d'étincelles entre l'anode la cathode. La figure \ref{mult} montre le facteur d'amplification, ou le gain du gas en fonction du voltage appliqué. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.95\textwidth]{RPC/gasgain.png}
+	\captionof{figure}{Evolution typique de gain du gaz zn fonction du voltage appliqué (en échelle arbitraire).}
+	\label{mult}
+\end{figure}
+
+Six régions peuvent être définies :
+
+\begin{itemize}
+	\item \textbf{I} Les paires d'électrons-ions primaires se recombine avant d'avoir le temps de produire une seconde ionization.
+	\item \textbf{II} Les charges du à l'ionization primaire sont entièrement récolté sur les électrodes. Le facteur d'amplification reste constant même si le voltage est augmenté.
+	\item \textbf{III} Les charges produitent par l'avalanche sont proportionnel au charges produitent lors de la première ionisation. Les charges colléctés augmentent fortement avec la tension appliqué.
+	\item \textbf{IV} Cette région est la limté de proportionnalité, l'avalanche se transforme en streamer, un plasma d'ions et d'électrons.
+	\item \textbf{V} Les streamers connectent les électrodes et produissznr des étincelles visible. Les compteur Geiger-Muller et les chambres à étincelles fonctionnent dans ce mode.
+	\item \textbf{VI} Des décharges électrique se produisent même sans le passage de particules pour ioniser le gaz. Ce mode peut détruire le détecteur.
+\end{itemize}
+
+Les détécteur gazeux à fils n'ont pas une résolution temporelle de l'ordre de la centaines de nanoseconde. Cela est du au champ électrique de la forme en $\frac{1}{r}$, qui fait que la zone d'amplification se situe proche du fil et les électrons doivent atteindre cette zones avant d'être amplifier et de démarrer l'avalanche.
+
+En utilisant un champ électrique uniforme et important, une meilleur résolution temporelle est atteignable.
+
+Le premier détecteur gazeux utilisant cette méthode est le compteur à étincelle "Spark Counter" développé dans les années 1948 , un détecteur qui présente une géométrie plane. Il est généralement constitué de deux électrode métalliques entre lequel est présent un gaz. Le passage d'une particule ionise ce gaz et crée une avalanche qui rentre à un certain moment en mode streamer. Un plasma se créent entre les deux électrodes, les électrodes se déchargent et amène à la création d'une étincelle. Ce type de détecteur présente un signal qui ne nécessite pas d'amplification, cependant le temps nécessaire à le recharge des electrodes est de l'ordre de quelques millisecondes. De plus la surface du détecteur ne doit pas être trop grande (~cm2) afin de ne pas détruire les électrodes lors des décharge.
+
+Afin de résoudre ces problème, les électrodes métalliques peuvent être remplacés par des plaques de matèriaux de hautes résistivité ($10^{9}$ à $10^{10}$ohms) afin de limité l'aire de décharge des électrodes autour du signal ainsi qu'une mélange de gaz absorbant les photons afin d'éviter le mode streamer. Ce qui permet le fonctionnement du détecteur à des flux de particules plus importants et le champs électrics baissant localement du à la recharge plus lentes des électrodes le développement d'avalanches succéssives au même endroit est limités tout en laissant le détecteur opérationnel hors de cette zone.
+
+\subsubsection{Naissance des RPC}
+En 1981 R.Santonico et R.Cardarelli développe les Resistive Plate Chamber (RPC). Ce détecteur utilise un matèriaux peu coûteux est très utilisé de haute résistivité (~$10^{10}$ohms), le High Pressure Laminate (HPL) fait de melamine ou phenol resins (Bakelite). Le temps de décharge d'une électrode d'une telle résistivité recevant une charge $Q_{0}$ est donnée par :
+\begin{equation}
+Q(t)=Q_{0}e^{\frac{-t}{\rho\epsilon_{0}\epsilon_{r}}}
+\end{equation}
+avec $\rho$ la resistivité volumique du matériaux, $\epsilon_{0}$ la permittivité du vide et $\epsilon_{r}$ la permitivité relative du matériaux.
+Les charges présentes sur les électrodes réduisent la haute tension appliqué et donc le champ électrique à l'endroit des charges. Le détecteur devient inefficace pour cette periode de temps $\tau$ à l'endroit du dépot de charge tout en restant efficace ailleurs. Pour de cas du bakelite $\rho\simeq10^{10}ohmscm$ le temps de relaxation de l'ordre de 10ms. Grâce à l'utilisation de matériaux de haute résistivité, l'utilisation de chambres de grande taille était désormais possible.
+
+Plusieurs configuration pour les RPC sont possible, mai l'une des plus simple est donné par la figure \ref{RPCscheme}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.98\textwidth]{RPC/scheme_first.png}
+	\captionof{figure}{Schéma d'une RPC typique.}
+	\label{RPCscheme}
+\end{figure}
+
+Une couche de gaz est comprise entre deux plaques d'électrode résistives. Ces plaques sont peintes avec du graphite qui est utilisé pour distribué la haute tension sur les électrodes. Lélectronique est isolée de la chambre par un isolant. L'électronique peut être placé de chaque coté de la chambre et peut être constitué de carreaux ou de lamelles etc.
+Depuis ces détecteurs de construction simple et robuste ont été utilisé dans de nombreuses expériences : ATLA, BaBar, BELLE, OPERA etc. Différentes solutions technologiqued ont été développés selon les besoin des différentes expériences.
+
+\subsection{Principes de fonctionnement d'une RPC}
+Le principe d'une RPC repose sur l'ionisation d'un gaz. Lorsqu'une particules relativiste traverse le gaz d'une RPC, elle interacgit surtout avec les molécules de gaz par interaction electromagnetique. La perte d'énergie moyenne pour l'ionisation et l'excitation d'une particule relativiste massive ($m>m_{e}$) par des électron libre supposés au repos est donnée par la formule de Bethe-Bloch (cd.fig\ref{Bethe-Block})
+\begin{equation}
+-\left<\frac{1}{\rho}\frac{\dd E}{\dd x}\right>=\frac{e^{4}}{4\pi \epsilon_{0}^{2}m_{e}c^{2}}z^{2}N_{A}\frac{Z}{A}\frac{1}{\beta^{2}}\left[\frac{1}{2}\ln\frac{2m_{e}c^{2}\beta^{2}\gamma^{2}E_{max}}{I^{2}}-\beta^{2}-\frac{\delta(\beta\gamma)}{2}\right]
+\end{equation}
+avec :
+	\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/Photon.png}
+	\captionof{figure}{Émission d'un photon lors de la désexcitation d'un atome.}
+	\label{photon}
+}
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/Auger.png}
+	\captionof{figure}{Éjéction d'un électron Auger.}
+	\label{Auger}
+}
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/Brem.png}
+	\captionof{figure}{Bremsstrahlung produit par un muon dévié par le champ électrique d'un noyau.}
+	\label{Brem}
+}
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/Penning.png}
+	\captionof{figure}{Ionisation Penning.}
+	\label{Penning}
+}
+\begin{itemize}[label=$\bullet$]
+	\item $\rho$ la densité du matériaux,
+	\item $e$ la charge de lélectron,
+	\item $\epsilon_{0}$ la permittivité du vide,
+	\item $c$ la vitesse de la umière dans le vide,
+	\item $z$ la charge de la particule incidente,
+	\item $N_{A}$ le nombre d'Avogadro,
+	\item $Z$ le numéro atomique du matériaux,
+	\item $A$ le nombre de masse du matériaux,
+	\item $\beta=\frac{v}{c}$ la vitesse de la particule incidente en unité de $c$,
+	\item $\gamma=\frac{1}{\sqrt{1-\beta^{2}}}$
+	\item $I$ est l'énergie d'excitation moyenne et
+	\item $E_{max}$ est l'énergie transféré maximale lors d'une collision d'une particule de masse $m$ et de quantité de mouvement $p$,
+	\begin{equation}
+	\frac{2m_{e}p^{2}}{m^2+2\gamma m_{e}m+m_{e}^2}
+	\end{equation}
+\end{itemize}
+
+\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+	\centering
+	\includegraphics[width=0.95\textwidth]{RPC/Bethe-Bloch.eps}
+	\captionof{figure}{Perte d'énergie moyenne $-\left<\frac{\dd E}{\dd x}\right>$ pour des anti-muon dans du cuivreen function de $\beta\gamma=\frac{p}{Mc}$ sur neuf ordres de grandeurs en quantité de mouvement (12 ordres de grandeurs en énergie cinétique) .}
+	\label{Bethe-Block}
+\end{minipagewithmarginpars}
+
+Si un atome ou une particule du gaz est ionisé par la collision inelastique de la particule incidente, des électrons sont éjecter de l'atome (la particule) prêt du point de collision. En revanche, si l'atome n'est pas ionisé mais excité, l'énergie d'excitation est évacué par l'émission d'un photon (cf.fig\ref{photon}), par un électron d'Auger (cf.fig\ref{Auger}) ou par ionization Penning (cf.fig\ref{Penning}). Si ce photon à une énergie plus importante que le minimum du potentiel d'ionization, le photon va être absorber par effet photoélectrique est un électron va être éjecté de l'atome, sinon le photon ne sera pas détecter par les RPC.
+
+Une particules chargé relativiste peut aussi perdre son énergie par rayonnement continu de freinage appelé \textit{Bremsstrahlung}(cf.fig\ref{Brem}) , ce processus devient prédominant si l'énergie de la particule dépasse une certaine énergie critique ($E_{\mu c}$ sur la figure \ref{Bethe-Block}).Dans ce cas la perte d'énergie n'est pas détécté par le RPC.
+
+Les RPC repose sur la perte d'énergie par ionisation et excitation. Cette perte d'énergie dépend du matériaux (cf.fig \ref{mat}). Lors de l'ionisation du gaz, des clusters primaires (d'éléctrons et ions ) sont créés le long de la trajectoire de la particule incidentes. 
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.92\textwidth]{RPC/energylost.eps}
+	\captionof{figure}{Perte d'énergie moyenne dans l'hydrogène liquide,l'hélium liquide, le carbon, l'aluminium, le fer, l'étain et le plomb. Les effets radiatifs, pertinents pour les pions et muons ne sont pas inclus. Ils deveint important pour les muons traverssant le fer $\beta\gamma\gtrsim1000$ et à plus petite quantité de mouvement pour les muons dans des absorber de plus grand $Z$. }
+	\label{mat}
+\end{figure}
+
+\subsection{Les modes de fonctionnement des RPC}
+
+

@@ -310,6 +310,49 @@
 \interfootnotelinepenalty=10000
 \setlength{\parskip}{\baselineskip}
 \addbibresource{bibli.bib}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{  \fancyhf{}\fancyhead{}\renewcommand{\headrulewidth}{0pt}} 
+\fancypagestyle{void}{  \fancyhf{}\fancyhead{}\renewcommand{\headrulewidth}{0pt}} 
+\fancypagestyle{mystyle}
+{
+\fancyhf{} 
+\fancyhead[LE,RO]{}
+\fancyhead[LO]{
+	\bfseries\color{white}
+	\fcolorbox{gray!75}{gray!75}{%
+		\begin{minipage}{1\textwidth}
+			\textcolor{gray!75}{\Large{ql}}\leftmark 
+		\end{minipage}%
+	}
+	\begin{minipage}{1\textwidth}
+		\vspace{0.01cm}
+		\begin{flushright}
+			\vspace{-1.5cm} \fontsize{60}{10} \selectfont  \textcolor{black!75}{\thechapter}
+		\end{flushright}
+	\end{minipage}
+}
+\fancyhead[RE]{
+	\bfseries\color{white}
+	\fcolorbox{gray!75}{gray!75}{%
+		\begin{minipage}{1\textwidth}
+			\vspace{0.01cm}
+			\begin{flushright}
+				\leftmark \textcolor{gray!75}{\Large{ql}}
+			\end{flushright}
+		\end{minipage}%
+	}
+	\begin{minipage}{1\textwidth}
+		\begin{flushleft}
+			\vspace{-1cm} \fontsize{60}{10} \selectfont  \textcolor{black!75}{\thechapter}
+		\end{flushleft}
+	\end{minipage}
+}
+\fancyfoot[RO]{}
+\fancyfoot[LE]{}
+}
+
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Page de garde %%%%%%%%%%%%
@@ -327,48 +370,6 @@
 \clearpage
 
 \dominitoc
-\pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{#1}{}}
-\fancyhf{} 
-\fancyhead[LE,RO]{}
-\fancyhead[LO]{
-\bfseries\color{white}
-\fcolorbox{gray!75}{gray!75}{%
-   \begin{minipage}{1\textwidth}
-  \textcolor{gray!75}{\Large{ql}}\leftmark 
-   \end{minipage}%
-}
-   \begin{minipage}{1\textwidth}
-   \vspace{0.01cm}
-   \begin{flushright}
-    \vspace{-1.5cm} \fontsize{60}{10} \selectfont  \textcolor{black!75}{\thechapter}
-   \end{flushright}
-   \end{minipage}
-}
-\fancyhead[RE]{
-\bfseries\color{white}
-\fcolorbox{gray!75}{gray!75}{%
-   \begin{minipage}{1\textwidth}
-   \vspace{0.01cm}
-   \begin{flushright}
-  \leftmark \textcolor{gray!75}{\Large{ql}}
-  \end{flushright}
-   \end{minipage}%
-}
-   \begin{minipage}{1\textwidth}
-   \begin{flushleft}
-    \vspace{-1cm} \fontsize{60}{10} \selectfont  \textcolor{black!75}{\thechapter}
-   \end{flushleft}
-   \end{minipage}
-}
-\fancyfoot[RO]{}
-\fancyfoot[LE]{ }
-        
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\fancypagestyle{plain}{ \fancyhead{}\renewcommand{\headrulewidth}{0pt}} 
-
 
 \backmatter
 \begin{titlepage}
@@ -383,9 +384,13 @@ Qui addit scienciam addit et dolorem
 \end{titlepage}
 
 \frontmatter
+\pagestyle{void}
 \MargeSimple{\leftnum}{\rightnum}
 \sommaire
 \mainmatter
+\pagestyle{mystyle}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
 \MargeSimple{\barre\leftnum}{\barre\rightnum}
 {\fontsize{11}{11} \selectfont
 \include{SM/SM}

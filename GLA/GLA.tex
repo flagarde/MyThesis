@@ -58,7 +58,7 @@ Des détecteurs de cette dimension ont donc été construit afin d'étudier leur
 \section{Caractérisation des Glass Resitive Plate Chamber (GRPC)}
  
 L'étude des GRPC passe par la connaissance de trois caractéristique principales :
-\begin{itemize}[label=$bullet$]
+\begin{itemize}[label=$\bullet$]
 	\item \textbf{L'Efficacité} de détection des particules. C'est la caractéristiques principales. Elle est calculée en faisant le rapport entre le nombre de particules ayant été détectées et le nombres de particules ayant traversée le détecteur. Bien sûr, dans le cas où le signal est récolté par une électronique à seuil, la valeur de celui-ci va affecter l'efficacité de détection.
 	\item \textbf{La multiplicité} représente le nombres de cellules ou bandes touchés lorsqu'une particule traverse le détecteur. En effet, plusieurs cellules de détections peuvent être déclenchées par le courant induit par les électrons créés lors de l'avalanche. Ici aussi le seuil appliqué à l'électronique influe sur la valeur de la multiplicité. La multiplicité joue un rôle très important sur la résolution spatiale du détecteur comme on le verra par la suite.
 	\item \textbf{Le bruit électronique} qui est la fréquence de détection par l'électronique, d'un signal considéré comme non physique. Ceci peut être dû à une avalanche d'origine thermique ou radiative, par un courant dans le couche résistive etc. 
@@ -88,3 +88,203 @@ Ces détecteurs ont été instrumenté avec une électronique dite semi-digitale
 	\captionof{figure}{Schéma de l'accélérateur ILC.}
 	\label{ILC}
 }
+
+\section{Électronique "semi-digitale"}
+Le calorimètre SDHCAL a nécessité la création d'un système électronique digital à plusieurs seuils, ceci afin de réduire à la fois l'énergie thermique dissipée et la quantité de donnée. La conversion en signal digital est assuré par un \textit{Application-specific integrated circuit} (ASIC) développé spécialement pour cet occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
+
+\subsection{La puce de lecture HARDROC}
+L'ASIC HARDROC (cf.fig \ref{hardroc}) est issue d'une collaboration entre le pôle de microélectronique Omega du Laboratoire de L'Accélérateur Linéaire (LAL) d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basé celle appellée OPERAROC qui est utilisée dans l'expérience Oscillation Project with Emulsion-tRacking Apparatus (OPERA) (cf.fig \ref{opera}).
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{GLA/OPERA.jpg}
+	\captionof{figure}{Photo du détecteur OPERA.}
+	\label{opera}
+}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{GLA/HARDROC.png}
+	\captionof{figure}{Schéma électronique du HARDROC.}
+	\label{hardroc}
+\end{figure}
+Le HARDROC repose sur une technologie de fonderie AMS SiGe 0.5$\mu m$. La puce est ensuite insérée dans un boitier d'épaisseur 1.4mm qui comporte 160 pattes dont 64 voies. Les puces sont directement incorporées sur le PCB du détecteur appellée Active Sensor Unit (ASU), chaque HARDROC étant connecté à 64 bandes ou carreaux de cuivre sensitifs (strip et pads respectivement) selon le PCB. Dans le cas des pads, la connection des pattes et des carreaux des cuivre ont été étudiés afin d'éviter la diaphonie entre les pattes.
+Le schéma simplifié du HARDROC est donné par la figure \ref{scheme}. La partie digitale de la puce est commune aux 64 voies, alors que chacune possède sa partie analogique :
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{GLA/scheme.png}
+	\captionof{figure}{Schéma simplifié du HARDROC.}
+	\label{scheme}
+\end{figure}
+
+Chaque voie d'entré est composée :
+\begin{itemize}[label=$\bullet$]
+	\item Un préamplificateur de basse impédance fonctionnant en mode convoyeur de courant dont le gain est ajustable de 0 à 1.99.
+	\item Trois traitements de mise en forme rapide à gain réglable en parallèles (FSBs) (Fast Shaper). Ils sont suivis d'un discriminateur de tension qui une fois déclenché, active une bascule (pour la sauvegarde de l'information).
+	\item Un traitement de mise en forme lent (Slow Shapper) qui permet le multiplexage du signal de sortie du préamplificateur et la lecture de la charge d'entrée. Ce traitement est surtout utilisé pour le débogage de la puce.
+	\item Un encodeur pour coder le signal des bascules sur deux bits.
+\end{itemize}
+
+Les $3\times 64$ discriminateurs sont lus toutes les 200ns. Les trois seuils des discriminateurs peuvent être ajustés grâce à trois convertisseurs digital-analogiques (DAC) codés sur 10bits. Ce réglage affecte l'ensemble des 64 voies de la puce.
+
+\subsubsection{Le préamplificateur}
+L'entrée des cellules actives sont reliée aux pattes "in\_pa" d'un préamplificateur de type "Super Base Commune" (cf.fig\ref{preampli}), ce qui permet de diminuer l'impédance d'entrée (50-100 ohms) et donc d'éviter la diaphonie (\textit{cross-talk}). L'impédance d'entrée est donnée par la formule suivante :
+
+\begin{equation}
+Z_{in}=\frac{R_0+1/g_{m2}}{1+g_{m1}R_c}
+\end{equation}
+où $g_{m1}$ et $g_{m2}$ sont les transconductances des transistors $Q1$ et $Q2$ 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{GLA/preampli.png}
+	\captionof{figure}{Schéma du préamplificateur.}
+	\label{preampli}
+\end{figure}
+
+\subsubsection{Miroir de courant à 8 bits}
+Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de courant de gains respectifs 1/128, 1/64, 1/32, 1/16, 1/8, 1/4, 1/2 et 1 (cf.fig \ref{miror}). La sortie est la somme des courants des mirroirs activés. Les huit miroir sont activables séparément grâce à un mot de 8 bits appellé contrôl de gain. La plage d'amplification varie donc de 0 à 1.992. La précision de ce gain est estimé à 1.5\%. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{GLA/miror.png}
+	\captionof{figure}{Schéma du miroir de courant à 8 bits.}
+	\label{mirror}
+\end{figure}
+
+\subsubsection{Les trois traitements de mise en forme rapide (FSB)}
+En sortie du miroir à 8bits le signal passe dans trois circuit de traitement de mise en forme placée en parallèle. Ils consistent en un filtrage des signaux fournit en entrée afin d'éviter les perturbations dans le signal en sortie du préamplificateur ainsi que d'augmenter le rapport signal sur bruit. FSB1, FSB2 (cf.fig\ref{fsb1}) contrairement à FSB0 (cf.fig\ref{fsb0}) possèdent un système de 4 miroirs de courant afin de réduire le gain en entrée et ainsi augmenter la gamme dynamique. Le filtre FB0 est dédié aux charges d'entrée allant de 10fC à quelques centaines de fC, FSB1 qui posséde 4 miroir permet de traiter des signaux allant de 100fC à plus de 1pC; quant à FSB2 il permet de traiter des signaux de 1pC à 30pC.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{GLA/FSB0.png}
+	\captionof{figure}{Schéma de FSB0.}
+	\label{fsb0}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{GLA/FSB1.png}
+	\captionof{figure}{Schéma de FSB1/2.}
+	\label{fsb1}
+\end{figure}
+Il est possible d'activer des résistance et des condensateur dans le boucle de contre réaction du filtre (cf.fig\ref{fsb1},(cf.fig\ref{fsb0})), tout comme les gain des FSB, ils sont réglable par des mots de envoyé lors de la configuration des puces au début d'un run (slow control). Une étude poussée à été réalisé lors des test pour le SDHCAL et nous avons garder les valeurs trouvée comme les plus adaptées pour le gain des miroirs ainsi que pour la configuration de la boucle de contre-réaction.
+
+La figure \ref{signal} montre la forme du signal en sortie des filtres FSB pour trois injections de charges différentes.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{GLA/FSB1.png}
+	\captionof{figure}{Forme du signal en sortie des FSB pour des injections de charges de 100fC (bleu) , 1pC (vert) et 10pC (rouge). FSB0 à pour gain 1, FSB1 1/4 et FSB2 1/8}
+	\label{signal}
+\end{figure}
+
+\subsubsection{Distriminateurs et bascules}
+Chaque sortie de FSB est connectée à un discriminateur. Les seuils des discriminateurs est globale au 64 voies de la puce et sont réglable grâce à trois convertisseur digital-analogique de 10bits (DAC). Il est donc possible de régler le seuil de manier à déclencher le discriminateur pour une charge donnée déposée sur les cellules actives du détecteur.
+
+Chaque discriminateur est relié à une bascule de type RS qui, dés lors que le discriminateur correspondant est déclenché et le signal autorisant l'acquisiton est à l'état haut, passe à l'état haut. Lors du coup d'horloge suivant, tout les 200ns, les bascules sont lues et remise à zéro. Les trois valeurs des bascules correspondant à une cellule active sont ensuite envoyé dans un encodeur qui code ces informations sur deux bits selon le tableau \ref{tg}.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|O|O|O|O|N}
+		\hline 
+		Seuil0  & Seuil1 & Seuil2 &Sortie \\ 
+		\hline 
+		0  & 0 & 0 & 00 \\ 
+		\hline 
+		1  & 0 & 0 & 01 \\
+		\hline 
+		1 & 1 & 0 & 10 \\
+		\hline
+		1  & 1 & 1 &11 \\
+		\hline
+	\end{tabular} 
+	\captionof{table}{Encodage des seuils sur 2 bits.}
+	\label{tabb}
+\end{table}
+Il est également possible de masquer une cellule active bruyantes en configurant la puce grâce de telle manière que la bascule soit à l'état bas en permanence. Ce réglage peut se faire grâce à des bits de masque envoyer lors du slow control.
+
+\subsubsection{Le registre de contrôle lent (slow control)}
+Afin de configurer le HARDROC, une patte d'entrée est utilisée. Une ligne d'horloge est mise en marche et à chaque front montant , les informations sont propagée dans le registre à décalage présent dans le HARDROC. 872 fronts d'horloge sont nécessaires afin de régler le HARDROC ( valeurs des seuils, gain des préamplificateurs, gains des FSB, masques etc...). Une fois toutes les informations envoyées, il suffit d'arreter l'horloge. La dernière bascule du registre est connecté à une patte qui permet à la fois de chainer les HARDROC et ainsi les configurer en série, mais aussi de vérifié que les bascules sont dans le bon état. Pour cela il suffit de redémarrer l'horloge et de comparer le mots binaire récupéré en sortie et le mots envoyé en entrée.
+
+\subsubsection{La mémoire du HARDROC}
+A chaque coup d'horloge, lorsque la puce est en phase d'acquisition, un OU logique est réalisé entre les bascules des 64 voies de la puce. Si l'une d'elle est à l'état haut, la mémoir digitale (Digital Memory) (cf.fig\ref{scheme}) reçoit un signal pour enregistrer l'événement. La valeur de l'horloge de l'événement, appellée Bunch Crossing ID (BCID) ainsi que le numéro d'identifiaction de l'ASIC ainsi que la valeur de tous les encodeur de la puce seront enregistrée. 
+
+La mémoire du HARDROC permet de stocker 128 événement de 160bits (cf.tab \ref{bits}). Une fois sa mémoire pleine, un signal de saturation est émit sur une patte dédiée.
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|O|O|N}
+		\hline 
+		Contenu d'un événement (valeur autorisée) & Taille (octets) \\ 
+		\hline 
+		Header : Identifiant de l'ASIC (0-255)  & 1 \\ 
+		\hline 
+		BCID : Compteur d'horloge (0-16777215) & 3 \\
+		\hline 
+		États des canaux 48 à 63  & 4 \\
+		\hline
+		États des canaux 32 à 47  & 4 \\
+		\hline
+		États des canaux 16 à 31  & 4 \\
+		\hline
+		États des canaux 0 à 15  & 4 \\
+		\hline
+	\end{tabular} 
+	\captionof{table}{Contenu d'un événement et taille en octet.}
+	\label{bits}
+\end{table}
+ 
+\subsection{L'acquisition des données}
+Le HARDROC à été conçu pour être chaîné, afin de piloter de nombreuses puces avec un nombres réduits de lignes communes. L'exemple du slow control montre l'intêret de ce chainage. Afin de gérer plusieurs HARDROC, une carte électronique composée d'un Field-Programmable Gate Array (FPGA), appellée Digital InterFace (DIF) (cf.fig\ref{DIF}) à été développé en collaboration avec le Laboratoire d'Annecy de Physique des Particules (LAPP). Cet carte possède un controleur USB utilisée pour le rappatriment des données, l'envoit des informations du slow control, d'un port HDMI dont le protocole permet la synchronisation des horloges et de connecter la DIF à une carte de contrôle. Elle dispose également de plusieurs entrées/sorties LEMO qui peuvent utilisée entre autres pour injecter un signal de déclenchement externe ainsi que de remonter un signal "busy".
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{GLA/DIF.png}
+	\captionof{figure}{Photo d'une DIF.}
+	\label{DIF}
+\end{figure}
+
+Pour commencer l'aquisition, la DIF envoie à tous les HARDROC un signal dit d'événement valide. Ceci à pour éffet de remettre à zéro leur compteur interne (BCID). Chaque événement correspondant à une cellule activé touchée est ensuite enregistré dans la mémoire du HARDROC connécté à cette cellule. Lorsque l'un d'un HARDROC à sa mémoire pleine, un signal de saturation est envoyé à la DIF par une ligne commune. On procéde alors à la lecture des mémoires des HARDROC (ReadOut). Chaque ASIC envoye le contenu de sa mémoire sur une ligne commune appellé ligne de donnée. Une ligne (Transmission ON) permet de prévenir la DIF qu'un des HARDROC procéde au transfert de ses données. Le fait de transférer les données en série améne à un temps mort maximum de
+\begin{eqnarray}
+n\times(128*160)bits\times 200ns= n*4.09ms
+\end{eqnarray} 
+où $n$ est le nombre de HARDROC. Une fois toutes les événements récoltés, les mémoires sont remises à zéro. Le diagramme temporelle \ref{temp} résume le cycle d'acquisition et de lecture décrit ci-dessus.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{GLA/cycle.png}
+	\captionof{figure}{Diagramme temporelle du cycle d'acquisition et de lecture.}
+	\label{temp}
+\end{figure}
+Afin de faciliter la reconstruction et l'analyse des données, des informations additionnelles sont ajoutées au flux de données des HARDROC par la DIF. À chaque ReadOut, les données des ASICS sont encapsulées par un header et un trailer ainsi que d'autres informations telles que des counteurs. Ces DIF sont reliées par l'intermédiaire de cable HDMI à une Synchronous Data Concentrator Card \footnote{Le nombre de chambre testées a toujours été inférieur à 9 ce qui permet de ce passer de DCC et de connecter directemen les DIF des chambres à la SDCC.} \cite{Baulieu:2015pfa} qui reçoit les busy et les RAMfull des DIF et envoye de manière synchrone l'horloge et les commandes. La carte SDCC est directement reliée par USB à l'ordinateur controllant la DAQ.
+
+La chaine d'acqusisiton peu être résumé apr le schéma suivant : 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{GLA/chaine.png}
+	\captionof{figure}{Architecture de la DAQ du SDHCAL. Dans notre cas le nombres d'ASU est d'un par layer (chambre) ainsi que d'une DIF par chambre. Le nombre de chambre étant dans notre cas inférieur à 9 l'utilisation des DCC est inutiles. }
+\end{figure}
+
+\subsection{Format de donnée LCIO}
+La chaine d'acquisition et l'électronique ayant été conçus pour le détecteur ILD de ILC, les données sont sauvegarder dans le format de données Linear Collider I/O (LCIO)\cite{2003physics6114G}. Ce format repose sur un modèle d'événement générique  dans lequel les données sont organisées en collections. Chaque collection contient une liste d'object dont la structure est adaptée à l'information à stocker ainsi qu'une liste de paramètre. À chaque début d'acquisiton un fichier LCIO est créeé et les événements sont stocker dans un LCEvent contenant une collection d'objets de type LCGenericObject ("RU XDAQ") qui contiennent les données brutes de chaque DIF enregistrées sous forme d'entiers.
+
+Ces fichiers peuvent ensuite être lus et analysés en créant des algorithme qui sont implémenté sous forme de processeur codé en c++ et utilisé par framework Modular Analysis \& Reconstruction for the LINear collider (MARLIN) \cite{Gaede:2006pj}. Chaque processeur analyses les données dans les LCEvent e permettent de créer de nouvelles collections qui sont ajouté à l'événement ou sont inséré dans les LCEvents d'un nouveau fichier. MARLIN permet de définir les processeur et l'ordre dans lequel les lancer à l'éxécution sans recompilation. Pour cela il utilise un fichier xml de configuration appellé "steering file". Ils est également possible de définir dans ce fichiers les paramètres nécessaire au processeur.
+
+\section{Programme d'analyse pour les chambres à élecronique HARDROC}
+L'un des travaux de notre thèse a été de se familiariser avec ce framework et de programmer des processeur afin d'analyser les données en provenance des détecteurs. 
+
+\subsection{Les processeurs MARLIN}
+Trois processeurs permettent de structurer les données afin d'en tirer les caractéristiques des détecteurs présentées précédemment :
+
+\begin{itemize}[label=$\bullet$]
+	\item Le processeur Streamout permet de mettre en forme les données brutes et de passer des LCGenericObject en une collection de RawColorimeterHit qui correspondent à des cellules touchées. Ces objects contiennent le numeros de la voies touchées du HARDROC (Channel\_Id), le numéro de l'HARDROC touché (ASIC\_Id) ainsi que le numéro de la DIF s'occupant de cet HARDROC (DIF\_Id).
+	\item Le processeur Trivent permet de passer du triplet (Channel\_Id,ASIC\_Id,DIF\_Id) à la position local dans la chambre (I,J,K=numero de la chambre) . La position des chambres (DIFS) dans l'espace est contenu dans un fichier Extensible Markup Language (XML) qui est un paramètre du steering file de MARLIN, CE QUI PERMET des positions locale dans une chambre à la position réelle dans l'espace de la cellule touchée (X,Y,Z). Trivent permet aussi de présélectionner les candidats muons. En effet, les données récoltés correspondent à tous les hits collectés jusqu'à ce qu'un Hardroc soit plein. Les données colléctées inclues non seuelement des hits venant de muons mais aussi des hits de bruits etc. Pour sélectionner les candidats muons clusterisation en temps est réalisé. Les coups d'horloge (BCID) qui présentent plus de $M_{hit}=3$ sont sélectionné. Pour chaque coup d'horloge sélectionné, les hits appartenant à des coups d'horloge contenu dans une fenêtre de $\pm t_{fen}=\pm3$ sont combiné pour construire un candidat muon. Si deux candidats sont proches et leur fenêtres se chevauchent ils ne sont pas pris en compte afin de ne pas ajouté plusieurs fois les hits dans plusieurs candidats muons. Chaque hits sélectionné pour un même candidat muons appartiennent à une meme collection et à un même événement.
+	\item Le processeur Analysis utilise ces candidats muons et effectue une sélection pus fine des candidats muons. Premièrement les évènement contenant un trop gros nombre de hits dans une chambres sont rejectés. Afin d'estimé l'éfficacité d'une chambre, les barycentres des hits des autres chambres sont utilisées afin de créer un candidat trace. Pour cela une minimisation par $\chi^2$ est utilisé. Les $\chi^2$ réduit $\chi^2/ndf$ sont données par :
+	\begin{equation}
+	\chi_{xz}^2/ndf=\sum_i^{Nplate-1}(x(z_{i})-x(z_{i})_{ba}) \quad \chi_{yz}^2/ndf=\sum_i^{Nplate-1}(y(z_{i})-y(z_{i})_{ba})
+	\end{equation}
+	où $x(z_{i})_{ba})$ et $y(z_{i})_{ba}$ sont les coordonnées du barycentre des hits dans la chambre $i$ et :
+\begin{equation}
+\begin{cases}
+\strut x(z_i)=az_i+b\\
+y(z_i)=cz_i+d
+\end{cases}
+\end{equation}
+est l'équation paramétrique d'une droite dans l'espace avec 4 paramètres $a,b,c,d$. La minimisation est effectué grâce au paquet MINUIT \cite{James:2004xla} contenu dans le framework ROOT \cite{BRUN199781}.
+Si la droite traverse la chambre étudié et si des hits sont situé à dans une region de $\pm 3 cellules*\pm 3 cellules$, $\pm 3 strips$ du point d'impact, la chambre est considéré efficace pour cette événement. Le nombre de hits dans cette région est utilisé comme estimateur de la multiplicité du détecteur.
+\end{itemize}

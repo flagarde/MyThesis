@@ -3,28 +3,28 @@
 \ThisULCornerWallPaper{1}{\chapterillustration}
 \minitoc
 
-\lettrine[lines=4, slope=-0.5em]{C}{e} chapitre décrit le détecteur CMS et les sous-détecteurs qui le compose, suivit d'une discussion sur le système de déclenchement. Il décrit également certaines des mises à niveaux qui se dérouleront durant les \textit{Long Shut Downn} LS2 et LS3 afin de se réparer à l'augmentation de la luminosité et du pile-up qui en découle.
+\lettrine[lines=4, slope=-0.5em]{C}{e} chapitre décrit le détecteur CMS et les sous-détecteurs qui le compose, suivi d'une discussion sur le système de déclenchement. Il décrit également certaines des mises à niveaux qui se dérouleront durant les \textit{Long Shut Down} LS2 et LS3 afin de se préparer à l'augmentation de la luminosité et de l'empilement qui en découle.
 
 \section{Le détecteur Solénoïde compact à muons (CMS)}
 Le détecteur Solénoïde compact à muons abrégé en CMS (pour Compact Muon Solenoid) est avec ATLAS une expérience généraliste qui a comme buts majeurs :
 
 \begin{itemize}[label=$\bullet$]
 	\item \textbf{La recherche du boson de Higgs : } Lors de la conception de CMS dans les années 1990, la détection du boson de Higgs à été prise comme référence afin de tester les performances du design du détecteur. Ce but à été réalisé avec la découverte d'une particule compatible avec le boson de Higgs le 4 juillet 2012.
-	\item \textbf{Confirmer et préciser les mesures de la physique du Modèle Standard : } Des mesures de précisions dans des domaines tels que la QCD, le couplage électrofaible, et la physique des saveurs pourrait donner des indications d'une physique au-dlà du Modèle Standard.
-	\item \textbf{La recherche de signes de physique au-delà du Modèle Standard : }CMS permet la recherche de particules supersymmétriques ou de nouveaux bosons vecteur massifs ($Z'$) ou encore la recherche de dimensions supplémentaires par exemple.
+	\item \textbf{Confirmer et préciser les mesures de la physique du Modèle Standard : } Des mesures de précisions dans des domaines tels que la QCD, le couplage électrofaible, et la physique des saveurs pourraient donner des indications d'une physique au-delà du Modèle Standard.
+	\item \textbf{La recherche de signes de physique au-delà du Modèle Standard : }CMS permet la recherche de particules supersymétriques ou de nouveaux bosons vecteurs massifs ($Z'$) ou encore la recherche de dimensions supplémentaires par exemple.
 	\item \textbf{Étudier les collisions d'ions lourds.}
 \end{itemize}
 
-Afin de répondre à ses objectifs, le "Technical Design Report" (TDR) \cite{Bayatian:922757} a fixé le cahier des charges et les caractéristiques essentielles du détecteur CMS, à savoir :
+Afin de répondre à ces objectifs, le "Technical Design Report" (TDR) \cite{Bayatian:922757} a fixé le cahier des charges et les caractéristiques essentielles du détecteur CMS, à savoir :
 \begin{itemize}[label=$\bullet$]
-	\item Une bonne identification des muons et une bonne résolution en impulssion sur une vaste gamme d'impulssion pour la région $|\eta|<2.5$, une bonne résolution en masse pour les dimuons ($\approx 1\%$ à 100GeV/c$^{2}$) et la capacité à déterminé de manière certaine la charge des muons de $p<$ 1TeV/c.
-	\item Une bonne résolution en impulssion pour les particules chargées ainsi qu'une bonne efficacuté de reconstruction dans le trajectographe interne (inner tracker). Un déclenchement et un étiquettage efficace pour les jets venant de quarks $\tau$ et $b$, ce qui requiert un détecteur à pixels proche du point d'interaction.
-	\item Une bonne résolution pour l'énergie électromgnétique, et une bonne résolution en masse pour les diphoton et dielectron  ($\approx 1\%$ à 100GeV/c$^{2}$), une grande couverture géométrique ($|\eta|<2.5$), une mesure de la diraction des photons et/ou une correction localisation du vertex primaire d'interaction ainsi qu'une bonne rejection des $\pi_{0}$ et une isolation des photons et letptons efficace à haute luminosité.
-	\item une bonne résolution en masse des dijets et une bonne résolution en masse de l'énergie transverse manquante $E_{T}^{miss}$. Ceci requiert un calorimètre hadronique hermétique de très grande couverture géométrique ($|\eta|<5$) et une fine segmentation latérale ($\Delta\nu\times\Delta\Psi<0.1\times0.1$)
+	\item Une bonne identification des muons et une bonne résolution en impulsion sur une vaste gamme d'impulsion pour la région $|\eta|<2.5$, une bonne résolution en masse pour les dimuons ($\approx 1\%$ à 100GeV/c$^{2}$) et la capacité à déterminer de manière certaine la charge des muons d'impulsion $p<$ 1TeV/c.
+	\item Une bonne résolution en impulsion pour les particules chargées ainsi qu'une bonne efficacité de reconstruction dans le trajectographe interne (inner tracker). Un déclenchement et un étiquettage efficace pour les jets venant de quarks $\tau$ et $b$, ce qui requiert un détecteur à pixels proche du point d'interaction.
+	\item Une bonne résolution pour l'énergie électromagnétique, et une bonne résolution en masse pour les diphotons et dielectrons  ($\approx 1\%$ à 100GeV/c$^{2}$), une grande couverture géométrique ($|\eta|<2.5$), une mesure de la direction des photons et/ou une localisation correcte du vertex primaire d'interaction ainsi qu'une bon rejet des $\pi_{0}$ et une isolation des photons et letptons efficace à haute luminosité.
+	\item une bonne résolution en masse des dijets et une bonne résolution en masse de l'énergie transverse manquante $E_{T}^{miss}$. Ceci requiert un calorimètre hadronique hermétique de très grande couverture géométrique ($|\eta|<5$) et une fine segmentation latérale ($\Delta\eta\times\Delta\phi<0.1\times0.1$)
 \end{itemize} 
 
 \subsection{Système de coordonnées conventionnel}
-Le système de coordonné utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère est coïncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnée est déterminé par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ est pointe vers le haut. CMS possédant une symétrie cylindrique, le repère $\left(O,\vec{r},\vec{\theta},\vec{\phi}\right)$ est souvent utilisé. $r$ correspond à la distance entre le an perpendiculaire à l'axe du faisceau (appelé plan transverse) passant par le point considérer et l'origine du repère $O$; $\theta$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et l'angle polaire $\phi$ est définit par rapport à $z$. Un troisième type de coordonnées, utilisant le fait que les particules produite au LHC sont relativistes, est également utilisé.En décomposant l'impulsion de la particule en une composante transverse et longitudinale $p=p_{T}+p_{L}=\sqrt{p_{x}^{2}+p_{y}^{2}}+p_{z}$ :
+Le système de coordonnées utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère et coïncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnée est déterminé par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire vue de dessus. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ et pointe vers le haut. CMS possédant une symétrie cylindrique, le repère $\left(O,\vec{r},\vec{\phi},\vec{z}\right)$ est souvent utilisé. $z$ correspond à la distance entre le plan perpendiculaire à l'axe du faisceau (appelé plan transverse) passant par le point considéré et l'origine $O$ du repère; $\phi$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et $r=\sqrt{x^2+y^2}$. L'angle polaire $\theta$ est définit par rapport à $z$. Un troisième type de coordonnées, utilisant le fait que les particules produite au LHC sont relativistes, est également utilisé. En décomposant l'impulsion de la particule en une composante transverse et longitudinale $p=p_{T}+p_{L}=\sqrt{p_{x}^{2}+p_{y}^{2}}+p_{z}$ :
 \begin{equation}
 ( E/c)^{2}=(mc)^{2}+p_{T}^{2}+p_{L}^{2}\Longrightarrow ( E/c)^{2}-p_{L}^{2}=(mc)^{2}+p_{T}^{2}\Longrightarrow  \begin{cases}
 \left( E/c \right)=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\cosh(y) \\
@@ -35,7 +35,7 @@ p_{L}=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\sinh(y)
 %\begin{equation}
 %\left( E/c \right)=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\cosh(y), p_{L}=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\sinh(y)
 %\end{equation}
-avec $y$ un paramètre appellée rapidité. En remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de $E=\sqrt{m^{2}c^{4}+p^{2}c^{2}}$:
+avec $y$ un paramètre appelé rapidité. En remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de $E=\sqrt{m^{2}c^{4}+p^{2}c^{2}}$:
 \begin{equation}
 y=\arctan\left(\frac{p_{l}c}{E}\right)=\frac{1}{2}\log\left(\frac{E+p_{l}c}{E-p_{l}c}\right)=\frac{1}{2}\log\left(\frac{\cos^2 \theta/2+\cdots}{\sin^2 \theta/2+\cdots}\right)\backsimeq-\log\tan\left(\frac{\theta}{2}\right)=\eta
 \end{equation}
@@ -43,10 +43,10 @@ y=\arctan\left(\frac{p_{l}c}{E}\right)=\frac{1}{2}\log\left(\frac{E+p_{l}c}{E-p_
 %\begin{equation}
 %y=\frac{1}{2} \log\left(\frac{E+p_{l}c}{E-p_{l}c}\right)=\frac{1}{2}\log\left(\frac{\cos^2 %\theta/2+m^{2}c^{2}/4p^{2}+\cdots}{\sin^2 %\theta/2+m^{2}c^{2}/4p^{2}+\cdots}\right)\backsimeq-\log\tan\left(\frac{\theta}{2}\right)=\eta
 %\end{equation}
-$\eta$ est appellé pseudo-rapidité. On utilise donc le repère $\left(O,\vec{r},\vec{\theta},\vec{\eta}\right)$ pour décrire la géométrie de CMS.
+$\eta$ est appellé pseudo-rapidité. On utilise donc le repère $\left(O,\vec{r},\vec{\eta},\vec{\phi}\right)$ pour décrire la géométrie de CMS.
 
 \subsection{Description générale de CMS}
-Le détécteur CMS se trouve dans une caverne situé au point 5 (P5), proche du village de Cessy en France. La construction de CMS s'est effectué en surface et par tranches autonomes afin de réduire le temps et les coûts nécessaire à sa construction.
+Le détécteur CMS se trouve dans une caverne situé au point 5 (P5) du LHC, proche du village de Cessy en France. La construction de CMS s'est effectué en surface et par tranches autonomes afin de réduire le temps et les coûts nécessaires à sa construction.
 \marginpar
 {
 	\centering
@@ -54,7 +54,7 @@ Le détécteur CMS se trouve dans une caverne situé au point 5 (P5), proche du 
 	\captionof{figure}{Descente d'une tranche de CMS.}
 	\label{slice}
 }
-Chaque tranche à ensuite été descendu dans la caverne et assemblé à 100 m sous terre (cf.fig\ref{slice}).
+Chaque tranche à ensuite été descendue dans la caverne et assemblée à 100 m sous terre (cf.fig\ref{slice}).
 CMS est une détecteur cylindrique de 24m de long et de 14.6 m de diamètre pour une masse de plus de 16000 tonnes (cf.fig\ref{cmsexploded}). Il est composé d'une succession de sous-détecteurs concentriques.
 
 \begin{sidewaysfigure}
@@ -66,53 +66,51 @@ CMS est une détecteur cylindrique de 24m de long et de 14.6 m de diamètre pour
 En partant du centre vers l'extérieur :
 \begin{itemize}[label=$\bullet$]
 	\item \textbf{Le trajectographe : } C'est le sous-détecteur le plus proche du point d'intéraction. Il permet de reconstruire la trajectoires des particules chargées.
-	 \item \textbf{Le calorimètre électromagnètique (ECAL\footnote{Pour Electromagntic CALorimeter.}): Il permet de mesurer l'énergie des photons et des électrons.}
-	 \item \textbf{Le calorimètre hadronique (HCAL\footnote{Pour Hadronc CALorimeter}): Il permet de mesurer l'énergie des hadrons.}
-	 \item \textbf{L'aimant supr-conducteur : } Il produit un champ de 3.8T est permet de courber la trajectoire des particules chargées.
-	 \item \textbf{Les chambres à muons : } Elles permettent d'identifier reconstruire la trajectoire et mesurer l'énergie des muons. 
+	 \item \textbf{Le calorimètre électromagnétique (ECAL\footnote{Pour Electromagnetic CALorimeter.})}: Il permet de mesurer l'énergie des photons et des électrons.
+	 \item \textbf{Le calorimètre hadronique (HCAL\footnote{Pour Hadronic CALorimeter})}: Il permet de mesurer l'énergie des hadrons.
+	 \item \textbf{L'aimant supra-conducteur : } Il produit un champ de 3.8T et permet de courber la trajectoire des particules chargées.
+	 \item \textbf{Les chambres à muons : } Elles permettent d'identifier, reconstruire la trajectoire et mesurer l'énergie des muons. 
 \end{itemize}
-Chaque composant de CMS fera l'objet d'une description plus détaillé dans les paragraphes suivants.
+Chaque composant de CMS fera l'objet d'une description plus détaillée dans les paragraphes suivants.
 
 \section{Les sous detecteurs de CMS}
 \subsection{Le trajectographe}
-Le trajectographe de CMS (cf.fig\ref{trajectographe}) est le détecteur le plus proche du faisceau et fu point de collision.Il a pour but de reconstruire les traces des particules chargées issues des collisions grâce à des suites d'impacts enregistrés par les couches du détecteur. La trace reconstruite permet de déterminer la charge et l'impulsion de la particule associée. En effet, une particule de charge $q$ qui se déplace dans un champ magnétique subit une force donné par la formule de Lorentz. La trajectoire de la particule dans le cas d'un champ magnétique d'intensité $B$ est hélicoïdale, de rayon $R_{c}$. Il est ainsi possible dans déduire l'impulsion transverse :
+Le trajectographe de CMS (cf.fig\ref{trajectographe}) est le détecteur le plus proche du faisceau et du point de collision. Le trajectographe est composé de deux sous-détecteurs : le détecteur à pixels et le trajectographe à micro-piste de silicium. Il a pour but de reconstruire les traces des particules chargées issues des collisions grâce à des suites d'impacts enregistrés par les couches du détecteur. La trace reconstruite permet de déterminer la charge et l'impulsion de la particule associée. En effet, une particule de charge $q$ qui se déplace dans un champ magnétique subit une force donné par la formule de Lorentz. La trajectoire de la particule dans le cas d'un champ magnétique d'intensité $B$ est hélicoïdale, de rayon $R_{c}$. Il est ainsi possible dans déduire l'impulsion transverse :
 \begin{equation}
 p_{T}=qBR_{c}
 \end{equation}
-En prenant les positions selon r des hits, il est possible d'en déduire l'angle $\theta$, angle entre la trajectoire de la particule est le faisceau et donc de calculé l'impulsion totale:
+En prenant les positions selon r des hits, il est possible d'en déduire l'angle $\theta$, angle entre la trajectoire de la particule est le faisceau et donc de calculer l'impulsion totale:
 \begin{equation}
 p=\frac{p_{T}}{\sin\theta}
 \end{equation}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.80\textwidth]{CMS/tracker.png}
-	\captionof{figure}{Schéma du trajectographe de CMS. Chaque trait reprèsente un mosule du détecteur. Les lignes double correspondent à des modules mis dos à dos est produise des hits dit stéréo. Le détécteur à pistes est composé de quatre sous-détecteur: Les tonneaux interne (TIB), les tonneaux externe (TOB), les disques interne (TID) et les bouchons (TEC).}
+	\includegraphics[width=0.65\textwidth]{CMS/tracker.png}
+	\captionof{figure}{Schéma du trajectographe de CMS. Chaque trait représente un module du détecteur. Les lignes doubles correspondent à des modules mis dos à dos produisant des hits dit stéréo. Le détécteur à pistes est composé de quatre sous-détecteurs : Les tonneaux internes (TIB), les tonneaux externes (TOB), les disques interne (TID) et les bouchons (TEC).}
 	\label{trajectographe}
 \end{figure}
 
-Le trajectographe est composé de deux sous-détecteurs : le détecteur à pixels et le trajectographe à micro-piste de silicium.
 \subsubsection{Le détecteur à pixels}
-Le détecteur à pixels de CMS à récemment était remplacé afin de garder un tracking performant à des luminositées au dessus de $2\times10{34}cm^{-2}s^{-1}$ et avec un pile-up de plus de $50$. Ce remplacement à eu lieu du 28 février au 7 mars durant l'arrêt technique de hivernal prolongé (EYETS). Le nouveau détecteur à pixels se compose d'un tonneaux constitué de quatre couche de détection (BPIX) à des distances du faisceau $r=3.0$cm,6.8cm,10.2cm et 16cm et d'une longueur de 548.8mm et de trois bouchons (FPIX) situé à $\pm$29.1cm,$\pm$39.6cm et $\pm$51.6cm pour une couverture radial allant de 4.5 à 16.1cm . Une comparaison entre l'ancien détecteur à pixel et le nouveau est donné fig.\ref{pixel}.
+Le détecteur à pixels de CMS a récemment été remplacé afin de garder une trajectographie performante à des luminosités au dessus de $2\times10^{34}cm^{-2}s^{-1}$ et avec un empilement de plus de $50$. Ce remplacement a eu lieu du 28 février au 7 mars 2017 durant l'arrêt technique hivernal prolongé (EYETS). Le nouveau détecteur à pixels se compose d'un tonneau constitué de quatre couches de détection (BPIX) à des distances du faisceau $r=3.0$cm, 6.8cm, 10.2cm et 16cm et d'une longueur de 548.8mm et de trois bouchons (FPIX) situé à $\pm$29.1cm,$\pm$39.6cm et $\pm$51.6cm pour une couverture radiale allant de 4.5 à 16.1cm . Une comparaison entre l'ancien détecteur à pixel et le nouveau est donné fig.\ref{pixel}.
 
 	\begin{figure}[ht!]
-	\subfloat[Ancien détecteur à pixel (bas) et nouveaux (haut)]{\includegraphics[width=.45\linewidth]{CMS/pixel.png}}
+	\subfloat[Vue oblique-transverse comparant les couche des tonneaux de l'ancien (gauche) et du nouveau détecteur]{\includegraphics[width=.45\linewidth]{CMS/pixel.png}}
 	\hfill
-	\subfloat[ Vue oblique-transverse comparant les couche des tonneaux de 'ancien (gauche) et le nouveau déecteur]{\includegraphics[width=.45\linewidth]{CMS/pixel2.png}}
+	\subfloat[Ancien détecteur à pixel (bas) et nouveaux (haut).]{\includegraphics[width=.45\linewidth]{CMS/pixel2.png}}
 	\caption{Comparaison entre le nouveau et l'ancien trajectographe à pixels.}
 	\label{pixel}
 \end{figure}
 
-L'ajout d'une quatrieme couche de détection dans le barrel assure une redondance lors de la reconnaissance de pattern et permet de réduire le fake rate lors de pile-up important. Il assure également une sécurité au cas où la couche la plus proche du point d'interaction viendrait à se déterioré plus vite que prévu.Cependant, elle augmente le budget matériel du détecteur, il a donc été nécessaire de repenser le support et les services afin d'être plus léger. 
-Un nouveau système de refroidessement au $CO2$ ainsi que la déplacement des système passif (connectique plaques d'electronique) hors d'une volume de tracking à également été effectué (cf.fig\ref{pixel2}).
+L'ajout d'une quatrième couche de détection dans le barrel assure une redondance lors de la reconnaissance de motifs et permet de réduire le taux d'erreur lors d'empilement importants. Il assure également une sécurité au cas où la couche la plus proche du point d'interaction viendrait à se détériorer plus vite que prévu. Cependant, elle augmente le budget matériel du détecteur, il a donc été nécessaire de repenser le support et les services afin d'être plus léger. Un nouveau système de refroidissement au $CO2$ ainsi que la déplacement des système passif (connectique , plaques d'électronique) hors du volume de trajectographie à également été effectué (cf.fig\ref{pixel2}).
 
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.60\textwidth]{CMS/pixel3.png}
-	\captionof{figure}{Vue explosée du nouveau détecteur à pixels. La figure montre les positions des différentes partitions FPIX et BPIX ainsi que leur cylindres contenant leur service respectifs. Les services nécessaires au détecteur (connectiques, fibre optique, convertisseur DC-DC sont situés à haut $\eta$, hors du volume de tracking.)}
+	\captionof{figure}{Vue explosée du nouveau détecteur à pixels. La figure montre les positions des différentes partitions FPIX et BPIX ainsi que leur cylindres contenant leur service respectifs. Les services nécessaires au détecteur (connectiques, fibre optique, convertisseur DC-DC sont situés à haut $\eta$, hors du volume de trajectographie.)}
 	\label{pixel2}
 \end{figure}
 
-Ce détecteur contient plus de 97 millions de pixels (79pour les BPIX et 18 pour les FPIX) mesurant $100\times150\mu m$ de section et $250\mu m$ d'épaisseur. Ces pixels sont regroupés en module (1184 pour BPIX et 672 pour FPIX) (cf.fig\ref{module}) de 66560 pixels  (8$\times$ 2 ROCs) d'une épaisseur de $75\mu m$ pour la premiere couche du BPIX et $250\mu m$ pour les reste du BPIX et FPIX.
+Ce détecteur contient plus de 97 millions de pixels (79 pour les BPIX et 18 pour les FPIX) mesurant $100\times150\mu m$ de section et $250\mu m$ d'épaisseur. Ces pixels sont regroupés en modules (1184 pour BPIX et 672 pour FPIX) (cf.fig\ref{module}) de 66560 pixels  (8$\times$ 2 ROCs) d'une épaisseur de $75\mu m$ pour la première couche du BPIX et $250\mu m$ pour les reste du BPIX et FPIX.
 
 	\begin{figure}[ht!]
 	\centering
@@ -122,35 +120,37 @@ Ce détecteur contient plus de 97 millions de pixels (79pour les BPIX et 18 pour
 	\label{module}
 \end{figure}
 \subsubsection{Le détecteur à pistes}
-Le détecteur à pistes mesure 5.5m de long pour 2.4m de diamètre pour une aire active de 198m2 et est le plus grand détecteur au silicium jamais construit.Il comporte en tout 15148 modules pour un totale de 9.3 millions de pistes lus par 76000 chips électroniques. Il peut être décomposé en quatre sous-détecteurs :
+Le détecteur à pistes mesure 5.5 m de long pour 2.4 m de diamètre pour une aire active de 198m2 et est le plus grand détecteur au silicium jamais construit. Il comporte en tout 15148 modules pour un total de 9.3 millions de pistes lues par 76000 puces électroniques. Il peut être décomposé en quatre sous-détecteurs :
 
 \begin{itemize}[label=$\bullet$]
-\item \textbf{Le tonneau interne}Le tonneau interne (TIB) (cf.fig\ref{TIB}) pour  \textit{Tracker Inner Barrel} est composé 2724 modules répartis en quatre couches. Chaque couche se compose de pistes de silicium d'une épaisseur de $320 \mu m$ avec un pas de $80$ à $120\mu m$ pour les deux premières et 2 derniere couches respectivement. Elles sont orientés parallèlement au faisceau. Les deux première couches sont composées de modules dits "stéréos" qui sont la juxstaposition de deux modules collés l'un l'autre avec un angle de $100mrad$ entre les deux. Celui permet d'avoir une résolution de $23$ à $34\mu m$ dansle plan transverse et de $230\mu m$ dans le plan longitudinale. Il s'étend entre 25 et 52 en rayon et $|z|<65cm$.
+\item \textbf{Le tonneau interne} Le tonneau interne (TIB) (cf.fig\ref{TIB}) pour  \textit{Tracker Inner Barrel} est composé 2724 modules répartis en quatre couches. Chaque couche se compose de pistes de silicium d'une épaisseur de $320 \mu m$ avec un pas de $80 \mu m$ pour les deux premières couches et de $120\mu m$ pour deux dernières. Elles sont orientées parallèlement au faisceau. Les deux premières couches sont composées de modules dits "stéréos" qui sont la juxtaposition de deux modules collés l'un l'autre avec un angle de $100mrad$ entre les deux. Ce qui permet d'avoir une résolution de $23$ à $34\mu m$ dans le plan transverse et de $230\mu m$ dans le plan longitudinal. Son rayon est compris entre 25 et 52 cm et sa longueur couvre le domaine $|z|<65cm$.
 
-\item \textbf{Les disques internes} (TID) (cf.fig\ref{TID}) pour \textit{Tracker Inner Disk} sont composés de trois disques parallèles qui vont jusqu'à $75cm<|z|<110cm$.Chaque disques est composé de trois anneaux concentriques. Les 816 modules sont composés de strips d'une épaisseur$320\mu m$ de orienté radialement pour un pas compris entre $81\mu m$ et $158\mu m$. Comme pour le TIB, les deux premier modules sont "stéréos".
+\item \textbf{Les disques internes} (TID) (cf.fig\ref{TID}) pour \textit{Tracker Inner Disk} sont composés de trois disques parallèles qui sont compris dans le domaine $75cm<|z|<110cm$. Chaque disque est composé de trois anneaux concentriques. Les 816 modules sont composés de strips d'une épaisseur de $320\mu m$ orientées radialement pour un pas compris entre $81\mu m$ et $158\mu m$. Comme pour le TIB, les deux premiers modules sont "stéréos".
 \marginpar
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/TOB_TEC.png}
-	\captionof{figure}{Différents modules utilisés pour la construction de TOB et TEC.}
+	\captionof{figure}{Différents modules utilisés pour la construction du TOB et du TEC.}
 	\label{TOB_TEC}
 }
-\item \textbf{Le tonneau externe } (TOB) (cf.fig\ref{TOB})pour \textit{Tracker Outer Barrel} enroule les TIB et TID pour couvrir un espace entre 60 et 100cm en rayon et $|z|<110cm$. Il est composé de 5208 modules (cf.fig\ref{TOB_TEC}) de pistes orientés parallement au faisceau et de pas compris entre 122 et 183 $\mu m$. Ces modules sont répartis en six couches dont les deux dernieres sont "stéréos". L'épaisseur de ces modules est de $500\mu m$   
+\item \textbf{Le tonneau externe } (TOB) (cf.fig\ref{TOB})pour \textit{Tracker Outer Barrel} entoure les TIB et TID pour couvrir un espace entre 60 et 100cm en rayon et $|z|<110cm$. Il est composé de 5208 modules (cf.fig\ref{TOB_TEC}) de pistes orientées parallèlement au faisceau et de pas compris entre 122 et 183 $\mu m$. Ces modules sont répartis en six couches dont les deux dernieres sont "stéréos". L'épaisseur de ces modules est de $500\mu m$.   
 
-\item \textbf{Les bouchons }(TEC) (cf.fig\ref{TEC}) pour \textit{Tracker End-Cap} sont composés de neuf disques chacun, composée de 4 à 7 anneaux concentriques. Il couvre 25-110cm en rayons et 120-275cm en $|z|$. Les deux premier disques ainsi que le cinquieme sont "stéréos". Les trois premier anneaux sont composés de 2512 modules (cf.fig\ref{TOB_TEC}) d'épaisser 320$\mu m$ et de pas inter-pistes compris entre 81 et 158 $\mu m$. Les quatres anneaux suivant, composés de 3888 (cf.fig\ref{TOB_TEC}) en tout d'épaisser $500\mu m$ de pas inter-strip 113-172$\mu m$
+\item \textbf{Les bouchons }(TEC) (cf.fig\ref{TEC}) pour \textit{Tracker End-Cap} sont composés de neuf disques chacun, composée de 4 à 7 anneaux concentriques. Ils couvrent 25-110 cm en rayons et 120-275 cm en $|z|$. Les deux premiers disques ainsi que le cinquième sont "stéréos". Les trois premiers anneaux sont composés de 1256 modules par bouchon (cf.fig\ref{TOB_TEC}) d'épaisseur 320$\mu m$ et de pas inter-pistes compris entre 81 et 158 $\mu m$. Les quatre anneaux suivant, sont composés de 1944 modules par bouchon (cf.fig\ref{TOB_TEC}), d'épaisseur $500\mu m$ de pas inter-strip 113-172 $\mu m$.
 \end{itemize}
+
 	\begin{figure}[ht!]
 	\centering
-	\subfloat[Photo du TIB.]{\includegraphics[width=.40\linewidth]{CMS/TIB.jpg}\label{TIB}}
-	\subfloat[Photo du TID.]{\includegraphics[width=.40\linewidth]{CMS/TID.jpg}\label{TID}}
+	\subfloat[Le TIB.]{\includegraphics[width=.40\linewidth]{CMS/TIB.jpg}\label{TIB}}
+	\subfloat[Un TID.]{\includegraphics[width=.40\linewidth]{CMS/TID.jpg}\label{TID}}
 	\\
-	\subfloat[Photo du TOB.]{\includegraphics[width=.40\linewidth]{CMS/TOB.jpg}\label{TOB}}
-	\subfloat[Photo du TEC.]{\includegraphics[width=.40\linewidth]{CMS/TEC.jpg}\label{TEC}}
+	\subfloat[Le TOB.]{\includegraphics[width=.40\linewidth]{CMS/TOB.jpg}\label{TOB}}
+	\subfloat[Un TEC.]{\includegraphics[width=.40\linewidth]{CMS/TEC.jpg}\label{TEC}}
 	\caption{Photos des différents composants du détecteur à pistes}
 \end{figure}
 
+\newpage
 \subsection{Le calorimètre électromagnétique}
-Le calorimètre électromagnètique de CMS ou (ECAL) pour \textit{Electromagnetic CALorimeter} permet de mesurer l'énergie et la direction des particules réagissant à l'interaction électromagnétique. Ce sont surtout les phtons et les électrons qui seront détectés; ils perdent surtout leurs énergies par des processus radiatifs. La distance caractéristique est donnée par la longueur de radiation $X_{0}$, dépendante du matériaux, définie comme le libre parcours moyen pour le processus de radiaction. Des photons de 100GeV perderent à peu prêt toute leurs énergie dans 20*$X_{0}$.
+Le calorimètre électromagnétique de CMS ou \textit{Electromagnetic CALorimeter} (ECAL), permet de mesurer l'énergie et la direction des particules réagissant principalement à l'interaction électromagnétique. Ce sont surtout les photons et les électrons qui seront détectés; ils perdent leur énergie par des processus radiatifs. La distance caractéristique est donnée par la longueur de radiation $X_{0}$, dépendante du matériau, définie comme le libre parcours moyen pour le processus de radiaction. Des photons de 100 GeV perdent à peu près toute leur énergie dans 20*$X_{0}$.
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.90\textwidth]{CMS/ECAL.png}
@@ -158,14 +158,14 @@ Le calorimètre électromagnètique de CMS ou (ECAL) pour \textit{Electromagneti
 	\label{ECAL}
 \end{figure}
 
-Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{crystaux}) de PbWO4 (11m3, 92tonnes)et peut se décomposé en trois sous-structures (cf.fig\ref{ECAL}) :
+Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{crystaux}) de PbWO4 ($11 m^3$, 92 tonnes)et peut se décomposer en trois sous-structures (cf.fig\ref{ECAL}) :
 \begin{itemize}[label=$\bullet$]
-	\item \textbf{Le tonneau} ou EB (cf.fig\ref{EB}) pour \textit{Electronic Barrel} contient 61200 crystaux de tungstate de plomb. Le tonneau est divisé en 36 supermodules couvrant chacun la moitié de la longueur du tonneau. Chaque super-module contient 1700 crystaux de 22*22 mm2 et de longueur 230mmm. Les crystaux sont arrangée de maniere à formée 170-$\eta$ anneaux contenant 360 crystaux chacun. Un crystal couvre environ 1$\degres$ en $\phi$. Le barrel couvre une zone en pseudorapidité de $|\eta|<1.479$. Les photodiodes à avalanches (cf.fig\ref{APD}) (APD) sont utilisées pour détecter la scintillation.
+	\item \textbf{Le tonneau} ou EB (cf.fig\ref{EB}) pour \textit{Electromagnetic Barrel} contient 61200 cristaux de tungstate de plomb. Le tonneau est divisé en 36 supermodules couvrant chacun la moitié de la longueur du tonneau. Chaque super-module contient 1700 cristaux de 22*22 mm2 et de longueur 230 mm. Les cristaux sont arrangés de manière à former 170-$\eta$ anneaux contenant 360 cristaux chacun. Un cristal couvre environ 1$\degres$ en $\phi$. Le tonneau couvre une zone en pseudorapidité de $|\eta|<1.479$. Les photodiodes à avalanche (cf.fig\ref{APD}) (APD) sont utilisées pour détecter la scintillation.
 	\marginpar
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/Crystaux.png}
-		\captionof{figure}{Photo d'un crystal de PbWO4.}
+		\captionof{figure}{Un cristal de PbWO4.}
 		\label{crystaux}
 	}
 	
@@ -173,50 +173,48 @@ Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{c
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/APD.png}
-		\captionof{figure}{Photo d'un groupe de deux APD.}
+		\captionof{figure}{Un groupe de deux APD.}
 		\label{APD}
 	}
 	\marginpar
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/dee.jpg}
-		\captionof{figure}{Photo d'un "Dee".}
+		\captionof{figure}{Un "Dee".}
 		\label{DEE}
 	}
 	\marginpar
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/20SCs.jpg}
-		\captionof{figure}{Photo du montage de 20 Super-Crystaux sur un des Dee.}
+		\captionof{figure}{Montage de 20 Super-Cristaux sur un des Dee.}
 		\label{SP}
 	}
 	\marginpar
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/VPT.png}
-		\captionof{figure}{Photo d'une VPT.}
+		\captionof{figure}{Une VPT.}
 		\label{VPT}
 	}
 	
-	\item \textbf{Les bouchons} (EE) (cf.fig\ref{EE}) pour \textit{Electronic End-cap} Sont perpendiculaire au faisceau et ferme le EB. Ils sont situés à 315cm du point d'interaction et couvre une setcion en $\eta$ allant de 1.479 à 3. Chaque bouchon se décompose en deux demi-disque appellé "Dee" (cf.fig\ref{DEE}). Chaque Dee est constitué de 3662 crystaux de 2.86*2.86cm et de longeur 220mm regroupés en matrices de 5*5 qu'on appelle Super-Crystaux (cf.fig\ref{SP}). La scintillation est detecté par des phototriode à vide (VPT) (cf.fig\ref{VPT})
-
-   Les crystaux de PbWO4 ont une grande densité ($\rho=$8.28g.cm$^{-3}$) une longueur d'interaction $X_{0}$ assez courte de 0.89cm est un petit rayon de molière ($r_{M}$=2.2cm) ainsi qu'une grande vitesse de radiation (80\% dans 25 ns). 
-	\item \textbf{L'initiateur de gerbe } (cf.fig\ref{PRESHOWER}), appellé \textit{Preshower} est placé entre le EB et le EE. Il consiste en deux couches de détecteurs de silicium de pas 1.9mm intercalé entre deux couches en plomb (2$X_{0}$ devant et 1$X_{0}$ derrière la première couche de silicium ). Il permet d'améliorer la précision de la mesure de la position de la gerbe électromagnétique et le discrimination $\gamma \pi_{0}$. Il couvre une région comprise entre 1.653<$|\eta|$<2.6
+	\item \textbf{Les bouchons} (EE) (cf.fig\ref{EE}) pour \textit{Electromagnetic End-cap} sont perpendiculaires au faisceau et ferment le EB. Ils sont situés à 315 cm du point d'interaction et couvrent une section en $\eta$ allant de 1.479 à 3. Chaque bouchon se décompose en deux demi-disques appelés "Dee" (cf.fig\ref{DEE}). Chaque Dee est constitué de 3662 cristaux de 2.86*2.86 cm et de longeur 220 mm regroupés en matrices de 5*5 qu'on appelle Super-Cristaux (cf.fig\ref{SP}). La scintillation est détecté par des phototriode à vide (VPT) (cf.fig\ref{VPT}). Les cristaux de PbWO4 ont une grande densité ($\rho=$8.28g.cm$^{-3}$), une longueur d'interaction $X_{0}$ assez courte de 0.89cm est un petit rayon de molière ($r_{M}$=2.2cm) ainsi qu'une grande vitesse de radiation (80\% dans 25 ns). 
+	\item \textbf{L'initiateur de gerbe } (cf.fig\ref{PRESHOWER}), appellé \textit{Preshower} est placé entre le EB et le EE. Il consiste en deux couches de détecteurs de silicium de pas 1.9 mm intercalées entre deux couches en plomb (2$X_{0}$ devant et 1$X_{0}$ derrière la première couche de silicium). Il permet d'améliorer la précision de la mesure de la position de la gerbe électromagnétique et l discrimination $\gamma/\pi_{0}$. Il couvre une région comprise entre 1.653<$|\eta|$<2.6.
 \end{itemize}
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Photo du EB.]{\includegraphics[width=0.8\linewidth]{CMS/EB.jpg}\label{EB}}
+	\subfloat[Le tonneau du ECAL (EB).]{\includegraphics[width=0.8\linewidth]{CMS/EB.jpg}\label{EB}}
 	\\
-	\subfloat[Photo d'un EE.]{\includegraphics[width=.40\linewidth]{CMS/EE.jpg}\label{EE}}
-	\subfloat[Photo d'un des preshower.]{\includegraphics[width=.40\linewidth]{CMS/preshower.jpg}\label{PRESHOWER}}
-	\caption{Photos des différents composants du Calorimètre électromagnètique.}
+	\subfloat[Un bouchon du ECAL (EE).]{\includegraphics[width=.40\linewidth]{CMS/EE.jpg}\label{EE}}
+	\subfloat[Un des preshower du ECAL.]{\includegraphics[width=.40\linewidth]{CMS/preshower.jpg}\label{PRESHOWER}}
+	\caption{Photos des différents composants du Calorimètre électromagnétique.}
 \end{figure}
 \subsection{Le calorimètre hadronique}
 	\marginpar
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/LAITON.jpg}
-	\captionof{figure}{Photo de douilles de la marine russe réutiliser pour la construction du HCAL.}
+	\captionof{figure}{Photo de douilles de la marine russe réutilisées pour la construction du HCAL.}
 	\label{LAITON}
 }
 	\marginpar
@@ -230,7 +228,7 @@ Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{c
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/MPPC.png}
-	\captionof{figure}{Photo d'une MPPC.}
+	\captionof{figure}{Photo d'un MPPC.}
 	\label{MPPC}
 }
 \marginpar
@@ -240,7 +238,7 @@ Le calorimètre électromagnétique est composé de 75848 cristaux (cf.fig\ref{c
 	\captionof{figure}{Photo d'une HPD.}
 	\label{HPD}
 }
-Le calorimètre hadronique de CMS ou (HCAL) pour \textit{Hadronic CALorimeter} (cf.fig\ref{HCAL}) permet de mesurer l'énergie et la direction des hadrons issus de l'hadronisation des quarks et gluons produits lors des collisions. Ce détecteur à une grande compacité spaciale et énergétique et est très compacte car il se trouve pour une grande parti entre le ECAL et l'aimant supraconducteur. Cet disposition à nécessité de maximiser la quantité d'absorbeur et de minimisé les parties actives du détecteur. L'absorbeur est constitué de laiton (cf.fig\ref{LAITON}) qui possséde une faible longeur d'interaction $\lambda_{l}$ et un faible taux de diffusion multiples. Les hadrons perde majoritairement leurs énergie par interaction nucléaire avec l'absorbeur. La plupart des hadrons sont stoppés avec 9$\lambda_{l}$. Le laiton est également non magnétique ce qui est nécessaire vu l'emplacement du calorimètre. Le matériau actif est composé de feuilles de scintillateurs fluorescents (cf.fig\ref{SCINTI}). La scintillation est ensuite récolté par des fibre optique qui décale la longueur d'onde de la lumière (WLS). Le signal est ensuite lu par des Multi-Pixel Photon Counter (MPPC) (cf.fig\ref{MPPC}) pour le sous-détecteur Hadronic Outward calorimeter et photodiodes hybrid (HPD) (cf.fig\ref{HPD}) pour les autres sous-détecteurs.
+Le calorimètre hadronique de CMS ou \textit{Hadronic CALorimeter} (HCAL) (cf.fig\ref{HCAL}) permet de mesurer l'énergie et la direction des hadrons issus de l'hadronisation des quarks et gluons produits lors des collisions. Ce détecteur à une grande compacité spatiale et énergétique et est très compact car il se trouve pour une grande partie entre le ECAL et l'aimant supraconducteur. Cette disposition a nécessité de maximiser la quantité d'absorbeur et de minimiser les parties actives du détecteur. L'absorbeur est constitué de laiton (cf.fig\ref{LAITON}) qui possède une faible longueur d'interaction $\lambda_{l}$ et un faible taux de diffusions multiples. Les hadrons perdent majoritairement leur énergie par interaction nucléaire avec l'absorbeur. La plupart des hadrons sont stoppés avec 9$\lambda_{l}$. Le laiton est également non magnétique ce qui est nécessaire vu l'emplacement du calorimètre. Le matériau actif est composé de feuilles de scintillateurs fluorescents (cf.fig\ref{SCINTI}). La scintillation est ensuite récoltée par des fibre optique qui décale la longueur d'onde de la lumière (WLS). Le signal est ensuite lu par des Multi-Pixel Photon Counter (MPPC) (cf.fig\ref{MPPC}) pour le sous-détecteur Hadronic Outward calorimeter et par des photodiodes hybrides (HPD) (cf.fig\ref{HPD}) pour les autres sous-détecteurs.
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.95\textwidth]{CMS/HCALSCHEME.png}
@@ -248,26 +246,26 @@ Le calorimètre hadronique de CMS ou (HCAL) pour \textit{Hadronic CALorimeter} (
 	\label{HCAL}
 \end{figure}
 
-Le calorimètre hadronique couvre une zone en pseudo-rapidité jusqu'à $|\eta|<5.0$. Il posséde plus de 70000 feuilles de scintillateurs. Il est composé de 4 sous-détecteurs subdividsés en tours : 
+Le calorimètre hadronique couvre une zone en pseudo-rapidité jusqu'à $|\eta|<5.0$. Il possède plus de 70000 feuilles de scintillateurs. Il est composé de 4 sous-détecteurs subdividsés en tours : 
 \begin{itemize}[label=$\bullet$]
-	\item \textbf{Le tonneau} HB pour \textit{Hadronic Barrel calorimeter} (cf.fig\ref{HB}) couvre les régions en pseudo rapidité $|\eta|<1.3$. Il est constitué de 36 quartiers couvrant 20degree en $\psi$ découpé en quatre sous secteur de 5degree en $\psi$ et 16 secteur en $\eta$. Un quartier possède 16 couches qui sont des empilements de scintillateurs de 9mm d'épaisseur pour les couches les plus externes et 3.7mm pour les autres et d'absorbeur (40 mm de fer pour la premiere couche, 50.5mm pour les de laiton pour les huits suivantes, 56.5mm de laiton pour les six suivantes et 75mm de fer pour la dernière). Les tours on une segmentation de $\Delta\eta\times\Delta\Phi=0.087\times0.087$.
-	\item \textbf{Les deux bouchons} HE pour \textit{Hadronic End-cap calorimeter} (cf.fig\ref{HE}) couvre les régions comprise entre $|\eta|>1.3$ et $|\eta|>3.0$. Une zone inclinée à 53degrée par rapport à l'axe du faisceau et ne pointant pas vers le point d'interaction est laisser libre afin de permettre le passage des cables et systèmes nécessaire au trajectographe et au calorimètre électromagnétique. Les bouchons sont segmentés en 18quartier de 20degeee en $\phi$ chacun conposé de 14 tours en $\eta$. Les tours sont des empilement de sintillateurs de 3.7mm d'épaisseur et d'une couche d'absorbeur (9mm pour la premiere couche et 7.5mm pour les suivantes). Une tour possée 19 couches de  scintillateurs en tout; les 5 tours $|\eta|<1.74$ on une segmentation de $\Delta\eta\times\Delta\Phi=0.087\times0.087$ alors que les 8 première $1.74<|\eta|<3.0$ ont des segmentations allant de $\Delta\eta\times\Delta\Phi=0.09\times0.174$ à $\Delta\eta\times\Delta\Phi=0.35\times0.174$.
-	\item \textbf{Le calorimètre externe }HO pour \textit{Hadronic Outward calorimeter} (cf.fig\ref{HO}) est placé à l'exterièeur de l'aimant supraconducteur. Il est constitué de couches de scintillateurs de 10mm d'épaisseur et couvre les régions $|\eta|<1.26$.Ce sous-détecteur permet de récupérer l'énergie des sortante du HB et assure une longueur d'intéraction de plus de 10$\lambda_{l}$. Le HO est composé de 5 anneaux de 2.536m de long selon $z$ 
-	numèrotés -2,-1,0,+1,+2 et de centre $z=-5.324,2.686,0,2.686.5.324m$ respectivement. Le premier anneaux est composé de deux couches de scienillateurs de 10mm d'épaisseur  placé en r=3.82m et 4.07m. Les autres anneaux ne posséde qu'une couche de scintillateur placé à r=4.07m. Chaque anneaux sont segmentés en 12 secteurs en $\phi$. Et chaque secteur est segmentés en 8,6et5 tuiles de scintillateurs (cf.fig\ref{SCINTI}) pour les anneaux 0,$\pm1$,$\pm2$ respectivement.
-	\item \textbf{Les calorimètres très à l'avant} HF pour \textit{Hadronic Forward calorimeter} couvre une zone en psudo-rapidité comprise entre $|\eta|>3.0$ et $|\eta|<5.0$ et $12.5<r<130cm$. Ils sont situé à une distance $|z|=11.2m$ est font 1.65m de long. Ils consiste en un absorbeur de fer qui intègre des fibres de quarks de "radiation-hard" qui assure la collection rapide de la lumière Cherenkov.La moitié de ces fibres font toute le longueur du détecteur (1.65m) alors que d'autres commence à 22cm (soit 143cm de long) du bord placé vers l'intérieur de CMS. Elles sont placé alternativement à une sistance de 5mm l'une de l'autre en $r$  avec segmentation de $\Delta\eta\times\Delta\Phi=0.175\times0.175$. Cette différences de longueur permet de séparés les cascade électromagnétique des cascades hadroniques. La lumière est ensuite collectée par des tubes photo-multiplicateur (PMT). Le HF est composé de 18 secteur de 20 degrees en $\phi$. Chaque secteur comporte 13 anneaux en $\nu$.
+	\item \textbf{Le tonneau} HB pour \textit{Hadronic Barrel calorimeter} (cf.fig\ref{HB}) couvre la région en pseudo rapidité $|\eta|<1.3$. Il est constitué de 36 quartiers couvrant 20 degrés en $\phi$ découpé en quatre sous secteurs de 5 degrés en $\phi$ et 16 sous secteurs en $\eta$. Un quartier possède 16 couches qui sont des empilements de scintillateurs de 9mm d'épaisseur pour les couches les plus externes et 3.7mm pour les autres et d'absorbeur (40 mm de fer pour la première couche, 50.5mm de laiton pour les huit suivantes, 56.5 mm de laiton pour les six suivantes et 75 mm de fer pour la dernière). Les tours ont une segmentation de $\Delta\eta\times\Delta\phi=0.087\times0.087$.
+	\item \textbf{Les deux bouchons} HE pour \textit{Hadronic End-cap calorimeter} (cf.fig\ref{HE}) couvrent les régions comprises entre $|\eta|>1.3$ et $|\eta|<3.0$. Une zone inclinée à 53 degrés par rapport à l'axe du faisceau et ne pointant pas vers le point d'interaction est laissée libre afin de permettre le passage des câbles et systèmes nécessaires au trajectographe et au calorimètre électromagnétique. Les bouchons sont segmentés en 18 quartiers de 20 degrés en $\phi$ chacun composé de 14 tours en $\eta$. Les tours sont des empilements de scintillateurs de 3.7 mm d'épaisseur et d'une couche d'absorbeur (9mm pour la premiere couche et 7.5mm pour les suivantes). Une tour possède 19 couches de  scintillateurs en tout; les 5 tours couvrant $|\eta|<1.74$ ont une segmentation de $\Delta\eta\times\Delta\phi=0.087\times0.087$ alors que les 8 couvrant $1.74<|\eta|<3.0$ ont des segmentations allant de $\Delta\eta\times\Delta\phi=0.09\times0.174$ à $\Delta\eta\times\Delta\phi=0.35\times0.174$.
+	\item \textbf{Le calorimètre externe} HO pour \textit{Hadronic Outward calorimeter} (cf.fig\ref{HO}) est placé à l'extérieur de l'aimant supraconducteur. Il est constitué de couches de scintillateurs de 10 mm d'épaisseur et couvre la région $|\eta|<1.26$. Ce sous-détecteur permet de récupérer l'énergie sortant du HB et assure une longueur d'interaction de plus de 10$\lambda_{l}$. Le HO est composé de 5 anneaux de 2.536m de long selon $z$ 
+	numérotés -2,-1,0,+1,+2 et de centre $z=-5.324, 2.686, 0, 2.686 $et$ 5.324m$ respectivement. Le premier anneau est composé de deux couches de scintillateurs de 10 mm d'épaisseur placées en r=3.82 m et 4.07 m. Les autres anneaux ne possèdent qu'une couche de scintillateur placé à r=4.07 m. Chaque anneau est segmenté en 12 secteurs en $\phi$. Et chaque secteur est segmenté en 8, 6 et 5 tuiles de scintillateurs (cf.fig\ref{SCINTI}) pour les anneaux 0, $\pm1$, $\pm2$ respectivement.
+	\item \textbf{Les calorimètres très à l'avant} HF pour \textit{Hadronic Forward calorimeter} couvrent une zone en pseudo-rapidité comprise entre $|\eta|>3.0$ et $|\eta|<5.0$ et $12.5<r<130cm$. Ils sont situés à une distance $|z|=11.2m$ et font 1.65m de long. Ils consistent en un absorbeur de fer qui intègre des fibres de quarks résistantes aux radiations qui assurent la collection rapide de la lumière Cherenkov. La moitié de ces fibres font toute la longueur du détecteur (1.65m) alors que d'autres commencent à 22 cm (soit 143 cm de long) du bord placé vers l'intérieur de CMS. Elles sont placées alternativement à une distance de 5 mm l'une de l'autre en $r$  avec segmentation de $\Delta\eta\times\Delta\phi=0.175\times0.175$. Cette différence de longueur permet de séparer les cascades électromagnétiques des cascades hadroniques. La lumière est ensuite collectée par des tubes photo-multiplicateur (PMT). Le HF est composé de 18 secteur de 20 degrés en $\phi$. Chaque secteur comporte 13 anneaux en $\eta$.
 \end{itemize}
 \begin{figure}[ht!]
 \centering
-\subfloat[Photo du HB.]{\includegraphics[width=.40\linewidth]{CMS/HB.jpg}\label{HB}}
-\subfloat[Photo d'un des HE.]{\includegraphics[width=.40\linewidth]{CMS/HE.jpg}\label{HE}}
+\subfloat[Le tonneau du HCAL (HB).]{\includegraphics[width=.40\linewidth]{CMS/HB.jpg}\label{HB}}
+\subfloat[Un bouchon du HCAL (HE).]{\includegraphics[width=.40\linewidth]{CMS/HE.jpg}\label{HE}}
 \\
-\subfloat[Photo de l'installation du HO.]{\includegraphics[width=.40\linewidth]{CMS/HO.jpg}\label{HO}}
+\subfloat[Installation du HO.]{\includegraphics[width=.40\linewidth]{CMS/HO.jpg}\label{HO}}
 %http://cms.desy.de/e53612/e155171/e155181/
-\subfloat[Photo d'un des HF.]{\includegraphics[width=.40\linewidth]{CMS/HF.jpg}\label{HF}}
+\subfloat[Un des HF du HCAL.]{\includegraphics[width=.40\linewidth]{CMS/HF.jpg}\label{HF}}
 \caption{Photos des différents composants du calorimètre hadronique.}
 \end{figure}	
 \subsection{L'aimant supraconducteur}
-L'aimant supraconducteur de CMS (cf.fig\ref{MAGNET}) est le cœur de la machine.C'est un solénoïde de 5.9m de diamètre pour 12.9m de long qui a été prévu pour créer un champ magnétique de 4T à un courant de 19.14kA. A pleine puissance, il stocke une énergie de 2.7GJ. Il est composé de 5 bobines en nobium-titane composés de 2168 spires, refroidies à une température de 4.2 K par de l'hélium liquide. Une structures de retour de champ en fer de 11500t, composée de 5 culasses(cf.fig\ref{CULASSE}) et 2 bouchons, chacun composé de 3 disques, l'entourent et servent de structures de maintient des chambres à muons. L'épaisseur totale du retour est d'environ 1.5m (l'épaisseur du troisième disque du end-cap et du premier anneaux du barrel sont de 30cm ) et les autres disques du end-cap ainsi que les deuxième et troisième anneaux du barrel font 60cm. L'épaisseur à été étudié afin d'être assez épais pour absorber les hadrons qui traverseraient les calorimètres et l'aimant tout en restant assez fin pour éviter les pertes radiatives pour les muons.
+L'aimant supraconducteur de CMS (cf.fig\ref{MAGNET}) est un solénoïde de 5.9 m de diamètre pour 12.9 m de longueur qui a été prévu pour créer un champ magnétique de 4 T à un courant de 19.14 kA. A pleine puissance, il stocke une énergie de 2.7 GJ. Il est composé de 5 bobines en nobium-titane composées de 2168 spires, refroidies à une température de 4.2 K par de l'hélium liquide. Une structure de retour de champ en fer de 11500 t, composée de 5 culasses (cf.fig\ref{CULASSE}) et 2 bouchons, chacun composé de 3 disques, l'entoure et sert de structure de maintien des chambres à muons. L'épaisseur totale du retour est d'environ 1.5 m (l'épaisseur du troisième disque des bouchons et du premier anneau du tonneau est de 30 cm) et les autres disques des bouchons ainsi que les deuxième et troisième anneaux du tonneau font 60 cm. L'épaisseur à été étudiée afin d'être suffisante pour absorber les hadrons qui traverseraient les calorimètres et l'aimant tout en restant assez fin pour éviter les pertes radiatives pour les muons.
 \marginpar
 {
 	\centering
@@ -278,31 +276,32 @@ L'aimant supraconducteur de CMS (cf.fig\ref{MAGNET}) est le cœur de la machine.
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.50\textwidth]{CMS/MAGNET.png}
-	\captionof{figure}{Schéma de l'aumant supra-conducteur de CMS.}
+	\captionof{figure}{Schéma de l'aimant supra-conducteur de CMS.}
 	\label{MAGNET}
 \end{figure}
 \newpage
-La figure \ref{CHAMP} montre une simulation par élément-finis de la valeur du champ magnétique en fonction de la position.
+La figure \ref{CHAMP} montre une simulation par éléments-finis de la valeur du champ magnétique en fonction de la position.
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.90\textwidth]{CMS/CHAMP.png}
-	\captionof{figure}{Valeur du champ magnétique (gauche) et lignes de champs (droite) selon une coupe longitudinale du détecteur CMS, prédits par la simulation. Pour une densité de flux central de 3.8T.}
+	\captionof{figure}{Valeur du champ magnétique (gauche) et lignes de champ (droite) selon une coupe longitudinale du détecteur CMS, prédits par la simulation. Pour une valeur du champ central de 3.8 T.}
 	\label{CHAMP}
 \end{figure}
 \subsection{Le spectrographe à muons}
 
-Le spectographe à muons (cf.fig\ref{CMS1},fig\ref{CMS2}) a pour but d'identifier les muons, de mesurer avec précision leur quantité de mouvement et de trigger les événements.\marginpar
+Le spectographe à muons (cf.fig\ref{CMS1},fig\ref{CMS2}) a pour but d'identifier les muons, de mesurer avec précision leur quantité de mouvement et de déclencher sur les événements contenant des muons.
+\marginpar
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/MUON.png}
-	\captionof{figure}{Quart d'une coupe dans le plan transverse du détecteur CMS montrant la trajectoire d'un muon (courbe blueu).}
+	\captionof{figure}{Quart d'une coupe dans le plan transverse du détecteur CMS montrant la trajectoire d'un muon (courbe bleue).}
 	\label{MUON}
-} Les muons ont un très grand pouvoir de pénétration. Il est donc possible d'utiliser à la fois les traces chargées laissées dans le trajectographe et dans des détecteurs placés après l'aimant pour les identifier et les reconstruire de manière précise. Une bonne résolution de la quantité de mouvement des muons et leur bonne identification est obtenue grâce au champ magnétique intense de l'aimant et du retour de champ dans la culasse qui assure une trajectoire avec une double courbure. Cette culasse doit contenir des détecteurs de grande taille afin d'augmenter la probabilité de détection; ils faut donc qu'ils soit peu onéreux et fiable. Il faut également que ces détecteurs ne soit pas atteints par d'autres particules afin d'assurer un signal propre, pour ce faire la distance depuis l'aimant jusqu'à la dernière station du spectrographe et de l'ordre de 16 longueurs de radiation, ce qui évite le bruit de fond hadronique résiduel venant du faisceau.
+} Les muons ont un très grand pouvoir de pénétration. Il est donc possible d'utiliser à la fois les traces chargées laissées dans le trajectographe et dans des détecteurs placés après l'aimant pour les identifier et les reconstruire de manière précise. Une bonne résolution de la quantité de mouvement des muons et leur bonne identification est obtenue grâce au champ magnétique intense de l'aimant et du retour de champ dans la culasse qui assure une trajectoire avec une double courbure. Cette culasse doit contenir des détecteurs de grande taille afin d'augmenter la probabilité de détection; ils faut donc qu'ils soient peu onéreux et fiables. Il faut également que ces détecteurs ne soient pas atteints par d'autres particules afin d'assurer un signal propre, pour ce faire la distance depuis l'aimant jusqu'à la dernière station du spectrographe et de l'ordre de 16 longueurs de radiation, ce qui évite le bruit de fond hadronique résiduel venant du faisceau.
 
 \begin{sidewaysfigure}
 \centering
 \includegraphics[width=0.80\textwidth]{CMS/CMSLONG.png}
-\captionof{figure}{Coupe longitudinale d'un quark de CMS.}
+\captionof{figure}{Coupe longitudinale d'un quart de CMS.}
 \label{CMS1}
 \end{sidewaysfigure}
 
@@ -310,7 +309,7 @@ Le spectographe à muons (cf.fig\ref{CMS1},fig\ref{CMS2}) a pour but d'identifie
 \begin{figure}[p]
 \centering
 \includegraphics[width=0.98\textwidth]{CMS/CMSTRANS.png}
-\captionof{figure}{Coupe transversale de CMS.}
+\captionof{figure}{Coupe transversale de la partie centrale CMS.}
 \label{CMS2}
 \end{figure}
 

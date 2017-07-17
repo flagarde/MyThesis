@@ -176,7 +176,42 @@ La figure \ref{signal} montre la forme du signal en sortie des filtres FSB pour 
 \end{figure}
 
 \subsubsection{Distriminateurs et bascules}
-Chaque sortie de FSB est connectée à un discriminateur. Les seuils des discriminateurs est globale au 64 voies de la puce et sont réglable grâce à trois convertisseur digital-analogique de 10bits (DAC). Il est donc possible de régler le seuil de manier à déclencher le discriminateur pour une charge donnée déposée sur les cellules actives du détecteur.
+Chaque sortie de FSB est connectée à un discriminateur. Les seuils des discriminateurs est globale au 64 voies de la puce et sont réglable grâce à trois convertisseur digital-analogique (DAC) de 10 bits (de 0 à 1023). Il est donc possible de régler le seuil de manier à déclencher le discriminateur pour une charge donnée déposée sur les cellules actives du détecteur.
+
+Les facteurs de conversion, qui permettent de passer de la valeur du DAC à la valeur du seuil sur la charge induite sur une cellule active, ont été déterminé à l'aide d'injections de charges. Un condensateur de 2 pF est activable par slow-control à cette effet, et permet d'injecter une charge donnée sur les 64 canaux du HARDROC. Pour chaque valeur de charge injectée, la valeur du seuil de basculement correspondant à une efficacité de détection de 50\% a été mesurée \cite{kieffer:tel-00751999}. Les courbes de ces valeurs de basculement pour chaque canaux en fonction de la charge injectée sont ensuite obtenues, pour chaque seuil. En soustrayant les piédestaux ont obtient les courbes suivantes :
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Seuil de basculement pour DAC0]{\includegraphics[width=.30\linewidth]{GLA/seuil1.png}}
+	\hfill
+	\subfloat[Seuil de basculement pour DAC1]{\includegraphics[width=.30\linewidth]{GLA/seuil2.png}}
+	\hfill
+	\subfloat[Seuil de basculement pour DAC2]{\includegraphics[width=.30\linewidth]{GLA/seuil3.png}}
+	\caption{Seuil de basculement pour seuils (DAC0, DAC1, DAC2), en fonction de la charge injectée, pour 64 canaux d'un HARDROC. La valeur du piédestal a été soustraite.}
+	\label{seuils}
+\end{figure}
+
+L'ajustement linéaire des courbes \ref{seuils} permet d'obtenir la valeur du seuil en fonction de la valeur de DAC pour chaque seuil :
+\begin{equation}
+Seuil_{i}=\frac{DAC_{i}-p_{i}}{\lambda_{i}} [pC]
+\end{equation}
+où $\lambda_{i}$ est le coefficient directeur de la droite obtenue après ajustement linéaire et $p_{i}$ est la valeur du piédestal. Les valeurs de ces paramètres pour chaque seuil sont donnés dans le tableaux suivant :
+\begin{table}[H]
+	\centering
+\begin{tabular}{|O|O|O|N}
+	\hline 
+	Seuil & $\lambda$ & Piédestal \\ 
+	\hline 
+	0& 700 & 90 \\ 
+	\hline 
+	1& 80 & 98 \\ 
+	\hline 
+	2& 16.3 & 98 \\ 
+	\hline 
+\end{tabular} 
+	\captionof{table}{Valeur des paramètres $\lambda$ et piédestaux pour les trois seuils.}
+\end{table}
+Les courbes \ref{seuils} n'étant pas linéaire sur toute la plage, nous nous avons veillé à ne pas dépasser la zone non linéaire lors de nos test en faisceau.
 
 Chaque discriminateur est relié à une bascule de type RS qui, dés lors que le discriminateur correspondant est déclenché et le signal autorisant l'acquisiton est à l'état haut, passe à l'état haut. Lors du coup d'horloge suivant, tout les 200ns, les bascules sont lues et remise à zéro. Les trois valeurs des bascules correspondant à une cellule active sont ensuite envoyé dans un encodeur qui code ces informations sur deux bits selon le tableau \ref{tg}.
 \begin{table}[H]
@@ -288,3 +323,69 @@ y(z_i)=cz_i+d
 est l'équation paramétrique d'une droite dans l'espace avec 4 paramètres $a,b,c,d$. La minimisation est effectué grâce au paquet MINUIT \cite{James:2004xla} contenu dans le framework ROOT \cite{BRUN199781}.
 Si la droite traverse la chambre étudié et si des hits sont situé à dans une region de $\pm 3 cellules*\pm 3 cellules$, $\pm 3 strips$ du point d'impact, la chambre est considéré efficace pour cette événement. Le nombre de hits dans cette région est utilisé comme estimateur de la multiplicité du détecteur.
 \end{itemize}
+
+Le fait d'avoir conçu les processeur de telle manière que la géométrie ne soit connue que dans un fichier XML possède de nombreux avantages. Cela permet notamment de pouvoir changer facilement une DIF ou une chambre du détecteur sans avoir à recompiler les processeurs, de garder une trace des géométries utilisées sous forme lisible et claire. Cela à également permis de faire fonctionner ces processeur sur une simulation du prototype du SDHCAL afin de vérifier que ces processeur donnés la bonne éfficacité alors que ni le nombres de chambres (48 pour le SDHCAL), ni le nombres d'ASU et de DIF par chambre (6 et 3 resectivement ) sont identiques à nos détecteurs placés en test en faisceaux.
+
+\subsubsection{Test des processeurs par une simulation du SDHCAL}
+Le test des processeur utilise une simulation du SDHCAL basé sur GEANT4\cite{AGOSTINELLI2003250} qui calcule les sections efficaces lors de la propagation des particules dans le détecteur. Le champ électrique entre les deux électrodes de verre des GRPC ne sont pas simulé. En revanche, les avalanches sont modélisées par un algorithme appellé SimDigital qui est en fait un processeur MARLIN disponible dans le paque MarlinReco \cite{2007Prama} de ILCSoft. Cet algorithme s'occupe également de la répartition de la charge sur les carreaux de cuivre. Une description détaillé de cet algorithme ainsi que de son paramétrage est donné dans \cite{steen:tel-01282680}.
+
+L'algorithme utilise les segments de GEANT4 créés par les particules incidentes chargés. Il arrive cependant, que plusieurs segments soient créés par GEANT4 pour une même particule incidentes dans la même couche de gaz. Ces segments pourraient chacun produire une avalanche. Afin d'éviter que cela n'arrive, les segments sont reliés entre eux.
+
+ À chaque volume de gaz correspondant à une cellule de lecture $C_{0}$, la longueur des segments contenus dans ce volume est calculé. Les segment de taille inférieur à 1$\mu m$ sont supprimé.
+ 
+ Une carte d'efficacité pour chaque ASIC est ensuite appliqué afin de tenir compte des gaz CO2 eet SF6 dont les effets ne sont pas pris en charge par GEANT4. Il est aussi possible de forcer les efficacité d'une chambre par ces cartes. Une chambre possédant une carte d'efficacité de 50\% aura donc 50\% que les segments passant par sa couche de gaz soient conservés.
+ 
+ La charge induite par chaque segment est ensuite aléatoirement choisie en utilisant une distribution de Polya:
+ \begin{eqnarray}
+ P(q)=\left[\frac{q}{\bar{q}}(1+\theta)\right]^\theta\exp^{-\left[\frac{q}{\bar{q}}(1+\theta)\right]}
+ \end{eqnarray}
+ où $\bar{q}$ est la valeur moyenne en pC et $\theta$ une paramètre libre lié ç la largeur de la distribution. Afin de tenir compte de l'angle d'incidence, la charge induite est corrigée $Q_{corr}$.
+ 
+ Lorsque deux avalanches sont très proches l'une de l'autre et se chevauchent, le signal induit n'est pas la somme des signaux de chaque avalanches. Pour simuler cette effet, lorsque deux segments sont situés à une distance inférieur à une valeur $d_{cut}$, seule le segment dont la charge induite est la plus élevée est gardé.
+ 
+ La charge induite est ensuite répartie sur la cellule $C_0$ et sur les cellules voisines se trouvant à une distance inférieur à $r_{max}$ de $C_0$. Un rapport est alors calculé pour chaque cellule :
+ \begin{equation}
+ R_i=\frac{\int_{a_i}^{b_i}\int_{c_i}^{d_i}\sum_{j=0}^{n-1}\alpha_j\exp^{\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma_j^2}}\dd x\dd y}{\int_{-r_{max}}^{+r_{max}}\int_{-r_{max}}^{+r_{max}}\sum_{j=0}^{n-1}\alpha_j\exp^{\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma_j^2}}\dd x\dd y}
+ \end{equation}
+où $a_i$, $b_i$, $c_i$ et $d_i$ sont les positions des bords de la cellule $i$, $(x_0,y_0)$ sont les coordonnées du milieu du segment, $n$, $\alpha_j$ et $\sigma_j^2$ sont des paramètres libres. Ainsi $C_0$ est ses voisins se voit ajoutés une charge induite de $R_iQ_{corr}$.
+
+Pour finir les seuils des cellules sont appliqués. Seuls les cellules possédant une charge supérieur au seuil seront considéré comme étant touchée et créent un hits.
+
+Nous avons utilisé cette simulation en simulant le passage de muons de 100 GeV dans le prototype SDHCAL dont les cartes d'efficacités des 48 chambres ont été fixé successivement de 10\% à 100\% par pas de 10\%. La figure \ref{effisimul} montre les efficacités calculées par le processeur Analysis pour les 48 chambres du SDHCAL et les 10 cartes d'efficacité.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{GLA/effisimul.jpg}
+	\captionof{figure}{Efficacité trouvé par le processeur Analysis pour les 48 chambres du SDHCAL en utilisant la simulation SimDigital. Les particules incidentes sont des muons de 100GeV et chaque couleur représente une carte d'efficacité fixé lors de la simulation.}
+	\label{effisimul}
+\end{figure}
+
+Cette figure montre bien que l'on arrive a retrouvé l'efficacité fixé dans par les cartes d'efficacités de la simulation. Une divergence semble apparaitre et augmenter jusqu'à 50\% puis diminuer. Elle est au maximum de 5\%. Elle peut s'expliquer par la manière dont les traces sont regroupés. Tous les résultats présentés dans cette thèse qui ont rapport avec des chambres instrumenté avec des HARDROC ont été réalisé avec ces processeurs.
+
+\section{Tests en faisceaux}
+De nombreux tests en faisceaux ont été réalisés lors de cette thèse, notamment afin de vérifier et de compléter les résultats obtenus lors d'un test en faisceau à DESY en Allemagne en Janvier 2012.
+\subsection{Test en faisceau à DESY}
+Un test en faisceau à DESY \cite{Haddad:2012fx} a été réalisé afin de vérifier les caractéristiques des verres de basses résistivité produit par l'université de Tsinbghua. Des chambres en verre de basse résistivité de 30*30cm2 (GRPC) (cf.fig\ref{chambre}) instrumenté par une électronique composé de HARDROC et de cellule de lecture en forme de pads (cf.fig\ref{cellule}) ont été soumis à un faisceau intense et continu d'électron d'énergie allant jusqu'à 6GeV couvrant une surface de quelques cm2. Le flux d'électrons est au maximum de 35KHz. Le mélange de gaz est composé de 93\% de TFE(C2F4), 5\% de CO2 et 2\% de SF6 (mélange ILC).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{GLA/chambre.png}
+	\captionof{figure}{Photo d'une GRPC composée de verre de basse résistivité ($\sim 10^10 \Omega .cm$).}
+	\label{chambre}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.3\textwidth]{GLA/cellules.png}
+	\captionof{figure}{Cellules de lecture de taille 1cm*1cm, une cellule est encadré en vert}
+	\label{cellule}
+\end{figure}
+
+Ce test en faisceau à montré que les verre de basse résistivité pouvait supporté un flux de particule de 9kHz/cm tout en gardant une efficacité proche de 90\% (cf.fig\ref{effiDesy}). Le point de fonctionnement à été estimé à 7.2kV donnant une efficacité de 95\% est une multiplicité de 1.4, pour un seuil de 50fC. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{GLA/effiDesy.png}
+	\captionof{figure}{Efficacité en fonction du flux de particule pour différents GRPC. La ligne orange correspond à une chambre composé de verre "Standard" dit \textit{Float Glass} de resistivité de l'ordre de $10^13 \Omega.cm$. Les autres courbes correspondent à des chambres composées de verre de basse résistivité. }
+	\label{effiDesy}
+\end{figure}
+
+Alors que dés 1kHz, les chambres de verre standard voient leur efficacités chuter autour de 20\%, les chambres construites avec des électrodes en verre de basse résistivité continues à être efficaces même après 9kHz. Leurs efficacité décroit très lentement en fonction du flux de particules.
+

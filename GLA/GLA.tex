@@ -389,3 +389,56 @@ Ce test en faisceau à montré que les verre de basse résistivité pouvait supp
 
 Alors que dés 1kHz, les chambres de verre standard voient leur efficacités chuter autour de 20\%, les chambres construites avec des électrodes en verre de basse résistivité continues à être efficaces même après 9kHz. Leurs efficacité décroit très lentement en fonction du flux de particules.
 
+\subsection{Test en faisceau au PS}
+Huit chambre GRPC ont été amené au PS en Juin 2014 dans la Zone Est ( ligne de faisceau T9 ), juste avant le début de cette thèse, afin de former un télescope (cf.fig\ref{TelescopePS}).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{GLA/TelescopePS.png}
+	\captionof{figure}{Télescope utilisé pour le test en faisceau au PS. La chambre à strips est placé en deuxième position en partant de la droite.}
+	\label{TelescopePS}
+\end{figure}
+
+Une chambre possède une électronique à strips et les sept autres une électronique à pads. La chambre à strips est de type "double gap" (cf.fig\ref{DoubleGap}) : deux GRPC de basse résistivité sont placé de chaque côté du PCB comportant les strips. 128 strip de 2mm de large et séparés de 0.5mm sont placé de chaque côté du PCB. Les strips d'un côté sont déplacé de 1mm par rapport à ceux de l'autre côté afin d'améliorer la résolution spatiale. Leur impédance est de 24 $\Omega$. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{GLA/DoubleGap.png}
+	\captionof{figure}{Schéma de la chambre "double gap" à strips.}
+	\label{DoubleGa}
+\end{figure}
+
+Deux HARDROC de chaque côté du PCB sont nécessaire pour la lecture des signaux, un des HARDROC lis les strips paires et l'autres les impaires, ceci afin d'éviter de rendre inefficace une grande partie de la chambres en cas de défaillance de l'une des puces. Pour chaque côté deux DIF sont utilisées, la première sert à récolter et enregistrer le signal, la seconde et relié à un TDC qui délivre le temps absolue de chaque hits enregistrer grâce au signal venant de la sotie OR des HARDROC (cf.fig\ref{SchemePS}).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{GLA/SchemePS.png}
+	\captionof{figure}{Schéma de la partie électronique de la chambre à strips.}
+	\label{SchemePS}
+\end{figure}
+
+Le PS fournit des faisceau permet de produit des faisceaux d'électrons, de hadrons, muons ... allant du impulsion de 1 à 15GeV/c. Le faisceau est composée de train de particules envoyé toute les 33.6s en moyenne dans la zone d'expérience. La durée d'un train de particule est environs 400ms. le flux de particules est compris entre $1$ à $2.10^{6}$ particules par train de faisceau. Dans notre cas, nous avons utiliser un faisceau de muons (cf.fig\ref{faisceauPS}). 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{GLA/FaisceauPS.png}
+	\caption{Profil du faisceau dans une chambres à pads reconstruit grâce aux traces. (l'efficacité des chambres n'est pas prise en compte).}
+	\label{faisceauPS}
+\end{figure}
+
+Un scan en tension pour toute les chambres a permis de fixer le point de fonctionnement à 7200V. Le seuil utilisé est de 0.13pC. Les résultats du scan en tension donnant l'efficacité en fonction de la tension appliquée aux bornes des électrodes pour la chambre à strip est donné figure \ref{ScanTensionPS}. Le flux de particules estimé lors de ce scan est de $3.5$kHz.cm$^{-2}$.s$^{-1}$.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\linewidth]{GLA/HVPS.png}
+	\caption{Efficacité en fonction de la haute tension appliquée pour la chambre à strips. Le flux de particules moyen est estimé à $3.5$kHz.cm$^{-2}$.s$^{-1}$}
+	\label{ScanTensionPS}
+\end{figure}
+
+Une fois le point de fonction fixé, un scan de l'efficacité en fonction du flux de particules incidentes a été réalisé. La figure \ref{ScanRatePS}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\linewidth]{GLA/RatePS.png}
+	\caption{Efficacité en fonction du flux de particules. La tension est fixé à 7200V.}
+	\label{ScanRatePS}
+\end{figure}

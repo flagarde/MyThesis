@@ -6,6 +6,7 @@
    double ymax2=pas*ymax/sqrt(12);
 //=========Macro generated from canvas: HP/HP
 //=========  (Tue Feb 16 16:52:51 2016) by ROOT version5.34/30
+    gStyle->SetPaperSize(10.,10.);
    TCanvas *HP = new TCanvas("HP", "HP",9,31,600,600);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -165,5 +166,7 @@ tex->SetNDC();
    HP->Modified();
    HP->cd();
    HP->SetSelected(HP);
+  
+   gPad->Print("hpx.tex");
    
 }

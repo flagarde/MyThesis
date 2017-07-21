@@ -406,7 +406,7 @@ De nombreux tests en faisceaux ont été réalisés lors de cette thèse, notamm
 Un test en faisceau à DESY \cite{Haddad:2012fx} a été réalisé afin de vérifier les caractéristiques des verres de basses résistivité produit par l'université de Tsinbghua. Des chambres en verre de basse résistivité de 30*30cm2 (GRPC) (cf.fig\ref{chambre}) instrumenté par une électronique composé de HARDROC et de cellule de lecture en forme de pads (cf.fig\ref{cellule}) ont été soumis à un faisceau intense et continu d'électron d'énergie allant jusqu'à 6GeV couvrant une surface de quelques cm2. Le flux d'électrons est au maximum de 35KHz. Le mélange de gaz est composé de 93\% de TFE(C2F4), 5\% de CO2 et 2\% de SF6 (mélange ILC).
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.5\textwidth]{GLA/chambre.png}
+	\includegraphics[width=0.3\textwidth]{GLA/chambre.png}
 	\captionof{figure}{Photo d'une GRPC composée de verre de basse résistivité ($\sim 10^10 \Omega .cm$).}
 	\label{chambre}
 \end{figure}
@@ -517,9 +517,16 @@ Cinqu chambres à pads ont ensuite été amenées sur la ligne H2 \cite{H2line} 
 	\label{ProfilFaisceauSPS}
 \end{figure}
 
-Un scan en tension pour toute les chambres a permis de fixer le point de fonctionnement à 6900V. Le seuil utilisé est de 0.13pC. Les résultats du scan en tension donnant l’efficacité en fonction de la tension appliquée aux bornes des électrodes pour une des chambres ainsi que la multiplicité sont donnés figure \ref{HVSPS}. Le flux de particules estimé lors de ce scan est de 120000 particule par train de faisceau de 7s.
-
 De par la structure en train du faisceau, l'efficacité de détection des muons des chambres pourrait être surrestimé de façons notable. En effet entre deux trains de faisceau, les charges accumulées dans les chambres lors du train précédent ont le temps d'être évacuées grâce au générateur haute tension. Lors des premiers instant du passage des particules du train suivant, la chambres est donc efficace et enregistre quelques événements avant de voir son efficacité chuté peu à peu. Afin d'empêcher la surestimation de l'efficacité, le processeur Trivent a été modifié afin de détecter la structure en train de faisceau dans les données (cf.fig\ref{StructureSpill}) et de supprimer les données des deux premières secondes de chaque trains de particules.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{GLA/SpillStructure.pdf}
+	\caption{Structure des trains de faisceau vu par le détecteur. Pour ce fichier, les trains durent 4.8s.}
+	\label{HVSPS}
+\end{figure}
+
+Un scan en tension pour toute les chambres a permis de fixer le point de fonctionnement à 6900V. Le seuil utilisé est de 0.13pC. Les résultats du scan en tension donnant l’efficacité en fonction de la tension appliquée aux bornes des électrodes pour une des chambres ainsi que la multiplicité sont donnés figure \ref{HVSPS}. Le flux de particules estimé lors de ce scan est de 120000 particule par train de faisceau de 7s.
 
 \begin{figure}[!ht]
 	\centering

@@ -29,7 +29,7 @@ Une des solution pour augmenter la capacité de détection des RPC est d'utilis�
 \label{tabb}
 \end{table}
 La résistivité de ces verre est 100 à 1000 fois moins importante que celle de verre standard (float glass), ce qui rend ce verre très intéressant pour la détection de particule à haut flux. La résistivité de ce matériaux se révèle également très stable même après une charge intégré de $1C/cm^2$ (cf.fig\ref{resi})
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=1\textwidth]{GLA/resi.png}
 	\captionof{figure}{Évolution du courant (courbe bleue) et de la résistivité volumique (courbe rouge) en fonction du temps d'une électrode de verre de basse résistivité soumise à une tension de 1000V pendant 32 jours.}
@@ -101,7 +101,7 @@ L'ASIC HARDROC (cf.fig \ref{hardroc}) est issue d'une collaboration entre le pô
 	\captionof{figure}{Photo du détecteur OPERA.}
 	\label{opera}
 }
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{GLA/HARDROC.png}
 	\captionof{figure}{Schéma électronique du HARDROC.}
@@ -109,7 +109,7 @@ L'ASIC HARDROC (cf.fig \ref{hardroc}) est issue d'une collaboration entre le pô
 \end{figure}
 Le HARDROC repose sur une technologie de fonderie AMS SiGe 0.5$\mu m$. La puce est ensuite insérée dans un boitier d'épaisseur 1.4mm qui comporte 160 pattes dont 64 voies. Les puces sont directement incorporées sur le PCB du détecteur appellée Active Sensor Unit (ASU), chaque HARDROC étant connecté à 64 bandes ou carreaux de cuivre sensitifs (strip et pads respectivement) selon le PCB. Dans le cas des pads, la connection des pattes et des carreaux des cuivre ont été étudiés afin d'éviter la diaphonie entre les pattes.
 Le schéma simplifié du HARDROC est donné par la figure \ref{scheme}. La partie digitale de la puce est commune aux 64 voies, alors que chacune possède sa partie analogique :
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{GLA/scheme.png}
 	\captionof{figure}{Schéma simplifié du HARDROC.}
@@ -134,7 +134,7 @@ Z_{in}=\frac{R_0+1/g_{m2}}{1+g_{m1}R_c}
 \end{equation}
 où $g_{m1}$ et $g_{m2}$ sont les transconductances des transistors $Q1$ et $Q2$ 
 
-\begin{figure}[h!]
+\begin{figure}[th!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{GLA/preampli.png}
 	\captionof{figure}{Schéma du préamplificateur.}
@@ -144,7 +144,7 @@ où $g_{m1}$ et $g_{m2}$ sont les transconductances des transistors $Q1$ et $Q2$
 \subsubsection{Miroir de courant à 8 bits}
 Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de courant de gains respectifs 1/128, 1/64, 1/32, 1/16, 1/8, 1/4, 1/2 et 1 (cf.fig \ref{miror}). La sortie est la somme des courants des mirroirs activés. Les huit miroir sont activables séparément grâce à un mot de 8 bits appellé contrôl de gain. La plage d'amplification varie donc de 0 à 1.992. La précision de ce gain est estimé à 1.5\%. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{GLA/miror.png}
 	\captionof{figure}{Schéma du miroir de courant à 8 bits.}
@@ -153,13 +153,13 @@ Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de
 
 \subsubsection{Les trois traitements de mise en forme rapide (FSB)}
 En sortie du miroir à 8bits le signal passe dans trois circuit de traitement de mise en forme placée en parallèle. Ils consistent en un filtrage des signaux fournit en entrée afin d'éviter les perturbations dans le signal en sortie du préamplificateur ainsi que d'augmenter le rapport signal sur bruit. FSB1, FSB2 (cf.fig\ref{fsb1}) contrairement à FSB0 (cf.fig\ref{fsb0}) possèdent un système de 4 miroirs de courant afin de réduire le gain en entrée et ainsi augmenter la gamme dynamique. Le filtre FB0 est dédié aux charges d'entrée allant de 10fC à quelques centaines de fC, FSB1 qui posséde 4 miroir permet de traiter des signaux allant de 100fC à plus de 1pC; quant à FSB2 il permet de traiter des signaux de 1pC à 30pC.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{GLA/FSB0.png}
 	\captionof{figure}{Schéma de FSB0.}
 	\label{fsb0}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{GLA/FSB1.png}
 	\captionof{figure}{Schéma de FSB1/2.}
@@ -168,7 +168,7 @@ En sortie du miroir à 8bits le signal passe dans trois circuit de traitement de
 Il est possible d'activer des résistance et des condensateur dans le boucle de contre réaction du filtre (cf.fig\ref{fsb1},(cf.fig\ref{fsb0})), tout comme les gain des FSB, ils sont réglable par des mots de envoyé lors de la configuration des puces au début d'un run (slow control). Une étude poussée à été réalisé lors des test pour le SDHCAL et nous avons garder les valeurs trouvée comme les plus adaptées pour le gain des miroirs ainsi que pour la configuration de la boucle de contre-réaction.
 
 La figure \ref{signal} montre la forme du signal en sortie des filtres FSB pour trois injections de charges différentes.
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{GLA/FSB1.png}
 	\captionof{figure}{Forme du signal en sortie des FSB pour des injections de charges de 100fC (bleu) , 1pC (vert) et 10pC (rouge). FSB0 à pour gain 1, FSB1 1/4 et FSB2 1/8}
@@ -267,7 +267,7 @@ La mémoire du HARDROC permet de stocker 128 événement de 160bits (cf.tab \ref
 \subsection{L'acquisition des données}
 Le HARDROC à été conçu pour être chaîné, afin de piloter de nombreuses puces avec un nombres réduits de lignes communes. L'exemple du slow control montre l'intêret de ce chainage. Afin de gérer plusieurs HARDROC, une carte électronique composée d'un Field-Programmable Gate Array (FPGA), appellée Digital InterFace (DIF) (cf.fig\ref{DIF}) à été développé en collaboration avec le Laboratoire d'Annecy de Physique des Particules (LAPP). Cet carte possède un controleur USB utilisée pour le rappatriment des données, l'envoit des informations du slow control, d'un port HDMI dont le protocole permet la synchronisation des horloges et de connecter la DIF à une carte de contrôle. Elle dispose également de plusieurs entrées/sorties LEMO qui peuvent utilisée entre autres pour injecter un signal de déclenchement externe ainsi que de remonter un signal "busy".
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.6\textwidth]{GLA/DIF.png}
 	\captionof{figure}{Photo d'une DIF.}
@@ -275,12 +275,12 @@ Le HARDROC à été conçu pour être chaîné, afin de piloter de nombreuses pu
 \end{figure}
 
 Pour commencer l'aquisition, la DIF envoie à tous les HARDROC un signal dit d'événement valide. Ceci à pour éffet de remettre à zéro leur compteur interne (BCID). Chaque événement correspondant à une cellule activé touchée est ensuite enregistré dans la mémoire du HARDROC connécté à cette cellule. Lorsque l'un d'un HARDROC à sa mémoire pleine, un signal de saturation est envoyé à la DIF par une ligne commune. On procéde alors à la lecture des mémoires des HARDROC (ReadOut). Chaque ASIC envoye le contenu de sa mémoire sur une ligne commune appellé ligne de donnée. Une ligne (Transmission ON) permet de prévenir la DIF qu'un des HARDROC procéde au transfert de ses données. Le fait de transférer les données en série améne à un temps mort maximum de
-\begin{eqnarray}
+\begin{equation}
 n\times(128*160)bits\times 200ns= n*4.09ms
-\end{eqnarray} 
+\end{equation} 
 où $n$ est le nombre de HARDROC. Une fois toutes les événements récoltés, les mémoires sont remises à zéro. Le diagramme temporelle \ref{temp} résume le cycle d'acquisition et de lecture décrit ci-dessus.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.6\textwidth]{GLA/cycle.png}
 	\captionof{figure}{Diagramme temporelle du cycle d'acquisition et de lecture.}
@@ -289,7 +289,7 @@ où $n$ est le nombre de HARDROC. Une fois toutes les événements récoltés, l
 Afin de faciliter la reconstruction et l'analyse des données, des informations additionnelles sont ajoutées au flux de données des HARDROC par la DIF. À chaque ReadOut, les données des ASICS sont encapsulées par un header et un trailer ainsi que d'autres informations telles que des counteurs. Ces DIF sont reliées par l'intermédiaire de cable HDMI à une Synchronous Data Concentrator Card \footnote{Le nombre de chambre testées a toujours été inférieur à 9 ce qui permet de ce passer de DCC et de connecter directemen les DIF des chambres à la SDCC.} \cite{Baulieu:2015pfa} qui reçoit les busy et les RAMfull des DIF et envoye de manière synchrone l'horloge et les commandes. La carte SDCC est directement reliée par USB à l'ordinateur controllant la DAQ.
 
 La chaine d'acqusisiton peu être résumé apr le schéma suivant : 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.6\textwidth]{GLA/chaine.png}
 	\captionof{figure}{Architecture de la DAQ du SDHCAL. Dans notre cas le nombres d'ASU est d'un par layer (chambre) ainsi que d'une DIF par chambre. Le nombre de chambre étant dans notre cas inférieur à 9 l'utilisation des DCC est inutiles. }
@@ -336,9 +336,9 @@ L'algorithme utilise les segments de GEANT4 créés par les particules incidente
  Une carte d'efficacité pour chaque ASIC est ensuite appliqué afin de tenir compte des gaz CO2 eet SF6 dont les effets ne sont pas pris en charge par GEANT4. Il est aussi possible de forcer les efficacité d'une chambre par ces cartes. Une chambre possédant une carte d'efficacité de 50\% aura donc 50\% que les segments passant par sa couche de gaz soient conservés.
  
  La charge induite par chaque segment est ensuite aléatoirement choisie en utilisant une distribution de Polya:
- \begin{eqnarray}
+ \begin{equation}
  P(q)=\left[\frac{q}{\bar{q}}(1+\theta)\right]^\theta\exp^{-\left[\frac{q}{\bar{q}}(1+\theta)\right]}
- \end{eqnarray}
+ \end{equation}
  où $\bar{q}$ est la valeur moyenne en pC et $\theta$ une paramètre libre lié ç la largeur de la distribution. Afin de tenir compte de l'angle d'incidence, la charge induite est corrigée $Q_{corr}$.
  
  Lorsque deux avalanches sont très proches l'une de l'autre et se chevauchent, le signal induit n'est pas la somme des signaux de chaque avalanches. Pour simuler cette effet, lorsque deux segments sont situés à une distance inférieur à une valeur $d_{cut}$, seule le segment dont la charge induite est la plus élevée est gardé.
@@ -353,26 +353,64 @@ Pour finir les seuils des cellules sont appliqués. Seuls les cellules possédan
 
 Nous avons utilisé cette simulation en simulant le passage de muons de 100 GeV dans le prototype SDHCAL dont les cartes d'efficacités des 48 chambres ont été fixé successivement de 10\% à 100\% par pas de 10\%. La figure \ref{effisimul} montre les efficacités calculées par le processeur Analysis pour les 48 chambres du SDHCAL et les 10 cartes d'efficacité.
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{GLA/effisimul.jpg}
 	\captionof{figure}{Efficacité trouvé par le processeur Analysis pour les 48 chambres du SDHCAL en utilisant la simulation SimDigital. Les particules incidentes sont des muons de 100GeV et chaque couleur représente une carte d'efficacité fixé lors de la simulation.}
 	\label{effisimul}
 \end{figure}
 
-Cette figure montre bien que l'on arrive a retrouvé l'efficacité fixé dans par les cartes d'efficacités de la simulation. Une divergence semble apparaitre et augmenter jusqu'à 50\% puis diminuer. Elle est au maximum de 5\%. Elle peut s'expliquer par la manière dont les traces sont regroupés. Tous les résultats présentés dans cette thèse qui ont rapport avec des chambres instrumenté avec des HARDROC ont été réalisé avec ces processeurs.
+Cette figure montre bien que l'on arrive a retrouvé l'efficacité fixé dans par les cartes d'efficacités de la simulation. Une divergence semble apparaitre et augmenter jusqu'à 50\% puis diminuer. Elle est au maximum de 5\%. Elle peut s'expliquer par le fait qu'une fraction des muons produit plus d'un segment dans la couche de gaz d'une chambre. En considérant le cas ou seul un ou deux segments peuvent être créés par un muons et en notant $f$ la fraction de muons donnant lieu à deux segment dans la couche de gaz et $\epsilon$ la probabilité de garder un segment dans la simulation, l'inefficacité de la chambre vaut :
+
+\begin{equation}
+(1-f)(1-\epsilon)+f(1-\epsilon)^2=1-(f+1)\epsilon+f\epsilon^2 \label{equa1}
+\end{equation}
+
+En prenant le cas des carte d'efficacité 50\%, l'inefficacité de la chambre est d'environs 45\%. Ce qui permet d'estimer le coefficient $f$ à $0.2$. La figure \ref{plotvaleur} donne le graphique de la fonction \ref{equa1} pour $f=0.2$. Le tableau \ref{tableauvaleur} donne les valeurs attendue de l'efficacité des chambres pour les valeurs des cartes d'efficacités utilisées pour la construction de la figure \ref{effisimul}. On remarque que les valeurs calculées par la formule \ref{equa1} sont très proches des valeurs calculées par les processeur MARLIN.
+
+	\begin{figure}[ht!]
+    \subfloat[Graphique des valeurs de l'efficacité attentue pour différentes valeur de la carte d'efficacité.]{\label{plotvaleur}\raisebox{-.5\height}{\begin{tikzpicture}[scale=0.80]\begin{axis}[grid=both,xlabel={Valeur de la carte d'efficacité},ylabel={Valeur de l'efficacité attendue},minor tick num=9]\addplot[mark=none,domain=0:1.0,samples=1000,color=red]{1-((1-x)*(1-0.2*x))};\end{axis}\end{tikzpicture}}}
+    \hfill
+	\subfloat[Tableau des valeurs de l'efficacité attentue pour différentes valeur de la carte d'efficacité.]{\label{tableauvaleur}\hfill\begin{tabular}{|O|O|N}
+			\hline
+            Carte d'efficacité & Valeur attendue \\
+			\hline 
+			10\% & 11,80\% \\ 
+			\hline 
+			20\% & 23,20\% \\ 
+			\hline 
+			30\% & 34,20\% \\ 
+			\hline 
+			40\% & 44,80\% \\ 
+			\hline 
+			50\% & 55,00\% \\ 
+			\hline 
+			60\% & 64,80\% \\ 
+			\hline 
+			70\% & 74,20\% \\ 
+			\hline 
+			80\% & 83,20\% \\ 
+			\hline 
+			90\% & 91,80\% \\ 
+			\hline 
+		\end{tabular}\hfill}
+	\caption{Comparaison entre la valeur attendue et la valeur mise dans la carte d'efficacité avec $f=0.2$. }
+	\label{Comparaison}
+\end{figure}
+
+ Tous les résultats présentés dans cette thèse qui ont rapport avec des chambres instrumenté avec des HARDROC ont été réalisé avec ces processeurs.
 
 \section{Tests en faisceaux}
 De nombreux tests en faisceaux ont été réalisés lors de cette thèse, notamment afin de vérifier et de compléter les résultats obtenus lors d'un test en faisceau à DESY en Allemagne en Janvier 2012.
 \subsection{Test en faisceau à DESY}
 Un test en faisceau à DESY \cite{Haddad:2012fx} a été réalisé afin de vérifier les caractéristiques des verres de basses résistivité produit par l'université de Tsinbghua. Des chambres en verre de basse résistivité de 30*30cm2 (GRPC) (cf.fig\ref{chambre}) instrumenté par une électronique composé de HARDROC et de cellule de lecture en forme de pads (cf.fig\ref{cellule}) ont été soumis à un faisceau intense et continu d'électron d'énergie allant jusqu'à 6GeV couvrant une surface de quelques cm2. Le flux d'électrons est au maximum de 35KHz. Le mélange de gaz est composé de 93\% de TFE(C2F4), 5\% de CO2 et 2\% de SF6 (mélange ILC).
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{GLA/chambre.png}
 	\captionof{figure}{Photo d'une GRPC composée de verre de basse résistivité ($\sim 10^10 \Omega .cm$).}
 	\label{chambre}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.3\textwidth]{GLA/cellules.png}
 	\captionof{figure}{Cellules de lecture de taille 1cm*1cm, une cellule est encadré en vert}
@@ -380,7 +418,8 @@ Un test en faisceau à DESY \cite{Haddad:2012fx} a été réalisé afin de véri
 \end{figure}
 
 Ce test en faisceau à montré que les verre de basse résistivité pouvait supporté un flux de particule de 9kHz/cm tout en gardant une efficacité proche de 90\% (cf.fig\ref{effiDesy}). Le point de fonctionnement à été estimé à 7.2kV donnant une efficacité de 95\% est une multiplicité de 1.4, pour un seuil de 50fC. 
-\begin{figure}[h!]
+
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{GLA/effiDesy.png}
 	\captionof{figure}{Efficacité en fonction du flux de particule pour différents GRPC. La ligne orange correspond à une chambre composé de verre "Standard" dit \textit{Float Glass} de resistivité de l'ordre de $10^13 \Omega.cm$. Les autres courbes correspondent à des chambres composées de verre de basse résistivité. }
@@ -390,9 +429,9 @@ Ce test en faisceau à montré que les verre de basse résistivité pouvait supp
 Alors que dés 1kHz, les chambres de verre standard voient leur efficacités chuter autour de 20\%, les chambres construites avec des électrodes en verre de basse résistivité continues à être efficaces même après 9kHz. Leurs efficacité décroit très lentement en fonction du flux de particules.
 
 \subsection{Test en faisceau au PS}
-Huit chambre GRPC ont été amené au PS en Juin 2014 dans la Zone Est ( ligne de faisceau T9 ), juste avant le début de cette thèse, afin de former un télescope (cf.fig\ref{TelescopePS}).
+Huit chambre GRPC ont été amené au PS (cf.fig\ref{complexe}) en Juin 2014 dans la Zone Est ( ligne de faisceau T9 ), juste avant le début de cette thèse, afin de former un télescope (cf.fig\ref{TelescopePS}).
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.6\textwidth]{GLA/TelescopePS.png}
 	\captionof{figure}{Télescope utilisé pour le test en faisceau au PS. La chambre à strips est placé en deuxième position en partant de la droite.}
@@ -401,7 +440,7 @@ Huit chambre GRPC ont été amené au PS en Juin 2014 dans la Zone Est ( ligne d
 
 Une chambre possède une électronique à strips et les sept autres une électronique à pads. La chambre à strips est de type "double gap" (cf.fig\ref{DoubleGap}) : deux GRPC de basse résistivité sont placé de chaque côté du PCB comportant les strips. 128 strip de 2mm de large et séparés de 0.5mm sont placé de chaque côté du PCB. Les strips d'un côté sont déplacé de 1mm par rapport à ceux de l'autre côté afin d'améliorer la résolution spatiale. Leur impédance est de 24 $\Omega$. 
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{GLA/DoubleGap.png}
 	\captionof{figure}{Schéma de la chambre "double gap" à strips.}
@@ -410,14 +449,15 @@ Une chambre possède une électronique à strips et les sept autres une électro
 
 Deux HARDROC de chaque côté du PCB sont nécessaire pour la lecture des signaux, un des HARDROC lis les strips paires et l'autres les impaires, ceci afin d'éviter de rendre inefficace une grande partie de la chambres en cas de défaillance de l'une des puces. Pour chaque côté deux DIF sont utilisées, la première sert à récolter et enregistrer le signal, la seconde et relié à un TDC qui délivre le temps absolue de chaque hits enregistrer grâce au signal venant de la sotie OR des HARDROC (cf.fig\ref{SchemePS}).
 
-\begin{figure}[h!]
+\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{GLA/SchemePS.png}
 	\captionof{figure}{Schéma de la partie électronique de la chambre à strips.}
 	\label{SchemePS}
 \end{figure}
 
-Le PS fournit des faisceau permet de produit des faisceaux d'électrons, de hadrons, muons ... allant du impulsion de 1 à 15GeV/c. Le faisceau est composée de train de particules envoyé toute les 33.6s en moyenne dans la zone d'expérience. La durée d'un train de particule est environs 400ms. le flux de particules est compris entre $1$ à $2.10^{6}$ particules par train de faisceau. Dans notre cas, nous avons utiliser un faisceau de muons (cf.fig\ref{faisceauPS}). 
+Le PS fournit des faisceau permet de produit des faisceaux d'électrons, de hadrons, muons ... allant du impulsion de 1 à 15GeV/c. Le faisceau est composée de train de particules envoyé toute les 33.6s en moyenne dans la zone d'expérience. La durée d'un train de particule est environs 400ms. le flux de particules est compris entre $1$ à $2.10^{6}$ particules par train de faisceau. Dans notre cas, nous avons utiliser un faisceau de muons (cf.fig\ref{faisceauPS}).
+ 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.8\linewidth]{GLA/FaisceauPS.png}
@@ -429,7 +469,7 @@ Un scan en tension pour toute les chambres a permis de fixer le point de fonctio
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.9\linewidth]{GLA/HVPS.png}
+	\scalebox{1.4}{\input{GLA/HVPS.tex}}
 	\caption{Efficacité en fonction de la haute tension appliquée pour la chambre à strips. Le flux de particules moyen est estimé à $3.5$kHz.cm$^{-2}$.s$^{-1}$}
 	\label{ScanTensionPS}
 \end{figure}
@@ -438,7 +478,33 @@ Une fois le point de fonction fixé, un scan de l'efficacité en fonction du flu
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.9\linewidth]{GLA/RatePS.png}
+	\scalebox{1.4}{\input{GLA/RatePS.tex}}
 	\caption{Efficacité en fonction du flux de particules. La tension est fixé à 7200V.}
 	\label{ScanRatePS}
 \end{figure}
+
+La multiplicité de la chambre à strips a étét utilisé afin d'estimer sa résolution spatiale. Dans le cas ou un seul côté du PCB est touché, un estimateur de la résolution spatiale est :
+\begin{equation}
+\sigma=\frac{Nd}{\sqrt{12}}
+\end{equation}
+où N est le nombre de strips touchés dans une zone $\pm 3$ strips de l'impacte de la trace reconstruite, et d le pas des strips.
+
+Quand les deux côtés du PCB sont touchés, seul les strips se chevauchant sont considérés ce qui permet d'obtenir une estimation plus précise de la résolution spatiale :
+\begin{equation}
+\sigma=\frac{D}{\sqrt{12}}
+\end{equation} 
+où $D$ est la distance entre les deux bords les plus éloignés de l'amas constitué des strips se chevauchant.
+
+La multiplicité ainsi que la résolution spatiale calculée en fonction du flux de particules incidents est donnée figure \ref{ResoSpatialPS}. 
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{1.4}{\input{GLA/MultiplicityPS.tex}}
+	\caption{Multiplicité (axe de gauche) et résolution spatiale (axe de droite) en fonction du flux de particule au point de fonctionnement 7200V.}
+	\label{ResoSpatialPS}
+\end{figure}
+
+On peut remarqué que la résolution spatiale est amélioé au fur et à mesure de l'augmentation du flux de particules. Elle passe de 1.5 mm à environs 1.1 mm pour $\sim 10kHz$. L'amélioration de la résolution spatiale en fonction du flux de particules peut s'expliquer par un effet d'écrantage du à l'accumulation de charges sur les électrodes. Le champs électriques au bornes s'en trouve diminuer ce qui décroit le gain gu gaz et donc amène à une réduction de la multiplicité.
+
+\subsection{Test en faisceaux au SPS} 
+Cinqu chambres à pads ont ensuite été amenées sur la ligne H2 \cite{H2line} du SPS en Juin 2015. La ligne H2 permet d'obtenir des faisceaux de hadrons, électrons ou muons d'énergies entre 10 et 360 GeV/c ainsi que des protons primaires de 400 GeV/c. La ligne H2 est situé dans la \textit{North Area} (cf.fig\ref{complexe}).

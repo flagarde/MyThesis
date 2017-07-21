@@ -2,6 +2,7 @@ void plot()
 {
 //=========Macro generated from canvas: FigExample_800-600_2-prelim-left/FigExample_800-600_2-prelim-left
 //=========  (Thu Feb 11 12:02:16 2016) by ROOT version5.34/32
+gStyle->SetPaperSize(10.,10.);
    TCanvas *FigExample = new TCanvas("FigExample", "FigExample",51,73,800,600);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -153,4 +154,5 @@ tex->SetNDC();
    FigExample->Modified();
    FigExample->cd();
    FigExample->SetSelected(FigExample);
+   gPad->Print("hpx.tex");
 }

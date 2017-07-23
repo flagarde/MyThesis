@@ -3,7 +3,7 @@
 \ThisULCornerWallPaper{1}{\chapterillustration}
 \minitoc
 
-\lettrine[lines=4, slope=-0.5em]{D}{ans} ce chapitre,une description générale des chambres à plaques résistive (RPC) ainsi qu'une description détaillée des chambres RPC utilisées dans CMS et de leurs électroniques. Une description des mises à niveaux se rapportant à ces détecteurs, notamment dans les bouchons sera également présentée.
+\lettrine[lines=4, slope=-0.5em]{D}{ans} ce chapitre, une description générale des chambres à plaques résistives (RPC) ainsi qu'une description détaillée des chambres RPC utilisées dans CMS et de leurs électroniques. Une description des mises à niveaux se rapportant à ces détecteurs, notamment dans les bouchons sera également présentée.
 
 \section{Les chambres à plaques résistives (RPC)}
 
@@ -14,10 +14,10 @@
 	\captionof{figure}{Photo d'un des premiers tubes Geiger-Müller fabriqué en 1932 par Hans Geiger pour une utilisation en laboratoire.}
 	\label{Geiger}
 }
-Les RPC pour \textit{Resistive Plate Chambers} font partie d'une famille de détecteurs appelé détecteurs gazeux. Ces détecteurs ont joué un rôle dès le début de la Physique des Hautes Énergies dans la détection de nouvelles particules. Depuis le premier détecteur gazeux, le compteur proportionnel à un seul fil \textit{Single-wire proportional counter} inventé par Rutherford et Geiger, puis le compteur Geiger-Müller (cf.fig\ref{Geiger}) présenté en 1928, les détecteurs gazeux n'ont cessé de se perfectionner et devenir plus rapide, efficaces et permettent de couvrir de grandes surfaces de détections à des coûts très modestes.
+Les RPC pour \textit{Resistive Plate Chambers} font partie d'une famille de détecteurs appelé détecteurs gazeux. Ces détecteurs ont joué un rôle dès le début de la Physique des Hautes Énergies dans la détection de nouvelles particules. Depuis le premier détecteur gazeux, le compteur proportionnel à un seul fil \textit{Single-wire proportional counter} inventé par Rutherford et Geiger, puis le compteur Geiger-Müller (cf.fig\ref{Geiger}) présenté en 1928, les détecteurs gazeux n'ont cessé de se perfectionner et de devenir plus rapide etefficaces. Ils permettent de couvrir de grandes surfaces de détections à des coûts très modestes.
 
 \subsection{Les détecteurs gazeux}
-Les détecteurs gazeux reposent tous sur le même principe simple. Lorsqu'une particule traverse un gaz, elle l'ionise. Les ions et électrons créés lors de cette ionisation peuvent être accélérés grâce à une champ électrique. En choisissant judicieusement l'intensité du champ électrique, c'est à dire en appliquant une tension aux bornes des électrodes, les électrons peuvent gagner assez d'énergie pour ioniser le gaz à leur tour (seconde ionisation) et commencer une multiplication de charge. Le nombre de charges libérées détermine le mode de fonctionnement du détecteur. Le gaz est également un élément important du détecteur et a un rôle important sur le mode de fonctionnement de celui-ci. Le déplacement des ces charges à l'intérieur du gaz induit un déplacement de charges sur les électrodes, et crée un signal qui peut être récupéré par une électronique et donner une information sur le temps et la position de la trajectoire de la particule incidente. Ces charges peuvent donner lieu à un mode dit "streamer" voire donner lieu à la création d'étincelles entre l'anode et la cathode. La figure \ref{mult} montre le facteur d'amplification, ou le gain du gaz en fonction du voltage appliqué. 
+Les détecteurs gazeux reposent tous sur le même principe simple. Lorsqu'une particule traverse un gaz, elle l'ionise. Les ions et électrons créés lors de cette ionisation peuvent être accélérés grâce à un champ électrique. En choisissant judicieusement l'intensité du champ électrique, c'est à dire en appliquant une tension aux bornes des électrodes, les électrons peuvent gagner assez d'énergie pour ioniser le gaz à leur tour (seconde ionisation) et commencer une multiplication de charge. Le nombre de charges libérées détermine le mode de fonctionnement du détecteur. Le gaz est également un élément important du détecteur et a un rôle important sur le mode de fonctionnement de celui-ci. Le déplacement des charges à l'intérieur du gaz induit un déplacement de charges sur les électrodes, et crée un signal qui peut être récupéré par une électronique et donner une information sur le temps et la position de la trajectoire de la particule incidente. Ces charges peuvent donner lieu à un mode dit "streamer" voire donner lieu à la création d'étincelles entre l'anode et la cathode. La figure \ref{mult} montre le facteur d'amplification, ou le gain du gaz en fonction du voltage appliqué. 
 
 \begin{figure}[h!]
 	\centering
@@ -29,11 +29,11 @@ Les détecteurs gazeux reposent tous sur le même principe simple. Lorsqu'une pa
 Six régions peuvent être définies :
 
 \begin{itemize}
-	\item \textbf{I} Les paires d'électrons-ions primaires se recombinent avant d'avoir le temps de produire une seconde ionisation.
+	\item \textbf{I} Les paires d'électrons-ions primaires se recombinent avant d'avoir été toutes récoltées.
 	\item \textbf{II} Les charges dues à l'ionisation primaire sont entièrement récoltées sur les électrodes. Le facteur d'amplification reste constant même si le voltage est augmenté.
 	\item \textbf{III} Les charges produites par l'avalanche sont proportionnelles aux charges produites lors de la première ionisation. Les charges collectées augmentent fortement avec la tension appliquée.
 	\item \textbf{IV} Cette région est la limite de proportionnalité, l'avalanche se transforme en streamer, un plasma d'ions et d'électrons.
-	\item \textbf{V} Les streamers connectent les électrodes et produisent des étincelles visible. Les compteurs Geiger-Müller et les chambres à étincelles fonctionnent dans ce mode.
+	\item \textbf{V} Les streamers connectent les électrodes et produisent des étincelles visibles. Les compteurs Geiger-Müller et les chambres à étincelles fonctionnent dans ce mode.
 	\item \textbf{VI} Des décharges électrique se produisent même sans le passage de particules pour ioniser le gaz. Ce mode peut détruire le détecteur.
 \end{itemize}
 
@@ -41,17 +41,17 @@ Les détecteurs gazeux à fils ont une résolution temporelle de l'ordre de la c
 
 En utilisant un champ électrique uniforme et important, une meilleure résolution temporelle est atteignable.
 
-Le premier détecteur gazeux utilisant cette méthode est le compteur à étincelle "Spark Counter" développé dans les années 1948 , un détecteur qui présente une géométrie plane. Il est généralement constitué de deux électrodes métalliques entre lesquelles est présent un gaz. Le passage d'une particule ionise ce gaz et crée une avalanche qui rentre à un certain moment en mode streamer. Un plasma se crée entre les deux électrodes, les électrodes se déchargent et amènent à la création d'une étincelle. Ce type de détecteur présente un signal qui ne nécessite pas d'amplification, cependant le temps nécessaire à le recharge des electrodes est de l'ordre de quelques millisecondes. De plus la surface du détecteur ne doit pas être trop grande (~cm2) afin de ne pas détruire les électrodes lors des décharges.
+Le premier détecteur gazeux utilisant cette méthode est le compteur à étincelle "Spark Counter" développé dans les années 1948 , un détecteur qui présente une géométrie plane. Il est généralement constitué de deux électrodes métalliques entre lesquelles est présent un gaz. Le passage d'une particule ionise ce gaz et crée une avalanche qui rentre à un certain moment en mode streamer. Un plasma se crée entre les deux électrodes, les électrodes se déchargent et amènent à la création d'une étincelle. Ce type de détecteur présente un signal qui ne nécessite pas d'amplification, cependant le temps nécessaire à la recharge des électrodes est de l'ordre de quelques millisecondes. De plus la surface du détecteur ne doit pas être trop grande ($\sim 10$cm2) afin de ne pas détruire les électrodes lors des décharges.
 
-Afin de résoudre ces problèmes, les électrodes métalliques peuvent être remplacées par des plaques de matériaux de haute résistivité ($10^{9}$ à $10^{10}$ohms). Ceci permet de limiter l'aire de décharge des électrodes autour du signal ainsi qu'une mélange de gaz absorbant les photons afin d'éviter le mode streamer. Ce qui permet le fonctionnement du détecteur à des flux de particules plus important. Le champs électrique baissant localement du fait de la recharge plus lente des électrodes le développement d'avalanches successives au même endroit est limité tout en laissant le détecteur opérationnel hors de cette zone.
+Afin de résoudre ces problèmes, les électrodes métalliques peuvent être remplacées par des plaques de matériaux de haute résistivité ($10^{9}$ à $10^{10}$\si{\ohm}) afin de limiter l'aire de décharge des électrodes autour du signal. Un mélange de gaz absorbant les photons permet d'éviter le mode streamer. Ce qui permet le fonctionnement du détecteur à des flux de particules plus important. Le champs électrique baissant localement du fait de la recharge plus lente des électrodes, le développement d'avalanches successives au même endroit est limité tout en laissant le détecteur opérationnel hors de cette zone.
 
 \subsubsection{Naissance des RPC}
-En 1981 R.Santonico et R.Cardarelli développent les Resistive Plate Chamber (RPC). Ce détecteur utilise un matériau peu coûteux est très utilisé de haute résistivité (~$10^{10}$ohms), le High Pressure Laminate (HPL) fait de melamine ou résines phénol-formaldéhyde (Bakélite). Le temps de décharge d'une électrode d'une telle résistivité recevant une charge $Q_{0}$ est donné par :
+En 1981 R.Santonico et R.Cardarelli développent les Resistive Plate Chamber (RPC). Ce détecteur utilise un matériau peu coûteux, très utilisé et de haute résistivité (~$10^{10}$ohms), le High Pressure Laminate (HPL) fait de melamine ou résine phénol-formaldéhyde (Bakélite). Le temps de décharge d'une électrode d'une telle résistivité recevant une charge $Q_{0}$ est donné par :
 \begin{equation}
 Q(t)=Q_{0}e^{\frac{-t}{\rho\epsilon_{0}\epsilon_{r}}}=Q_{0}e^{\frac{-t}{\tau}}
 \end{equation}
-avec $\rho$ la resistivité volumique du matériau, $\epsilon_{0}$ la permittivité du vide et $\epsilon_{r}$ la permitivité relative du matériau.
-Les charges présentes sur les électrodes réduisent la haute tension appliquée et donc le champ électrique à l'endroit des charges. Le détecteur devient inefficace pour cette periode de temps $\tau$ à l'endroit du dépôt de charges tout en restant efficace ailleurs. Pour le cas de la bakélite $\rho\simeq10^{10}ohmscm$ le temps de relaxation est de l'ordre de 10ms. Grâce à l'utilisation de matériaux de haute résistivité, l'utilisation de chambres de grande taille était désormais possible.
+avec $\rho$ la resistivité volumique du matériau, $\epsilon_{0}$ la permittivité du vide et $\epsilon_{r}$ la permittivité relative du matériau.
+Les charges présentes sur les électrodes réduisent la haute tension appliquée et donc le champ électrique à l'endroit des charges. Le détecteur devient inefficace pour cette période de temps $\tau$ à l'endroit du dépôt des charges tout en restant efficace ailleurs. Pour le cas de la bakélite $\rho\simeq10^{10}ohmscm$ le temps de relaxation est de l'ordre de 10ms. Grâce à l'utilisation de matériaux de haute résistivité, l'utilisation de chambres de grande taille était désormais possible.
 
 Plusieurs configuration pour les RPC sont possibles, mais l'une des plus simples est donnée par la figure \ref{RPCscheme}.
 
@@ -62,11 +62,11 @@ Plusieurs configuration pour les RPC sont possibles, mais l'une des plus simples
 	\label{RPCscheme}
 \end{figure}
 
-Une couche de gaz est comprise entre deux plaques d'électrodes résistives. Ces plaques sont peintes avec du graphite qui est utilisé pour distribuer la haute tension sur les électrodes. L'électronique est isolée de la chambre par un isolant. L'électronique peut être placée de chaque coté de la chambre et peut être constituée de carreaux ou de lamelles etc.
+Une couche de gaz est comprise entre deux plaques d'électrodes résistives. Ces plaques sont peintes avec du graphite qui est utilisé pour distribuer la haute tension sur les électrodes. L'électronique est isolée de la chambre par un isolant fin, de type feuille de Mylar. L'électronique peut être placée de chaque coté de la chambre et peut être constituée de carreaux ou de lamelles etc.
 Depuis, ces détecteurs de construction simple et robuste ont été utilisés dans de nombreuses expériences : ATLAS, BaBar, BELLE, OPERA etc. Différentes solutions technologiques ont été développées selon les besoins des différentes expériences.
 
 \subsection{Principes de fonctionnement d'une RPC}
-Le principe d'une RPC repose sur l'ionisation d'un gaz. Lorsqu'une particule relativiste traverse le gaz d'une RPC, elle interagit surtout avec les molécules de gaz par interaction électromagnétique. La perte d'énergie moyenne par ionisation et excitation d'une particule relativiste massive ($m>m_{e}$) par des électron libre supposés au repos est donnée par la formule de Bethe-Bloch (cd.fig\ref{Bethe-Block})
+Le principe d'une RPC repose sur l'ionisation d'un gaz. Lorsqu'une particule relativiste traverse le gaz d'une RPC, elle interagit avec les molécules de gaz principalement par interaction électromagnétique. La perte d'énergie moyenne par ionisation et excitation d'une particule relativiste massive ($m>m_{e}$) due à des électrons libres supposés au repos est donnée par la formule de Bethe-Bloch (cd.fig\ref{Bethe-Block})
 \begin{equation}
 -\left<\frac{1}{\rho}\frac{\dd E}{\dd x}\right>=\frac{e^{4}}{4\pi \epsilon_{0}^{2}m_{e}c^{2}}z^{2}N_{A}\frac{Z}{A}\frac{1}{\beta^{2}}\left[\frac{1}{2}\ln\frac{2m_{e}c^{2}\beta^{2}\gamma^{2}E_{max}}{I^{2}}-\beta^{2}-\frac{\delta(\beta\gamma)}{2}\right]
 \end{equation}
@@ -88,17 +88,18 @@ avec :
 \marginpar
 {
 	\centering
-	\includegraphics[width=\marginparwidth]{RPC/Brem.png}
-	\captionof{figure}{Bremsstrahlung produit par un électron dévié par le champ électrique d'un noyau.}
-	\label{Brem}
-}
-\marginpar
-{
-	\centering
 	\includegraphics[width=\marginparwidth]{RPC/Penning.png}
 	\captionof{figure}{Ionisation Penning.}
 	\label{Penning}
 }
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/Brem.png}
+	\captionof{figure}{Bremsstrahlung produit par un électron dévié par le champ électrique d'un noyau.}
+	\label{Brem}
+}
+
 \begin{itemize}[label=$\bullet$]
 	\item $\rho$ la densité du matériau,
 	\item $e$ la charge de l'électron,
@@ -111,7 +112,7 @@ avec :
 	\item $\beta=\frac{v}{c}$ la vitesse de la particule incidente en unité de $c$,
 	\item $\gamma=\frac{1}{\sqrt{1-\beta^{2}}}$
 	\item $I$ est l'énergie d'excitation moyenne et
-	\item $E_{max}$ est l'énergie transférée maximale lors d'une collision d'une particule de masse $m$ et de quantité de mouvement $p$,
+	\item $E_{max}$ est l'énergie maximale transférée lors d'une collision d'une particule de masse $m$ et de quantité de mouvement $p$,
 	\begin{equation}
 	E_{max}=\frac{2m_{e}p^{2}}{m^2+2\gamma m_{e}m+m_{e}^2}
 	\end{equation}
@@ -124,22 +125,22 @@ avec :
 	\label{Bethe-Block}
 \end{minipagewithmarginpars}
 
-Si un atome ou une particule du gaz est ionisé par la collision inélastique de la particule incidente, des électrons sont éjectés de l'atome près du point de collision. En revanche, si l'atome n'est pas ionisé mais excité, l'énergie d'excitation est évacuée par l'émission d'un photon (cf.fig\ref{photon}), par un électron d'Auger (cf.fig\ref{Auger}) ou par ionisation Penning (cf.fig\ref{Penning}). Si ce photon a une énergie plus importante que le minimum du potentiel d'ionisation, le photon va être absorbé par effet photoélectrique et un électron va être éjecté de l'atome, sinon le photon ne sera pas détecté par les RPC.
+Si un atome ou une molécule du gaz est ionisé par la collision inélastique de la particule incidente, des électrons sont éjectés de l'atome près du point de collision. En revanche, si l'atome n'est pas ionisé mais excité, l'énergie d'excitation est évacuée par l'émission d'un photon (cf.fig\ref{photon}), par un électron Auger (cf.fig\ref{Auger}) ou par ionisation Penning (cf.fig\ref{Penning}). Si ce photon a une énergie plus importante que le minimum du potentiel d'ionisation, le photon va être absorbé par effet photoélectrique et un électron va être éjecté de l'atome, sinon le photon ne sera pas détecté par les RPC.
 
-Une particule chargée relativiste peut aussi perdre son énergie par rayonnement continu de freinage appelé \textit{Bremsstrahlung}(cf.fig\ref{Brem}) , ce processus devient prédominant si l'énergie de la particule dépasse une certaine énergie critique ($E_{\mu c}$ sur la figure \ref{Bethe-Block}).Dans ce cas, la perte d'énergie n'est pas détectée par le RPC.
+Une particule chargée relativiste peut aussi perdre son énergie par rayonnement continu de freinage appelé \textit{Bremsstrahlung}(cf.fig\ref{Brem}) , ce processus devient prédominant si l'énergie de la particule dépasse une certaine énergie critique ($E_{\mu c}$ sur la figure \ref{Bethe-Block}). Dans ce cas, la perte d'énergie n'est pas détectée par le RPC.
 
-Le RPC repose sur la perte d'énergie par ionisation et excitation. Cette perte d'énergie dépend du matériau (cf.fig \ref{mat}). Lors de l'ionisation du gaz, des amas primaires (d'électrons et ions ) sont créés le long de la trajectoire de la particule incidente. 
+Le fonctionnement d'une RPC repose sur la perte d'énergie par ionisation et excitation. Cette perte d'énergie dépend du matériau (cf.fig \ref{mat}). Lors de l'ionisation du gaz, des amas primaires (d'électrons et ions ) sont créés le long de la trajectoire de la particule incidente. 
 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.92\textwidth]{RPC/energylost.eps}
-	\captionof{figure}{Perte d'énergie moyenne dans l'hydrogène liquide, l'hélium liquide, le carbon, l'aluminium, le fer, l'étain et le plomb. Les effets radiatifs, pertinents pour les pions et muons ne sont pas inclus. Ils deviennent importants pour les muons traversant le fer $\beta\gamma\gtrsim1000$ et à plus petite quantité de mouvement pour les muons dans des absorbeurs de plus grand $Z$.\cite{Olive:2016xmw} }
+	\captionof{figure}{Perte d'énergie moyenne dans l'hydrogène liquide, l'hélium liquide, le carbone, l'aluminium, le fer, l'étain et le plomb. Les effets radiatifs, pertinents pour les pions et muons ne sont pas inclus. Ils deviennent importants pour les muons traversant le fer avec $\beta\gamma\gtrsim1000$ et à plus petite quantité de mouvement pour les muons dans des absorbeurs de plus grand $Z$.\cite{Olive:2016xmw} }
 	\label{mat}
 \end{figure}
 
 \subsection{Les modes de fonctionnement des RPC}
-Selon l'intensité du champ électrique appliqué  entre les électrodes, il est possible de choisir le mode de fonctionnement. La composition du mélange gazeux est également un élément déterminant dans le mode de fonctionnement des chambres. On distingue généralement trois modes de fonctionnement; le mode avalanche, le mode streamer et éclair (Spark).
+Selon l'intensité du champ électrique appliqué  entre les électrodes, il est possible de choisir le mode de fonctionnement des chambres. La composition du mélange gazeux est également un élément déterminant. On distingue généralement trois modes de fonctionnement; le mode avalanche, le mode streamer et éclair (Spark).
 
 \subsubsection{Le mode avalanche}
 Le mode avalanche est le premier mode de fonctionnement qui apparait lorsqu'on augmente la tension entre les électrodes. L'ionisation du gaz crée quelques paires d'ion-électrons qui sont ensuite accélérées par le champ électrique. Les électrons, qui sont beaucoup plus rapides que les ions de par leur masse plus faible vont à leur tours ioniser les molécules du gaz. Cette multiplication des charges est appelée avalanche. Ce déplacement va créer par effet capacitif un signal de l'ordre de la nanoseconde qui peut être récolté. Les charges vont ensuite atteindre les électrodes et s'y accumuler, et vont être neutralisées en quelques millisecondes grâce au courant fourni par le générateur de haute tension appliquant la différence de potentiel (cf.fig\ref{avalanche}). Le temps mort de ce mode est donc assez faible et permet donc une détection efficace des particules mêle à des flux assez elevée($\sim1kHz$), la résistivité du matériaux est déterminante pour ce temps de neutralisation des charges. Cependant, l a charge induit est faible et nécessite donc une électronique que possédant un bas seuil et donc de bas bruit.

@@ -7,7 +7,7 @@
 
 
 \section{Le verre dopé de base résistivité}
-Une des solution pour augmenter la capacité de détection des RPC est d'utilisé du verre de basse résistivité comme électrodes. Le nouveau verre dopé, développé par l'université de Tsinghua (Chine) présente une résitivité de l'ordre de $10^10ohms.cm$ et une très bonne uniformité de surface. Ce type de verre sera utilisé dans l'expérience \textit{Compressed Baryonic Matter} (CBM) \cite{Wang:2016bsx}. Certaines caractéristiques de ce verres sont répertorié dans le tableau \ref{tabb}
+Une des solution pour augmenter la capacité de détection des RPC est d'utilisé du verre de basse résistivité comme électrodes. Le nouveau verre dopé, développé par l'université de Tsinghua (Chine) présente une résitivité de l'ordre de $10^10ohms.cm$ et une très bonne uniformité de surface. Ce type de verre sera utilisé dans l'expérience \textit{Compressed Baryonic Matter} (CBM) \cite{Wang:2016bsx}. Certaines caractéristiques de ce verres sont répertorié dans le tableau \ref{tabb1}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|O|O|N}
@@ -26,7 +26,7 @@ Une des solution pour augmenter la capacité de détection des RPC est d'utilis�
 	\hline
 \end{tabular} 
 \captionof{table}{Caractéristique du verre dopé.}
-\label{tabb}
+\label{tabb1}
 \end{table}
 La résistivité de ces verre est 100 à 1000 fois moins importante que celle de verre standard (float glass), ce qui rend ce verre très intéressant pour la détection de particule à haut flux. La résistivité de ce matériaux se révèle également très stable même après une charge intégré de $1C/cm^2$ (cf.fig\ref{resi})
 \begin{figure}[ht!]
@@ -90,7 +90,7 @@ Ces détecteurs ont été instrumenté avec une électronique dite semi-digitale
 }
 
 \section{Électronique "semi-digitale"}
-Le calorimètre SDHCAL a nécessité la création d'un système électronique digital à plusieurs seuils, ceci afin de réduire à la fois l'énergie thermique dissipée et la quantité de donnée. La conversion en signal digital est assuré par un \textit{Application-specific integrated circuit} (ASIC) développé spécialement pour cet occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
+Le SDHCAL est un prototype de calorimètre ultra-granulaire pour le \textit{Particles Flow Algorithm} (PFA). La taille des cellules de lecture de 1$cm^2$, la balance entre la saturation de électronique et le volume de donnée à traiter à amener à opter pour une lecture à trois seuils (2 bits). Pour ne pas introduire d'inhomogénéités, voire de zones mortes dues au système de refroidissement, il a été décidé de ne pas en utiliser. Pour cela, la puissance consommée par l'\textit{Application-specific integrated circuit} (ASIC) est donc la chaleur à dissipée sont réduites par l'emploi d'une alimentation intermittente dite pulsée, permettant de n'allumer l'ASIC que lorsque des données sont à enregistrer. Ce prototype utilise un type d'ASIC développé spécialement pour cet occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
 
 \subsection{La puce de lecture HARDROC}
 L'ASIC HARDROC (cf.fig \ref{hardroc}) est issue d'une collaboration entre le pôle de microélectronique Omega du Laboratoire de L'Accélérateur Linéaire (LAL) d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basé celle appellée OPERAROC qui est utilisée dans l'expérience Oscillation Project with Emulsion-tRacking Apparatus (OPERA) (cf.fig \ref{opera}).
@@ -510,6 +510,7 @@ On peut remarqué que la résolution spatiale est amélioé au fur et à mesure 
 Cinqu chambres à pads ont ensuite été amenées sur la ligne H2 \cite{H2line} du SPS en Juin 2015. La ligne H2 permet d'obtenir des faisceaux de hadrons, électrons ou muons d'énergies entre 10 et 360 GeV/c ainsi que des protons primaires de 400 GeV/c. La ligne H2 est situé dans la \textit{North Area} (cf.fig\ref{complexe}). Tout comme le PS, le faisceau du SPS est composé de trains de particules envoyé toutes les 14s à 48s dans la zone d’expérience selon la disponibilité du SPS et de la nécessité de réinjecté du faisceau dans le LHC. La durée d’un train de particule est compris entre 4.8s à 9.6s. L'intensité du faisceau peut aller jusqu'à $\sim 2.10^{8}$ particules par train. Dans notre cas un faisceau de muons (et quelques pions) durant environ 7s a été utilisé (cf.fig\ref{ProfilFaisceauSPS}).
 
 \begin{figure}[ht!]
+	\centering
 	\subfloat{\includegraphics[width=.45\linewidth]{GLA/FaisceauSPS1.png}}
 	\hfill
 	\subfloat{\includegraphics[width=.45\linewidth]{GLA/FaisceauSPS2.png}}
@@ -523,14 +524,72 @@ De par la structure en train du faisceau, l'efficacité de détection des muons 
 	\centering
 	\includegraphics[width=0.9\textwidth]{GLA/SpillStructure.pdf}
 	\caption{Structure des trains de faisceau vu par le détecteur. Pour ce fichier, les trains durent 4.8s.}
-	\label{HVSPS}
+	\label{StructureSpill}
 \end{figure}
 
-Un scan en tension pour toute les chambres a permis de fixer le point de fonctionnement à 6900V. Le seuil utilisé est de 0.13pC. Les résultats du scan en tension donnant l’efficacité en fonction de la tension appliquée aux bornes des électrodes pour une des chambres ainsi que la multiplicité sont donnés figure \ref{HVSPS}. Le flux de particules estimé lors de ce scan est de 120000 particule par train de faisceau de 7s.
+Un scan en tension pour toute les chambres a d'abord été effectué afin de fixer le point de fonctionnement. Le seuil utilisé est de 0.13pC. Les résultats du scan en tension donnant l’efficacité en fonction de la tension appliquée aux bornes des électrodes pour une des chambres ainsi que la multiplicité sont donnés figure \ref{HVSPS}. Le flux de particules estimé lors de ce scan est de 120000 particule par train de faisceau de 7s.
 
 \begin{figure}[!ht]
 	\centering
 	\scalebox{1.4}{\input{GLA/HVSPS.tex}}
-	\caption{Multiplicité (axe de gauche) et résolution spatiale (axe de droite) en fonction du flux de particule au point de fonctionnement 7200V.}
+	\caption{Efficacité (axe de gauche) et multiplicité (axe de droite) en fonction de la haute tension appliquée.}
 	\label{HVSPS}
 \end{figure}
+
+On remarque que le plateau est atteint vers 6.7kV et que les chambres pour cette tension ont une multiplicitè assez faible $2.2$ hits. 
+
+Une étude de l'éfficacité et de la multiplicité en fonction du flux de muons à également était réalisé. Le faisceau présente un profile Gaussien de $\sigma_{x}=\sim 1.4cm$ et $\sigma_{y}=\sim 1.6cm$. Le faisceau du SPS est relativement concentré. Une zone de $6\times6cm^{2}$ contient environs 90\% des muons incidents.
+
+La figure \ref{RateSPS} (\ref{MultiplictySPS}) montre l'évolution de l'efficacité (la multiplicité) en fonction du flux de particules moyenne pour les cinq chambres du télescope.
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{1.4}{\input{GLA/RateSPS.tex}}
+	\caption{Efficacité en fonction du flux de particules moyen estimé. Les RPC de basse resistivité sont en bleue et la chambre en verre "standard" est en rouge.}
+	\label{RateSPS}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{1.4}{\input{GLA/MultiplicitySPS.tex}}
+	\caption{Multiplicité en fonction du flux de particules moyen estimé. Les RPC de basse resistivité sont en bleue et la chambre en verre "standard" est en rouge.}
+	\label{MultiplictySPS}
+\end{figure}
+
+Comme prévu les cinq chambre ont une efficacité proche de 90\% à bas flux de particules. Cependant l'efficacité de  chambre en verre "standard" chute brutalement à mesure que le flux augmente est atteint $\sim $40\% à partir de 0.1kHz, en accord avec les données récoltés à DESY. Quant aux chambres en verre de basse résistivité, elles garde une efficacité supérieur à 70\% dans tous les cas, même à plus de 7kHz. Une des chambres de basses résistivité semble cependant posséder une efficacité beaucoup plus faible que les trois autres. Cet baisse d'efficacité peut s'expliquer d'une part par un nombre de canaux morts dont l'effet n'a pas été pris en compte lors du calcul de l'efficacité. De plus, un verre de plus haute résistivité est sûrement la cause de cet effet. Mise à part cette chambre, les résultats présentés si dessus sont en accord avec ceux de DESY.
+
+\section {Tests au Gamma Irradiation Facility (GIF++)}
+Jusqu'à présent nous avons effectué des tests en faisceaux de flux assez important ($\sim$ 10kHz). Cependant, ces faisceaux sont bien localisés et ne couvre pas toutes la surfaces des chambres. Des flux de particules similaires sur toutes la surface du détecteurs pourrait changer drastiquement les résultats sur l'efficacités et la multiplicité des chambres. En effet, si la surface entière des chambres est soumise à un flux de particules intenses, le nombres de charges à évacuées par la haute tension est beaucoup plus importantes, ce qui peut conduire à une accumulation de charges et à un effet d'écrantage conduisant à une baisse de l'efficacité. Afin de tester nos chambres dans des conditions plus proches de la situation à laquelle elle seront exposées, nous les avons amenées au Gamme Irradiation Facility (GIF++).
+
+\subsection{Le GIF++}
+Le GIF++ \cite{Jakel:1977147} (cf.fig\ref{GIF},cf.fig\ref{GIF2}) est une installation de 100$m^2$ installé le long de la ligne de faisceau H4 dans la \textit{North Area} du CERN (cf.fig\ref{complexe}). Il s'agit d'une installation qui permet à la fois de disposer d'un faisceau de particules ( surtout des muons jusqu'à 100GeV d'impulsion.) et d'une source de Césium 137 de 14TBq. Cette source permet de baigner la zone d'un fond de $\gamma$ 30 fois supérieur à celui de son prédécesseur, le GIF.
+
+Cet installation a été conçu afin de tester les performances et la stabilité des nouvelles technologies et des nouveaux détecteurs pour le passage du LHC au HL-LHC. L'activité de la source présente au GIF++ permet de tester les vieillissement des détecteurs et d'accumuler une dose équivalente à celle des conditions expérimentales du HL-LHC est ce dans un temps raisonnable ($\sim$ année). 
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{GLA/GIF2.png}
+	\captionof{figure}{Vue extérieur du GIF++.}
+	\label{GIF2}
+}
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Schéma de l'intérieur du Bunker du GIF++]{\includegraphics[width=.90\linewidth]{GLA/GIF1.png}}
+	\hfill
+	\subfloat[Vue panoramique de l'intérieur du bunker, (vue face au faisceau \textit{Upstream})]{\includegraphics[width=.90\linewidth]{GLA/GIF3.jpg}}
+	\caption{Le GIF++.}
+	\label{GIF}
+\end{figure}
+
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=0.5\marginparwidth]{GLA/Source.png}
+	\captionof{figure}{Vue extérieur du GIF++.}
+	\label{Source}
+}
+
+%In collaboration with the EN department, the layout of the facility has been significantly improved. Two large radiation fields (±37 degdrees horizontally and vertically) with individual radiation attenuation systems allow the simultaneously testing of a wide range of small detector prototypes, electronic components, radiation monitors and dosimeter under a strong photon flux as well as the characterization and understanding of the long-term behavior of large particle detectors. The facility is equipped with a dedicated control system, recording all relevant parameters from beam- & irradiator status to environmental conditions and gas supply. Several user infrastructures proposed in the framework of the WP8-AIDA project have been included in the design of the facility, including a common Detector Control System (DCS), radiation monitoring (RADMONs), as well as beam- and cosmic-trigger chambers.

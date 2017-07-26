@@ -651,7 +651,7 @@ Les valeurs nominales des facteurs d'atténuations ont été calculé dans le ca
 
 Un filtre de correction angulaire en acier est placé de chaque côté de l'irradateur afin de supprimé la dépendance en $\frac{1}{r^2}$ du courant de photons et de rendre celui-ci uniforme dans le plan xy. Cette correction est valable que pour les photons de 662keV. Pour les photons de plus basse énergie, créés soit par interaction avec la capsule de la source ou les collimateur de l'irradateur, la correction angulaire est beaucoup moins uniforme dans le plan xy.
 
-\subsection{Tests en faisceaux}
+\subsection{Tests en faisceaux (Août 2015)}
 À partir de Juillet 2015, le télescope (cf.fig\ref{GIFppChambers}) à été installé au GIF++ afin de reproduire des conditions de bruits de fond $\gamma$ et ainsi étudier les caractéristiques de ces chambres et le vieillisement de ces chambres sous ces conditions. Les chambres doivent être irradiées pendant plusieurs mois afin d'obtenir une charge intégré de plus de 1C, ce qui correspond à la charge accumuler pendant 10 ans au HL-LHC.
 Plusieurs période de tests en faisceaux sont aussi programmer afin de vérifier l'efficacité des chambres et ainsi vérifier la modification des caractéristique en fonction du temps.
 
@@ -684,3 +684,18 @@ Lors de ce test en faisceau, nous avons fait varié les valeurs d'atténuateur d
 	\caption{Efficacité en fonction du courant de $\gamma$ obtenu pour différente valeur d'atténuation de la source. Les effets d'écrantage dû à la présence des autres chambres placé devant n'est pas inclus.}
 	\label{ATTENUATEURGIF}
 \end{figure}
+
+\subsection{Création du Electronic LOGbook (ELOG)}
+À chaque nouvelle prise de donnée, une entrée dans le Electronic LOGbook (ELOG) \cite{ELOG} du SDHCAL, sorte de cahiers de manipulation électronique été créé. Il s'agit d'un daemon écrit en C, contenant un serveur web qui lit et écrit les entrées du cahier électronique et les affiche en format HTML. Le ELOG du SDHCAL, contenait quelques information rudimentaire (numéro du fichier de la prise de donnée, date de création.). Devant le nombre de fichiers à analyser et le nombres de paramètres à garder afin de les analyser, un ELOG plus adapté au manipulation du GIF++ à été créé. Il a été décidé de garder un ELOG plutôt que de créer une database car l'utilisation est beaucoup plus facile et conviviale (cf.fig \ref{ELOG}), et la configuration d'un cahier (logbook) repose sur la création d'un simple fichier texte (elogd.cfg) (voir \ref{elogd.cfg}). 
+ 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.98\linewidth]{GLA/ELOG2.png}
+	\caption{Cahier de manipulation (logbook) pour les prises de données au GIF++.}
+	\label{ELOG2}
+\end{figure}
+
+Le ELOG du GIF++ contient des menus déroulant et des champs de texte à remplir à chaque nouvelle prise de données. À chaque début de prise de mesure, lors de la création d'une entrée dans le ELOG, la lecture du fichier de configuration XML sur la géométrie du détecteurs permet de remplir une bonne partie des informations. Le shifter peut ensuite ajouter les informations manquantes, concernant la source, les attenuateurs, le faisceau etc. La validation d'une entrée ELOG est conditionnée au remplissage des informations les plus utiles selon les circonstances (il est par exemple obligatoire de renseigner les valeurs des attenuateurs si l'état du faisceau à été sélectionné comme étant "ON"). Cette validation des entrée dans le ELOG permet de s'assurer que la plupart des informations nécessaire à l'analyse des données est présentes. Tous ces informations sont ensuite exportable sous format XML ou CSV ce qui rend la création de programme sélectionnant les fichiers de données automatiquement en fonction du types de scan que l'on souhaite réaliser (Scan en tension, Attenuateur etc.)
+
+
+ 

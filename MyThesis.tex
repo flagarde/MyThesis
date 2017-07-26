@@ -1,5 +1,4 @@
 \documentclass[12pt,a4paper,twoside,french,openright]{book}
-
 \makeatletter
 \let\latex@include\include
 \def\include#1{\include@aux#1\@nil}
@@ -104,6 +103,8 @@
 \usepackage{siunitx}
 \usepackage[tight]{shorttoc}
 \usepackage{chemist}
+\usepackage{listing}
+
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
 \pgfplotsset{compat=newest}
 \usepgfplotslibrary{external,colormaps} 
@@ -412,6 +413,7 @@ Qui addit scienciam addit et dolorem
 \include{GLA/GLA}
 \include{ELE/ELE}
 \appendix
+\include{ELOG/ELOG}
 }
 \backmatter
 \fancyhf{} 

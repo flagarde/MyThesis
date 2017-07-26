@@ -46,7 +46,16 @@
 \cellspacebottomlimit=4pt
 \usepackage{minipage-marginpar}
 \usepackage{calc}
-\usepackage{lmodern}  
+\usepackage{siunitx}
+\sisetup{%
+	,binary-units=true
+	,locale = FR
+	,math-ohm  =\Omega
+}
+\usepackage{lmodern}
+% from your class definition
+\DeclareMathSymbol{\Omega}{\mathalpha}{letters}{"0A}
+\DeclareMathSymbol{\varOmega}{\mathalpha}{operators}{"0A} 
 \usepackage{microtype}
 \usepackage[top=2.05cm,bottom=1.1cm,left=1cm,right=5cm,marginparsep=0.50cm,marginparwidth=4.25cm]{geometry}
 \usepackage{booktabs}
@@ -100,7 +109,7 @@
 \usepackage{pgfplots}
 \usepackage{wallpaper}
 \pgfplotsset{width=10cm,compat=newest}
-\usepackage{siunitx}
+
 \usepackage[tight]{shorttoc}
 \usepackage{chemist}
 \usepackage{listing}

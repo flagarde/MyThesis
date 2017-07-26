@@ -2,42 +2,43 @@
 \renewcommand\chapterillustration{GLA/gla}
 \ThisULCornerWallPaper{1}{\chapterillustration}
 \minitoc
+\lettrine[lines=4, slope=-0.5em]{C}{e} chapitre comporte une description des plaques résistives de verre de basse résisitivité ainsi que certaines de leurs caractéristiques. Il comporte également les résultats obtenus lors des nombreuses campagnes de tests en faisceaux organisées au SPS, PS et Gamma Iradiation Facility (GIF++). Ces résultats ont fait l'objet d'une conférence lors de RPC2016 à Ghent, de plusieurs proceeding \cite{Lagarde:2016fvf}\cite{Gouzevitch:2016pcr} ainsi que de nombreux posters.
 
-\lettrine[lines=4, slope=-0.5em]{C}{e} chapitre comporte une description des plaques résistives de verre de basse résisitivité ainsi que certaines de leur caractéristiques. Il comporte également les résultats obtenus lors des nombreuses campagnes de tests en faisceaux organisé au SPS, PS et Gamma Iradiation Facility (GIF++). Ces résultats ont fait l'objet d'une conférence lors de RPC2016 à ghent, de plusieurs proceeding \cite{Lagarde:2016fvf}\cite{Gouzevitch:2016pcr} ainsi que de nombreux posters.
 
-
-\section{Le verre dopé de base résistivité}
-Une des solution pour augmenter la capacité de détection des RPC est d'utilisé du verre de basse résistivité comme électrodes. Le nouveau verre dopé, développé par l'université de Tsinghua (Chine) présente une résitivité de l'ordre de $10^10ohms.cm$ et une très bonne uniformité de surface. Ce type de verre sera utilisé dans l'expérience \textit{Compressed Baryonic Matter} (CBM) \cite{Wang:2016bsx}. Certaines caractéristiques de ce verres sont répertorié dans le tableau \ref{tabb1}
+\section{Le verre dopé de basse résistivité}
+Une des solution pour augmenter la capacité de détection des RPC est d'utiliser du verre de basse résistivité comme électrodes. Le nouveau verre dopé, développé par l'université de Tsinghua (Chine) présente une résitivité de l'ordre de \SI{e10}{\ohm.\centi\meter} et une très bonne uniformité de surface. Ce type de verre sera utilisé dans l'expérience \textit{Compressed Baryonic Matter} (CBM) \cite{Wang:2016bsx}. Certaines caractéristiques de ce verre sont répertoriées dans le tableau \ref{tabb1}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|O|O|N}
 	\hline 
-	Dimenssion maximale  &32cm$\times$30cm \\ 
+	Dimension maximale  &\SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} \\ 
 	\hline 
-	Résistivité volumique & $10^10 ohm.cm$ \\ 
+	Résistivité volumique & \SI{e10}{\ohm.\centi\meter} \\ 
 	\hline 
-	Épaisseur & 0.5mm-2mm \\ 
+	Épaisseur & \SIrange{0.5}{2}{\milli\meter}\\ 
 	\hline 
-	Uniformité de l'épaisseur & 0.02mm \\
+	Uniformité de l'épaisseur &\SI{0.02}{\milli\meter} \\
 	\hline
-	Constante diélectrique & 7.5-9.5  \\ 
+	Constante diélectrique & \SIrange{7.5}{9.5}{}  \\ 
 	\hline 
-	Rugosité & $<10nm$ \\ 
+	Rugosité & $<$\SI{10}{\nano\meter} \\ 
 	\hline
 \end{tabular} 
-\captionof{table}{Caractéristique du verre dopé.}
+\captionof{table}{Caractéristiques du verre dopé.}
 \label{tabb1}
 \end{table}
-La résistivité de ces verre est 100 à 1000 fois moins importante que celle de verre standard (float glass), ce qui rend ce verre très intéressant pour la détection de particule à haut flux. La résistivité de ce matériaux se révèle également très stable même après une charge intégré de $1C/cm^2$ (cf.fig\ref{resi})
+La résistivité de ce verre est \num{100} à \num{1000} fois moins importante que celle de verre standard (float glass), ce qui rend ce verre très intéressant pour la détection de particules à haut flux. La résistivité de ce matériau se révèle également très stable même après une charge intégrée de \SI{1}{\coulomb\per\square\centi\meter} (cf.fig\ref{resi}).
+
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=1\textwidth]{GLA/resi.png}
-	\captionof{figure}{Évolution du courant (courbe bleue) et de la résistivité volumique (courbe rouge) en fonction du temps d'une électrode de verre de basse résistivité soumise à une tension de 1000V pendant 32 jours.}
+	\includegraphics[width=0.95\textwidth]{GLA/resi.png}
+	\captionof{figure}{Évolution du courant (courbe bleue) et de la résistivité volumique (courbe rouge) en fonction du temps d'une électrode de verre de basse résistivité soumise à une tension de \SI{1000}{\volt} pendant \num{32} jours.}
 	\label{resi}
 \end{figure}
-La rugosité est excellente ce qui permet de n'appliquer aucun traitement de surface; contrairement au RPC en bakélite. Ces traitements se sont révélés problèmatique au cours des années.
 
-L'inconvénient majeur de ce matériaux est sa dimension maximale qui ne peut excéder 32cm*30cm (cf.fig\ref{verre}). En effet de par le procéder de fabrication (cf.fig\ref{cooling}) de ces verres et par leur pollisage à la main, de plus grandes dimensions sont irréalisables.
+La rugosité est excellente ce qui permet de n'appliquer aucun traitement de surface; contrairement au RPC en bakélite. Ces traitements se sont révélés problématiques au cours des années \cite{1352718}.
+
+L'inconvénient majeur de ce matériau est sa dimension maximale qui ne peut excéder \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.fig\ref{verre}). En effet, de par le procéder de fabrication (cf.fig\ref{cooling}) de ces verres et par leur polissage à la main, de plus grandes dimensions sont irréalisables.
 \marginpar
 {
 	\centering
@@ -57,16 +58,17 @@ Des détecteurs de cette dimension ont donc été construit afin d'étudier leur
 
 \section{Caractérisation des Glass Resitive Plate Chamber (GRPC)}
  
-L'étude des GRPC passe par la connaissance de trois caractéristique principales :
+L'étude des GRPC passe par la connaissance de trois caractéristiques principales :
 \begin{itemize}[label=$\bullet$]
-	\item \textbf{L'Efficacité} de détection des particules. C'est la caractéristiques principales. Elle est calculée en faisant le rapport entre le nombre de particules ayant été détectées et le nombres de particules ayant traversée le détecteur. Bien sûr, dans le cas où le signal est récolté par une électronique à seuil, la valeur de celui-ci va affecter l'efficacité de détection.
-	\item \textbf{La multiplicité} représente le nombres de cellules ou bandes touchés lorsqu'une particule traverse le détecteur. En effet, plusieurs cellules de détections peuvent être déclenchées par le courant induit par les électrons créés lors de l'avalanche. Ici aussi le seuil appliqué à l'électronique influe sur la valeur de la multiplicité. La multiplicité joue un rôle très important sur la résolution spatiale du détecteur comme on le verra par la suite.
-	\item \textbf{Le bruit électronique} qui est la fréquence de détection par l'électronique, d'un signal considéré comme non physique. Ceci peut être dû à une avalanche d'origine thermique ou radiative, par un courant dans le couche résistive etc. 
+	\item \textbf{L'Efficacité} de détection des particules. C'est la caractéristique principale. Elle est calculée en faisant le rapport entre le nombre de particules ayant été détectées et le nombre de particules ayant traversé le détecteur. Bien sûr, dans le cas où le signal est récolté par une électronique à seuil, la valeur de celui-ci va affecter l'efficacité de détection.
+	\item \textbf{La multiplicité} représente le nombre de cellules ou bandes touchées lorsqu'une particule traverse le détecteur. En effet, plusieurs cellules de détection peuvent être déclenchées par le courant induit par les électrons créés lors de l'avalanche. Ici aussi le seuil appliqué à l'électronique influe sur la valeur de la multiplicité. La multiplicité joue un rôle très important sur la résolution spatiale du détecteur comme on le verra par la suite.
+	\item \textbf{Le bruit électronique} qui est la fréquence de détection par l'électronique, d'un signal considéré comme non physique. Ceci peut être dû à une avalanche d'origine thermique ou radiative, par un courant dans la couche résistive etc. 
 \end{itemize}
 
-Un bon détecteur doit donc être proche d'une efficacité de 100\% avec une fréquence de bruit très basse. La multiplicité idéale dépend de la taille des cellules, du seuil appliqué et surtout de la résolution spatiale que l'on veut atteindre. D'autres caractèristiques du détecteurs sont imporatntes telles que la sensibilité au bruit de fond (photon et neutrons par exemple) et l'évolution des caractéristiques du détecteurs en fonction du temps, ce que l'on appelle le vieillissement du détecteurs.
+Un bon détecteur doit donc être proche d'une efficacité de 100\% avec une fréquence de bruit très basse. La multiplicité idéale dépend de la taille des cellules, du seuil appliqué et surtout de la résolution spatiale que l'on veut atteindre. D'autres caractéristiques du détecteur sont importantes telles que la sensibilité au bruit de fond (photons et neutrons par exemple) et l'évolution des caractéristiques du détecteur en fonction du temps, ce que l'on appelle le vieillissement du détecteur.
 
-Ces détecteurs ont été instrumenté avec une électronique dite semi-digitale utilisé depuis de nombreuses années aux laboratoire dans un prototype de calorimètre hadronique semi digitale (SDHCAL) (cf.fig\ref{SDHCAL}) \cite{Buridon:2016ill} pour le détecteur International Large Detector (ILD) (cf.fig\ref{ILD}); L'un des deux détecteurs de l'expérience International Linear Collider (ILC) (cf.fig\ref{ILC}).
+Ces détecteurs ont été instrumentés avec une électronique dite semi-digitale utilisée depuis de nombreuses années au laboratoire dans un prototype de calorimètre hadronique semi digital (SDHCAL) (cf.fig\ref{SDHCAL}) \cite{Buridon:2016ill} pour le détecteur International Large Detector (ILD) (cf.fig\ref{ILD}), l'un des deux détecteurs de l'expérience International Linear Collider (ILC) (cf.fig\ref{ILC}).
+
 \marginpar
 {
 	\centering
@@ -74,6 +76,7 @@ Ces détecteurs ont été instrumenté avec une électronique dite semi-digitale
 	\captionof{figure}{Photo du prototype SDHCAL construit à Lyon.}
 	\label{SDHCAL}
 }
+
 \marginpar
 {
 	\centering
@@ -81,6 +84,7 @@ Ces détecteurs ont été instrumenté avec une électronique dite semi-digitale
 	\captionof{figure}{Schéma de l'ILD.}
 	\label{ILD}
 }
+
 \marginpar
 {
 	\centering
@@ -90,10 +94,11 @@ Ces détecteurs ont été instrumenté avec une électronique dite semi-digitale
 }
 
 \section{Électronique "semi-digitale"}
-Le SDHCAL est un prototype de calorimètre ultra-granulaire pour le \textit{Particles Flow Algorithm} (PFA). La taille des cellules de lecture de 1$cm^2$, la balance entre la saturation de électronique et le volume de donnée à traiter à amener à opter pour une lecture à trois seuils (2 bits). Pour ne pas introduire d'inhomogénéités, voire de zones mortes dues au système de refroidissement, il a été décidé de ne pas en utiliser. Pour cela, la puissance consommée par l'\textit{Application-specific integrated circuit} (ASIC) est donc la chaleur à dissipée sont réduites par l'emploi d'une alimentation intermittente dite pulsée, permettant de n'allumer l'ASIC que lorsque des données sont à enregistrer. Ce prototype utilise un type d'ASIC développé spécialement pour cet occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
+Le SDHCAL est un prototype de calorimètre ultra-granulaire pour le \textit{Particles Flow Algorithm} (PFA). La taille des cellules de lecture de \SI{1}{\square\centi\meter}, la balance entre la saturation de électronique et le volume de donnée à traiter à amener à opter pour une lecture à trois seuils (\num{2} bits). Pour ne pas introduire d'inhomogénéités, voire de zones mortes dues au système de refroidissement, il a été décidé de ne pas en utiliser. Pour cela, la puissance consommée par l'\textit{Application-specific integrated circuit} (ASIC) est donc la chaleur à dissipée sont réduites par l'emploi d'une alimentation intermittente dite pulsée, permettant de n'allumer l'ASIC que lorsque des données sont à enregistrer. Ce prototype utilise un type d'ASIC développé spécialement pour cet occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
 
 \subsection{La puce de lecture HARDROC}
-L'ASIC HARDROC (cf.fig \ref{hardroc}) est issue d'une collaboration entre le pôle de microélectronique Omega du Laboratoire de L'Accélérateur Linéaire (LAL) d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basé celle appellée OPERAROC qui est utilisée dans l'expérience Oscillation Project with Emulsion-tRacking Apparatus (OPERA) (cf.fig \ref{opera}).
+L'ASIC HARDROC (cf.fig \ref{hardroc}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience Oscillation Project with Emulsion-tRacking Apparatus (OPERA) (cf.fig \ref{opera}).
+
 \marginpar
 {
 	\centering
@@ -101,14 +106,18 @@ L'ASIC HARDROC (cf.fig \ref{hardroc}) est issue d'une collaboration entre le pô
 	\captionof{figure}{Photo du détecteur OPERA.}
 	\label{opera}
 }
+
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.5\textwidth]{GLA/HARDROC.png}
 	\captionof{figure}{Schéma électronique du HARDROC.}
 	\label{hardroc}
 \end{figure}
-Le HARDROC repose sur une technologie de fonderie AMS SiGe 0.5$\mu m$. La puce est ensuite insérée dans un boitier d'épaisseur 1.4mm qui comporte 160 pattes dont 64 voies. Les puces sont directement incorporées sur le PCB du détecteur appellée Active Sensor Unit (ASU), chaque HARDROC étant connecté à 64 bandes ou carreaux de cuivre sensitifs (strip et pads respectivement) selon le PCB. Dans le cas des pads, la connection des pattes et des carreaux des cuivre ont été étudiés afin d'éviter la diaphonie entre les pattes.
-Le schéma simplifié du HARDROC est donné par la figure \ref{scheme}. La partie digitale de la puce est commune aux 64 voies, alors que chacune possède sa partie analogique :
+
+Le HARDROC repose sur une technologie de fonderie AMS SiGe \SI{0.5}{\micro\meter}. La puce est ensuite insérée dans un boitier d'épaisseur \SI{1.4}{\milli\meter} qui comporte \num{160} pattes dont \num{64} voies. Les puces sont directement incorporées sur le Printed Circuit Board (PCB) du détecteur appellée Active Sensor Unit (ASU), chaque HARDROC étant connecté à \num{64} bandes ou carreaux de cuivre sensitifs (strip et pads respectivement) selon le PCB. Dans le cas des pads, la connection des pattes et des carreaux de cuivre est étudié afin d'éviter la diaphonie entre les pattes.
+
+Le schéma simplifié du HARDROC est donné par la figure \ref{scheme}. La partie digitale de la puce est commune aux \num{64} voies, alors que chacune possède sa partie analogique :
+
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{GLA/scheme.png}
@@ -116,33 +125,33 @@ Le schéma simplifié du HARDROC est donné par la figure \ref{scheme}. La parti
 	\label{scheme}
 \end{figure}
 
-Chaque voie d'entré est composée :
+Chaque voie d'entrée comporte :
 \begin{itemize}[label=$\bullet$]
-	\item Un préamplificateur de basse impédance fonctionnant en mode convoyeur de courant dont le gain est ajustable de 0 à 1.99.
-	\item Trois traitements de mise en forme rapide à gain réglable en parallèles (FSBs) (Fast Shaper). Ils sont suivis d'un discriminateur de tension qui une fois déclenché, active une bascule (pour la sauvegarde de l'information).
-	\item Un traitement de mise en forme lent (Slow Shapper) qui permet le multiplexage du signal de sortie du préamplificateur et la lecture de la charge d'entrée. Ce traitement est surtout utilisé pour le débogage de la puce.
+	\item Un préamplificateur de basse impédance fonctionnant en mode convoyeur de courant dont le gain est ajustable de \SIrange{0}{1.99}{}.
+	\item Trois traitements de mise en forme rapide à gain réglable en parallèles \textit{Fast Shaper} (FSBs). Ils sont suivis d'un discriminateur de tension qui une fois déclenché, active une bascule (pour la sauvegarde de l'information).
+	\item Un traitement de mise en forme lent \textit{Slow Shaper} qui permet le multiplexage du signal de sortie du préamplificateur et la lecture de la charge d'entrée. Ce traitement est surtout utilisé pour le débogage de la puce.
 	\item Un encodeur pour coder le signal des bascules sur deux bits.
 \end{itemize}
 
-Les $3\times 64$ discriminateurs sont lus toutes les 200ns. Les trois seuils des discriminateurs peuvent être ajustés grâce à trois convertisseurs digital-analogiques (DAC) codés sur 10bits. Ce réglage affecte l'ensemble des 64 voies de la puce.
+Les \num{3}$\times$\num{64} discriminateurs sont lus toutes les \SI{200}{\nano\second}. Les trois seuils des discriminateurs peuvent être ajustés grâce à trois convertisseurs digital-analogiques (DAC) codés sur \num{10} bits. Ce réglage affecte l'ensemble des \num{64} voies de la puce.
 
 \subsubsection{Le préamplificateur}
-L'entrée des cellules actives sont reliée aux pattes "in\_pa" d'un préamplificateur de type "Super Base Commune" (cf.fig\ref{preampli}), ce qui permet de diminuer l'impédance d'entrée (50-100 ohms) et donc d'éviter la diaphonie (\textit{cross-talk}). L'impédance d'entrée est donnée par la formule suivante :
+L'entrée des cellules actives est reliée aux pattes "in\_pa" d'un préamplificateur de type "Super Base Commune" (cf.fig\ref{preampli}), ce qui permet de diminuer l'impédance d'entrée (\SIrange{50}{100}{\ohm}) et donc d'éviter la diaphonie (\textit{cross-talk}). L'impédance d'entrée est donnée par la formule suivante :
 
 \begin{equation}
 Z_{in}=\frac{R_0+1/g_{m2}}{1+g_{m1}R_c}
 \end{equation}
-où $g_{m1}$ et $g_{m2}$ sont les transconductances des transistors $Q1$ et $Q2$ 
+où $g_{m1}$ et $g_{m2}$ sont les transconductances des transistors $Q1$ et $Q2$.
 
 \begin{figure}[th!]
 	\centering
-	\includegraphics[width=0.5\textwidth]{GLA/preampli.png}
+	\includegraphics[width=0.60\textwidth]{GLA/preampli.png}
 	\captionof{figure}{Schéma du préamplificateur.}
 	\label{preampli}
 \end{figure}
 
 \subsubsection{Miroir de courant à 8 bits}
-Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de courant de gains respectifs 1/128, 1/64, 1/32, 1/16, 1/8, 1/4, 1/2 et 1 (cf.fig \ref{miror}). La sortie est la somme des courants des mirroirs activés. Les huit miroir sont activables séparément grâce à un mot de 8 bits appellé contrôl de gain. La plage d'amplification varie donc de 0 à 1.992. La précision de ce gain est estimé à 1.5\%. 
+Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de courant de gains respectifs 1/128, 1/64, 1/32, 1/16, 1/8, 1/4, 1/2 et 1 (cf.fig \ref{mirror}). La sortie est la somme des courants des mirroirs activés. Les huit miroir sont activables séparément grâce à un mot de \num{8} bits appellé contrôl de gain. La plage d'amplification varie donc de \SIrange{0}{1.992}{}. La précision de ce gain est estimé à 1.5\%. 
 
 \begin{figure}[ht!]
 	\centering
@@ -684,6 +693,9 @@ Lors de ce test en faisceau, nous avons fait varié les valeurs d'atténuateur d
 	\caption{Efficacité en fonction du courant de $\gamma$ obtenu pour différente valeur d'atténuation de la source. Les effets d'écrantage dû à la présence des autres chambres placé devant n'est pas inclus.}
 	\label{ATTENUATEURGIF}
 \end{figure}
+
+
+
 
 \subsection{Création du Electronic LOGbook (ELOG)}
 À chaque nouvelle prise de donnée, une entrée dans le Electronic LOGbook (ELOG) \cite{ELOG} du SDHCAL, sorte de cahiers de manipulation électronique été créé. Il s'agit d'un daemon écrit en C, contenant un serveur web qui lit et écrit les entrées du cahier électronique et les affiche en format HTML. Le ELOG du SDHCAL, contenait quelques information rudimentaire (numéro du fichier de la prise de donnée, date de création.). Devant le nombre de fichiers à analyser et le nombres de paramètres à garder afin de les analyser, un ELOG plus adapté au manipulation du GIF++ à été créé. Il a été décidé de garder un ELOG plutôt que de créer une database car l'utilisation est beaucoup plus facile et conviviale (cf.fig \ref{ELOG}), et la configuration d'un cahier (logbook) repose sur la création d'un simple fichier texte (elogd.cfg) (voir \ref{elogd.cfg}). 

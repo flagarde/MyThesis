@@ -398,7 +398,7 @@ En prenant le cas des carte d'efficacité 50\%, l'inefficacité de la chambre es
 	\label{Comparaison}
 \end{figure}
 
- Tous les résultats présentés dans cette thèse qui ont rapport avec des chambres instrumenté avec des HARDROC ont été réalisé avec ces processeurs.
+ Tous les résultats à partir de juin 2015 présentés dans cette thèse qui ont rapport avec des chambres instrumenté avec des HARDROC ont été réalisé avec ces processeurs.
 
 \section{Tests en faisceaux}
 De nombreux tests en faisceaux ont été réalisés lors de cette thèse, notamment afin de vérifier et de compléter les résultats obtenus lors d'un test en faisceau à DESY en Allemagne en Janvier 2012.
@@ -551,7 +551,7 @@ La figure \ref{RateSPS} (\ref{MultiplictySPS}) montre l'évolution de l'efficaci
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.4}{\input{GLA/MultiplicitySPS.tex}}
+	\scalebox{1.6}{\input{GLA/MultiplicitySPS.tex}}
 	\caption{Multiplicité en fonction du flux de particules moyen estimé. Les RPC de basse resistivité sont en bleue et la chambre en verre "standard" est en rouge.}
 	\label{MultiplictySPS}
 \end{figure}
@@ -559,7 +559,7 @@ La figure \ref{RateSPS} (\ref{MultiplictySPS}) montre l'évolution de l'efficaci
 Comme prévu les cinq chambre ont une efficacité proche de 90\% à bas flux de particules. Cependant l'efficacité de  chambre en verre "standard" chute brutalement à mesure que le flux augmente est atteint $\sim $40\% à partir de 0.1kHz, en accord avec les données récoltés à DESY. Quant aux chambres en verre de basse résistivité, elles garde une efficacité supérieur à 70\% dans tous les cas, même à plus de 7kHz. Une des chambres de basses résistivité semble cependant posséder une efficacité beaucoup plus faible que les trois autres. Cet baisse d'efficacité peut s'expliquer d'une part par un nombre de canaux morts dont l'effet n'a pas été pris en compte lors du calcul de l'efficacité. De plus, un verre de plus haute résistivité est sûrement la cause de cet effet. Mise à part cette chambre, les résultats présentés si dessus sont en accord avec ceux de DESY.
 
 \section {Tests au Gamma Irradiation Facility (GIF++)}
-Jusqu'à présent nous avons effectué des tests en faisceaux de flux assez important ($\sim$ 10kHz). Cependant, ces faisceaux sont bien localisés et ne couvre pas toutes la surfaces des chambres. Des flux de particules similaires sur toutes la surface du détecteurs pourrait changer drastiquement les résultats sur l'efficacités et la multiplicité des chambres. En effet, si la surface entière des chambres est soumise à un flux de particules intenses, le nombres de charges à évacuées par la haute tension est beaucoup plus importantes, ce qui peut conduire à une accumulation de charges et à un effet d'écrantage conduisant à une baisse de l'efficacité. Afin de tester nos chambres dans des conditions plus proches de la situation à laquelle elle seront exposées, nous les avons amenées au Gamme Irradiation Facility (GIF++).
+Jusqu'à présent nous avons effectué des tests en faisceaux de flux assez important ($\sim$ 10kHz). Cependant, ces faisceaux sont bien localisés et ne couvre pas toutes la surfaces des chambres. Des flux de particules similaires sur toutes la surface du détecteurs pourrait changer drastiquement les résultats sur l'efficacités et la multiplicité des chambres. En effet, si la surface entière des chambres est soumise à un flux de particules intenses, le nombres de charges à évacuées par la haute tension est beaucoup plus importantes, ce qui peut conduire à une accumulation de charges et à un effet d'écrantage conduisant à une baisse de l'efficacité. Afin de tester nos chambres dans des conditions plus proches de la situation à laquelle elle seront exposées, nous les avons amenées au Gamme Irradiation Facility (GIF++). De plus, jusqu'à présent, les résultats présentés ont été obtenus en utilisant le mélange de gaz ILC (93\% \chemform{TFE}, 5\% \chemform{CO_2}, 2\% \chemform{SF_6}). Au GIF++, le mélange de gaz de CMS (95.2\% \chemform{TFE}, 4.5\% \chemform{C_4H_{10}}, 0.3\% \chemform{SF_6}) non humidifié sera utilisé.
 
 \subsection{Le GIF++}
 Le GIF++ \cite{Jakel:1977147} (cf.fig\ref{GIF},cf.fig\ref{GIF2}) est une installation de 100$m^2$ installé le long de la ligne de faisceau H4 dans la \textit{North Area} du CERN (cf.fig\ref{complexe}). Il s'agit d'une installation qui permet à la fois de disposer d'un faisceau de particules ( surtout des muons jusqu'à 100GeV d'impulsion.) et d'une source de Césium 137 de 14TBq. Cette source permet de baigner la zone d'un fond de $\gamma$ 30 fois supérieur à celui de son prédécesseur, le GIF.
@@ -584,12 +584,103 @@ Cet installation a été conçu afin de tester les performances et la stabilité
 \end{figure}
 
 
+La source de Césium 137 (cf.fig\ref{Source}) a une demi-vie de 30.08 années et se désintègre selon le diagramme \ref{Diagramme}. Dans 94.6\% il transmute en isomère\footnote{L’isomérie nucléaire est le fait qu'un même noyau atomique puisse exister dans des états énergétiques distincts caractérisés chacun par un spin et une énergie d'excitation particuliers.} $^{137m}$Ba du baryum 137 par désintégration $\beta{-}$ lequel retombe à son état fondamental par transition isomérique émettant un rayonnement $\gamma$ de 661,7 keV avec une période de 2,552 minutes. Dans les 5,4\% des cas restants, il se désintègre directement en 137Ba avec une énergie de désintégration de 1 174 keV. Cette source est placé dans un irradiateur (cf.fig\ref{Irradiateur})
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{GLA/Cesium137.png}
+	\caption{Diagramme de désintégration du césium 137.}
+	\label{Diagramme}
+\end{figure}
+
+
 \marginpar
 {
 	\centering
 	\includegraphics[width=0.5\marginparwidth]{GLA/Source.png}
-	\captionof{figure}{Vue extérieur du GIF++.}
+	\captionof{figure}{Vue en coupe de la source de Césium 137.}
 	\label{Source}
 }
 
-%In collaboration with the EN department, the layout of the facility has been significantly improved. Two large radiation fields (±37 degdrees horizontally and vertically) with individual radiation attenuation systems allow the simultaneously testing of a wide range of small detector prototypes, electronic components, radiation monitors and dosimeter under a strong photon flux as well as the characterization and understanding of the long-term behavior of large particle detectors. The facility is equipped with a dedicated control system, recording all relevant parameters from beam- & irradiator status to environmental conditions and gas supply. Several user infrastructures proposed in the framework of the WP8-AIDA project have been included in the design of the facility, including a common Detector Control System (DCS), radiation monitoring (RADMONs), as well as beam- and cosmic-trigger chambers.
+\marginpar
+{
+	\centering
+	\includegraphics[width=0.5\marginparwidth]{GLA/Irradiateur.png}
+	\captionof{figure}{Vue en trois dimensions de l'irradiateur.}
+	\label{Irradiateur}
+}
+
+L'irradiateur grâce à des collimateurs, couvre deux zone de $\pm37\degres$ horizontalement et $\pm37\degres$ verticalement (notées $\gamma$-field 1 et $\gamma$-field 2 sur la figure cf.fig\ref{GIF}). Ces deux zones sont appellées \textit{Upstream} et \textit{Downstream} selon qu'elles se trouvent proches de l'entrée du faisceau de muons dans le bunker ou non. Elles peuvent être irradiées de manière indépendantes grâce à l'emplois de deux système d'atténuateurs, constitués de 3 plans de 3 filtres en plomb chacun (notés A1, B1, C1, A2, B2, C2, A3, B3, C3 sur la figure \ref{SchemeIrradiator}). De chaque côté, les plans couches peuvent être abaissés et remontés directement depuis la salle de controle du GIF++ afin de positionner le bon filtres devant l'irradiateur.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{GLA/SchemeIrradiator.png}
+	\caption{Schéma de l'irradiateur et des systèmes d'atténuateurs.}
+	\label{SchemeIrradiator}
+\end{figure}
+
+La valeurs des différents filtres des atténuateurs est donné dans le tableau (vf.tab\ref{Filter})
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|O|O|O|O|N}
+		\hline 
+		Plan  &A&B&C \\ 
+		\hline 
+		Position 1&1&1&1 \\
+		\hline 
+		Position 2&10&1.47&2.15 \\ 
+		\hline 
+		Position 3&100&100&4.64 \\
+		\hline
+	\end{tabular} 
+	\captionof{table}{Tableau des valeurs des filtres des atténuateurs.}
+	\label{Filter}
+\end{table}
+
+Au total, 24 configurations différentes d'atténuateurs sont possibles, allant d'un facteur d'atténuation de 1 à 46415. Ces facteurs d'attenuations ont été choisis afin d'être à peu prêt équidistant sur une échelle logarithmique sur les trois premiers ordres de grandeurs (cf.fig\ref{ValueAttenuateur} \cite{Pfeiffer:2016hnl}).
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=1.0\marginparwidth]{GLA/ValueAttenuateur.png}
+	\captionof{figure}{Les 24 valeurs d'atténuations configurables.}
+	\label{ValueAttenuateur}
+}
+
+Les valeurs nominales des facteurs d'atténuations ont été calculé dans le cas des photons de $662$keV. Dans le cas des photons de plus basses énergies, les facteurs d'atténuations sont plus élevés. 
+
+Un filtre de correction angulaire en acier est placé de chaque côté de l'irradateur afin de supprimé la dépendance en $\frac{1}{r^2}$ du courant de photons et de rendre celui-ci uniforme dans le plan xy. Cette correction est valable que pour les photons de 662keV. Pour les photons de plus basse énergie, créés soit par interaction avec la capsule de la source ou les collimateur de l'irradateur, la correction angulaire est beaucoup moins uniforme dans le plan xy.
+
+\subsection{Tests en faisceaux}
+À partir de Juillet 2015, le télescope (cf.fig\ref{GIFppChambers}) à été installé au GIF++ afin de reproduire des conditions de bruits de fond $\gamma$ et ainsi étudier les caractéristiques de ces chambres et le vieillisement de ces chambres sous ces conditions. Les chambres doivent être irradiées pendant plusieurs mois afin d'obtenir une charge intégré de plus de 1C, ce qui correspond à la charge accumuler pendant 10 ans au HL-LHC.
+Plusieurs période de tests en faisceaux sont aussi programmer afin de vérifier l'efficacité des chambres et ainsi vérifier la modification des caractéristique en fonction du temps.
+
+Le télescope est constitué de chambres de verre de basse resistivité et de verre standard afin de servir de témoins. Les chambres sont montées en série dans le circuit de gaz par des tube de polyuréthane. Ces tuyaux permettent une mise en oeuvre plus facile et un retrait ou déplacement des chambres plus facile. Tout le système d'alimentation des chambres en basse tension, la SDCC etc sont placé dans une boite conçu pour l'occasion, placée dans un château de plomb en bas du bâti afin d'éviter les radiations. Cette boite et ses sous composant (basse tension, SDCC) est entièrement contrôlable à distance. Les hautes tension sont contrôler par un module CAEN monitorable par telnet.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{GLA/GIFppChambers.png}
+	\caption{Le télescope dans le bunker du GIF++.}
+	\label{GIFppChambers}
+\end{figure}
+
+En août 2015, avant le début du vieillissement des chambres un premier test en faisceau a permis d'avoir des courbes de référence de la tenu des chambres au flux de gamma.
+
+Le télescope a été placé à 2m de la source du côté upstream (cf.fig\ref{PositionChambre})
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{GLA/PositionChamber.png}
+	\caption{courant de photons total ($\gamma$ de toutes énergie de 0keV à 662keV) and le plan xz pour y=0m. La position du télescope est indiqué par le carré bleue.}
+	\label{PositionChambre}
+\end{figure}
+
+Le courant total des photons à l'emplacement du télescope à été estimé de l'ordre de $1.5\times10^{7}\gamma$\si{cm^{-2}.s^{-1}}. Cet estimation peut également varié de quelques \% pour les chambres du telescope placé plus loin de la source. Il est aussi possible d'avoir une variation de quelques pourcents lorsque d'autres détecteurs d'autres expériences se trouve entre la source et notre télescope.
+
+Lors de ce test en faisceau, nous avons fait varié les valeurs d'atténuateur de 3.16 à 46 415. La valeur du point de fonctionnement à été choisi à 7000V pour un seuil de 0.13pC. La courbe montrons l'évolution de l'efficacité des deux types de chambres en fonction du courant de photons et donnée figure \ref{ATTENUATEURGIF}.
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{1.4}{\input{GLA/AttenuateurGIF.tex}}
+	\caption{Efficacité en fonction du courant de $\gamma$ obtenu pour différente valeur d'atténuation de la source. Les effets d'écrantage dû à la présence des autres chambres placé devant n'est pas inclus.}
+	\label{ATTENUATEURGIF}
+\end{figure}

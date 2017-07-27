@@ -46,16 +46,7 @@
 \cellspacebottomlimit=4pt
 \usepackage{minipage-marginpar}
 \usepackage{calc}
-\usepackage{siunitx}
-\sisetup{%
-	,binary-units=true
-	,locale = FR
-	,math-ohm  =\Omega
-}
 \usepackage{lmodern}
-% from your class definition
-\DeclareMathSymbol{\Omega}{\mathalpha}{letters}{"0A}
-\DeclareMathSymbol{\varOmega}{\mathalpha}{operators}{"0A} 
 \usepackage{microtype}
 \usepackage[top=2.05cm,bottom=1.1cm,left=1cm,right=5cm,marginparsep=0.50cm,marginparwidth=4.25cm]{geometry}
 \usepackage{booktabs}
@@ -124,10 +115,19 @@
 		\includegraphics{build/#1}%
 	},
 }
-
+\usepackage{ifthen}
+\newcommand{\Cpp}[1][]{$\text{C\hspace{-.25ex}}^{_{_{_{++}}}}
+	\ifthenelse{\equal{#1}{}}{}{\text{\hspace{-.625ex}#1}}$}
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
 
+%\DeclareMathSymbol{\Omega}{\mathalpha}{letters}{"0A}% italics
+\DeclareMathSymbol{\varOmega}{\mathalpha}{operators}{"0A}% upright
+\providecommand*{\upOmega}{\varOmega}% for siunitx
+\usepackage[binary-units=true]{siunitx}
+\sisetup{locale = DE}
+\DeclareSIUnit{\bits}{bits}
+\DeclareSIUnit{\c}{c}
 %"Bugfix" for fncychap:
 %Without this code there will be an overfull hbox by 10pt on every chapter
 %I don't remember where I found this, but it seems to be unrelated to 

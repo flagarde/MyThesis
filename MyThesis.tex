@@ -8,6 +8,7 @@
 \else
 \def\@mkdir{\typeout{Expect errors}}
 \fi
+\makeatother 
 \hyphenpenalty=3500
 \doublehyphendemerits=9000
 \finalhyphendemerits=6000
@@ -376,24 +377,16 @@
 }
 
 \begin{document}
+\frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Page de garde %%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{titlepage}	
 	\include{PG/PG}
 \end{titlepage}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Page de couverture %%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{titlepage}
-	\include{MPG/MPG}	
-\end{titlepage}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
+\cleardoublepage
 
 \dominitoc
-
-\backmatter
 \begin{titlepage}
 \newgeometry{left=0cm,bottom=1.5cm,right=0cm,top=1.5cm,headheight=45pt}
 \thispagestyle{empty}
@@ -404,8 +397,6 @@ Qui addit scienciam addit et dolorem
 \end{flushright}
 \end{fquote}
 \end{titlepage}
-
-\frontmatter
 \pagestyle{void}
 \MargeSimple{\leftnum}{\rightnum}
 \sommaire
@@ -415,12 +406,15 @@ Qui addit scienciam addit et dolorem
 \renewcommand{\sectionmark}[1]{\markright{#1}{}}
 \MargeSimple{\barre\leftnum}{\barre\rightnum}
 {\fontsize{11}{11} \selectfont
+\include{REM/REM}
+\include{INT/INT}
 \include{SM/SM}
 \include{LHC/LHC}
 \include{CMS/CMS} 
 \include{RPC/RPC}
 \include{GLA/GLA}
 \include{ELE/ELE}
+\include{CON/CON}
 \appendix
 \include{ELOG/ELOG}
 }

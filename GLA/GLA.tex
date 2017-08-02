@@ -694,12 +694,63 @@ Lors de ce test en faisceau, nous avons fait varié les valeurs d'atténuateur d
 	\label{ATTENUATEURGIF}
 \end{figure}
 
+Le courant de photons ne donne pas directement le flux de particule qui nous intéressent. En effet, les RPC ne sont sensibles qu'aux particules chargée, il est donc nécessaire d'estimer le taux de conversion des photons en électrons dans la couche de gaz afin de connaitre le vrai flux de particules auquel est soumise la chambre. 
+
+Une simulation GEANT4, modélisant le SDHCAL à été modifié afin de prendre en compte la géométrie des chambres au GIF++ ainsi que leur position relative. Un "particle gun" a été utilisé afin de tirer un photon de \SI{661.7}{\kilo\eV} à la fois. Les autres énergies de photons n'ont pas été simulées. La simulation nous permet de connaitre la fraction de photons émis par la source qui produisent un hits dans la couche de gaz des GRPC, ainsi que l'impact des absorption et diffusion dans les GRPC. La composition exacte des verres de basses résistivité étant inconnue, la simulation se base sur des verre standard.
+
+La fraction de photon amenant à la création d'n hits dans les détecteurs, pour plusieurs list physiques de GEANT 4 est donné figure \ref{conversion}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{GLA/taux.png}
+	\caption{Taux de conversion : Probabilité qu'un photons de \SI{661.7}{\kilo\eV} produise un hits dans les chambres du télescope au GIF++. Les chambres sont numérotés de \SIrange{0}{6}{}, la chambre \num{0} est la plus proche de la source.}
+	\label{conversion}
+\end{figure}
+
+Des scans en fonction du seuils appliqué et de la distance à la source on également été effectué. La figure \ref{att200} (\ref{att22}) représente l'efficacité et la multiplicité en fonction du seuils appliqué pour un facteur d'atténuation de la source de 220 (22) dans le cas ou le détecteur est placé à 2m.
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Eff_200_1970.tex}}}
+	\hfill
+	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Mul_200_1970.tex}}}
+	\caption{Efficacité et multiplicité en fonction du seuil appliqué pour la première chambre du télescope placé à 2m de la source. La tension appliqué est de 6700V et le facteur d'atténuation de la source est de 200.}
+	\label{att200}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Eff_22_1970.tex}}}
+	\hfill
+	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Mul_22_1970.tex}}}
+	\caption{Efficacité et multiplicité en fonction du seuil appliqué pour la première chambre du télescope placé à 2m de la source. La tension appliqué est de 6700V et le facteur d'atténuation de la source est de 22.}
+	\label{att22}
+\end{figure}
+
+La figure \ref{att150} (\ref{att46}) représente l'efficacité et la multiplicité en fonction du seuils appliqué pour un facteur d'atténuation de la source de 150 (46) dans le cas ou le détecteur est placé à 5.5m.
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Eff_150_5500.tex}}}
+	\hfill
+	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Mul_150_5500.tex}}}
+	\caption{Efficacité et multiplicité en fonction du seuil appliqué pour la première chambre du télescope placé à 5.5m de la source. La tension appliqué est de 6700V et le facteur d'atténuation de la source est de 150.}
+	\label{att150}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Eff_46_5500.tex}}}
+	\hfill
+	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Mul_46_5500.tex}}}
+	\caption{Efficacité et multiplicité en fonction du seuil appliqué pour la première chambre du télescope placé à 5.5m de la source. La tension appliqué est de 6700V et le facteur d'atténuation de la source est de 46.}
+	\label{att46}
+\end{figure}
 
 
-
-\subsection{Création du Electronic LOGbook (ELOG)}
+\section{Création du Electronic LOGbook (ELOG)}
 À chaque nouvelle prise de donnée, une entrée dans le Electronic LOGbook (ELOG) \cite{ELOG} du SDHCAL, sorte de cahiers de manipulation électronique été créé. Il s'agit d'un daemon écrit en C, contenant un serveur web qui lit et écrit les entrées du cahier électronique et les affiche en format HTML. Le ELOG du SDHCAL, contenait quelques information rudimentaire (numéro du fichier de la prise de donnée, date de création.). Devant le nombre de fichiers à analyser et le nombres de paramètres à garder afin de les analyser, un ELOG plus adapté au manipulation du GIF++ à été créé. Il a été décidé de garder un ELOG plutôt que de créer une database car l'utilisation est beaucoup plus facile et conviviale (cf.fig \ref{ELOG}), et la configuration d'un cahier (logbook) repose sur la création d'un simple fichier texte (elogd.cfg) (voir \ref{elogd.cfg}). 
- 
+
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.98\linewidth]{GLA/ELOG2.png}
@@ -708,6 +759,49 @@ Lors de ce test en faisceau, nous avons fait varié les valeurs d'atténuateur d
 \end{figure}
 
 Le ELOG du GIF++ contient des menus déroulant et des champs de texte à remplir à chaque nouvelle prise de données. À chaque début de prise de mesure, lors de la création d'une entrée dans le ELOG, la lecture du fichier de configuration XML sur la géométrie du détecteurs permet de remplir une bonne partie des informations. Le shifter peut ensuite ajouter les informations manquantes, concernant la source, les attenuateurs, le faisceau etc. La validation d'une entrée ELOG est conditionnée au remplissage des informations les plus utiles selon les circonstances (il est par exemple obligatoire de renseigner les valeurs des attenuateurs si l'état du faisceau à été sélectionné comme étant "ON"). Cette validation des entrée dans le ELOG permet de s'assurer que la plupart des informations nécessaire à l'analyse des données est présentes. Tous ces informations sont ensuite exportable sous format XML ou CSV ce qui rend la création de programme sélectionnant les fichiers de données automatiquement en fonction du types de scan que l'on souhaite réaliser (Scan en tension, Attenuateur etc.)
+
+
+\subsection{Vieillissement des chambres au GIF++}
+Afin de valider le choix des verres de basses résistivité comme électrodes, il est nécessaire d'étudier l'impact d'une exposition longue (correspondant à plusieurs années d'utilisation dans CMS) au bruit de fond. La mesure du courant en fonction du temps donne une idée précise du vieillissement des chambres et permet de calculer la charge totale ayant été déposée sur les électrodes. Selon le TDR, les chambres doivent conserver une bonne efficacité même après avoir subi une charge de 1C/cm2. En utilisant la source de photons du GIF++ dont le flux est supérieur de plusieurs ordres de grandeur à celui attendu dans les zones où seront instrumentés les chambres, il est possible d'obtenir la charge intégré de 1C/cm2 dans un temps raisonnable et ainsi d'accélérer le vieillissement des chambres et ainsi vérifier leur tenue dans le temps.
+
+La figure \ref{Courant} montre les courants des chambres ainsi que la charge intégré pendant les quatre premiers mois d'opération au GIF++ ainsi que les tensions appliquées. 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{GLA/DIF16.png}
+	\caption{Taux de conversion : Probabilité qu'un photons de \SI{661.7}{\kilo\eV} produise un hits dans les chambres du télescope au GIF++. Les chambres sont numérotés de \SIrange{0}{6}{}, la chambre \num{0} est la plus proche de la source.}
+	\label{Courant}
+\end{figure}
+
+
+La chute du courant en fonction du temps de manière rapide montre un vieillissement prématuré des chambres. Le test en faisceau de mai 2016 a permis de comprendre les causes de ce vieillissement rapides.
+
+\subsubsection{Tests en faisceaux (Mai 2016)}
+La structure des hits réjeté par Trivent pour les cinq chambres pour un facteur d'attenuation de la source de 22 est donnée figure \ref{struc}
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Chambre 1 (plus éloignées de la source).]{\includegraphics[width=.45\linewidth]{GLA/chamber1.png}}
+	\hfill
+	\subfloat[Chambre 2.]{\includegraphics[width=.45\linewidth]{GLA/chamber2.png}}
+	\\
+	\subfloat[Chambre 3.]{\includegraphics[width=.45\linewidth]{GLA/chamber3.png}}
+	\hfill
+	\subfloat[Chambre 4 (float glass).]{\includegraphics[width=.45\linewidth]{GLA/chamber4.png}}
+	\\
+	\subfloat[Chambre 5.]{\includegraphics[width=.45\linewidth]{GLA/chamber5.png}}
+	\caption{Hits rejetés par Trivent (\si{\hertz}) pour les cinq chambres du télescope au GIF++. La chambre 1est la plus éloignée du faisceau. La chambre 4 est une chambre construites en verre standard.}
+	\label{struc}
+\end{figure}
+
+L'ouverture d'une des chambres à montré que les spacers permettant le maintient des électrodes à une distance uniforme le long de la chambres ont disparu et qu'un dépôt s'est créer sur les électrodes de la chambres (cf.fig\ref{depot})
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{GLA/depot.jpg}
+	\caption{Vue intérieur d'une chambre du télescope du GIF++. Les spacers ont disparu et un dépot s'est formé sur les électrodes. }
+	\label{depot}
+\end{figure}
+
 
 
  

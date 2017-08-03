@@ -775,19 +775,19 @@ La figure \ref{Courant} montre les courants des chambres ainsi que la charge int
 
 La chute du courant en fonction du temps de manière rapide montre un vieillissement prématuré des chambres. Le test en faisceau de mai 2016 a permis de comprendre les causes de ce vieillissement rapides.
 
-\subsection{Tests en faisceaux (Mai 2016)}
+\subsection{Tests en faisceaux (Mai-Juin 2016)}
 La structure des hits réjeté par Trivent pour les cinq chambres pour un facteur d'attenuation de la source de 22 est donnée figure \ref{struc}
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Chambre 5 (plus éloignées de la source).]{\includegraphics[width=.45\linewidth]{GLA/chamber1.png}}
+	\subfloat[Chambre 5 (plus éloignées de la source).]{\includegraphics[width=.48\linewidth]{GLA/chamber1.png}}
 	\hfill
-	\subfloat[Chambre 4.]{\includegraphics[width=.45\linewidth]{GLA/chamber2.png}}
+	\subfloat[Chambre 4.]{\includegraphics[width=.48\linewidth]{GLA/chamber2.png}}
 	\\
-	\subfloat[Chambre 3.]{\includegraphics[width=.45\linewidth]{GLA/chamber3.png}}
+	\subfloat[Chambre 3.]{\includegraphics[width=.48\linewidth]{GLA/chamber3.png}}
 	\hfill
-	\subfloat[Chambre 2 (float glass).]{\includegraphics[width=.45\linewidth]{GLA/chamber4.png}}
+	\subfloat[Chambre 2 (float glass).]{\includegraphics[width=.48\linewidth]{GLA/chamber4.png}}
 	\\
-	\subfloat[Chambre 1.]{\includegraphics[width=.45\linewidth]{GLA/chamber5.png}}
+	\subfloat[Chambre 1.]{\includegraphics[width=.48\linewidth]{GLA/chamber5.png}}
 	\caption{Hits rejetés par Trivent (\si{\hertz}) pour les cinq chambres du télescope au GIF++. La chambre 1est la plus éloignée du faisceau. La chambre 4 est une chambre construites en verre standard.}
 	\label{struc}
 \end{figure}
@@ -810,11 +810,48 @@ La figure \ref{currentsamHV} montre le courant parcourant les chambres de basse 
 	\centering
 	\includegraphics[width=.6\linewidth]{GLA/current_same_HV.png}
 	\caption{Courant (\si{\micro\ampere}) parcourant la chambre de basse résistivité la plus proche de la source (bleue) et "float glass" (orange) en fonction de l'inverse du facteur d'atténuation. La tension appliquée est fixe et de 6900V.}
-	\label{courantsmHV}
+	\label{courantsamHV}
 \end{figure}
 
+On remarque que le courant dans les chambres de basses résistivité sont toujours plus élevées que pour la "float glass". Une partie est due à l'effet d'écrantage produit par la présence de la chambre de basse résistivité placée devant la "float glass". On remarque également que la saturation du courant arrivé beaucoup plus tôt pour la "float glass" (facteur d'atténuation 68.1) que pour la chambre de basse résistivité qui semble ne pas saturée même pour un facteur d'atténuation de 4.64.
 
-L'ouverture d'une des chambres à montré que les spacers permettant le maintient des électrodes à une distance uniforme le long de la chambres ont disparu et qu'un dépôt s'est créer sur les électrodes de la chambres (cf.fig\ref{depot})
+Le GIF++ permet également de faire circuler dans les chambres de l'argon afin de les purger et de les nettoyer. L'argon permet également de mesurer la résistivité des électrodes des chambres. Grâce à se gas, les chambres fonctionnent rapidement en mode streamer, le a résistance de la couche de gas devient négligeable  par rapport à la résistance des électrodes due à la création de plasma. La figure \ref{ScanArgon} montre la variation du courant en fonction de la tension appliquée sur les chambres sous Argon. Un ajustement linéaire est effectué afin d'en déduire la conductance des électrodes.
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{1.2}{\input{GLA/Argon_current.tex}}
+	\caption{Courant circulant dans les chambres en fonction de la tension appliqué. Le gaz utilisé est l'Argon. Les résultats de l'ajustement de la partie linéaire est également donnée.}
+	\label{ScanArgon}
+\end{figure}
+
+À partir de la résistance des électrodes il est possible d'en déduire leur résistivité par la formule :
+\begin{equation}
+\rho=\frac{RS}{e}
+\end{equation}
+avec $R$ la résistance de l'électrode, $S$ sa surface et $e$ l'épaisseur totale des électrodes.
+
+Le tableau \ref{resistivite} donne la résistivité des chambres calculé grâce à l'ajustement linéaire des courbes de la figure \ref{ScanArgon}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|O|O|N}
+		\hline 
+		Chambre 1 (basse résistivité)  &\SI{2.4e11}{\ohm.\centi\meter} \\ 
+		\hline 
+		Chambre 2 ("float glass") & \SI{3.60e12}{\ohm.\centi\meter} \\ 
+		\hline 
+		Chambre 4 (basse résistivité)& \SI{2.49e11}{\ohm.\centi\meter}\\ 
+		\hline 
+		Chambre 5 (basse résistivité) &\SI{3.94e11}{\ohm.\centi\meter} \\
+		\hline
+	\end{tabular} 
+	\captionof{table}{Résistivité des différentes chambres.}
+	\label{resistivite}
+\end{table}
+
+La résistivité des chambre de basse resistivité sont beaucoup plus élevé qu'attendu ($\sim$\SI{e10}{\ohm.\centi\meter}). Toutes ces constatations (fig.\ref{struc}, fig.\ref{resistivite}) nous ont amené à ouvrir une chambre afin d'essayer de comprendre ces résultats.
+ 
+L'ouverture d'une des chambres à montré que les spacers permettant le maintient des électrodes à une distance uniforme le long de la chambres ont disparu et qu'un dépôt s'est créer sur les électrodes de la chambres (cf.fig\ref{depot}). Ces deux constatations peuvent expliquer les structure étonnantes de la distribution des hits rejetés par Trivent. En effet, sans spacer les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance a augmenter le champ électrique dans cette zone et donc le nombres de hits. La présence de dépôts permet également d'expliqué le fait que certaines zones de la chambres soient aveugles ainsi que la résistivité élevée de ces chambres
 
 \begin{figure}[!ht]
 	\centering
@@ -823,8 +860,15 @@ L'ouverture d'une des chambres à montré que les spacers permettant le maintien
 	\label{depot}
 \end{figure}
 
-On remarque que le courant dans les chambres de basses résistivité sont toujours plus élevées que pour la "float glass". Une partie est due à l'effet d'écrantage produit par la présence de la chambre de basse résistivité placée devant la "float glass". On remarque également que la saturation du courant arrivé beaucoup plus tôt pour la "float glass" (facteur d'atténuation 68.1) que pour la chambre de basse résistivité qui semble ne pas saturée même pour un facteur d'atténuation de 4.64.
 
-\subsection{Causes connues }
 
- 
+\subsection{Causes connues du vieillissement des RPC }
+Plusieurs causes du vieillissement prématurés des chambres RPC peuvent être trouvés dans la littérature :
+
+\subsubsection{La contamination par l'eau}
+Après quelques semaines de prises de données, les GRPC du sous-système $K_{L}/\mu$ de l'expérience BELLE ont perdu une grande partie de leur efficacité ainsi qu'une augmentation du bruit de fond. Les physiciens de cette expériences se sont aperçue en analysant la sortie de certaines chambres que le gaz avait une concentration d'eau allant jusqu'à \num{2000}ppm. La cause de cette concentration d'eau s'avéra être la migration de la vapeur d'eau de l'air ambiant  vers les tubes de polyoléfine de plusieurs mètres de long amenant le gaz dans les chambres. La solution trouvé fût le remplacement de ces tuyaux par des tuyaux de cuivre \cite{Abashian:2000vb}.
+
+Bien que nous ayant utilisé des tuyaux de polyamide, qui présente un coefficient d'absorption faible en présence d'humidité et une bonne résistance au radiation, nous avons décidé de remplacer ces tuyaux par des tuyaux en cuivre. Le choix des tuyaux en polyamide s'était imposé par leur facilité d'utilisation (découpe, remplacement etc.). 
+
+\subsubsection{La polymérisation de l'isobutane}
+ L'isobutane \chemform{iC_4H_{10}} appartient à la classe des alcanes. Il est connu pour produire des réactions de polymérisation, ce qui entraine un dépôt dans les chambres \cite{na60}. L'isobutane est également très inflammable ce qui complique sont utilisation en laboratoire. C'est l'une des raisons du choix de sont remplacement par du \chemform{CO_2} dans le prototype SDHCAL et également de son utilisation hors du GIF++, de plus ce gas ne crée pas de dépôt supplémentaire.

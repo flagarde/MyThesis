@@ -97,7 +97,15 @@ Ces détecteurs ont été instrumentés avec une électronique dite semi-digital
 Le SDHCAL est un prototype de calorimètre ultra-granulaire pour le \textit{Particles Flow Algorithm} (PFA). La taille des cellules de lecture de \SI{1}{\square\centi\meter}, la balance entre la saturation de électronique et le volume de donnée à traiter à amener à opter pour une lecture à trois seuils (\num{2} bits). Pour ne pas introduire d'inhomogénéités, voire de zones mortes dues au système de refroidissement, il a été décidé de ne pas en utiliser. Pour cela, la puissance consommée par l'\textit{Application-specific integrated circuit} (ASIC) est donc la chaleur à dissipée sont réduites par l'emploi d'une alimentation intermittente dite pulsée, permettant de n'allumer l'ASIC que lorsque des données sont à enregistrer. Ce prototype utilise un type d'ASIC développé spécialement pour cet occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
 
 \subsection{La puce de lecture HARDROC}
-L'ASIC HARDROC (cf.fig \ref{hardroc}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience Oscillation Project with Emulsion-tRacking Apparatus (OPERA) (cf.fig \ref{opera}).
+L'ASIC HARDROC (cf.fig \ref{hardroc},\ref{hardroc2}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience Oscillation Project with Emulsion-tRacking Apparatus (OPERA) (cf.fig \ref{opera}).
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{GLA/hardroc2.jpg}
+	\captionof{figure}{Vue d'un HARDROC soudé.}
+	\label{hardroc2}
+}
 
 \marginpar
 {
@@ -295,7 +303,17 @@ où $n$ est le nombre de HARDROC. Une fois tous les événements récoltés, les
 	\captionof{figure}{Diagramme temporel du cycle d'acquisition et de lecture.}
 	\label{temp}
 \end{figure}
-Afin de faciliter la reconstruction et l'analyse des données, des informations additionnelles sont ajoutées au flux de données des HARDROC par la DIF. À chaque ReadOut, les données des ASICS sont encapsulées par un header et un trailer ainsi que d'autres informations telles que des compteurs. Ces DIF sont reliées par l'intermédiaire de câbles HDMI à une Synchronous Data Concentrator Card \footnote{Le nombre de chambre testées a toujours été inférieur à \num{9} ce qui permet de ce passer de DCC et de connecter directement les DIF des chambres à la SDCC.} \cite{Baulieu:2015pfa} qui reçoit les busy et les RAMfull des DIF et envoie de manière synchrone l'horloge et les commandes. La carte SDCC est directement reliée par USB à l'ordinateur controllant la DAQ.
+
+Afin de faciliter la reconstruction et l'analyse des données, des informations additionnelles sont ajoutées au flux de données des HARDROC par la DIF. À chaque ReadOut, les données des ASICS sont encapsulées par un header et un trailer ainsi que d'autres informations telles que des compteurs. Ces DIF sont reliées par l'intermédiaire de câbles HDMI à une Synchronous Data Concentrator Card\footnote{Le nombre de chambre testées a toujours été inférieur à \num{9} ce qui permet de ce passer de DCC et de connecter directement les DIF des chambres à la SDCC.} (SDCC) (cf.fig\ref{SDCC}) \cite{Baulieu:2015pfa} qui reçoit les busy et les RAMfull des DIF et envoie de manière synchrone l'horloge et les commandes. La carte SDCC est directement reliée par USB à l'ordinateur controllant la DAQ.
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{GLA/SDCC.jpg}
+	\captionof{figure}{Une (S)DCC.}
+	\label{SDCC}
+}
+
 
 La chaine d'acquisition peu être résumé par le schéma suivant : 
 \begin{figure}[ht!]
@@ -421,8 +439,8 @@ Un test en faisceaux à DESY \cite{Haddad:2012fx} a été réalisé afin de vér
 \end{figure}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.3\textwidth]{GLA/cellules.png}
-	\captionof{figure}{Cellules de lecture de taille \SI{1}{\centi\meter}$\times$\SI{1}{\centi\meter}, une cellule est encadré en vert}
+	\includegraphics[width=0.3\textwidth]{GLA/cellules.jpg}
+	\captionof{figure}{Cellules de lecture de taille \SI{1}{\centi\meter}$\times$\SI{1}{\centi\meter}.}
 	\label{cellule}
 \end{figure}
 
@@ -664,7 +682,15 @@ Un filtre de correction angulaire en acier est placé de chaque côté de l'irra
 À partir de Juillet 2015, le télescope (cf.fig\ref{GIFppChambers}) à été installé au GIF++ afin de reproduire des conditions de bruits de fond $\gamma$ et ainsi étudier les caractéristiques de ces chambres et le vieillisement de ces chambres sous ces conditions. Les chambres doivent être irradiées pendant plusieurs mois afin d'obtenir une charge intégré de plus de 1C, ce qui correspond à la charge accumuler pendant 10 ans au HL-LHC.
 Plusieurs période de tests en faisceaux sont aussi programmer afin de vérifier l'efficacité des chambres et ainsi vérifier la modification des caractéristique en fonction du temps.
 
-Le télescope est constitué de chambres de verre de basse resistivité et de verre standard afin de servir de témoins. Les chambres sont montées en série dans le circuit de gaz par des tube de polyuréthane. Ces tuyaux permettent une mise en oeuvre plus facile et un retrait ou déplacement des chambres plus facile. Tout le système d'alimentation des chambres en basse tension, la SDCC etc sont placé dans une boite conçu pour l'occasion, placée dans un château de plomb en bas du bâti afin d'éviter les radiations. Cette boite et ses sous composant (basse tension, SDCC) est entièrement contrôlable à distance. Les hautes tension sont contrôler par un module CAEN monitorable par telnet.
+Le télescope est constitué de chambres de verre de basse resistivité et de verre standard afin de servir de témoins. Les chambres sont montées en série dans le circuit de gaz par des tube de polyuréthane. Ces tuyaux permettent une mise en oeuvre plus facile et un retrait ou déplacement des chambres plus facile. Tout le système d'alimentation des chambres en basse tension, la SDCC etc sont placé dans une boite conçu pour l'occasion (cf.fig{boite}), placée dans un château de plomb en bas du bâti afin d'éviter les radiations. Cette boite et ses sous composant (basse tension, SDCC) est entièrement contrôlable à distance. Les hautes tension sont contrôler par un module CAEN monitorable par telnet.
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=1.0\marginparwidth]{GLA/boite.jpg}
+	\captionof{figure}{Boite controllable à distance contenant la SDCC etc.}
+	\label{boite}
+}
 
 \begin{figure}[!ht]
 	\centering
@@ -792,15 +818,8 @@ La structure des hits réjeté par Trivent pour les cinq chambres pour un facteu
 	\label{struc}
 \end{figure}
 
-Des mesures du courant des chambres en fonction du facteur d'atténuation ont été effectué afin d'avoir une idée plus précise du comportements des chambres en focntion du flux de particules (cf.fig\ref{courant})
-\begin{figure}[ht!]
-	\centering
-	\subfloat[Chambre "float glass".]{\includegraphics[width=.45\linewidth]{GLA/current_cha4.png}}
-	\hfill
-	\subfloat[Chambre de basse resistivité (la plus proche de la source).]{\includegraphics[width=.45\linewidth]{GLA/current_cha5.png}}
-	\caption{Courant (\si{\micro\ampere}) parcourant les chambres en fonction de la haute tension appliqué pour différents facteur d'atténuation.}
-	\label{courant}
-\end{figure}
+\subsubsection{Étude des courants des chambres}
+Des mesures du courant des chambres en fonction du facteur d'atténuation ont été effectué afin d'avoir une idée plus précise du comportements des chambres en fonction du flux de particules (cf.fig\ref{courant})
 
 Les courant des chambres de basses résistivité ont toutes le même comportement et présente un profile non linéaire contrairement à la chambre "float glass".
 
@@ -815,7 +834,24 @@ La figure \ref{currentsamHV} montre le courant parcourant les chambres de basse 
 
 On remarque que le courant dans les chambres de basses résistivité sont toujours plus élevées que pour la "float glass". Une partie est due à l'effet d'écrantage produit par la présence de la chambre de basse résistivité placée devant la "float glass". On remarque également que la saturation du courant arrivé beaucoup plus tôt pour la "float glass" (facteur d'atténuation 68.1) que pour la chambre de basse résistivité qui semble ne pas saturée même pour un facteur d'atténuation de 4.64.
 
-Le GIF++ permet également de faire circuler dans les chambres de l'argon afin de les purger et de les nettoyer. L'argon permet également de mesurer la résistivité des électrodes des chambres. Grâce à se gas, les chambres fonctionnent rapidement en mode streamer, le a résistance de la couche de gas devient négligeable  par rapport à la résistance des électrodes due à la création de plasma. La figure \ref{ScanArgon} montre la variation du courant en fonction de la tension appliquée sur les chambres sous Argon. Un ajustement linéaire est effectué afin d'en déduire la conductance des électrodes.
+\subsubsection{Estimation de la résistivité des életrodes}
+
+Le GIF++ permet également de faire circuler dans les chambres de l'argon afin de les purger et de les nettoyer. L'argon permet également de mesurer la résistivité des électrodes des chambres. Grâce à se gas, les chambres fonctionnent rapidement en mode streamer, la résistance de la couche de gas devient négligeable  par rapport à la résistance des électrodes due à la création de plasma. 
+
+L'études des courants des chambres en fonction de la tension a montré que les verres de basse résistivité possédé une hystérésis du courant contrairement au chambres "float glass" (cf.fig\ref{hysteresis}).
+
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Chambre 1 (verre de basse résistivité).]{\scalebox{0.92}{\input{GLA/Argon_current_chamber_1.tex}}}
+	\\
+	\subfloat[Chambre 2 ("float glass")]{\scalebox{0.92}{\input{GLA/Argon_current_chamber_2.tex}}}
+	\caption{Plusieurs scans en montée et en descente  des courants circulant dans la chambre en fonction de la haute tension. La chambre de basse résistivité présente une hystérésis.}
+	\label{hysteresis}
+\end{figure}
+
+
+La figure \ref{ScanArgon} montre la variation du courant en fonction de la tension appliquée sur les chambres sous Argon. Un ajustement linéaire est effectué afin d'en déduire la conductance des électrodes.
 
 \begin{figure}[!ht]
 	\centering
@@ -849,9 +885,9 @@ Le tableau \ref{resistivite} donne la résistivité des chambres calculé grâce
 	\label{resistivite}
 \end{table}
 
-La résistivité des chambre de basse resistivité sont beaucoup plus élevé qu'attendu ($\sim$\SI{e10}{\ohm.\centi\meter}). Toutes ces constatations (fig.\ref{struc}, fig.\ref{resistivite}) nous ont amené à ouvrir une chambre afin d'essayer de comprendre ces résultats.
+La résistivité des chambre de basse résistivité sont beaucoup plus élevé qu'attendu ($\sim$\SI{e10}{\ohm.\centi\meter}). Toutes ces constatations (fig.\ref{struc}, fig.\ref{resistivite}) nous ont amené à ouvrir une chambre afin d'essayer de comprendre ces résultats.
  
-L'ouverture d'une des chambres à montré que les spacers permettant le maintient des électrodes à une distance uniforme le long de la chambres ont disparu et qu'un dépôt s'est créer sur les électrodes de la chambres (cf.fig\ref{depot}). Ces deux constatations peuvent expliquer les structure étonnantes de la distribution des hits rejetés par Trivent. En effet, sans spacer les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance a augmenter le champ électrique dans cette zone et donc le nombres de hits. La présence de dépôts permet également d'expliqué le fait que certaines zones de la chambres soient aveugles ainsi que la résistivité élevée de ces chambres
+L'ouverture d'une des chambres à montré que les spacers permettant le maintient des électrodes à une distance uniforme le long de la chambres ont disparu et qu'un dépôt s'est créer sur les électrodes de la chambres (cf.fig\ref{depot}). Ces deux constatations peuvent expliquer les structure étonnantes de la distribution des hits rejetés par Trivent. En effet, sans spacer les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance a augmenter le champ électrique dans cette zone et donc le nombres de hits. La présence de dépôts permet également d'expliqué le fait que certaines zones de la chambres soient aveugles ainsi que la résistivité élevée de ces chambres.
 
 \begin{figure}[!ht]
 	\centering
@@ -872,3 +908,5 @@ Bien que nous ayant utilisé des tuyaux de polyamide, qui présente un coefficie
 
 \subsubsection{La polymérisation de l'isobutane}
  L'isobutane \chemform{iC_4H_{10}} appartient à la classe des alcanes. Il est connu pour produire des réactions de polymérisation, ce qui entraine un dépôt dans les chambres \cite{na60}. L'isobutane est également très inflammable ce qui complique sont utilisation en laboratoire. C'est l'une des raisons du choix de sont remplacement par du \chemform{CO_2} dans le prototype SDHCAL et également de son utilisation hors du GIF++, de plus ce gas ne crée pas de dépôt supplémentaire.
+
+\subsubsection{L'attaque du verre par l'acide fluorhydrique HF}

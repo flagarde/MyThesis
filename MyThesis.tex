@@ -69,7 +69,7 @@
 \setlength{\cftfignumwidth}{3em}
 \usepackage{fancyhdr}
 \usepackage{blindtext}
-\usepackage{ae}
+\usepackage{ae,aeguill}
 \usepackage{wrapfig}
 \usepackage{framed}
 \usepackage{colortbl}
@@ -173,6 +173,8 @@
 \makeatletter
 \newlength\myrightmargin
 \setlength\myrightmargin{\Gm@rmargin}
+\newlength\mymarge
+\setlength\mymarge{0.45\textwidth}
 \makeatother 
 
 \newcommand{\void}{\vspace*{\paperheight}\textcolor{gray!30}{\hrule}}

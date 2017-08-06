@@ -821,6 +821,16 @@ La structure des hits réjeté par Trivent pour les cinq chambres pour un facteu
 \subsubsection{Étude des courants des chambres}
 Des mesures du courant des chambres en fonction du facteur d'atténuation ont été effectué afin d'avoir une idée plus précise du comportements des chambres en fonction du flux de particules (cf.fig\ref{courant})
 
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Chambre 1 (verre de basse résistivité).]{\includegraphics[width=.45\linewidth]{GLA/current_cha5.png}}
+	\hfill
+	\subfloat[Chambre 2 ("float glass")]{\includegraphics[width=.45\linewidth]{GLA/current_cha4.png}}
+	\caption{Intensité parcourant les chambres en fonction de la haute tension appliquée our différentes caleurs du facteur d'atténuation de la source.}
+	\label{courant}
+\end{figure}
+
+
 Les courant des chambres de basses résistivité ont toutes le même comportement et présente un profile non linéaire contrairement à la chambre "float glass".
 
 La figure \ref{currentsamHV} montre le courant parcourant les chambres de basse et "float glass" en fonction de l'inverse du facteur d'atténuation de la source pour une même valeur de haute tension 6900V.
@@ -836,7 +846,7 @@ On remarque que le courant dans les chambres de basses résistivité sont toujou
 
 \subsubsection{Estimation de la résistivité des életrodes}
 
-Le GIF++ permet également de faire circuler dans les chambres de l'argon afin de les purger et de les nettoyer. L'argon permet également de mesurer la résistivité des électrodes des chambres. Grâce à se gas, les chambres fonctionnent rapidement en mode streamer, la résistance de la couche de gas devient négligeable  par rapport à la résistance des électrodes due à la création de plasma. 
+Le GIF++ permet également de faire circuler dans les chambres de l'argon afin de les purger et de les nettoyer. L'argon permet également de mesurer la résistivité des électrodes des chambres. Grâce à ce gaz, les chambres fonctionnent rapidement en mode streamer, la résistance de la couche de gaz devient négligeable  par rapport à la résistance des électrodes due à la création de plasma. 
 
 L'études des courants des chambres en fonction de la tension a montré que les verres de basse résistivité possédé une hystérésis du courant contrairement au chambres "float glass" (cf.fig\ref{hysteresis}).
 
@@ -907,6 +917,23 @@ Après quelques semaines de prises de données, les GRPC du sous-système $K_{L}
 Bien que nous ayant utilisé des tuyaux de polyamide, qui présente un coefficient d'absorption faible en présence d'humidité et une bonne résistance au radiation, nous avons décidé de remplacer ces tuyaux par des tuyaux en cuivre. Le choix des tuyaux en polyamide s'était imposé par leur facilité d'utilisation (découpe, remplacement etc.). 
 
 \subsubsection{La polymérisation de l'isobutane}
- L'isobutane \chemform{iC_4H_{10}} appartient à la classe des alcanes. Il est connu pour produire des réactions de polymérisation, ce qui entraine un dépôt dans les chambres \cite{na60}. L'isobutane est également très inflammable ce qui complique sont utilisation en laboratoire. C'est l'une des raisons du choix de sont remplacement par du \chemform{CO_2} dans le prototype SDHCAL et également de son utilisation hors du GIF++, de plus ce gas ne crée pas de dépôt supplémentaire.
+ L'isobutane \chemform{iC_4H_{10}} appartient à la classe des alcanes. Il est connu pour produire des réactions de polymérisation, ce qui entraine un dépôt dans les chambres \cite{na60}. L'isobutane est également très inflammable ce qui complique sont utilisation en laboratoire. C'est l'une des raisons du choix de sont remplacement par du \chemform{CO_2} dans le prototype SDHCAL et également de son utilisation hors du GIF++, de plus ce gaz ne crée pas de dépôt supplémentaire.
 
 \subsubsection{L'attaque du verre par l'acide fluorhydrique HF}
+L'acide fluorhydrique \chemform{HF} provient de la décomposition du \chemform{TFE} lors de l'ionisation en avalanche. Des études on montré qu'en mode streamer la production de \chemform{HF} est comprise entre \num{1.3e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Aielli:2006ih} et $\sim$\num{3e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Abbrescia:2006hk} (\num{1.19e19}\chemform{F^{-}}\si{\per\coulomb} pour \cite{Lu:2009zzd}). Ce composant chimique, très corrosif peut même dissoudre le verre selon la réaction :
+\begin{chemeqn}
+SiO_2+6 HF\longrightarrow H_2SiF_6+H_2O
+\end{chemeqn}
+L'acide hexafluorosilicique ou fluorosilicique (\chemform{H_2SiF_6}) se retrouve ainsi présente sous forme de dépôt aqueux sur les surfaces internes des électrodes amenant à une diminution de la résistivité de surface de ces parois. Cet acide également corrosif peut attaquer également le verre et détériorer l'état de surface des verres. Les défauts de surface conduisent à une déformation du champ électrique à cause notamment de l'effet de pointe et augment ainsi le taux de bruit dans les chambres. Ce accélère à son tour la production de \chemform{HF}, créant un processus en chaine.
+
+Ces attaques des électrodes par les composés fluorés peuvent également faire varier la résistivité volumique du matériau et donc modifier sa fréquence maximale de détection.
+
+Il a été montré que la création de l'acide \chemform{HF} est proportionnelle à la charge parcourant les électrodes. Le mode de fonctionnement avalanche permet donc de limiter la création de cet acide. De plus, la circulation du gaz dans les chambres permet d'évacuer une partie des composés fluorés. Dans CMS, la moitié du \chemform{HF} produit est évacué en faisant circuler le gaz dans les chambres avec un débit permettant de remplacer le volume de gaz des chambres une fois par heure \cite{Abbrescia:2006hk}. Les dépôts fluorés absorbés à la surface du verre peuvent également être libérer en utilisant de l'argon pur \cite{Band:2008zza}.
+
+Afin de limiter les dépôt dans nos chambres, nous avons donc essayé d'augmenter le débit de gaz. Cependant, cette augmentation s'est révélé car le débit total du gaz CMS permis au GIF++ doit être partagé avec toutes les autres expériences utilisant ce gaz.
+Nous avons également remarqué que certaines de nos chambres comportées des fuites ce qui amenait de l'humidité lors des arrêts de gaz par exemple. De plus, les chambres étant montée en série, cette configuration pouvait augmenter la résistance du système. Certaines chambres pouvaient ainsi gonfler et augmenter les fuites diminuant le débit de gaz introduit dans les chambres suivantes. Afin de pallier ce problème, nous avons décider de passer les chambres en parallèle et de placer à chaque entrée des chambres un débitmètre à vanne de régulation afin d'ajuster le débit de chaque chambre afin de vérifier que chacunes d'elles posséder une circulation de gaz.
+
+Au vu de l'état des chambres, il a été décidé de construire de nouvelles chambres de basse résistivité.
+
+\section{Les chambres de basse résistivité de taille RE1/1}
+En par

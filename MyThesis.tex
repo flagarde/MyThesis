@@ -114,8 +114,7 @@
 	},
 }
 \usepackage{ifthen}
-\newcommand{\Cpp}[1][]{$\text{C\hspace{-.25ex}}^{_{_{_{++}}}}
-	\ifthenelse{\equal{#1}{}}{}{\text{\hspace{-.625ex}#1}}$}
+\newcommand{\Cpp}[1][]{$\text{C\hspace{-.25ex}}^{_{_{_{++}}}}\ifthenelse{\equal{#1}{}}{}{\text{\hspace{-.625ex}#1}}$}
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
 
@@ -126,6 +125,8 @@
 \sisetup{locale = DE}
 \DeclareSIUnit{\bits}{bits}
 \DeclareSIUnit{\c}{c}
+
+\DeclareFontShape{OT1}{cmr}{bx}{sc}{<-> cmbcsc10}{}
 %"Bugfix" for fncychap:
 %Without this code there will be an overfull hbox by 10pt on every chapter
 %I don't remember where I found this, but it seems to be unrelated to 
@@ -142,7 +143,7 @@
 	\hbox{\color[gray]{.5}\CNoV\thechapter}\\%
 }
 
-
+\SetProtrusion{encoding={*},family={*},series={*},size={6,7,8}}{1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
 
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing,shapes,positioning,patterns,plotmarks}
 \usepackage{etoolbox}
@@ -293,7 +294,7 @@
  %%%%********************************************************************
  \def\endfquote
  {%
-    \vspace*{0.35cm}
+    %\vspace*{0.15cm}
  	\endgroup\par%
  	\makebox[0pt][l]{%
  	\hspace{0.8\textwidth}%
@@ -310,7 +311,7 @@
   \hfill\mbox{}\hfill\tempa,\ \emph{\tempb}%
   \else%
   \hfill\mbox{}\hfill\tempa,\ \emph{\tempb},\ \tempc%
-  \fi\fi\par%
+  \fi\fi\fi\par%
   \vspace{0.7em}%
  	\end{list}%
  }%
@@ -422,11 +423,18 @@ Qui addit scienciam addit et dolorem
 \MargeSimple{\void}{\void}
 \printbibliography
 \newpage\null\thispagestyle{empty}\newpage
+\microtypesetup{protrusion=false}
 \listoffigures
+\microtypesetup{protrusion=true}
 \newpage\null\thispagestyle{empty}\newpage
+\microtypesetup{protrusion=false}
 \listoftables
+\microtypesetup{protrusion=true}
 \newpage\null\thispagestyle{empty}\newpage
+\microtypesetup{protrusion=false}
 \tableofcontents
 \printindex
+\microtypesetup{protrusion=true}
+\newpage\null\thispagestyle{empty}\newpage
 \thispagestyle{empty}
 \end{document}

@@ -906,8 +906,6 @@ L'ouverture d'une des chambres à montré que les spacers permettant le maintien
 	\label{depot}
 \end{figure}
 
-
-
 \subsection{Causes connues du vieillissement des RPC }
 Plusieurs causes du vieillissement prématurés des chambres RPC peuvent être trouvés dans la littérature :
 
@@ -920,7 +918,7 @@ Bien que nous ayant utilisé des tuyaux de polyamide, qui présente un coefficie
  L'isobutane \chemform{iC_4H_{10}} appartient à la classe des alcanes. Il est connu pour produire des réactions de polymérisation, ce qui entraine un dépôt dans les chambres \cite{na60}. L'isobutane est également très inflammable ce qui complique sont utilisation en laboratoire. C'est l'une des raisons du choix de sont remplacement par du \chemform{CO_2} dans le prototype SDHCAL et également de son utilisation hors du GIF++, de plus ce gaz ne crée pas de dépôt supplémentaire.
 
 \subsubsection{L'attaque du verre par l'acide fluorhydrique HF}
-L'acide fluorhydrique \chemform{HF} provient de la décomposition du \chemform{TFE} lors de l'ionisation en avalanche. Des études on montré qu'en mode streamer la production de \chemform{HF} est comprise entre \num{1.3e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Aielli:2006ih} et $\sim$\num{3e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Abbrescia:2006hk} (\num{1.19e19}\chemform{F^{-}}\si{\per\coulomb} pour \cite{Lu:2009zzd}). Ce composant chimique, très corrosif peut même dissoudre le verre selon la réaction :
+L'acide fluorhydrique \chemform{HF} provient de la décomposition du \chemform{TFE} lors de l'ionisation en avalanche. Des études on montré qu'en mode streamer la production de \chemform{HF} est comprise entre \num{1.19e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Lu:2009zzd} et $\sim$\num{3e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Abbrescia:2006hk} (\num{1.3e19}\chemform{F^{-}}\si{\per\coulomb} pour \cite{Aielli:2006ih}). Ce composant chimique, très corrosif peut même dissoudre le verre selon la réaction :
 \begin{chemeqn}
 SiO_2+6 HF\longrightarrow H_2SiF_6+H_2O
 \end{chemeqn}
@@ -933,11 +931,69 @@ Il a été montré que la création de l'acide \chemform{HF} est proportionnelle
 Afin de limiter les dépôt dans nos chambres, nous avons donc essayé d'augmenter le débit de gaz. Cependant, cette augmentation s'est révélé car le débit total du gaz CMS permis au GIF++ doit être partagé avec toutes les autres expériences utilisant ce gaz.
 Nous avons également remarqué que certaines de nos chambres comportées des fuites ce qui amenait de l'humidité lors des arrêts de gaz par exemple. De plus, les chambres étant montée en série, cette configuration pouvait augmenter la résistance du système. Certaines chambres pouvaient ainsi gonfler et augmenter les fuites diminuant le débit de gaz introduit dans les chambres suivantes. Afin de pallier ce problème, nous avons décider de passer les chambres en parallèle et de placer à chaque entrée des chambres un débitmètre à vanne de régulation afin d'ajuster le débit de chaque chambre afin de vérifier que chacunes d'elles posséder une circulation de gaz.
 
-Au vu de l'état des chambres, il a été décidé de construire de nouvelles chambres de basse résistivité.
+Au vu de l'état des chambres, il a été décidé de construire de nouvelles chambres de basse résistivité de taille \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}.
 
+\newpage
 \section{Les chambres de basse résistivité de taille RE1/1}
-En parallèle à la caractérisation des chambres de basse résistivité, l'étude de la faisabilité de chambre de grande dimension (de la taille des chambres RE1/1) a été effectué. En effet, la limitation par la méthode de production de la taille des verres de basse résistivité nécessite de trouver une manière efficace et robuste d'assembler ces verres.  Deux prototype basé sur deux méthodes d'assemblages différentes des verres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} ont été réalisés.
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=1.0\marginparwidth]{GLA/gaps.png}
+	\captionof{figure}{Schèma de la segmentation en gap des prototypes \cite{gapss}.}
+	\label{gap}
+}
+
+
+\begin{wrapfigure}[17]{R}{0.40\textwidth}
+	\vspace*{-0.75cm}
+	\centering
+	\includegraphics[width=0.30\textwidth]{GLA/strips.jpg}
+	\caption{Les \num{4} partitions de \num{32} strips selon $\eta$.}
+	\label{strips}
+\end{wrapfigure}
+
+En parallèle à la caractérisation des chambres de basse résistivité, l'étude de la faisabilité de chambre de grande dimension (reprenant de nombreuses caractéristique des chambres RE1/1 \cite{gapss}) a été effectué. En effet, la limitation par la méthode de production de la taille des verres de basse résistivité nécessite de trouver une manière efficace et robuste d'assembler ces verres.  Deux prototype basé sur deux méthodes d'assemblages différentes des verres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} ont été réalisés. Les chambres sont constitué de trois gap (cf.fig\ref{gap}). Un PCB, placé entre les gaps du bas et celui du haut, possédant \num{4} rangées de \num{32} strips de $\sim$\SI{1}{\centi\meter} est utilisé afin de récolter le signal (cf.fig\ref{strips}). Les strips sont connectés grâce à des câbles coaxiaux à une carte de test contenant un Asic HARDROC. Pour les deux prototype, l'assemblage des verres est prévu de manière à éviter les zones mortes.
+
 
 \subsection{Les différentes méthodes d'assemblages} 
-La première méthode consiste à collé les verres entre eux grâce à de la colle RHODORSILR$^{\tiny{\textregistered}}$
-CAF-4 afin de former les électrodes. La zone de collage est inférieur à \SI{100}{\micro\meter}. La peinture résistive est ensuite appliquée sur l'électrode ainsi formée.
+\subsubsection{Méthode par collage}
+La première méthode consiste à collé les verres entre eux grâce à de la colle RHODORSIL$^{\tiny{\textregistered}}$
+ CAF-4 afin de former les électrodes. La zone de collage est inférieur à \SI{100}{\micro\meter}. La peinture résistive est ensuite appliquée sur l'électrode ainsi formée. Les trois gaps sont hermétiques et placés dans une cassette en aluminium (cf.fig\ref{colle}).
+ 
+ \begin{figure}[ht!]
+ 	\centering
+ 	\begin{minipage}[t]{.45\textwidth}
+ 	\centering
+ 	\vspace*{1.cm}
+ 	\subfloat[Gap (i) hermétique formé par collage des verres. On voit clairement les zones de collage.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued.png}}
+ 	\end{minipage}
+    \hfill
+    \begin{minipage}[t]{.45\textwidth}
+    \centering
+    \subfloat[Gap (ii) et Gap(iii) hermétique formé par collage des verres dans la cassette evec les strips et le gap(i) au dessous.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued2.png}}
+    \\
+    \vspace*{1cm}
+    \subfloat[La cassette fermée.]{\includegraphics[width=1\textwidth]{GLA/cassette_colle.jpg}}
+    \end{minipage}
+ 	\caption{Photos des gaps et de la cassette. Les entrées et sorties de gaz sont les tuyaux bleus et rouge. La haute tension est amenée par les câbles blancs.}
+ 	\label{colle}
+ \end{figure}
+ 
+ \subsubsection{Méthode par fixation mécanique}
+ La deuxième méthode permet de se passer de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placé sur les pourtours de la cassette en aluminium. Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes. Le gap entre les électrodes est assuré par des fils de pêche perlés. Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressors qui une fois le capot posé, assure le maintient et la planéité des verres sur le PCB.  Avec cette méthode, herméticité est assuré par la cassette, les électrodes d'un gap ne sont donc pas relié entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme la méthode précédente.
+ 
+ \begin{figure}[ht!]
+ 	\centering
+ 	\subfloat[Les différentes verres formant un gap.]{\includegraphics[width=0.45\textwidth]{GLA/meca1.jpg}}
+ 	\hfill
+ 	\subfloat[Les plots assurant le maintient de verres ainsi que les fils de pêche assurant l'espace entre les électrodes d'un gap.]{\includegraphics[width=0.45\textwidth]{GLA/meca2.png}}
+ 	\\
+ 	\subfloat[Pose du PCB au dessus du gap du bas. On peut remarquer, par transparence, les adhésifs de cuivre reliant électriquement les verres d'un gap (encadré en rouge sur la figure).]{\includegraphics[width=0.45\textwidth]{GLA/meca3.png}}
+ 	\hfill
+ 	\subfloat[La cassette fermée hermétiquement.]{\includegraphics[width=0.45\textwidth]{GLA/meca4.png}}
+ 	\caption{Photos du prototype de cassette construite selon la méthode par fixation mécanique.}
+ 	\label{meca}
+ \end{figure}
+ 
+ 

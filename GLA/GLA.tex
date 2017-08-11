@@ -97,7 +97,7 @@ Ces détecteurs ont été instrumentés avec une électronique dite semi-digital
 Le SDHCAL est un prototype de calorimètre ultra-granulaire pour le \textit{Particles Flow Algorithm} (PFA). La taille des cellules de lecture de \SI{1}{\square\centi\meter}, la balance entre la saturation de électronique et le volume de donnée à traiter à amener à opter pour une lecture à trois seuils (\num{2} bits). Pour ne pas introduire d'inhomogénéités, voire de zones mortes dues au système de refroidissement, il a été décidé de ne pas en utiliser. Pour cela, la puissance consommée par l'\textit{Application-specific integrated circuit} (ASIC) est donc la chaleur à dissipée sont réduites par l'emploi d'une alimentation intermittente dite pulsée, permettant de n'allumer l'ASIC que lorsque des données sont à enregistrer. Ce prototype utilise un type d'ASIC développé spécialement pour cet occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
 
 \subsection{La puce de lecture HARDROC}
-L'ASIC HARDROC (cf.fig \ref{hardroc},\ref{hardroc2}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience Oscillation Project with Emulsion-tRacking Apparatus (OPERA) (cf.fig \ref{opera}).
+L'ASIC HARDROC (cf.fig \ref{hardroc},\ref{hardroc2}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience OPERA).
 
 \marginpar
 {
@@ -105,14 +105,6 @@ L'ASIC HARDROC (cf.fig \ref{hardroc},\ref{hardroc2}) est issu d'une collaboratio
 	\includegraphics[width=\marginparwidth]{GLA/hardroc2.jpg}
 	\captionof{figure}{Vue d'un HARDROC soudé.}
 	\label{hardroc2}
-}
-
-\marginpar
-{
-	\centering
-	\includegraphics[width=\marginparwidth]{GLA/OPERA.jpg}
-	\captionof{figure}{Photo du détecteur OPERA.}
-	\label{opera}
 }
 
 \begin{figure}[ht!]
@@ -945,55 +937,132 @@ Au vu de l'état des chambres, il a été décidé de construire de nouvelles ch
 }
 
 
-\begin{wrapfigure}[17]{R}{0.40\textwidth}
-	\vspace*{-0.75cm}
+\begin{wrapfigure}[21]{R}{0.40\textwidth}
+	\vspace*{-1cm}
 	\centering
-	\includegraphics[width=0.30\textwidth]{GLA/strips.jpg}
+	\includegraphics[width=0.37\textwidth]{GLA/strips.jpg}
 	\caption{Les \num{4} partitions de \num{32} strips selon $\eta$.}
 	\label{strips}
 \end{wrapfigure}
 
-En parallèle à la caractérisation des chambres de basse résistivité, l'étude de la faisabilité de chambre de grande dimension (reprenant de nombreuses caractéristique des chambres RE1/1 \cite{gapss}) a été effectué. En effet, la limitation par la méthode de production de la taille des verres de basse résistivité nécessite de trouver une manière efficace et robuste d'assembler ces verres.  Deux prototype basé sur deux méthodes d'assemblages différentes des verres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} ont été réalisés. Les chambres sont constitué de trois gap (cf.fig\ref{gap}). Un PCB, placé entre les gaps du bas et celui du haut, possédant \num{4} rangées de \num{32} strips de $\sim$\SI{1}{\centi\meter} est utilisé afin de récolter le signal (cf.fig\ref{strips}). Les strips sont connectés grâce à des câbles coaxiaux à une carte de test contenant un Asic HARDROC. Pour les deux prototype, l'assemblage des verres est prévu de manière à éviter les zones mortes.
+En parallèle à la caractérisation des chambres de basse résistivité, l'étude de la faisabilité de chambre de grande dimension (reprenant de nombreuses caractéristique des chambres RE1/1 \cite{gapss}) a été effectué. En effet, la limitation par la méthode de production de la taille des verres de basse résistivité nécessite de trouver une manière efficace et robuste d'assembler ces verres.  Deux prototype basé sur deux méthodes d'assemblages différentes des verres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} ont été réalisés. Les chambres sont constitué de trois gap (cf.fig\ref{gap}). Un PCB, placé entre les gaps du bas et celui du haut, possédant \num{4} rangées de \num{32} strips de $\sim$\SI{1}{\centi\meter} est utilisé afin de récolter le signal (cf.fig\ref{strips}). Pour les deux prototype, l'assemblage des verres est prévu de manière à éviter les zones mortes. Les deux prototypes ont été réalisé avec des verres "float glass" afin de limiter l'utilisation de verre de basse résistivité. La solution retenue sera ensuite produite avec des verres de basses résistivité.
 
 
 \subsection{Les différentes méthodes d'assemblages} 
 \subsubsection{Méthode par collage}
 La première méthode consiste à collé les verres entre eux grâce à de la colle RHODORSIL$^{\tiny{\textregistered}}$
- CAF-4 afin de former les électrodes. La zone de collage est inférieur à \SI{100}{\micro\meter}. La peinture résistive est ensuite appliquée sur l'électrode ainsi formée. Les trois gaps sont hermétiques et placés dans une cassette en aluminium (cf.fig\ref{colle}).
+ CAF-4 afin de former les électrodes. La zone de collage est inférieur à \SI{100}{\micro\meter}. La peinture résistive est ensuite appliquée sur l'électrode ainsi formée (cf.fig\ref{a}). Les trois gaps sont hermétiques (cf.fig\ref{b}) et placés dans une cassette en aluminium (cf.fig\ref{c}).
  
  \begin{figure}[ht!]
  	\centering
  	\begin{minipage}[t]{.45\textwidth}
  	\centering
  	\vspace*{1.cm}
- 	\subfloat[Gap (i) hermétique formé par collage des verres. On voit clairement les zones de collage.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued.png}}
+ 	\subfloat[Gap (i) hermétique formé par collage des verres. On voit clairement les zones de collage.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued.png}\label{a}}
  	\end{minipage}
     \hfill
     \begin{minipage}[t]{.45\textwidth}
     \centering
-    \subfloat[Gap (ii) et Gap(iii) hermétique formé par collage des verres dans la cassette evec les strips et le gap(i) au dessous.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued2.png}}
+    \subfloat[Gap (ii) et Gap(iii) hermétique formé par collage des verres dans la cassette evec les strips et le gap(i) au dessous.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued2.png}\label{b}}
     \\
     \vspace*{1cm}
-    \subfloat[La cassette fermée.]{\includegraphics[width=1\textwidth]{GLA/cassette_colle.jpg}}
+    \subfloat[La cassette fermée.]{\includegraphics[width=1\textwidth]{GLA/cassette_colle.jpg}\label{c}}
     \end{minipage}
  	\caption{Photos des gaps et de la cassette. Les entrées et sorties de gaz sont les tuyaux bleus et rouge. La haute tension est amenée par les câbles blancs.}
  	\label{colle}
  \end{figure}
  
  \subsubsection{Méthode par fixation mécanique}
- La deuxième méthode permet de se passer de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placé sur les pourtours de la cassette en aluminium. Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes. Le gap entre les électrodes est assuré par des fils de pêche perlés. Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressors qui une fois le capot posé, assure le maintient et la planéité des verres sur le PCB.  Avec cette méthode, herméticité est assuré par la cassette, les électrodes d'un gap ne sont donc pas relié entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme la méthode précédente.
+ La deuxième méthode permet de se passer de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placé sur les pourtours de la cassette en aluminium (cf.fig\ref{aa}). Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes (cf.fig\ref{cc}). Le gap entre les électrodes est assuré par des fils de pêche perlés (cf.fig\ref{bb}). Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressors qui une fois le capot posé, assure le maintient et la planéité des verres sur le PCB.  Avec cette méthode, herméticité est assuré par la cassette (cf.fig\ref{dd}), les électrodes d'un gap ne sont donc pas relié entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme la méthode précédente.
  
  \begin{figure}[ht!]
  	\centering
- 	\subfloat[Les différentes verres formant un gap.]{\includegraphics[width=0.45\textwidth]{GLA/meca1.jpg}}
+ 	\subfloat[Les différentes verres formant un gap.]{\includegraphics[width=0.45\textwidth]{GLA/meca1.jpg}\label{aa}}
  	\hfill
- 	\subfloat[Les plots assurant le maintient de verres ainsi que les fils de pêche assurant l'espace entre les électrodes d'un gap.]{\includegraphics[width=0.45\textwidth]{GLA/meca2.png}}
+ 	\subfloat[Les plots assurant le maintient de verres ainsi que les fils de pêche assurant l'espace entre les électrodes d'un gap.]{\includegraphics[width=0.45\textwidth]{GLA/meca2.png}\label{bb}}
  	\\
- 	\subfloat[Pose du PCB au dessus du gap du bas. On peut remarquer, par transparence, les adhésifs de cuivre reliant électriquement les verres d'un gap (encadré en rouge sur la figure).]{\includegraphics[width=0.45\textwidth]{GLA/meca3.png}}
+ 	\subfloat[Pose du PCB au dessus du gap du bas. On peut remarquer, par transparence, les adhésifs de cuivre reliant électriquement les verres d'un gap (encadré en rouge sur la figure).]{\includegraphics[width=0.45\textwidth]{GLA/meca3.png}\label{cc}}
  	\hfill
- 	\subfloat[La cassette fermée hermétiquement.]{\includegraphics[width=0.45\textwidth]{GLA/meca4.png}}
+ 	\subfloat[La cassette fermée hermétiquement.]{\includegraphics[width=0.45\textwidth]{GLA/meca4.png}\label{dd}}
  	\caption{Photos du prototype de cassette construite selon la méthode par fixation mécanique.}
  	\label{meca}
  \end{figure}
  
+ \subsection{Comparaison des deux méthodes de constructions}
+ Afin de pouvoir comparer les deux méthode de construction, un banc cosmique à été mise en place afin de vérifier l'efficacité des deux prototype.
  
+ \subsubsection{Le banc de test cosmique}
+ La terre est constamment bombardé par des particules composant le rayonnement cosmique. Ce rayonnement est un flux de noyaux atomiques et de particules de haute énergie circulant dans le vide interstellaire. La plupart d'entre elles interagissent avec l'atmosphère terrestre et produisent des gerbes atmosphériques de particules secondaires (cf.fig\ref{gerbe}).
+ 
+ Au niveau du sol, le flux de particules est principalement composé de muons (cf.fig\ref{flux}) ($\sim$\SI{100}{\per\square\meter\per\second\per\steradian}), celui-ci interagissant très faiblement avec la matière.
+ 
+\noindent
+\begin{minipage}[t]{.44\textwidth}
+\noindent
+\centering
+\includegraphics[width=1\textwidth]{GLA/Gerbe.png}
+\captionof{figure}{Schéma d'une cascade atmosphérique produite par un proton.}
+\label{gerbe}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{.54\textwidth}
+\noindent
+\centering
+\includegraphics[width=0.55\textwidth]{GLA/muon_rate.eps}
+\captionof{figure}{Composition du flux cosmique dans l'atmosphère terrestre pour des particules ayant une énergie supérieur à \SI{1}{\giga\eV}. Les point colorés représentent les mesures de flux de muons négatifs réalisées par plusieurs expériences \cite{Olive:2016xmw}.}
+\label{flux}
+\end{minipage}
+
+Le banc cosmique est constitué d'un ensemble de photomultiplicateur (PM) (au moins deux) mis en coïncidence, qui détectent ainsi le passage des muons. Afin d'éviter tout déclenchement intempestifs dû par exemple à l'alimentation électrique, un PM placé en dehors du banc cosmique assurant un veto. Lorsque tous les PM sont déclenchés y compris celui hors du banc, ces déclenchement proviennent très fortement d'une perturbation électrique. Ce genre d'événement est donc rejetté et la lecture de ces événement ne sera pas effectuée.
+
+Les chambres sont insérées dans ce banc cosmique.bLes strips des chambres sont connectés grâce à des câbles coaxiaux à une carte de test contenant un Asic HARDROC (cf.fig\ref{carte}) ainsi qu'un FPGA contenant la machine d'état. La carte de test est reliée par USB à un ordinateur et est pilotée par une application développée sous l'environnement Laboratory Virtual Instrument Engineering Workbench (LabVIEW$^{\tiny{\textregistered}}$) (cf.fig\ref{labview}). Cette application permet de sélectionner les paramètres du slowcontrol grâce à l'interface, qui sont ensuite chargés dans le HARDROC ainsi que de gérer le démarrage de l'acquisition, la lecture et le rapatriement des données. 
+
+\noindent
+\begin{minipage}[t]{.48\textwidth}
+	\noindent
+	\centering
+	\includegraphics[width=1\textwidth]{GLA/carte.jpg}
+	\captionof{figure}{La carte de test pour le banc cosmique.}
+	\label{carte}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{.48\textwidth}
+	\noindent
+	\centering
+	\includegraphics[width=1\textwidth]{GLA/labview.png}
+	\captionof{figure}{Application LabVIEW$^{\tiny{\textregistered}}$ utilisée pour obtenir l'efficacité des chambres.}
+	\label{labview}
+\end{minipage}
+
+La phase de lecture est déclenchée dès que les photomultiplicateurs (PM) sont en coïncidence ( hormis le PM assurant le veto ). L'application LabVIEW$^{\tiny{\textregistered}}$ effectue à chaque lecture une selection temporelle et affiche les strips touchées pour chacun des trois seuils du HARDROC. Elle permet également d'afficher l'histogramme du nombres de fois ou un strips à était touchées pour chaque seuils ainsi que la multiplicité pour chaque seuils. L'efficacité ainsi que la multiplicité pour chaque seuils est aussi calculés.
+
+ \subsubsection{Comparaison des efficacité des deux méthode de construction}
+L'utilisation du banc cosmique à permis d'effectué une mesure de l'efficacité des deux chambres est ainsi que comparer les deux méthodes de fabrication.
+
+La figure \ref{comparaison} montre l'efficacité de détection des muons pour les deux chambres.
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{1.6}{\input{GLA/BigChambersComparaison.tex}}
+	\caption{Efficacité de détection des muons en fonction de la haute tension appliquée. La chambres construite par collage ( fixation mécanique ) est en rouge (noir).}
+	\label{comparaison}
+\end{figure}
+
+Les efficacités sont similaire. Le prototype créer par fixation mécanique à cependant était choisi car il présente l'avantage de ne pas utiliser de colle et possède une cassette hermétique empêchant les problèmes rencontrés au GIF++. De plus le gonflement des chambres est impossible, la pression du gas étant identique des deux côté de l'électrode.
+
+\section{Tests en faisceaux au SPS}
+Deux chambres par fixation mécanique ont donc été construites (cf.fig\ref{chamverre}), une constituée de verre "float glass" et une autre constituée de verre de basse résistivité. Elle ont été instrumenté avec la même électronique que les chambres de CMS ( FEB, DB) (cf.section\label{cmselec}). Chaque chambre possède \num{4} FEB (deux FEB sont placées au dessus des deux autres) et d'une DB posés sur un support en plexiglas fixé au capot de la chambre (cf.fig\ref{plexi}).
+
+\begin{figure}[ht]
+	\centering
+	\setbox1=\hbox{\includegraphics[width=0.45\textwidth]{GLA/FEBplexis.png}}% The smaller image
+	\setbox2=\hbox{\includegraphics[width=0.40\textwidth]{GLA/ChamberFloat.png}}% The larger image
+	{\,} \hfill
+	\subfloat[La chambre en verre standard.]{%
+		\includegraphics[width=0.40\textwidth]{GLA/ChamberFloat.png}\label{chamverre}} \hfill
+	\subfloat[Les 4 FEB et la DB sur leur support en plexiglas.]{%
+		\raisebox{0.5\ht2-0.5\ht1}{\includegraphics[width=0.45\textwidth]{GLA/FEBplexis.png}\label{plexi}}} \hfill
+	{\,}
+	\caption{La chambre "float glass" instrumentés avec l'électronique de CMS.}
+	\label{chambrefloat}
+\end{figure}

@@ -680,7 +680,7 @@ Le télescope est constitué de chambres de verre de basse resistivité et de ve
 {
 	\centering
 	\includegraphics[width=1.0\marginparwidth]{GLA/boite.png}
-	\captionof{figure}{Boite controllable à distance contenant la SDCC etc.}
+	\captionof{figure}{Boite contrôlable à distance contenant la SDCC etc.}
 	\label{boite}
 }
 
@@ -950,7 +950,7 @@ En parallèle à la caractérisation des chambres de basse résistivité, l'étu
 
 \subsection{Les différentes méthodes d'assemblages} 
 \subsubsection{Méthode par collage}
-La première méthode consiste à collé les verres entre eux grâce à de la colle RHODORSIL$^{\tiny{\textregistered}}$
+La première méthode consiste à collé les verres entre eux grâce à de la colle RHODORSIL\textsuperscript{\textregistered}
  CAF-4 afin de former les électrodes. La zone de collage est inférieur à \SI{100}{\micro\meter}. La peinture résistive est ensuite appliquée sur l'électrode ainsi formée (cf.fig\ref{a}). Les trois gaps sont hermétiques (cf.fig\ref{b}) et placés dans une cassette en aluminium (cf.fig\ref{c}).
  
  \begin{figure}[ht!]
@@ -1015,7 +1015,7 @@ La première méthode consiste à collé les verres entre eux grâce à de la co
 
 Le banc cosmique est constitué d'un ensemble de photomultiplicateur (PM) (au moins deux) mis en coïncidence, qui détectent ainsi le passage des muons. Afin d'éviter tout déclenchement intempestifs dû par exemple à l'alimentation électrique, un PM placé en dehors du banc cosmique assurant un veto. Lorsque tous les PM sont déclenchés y compris celui hors du banc, ces déclenchement proviennent très fortement d'une perturbation électrique. Ce genre d'événement est donc rejetté et la lecture de ces événement ne sera pas effectuée.
 
-Les chambres sont insérées dans ce banc cosmique.bLes strips des chambres sont connectés grâce à des câbles coaxiaux à une carte de test contenant un Asic HARDROC (cf.fig\ref{carte}) ainsi qu'un FPGA contenant la machine d'état. La carte de test est reliée par USB à un ordinateur et est pilotée par une application développée sous l'environnement Laboratory Virtual Instrument Engineering Workbench (LabVIEW$^{\tiny{\textregistered}}$) (cf.fig\ref{labview}). Cette application permet de sélectionner les paramètres du slowcontrol grâce à l'interface, qui sont ensuite chargés dans le HARDROC ainsi que de gérer le démarrage de l'acquisition, la lecture et le rapatriement des données. 
+Les chambres sont insérées dans ce banc cosmique.bLes strips des chambres sont connectés grâce à des câbles coaxiaux à une carte de test contenant un Asic HARDROC (cf.fig\ref{carte}) ainsi qu'un FPGA contenant la machine d'état. La carte de test est reliée par USB à un ordinateur et est pilotée par une application développée sous l'environnement Laboratory Virtual Instrument Engineering Workbench (LabVIEW\textsuperscript{\textregistered}) (cf.fig\ref{labview}). Cette application permet de sélectionner les paramètres du slowcontrol grâce à l'interface, qui sont ensuite chargés dans le HARDROC ainsi que de gérer le démarrage de l'acquisition, la lecture et le rapatriement des données. 
 
 \noindent
 \begin{minipage}[t]{.48\textwidth}
@@ -1030,11 +1030,11 @@ Les chambres sont insérées dans ce banc cosmique.bLes strips des chambres sont
 	\noindent
 	\centering
 	\includegraphics[width=1\textwidth]{GLA/labview.png}
-	\captionof{figure}{Application LabVIEW$^{\tiny{\textregistered}}$ utilisée pour obtenir l'efficacité des chambres.}
+	\captionof{figure}{Application LabVIEW\textsuperscript{\textregistered} utilisée pour obtenir l'efficacité des chambres.}
 	\label{labview}
 \end{minipage}
 
-La phase de lecture est déclenchée dès que les photomultiplicateurs (PM) sont en coïncidence ( hormis le PM assurant le veto ). L'application LabVIEW$^{\tiny{\textregistered}}$ effectue à chaque lecture une selection temporelle et affiche les strips touchées pour chacun des trois seuils du HARDROC. Elle permet également d'afficher l'histogramme du nombres de fois ou un strips à était touchées pour chaque seuils ainsi que la multiplicité pour chaque seuils. L'efficacité ainsi que la multiplicité pour chaque seuils est aussi calculés.
+La phase de lecture est déclenchée dès que les photomultiplicateurs (PM) sont en coïncidence ( hormis le PM assurant le veto ). L'application LabVIEW\textsuperscript{\textregistered} effectue à chaque lecture une selection temporelle et affiche les strips touchées pour chacun des trois seuils du HARDROC. Elle permet également d'afficher l'histogramme du nombres de fois ou un strips à était touchées pour chaque seuils ainsi que la multiplicité pour chaque seuils. L'efficacité ainsi que la multiplicité pour chaque seuils est aussi calculés.
 
  \subsubsection{Comparaison des efficacité des deux méthode de construction}
 L'utilisation du banc cosmique à permis d'effectué une mesure de l'efficacité des deux chambres est ainsi que comparer les deux méthodes de fabrication.
@@ -1076,7 +1076,7 @@ Deux chambres par fixation mécanique ont donc été construites (cf.fig\ref{cha
 \end{wrapfigure}
 
 Les deux chambres ont été placés sur la ligne H2 (cf.fig\ref{GCH2}) situé dans la "North Area" (cf.fig\ref{complexe}) du SPS ainsi que deux autres chambres Bakélite appartenant à nos collègues Italiens. Pour des raisons de simplicité et de sécurité \footnote{L'isobutane est imflammable.}, le mélange de gaz est constitué de 93\% \chemform{TFE}, 5\% \chemform{CO_2}, 2\% \chemform{SF_6}. Ce test en faisceaux avait pour but de se familiariser avec l'électronique de CMS ainsi que le système d'acquisition et le programme de prise de données utilisé par nos collègues GIF++ travaillant sur les chambres de CMS. 
-Chacune des partitions de la chambre de basse résistivité ( notée A, B, C et D ) sont reliée un Time-to-digital converter (TDC) CAEN V1190A (cf.fig\ref{TDC}) \cite{TDC}. Pour des raisons de câbles, seul la partition A de la chambre "float glass" a été connectée. Les TDC sont enfichés dans un crate VERSAModule Eurocard (VME). Le crate est contrôlable à distance grâce à un module VME-USB2.0 Bridge CAEN V1718 (cf.fig\ref{TDC}) \cite{VME} relié par USB à un ordinateur. Les DB permettant de régler les seuils des chambres sont contrôlés grâce à une application LabVIEW$^{\tiny{\textregistered}}$. Les hautes tensions des chambres sont controllable par telnet. 
+Chacune des partitions de la chambre de basse résistivité ( notée A, B, C et D ) sont reliée un Time-to-digital converter (TDC) CAEN V1190A (cf.fig\ref{TDC}) \cite{TDC}. Pour des raisons de câbles, seul la partition A de la chambre "float glass" a été connectée. Les TDC sont enfichés dans un crate VERSAModule Eurocard (VME). Le crate est contrôlable à distance grâce à un module VME-USB2.0 Bridge CAEN V1718 (cf.fig\ref{TDC}) \cite{VME} relié par USB à un ordinateur. Les DB permettant de régler les seuils des chambres sont contrôlés grâce à une application LabVIEW\textsuperscript{\textregistered}. Les hautes tensions des chambres sont contrôlable par telnet. 
 
 Les TDC ont une résolution temporelle de \SI{100}{\pico\second}. Ils enregistrent en continu dans une mémoire tampon les hits. Un ensemble de quatre PM permet de détecter le passage des particules et de déclencher l'enregistrement d'une fenêtre temporelle de la mémoire tampon des TDC. Le timestamp du début de cette fenêtre sélectionnée est réaligné avec $0$.
 
@@ -1128,10 +1128,10 @@ On observe bien une baisse de l'efficacité avec l'augmentation du seuil appliqu
 
 Bien que l'efficacité semble correspondre à l'allure attendu, le niveau de bruit des chambres est très élevé, de l'ordre de $\sim\SI{e4}{\hit\per\strip\per\second}$ (cf.fig\ref{noisH2B}) pour la chambre de basse résistivité et de l'ordre de $\sim\SI{e3}{\hit\per\strip\per\second}$ (cf.fig\ref{noisH2H}) pour la chambre "float glass".
 
-%\begin{figure}[ht]
-%	\centering
-%	\subfloat[Taux de bruit par strip dans la chambre en verre de basse résistivité.]{\includegraphics[width=0.40\textwidth]{GLA/NOISEH2H.png}\label{noisH2B}} 
-%	\hfill
-%	\subfloat[Taux de bruit par strip dans la chambre en verre "float glass".]{\includegraphics[width=0.45\textwidth]{GLA/NOISEH2B.png}\label{noisH2H}}
-%	\caption{Taux de bruit par strips en fonction du strip. Les traits verticaux rouges représente les limites des partitions.}
-%\end{figure}
+\begin{figure}[ht]
+	\centering
+	\subfloat[Taux de bruit par strip dans la chambre en verre de basse résistivité.]{\includegraphics[width=0.85\textwidth]{GLA/NOISEH2H.png}\label{noisH2B}} 
+	\\
+	\subfloat[Taux de bruit par strip dans la chambre en verre "float glass".]{\includegraphics[width=0.85\textwidth]{GLA/NOISEH2B.png}\label{noisH2H}}
+	\caption{Taux de bruit par strips en fonction du strip. Les traits verticaux rouges représente les limites des partitions.}
+\end{figure}

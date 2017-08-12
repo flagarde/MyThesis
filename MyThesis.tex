@@ -25,6 +25,7 @@
 %\end{varwidth}
 %}
 %\SetWatermarkScale{0.3}
+\usepackage{textcomp}
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{float}
@@ -102,7 +103,6 @@
 \usepackage[tight]{shorttoc}
 \usepackage{chemist}
 \usepackage{listing}
-
 \newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
 \pgfplotsset{compat=newest}
 \usepgfplotslibrary{external,colormaps} 
@@ -134,7 +134,6 @@
 %I don't remember where I found this, but it seems to be unrelated to 
 %the problem sice the header looks the same when commented out.     
 %--------------------------------------------------------------------------
-
 \renewcommand{\DOCH}{%
 	\settowidth{\py}{\CNoV\thechapter}
 	%\addtolength{\py}{-2pt}      % Amount of space by which the
@@ -146,7 +145,7 @@
 }
 
 \SetProtrusion{encoding={*},family={*},series={*},size={6,7,8}}{1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
-
+\microtypecontext{kerning=french}
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing,shapes,positioning,patterns,plotmarks}
 \usepackage{etoolbox}
 \newcolumntype{Y}[1]{>{\centering\arraybackslash}p{#1}<{\centering\arraybackslash}}
@@ -379,6 +378,7 @@
 }
 
 \begin{document}
+
 \frontmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Page de garde %%%%%%%%%%%%

@@ -25,7 +25,6 @@
 %\end{varwidth}
 %}
 %\SetWatermarkScale{0.3}
-\usepackage{textcomp}
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{float}
@@ -40,7 +39,7 @@
 \usepackage{collcell}
 \usepackage{booktabs}
 \usepackage{xcolor,colortbl}
-\usepackage[backend=biber, natbib=true,style=numeric,sorting=none,hyperref=true]{biblatex}
+\usepackage[backend=biber,style=numeric,sorting=none,hyperref=true]{biblatex}
 \usepackage{csquotes}
 \usepackage{cellspace}
 \cellspacetoplimit=4pt
@@ -84,6 +83,9 @@
 \usepackage{lipsum}
 \usepackage[Bjornstrup]{fncychap}
 \usepackage{hyperref}
+%%% --- The following two lines are what needs to be added --- %%%
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
 \usepackage[all]{hypcap}
 \usepackage[french,tight]{minitoc}
 \hypersetup{colorlinks=true,breaklinks=true,bookmarksopen=true,urlcolor=gray,citecolor=gray,linkcolor=gray}                                                    
@@ -125,6 +127,7 @@
 \sisetup{locale = DE}
 \DeclareSIUnit{\bits}{bits}
 \DeclareSIUnit{\hit}{Hits}
+\DeclareSIUnit{\hitt}{Hit}
 \DeclareSIUnit{\strip}{Strip}
 \DeclareSIUnit{\c}{c}
 

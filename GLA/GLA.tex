@@ -1126,12 +1126,83 @@ De nombreux scans ont été réalisés, notamment l'efficacité de la chambre en
 
 On observe bien une baisse de l'efficacité avec l'augmentation du seuil appliqué. Un point de fonctionnement à \SI{7000}{\volt} pour un seuil de \SI{300}{\milli\volt} semble raisonnable. Une valeur plus petite du seuil augmenterait le niveau de bruit sans augmenter l'efficacité.
 
-Bien que l'efficacité semble correspondre à l'allure attendu, le niveau de bruit des chambres est très élevé, de l'ordre de $\sim\SI{e4}{\hit\per\strip\per\second}$ (cf.fig\ref{noisH2B}) pour la chambre de basse résistivité et de l'ordre de $\sim\SI{e3}{\hit\per\strip\per\second}$ (cf.fig\ref{noisH2H}) pour la chambre "float glass".
+Bien que l'efficacité semble correspondre à l'allure attendu, le niveau de bruit des chambres est très élevé, de l'ordre de $\sim\SI{e5}{\hit\per\strip\per\second}$ (cf.fig\ref{noisH2B}) pour la chambre de basse résistivité et de l'ordre de $\sim\SI{e3}{\hit\per\strip\per\second}$ (cf.fig\ref{noisH2H}) pour la chambre "float glass". 
 
-\begin{figure}[ht]
+Les figures ont été réalisées sans faisceau, en utilisant un générateur de signal pour mimer la coïncidence des scintillateurs "false-trigger".
+
+\begin{figure}[ht!]
 	\centering
+	\vspace*{2.5cm}
 	\subfloat[Taux de bruit par strip dans la chambre en verre de basse résistivité.]{\includegraphics[width=0.85\textwidth]{GLA/NOISEH2H.png}\label{noisH2B}} 
 	\\
+	\vspace*{2.5cm}
 	\subfloat[Taux de bruit par strip dans la chambre en verre "float glass".]{\includegraphics[width=0.85\textwidth]{GLA/NOISEH2B.png}\label{noisH2H}}
-	\caption{Taux de bruit par strips en fonction du strip. Les traits verticaux rouges représente les limites des partitions.}
+	\caption{Taux de bruit par strips pour les deux chambres. Les traits verticaux rouges représente les limites des partitions. La tension est appliquée est fixé à \SI{7000}{\volt} et le seuil à \SI{220}{\milli\volt}}
 \end{figure}
+
+
+
+Une étude du taux de bruit en fonction de la haute tension (cf.fig\ref{HVNOISEH2}) ainsi que du seuil (cf.fig\ref{THNOISEH2}) ont été effectuées. Afin de pouvoir comparer entre les deux chambres, seul les partitions C des deux chambres ont été analysées.
+Il est a noté que le seuil minimal avant de souffrir du bruit électronique est $\sim$\SI{180}{\milli\volt}.
+
+\noindent
+\begin{minipage}[th!]{.48\textwidth}
+	\noindent
+	\centering
+	\includegraphics[width=1\textwidth]{GLA/HVNOISEH2.png}
+	\captionof{figure}{Taux de bruit des partitions C des chambres en fonction de la tension appliqué. Le seuil est fixé à \SI{250}{\milli\volt}. La chambre en verre standard ( de basse résitivité ) est en rouge ( noir ).}
+	\label{HVNOISEH2}
+\end{minipage}%
+\hfill
+\begin{minipage}[th!]{.48\textwidth}
+	\noindent
+	\centering
+	\includegraphics[width=1\textwidth]{GLA/THNOISEH2.png}
+	\captionof{figure}{Taux de bruit des partitions C des chambres en fonction du seuil appliqué. La tension appliquée est fixée à \SI{7000}{\volt}. La chambre en verre standard ( de basse résitivité ) est en rouge ( noir ).}
+	\label{THNOISEH2}
+\end{minipage}
+
+Une investigation approfondie à permis d'améliorer la masse et d'améliorer le câblage des chambres afin de réduire le bruit. Des tests plus poussés ont également été effectué à Lyon afin de mieux caractériser les FEB et déceler certaines présentant des défauts. Tout ceci à conduit à la réduction du bruit d'un facteur \num{100}, celui-ci passant de $\sim\SI{e5}{\hit\per\strip\per\second}$ à $\sim\SI{e3}{\hit\per\strip\per\second}$
+
+\section{Programme d’analyse pour les chambres à élecronique CMS}
+Parallèlement, un programme d'analyse de donnée de ces chambres plus sophistiqué a été réalisé. Ce programme utilise les données au format ROOT fournit par la DAQ de nos collégues du GIF++.
+
+\subsection{Sélection de la zone temporelle du signal}
+Chaque timestamp des hits d'un strip est réaligné avec le timestamp moyen de la chambre en appliquant la formule :
+\begin{equation}
+T^{'}_{n}=T_{n}-\bar{T}_{strip\, n}+\bar{T}_{chambre}
+\end{equation}
+avec $T^{'}_{n}$ le timestamp du strip $n$ aligné, $T_{n}$ le timestamp du strip $n$ non aligné $\bar{T}_{strip\, n}$ le timestamp moyen du strip $n$ et $\bar{T}_{chambre}$ le timestamp moyen de la chambre.
+
+Un ajustement de la distribution des hits en fonction du timestamp grâce à MINUIT est effectué. 
+
+Plusieurs fonction ont été testées :
+\begin{itemize}[label=$\bullet$]
+	\item Gaussien et une constante : \\ $a.e^{-\frac{1}{2}\frac{(x-b)^2}{c}}+d$ 
+	\item Somme de deux Gaussiennes et d'une constante : \\ $a.e^{-\frac{1}{2}\frac{(x-b)^2}{c}}+d.e^{-\frac{1}{2}\frac{(x-e)^2}{f}}+g$ 
+	\item Crystal-Ball où $x$ est remplacé par $-x$ : \\ $\frac{1}{b\left(\frac{d}{|c|}\frac{1}{n-1}e^{-\frac{|c|^2}{2}}+\sqrt{\frac{\pi}{2}}\left(1+\erf\left(\frac{|c|}{\sqrt{2}}\right)\right) \right)}\left\{
+	\begin{array}{ll}
+	e^{-\frac{1}{2}\frac{(-x-a)^2}{b^2}} & \mbox{si } \frac{-x-a}{b}>-c \\
+	\left(\frac{d}{|c|}\right)^d e^{-\frac{|c|^2}{2}} (\frac{d}{|c|}-|c|-\frac{-x-a}{b})^{-d} & \mbox{si }\frac{-x-a}{b}\leq c
+	\end{array}
+	\right.$
+\end{itemize}
+où $a$, $b$, $c$, $d$, $e$ et $f$ sont des paramètres de l'ajustement et $\erf(x)$ est la fonction d'erreur de Gauss\footnote{$\erf(x)=\frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2} \dd t$}.
+
+La figure \ref{fitting} montre un exemple d'ajustement du nombre de hit en fonction du timestamp avec les trois fonctions choisies pour les timestamps non alignés (cf.fig\ref{nonalign}) et alignés (cf.fig\ref{align})
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Timestamps des strips non-alignés.]{\scalebox{0.50}{\input{GLA/fitting_unaligned.tex}}\label{nonalign}}
+	\\
+	\subfloat[Timestamps des strips alignés.]{\scalebox{0.50}{\input{GLA/fitting_aligned.tex}}\label{align}}
+	\caption{Distribution du nombre de hits par timestamp et ajustement de cette distribution par la somme d'une Gaussien et une constante (vert), la somme de deux Gaussiennes et d'une constante (rouge) et une Crystal-Ball (bleu).}
+	\label{fitting}
+\end{figure}
+
+La somme de deux Gaussiennes et d'une constante à été choisie car elle reproduit le plus justement les distributions de tous les runs. La fenêtre temporelle est choisie telle que $T^{'}\in \left[b-3c,b+3c\right]$.
+
+\subsection{Contamination de l'efficacité par les hits de bruit}
+
+
+

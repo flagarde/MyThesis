@@ -37,7 +37,7 @@
 \usepackage{calc}
 \usepackage{lmodern}
 \usepackage{microtype}
-\usepackage[top=2.05cm,bottom=1.1cm,left=1cm,right=5cm,marginparsep=0.50cm,marginparwidth=4.25cm,headheight=25pt,showframe]{geometry}
+\usepackage[top=2.05cm,bottom=1.1cm,left=1cm,right=5cm,marginparsep=0.50cm,marginparwidth=4.25cm,headheight=25pt]{geometry}
 \usepackage{booktabs}
 \usepackage{layout}
 \usepackage{graphicx}
@@ -136,6 +136,12 @@
 	\hbox{\color[gray]{.5}\CNoV\thechapter}\\%
 }
 
+\makeatletter
+\newcommand{\listequation}[2]{$\displaystyle #1$\hfill\refstepcounter{equation}\label{#2}\textup{\tagform@{\theequation}}}
+\makeatother
+
+
+
 \SetProtrusion{encoding={*},family={*},series={*},size={6,7,8}}{1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
 \microtypecontext{kerning=french}
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing,shapes,positioning,patterns,plotmarks}
@@ -208,8 +214,8 @@
 \mtcsettitle{minitoc}{Contenu :}
 \usepackage{listings}
 \usepackage{cleveref} %GEEENIAAAAL!!!
-\let\oldfootnotesize\footnotesize
-\renewcommand*{\footnotesize}{\oldfootnotesize\fontsize{5}{7}}
+%\let\oldfootnotesize\footnotesize
+%\renewcommand*{\footnotesize}{\oldfootnotesize\fontsize{5}{7}}
 
 \captionsetup{justification=raggedright,labelfont={color=gray,bf,small},font=small}
 
@@ -356,7 +362,7 @@
 				\vspace*{-0.30cm}
 				\fontsize{55}{10}\selectfont \hbox{\color[gray]{.5}\CNoV\thechapter}
 			\end{minipage}%
-			\hspace*{-0.164\mylengthh}
+			\hspace*{-0.16\mylengthh}
 			\makebox[\myrightmargin][r]{\balajipage{\dimexpr\myrightmargin-0.5\marginparsep\relax}}%
 		\end{minipage}
 	}
@@ -387,8 +393,9 @@
 	\include{PG/PG}
 \end{titlepage}
 \cleardoublepage
-
+\microtypesetup{protrusion=false}
 \dominitoc
+\microtypesetup{protrusion=true}
 \begin{titlepage}
 \newgeometry{left=0cm,bottom=1.5cm,right=0cm,top=1.5cm,headheight=45pt}
 \thispagestyle{empty}
@@ -406,11 +413,7 @@ Qui addit scienciam addit et dolorem
 \pagestyle{mystyle}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{#1}{}}
-\MargeSimple{%
-	%\barre
-	\leftnum}
-{%\barre
-	\rightnum}
+\MargeSimple{\leftnum}{\rightnum}
 {\fontsize{11}{11} \selectfont
 \include{REM/REM}
 \include{INT/INT}

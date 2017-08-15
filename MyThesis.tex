@@ -14,6 +14,7 @@
 \finalhyphendemerits=6000
 \RequirePackage[l2tabu, orthodox]{nag}
 \usepackage{textcomp}
+\usepackage{afterpage}
 \usepackage{pdflscape}
 \usepackage{rotating}
 \usepackage{float}
@@ -99,6 +100,8 @@
 \usepgfplotslibrary{external,colormaps} 
 \tikzexternalize
 \tikzset{%
+	external/force remake=false,
+	/tikz/external/optimize=false,
 	external/system call={pdflatex \tikzexternalcheckshellescape --halt-on-error --interaction=batchmode --output-directory=./build --jobname "\image" "\texsource"},
 	/pgf/images/include external/.code={%
 		\includegraphics{build/#1}%
@@ -108,12 +111,12 @@
 \newcommand{\Cpp}[1][]{$\text{C\hspace{-.25ex}}^{_{_{_{++}}}}\ifthenelse{\equal{#1}{}}{}{\text{\hspace{-.625ex}#1}}$}
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
-
+\usepackage{tocbibind}
 %\DeclareMathSymbol{\Omega}{\mathalpha}{letters}{"0A}% italics
 \DeclareMathSymbol{\varOmega}{\mathalpha}{operators}{"0A}% upright
 \providecommand*{\upOmega}{\varOmega}% for siunitx
 \usepackage[binary-units=true]{siunitx}
-\sisetup{locale = DE}
+\sisetup{locale = FR}
 \DeclareSIUnit{\bits}{bits}
 \DeclareSIUnit{\hit}{Hits}
 \DeclareSIUnit{\hitt}{Hit}
@@ -389,14 +392,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Page de garde %%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{page}{-1}
+\begin{titlepage}	
+	\setcounter{page}{-1}
+	\include{PG/PG}
+\end{titlepage}
+\setcounter{page}{-1}
+\shipout\null
+\shipout\null
 \begin{titlepage}	
 	\include{PG/PG}
 \end{titlepage}
-\cleardoublepage
 \microtypesetup{protrusion=false}
 \dominitoc
 \microtypesetup{protrusion=true}
 \begin{titlepage}
+	\setcounter{page}{3}
 \newgeometry{left=0cm,bottom=1.5cm,right=0cm,top=1.5cm,headheight=45pt}
 \thispagestyle{empty}
 \vspace*{5cm}
@@ -406,6 +417,7 @@ Qui addit scienciam addit et dolorem
 \end{flushright}
 \end{fquote}
 \end{titlepage}
+\setcounter{page}{4}
 \pagestyle{void}
 \MargeSimple{\leftnum}{\rightnum}
 \sommaire

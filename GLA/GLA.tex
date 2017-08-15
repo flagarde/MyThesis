@@ -2,6 +2,8 @@
 \renewcommand\chapterillustration{GLA/gla}
 \ThisULCornerWallPaper{1}{\chapterillustration}
 \minitoc
+
+\newpage
 \lettrine[lines=4, slope=-0.5em]{C}{e} chapitre comporte une description des plaques résistives de verre de basse résisitivité ainsi que certaines de leurs caractéristiques. Il comporte également les résultats obtenus lors des nombreuses campagnes de tests en faisceaux organisées au SPS, PS et Gamma Iradiation Facility (GIF++). Ces résultats ont fait l'objet d'une conférence lors de RPC2016 à Ghent, de plusieurs proceeding \cite{Lagarde:2016fvf}\cite{Gouzevitch:2016pcr} ainsi que de nombreux posters.
 
 
@@ -31,7 +33,7 @@ La résistivité de ce verre est \num{100} à \num{1000} fois moins importante q
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.75\textwidth]{GLA/resi.png}
+	\includegraphics[width=0.80\textwidth]{GLA/resi.png}
 	\captionof{figure}{Évolution du courant (courbe bleue) et de la résistivité volumique (courbe rouge) en fonction du temps d'une électrode de verre de basse résistivité soumise à une tension de \SI{1000}{\volt} pendant \num{32} jours.}
 	\label{resi}
 \end{figure}
@@ -97,7 +99,7 @@ Ces détecteurs ont été instrumentés avec une électronique dite semi-digital
 Le SDHCAL est un prototype de calorimètre ultra-granulaire pour le \textit{Particle Flow Algorithm} (PFA). La taille des cellules de lecture de y est  \SI{1}{\square\centi\meter}. La balance entre la saturation de l'électronique et le volume de données à traiter à amener à opter pour une lecture à trois seuils (\num{2} bits). Pour ne pas introduire d'inhomogénéités, voire de zones mortes dues au système de refroidissement, il a été décidé de ne pas en utiliser. Pour cela, la puissance consommée par l'\textit{Application-specific integrated circuit} (ASIC) et donc la chaleur à dissipée sont réduites par l'emploi d'une alimentation intermittente dite pulsée, permettant de n'allumer l'ASIC que lorsque des données sont à enregistrer. Ce prototype utilise un type d'ASIC développé spécialement pour cette occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
 
 \subsection{La puce de lecture HARDROC}
-L'ASIC HARDROC (cf.fig \ref{hardroc},\ref{hardroc2}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience OPERA).
+L'ASIC HARDROC (cf.fig \ref{hardroc2},\ref{hardroc}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience OPERA).
 
 \marginpar
 {
@@ -109,7 +111,7 @@ L'ASIC HARDROC (cf.fig \ref{hardroc},\ref{hardroc2}) est issu d'une collaboratio
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.5\textwidth]{GLA/HARDROC.png}
+	\includegraphics[width=0.35\textwidth]{GLA/HARDROC.png}
 	\captionof{figure}{Schéma électronique du HARDROC.}
 	\label{hardroc}
 \end{figure}
@@ -120,7 +122,7 @@ Le schéma simplifié du HARDROC est donné par la figure \ref{scheme}. La parti
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{GLA/scheme.png}
+	\includegraphics[width=0.65\textwidth]{GLA/scheme.png}
 	\captionof{figure}{Schéma simplifié du HARDROC.}
 	\label{scheme}
 \end{figure}
@@ -162,32 +164,37 @@ Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de
 
 \subsubsection{Les trois traitements de mise en forme rapide (FSB)}
 En sortie du miroir à \num{8} bits, le signal passe dans trois circuits de traitement de mise en forme placés en parallèle. Ils consistent en un filtrage des signaux fournis en entrée afin d'éviter les perturbations dans le signal de sortie du préamplificateur ainsi que d'augmenter le rapport signal sur bruit. FSB1 et FSB2 (cf.fig\ref{fsb1}) contrairement à FSB0 (cf.fig\ref{fsb0}) possèdent un système de \num{4} miroirs de courant afin de réduire le gain en entrée et ainsi augmenter la gamme dynamique. Le filtre FSB0 est dédié aux charges d'entrée allant de \SI{10}{\femto\coulomb} à quelques centaines de \si{\femto\coulomb}, FSB1 qui possède \num{4} miroirs permet de traiter des signaux allant de \SI{100}{\femto\coulomb} à plus de \SI{1}{\pico\coulomb}; quant à FSB2 il permet de traiter des signaux de \SI{1}{\pico\coulomb} à \SI{30}{\pico\coulomb}.
+
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{GLA/FSB0.png}
+	\includegraphics[width=0.60\textwidth]{GLA/FSB0.png}
 	\captionof{figure}{Schéma de FSB0.}
 	\label{fsb0}
 \end{figure}
+
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{GLA/FSB1.png}
 	\captionof{figure}{Schéma de FSB1/2.}
 	\label{fsb1}
 \end{figure}
-Il est possible d'activer des résistances et des condensateurs dans la boucle de contre réaction du filtre (cf.fig\ref{fsb0},(cf.fig\ref{fsb1})), tout comme les gains des FSB, ils sont réglables par des mots binaires envoyés lors de la configuration des puces au début d'un run (slow control). Une étude poussée à été réalisée lors des tests pour le SDHCAL et nous avons gardé les valeurs trouvées comme les plus adaptées pour le gain des miroirs ainsi que pour la configuration de la boucle de contre-réaction.
+
+Il est possible d'activer des résistances et des condensateurs dans la boucle de contre réaction du filtre (cf.fig\ref{fsb0},cf.fig\ref{fsb1}). Tout comme les gains des FSB, ils sont réglables par des mots binaires envoyés lors de la configuration des puces au début d'un run (slow control). Une étude poussée à été réalisée lors des tests pour le SDHCAL et nous avons gardé les valeurs trouvées comme les plus adaptées pour le gain des miroirs ainsi que pour la configuration de la boucle de contre-réaction.
 
 La figure \ref{signal} montre la forme du signal en sortie des filtres FSB pour trois injections de charges différentes.
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{GLA/SIGNAL.png}
+	\includegraphics[width=0.45\textwidth]{GLA/SIGNAL.png}
 	\captionof{figure}{Forme du signal en sortie des FSB pour des injections de charges de \SI{100}{\femto\coulomb} (bleu) , \SI{1}{\pico\coulomb} (vert) et \SI{10}{\pico\coulomb} (rouge). FSB0 a pour gain \num{1}, FSB1 1/4 et FSB2 1/8.}
 	\label{signal}
 \end{figure}
 
+\vspace*{-1.5cm}
+
 \subsubsection{Discriminateurs et bascules}
 Chaque sortie de FSB est connectée à un discriminateur. Les seuils des discriminateurs sont globaux aux \num{64} voies de la puce et sont réglables grâce à trois convertisseurs digital-analogique (DAC) de \num{10} bits (de \SIrange{0}{123}{}). Il est donc possible de régler le seuil de manière à déclencher le discriminateur pour une charge donnée déposée sur les cellules actives du détecteur.
 
-Les facteurs de conversion, qui permettent de passer de la valeur du DAC à la valeur du seuil sur la charge induite sur une cellule active, ont été déterminés à l'aide d'injections de charges. Un condensateur de \SI{2}{\pico\farad} est activable par slow-control à cet effet, et permet d'injecter une charge donnée sur les \num{64} canaux du HARDROC. Pour chaque valeur de charge injectée, la valeur du seuil de basculement correspondant à une efficacité de détection de 50\% a été mesurée \cite{kieffer:tel-00751999}. Les courbes de ces valeurs de basculement pour chaque canal en fonction de la charge injectée sont ensuite obtenues, pour chaque seuil. En soustrayant les piédestaux ont obtient les courbes suivantes :
+Les facteurs de conversion, qui permettent de passer de la valeur du DAC à la valeur du seuil sur la charge induite sur une cellule active, ont été déterminés à l'aide d'injections de charges. Un condensateur de \SI{2}{\pico\farad} est activable par slow-control à cet effet, et permet d'injecter une charge donnée sur les \num{64} canaux du HARDROC. Pour chaque valeur de charge injectée, la valeur du seuil de basculement correspondant à une efficacité de détection de 50\% a été mesurée \cite{kieffer:tel-00751999}. Les courbes de ces valeurs de basculement pour chaque canal en fonction de la charge injectée sont ensuite obtenues, pour chaque seuil. En soustrayant les piédestaux ont obtient les courbes de la figure \ref{seuils}.
 
 \begin{figure}[ht!]
 	\centering
@@ -198,13 +205,16 @@ Les facteurs de conversion, qui permettent de passer de la valeur du DAC à la v
 	\subfloat[Seuil de basculement pour DAC2]{\includegraphics[width=.30\linewidth]{GLA/seuil3.png}}
 	\caption{Seuil de basculement pour seuils (DAC0, DAC1, DAC2), en fonction de la charge injectée, pour \num{64} canaux d'un HARDROC. La valeur du piédestal a été soustraite.}
 	\label{seuils}
-\end{figure}
+\end{figure}%
 
 L'ajustement linéaire des courbes \ref{seuils} permet d'obtenir la valeur du seuil en fonction de la valeur de DAC pour chaque seuil :
+
 \begin{equation}
 Seuil_{i}=\frac{DAC_{i}-p_{i}}{\lambda_{i}} [pC]
 \end{equation}
+
 où $\lambda_{i}$ est le coefficient directeur de la droite obtenue après ajustement linéaire et $p_{i}$ est la valeur du piédestal. Les valeurs de ces paramètres pour chaque seuil sont données dans le tableaux suivant :
+
 \begin{table}[H]
 	\centering
 \begin{tabular}{|O|O|O|N}
@@ -220,9 +230,11 @@ où $\lambda_{i}$ est le coefficient directeur de la droite obtenue après ajust
 \end{tabular} 
 	\captionof{table}{Valeur des paramètres $\lambda$ et piédestaux pour les trois seuils.}
 \end{table}
+
 Les courbes \ref{seuils} n'étant pas linéaires sur toute la plage, nous avons veillé à ne pas dépasser la zone non linéaire lors de nos tests en faisceaux.
 
 Chaque discriminateur est relié à une bascule de type RS qui, dès lors que le discriminateur correspondant est déclenché et le signal autorisant l'acquisiton est à l'état haut, passe à l'état haut. Lors du coup d'horloge suivant, toutes les \SI{200}{\nano\second}, les bascules sont lues et remises à zéro. Les trois valeurs des bascules correspondant à une cellule active sont ensuite envoyées dans un encodeur qui code ces informations sur deux bits selon le tableau \ref{encodage}.
+
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|O|O|O|O|N}
@@ -241,6 +253,7 @@ Chaque discriminateur est relié à une bascule de type RS qui, dès lors que le
 	\captionof{table}{Encodage des seuils sur \num{2} bits.}
 	\label{encodage}
 \end{table}
+
 Il est également possible de masquer une cellule active bruyante en configurant la puce de telle manière que la bascule soit à l'état bas en permanence. Ce réglage peut se faire grâce à des bits de masque envoyés lors du slow control.
 
 \subsubsection{Le registre de contrôle lent (slow control)}
@@ -250,6 +263,7 @@ Afin de configurer le HARDROC, une patte d'entrée est utilisée. Une ligne d'ho
 À chaque coup d'horloge, lorsque la puce est en phase d'acquisition, un OU logique est réalisé entre les bascules des \num{64} voies de la puce. Si l'une d'elle est à l'état haut, la mémoire digitale (Digital Memory) (cf.fig\ref{scheme}) reçoit un signal pour enregistrer l'événement. La valeur de l'horloge de l'événement, appelée Bunch Crossing ID (BCID) ainsi que le numéro d'identification de l'ASIC ainsi que la valeur de tous les encodeurs de la puce seront enregistrés. 
 
 La mémoire du HARDROC permet de stocker \num{128} événements de \num{160} bits (cf.tab \ref{bits}). Une fois sa mémoire pleine, un signal de saturation est émis sur une patte dédiée.
+
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|O|O|N}
@@ -278,20 +292,22 @@ Le HARDROC à été conçu pour être chaîné, afin de piloter de nombreuses pu
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.6\textwidth]{GLA/DIF.png}
+	\includegraphics[width=0.55\textwidth]{GLA/DIF.png}
 	\captionof{figure}{Photo d'une DIF.}
 	\label{DIF}
 \end{figure}
 
 Pour commencer l'aquisition, la DIF envoie à tous les HARDROC un signal dit d'événement valide. Ceci à pour effet de remettre à zéro leur compteur interne (BCID). Chaque événement correspondant à une cellule activée touchée est ensuite enregistré dans la mémoire du HARDROC connécté à cette cellule. Lorsqu'un HARDROC a sa mémoire pleine, un signal de saturation est envoyé à la DIF par une ligne commune. On procède alors à la lecture des mémoires des HARDROC (ReadOut). Chaque ASIC envoie le contenu de sa mémoire sur une ligne commune appelé ligne de données. Une ligne (Transmission ON) permet de prévenir la DIF qu'un des HARDROC procède au transfert de ses données. Le fait de transférer les données en série amène à un temps mort maximum de
+
 \begin{equation}
 n\times(128 \times 160)\si{\bits}\times \SI{200}{\nano\second}= n*\SI{4.09}{\milli\second}
 \end{equation} 
+
 où $n$ est le nombre de HARDROC. Une fois tous les événements récoltés, les mémoires sont remises à zéro. Le diagramme temporel \ref{temp} résume le cycle d'acquisition et de lecture décrit ci-dessus.
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.6\textwidth]{GLA/cycle.png}
+	\includegraphics[width=0.48\textwidth]{GLA/cycle.png}
 	\captionof{figure}{Diagramme temporel du cycle d'acquisition et de lecture.}
 	\label{temp}
 \end{figure}
@@ -307,11 +323,13 @@ Afin de faciliter la reconstruction et l'analyse des données, des informations 
 }
 
 
-La chaine d'acquisition peu être résumée par le schéma suivant : 
+La chaine d'acquisition peu être résumée par le schéma \ref{chaine}. 
+
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.6\textwidth]{GLA/chaine.png}
+	\includegraphics[width=0.48\textwidth]{GLA/chaine.png}
 	\captionof{figure}{Architecture de la DAQ du SDHCAL. Dans notre cas le nombre d'ASU est d'un par layer (chambre) ainsi que d'une DIF par chambre. Le nombre de chambres étant dans notre cas inférieur à \num{9}, l'utilisation des DCC est inutile.}
+	\label{chaine}
 \end{figure}
 
 \subsection{Format de données LCIO}
@@ -329,16 +347,20 @@ Trois processeurs permettent de structurer les données afin d'en tirer les cara
 	\item Le processeur Streamout permet de mettre en forme les données brutes et de passer des LCGenericObject en une collection de RawColorimeterHit qui correspondent à des cellules touchées. Ces objets contiennent le numéro de la voie touchée du HARDROC (Channel\_Id), le numéro de l'HARDROC touché (ASIC\_Id) ainsi que le numéro de la DIF s'occupant de cet HARDROC (DIF\_Id).
 	\item Le processeur Trivent permet de passer du triplet (Channel\_Id,ASIC\_Id,DIF\_Id) à la position locale dans la chambre ($I$,$J$,$K$=numéro de la chambre). La position des chambres (DIF) dans l'espace est contenue dans un fichier XML qui est un paramètre du steering file de MARLIN, ce qui permet le passage des positions locales dans une chambre aux positions réelles ($X$,$Y$,$Z$) dans l'espace, de la cellule touchée . Trivent permet aussi de présélectionner les candidats muons. En effet, les données récoltées correspondent à tous les hits collectés jusqu'à ce qu'un HARDROC soit plein. Les données collectées inclues non seulement des hits venant de muons mais aussi des hits de bruits etc. Pour sélectionner les candidats muons, une agrégation en temps est réalisée. Les coups d'horloge (BCID) qui présentent plus de $N_{hit}=3$ hits sont sélectionnés. Pour chaque coup d'horloge sélectionné, les hits appartenant à des coups d'horloge contenus dans une fenêtre de $\pm t_{fen}=\pm3$ sont combinés pour construire un candidat muon. Si deux candidats sont proches et leur fenêtres se chevauchent, ils ne sont pas pris en compte afin de ne pas ajouter plusieurs fois les hits dans plusieurs candidats muons. Tous les hits sélectionnés pour un même candidat muon appartiennent à une même collection et à un même événement.
 	\item Le processeur Analysis utilise ces candidats muons et effectue une sélection plus fine des candidats muons. Premièrement les évènements contenant un trop gros nombre de hits dans une chambre sont rejectés. Afin d'estimer l'éfficacité d'une chambre, les barycentres des hits des autres chambres sont utilisés afin de créer un candidat trace. Pour cela une minimisation par $\chi^2$ est utilisée. Les $\chi^2$ sont donnés par :
+	
 	\begin{equation}
 	\chi_{xz}^2=\sum_i^{N_{chambre-1}}\left(x(z_{i})-x(z_{i})_{ba}\right)^2 \quad \chi_{yz}^2=\sum_i^{N_{chambre-1}}\left(y(z_{i})-y(z_{i})_{ba}\right)^2
 	\end{equation}
+	
 	où $x(z_{i})_{ba}$ et $y(z_{i})_{ba}$ sont les coordonnées du barycentre des hits dans la chambre $i$ et :
+	
 \begin{equation}
 \begin{cases}
 \strut x(z_i)=az_i+b\\
 y(z_i)=cz_i+d
 \end{cases}
 \end{equation}
+
 est l'équation paramétrique d'une droite dans l'espace avec \num{4} paramètres $a,b,c,d$. La minimisation est effectuée grâce au paquet MINUIT \cite{James:2004xla} contenu dans le framework ROOT \cite{BRUN199781}.
 Si la droite traverse la chambre étudiée et si des hits sont situés dans une région de $\pm 3$ cellules $\times\pm 3$ cellules, ou $\pm 3$ strips du point d'impact, la chambre est considérée efficace pour cet événement. Le nombre de hits dans cette région est utilisé comme estimateur de la multiplicité du détecteur.
 \end{itemize}
@@ -355,17 +377,21 @@ L'algorithme utilise les segments de GEANT4 créés par les particules incidente
  Une carte d'efficacité pour chaque ASIC est ensuite appliquée afin de tenir compte des gaz \chemform{CO_2} et \chemform{SF_6} dont les effets ne sont pas pris en charge par GEANT4. Il est aussi possible de forcer les efficacités d'une chambre par ces cartes. Une chambre possédant une carte d'efficacité de 50\% aura donc une probabilité de 50\% que les segments passant par sa couche de gaz soient conservés.
  
  La charge induite par chaque segment est ensuite aléatoirement choisie en utilisant une distribution de Polya:
+ 
  \begin{equation}
  P(q)=\left[\frac{q}{\bar{q}}(1+\theta)\right]^\theta\exp^{-\left[\frac{q}{\bar{q}}(1+\theta)\right]}
  \end{equation}
+ 
  où $\bar{q}$ est la valeur moyenne en \si{\pico\coulomb} et $\theta$ un paramètre libre lié à la largeur de la distribution. Afin de tenir compte de l'angle d'incidence, la charge induite est corrigée $Q_{corr}$.
  
  Lorsque deux avalanches sont très proches l'une de l'autre et se chevauchent, le signal induit n'est pas la somme des signaux de chaque avalanche. Pour simuler cet effet, lorsque deux segments sont situés à une distance inférieure à une valeur $d_{cut}$, seul le segment dont la charge induite est la plus élevée est gardé.
  
  La charge induite est ensuite répartie sur la cellule $C_0$ et sur les cellules voisines se trouvant à une distance inférieur à $r_{max}$ de $C_0$. Un rapport est alors calculé pour chaque cellule :
+ 
  \begin{equation}
  R_i=\frac{\int_{a_i}^{b_i}\int_{c_i}^{d_i}\sum_{j=0}^{n-1}\alpha_j\exp^{\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma_j^2}}\dd x\dd y}{\int_{-r_{max}}^{+r_{max}}\int_{-r_{max}}^{+r_{max}}\sum_{j=0}^{n-1}\alpha_j\exp^{\frac{(x-x_0)^2+(y-y_0)^2}{2\sigma_j^2}}\dd x\dd y}
  \end{equation}
+ 
 où $a_i$, $b_i$, $c_i$ et $d_i$ sont les positions des bords de la cellule $i$, $(x_0,y_0)$ sont les coordonnées du milieu du segment, $n$, $\alpha_j$ et $\sigma_j^2$ sont des paramètres libres. Ainsi $C_0$ est ses voisins se voient ajouter une charge induite de $R_iQ_{corr}$.
 
 Pour finir les seuils des cellules sont appliqués. Seules les cellules possédant une charge supérieure au seuil seront considérées comme étant touchées et créeront un hit.
@@ -374,7 +400,7 @@ Nous avons utilisé cette simulation en simulant le passage de muons de \SI{100}
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.9\textwidth]{GLA/effisimul.jpg}
+	\includegraphics[width=0.65\textwidth]{GLA/effisimul.jpg}
 	\captionof{figure}{Efficacité trouvée par le processeur Analysis pour les \num{48} chambres du SDHCAL en utilisant la simulation SimDigital. Les particules incidentes sont des muons de \SI{100}{\giga\eV} et chaque couleur représente une carte d'efficacité fixée lors de la simulation.}
 	\label{effisimul}
 \end{figure}
@@ -388,7 +414,7 @@ Cette figure montre bien que l'on arrive a retrouver l'efficacité fixée dans l
 En prenant le cas des cartes d'efficacités 50\%, l'inefficacité de la chambre est d'environ 45\%. Ce qui permet d'estimer le coefficient $f$ à $0.2$. La figure \ref{plotvaleur} donne le graphe de la fonction \ref{equa1} pour $f=0.2$. Le tableau \ref{tableauvaleur} donne les valeurs attendues de l'efficacité des chambres pour les valeurs des cartes d'efficacités utilisées pour la construction de la figure \ref{effisimul}. On remarque que les valeurs calculées par la formule \ref{equa1} sont très proches des valeurs calculées par les processeurs MARLIN.
 
 	\begin{figure}[ht!]
-    \subfloat[Graphique des valeurs de l'efficacité attendue pour différentes valeurs de la carte d'efficacités.]{\label{plotvaleur}\raisebox{-.5\height}{\begin{tikzpicture}[scale=0.80]\begin{axis}[grid=both,xlabel={Valeur de la carte d'efficacité},ylabel={Valeur de l'efficacité attendue},minor tick num=9,xmin=0,xmax=1.0,ymin=0,ymax=1.0]\addplot[mark=none,domain=0:1.0,samples=1000,color=red]{1-((1-x)*(1-0.2*x))};\end{axis}\end{tikzpicture}}}
+    \subfloat[Graphique des valeurs de l'efficacité attendue pour différentes valeurs de la carte d'efficacités.]{\label{plotvaleur}\raisebox{-.5\height}{\begin{tikzpicture}[scale=0.80]\begin{axis}[grid=both,xlabel={Valeur de la carte d'efficacité},ylabel={Valeur de l'efficacité attendue},minor tick num=9,xmin=0,xmax=1.0,ymin=0,ymax=1.0]\addplot[mark=none,domain=0:1.0,samples=30,color=red]{1-((1-x)*(1-0.2*x))};\end{axis}\end{tikzpicture}}}
     \hfill
 	\subfloat[Tableau des valeurs de l'efficacité attendue pour différentes valeurs de la carte d'efficacités.]{\label{tableauvaleur}\hfill\begin{tabular}{|O|O|N}
 			\hline
@@ -715,7 +741,16 @@ Lors de ce test en faisceaux, nous avons fait varier les valeurs d'atténuateur 
 
 Le courant de photons ne donne pas directement le flux de particule qui nous intéressent. En effet, les RPC ne sont sensibles qu'aux particules chargée, il est donc nécessaire d'estimer le taux de conversion des photons en électrons dans la couche de gaz afin de connaitre le vrai flux de particules auquel est soumise la chambre. 
 
-Une simulation GEANT4, modélisant le SDHCAL à été modifié afin de prendre en compte la géométrie des chambres au GIF++ ainsi que leur position relative. Un "particle gun" a été utilisé afin de tirer un photon de \SI{661.7}{\kilo\eV} à la fois. Les autres énergies de photons n'ont pas été simulées. La simulation nous permet de connaitre la fraction de photons émis par la source qui produisent un hits dans la couche de gaz des GRPC, ainsi que l'impact des absorption et diffusion dans les GRPC. La composition exacte des verres de basses résistivité étant inconnue, la simulation se base sur des verre standard. La fraction de photon amenant à la création d'n hits dans les détecteurs, pour plusieurs list physiques de GEANT 4 est donné figure \ref{conversion}
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{GLA/geant4.png}
+	\captionof{figure}{Le passage simulé par GEANT4 d'un muons dans les chambres.}
+	\label{GEANT4}
+}
+
+Une simulation GEANT4, modélisant le SDHCAL à été modifié afin de prendre en compte la géométrie des chambres au GIF++ ainsi que leur position relative (cf.fig\ref{GEANT4}). Un "particle gun" a été utilisé afin de tirer un photon de \SI{661.7}{\kilo\eV} à la fois. Les autres énergies de photons n'ont pas été simulées. La simulation nous permet de connaitre la fraction de photons émis par la source qui produisent un hits dans la couche de gaz des GRPC, ainsi que l'impact des absorption et diffusion dans les GRPC. La composition exacte des verres de basses résistivité étant inconnue, la simulation se base sur des verre standard. La fraction de photon amenant à la création d'n hits dans les détecteurs, pour plusieurs list physiques de GEANT 4 est donné figure \ref{conversion}
 
 \begin{figure}[!ht]
 	\centering
@@ -1043,7 +1078,7 @@ La figure \ref{comparaison2} montre l'efficacité de détection des muons pour l
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.6}{\input{GLA/BigChambersComparaison.tex}}
+	\scalebox{1.3}{\input{GLA/BigChambersComparaison.tex}}
 	\caption{Efficacité de détection des muons en fonction de la haute tension appliquée. La chambres construite par collage ( fixation mécanique ) est en rouge (noir).}
 	\label{comparaison2}
 \end{figure}
@@ -1348,12 +1383,28 @@ Grâce aux amèliorations de la chambres, la diaphonie semble être devenu négl
 \begin{figure}
 	\centering
 	\scalebox{1.3}{\input{GLA/TimeDistryBC.tex}}
-	\caption{Distribution temporelle des hits. La distribution correspond à 5000 événements déclenchés par des muons. La tension aplliquée est fixée à \SI{8.6}{\kilo\volt} et le seuils à \SI{150}{\pico\coulomb}. Le signal provenant des muons est observé autour de $t_0=$\SI{270}{\nano\second} et peut être ajusté par la somme d'une Gaussienne de résolution $\sigma=$\SI{11}{\nano\second} et d'une constante. La zone du signal correspond à une fenêtre de $\pm 3 \sigma$ autour de $t_0$. Le flux de $\gamma$ de la source est estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}.
+	\caption{Distribution temporelle des hits. La distribution correspond à 5000 événements déclenchés par des muons. La tension aplliquée est fixée à \SI{8.6}{\kilo\volt} et le seuils à \SI{150}{\pico\coulomb}. Le signal provenant des muons est observé autour de $t_0=$\SI{270}{\nano\second} et peut être ajusté par la somme d'une Gaussienne de résolution $\sigma=$\SI{11}{\nano\second} et d'une constante. La zone du signal correspond à une fenêtre de $\pm 3 \sigma$ autour de $t_0$. Le flux de $\gamma$ de la source est estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}}.
 	\label{ajust}
 \end{figure}
 
- Des scans en haute tension ont été effectués pour plusieurs valeurs de l'atténuateur de la source. Le programme d'analyse à permis de calculer l'efficacité, la taille moyenne d'un amas ("cluster size") (cf.fig\ref{clustersize}) et la probabilité de streamer comme définit précédement (cf.fig\ref{probastreamer}).
-\tikzexternaldisable
+ Des scans en haute tension ont été effectués pour plusieurs valeurs de l'atténuateur de la source. Le programme d'analyse à permis de calculer l'efficacité (cf.fig\ref{effifi}), la taille moyenne d'un amas ("cluster size") (cf.fig\ref{clustersize}) et la probabilité de streamer comme définit précédemment (cf.fig\ref{probastreamer}).
+
+ \begin{figure}
+ 	\centering
+ 	\scalebox{1.3}{\input{GLA/SigmoidBC.tex}}
+ 	\caption{Efficacité de détection des muons en fonction de la tension appliquée et du flux de $\gamma$ de la source.}
+ 	\label{effifi}
+ \end{figure}
+
+La valeur de l'efficacité est prise comme le centre de l'intervalle $\left[\epsilon_2,\epsilon^{signal}\right]$ où $\epsilon_2$ est l'efficacité obtenu par la formule \ref{method2} et $\epsilon^{signal}$ est l'efficacité sans correction. L'erreur totale sur l'efficacité est donnée par :
+
+\begin{equation}
+\sqrt{{\frac{\left(\epsilon^{signal}-\epsilon_2\right)}{2}}^2+\epsilon_{stat}^2}
+\end{equation}
+où $\epsilon_{stat}$ est l'erreur statistique.
+
+On remarque que l'efficacité reste supérieur à 80\% même pour un flux de gamma estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}. Le plateau se déplace de plus en plus vers les hautes tensions  mesure que le flux de gamma augment; cela est dû à l'effet de saturation. L'efficacité ainsi obtenu n'est cependant pas optimale. En effet, le centre du faisceau était proche de la zone morte d'environ \SI{2}{\centi\meter} entre la partition $B$ et $C$ au milieu de la chambre, permettant de faire passer les câbles récoltant les signaux de ces partitions (cf.fig\ref{a2}) . En considérant le fait que le faisceau avait une largeur d'environ \SI{2}{\centi\meter}, la perte d'efficacité dû à cette zone morte à été estimé à 10\%.
+
 \begin{figure}
 	\centering
 	\scalebox{1.3}{\input{GLA/ClusterSizeBC.tex}}
@@ -1366,8 +1417,56 @@ Grâce aux amèliorations de la chambres, la diaphonie semble être devenu négl
 	\caption{Probabilité du passage en mode streamer en fonction de la haute tension appliquée pour plusieurs valeurs de flux de $\gamma$.}
 	\label{probastreamer}
 \end{figure}
-\tikzexternalenable
 
 On peut remarquer que le cluster size reste en dessous de \num{1.8} et baisse lorsque qu'on augmente le flux de particules de la source. Cette réduction peut s'expliquer par l'effet d'écrantage déjà discuté.
 
-La probabilité de streamer reste inférieur à 10\% lorsque la source de $\gamma$ est OFF et est négligeable en présence d'un flux de $\gamma$ supérieur à \SI{0.7}{\kilo\hertz\per\square\centi\meter}
+La probabilité de streamer reste inférieur à 10\% lorsque la source de $\gamma$ est OFF et est négligeable en présence d'un flux de $\gamma$ supérieur à \SI{0.7}{\kilo\hertz\per\square\centi\meter}.
+
+Après le test en faisceau, nous avons procédé à l'ouverture de la chambre. Nous avons découvert que la peinture résistive avait accroché au PCB comportant le strips. Des dépôt ainsi que la polymérisation de produits de réaction du gaz se sont également fixé sur les faces intérieurs des électrodes notamment prêt des perles servant de spacer. 
+
+\noindent
+\begin{minipage}[th!]{1\textwidth}
+	\centering
+	\noindent
+	\begin{minipage}[th!]{0.48\textwidth}
+		\noindent
+		\centering
+		\begin{minipage}[th!]{1\textwidth}
+			\noindent
+			\centering
+			\includegraphics[width=1\textwidth]{GLA/peinture.jpg}
+		\end{minipage}%
+		\renewcommand\thesubfigure{\alph{subfigure}}
+		\captionof{subfigure}{La peinture résistive s'est fixée sur le PCB.}
+		\label{peinture}
+	\end{minipage}%
+	\hfill
+	\begin{minipage}[th!]{0.48\textwidth}
+		\noindent
+		\centering
+		\begin{minipage}[th!]{1\textwidth}
+			\noindent
+			\centering
+			\includegraphics[width=0.95\textwidth]{GLA/perle.jpg}
+			\captionof{subfigure}{Dépôt le long des fils de pêche et des perles.}
+			\label{perle}
+		\end{minipage}%
+		\\
+		\begin{minipage}[th!]{1\textwidth}
+			\noindent
+			\centering
+			\includegraphics[width=0.95\textwidth]{GLA/depot2.jpg}
+			\captionof{subfigure}{Polymèrisation des produits de réaction du gaz.}
+			\label{depot2}
+		\end{minipage}%
+	\end{minipage}%
+	\captionof{figure}{Différents problèmes rencontrès à l'ouverture de la chambre.}
+	\label{probs}
+\end{minipage}%
+
+ À certains endroit, le verre à même était attaqué. Ceci pourrait expliquer le bruit important (\SI{400}{\hertz\per\square\centi\meter}) et semble compatible avec les observations faites avec les chambres de petites dimension. Cependant, la circulation du gaz était régulière et les tuyaux était en cuivre afin d'éviter la contamination du gaz par l'humidité. Un test de l'humidité sur la ligne de gaz n'a pas révélé de contamination (\num{750}ppm pour notre ligne sèche contre \num{12000}ppm pour la ligne humide). Ceci nous à amené à penser que le gaz de CMS n'était peut être pas adapté à ces chambres. De plus nos collègues chinois nous ont informé que le taux de \chemform{SF_6} était peut-être trop faible pour ces verres. L'attaque du verre par le gaz a dû être accéléré par les valeurs du courant lorsque nous avont poussé les valeurs de la haute tension ($>$\SI{10}{\kilo\volt}) à comparer à la valeur de fonctionnement typique de \SI{7}{\kilo\volt}.
+ 
+ 
+ 
+ 
+ 

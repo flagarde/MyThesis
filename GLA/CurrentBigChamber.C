@@ -1,0 +1,114 @@
+void plot()
+{
+   //gStyle->SetPaperSize(10.,10.);
+   gStyle->SetPaperSize(10.,10.);
+   TCanvas FigExample;
+   gStyle->SetOptFit(1);
+   gStyle->SetOptStat(0);
+   gStyle->SetOptTitle(0);
+   /*FigExample->Range(1.546456,-0.2025,6.412106,1.485);
+   FigExample->SetFillColor(0);
+   FigExample->SetBorderMode(0);
+   FigExample->SetBorderSize(2);
+   FigExample->SetLogx();
+   FigExample->SetLeftMargin(0.12);
+   FigExample->SetRightMargin(0.04);
+   FigExample->SetTopMargin(0.08);
+   FigExample->SetBottomMargin(0.12);
+   FigExample->SetFrameFillStyle(0);
+   FigExample->SetFrameBorderMode(0);
+   FigExample->SetFrameFillStyle(0);
+   FigExample->SetFrameBorderMode(0);*/
+   
+   //Data
+   double HV0[25] ={4500,4600,4700,4800,4900,5000,5100,5200,5300,5400,5500,5600,5700,5800,5900,6000,6100,6200,6300,6400,6500,6600,6700,6800,6900};
+   double HV1[6] ={6000,6200,6400,6600,6800,6900};
+   double HV2[24] ={4500,4600,4700,4800,4900,5000,5100,5200,5300,5400,5500,5600,5700,5800,5900,6000,6100,6200,6300,6400,6500,6600,6700,6800};
+   double Onepcent[25]={0.8,0.8,0.9,0.9,1,1.1,1.1,1.3,1.4,1.5,1.6,1.8,1.9,2.1,2.4,2.6,2.9,3.2,3.6,4.1,4.8,5.72,6.96,9.015};
+   double Twopcent[25]={0.745,0.8,0.9,0.9,0.915,1,1.1,1.105,1.3,1.4,1.5,1.6,1.8,1.9,2.105,2.4,2.7,3,3.4,3.9,4.5,5.3,6.2,7.4};
+   double Threepcent[25]={0.7,0.8,0.805,0.9,0.905,1,1.1,1.105,1.23,1.4,1.405,1.6,1.7,1.9,2.005,2.2,2.405,2.705,3.005,3.405,3.905,4.6,5.4,6.525};
+   double Fourpcent[24]={0.805,0.9,0.9,0.9,1,1.1,1.1,1.2,1.3,1.4,1.405,1.6,1.625,1.8,1.9,2.1,2.4,2.6,2.8,3.1,3.5,3.9,4.51};
+   double Fivepcent[25]={0.505,0.6,0.6,0.6,0.7,0.8,0.8,0.9,0.9,1,1.1,1.11,1.225,1.4,1.5,1.6,1.7,1.9,2.1,2.3,2.505,2.9,3.4,3.9};
+   double op3pcent[25]={1.40625,2.421875,4.140625,7.1875,14.45125,27.1875};
+   
+   //TGraphas
+   TGraphErrors *gre0 = new TGraphErrors(6,HV1,op3pcent);
+   gre0->SetName("Graph0");
+   gre0->SetTitle("");
+   gre0->SetFillColor(1);
+   gre0->SetLineColor(1);
+   gre0->SetMarkerColor(1);
+   gre0->SetMarkerStyle(20);
+   gre0->SetMarkerSize(1);
+   TGraphErrors *gre1 = new TGraphErrors(25,HV0,Onepcent);
+   gre1->SetName("Graph1");
+   gre1->SetTitle("");
+   gre1->SetFillColor(2);
+   gre1->SetLineColor(2);
+   gre1->SetMarkerColor(2);
+   gre1->SetMarkerStyle(21);
+   gre1->SetMarkerSize(1);
+   TGraphErrors *gre2 = new TGraphErrors(25,HV0,Twopcent);
+   gre2->SetName("Graph2");
+   gre2->SetTitle("");
+   gre2->SetFillColor(3);
+   gre2->SetLineColor(3);
+   gre2->SetMarkerColor(3);
+   gre2->SetMarkerStyle(22);
+   gre2->SetMarkerSize(1);
+   TGraphErrors *gre3 = new TGraphErrors(25,HV0,Threepcent);
+   gre3->SetName("Graph3");
+   gre3->SetTitle("");
+   gre3->SetFillColor(4);
+   gre3->SetLineColor(4);
+   gre3->SetMarkerColor(4);
+   gre3->SetMarkerStyle(23);
+   gre3->SetMarkerSize(1);
+   TGraphErrors *gre4 = new TGraphErrors(24,HV2,Fourpcent);
+   gre4->SetName("Graph4");
+   gre4->SetTitle("");
+   gre4->SetFillColor(5);
+   gre4->SetLineColor(5);
+   gre4->SetMarkerColor(5);
+   gre4->SetMarkerStyle(29);
+   gre4->SetMarkerSize(1);
+   TGraphErrors *gre5 = new TGraphErrors(25,HV0,Fivepcent);
+   gre5->SetName("Graph5");
+   gre5->SetTitle("");
+   gre5->SetFillColor(6);
+   gre5->SetLineColor(6);
+   gre5->SetMarkerColor(6);
+   gre5->SetMarkerStyle(27);
+   gre5->SetMarkerSize(1);
+   gre0->Draw("AP");
+   gre1->Draw("PSAME");
+   gre2->Draw("PSAME");
+   gre3->Draw("PSAME");
+   gre4->Draw("PSAME");
+   gre5->Draw("PSAME"); 
+ 
+   TLegend *leg = new TLegend(0.3,0.3,0.3,0.6,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetTextFont(62);
+   leg->SetTextSize(0.035);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("Graph0","   0.3% SF6 (CMS gaz)","p");
+   entry=leg->AddEntry("Graph1","   1% SF6 (ILC gaz)","p");
+   entry=leg->AddEntry("Graph2","   2% SF6 (ILC gaz)","p");
+   entry=leg->AddEntry("Graph3","   3% SF6 (ILC gaz)","p");
+   entry=leg->AddEntry("Graph4","   4% SF6 (ILC gaz)","p");
+   entry=leg->AddEntry("Graph5","   5% SF6 (ILC gaz)","p");
+   leg->Draw();
+
+   FigExample.Modified();
+   FigExample.cd();
+   FigExample.SetSelected(&FigExample);
+   gPad->Print("hpx.tex");
+   FigExample.Draw();
+   int a=0;
+   std::cin>>a;
+}

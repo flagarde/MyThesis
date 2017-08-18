@@ -210,7 +210,8 @@ Les facteurs de conversion, qui permettent de passer de la valeur du DAC à la v
 L'ajustement linéaire des courbes \ref{seuils} permet d'obtenir la valeur du seuil en fonction de la valeur de DAC pour chaque seuil :
 
 \begin{equation}
-Seuil_{i}=\frac{DAC_{i}-p_{i}}{\lambda_{i}} [pC]
+\mbox{Seuil}_{i}=\frac{\mbox{DAC}_{i}-p_{i}}{\lambda_{i}} [pC]
+\label{equationn}
 \end{equation}
 
 où $\lambda_{i}$ est le coefficient directeur de la droite obtenue après ajustement linéaire et $p_{i}$ est la valeur du piédestal. Les valeurs de ces paramètres pour chaque seuil sont données dans le tableaux suivant :
@@ -951,7 +952,7 @@ Bien que nous ayant utilisé des tuyaux de polyamide, qui présente un coefficie
 \subsubsection{La polymérisation de l'isobutane}
  L'isobutane \chemform{iC_4H_{10}} appartient à la classe des alcanes. Il est connu pour produire des réactions de polymérisation, ce qui entraine un dépôt dans les chambres \cite{na60}. L'isobutane est également très inflammable ce qui complique sont utilisation en laboratoire. C'est l'une des raisons du choix de sont remplacement par du \chemform{CO_2} dans le prototype SDHCAL et également de son utilisation hors du GIF++, de plus ce gaz ne crée pas de dépôt supplémentaire.
 
-\subsubsection{L'attaque du verre par l'acide fluorhydrique HF}
+\subsubsection{L'attaque du verre par l'acide fluorhydrique \texorpdfstring{\chemform{HF}}{HF}}
 L'acide fluorhydrique \chemform{HF} provient de la décomposition du \chemform{TFE} lors de l'ionisation en avalanche. Des études on montré qu'en mode streamer la production de \chemform{HF} est comprise entre \num{1.19e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Lu:2009zzd} et $\sim$\num{3e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Abbrescia:2006hk} (\num{1.3e19}\chemform{F^{-}}\si{\per\coulomb} pour \cite{Aielli:2006ih}). Ce composant chimique, très corrosif peut même dissoudre le verre selon la réaction :
 \begin{chemeqn}
 SiO_2+6 HF\longrightarrow H_2SiF_6+H_2O
@@ -965,7 +966,7 @@ Il a été montré que la création de l'acide \chemform{HF} est proportionnelle
 Afin de limiter les dépôt dans nos chambres, nous avons donc essayé d'augmenter le débit de gaz. Cependant, cette augmentation s'est révélé car le débit total du gaz CMS permis au GIF++ doit être partagé avec toutes les autres expériences utilisant ce gaz.
 Nous avons également remarqué que certaines de nos chambres comportées des fuites ce qui amenait de l'humidité lors des arrêts de gaz par exemple. De plus, les chambres étant montée en série, cette configuration pouvait augmenter la résistance du système. Certaines chambres pouvaient ainsi gonfler et augmenter les fuites diminuant le débit de gaz introduit dans les chambres suivantes. Afin de pallier ce problème, nous avons décider de passer les chambres en parallèle et de placer à chaque entrée des chambres un débitmètre à vanne de régulation afin d'ajuster le débit de chaque chambre afin de vérifier que chacunes d'elles posséder une circulation de gaz.
 
-Au vu de l'état des chambres, il a été décidé de construire de nouvelles chambres de basse résistivité de taille \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}. Malheureusement seul \num{4} verres nous sont arrivé en bonne états, ce qui permit de ne créer que deux nouvelles chambres. Ce nombres étant insuffisants pour une étude du vieillissement, nous avons décider de les utiliser afin d'instrumenter une chambre double gap avec l'électronique présentée figures \ref{DoubleGap} et \ref{SchemePS}. Un même type de PCB à été utilisé afin de créer une chambre avec des électrodes en Bakélite de \SI{2}{\milli\meter} d'épaisseur et un gap de \SI{2}{\milli\meter}. Les résultats de ces tests sont présentés section \ref{smallchamber}
+Au vu de l'état des chambres, il a été décidé de construire de nouvelles chambres de basse résistivité de taille \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}. Malheureusement seul \num{4} verres nous sont arrivé en bonne états, ce qui permit de ne créer que deux nouvelles chambres. Ce nombres étant insuffisants pour une étude du vieillissement, nous avons décider de les utiliser afin d'instrumenter une chambre double gap avec l'électronique présentée figures \ref{DoubleGap} et \ref{SchemePS}. Un même type de PCB à été utilisé afin de créer une chambre avec des électrodes en Bakélite de \SI{2}{\milli\meter} d'épaisseur et un gap de \SI{2}{\milli\meter}. Les résultats de ces tests sont présentés section \ref{smallchamber}.
 
 \newpage
 \section{Les chambres de basse résistivité de taille RE1/1}
@@ -1207,6 +1208,7 @@ Il est a noté que le seuil minimal avant de souffrir du bruit électronique est
 Une investigation approfondie à permis d'améliorer la masse et d'améliorer le câblage des chambres afin de réduire le bruit. Des tests plus poussés ont également été effectué à Lyon afin de mieux caractériser les FEB et déceler certaines présentant des défauts. Tout ceci à conduit à la réduction du bruit d'un facteur \num{100}, celui-ci passant de $\sim\SI{e5}{\hit\per\strip\per\second}$ à $\sim\SI{e3}{\hit\per\strip\per\second}$
 
 \section{Programme d’analyse pour les chambres à élecronique CMS}
+\label{prog}
 Parallèlement, un programme d'analyse de donnée de ces chambres plus sophistiqué a été réalisé. Ce programme utilise les données au format ROOT fournit par la DAQ de nos collégues du GIF++.
 
 \subsection{Sélection de la zone temporelle du signal}
@@ -1313,7 +1315,7 @@ La chambre en verre de basse résistivité à été placé en Août 2016 au GIF+
 
 \subsection{Amélioration de la chambres RE1/1}
 Le test en faisceaux du mois d'Août nous a permis de comprendre certaines causes du bruit est d'essayer de les supprimer.
-La chambre à donc subit quelques modification notamment afin d'améliorer la compatibilité électromagnétique (CEM):
+La chambre à donc subit quelques modification notamment afin d'améliorer la compatibilité électromagnétique (CEM) \cite{charoy2012comp}:
 
 \begin{itemize}[label=$\bullet$]
 	\item Les FEB ont été approché du plan de masse (cf.fig \ref{b2}). Certaines étaient superposées sur les autres (cf.fig \ref{b1}), les éloignant ainsi du plan de masse et créant des perturbation (création d'un effet capacitif entre les soudures des FEB du haut et celles du bas).
@@ -1525,8 +1527,91 @@ La figure \ref{effi904Chi} (\ref{effi904Bak}) montre l'efficacité et le taux de
  
 \begin{figure}[ht!]
 	\centering
-	\subfloat[]{\scalebox{1.2}{\input{GLA/EffiNoiseChi.tex}}\label{effi904Chi}} 
+	\subfloat[]{\scalebox{1}{\input{GLA/EffiNoiseChi.tex}}\label{effi904Chi}} 
 	\hfill
-	\subfloat[]{\scalebox{1.2}{\input{GLA/EffiNoiseBak.tex}}\label{effi904Bak}}
+	\subfloat[]{\scalebox{1}{\input{GLA/EffiNoiseBak.tex}}\label{effi904Bak}}
 	\caption{Efficacité et taux de bruit pour la chambre en verre de basse résistivité (haut) et en Bakélite (bas) pour le mélange de gas CMS (noir) et le mélange à 5\% de \chemform{SF_6}. Le seuil appliqué est de \SI{72}{\femto\coulomb}.}
 \end{figure}  
+
+Les deux chambres présentent une bonne efficacité de détection des muons. La chambre bakélite fonctionne parfaitement avec l'électronique à base de HARDROC et a très bas seuils. Cependant la chambre en verre de basse résistivité a un taux de bruit nettement supérieur à la chambre en Bakélite ($\sim$\num{7}). Les résultats du taux de bruit de la chambre de basse résistivité semblent confirmer ceux effectuer en parallèle à Lyon. Le taux de \chemform{SF_6} est un élément très importants pour les électrodes en verre de basse résistivité, vers le point de fonctionnement (\SI{7000}{\volt}) le taux de bruit pour un mélange composé de \num{0.3}\% de \chemform{SF_6} est multiplié par \num{5} par rapport au mélange avec \num{5}\% de \chemform{SF_6}. De plus, il semble rester des problèmes de CEM pour la chambre RE1/1.
+
+
+\section{Tests en Faisceaux au GIF++ des chambres \texorpdfstring{\num{32}$\times$\num{30}\si{\square\centi\meter}}{30cm x 30cm} à strips}
+\label{smallchamber}
+
+Les deux chambres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} double gap à strips (cf. figs \ref{DoubleGap}, \ref{SchemePS} et \ref{nouvellestrip}) en verre de basse résistivité et en Bakélite ont été inséré dans le bâti des anciennes chambres de basse résistivité \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.fig \ref{bati}) en octobre 2017. Les nouvelles chambres utilisent l'éléctronique HARDROC, tout comme les anciennes encore présentes sur le bâti. Cependant, il a été décidé de ne pas utiliser le programme développé section \ref{prog}. En effet, comme celui-ci repose sur la création de traces, afin de calculer l'efficacité des chambres, les anciennes chambres sont nécessaire à leurs création. Cependant, au vu des vieillissements des chambres constatés, nous avons décidé de ne pas utilisé les données récoltés par celles-ci.
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=1\marginparwidth]{GLA/ChambreStripGif.png}
+	\captionof{figure}{Nouvelle chambre \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}.}
+	\label{nouvellestrip}
+}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.90\textwidth]{GLA/setup.png}
+	\captionof{figure}{Les Nouvelles chambres à strips sur leur bâti.}
+	\label{bati}
+\end{figure}
+
+Afin de calculer l'efficacité des nouvelles chambres, le programme développer pour la chambre RE1/1, basé sur le comptage sera utilisé. Les scintillateurs nécessaire à la détection du passage des muons sont ceux fournis par nos collègues du GIF++. Les coïncidences des scintillateurs sont incluses dans les données grâce à une DIF configurée de telles manière à enregistrer ces coïncidences comme le passage d'un seuils d'un pads (cf.tab \ref{encodage}) (seuil0 pour le déclenchement d'un scintillateur, seuil1 pour le déclenchement de l'autre, et seuil2 pour la coïncidences des deux scintillateurs). Il est ainsi possible, de sélectionner une fenêtre temporelle autour de ces coïncidence, en tenant compte dû décalage temporelle dû à la longueur des câbles portant le signal des scintillateurs (cf.fig \ref{decalage}). 
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[\SI{0.8}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration1.png}} 
+	\hfill
+	\subfloat[\SI{1}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration2.png}} 
+	\hfill
+	\subfloat[\SI{1.2}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration3.png}} 
+	\hfill
+	\subfloat[\SI{1.4}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration4.png}} 
+	\hfill
+	\subfloat[\SI{1.6}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration5.png}} 
+	\hfill
+	\subfloat[\SI{1.8}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration6.png}} 
+	\hfill
+	\subfloat[\SI{2}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration7.png}} 
+	\caption{Distribution du nombres de hits en fonction de numéro du strip pour divers temps avant le signal de la coïncidence des scintillateurs reçue dans les données LCIO.}
+	\label{decalage}
+\end{figure}  
+
+Les hits correspondant au passage du faisceau arrive donc entre  \SI{1.2}{\micro\second} et \SI{1.6}{\micro\second} avant les données de coïncidence des scintillateurs. Une fenêtre de temps centré sur le temps $t_{scinti}-t_{retard}$ avec $t_{retard}=\SI{1.4}{\micro\second}$ est ensuite extrait des données LCIO pour chaque trigger. Un convertisseur permet ensuite de passer les données du format LCIO au format ROOT. Il est ainsi possible de tourner sur les données des HARDROC comme s'il s'agissait de données venant de l'électronique de CMS.
+
+Ce test en faisceau a démontré l'utilité du elog. En effet, un programme en PYROOT a été réalisé afin de prendre en entrée les données du elog sous forme CSV est de généré des graphiques permettant de suivre les runs pris et leur paramètre et d'améliorer la décision des type de runs qu'il restait à prendre (cf.fig \ref{elogutil}). Le programme a permis également de créer automatiquement les listes de runs à utiliser selon le type de graphique à produire. 
+
+\begin{figure}[ht!]
+	\centering
+	\subfloat[Distribution du nombres de runs en fonction du nom de la configuration dans la database. \num{30} runs ont été écrit dans le mauvais elog (M3) suite à une erreur de configuration.]{\includegraphics[width=0.48\textwidth]{GLA/DistrDatabase.png}} 
+	\hfill
+	\subfloat[Corrélation entre le status du faisceau et le status de la source pour les \num{126} runs ayant été inscrit dans le bon elog.]{\includegraphics[width=0.48\textwidth]{GLA/hStatusBeamVsSource.png}} 
+	\\
+	\subfloat[Nombre de runs en fonction du seuil, l'axe $z$ est le nombre d'atténuateur de la source pour les threshold correspondant.]{\includegraphics[width=0.48\textwidth]{GLA/hAttScanThresholdVsNrun.png}} 
+	\hfill
+	\subfloat[Valeur de l'atténuateur de la source en fonction du seuil, la couleur (le numèro) de l'axe $z$ reprèsente la valeur de l'atténuateur (le nombre de runs pris avec cette valeur d'atténuateur) pour le seuil correspondant.]{\includegraphics[width=0.48\textwidth]{GLA/hAttScanThresholdVsAtt.png}}
+	\caption{Différents graphiques produit par le programme écrit en PYROOT à partir des données fournit par le ELOG dans le format CSV. Sur les axes PAD1(3,250L) par exemple représente le nom de la chambre ici PAD1, le numéro du seuil ($i'=$1,2 ou 3) et la valeur $\mbox{DAQ}_{i=i'-1}$ appliquée (250) (cf.fig \ref{equationn}).}
+	\label{elogutil}	
+\end{figure}
+
+\subsection{Efficacité en fonction du seuil}
+Le résultat principal de ce test en faisceaux est l'efficacité en fonction du seuil appliqué à la chambre de verre standard (en Bakélite) montré figure \ref{effithrchi} (\ref{effithrbak}). Ceux-ci peuvent être réalisé grâce à la grande plaque de seuils applicable au HARDROC.
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.90\textwidth]{GLA/effithrchi.png}
+	\captionof{figure}{Efficacité en fonction du seuil appliqué pour la chambre en verre de basse résistivité. La tension appliquée est fixée à \SI{6800}{\volt}.}
+	\label{effithrchi}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.90\textwidth]{GLA/effithrbak.png}
+	\captionof{figure}{Efficacité en fonction du seuil appliqué pour la chambre en Bakélite. La tension appliquée est fixée à \SI{9300}{\volt}.}
+	\label{effithrbak}
+\end{figure}
+
+Les deux chambres ont un plateau proche de \num{95}\%. Ce test à permis de démontrer que l'électronique de CMS fonctionne correctement avec les chambres composées d'électrodes en Bakélite.
+
+L'intégration de ces courbes permet d'en déduire la charge moyenne récoltée par l'électronique lors d'un trigger. On remarque que la charge récoltée est environ \num{7.5} fois plus importante pour la chambre en verre (\SI{4.2}{\pico\coulomb})que celle en Bakélite (\SI{0.56}{\pico\coulomb}).
+

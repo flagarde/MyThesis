@@ -26,14 +26,14 @@ Afin de répondre à ces objectifs, le "Technical Design Report" (TDR) \cite{Bay
 \subsection{Système de coordonnées conventionnel}
 Le système de coordonnées utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère et coïncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnée est déterminé par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire vue de dessus. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ et pointe vers le haut. CMS possédant une symétrie cylindrique, le repère $\left(O,\vec{r},\vec{\phi},\vec{z}\right)$ est souvent utilisé. $z$ correspond à la distance entre le plan perpendiculaire à l'axe du faisceau (appelé plan transverse) passant par le point considéré et l'origine $O$ du repère; $\phi$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et $r=\sqrt{x^2+y^2}$. L'angle polaire $\theta$ est définit par rapport à $z$. Un troisième type de coordonnées, utilisant le fait que les particules produite au LHC sont relativistes, est également utilisé. En décomposant l'impulsion de la particule en une composante transverse et longitudinale $p=p_{T}+p_{L}=\sqrt{p_{x}^{2}+p_{y}^{2}}+p_{z}$ :
 \begin{equation}
-( E/c)^{2}=(mc)^{2}+p_{T}^{2}+p_{L}^{2}\Longrightarrow ( E/c)^{2}-p_{L}^{2}=(mc)^{2}+p_{T}^{2}\Longrightarrow  \begin{cases}
-\left( E/c \right)=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\cosh(y) \\
-p_{L}=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\sinh(y)
+(E/c)^{2}=(mc)^{2}+p_{T}^{2}+p_{L}^{2}\Longrightarrow (E/c)^{2}-p_{L}^{2}=(mc)^{2}+p_{T}^{2}\Longrightarrow  \begin{cases}
+\left(E/c \right)=\sqrt{\left(mc \right)^{2}+p_{T}^{2}}\cosh(y) \\
+p_{L}=\sqrt{\left(mc \right)^{2}+p_{T}^{2}}\sinh(y)
 \end{cases}
 \end{equation}
 %qu'il est possible de réécrire comme :
 %\begin{equation}
-%\left( E/c \right)=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\cosh(y), p_{L}=\sqrt{\left( mc \right)^{2}+p_{T}^{2}}\sinh(y)
+%\left(E/c \right)=\sqrt{\left(mc \right)^{2}+p_{T}^{2}}\cosh(y), p_{L}=\sqrt{\left(mc \right)^{2}+p_{T}^{2}}\sinh(y)
 %\end{equation}
 avec $y$ un paramètre appelé rapidité. En remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de $E=\sqrt{m^{2}c^{4}+p^{2}c^{2}}$:
 \begin{equation}
@@ -101,7 +101,7 @@ Le détecteur à pixels de CMS a récemment été remplacé afin de garder une t
 	\label{pixel}
 \end{figure}
 
-L'ajout d'une quatrième couche de détection dans le barrel assure une redondance lors de la reconnaissance de motifs et permet de réduire le taux d'erreur lors d'empilement importants. Il assure également une sécurité au cas où la couche la plus proche du point d'interaction viendrait à se détériorer plus vite que prévu. Cependant, elle augmente le budget matériel du détecteur, il a donc été nécessaire de repenser le support et les services afin d'être plus léger. Un nouveau système de refroidissement au $CO2$ ainsi que la déplacement des système passif (connectique , plaques d'électronique) hors du volume de trajectographie à également été effectué (cf.fig\ref{pixel2}).
+L'ajout d'une quatrième couche de détection dans le barrel assure une redondance lors de la reconnaissance de motifs et permet de réduire le taux d'erreur lors d'empilement importants. Il assure également une sécurité au cas où la couche la plus proche du point d'interaction viendrait à se détériorer plus vite que prévu. Cependant, elle augmente le budget matériel du détecteur, il a donc été nécessaire de repenser le support et les services afin d'être plus léger. Un nouveau système de refroidissement au $CO2$ ainsi que la déplacement des système passif (connectique, plaques d'électronique) hors du volume de trajectographie à également été effectué (cf.fig\ref{pixel2}).
 
 \begin{figure}[ht!]
 	\centering
@@ -409,7 +409,7 @@ Le détecteur CMS à déjà subi de nombreuses améliorations depuis le début d
 		\captionof{figure}{Schéma d'un quart du trajectographe prévu pour la mise à niveau de CMS.}
 		\label{tracker2}
 	\end{figure}
-	\item Les bouchons des calorimètres devront être remplacés par des calorimètres de haute granularité \textit{High Granularity Calorimeter} (HGC) d'une profondeur totale de ~ 10$\lambda_{I}$ qui fourniront des images tridimensionnelles détaillées des gerbes. La section électromagnétique est composée d'une trentaine de couches de tungstène et de plaques de cuivre intercalées avec des capteurs de silicium comme matière active. Les capteurs auront des aires variables inférieures à ~ 1,0 cm2. La section électromagnétique fait environs 25X0 et une longueur d'interaction ($\lambda_{I}$). La partie hadronique possède 12 plaques de laiton et de cuivre intercalées avec des capteurs de silicium d'une longueur représentant 3,5 $\lambda_{I}$ ce qui couvre la majorité d'une gerbe hadronique. Il est suivi d'un "calorimètre hadronique à l'arrière" de conception similaire à l'actuel HE ( des plaques en laiton intercalées avec des carreaux scintillants en plastique lus avec des fibres optiques à décalage de longueur d'ondes). La conception de ce calorimètre à grande granularité s'appuie sur les concepts du ILC / CALICE [21] pour la mesure 3D des gerbes.
+	\item Les bouchons des calorimètres devront être remplacés par des calorimètres de haute granularité \textit{High Granularity Calorimeter} (HGC) d'une profondeur totale de ~ 10$\lambda_{I}$ qui fourniront des images tridimensionnelles détaillées des gerbes. La section électromagnétique est composée d'une trentaine de couches de tungstène et de plaques de cuivre intercalées avec des capteurs de silicium comme matière active. Les capteurs auront des aires variables inférieures à ~ 1,0 cm2. La section électromagnétique fait environs 25X0 et une longueur d'interaction ($\lambda_{I}$). La partie hadronique possède 12 plaques de laiton et de cuivre intercalées avec des capteurs de silicium d'une longueur représentant 3,5 $\lambda_{I}$ ce qui couvre la majorité d'une gerbe hadronique. Il est suivi d'un "calorimètre hadronique à l'arrière" de conception similaire à l'actuel HE (des plaques en laiton intercalées avec des carreaux scintillants en plastique lus avec des fibres optiques à décalage de longueur d'ondes). La conception de ce calorimètre à grande granularité s'appuie sur les concepts du ILC / CALICE [21] pour la mesure 3D des gerbes.
 	\item le temps de latence du L1 sera augmenté jusqu'à 12.5$\mu s$ ce qui permettra au système de reconstruction et d'identification des traces d'utiliser à la fois celles venant des calorimètres et celles du spectrographe à muons. Pour cela l'électronique de certains sous-détecteurs déjà existant devra être mise à niveau. La fréquence des données en sortie est estimée à 5000Hz (7000Hz) avec 140 (200) événements de pile-up. Le trigger L1 aura également les informations des traces fournies par le trajectographe pour des traces avec $p_{T}\geqq2	GeV$. Cela permettra un meilleur pouvoir de rejet du bruit de fond dès le début de la sélection des événements. Un tout nouveau L1 pour les calorimètres et le spectrographe à muons sera également mis en service(cf.fig\ref{L1_2}).
 	\begin{figure}[ht!]
 		\centering

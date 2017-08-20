@@ -178,9 +178,9 @@
 \draw (-0.177257,4.79933) node[scale=1.07706, color=c, rotate=90]{Efficiency};
 \definecolor{c}{rgb}{0,1,0};
 \foreach \P in {(5.23529,5.69505), (6.17647,7.78285), (6.64706,8.04593), (7.11765,8.25125), (8.05882,8.31482)}{\draw[mark options={color=c,fill=c,rotate=180},mark size=1.402402pt,mark=triangle*] plot coordinates {\P};}
-\definecolor{c}{rgb}{1,0,0};
+\definecolor{c}{rgb}{0,0,1};
 \foreach \P in {(1.47059,2.0426), (2.88235,2.45726), (4.29412,3.21747), (4.76471,4.3002)}{\draw[mark options={color=c,fill=c},mark size=1.402402pt,mark=square*] plot coordinates {\P};}
-\definecolor{c}{rgb}{1,0,0};
+\definecolor{c}{rgb}{0,0,1};
 \foreach \P in {(6.17647,5.09113), (7.11765,7.07997), (8.05882,7.84787)}{\draw[mark options={color=c,fill=c},mark size=1.402402pt,mark=square*] plot coordinates {\P};}
 \definecolor{c}{rgb}{0,0,0};
 \draw [c,line width=0.3] (9,0.959866) -- (9,8.6388);
@@ -400,9 +400,10 @@
 \definecolor{c}{rgb}{1,1,1};
 \draw [color=c, fill=c] (2,6.13712) rectangle (5,7.67893);
 \definecolor{c}{rgb}{0,0,0};
-\draw [anchor= west] (2.75,7.29348) node[scale=0.742799, color=c, rotate=0]{Noise 5\% \chemform{SF_6}};
-\definecolor{c}{rgb}{1,0,0};
-\foreach \P in {(2.375,7.29348)}{\draw[mark options={color=c,fill=c},mark size=1.402402pt,mark=square*] plot coordinates {\P};}
+\definecolor{c}{rgb}{0,0,0};
+\draw [anchor=base west] (2.75,6.79239) node[scale=0.742799, color=c, rotate=0]{Noise 0.3\% \chemform{SF_6}};
+\definecolor{c}{rgb}{0,0,1};
+\foreach \P in {(2.375,6.90803)}{\draw[mark options={color=c,fill=c},mark size=1.402402pt,mark=square*] plot coordinates {\P};}
 \definecolor{c}{rgb}{0,0,0};
 \draw [anchor= west] (2.75,6.52258) node[scale=0.742799, color=c, rotate=0]{Efficicency};
 \definecolor{c}{rgb}{0,1,0};

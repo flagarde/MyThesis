@@ -30,7 +30,7 @@ La résolution temporelle du signal peut également être calculé :
 \sigma_{t}=(t_1+t_2)-\frac{L}{v}
 \end{equation}
 
-\subsection{Le Prototype}
+\section{Le Prototype}
 Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.fig~\ref{PCB2}). Il est composé de \num{32} strips espacé de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC de \num{24} voies chacun et de résolution temporelle \SI{25}{\nano\second}, développés par nos collègue de Tsinghua sont utilisé afin de mesurer le temps d'arrivé des signaux envoyé par les PETIROC2.
 
 \begin{figure}[ht!]
@@ -40,7 +40,7 @@ Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été
 	\label{PCB2}
 \end{figure}
 
-\subsubsection{L'ASIC PETIROC2}
+\subsection{L'ASIC PETIROC2}
 \begin{wrapfigure}[8]{R}{0.40\textwidth}
 	\vspace*{-1cm}
 	\centering
@@ -48,7 +48,8 @@ Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été
 	\caption{Schéma électronique du PETIROC2.}
 	\label{PETIROC2}
 \end{wrapfigure}
-Le PETIROC2 (cf.fig~\ref{PETIROC2}) possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, provient des fluctuations statistiques et du bruit de l'électronique. À cause de ces fluctuations, deux signaux identiques ne vont pas passer le seuil de déclenchement au même point, donnant ainsi une variation temporelle du point de déclenchement qui dépend de l'amplitude des fluctuations.} faible ($<\SI{20}{\pico\second}$ pour une charge supérieur à \SI{160}{\femto\coulomb}). Le schéma simplifié du PETIROC2 est donné figure \ref{SchemePETIROC}. Cette ASIC dispose de \num{32} voies permettant de mesurer le temps de vol grâce à un TDC intégré et un ADC de 10bits ainsi que la charge sur 10bits. La gamme de réglage du seuil est compris entre \SI{160}{\femto\coulomb} et \SI{400}{\pico\coulomb} global aux \num{32} voies. Un ajustement voie par voie est possible grâce à un DAC de 6bits. 
+
+Le PETIROC2 (cf.fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS SiGe \SI{0.35}{\micro\meter}. La puce est insérée dans un boitier de taille \num{4.6}$\times$\SI{42}{\square\milli\meter}, d'épaisseur \SI{1.6}{\milli\meter} et comporte \num{208} pattes dont \num{32} voies d'entrée. Le schéma simplifié du PETIROC2 est donné figure \ref{SchemePETIROC}. Chaque voie permet de mesurer le temps de vol grâce à un TDC intégré et un ADC de 10bits ainsi que la charge sur 10bits. La gamme de réglage du seuil est compris entre \SI{160}{\femto\coulomb} et \SI{400}{\pico\coulomb} global aux \num{32} voies. Un ajustement voie par voie est possible grâce à un DAC de 6bits. Il possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, provient des fluctuations statistiques et du bruit de l'électronique. À cause de ces fluctuations, deux signaux identiques ne vont pas passer le seuil de déclenchement au même point, donnant ainsi une variation temporelle du point de déclenchement qui dépend de l'amplitude des fluctuations.} faible ($<\SI{20}{\pico\second}$ pour une charge supérieur à \SI{160}{\femto\coulomb})
 
 \begin{figure}[ht!]
 	\centering
@@ -57,7 +58,7 @@ Le PETIROC2 (cf.fig~\ref{PETIROC2}) possède une gigue\footnote{La gigue ou \tex
 	\label{SchemePETIROC}
 \end{figure}
 
-\subsubsection{Le TDC}
+\subsection{Le TDC}
 \begin{wrapfigure}[8]{R}{0.40\textwidth}
 	\vspace*{-1cm}
 	\centering

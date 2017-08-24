@@ -109,6 +109,14 @@
 		\includegraphics{build/#1}%
 	},
 }
+
+% Define the command. Note that the input and output folders are static!
+\newcommand{\includetex}[1]
+{%
+	%\tikzsetnextfilename{#1}%
+	\input{#1.tex}%
+}
+
 \usepackage{ifthen}
 \newcommand{\Cpp}[1][]{$\text{C\hspace{-.25ex}}^{_{_{_{++}}}}\ifthenelse{\equal{#1}{}}{}{\text{\hspace{-.625ex}#1}}$}
 \newcommand*\diff{\mathop{}\!\mathrm{d}}

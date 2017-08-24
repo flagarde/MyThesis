@@ -1,0 +1,118 @@
+\begin{tikzpicture}
+\pgfdeclareplotmark{cross} {
+\pgfpathmoveto{\pgfpoint{-0.3\pgfplotmarksize}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+0.3\pgfplotmarksize}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+0.3\pgfplotmarksize}{0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+1\pgfplotmarksize}{0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+1\pgfplotmarksize}{-0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+0.3\pgfplotmarksize}{-0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+0.3\pgfplotmarksize}{-1.\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-0.3\pgfplotmarksize}{-1.\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-0.3\pgfplotmarksize}{-0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-1.\pgfplotmarksize}{-0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-1.\pgfplotmarksize}{0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-0.3\pgfplotmarksize}{0.3\pgfplotmarksize}}
+\pgfpathclose
+\pgfusepathqstroke
+}
+\pgfdeclareplotmark{cross*} {
+\pgfpathmoveto{\pgfpoint{-0.3\pgfplotmarksize}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+0.3\pgfplotmarksize}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+0.3\pgfplotmarksize}{0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+1\pgfplotmarksize}{0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+1\pgfplotmarksize}{-0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+0.3\pgfplotmarksize}{-0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{+0.3\pgfplotmarksize}{-1.\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-0.3\pgfplotmarksize}{-1.\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-0.3\pgfplotmarksize}{-0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-1.\pgfplotmarksize}{-0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-1.\pgfplotmarksize}{0.3\pgfplotmarksize}}
+\pgfpathlineto{\pgfpoint{-0.3\pgfplotmarksize}{0.3\pgfplotmarksize}}
+\pgfpathclose
+\pgfusepathqfillstroke
+}
+\pgfdeclareplotmark{newstar} {
+\pgfpathmoveto{\pgfqpoint{0pt}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{44}{0.5\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{18}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{-20}{0.5\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{-54}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{-90}{0.5\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{234}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{198}{0.5\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{162}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{134}{0.5\pgfplotmarksize}}
+\pgfpathclose
+\pgfusepathqstroke
+}
+\pgfdeclareplotmark{newstar*} {
+\pgfpathmoveto{\pgfqpoint{0pt}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{44}{0.5\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{18}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{-20}{0.5\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{-54}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{-90}{0.5\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{234}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{198}{0.5\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{162}{\pgfplotmarksize}}
+\pgfpathlineto{\pgfqpointpolar{134}{0.5\pgfplotmarksize}}
+\pgfpathclose
+\pgfusepathqfillstroke
+}
+\definecolor{c}{rgb}{1,1,1};
+\draw [color=c, fill=c] (0,0) rectangle (10,6.79083);
+\draw [color=c, fill=c] (3,0.679083) rectangle (8.5,6.11175);
+\definecolor{c}{rgb}{0,0,0};
+\draw [c,line width=0.3] (3,0.679083) -- (3,6.11175) -- (8.5,6.11175) -- (8.5,0.679083) -- (3,0.679083);
+\draw (3.6875,1.35817) node[scale=0.286371, color=c, rotate=0]{3};
+\draw (5.0625,1.35817) node[scale=0.286371, color=c, rotate=0]{7};
+\draw (3.6875,2.71633) node[scale=0.286371, color=c, rotate=0]{23};
+\draw (5.0625,2.71633) node[scale=0.286371, color=c, rotate=0]{35};
+\draw (3.6875,4.0745) node[scale=0.286371, color=c, rotate=0]{3};
+\draw (5.0625,4.0745) node[scale=0.286371, color=c, rotate=0]{3};
+\draw (6.4375,4.0745) node[scale=0.286371, color=c, rotate=0]{22};
+\draw (7.8125,5.43266) node[scale=0.286371, color=c, rotate=0]{30};
+\draw (5,6.57013) node[scale=0.700019, color=c, rotate=0]{GIF Beam status Vs Source};
+\draw [c,line width=0.3] (3,0.679083) -- (8.5,0.679083);
+\draw [anchor= west] (3.6875,0.597593) node[scale=0.35001, color=c, rotate=-20]{OFF};
+\draw [anchor= west] (5.0625,0.597593) node[scale=0.35001, color=c, rotate=-20]{ON};
+\draw [anchor= west] (6.4375,0.597593) node[scale=0.35001, color=c, rotate=-20]{Unknown from GIF elog};
+\draw [anchor= west] (7.8125,0.597593) node[scale=0.35001, color=c, rotate=-20]{Unknown from M3 elog};
+\draw [c,line width=0.3] (3,0.791132) -- (3,0.679083);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (3,6.11175) -- (3,0.679083);
+\draw [c,line width=0.3] (4.375,0.791132) -- (4.375,0.679083);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (4.375,6.11175) -- (4.375,0.679083);
+\draw [c,line width=0.3] (5.75,0.791132) -- (5.75,0.679083);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (5.75,6.11175) -- (5.75,0.679083);
+\draw [c,line width=0.3] (7.125,0.791132) -- (7.125,0.679083);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (7.125,6.11175) -- (7.125,0.679083);
+\draw [c,line width=0.3] (8.5,0.791132) -- (8.5,0.679083);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (8.5,6.11175) -- (8.5,0.679083);
+\draw [anchor= east] (8.5,0.793169) node[scale=0.540924, color=c, rotate=0]{Source status};
+\draw [c,line width=0.3] (3,0.679083) -- (3,6.11175);
+\draw [anchor= east] (2.9175,1.35817) node[scale=0.35001, color=c, rotate=0]{OFF};
+\draw [anchor= east] (2.9175,2.71633) node[scale=0.35001, color=c, rotate=0]{ON};
+\draw [anchor= east] (2.9175,4.0745) node[scale=0.35001, color=c, rotate=0]{Unknown from GIF elog};
+\draw [anchor= east] (2.9175,5.43266) node[scale=0.35001, color=c, rotate=0]{Unknown from M3 elog};
+\draw [c,line width=0.3] (3.24,0.679083) -- (3,0.679083);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (8.5,0.679083) -- (3,0.679083);
+\draw [c,line width=0.3] (3.24,2.03725) -- (3,2.03725);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (8.5,2.03725) -- (3,2.03725);
+\draw [c,line width=0.3] (3.24,3.39542) -- (3,3.39542);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (8.5,3.39542) -- (3,3.39542);
+\draw [c,line width=0.3] (3.24,4.75358) -- (3,4.75358);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (8.5,4.75358) -- (3,4.75358);
+\draw [c,line width=0.3] (3.24,6.11175) -- (3,6.11175);
+\draw [c,dash pattern=on 0.80pt off 1.60pt ,line width=0.3] (8.5,6.11175) -- (3,6.11175);
+\draw [anchor= east] (3.168,6.11175) node[scale=0.540924, color=c, rotate=90]{Beam  status};
+\definecolor{c}{rgb}{1,1,1};
+\draw [color=c, fill=c] (7.8,6.07779) rectangle (9.8,6.34943);
+\definecolor{c}{rgb}{0,0,0};
+\draw [c,line width=0.3] (7.8,6.07779) -- (9.8,6.07779);
+\draw [c,line width=0.3] (9.8,6.07779) -- (9.8,6.34943);
+\draw [c,line width=0.3] (9.8,6.34943) -- (7.8,6.34943);
+\draw [c,line width=0.3] (7.8,6.34943) -- (7.8,6.07779);
+\draw [anchor= west] (7.9,6.21361) node[scale=0.540924, color=c, rotate=0]{Entries };
+\draw [anchor= east] (9.7,6.21361) node[scale=0.540924, color=c, rotate=0]{ 126};
+\draw (5,6.57013) node[scale=0.700019, color=c, rotate=0]{GIF Beam status Vs Source};
+\end{tikzpicture}

@@ -415,7 +415,8 @@ Cette figure montre bien que l'on arrive a retrouver l'efficacité fixée dans l
 En prenant le cas des cartes d'efficacités 50\%, l'inefficacité de la chambre est d'environ 45\%. Ce qui permet d'estimer le coefficient $f$ à $0.2$. La figure \ref{plotvaleur} donne le graphe de la fonction \ref{equa1} pour $f=0.2$. Le tableau \ref{tableauvaleur} donne les valeurs attendues de l'efficacité des chambres pour les valeurs des cartes d'efficacités utilisées pour la construction de la figure \ref{effisimul}. On remarque que les valeurs calculées par la formule \ref{equa1} sont très proches des valeurs calculées par les processeurs MARLIN.
 \vspace*{-0.6cm}
 	\begin{figure}[ht!]
-    \subfloat[Graphique des valeurs de l'efficacité attendue pour différentes valeurs de la carte d'efficacités.]{\label{plotvaleur}\raisebox{-.5\height}{\begin{tikzpicture}[scale=0.80]\begin{axis}[grid=both,xlabel={Valeur de la carte d'efficacité},ylabel={Valeur de l'efficacité attendue},minor tick num=9,xmin=0,xmax=1.0,ymin=0,ymax=1.0]\addplot[mark=none,domain=0:1.0,samples=30,color=red]{1-((1-x)*(1-0.2*x))};\end{axis}\end{tikzpicture}}}
+    \subfloat[Graphique des valeurs de l'efficacité attendue pour différentes valeurs de la carte d'efficacités.]{\label{plotvaleur}%\raisebox{-.5\height}{\begin{tikzpicture}[scale=0.80]\begin{axis}[grid=both,xlabel={Valeur de la carte d'efficacité},ylabel={Valeur de l'efficacité attendue},minor tick num=9,xmin=0,xmax=1.0,ymin=0,ymax=1.0]\addplot[mark=none,domain=0:1.0,samples=30,color=red]{1-((1-x)*(1-0.2*x))};\end{axis}\end{tikzpicture}}}
+    	\includegraphics{GLA/Plot.pdf}}
     \hfill
 	\subfloat[Tableau des valeurs de l'efficacité attendue pour différentes valeurs de la carte d'efficacités.]{\label{tableauvaleur}\hfill\begin{tabular}{|O|O|N}
 			\hline
@@ -522,7 +523,7 @@ Un scan en tension pour toutes les chambres a permis de fixer le point de foncti
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.4}{\input{GLA/HVPS.tex}}
+	\scalebox{1.4}{\includetex{GLA/HVPS}}
 	\caption{Efficacité en fonction de la haute tension appliquée pour la chambre à strips. Le flux de particules moyen est estimé à \SI{3.5}{\kilo\hertz\per\square\centi\meter}}
 	\label{ScanTensionPS}
 \end{figure}
@@ -531,7 +532,7 @@ Une fois le point de fonctionnement fixé, un scan de l'efficacité en fonction 
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.4}{\input{GLA/RatePS.tex}}
+	\scalebox{1.4}{\includetex{GLA/RatePS}}
 	\caption{Efficacité en fonction du flux de particules. La tension est fixé à \SI{7200}{\volt}.}
 	\label{ScanRatePS}
 \end{figure}
@@ -552,7 +553,7 @@ La multiplicité ainsi que la résolution spatiale calculées en fonction du flu
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.4}{\input{GLA/MultiplicityPS.tex}}
+	\scalebox{1.4}{\includetex{GLA/MultiplicityPS}}
 	\caption{Multiplicité (axe de gauche) et résolution spatiale (axe de droite) en fonction du flux de particule au point de fonctionnement 7200V.}
 	\label{ResoSpatialPS}
 \end{figure}
@@ -584,7 +585,7 @@ Un scan en tension pour toutes les chambres a d'abord été effectué afin de fi
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.3}{\input{GLA/HVSPS.tex}}
+	\scalebox{1.3}{\includetex{GLA/HVSPS}}
 	\caption{Efficacité (axe de gauche) et multiplicité (axe de droite) en fonction de la haute tension appliquée.}
 	\label{HVSPS}
 \end{figure}
@@ -597,14 +598,14 @@ La figure \ref{RateSPS} (\ref{MultiplictySPS}) montre l'évolution de l'efficaci
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.3}{\input{GLA/RateSPS.tex}}
+	\scalebox{1.3}{\includetex{GLA/RateSPS}}
 	\caption{Efficacité en fonction du flux de particules moyen estimé. Les RPC de basse resistivité sont en bleue et la chambre en verre "standard" est en rouge.}
 	\label{RateSPS}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.315}{\input{GLA/MultiplicitySPS.tex}}
+	\scalebox{1.315}{\includetex{GLA/MultiplicitySPS}}
 	\caption{Multiplicité en fonction du flux de particules moyen estimé. Les RPC de basse resistivité sont en bleue et la chambre en verre "standard" est en rouge.}
 	\label{MultiplictySPS}
 \end{figure}
@@ -742,7 +743,7 @@ Lors de ce test en faisceaux, nous avons fait varier les valeurs d'atténuateur 
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.2}{\input{GLA/AttenuateurGIF.tex}}
+	\scalebox{1.2}{\includetex{GLA/AttenuateurGIF}}
 	\caption{Efficacité en fonction du courant de $\gamma$ obtenue pour différentes valeurs d'atténuation de la source. Les effets d'écrantage dus à la présence des autres chambres placées devant ne sont pas inclus.}
 	\label{ATTENUATEURGIF}
 \end{figure}
@@ -771,18 +772,18 @@ Des scans en fonction du seuil appliqué et de la distance à la source ont éga
 
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.68}{\input{GLA/Eff_200_1970.tex}}}
+	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.68}{\includetex{GLA/Eff_200_1970}}}
 	\hfill
-	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.64}{\input{GLA/Mul_200_1970.tex}}}
+	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.64}{\includetex{GLA/Mul_200_1970}}}
 	\caption{Efficacité et multiplicité en fonction du seuil appliqué pour la première chambre du télescope placée à \SI{2}{\meter} de la source. La tension appliquée est de \SI{7000}{\volt} et le facteur d'atténuation de la source est de \num{220}.}
 	\label{att200}
 \end{figure}
 
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.64}{\input{GLA/Eff_22_1970.tex}}}
+	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.64}{\includetex{GLA/Eff_22_1970}}}
 	\hfill
-	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.64}{\input{GLA/Mul_22_1970.tex}}}
+	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.64}{\includetex{GLA/Mul_22_1970}}}
 	\caption{Efficacité et multiplicité en fonction du seuil appliqué pour la première chambre du télescope placée à \SI{2}{\meter} de la source. La tension appliquée est de \SI{7000}{\volt} et le facteur d'atténuation de la source est de \num{22}.}
 	\label{att22}
 \end{figure}
@@ -791,18 +792,18 @@ La figure \ref{att150} (\ref{att46}) représente l'efficacité et la multiplicit
 
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.64}{\input{GLA/Eff_150_5500.tex}}}
+	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.64}{\includetex{GLA/Eff_150_5500}}}
 	\hfill
-	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.64}{\input{GLA/Mul_150_5500.tex}}}
+	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.64}{\includetex{GLA/Mul_150_5500}}}
 	\caption{Efficacité et multiplicité en fonction du seuil appliqué pour la première chambre du télescope placée à \SI{5.5}{\meter} de la source. La tension appliquée est de \SI{7000}{\volt} et le facteur d'atténuation de la source est de \num{150}.}
 	\label{att150}
 \end{figure}
 
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.64}{\input{GLA/Eff_46_5500.tex}}}
+	\subfloat[Efficacité en fonction du seuil.]{\scalebox{0.64}{\includetex{GLA/Eff_46_5500}}}
 	\hfill
-	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.64}{\input{GLA/Mul_46_5500.tex}}}
+	\subfloat[Multiplicité en fonction du seuil.]{\scalebox{0.64}{\includetex{GLA/Mul_46_5500}}}
 	\caption{Efficacité et multiplicité en fonction du seuil appliqué pour la première chambre du télescope placée à \SI{5.5}{\meter} de la source. La tension appliquée est de \SI{7000}{\volt} et le facteur d'atténuation de la source est de \num{46}.}
 	\label{att46}
 \end{figure}
@@ -828,7 +829,7 @@ La figure \ref{Courant} montre les courants des chambres ainsi que la charge int
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=0.7\textwidth]{GLA/DIF16.png}
+	%\scalebox{0.92}{\includetex{GLA/DIF216_LR}}
 	\caption{Taux de conversion : Probabilité qu'un photons de \SI{661.7}{\kilo\eV} produise un hits dans les chambres du télescope au GIF++. Les chambres sont numérotés de \SIrange{0}{6}{}, la chambre \num{0} est la plus proche de la source.}
 	\label{Courant}
 \end{figure}
@@ -888,9 +889,9 @@ L'étude des courants des chambres en fonction de la tension a montré que les v
 
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Chambre 1 (verre de basse résistivité).]{\scalebox{0.92}{\input{GLA/Argon_current_chamber_1.tex}}}
+	\subfloat[Chambre 1 (verre de basse résistivité).]{\scalebox{0.92}{\includetex{GLA/Argon_current_chamber_1}}}
 	\\
-	\subfloat[Chambre 2 ("float glass")]{\scalebox{0.92}{\input{GLA/Argon_current_chamber_2.tex}}}
+	\subfloat[Chambre 2 ("float glass")]{\scalebox{0.92}{\includetex{GLA/Argon_current_chamber_2}}}
 	\caption{Plusieurs scans en montée et en descente  des courants circulant dans la chambre en fonction de la haute tension. La chambre de basse résistivité présente une hystérésis.}
 	\label{hysteresis}
 \end{figure}
@@ -900,7 +901,7 @@ La figure \ref{ScanArgon} montre la variation du courant en fonction de la tensi
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.2}{\input{GLA/Argon_current.tex}}
+	\scalebox{1.2}{\includetex{GLA/Argon_current}}
 	\caption{Courant circulant dans les chambres en fonction de la tension appliquée. Le gaz utilisé est l'Argon. Les résultats de l'ajustement de la partie linéaire sont également donnés.}
 	\label{ScanArgon}
 \end{figure}
@@ -1086,7 +1087,7 @@ La figure \ref{comparaison2} montre l'efficacité de détection des muons pour l
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.3}{\input{GLA/BigChambersComparaison.tex}}
+	\scalebox{1.3}{\includetex{GLA/BigChambersComparaison}}
 	\caption{Efficacité de détection des muons en fonction de la haute tension appliquée. La chambre construite par collage (fixation mécanique) est en rouge (noir).}
 	\label{comparaison2}
 \end{figure}
@@ -1237,9 +1238,9 @@ La figure \ref{fitting} montre un exemple d'ajustement du nombre de hits en fonc
 
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Timestamps des strips non-alignés.]{\scalebox{0.75}{\input{GLA/fitting_unaligned.tex}}\label{nonalign}}
+	\subfloat[Timestamps des strips non-alignés.]{\scalebox{0.75}{\includetex{GLA/fitting_unaligned}}\label{nonalign}}
 	\\
-	\subfloat[Timestamps des strips alignés.]{\scalebox{0.75}{\input{GLA/fitting_aligned.tex}}\label{align}}
+	\subfloat[Timestamps des strips alignés.]{\scalebox{0.75}{\includetex{GLA/fitting_aligned}}\label{align}}
 	\caption{Distribution du nombre de hits par timestamp et ajustement de cette distribution par la somme d'une Gaussienne et une constante (vert), la somme de deux Gaussiennes et d'une constante (rouge) et une Crystal-Ball (bleu).}
 	\label{fitting}
 \end{figure}
@@ -1289,9 +1290,9 @@ Un test Monte Carlo à été effectué afin d'estimer le biais des deux méthode
 \tikzexternaldisable
 \begin{figure}
 \centering
-\subfloat[$\epsilon_{vrai} -\epsilon_{1}$.]{\scalebox{0.75}{\input{GLA/biais1.tex}}\label{biaismethod1}}
+\subfloat[$\epsilon_{vrai} -\epsilon_{1}$.]{\scalebox{0.75}{\includetex{GLA/biais1}}\label{biaismethod1}}
 \\
-\subfloat[$\epsilon_{vrai} -\epsilon_{2}$.]{\scalebox{0.75}{\input{GLA/biais2.tex}}}
+\subfloat[$\epsilon_{vrai} -\epsilon_{2}$.]{\scalebox{0.75}{\includetex{GLA/biais2}}}
 \caption{Biais ($\epsilon_{vrai} -\epsilon_{corrigée}$) des deux méthodes de correction de l'efficacité. $\epsilon_{vrai}$ est l'efficacité réelle sans contamination par le bruit et $\epsilon_{corrigée}=\epsilon_{1}(\epsilon_{2})$ est l'efficacité trouvée après avoir appliqué la formule \ref{method1} (\ref{method2}). Les courbes sont obtenues par un programme Monte Carlo où le nombre de triggers a été fixé à \num{50000}.}
 \label{biais}
 \end{figure}
@@ -1302,7 +1303,7 @@ Le Monte Carlo permet aussi d'estimer la déviation standard du biais pour la fo
 
 \begin{figure}
 	\centering
-	\scalebox{0.75}{\input{GLA/std.tex}}
+	\scalebox{0.75}{\includetex{GLA/std}}
 	\caption{Déviation standard du biais de la formule \ref{method2}. \num{2500000} expériences ont été réalisées au total réparties dans \num{50}$\times$\num{50} bins.}
 	\label{RMSmethod2}
 \end{figure}
@@ -1391,7 +1392,7 @@ La chambre a donc subi quelques modifications notamment afin d'améliorer la com
 Grâce aux améliorations de la chambre, la diaphonie semble être devenue négligeable, ce qui a permis d'utiliser l'ajustement de la distribution du nombre de hits avec une Gaussienne plus constante (cf.fig~\ref{ajust}).
 \begin{figure}
 	\centering
-	\scalebox{1.3}{\input{GLA/TimeDistryBC.tex}}
+	\scalebox{1.3}{\includetex{GLA/TimeDistryBC}}
 	\caption{Distribution temporelle des hits. La distribution correspond à 5000 événements déclenchés par des muons. La tension appliquée est fixée à \SI{8.6}{\kilo\volt} et le seuil à \SI{150}{\pico\coulomb}. Le signal provenant des muons est observé autour de $t_0=$\SI{270}{\nano\second} et peut être ajusté par la somme d'une Gaussienne de résolution $\sigma=$\SI{11}{\nano\second} et d'une constante. La zone du signal correspond à une fenêtre de $\pm 3 \sigma$ autour de $t_0$. Le flux de $\gamma$ de la source est estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}}.
 	\label{ajust}
 \end{figure}
@@ -1400,7 +1401,7 @@ Grâce aux améliorations de la chambre, la diaphonie semble être devenue négl
 
  \begin{figure}
  	\centering
- 	\scalebox{1.3}{\input{GLA/SigmoidBC.tex}}
+ 	\scalebox{1.3}{\includetex{GLA/SigmoidBC}}
  	\caption{Efficacité de détection des muons en fonction de la tension appliquée et du flux de $\gamma$ de la source.}
  	\label{effifi}
  \end{figure}
@@ -1416,13 +1417,13 @@ On remarque que l'efficacité reste supérieure à 80\% même pour un flux de ga
 
 \begin{figure}
 	\centering
-	\scalebox{1.3}{\input{GLA/ClusterSizeBC.tex}}
+	\scalebox{1.3}{\includetex{GLA/ClusterSizeBC}}
 	\caption{Taille moyenne d'un amas (cluster size) en fonction de la haute tension appliquée pour plusieurs valeurs de flux de $\gamma$.}
 	\label{clustersize}
 \end{figure}
 \begin{figure}
 	\centering
-	\scalebox{1.3}{\input{GLA/ProbaStreamerBC.tex}}
+	\scalebox{1.3}{\includetex{GLA/ProbaStreamerBC}}
 	\caption{Probabilité du passage en mode streamer en fonction de la haute tension appliquée pour plusieurs valeurs de flux de $\gamma$.}
 	\label{probastreamer}
 \end{figure}
@@ -1489,7 +1490,7 @@ Après le test en faisceaux, nous avons procédé à l'ouverture de la chambre. 
  
 \begin{figure}[ht!]
 	\centering
-	\scalebox{1.2}{\input{GLA/CurrentRE11.tex}}
+	\scalebox{1.2}{\includetex{GLA/CurrentRE11}}
 	\captionof{figure}{Courant dans la chambre RE1/1 en fonction du pourcentage de \chemform{SF_6} dans le mélange de gaz de type ILC(\chemform{TFE}, \chemform{CO_2}, \chemform{SF_6}) ainsi que pour le mélange de gaz CMS.}
 	\label{CurrentDOME}
 \end{figure}
@@ -1527,9 +1528,9 @@ La figure \ref{effi904Chi} (\ref{effi904Bak}) montre l'efficacité et le taux de
  
 \begin{figure}[ht!]
 	\centering
-	\subfloat[]{\scalebox{1}{\input{GLA/EffiNoiseChi.tex}}\label{effi904Chi}} 
+	\subfloat[]{\scalebox{1}{\includetex{GLA/EffiNoiseChi}}\label{effi904Chi}} 
 	\hfill
-	\subfloat[]{\scalebox{1}{\input{GLA/EffiNoiseBak.tex}}\label{effi904Bak}}
+	\subfloat[]{\scalebox{1}{\includetex{GLA/EffiNoiseBak}}\label{effi904Bak}}
 	\caption{Efficacité et taux de bruit pour la chambre en verre de basse résistivité (haut) et en Bakélite (bas) pour le mélange de gaz CMS (bleu) et le mélange à 5\% de \chemform{SF_6}. Le seuil appliqué est de \SI{72}{\femto\coulomb}.}
 \end{figure}  
 
@@ -1583,13 +1584,13 @@ Ce test en faisceaux a démontré l'utilité du elog. En effet, un programme en 
 
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Distribution du nombres de runs en fonction du nom de la configuration dans la database. \num{30} runs ont été écrit dans le mauvais elog (M3) suite à une erreur de configuration.]{\includegraphics[width=0.48\textwidth]{GLA/DistrDatabase.png}} 
-	\hfill
-	\subfloat[Corrélation entre le statut du faisceau et le statut de la source pour les \num{126} runs ayant été inscrits dans le bon elog.]{\includegraphics[width=0.48\textwidth]{GLA/hStatusBeamVsSource.png}} 
+	\subfloat[Distribution du nombres de runs en fonction du nom de la configuration dans la database. \num{30} runs ont été écrit dans le mauvais elog (M3) suite à une erreur de configuration.]{\scalebox{1.3}{\includetex{GLA/hSetupName_order}}} 
 	\\
-	\subfloat[Nombre de runs en fonction du seuil, l'axe $z$ est le nombre d'atténuateur de la source pour les seuils correspondant.]{\includegraphics[width=0.48\textwidth]{GLA/hAttScanThresholdVsNrun.png}} 
-	\hfill
-	\subfloat[Valeur de l'atténuateur de la source en fonction du seuil, la couleur (le numéro) de l'axe $z$ représente le nombre de valeurs d'atténuateur prises (de runs pris avec cette valeur d'atténuateur).]{\includegraphics[width=0.48\textwidth]{GLA/hAttScanThresholdVsAtt.png}}
+	\subfloat[Corrélation entre le statut du faisceau et le statut de la source pour les \num{126} runs ayant été inscrits dans le bon elog.]{\scalebox{1.3}{\includetex{GLA/hStatusBeamVsSource}}} 
+	\\
+	\subfloat[Nombre de runs en fonction du seuil, l'axe $z$ est le nombre d'atténuateur de la source pour les seuils correspondant.]{\scalebox{1.3}{\includetex{GLA/hAttScanThresholdVsNrun}}}
+	\\
+	\subfloat[Valeur de l'atténuateur de la source en fonction du seuil, la couleur (le numéro) de l'axe $z$ représente le nombre de valeurs d'atténuateur prises (de runs pris avec cette valeur d'atténuateur).]{\scalebox{1.3}{\includetex{GLA/hAttScanThresholdVsAtt}}}
 	\caption{Différents graphiques produits par le programme écrit en PYROOT à partir des données fournies par le ELOG dans le format CSV. Sur les axes PAD1(3,250L) par exemple représente le nom de la chambre ici PAD1, le numéro du seuil ($i'=$1,2 ou 3) et la valeur $\mbox{DAQ}_{i=i'-1}$ appliquée (250) (cf.fig~\ref{equationn}).}
 	\label{elogutil}	
 \end{figure}

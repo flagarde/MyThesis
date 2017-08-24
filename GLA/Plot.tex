@@ -1,0 +1,19 @@
+\documentclass[12pt]{standalone}
+\usepackage{xcolor,colortbl}
+\definecolor{Orange}{HTML}{FFDD00}
+\definecolor{Green}{HTML}{8FB73E}
+\definecolor{Red}{HTML}{EF4123}
+\definecolor{Blue}{HTML}{1E90FF}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
+\usepackage{etoolbox}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=newest}
+\pgfplotsset{compat=newest}
+\usepgfplotslibrary{external,colormaps} 
+\begin{document}
+\begin{tikzpicture}[scale=0.80]\begin{axis}[grid=both,xlabel={Valeur de la carte d'efficacité},ylabel={Valeur de l'efficacité attendue},minor tick num=9,xmin=0,xmax=1.0,ymin=0,ymax=1.0]\addplot[mark=none,domain=0:1.0,samples=30,color=red]{1-((1-x)*(1-0.2*x))};\end{axis}\end{tikzpicture} 
+\end{document}

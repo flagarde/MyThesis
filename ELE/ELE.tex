@@ -20,50 +20,104 @@ Afin de résoudre ce problème et d'éviter la segmentation en $\eta$ du PCB, un
 
 Les strips font toute la longeur de la chambre, chaque bouts du strips est relié à une voie d'électronique. Le retour du strips est effectué sur les côté du PCB, dans une zone protéger par un blindage relié à la masse afin qu'il ne soit pas affecter par le passage des particules.
 
-Ce type de configuration permet de connaitre la position du hits le long du strips. En effet en posant $L$ la longueur de la ligne (strip et retour), $Y$ la position du hits le long du strips, $t_1$ et $t_2$ le temps de propagation du signal pour rejoindre l'un est l'autre côté de la ligne et $v$ la vitesse de propagation du signal :
+Ce type de configuration permet de connaitre la position du hits le long du strips. En effet en posant $L$ la longueur de la ligne (strip et retour), $Y$ la position du hits le long du strips, $t_1$ et $t_2$ le temps de propagation du signal pour rejoindre l'un et l'autre côté de la ligne, $t$ le temps de déclenchement et $v$ la vitesse de propagation du signal :
 \begin{equation}
 Y=\frac{L}{2}-\frac{v(t_2-t_1)}{2}
 \end{equation} 
 
 La résolution temporelle du signal peut également être calculé :
 \begin{equation}
-\sigma_{t}=(t_1+t_2)-\frac{L}{v}
+\label{myformule}
+t=-\frac{(t_1+t_2)}{2}+\frac{L}{2v}
 \end{equation}
 
 \section{Le Prototype}
-Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.fig~\ref{PCB2}). Il est composé de \num{32} strips espacé de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC de \num{24} voies chacun et de résolution temporelle \SI{25}{\nano\second}, développés par nos collègue de Tsinghua sont utilisé afin de mesurer le temps d'arrivé des signaux envoyé par les PETIROC2.
+Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.fig~\ref{PCB2}). Il est composé de \num{32} strips espacé de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC de \num{24} voies chacun et de résolution temporelle \SI{25}{\pico\second}, développés par nos collègue de Tsinghua sont utilisé afin de mesurer le temps d'arrivé des signaux envoyé par les PETIROC2.
 
+\vspace*{1cm}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.50\textwidth]{ELE/PCB2.png}
+	\includegraphics[width=0.95\textwidth]{ELE/PCB2.png}
 	\captionof{figure}{Le PCB avec lecture des strips des deux côtés.}
 	\label{PCB2}
 \end{figure}
 
+\newpage
 \subsection{L'ASIC PETIROC2}
-\begin{wrapfigure}[8]{R}{0.40\textwidth}
-	\vspace*{-1cm}
+
+\begin{wrapfigure}[10]{R}{0.40\textwidth}
 	\centering
-	\includegraphics[width=0.37\textwidth]{ELE/PETIROC.png}
+	\vspace*{-1cm}
+	\includegraphics[width=0.25\textwidth]{ELE/PETIROC.png}
 	\caption{Schéma électronique du PETIROC2.}
 	\label{PETIROC2}
 \end{wrapfigure}
 
-Le PETIROC2 (cf.fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS SiGe \SI{0.35}{\micro\meter}. La puce est insérée dans un boitier de taille \num{4.6}$\times$\SI{42}{\square\milli\meter}, d'épaisseur \SI{1.6}{\milli\meter} et comporte \num{208} pattes dont \num{32} voies d'entrée. Le schéma simplifié du PETIROC2 est donné figure \ref{SchemePETIROC}. Chaque voie permet de mesurer le temps de vol grâce à un TDC intégré et un ADC de 10bits ainsi que la charge sur 10bits. La gamme de réglage du seuil est compris entre \SI{160}{\femto\coulomb} et \SI{400}{\pico\coulomb} global aux \num{32} voies. Un ajustement voie par voie est possible grâce à un DAC de 6bits. Il possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, provient des fluctuations statistiques et du bruit de l'électronique. À cause de ces fluctuations, deux signaux identiques ne vont pas passer le seuil de déclenchement au même point, donnant ainsi une variation temporelle du point de déclenchement qui dépend de l'amplitude des fluctuations.} faible ($<\SI{20}{\pico\second}$ pour une charge supérieur à \SI{160}{\femto\coulomb})
+Le PETIROC2 (cf.fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS SiGe \SI{0.35}{\micro\meter}. La puce est insérée dans un boitier de taille \num{4.6}$\times$\SI{42}{\square\milli\meter}, d'épaisseur \SI{1.6}{\milli\meter} et comporte \num{208} pattes dont \num{32} voies d'entrée. Le schéma simplifié du PETIROC2 est donné figure \ref{SchemePETIROC}. Chaque voie permet de mesurer le temps de vol grâce à un TDC intégré et un ADC de \num{10}bits ainsi que la charge sur \num{10}bits. La gamme de réglage du seuil est compris entre \SI{160}{\femto\coulomb} et \SI{400}{\pico\coulomb} global aux \num{32} voies. Un ajustement voie par voie est possible grâce à un DAC de \num{6}bits. 
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.90\textwidth]{ELE/Scheme.png}
+	\includegraphics[width=0.65\textwidth]{ELE/Scheme.png}
 	\captionof{figure}{schéma simplifié du PETIROC2.}
 	\label{SchemePETIROC}
 \end{figure}
 
+Le PETIROC2 possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, provient des fluctuations statistiques et du bruit de l'électronique. À cause de ces fluctuations, deux signaux identiques ne vont pas passer le seuil de déclenchement au même point, donnant ainsi une variation temporelle du point de déclenchement qui dépend de l'amplitude des fluctuations.} faible ($<\SI{20}{\pico\second}$ pour une charge supérieur à \SI{1.5}{\milli\volt}) (cf.fig\ref{jitter}).
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.65\textwidth]{ELE/Jitter.png}
+	\captionof{figure}{Gigue en fonction dela tension injectée. Le seuil est fixé à \SI{0.5}{\milli\volt}.}
+	\label{jitter}
+\end{figure}
+
 \subsection{Le TDC}
-\begin{wrapfigure}[8]{R}{0.40\textwidth}
+\begin{wrapfigure}[7]{R}{0.40\textwidth}
 	\vspace*{-1cm}
 	\centering
-	\includegraphics[width=0.37\textwidth]{ELE/TDC.png}
+	\includegraphics[width=0.30\textwidth]{ELE/TDC.png}
 	\caption{Un TDC fournit par nos collègues de Tsinghua.}
 	\label{tdc}
 \end{wrapfigure}
-Le TDC fournit par nos collègues chinois possède \num{24} voies et une résolution temporelle de \SI{25}{\pico\second}. Il est basé sur un FPGA de type Cyclone-II. Cette carte reçoit les données des PETIROC2 grêce à des connecteur à entrées différentielles. Les données sont envoyées grâce à un port Éthernet utilisant les protocoles TCP\footnote{Transmission Control Protocol.}/IP\footnote{Internet Protocol.}.
+Le TDC fournit par nos collègues chinois possède \num{24} voies et une résolution temporelle de \SI{25}{\pico\second}. Il est basé sur un FPGA de type Cyclone-II. Cette carte reçoit les données des PETIROC2 grâce à des connecteur à entrées différentielles. Les données sont envoyées grâce à un port Éthernet utilisant les protocoles TCP\footnote{Transmission Control Protocol.}/IP\footnote{Internet Protocol.}.
+
+\section{Résolution temporelle du PCB}
+La résolution temporelle du PCB a été testé en injectant un signal carré de \SI{10}{\volt} d'amplitude et de durée \SI{10}{\nano\second} à travers un condensateur de \SI{1}{\pico\farad} sur des points de test (en bleu sur la figure \ref{PCB2}). Un exemple de la distribution temporelle de $t_{1}-t_{2}$ pour un strip est donné figure\ref{RESOLUTION}
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{1.4}{\includetex{ELE/TDCTimeResolution}}
+	\caption{Résolution temporelle d'un strips du PCB. Le signal est est carré d'amplitude \SI{10}{\volt} et de durée \SI{10}{\nano\second}. Le signal traverse un condensateur de \SI{1}{\pico\farad}.}
+	\label{RESOLUTION}
+\end{figure}
+
+Un ajustement de la distribution temporelle de $T_{1}-T_{2}$ par une Gaussienne est effectué. La valeur moyen de la Gaussienne n'est pas pertinentes car les TDC n'ont pas été calibrés. Cependant, l'écart type de la Gaussienne $\sigma$ permet de déduire la résolution temporelle du PCB. En effet, en supposant les variables $t_1$ et $t_2$ décorrélées on a
+\begin{equation}
+\sigma_{t_1+t_2}=\sqrt{\sigma_{t_1}^2+\sigma_{t_2}^2}
+\end{equation}
+En supposant de plus que $\sigma_{t_1}^2=\sigma_{t_2}^2=\sigma_{elec}^2$
+\begin{equation}
+\frac{\sigma_{t_1+t_2}}{\sqrt{2}}=\sigma_{elec}
+\end{equation}
+La résolution temporelle du PCB est estimé à \SIrange{20}{30}{\pico\second}
+
+\section{Test en faisceau au SPS (Mai 2017)}
+
+Deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) et épaisseur d'électrodes \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) ont été instrumenté avec le PCB à strips et testées sur la ligne H4 du SPS dans la \textit{North Area} (cf.fig~\ref{complexe}). Les chambres ont été posées sur une table de positionnement réglable verticalement et horizontalement (cf.fig\ref{setup2017}).
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.70\textwidth]{ELE/setup2017.jpg}
+	\captionof{figure}{Les deux chambres en Bakélite posées sur la table de positionnement.}
+	\label{setup2017}
+\end{figure}
+
+
+
+
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{0.7}{\includetex{ELE/Fit}}
+	\caption{Résolution temporelle d'un strips du PCB. Le signal est est carré d'amplitude \SI{10}{\volt} et de durée \SI{10}{\nano\second}. Le signal traverse un condensateur de \SI{1}{\pico\farad}.}
+	\label{Fit}
+\end{figure}

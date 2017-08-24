@@ -113,7 +113,7 @@
 % Define the command. Note that the input and output folders are static!
 \newcommand{\includetex}[1]
 {%
-	%\tikzsetnextfilename{#1}%
+	\tikzsetnextfilename{#1}%
 	\input{#1.tex}%
 }
 
@@ -504,7 +504,6 @@ Qui addit scienciam addit et dolorem
 }
 \backmatter
 \fancyhf{} 
-%\MargeSimple{\void}{\void}
 \printbibliography
 \newpage\null\thispagestyle{empty}\newpage
 \microtypesetup{protrusion=false}
@@ -518,6 +517,6 @@ Qui addit scienciam addit et dolorem
 \microtypesetup{protrusion=false}
 \pagestyle{void}
 \tableofcontents
-%\printindex
+\printindex
 \microtypesetup{protrusion=true}
 \end{document}

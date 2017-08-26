@@ -157,6 +157,7 @@ Les événement sont envoyés par TCP/IP et enregistrés sous forme de blocs bin
 \caption{Contenu d'un événement et taille en octets.}\label{donnees}
 \end{table}
 
+\newpage
 Les événements sont créer grâce à un générateur de fonction qui envoi un créneaux déclenchant ainsi le début et la fin d'un événement. A la fin d'un événement, les données sont envoyés et un signal "busy" est activé afin de bloquer la prise d'événement pendant l'exportation des données vers l'ordinateur.
 
 \subsection{Programme d'analyse}
@@ -164,11 +165,48 @@ Le programme d'analyse est écrit en \Cpp en utilisant ROOT. Il permet de lire l
 
 Pour chaque hits de l'événement, le temps d'arrivé $T$ de celui-ci par rapport au signal des scintillateurs est calculé :
 \begin{equation}
-	T_n=T'_n-T_0
+	T^n=T'^n-T_0
 \end{equation}
 avec $T'$ la valeur du temps TDC du hit $n$. 
 
-Un ajustement par une fonction Gaussienne de la distribution de $T_n$ est ensuite effectué. La distribution présentant de nombreux pics, seul la zone proche du premier pics (proche du temps $T_0$) est prise en compte dans l'ajustement. La zone correspondant au signal est ensuite prise comme étant l'intervalle $\left[T_0-\num{1.5}\sigma,T_0-\num{1.5}\sigma\right]$.
+Un ajustement par une fonction Gaussienne de la distribution des $T^n$ est ensuite effectué. La distribution présentant de nombreux pics (cf.fig\ref{pics}), seul la zone proche du premier pics (proche du temps $T_0$) est prise en compte dans l'ajustement. La zone correspondant au signal est ensuite prise comme étant l'intervalle $\left[T_0-\num{1.5}\sigma,T_0-\num{1.5}\sigma\right]$.
+
+\begin{figure}[!ht]
+	\centering
+	\scalebox{0.45}{\includetex{ELE/Pic}}
+	\caption{Distribution des $T^n$ pour une chambre et ajustement par une fonction Gaussienne de la zone proche du premier pic.}
+	\label{pics}
+\end{figure}
+
+Pour chaque strips, la distribution des $T^{n,s}_1-T^{n,s}_2$ où $T^{n,s}_1=T_{'n,s}^{1}-T_0$ ($T^{n,s}_2$) est le temp du hits $n$ du strips $s$ par rapport au temps du signal des scintillateur $T^{0}$ lus d'un côté (de l'autre).
+
+La figure \ref{t2t0} représente la distribution des $T^{n,21}_2$ de la chambre en Bakélite \SI{1.4}{\milli\meter}.
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.40\textwidth]{ELE/TimingFitsRunT1T0_zoom_736185.jpg}
+	\captionof{figure}{Distribution des $T^{n,21}_2$ de la chambre en Bakélite \SI{1.4}{\milli\meter}.}
+	\label{t2t0}
+\end{figure}
+
+Le programme effectue le calcul de l'efficacité des chambres ainsi  qu'une clusterisation d'un côté et de l'autre afin d'obtenir le cluster size et la probabilité de streamer. 
+
+\subsection{Résultats}
+
+Avant de nous intéresser à la précision spatiale et temporelle obtenue par ces chambres nous avons effectuer des scans en tension afin d'obtenir les courbes d'efficacités et de courants pour ces chambres. Ces chambres étant nouvelles et n'ayant jamais été testées avant, nous voulions nous assurer de leur bon fonctionnement.
+
+La différence de courants parcourants les chambres entre les périodes sans faisceaux et avec faisceaux en fonction de la haute tension appliquée est donnée par la figure \ref{courant1.4} (\ref{courant1.6}) pour la chambre \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}).
+
+\begin{figure}[ht!]
+	\vspace{-0.5cm}
+	\centering
+	\subfloat[chambre \SI{1.4}{\milli\meter}.]{\scalebox{0.68}{\includetex{ELE/1p4}}\label{courant1.4}}
+	\subfloat[chambre \SI{1.6}{\milli\meter}.]{\scalebox{0.68}{\includetex{ELE/1.6}}\label{courant1.6}}
+	\caption{différence de courants parcourants les chambres entre les périodes sans faisceaux et avec faisceaux en fonction de la haute tension appliquée.}
+	\label{courant1.41.6}
+\end{figure}
+
+
+Cependant, le PCB s'est révélé trop épais (\SI{700}{\micro\meter}) de chaque côté des strips, ce qui fait baisser artificiellement l'efficacité.
 
 \begin{figure}[!ht]
 	\centering

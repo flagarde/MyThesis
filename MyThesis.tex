@@ -100,7 +100,7 @@
 
 \pgfplotsset{compat=newest}
 \usepgfplotslibrary{external,colormaps} 
-\tikzexternalize
+%\tikzexternalize
 \tikzset{%
 	external/force remake=false,
 	/tikz/external/optimize=false,
@@ -443,9 +443,6 @@
 \def\cleardoublepage{\@supresstrue\clearpage\if@twoside \ifodd\c@page\else\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi\@supressfalse}
 \makeatother
 
-
-\newcommand{\sommaire}{\shorttoc{Sommaire}{1}}
-
 \begin{document}
 \pagestyle{void}
 \nothing{}
@@ -482,7 +479,16 @@ Qui addit scienciam addit et dolorem
 \setcounter{page}{4}
 \frontmatter
 \setcounter{page}{5}
-\sommaire
+\begingroup
+\makeatletter
+\patchcmd{\l@section}{%
+	\addvspace{1.0em \@plus\p@}% original code line
+}{%
+	\addvspace{20pt \@plus 0.2\p@}% substitute code line
+}{}{}
+\makeatother
+\shorttoc{Sommaire}{1}
+\endgroup
 \mainmatter
 \pagestyle{mystyle}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}

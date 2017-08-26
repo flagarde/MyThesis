@@ -10,16 +10,16 @@
 Chaque chambres actuels de CMS ont un PCB segmentés en trois zones selon $\eta$ appelées "$\eta$ segments", chaque $\eta$ segments contenant \num{32} strips. Lors du passage d'un muon, la position de celui-ci selon $\eta$ n'est connu qu'avec une résolution correspondant à la longueur du strip touché.
 
 Afin de résoudre ce problème et d'éviter la segmentation en $\eta$ du PCB, un type de PCB permettant la lecture des deux côté des strip a été proposé (cf.fig~\ref{PCB1}).
-
+\vspace*{0.5cm}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.90\textwidth]{ELE/PCB1.png}
+	\includegraphics[width=1\textwidth]{ELE/PCB1.png}
 	\captionof{figure}{Schèma du PCB permettant la lecture des deux côté des strips.}
 	\label{PCB1}
 \end{figure}
 
 Les strips font toute la longeur de la chambre, chaque bouts du strips est relié à une voie d'électronique. Le retour du strips est effectué sur les côté du PCB, dans une zone protéger par un blindage relié à la masse afin qu'il ne soit pas affecter par le passage des particules.
-
+\newpage
 Ce type de configuration permet de connaitre la position du hits le long du strips. En effet en posant $L$ la longueur de la ligne (strip et retour), $Y$ la position du hits le long du strips, $t_1$ et $t_2$ le temps de propagation du signal pour rejoindre l'un et l'autre côté de la ligne, $t$ le temps de déclenchement et $v$ la vitesse de propagation du signal :
 \begin{equation}
 Y=\frac{L}{2}-\frac{v(t_2-t_1)}{2}
@@ -32,17 +32,25 @@ t=-\frac{(t_1+t_2)}{2}+\frac{L}{2v}
 \end{equation}
 
 \section{Le Prototype}
-Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.fig~\ref{PCB2}). Il est composé de \num{32} strips espacé de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC de \num{24} voies chacun et de résolution temporelle \SI{25}{\pico\second}, développés par nos collègue de Tsinghua sont utilisé afin de mesurer le temps d'arrivé des signaux envoyé par les PETIROC2.
+Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.fig~\ref{PCB2}). Il est composé de \num{32} strips espacé de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC (appelés Mézzanines) de \num{24} voies chacun et de résolution temporelle \SI{25}{\pico\second}, développés par nos collègue de Tsinghua sont utilisé afin de mesurer le temps d'arrivé des signaux envoyé par les PETIROC2.
 
-\vspace*{1cm}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{ELE/PCB2.png}
+	\includegraphics[width=0.77\textwidth]{ELE/PCB2.png}
 	\captionof{figure}{Le PCB avec lecture des strips des deux côtés.}
 	\label{PCB2}
 \end{figure}
 
-\newpage
+\subsection{Le TDC}
+\begin{wrapfigure}[7]{R}{0.40\textwidth}
+	\vspace*{-1cm}
+	\centering
+	\includegraphics[width=0.30\textwidth]{ELE/TDC.png}
+	\caption{Un TDC fournit par nos collègues de Tsinghua.}
+	\label{tdc}
+\end{wrapfigure}
+Le TDC fournit par nos collègues chinois possède \num{24} voies et une résolution temporelle de \SI{25}{\pico\second}. Il est basé sur un FPGA de type Cyclone-II. Cette carte reçoit les données des PETIROC2 grâce à des connecteur à entrées différentielles. Les données sont envoyées grâce à un port Éthernet utilisant les protocoles TCP\footnote{Transmission Control Protocol.}/IP\footnote{Internet Protocol.}.
+
 \subsection{L'ASIC PETIROC2}
 
 \begin{wrapfigure}[10]{R}{0.40\textwidth}
@@ -71,22 +79,15 @@ Le PETIROC2 possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, 
 	\label{jitter}
 \end{figure}
 
-\subsection{Le TDC}
-\begin{wrapfigure}[7]{R}{0.40\textwidth}
-	\vspace*{-1cm}
-	\centering
-	\includegraphics[width=0.30\textwidth]{ELE/TDC.png}
-	\caption{Un TDC fournit par nos collègues de Tsinghua.}
-	\label{tdc}
-\end{wrapfigure}
-Le TDC fournit par nos collègues chinois possède \num{24} voies et une résolution temporelle de \SI{25}{\pico\second}. Il est basé sur un FPGA de type Cyclone-II. Cette carte reçoit les données des PETIROC2 grâce à des connecteur à entrées différentielles. Les données sont envoyées grâce à un port Éthernet utilisant les protocoles TCP\footnote{Transmission Control Protocol.}/IP\footnote{Internet Protocol.}.
 
+
+\vspace{0.4cm}
 \section{Résolution temporelle du PCB}
 La résolution temporelle du PCB a été testé en injectant un signal carré de \SI{10}{\volt} d'amplitude et de durée \SI{10}{\nano\second} à travers un condensateur de \SI{1}{\pico\farad} sur des points de test (en bleu sur la figure \ref{PCB2}). Un exemple de la distribution temporelle de $t_{1}-t_{2}$ pour un strip est donné figure\ref{RESOLUTION}
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.4}{\includetex{ELE/TDCTimeResolution}}
+	\scalebox{1.5}{\includetex{ELE/TDCTimeResolution}}
 	\caption{Résolution temporelle d'un strips du PCB. Le signal est est carré d'amplitude \SI{10}{\volt} et de durée \SI{10}{\nano\second}. Le signal traverse un condensateur de \SI{1}{\pico\farad}.}
 	\label{RESOLUTION}
 \end{figure}
@@ -102,18 +103,72 @@ En supposant de plus que $\sigma_{t_1}^2=\sigma_{t_2}^2=\sigma_{elec}^2$
 La résolution temporelle du PCB est estimé à \SIrange{20}{30}{\pico\second}
 
 \section{Test en faisceau au SPS (Mai 2017)}
-
+\vspace*{-0.4cm}
 Deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) et épaisseur d'électrodes \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) ont été instrumenté avec le PCB à strips et testées sur la ligne H4 du SPS dans la \textit{North Area} (cf.fig~\ref{complexe}). Les chambres ont été posées sur une table de positionnement réglable verticalement et horizontalement (cf.fig\ref{setup2017}).
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.70\textwidth]{ELE/setup2017.jpg}
+	\includegraphics[width=0.65\textwidth]{ELE/setup2017.jpg}
 	\captionof{figure}{Les deux chambres en Bakélite posées sur la table de positionnement.}
 	\label{setup2017}
 \end{figure}
 
+Deux groupes de deux PM de \SI{5}{\centi\meter} de largeur sont placé de part et d'autre des chambres. Les PM d'un même groupe sont placé perpendiculairement l'un par rapport à l'autre (cf.fig~\ref{setup2017}). Deux autres PM de plus petites dimensions (\SI{1.2}{\centi\meter}) sont placés d'un côté des chambres afin de réduire la zone de déclenchement (cf.fig~\ref{smallPM}).  
 
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{ELE/BigSmallScintillators.jpg}
+	\captionof{figure}{Les différents PM placé d'un côté des chambres.}
+	\label{smallPM}
+}
 
+La coïncidence des scintillateurs est envoyé dans les données comme s'il s'agissait d'un signal d'un strips. Chaque Mezzanine reçoit le signal de coïncidence.
+\vspace*{-0.4cm}
+\subsection{Format de données}
+\vspace*{-0.4cm}
+Les événement sont envoyés par TCP/IP et enregistrés sous forme de blocs binaires. Les informations codées dans ces blocs sont données tableau \ref{donnees}. Chaque Mézzanine est identifiable par son adresse IP, le côté des strips dont elle s'occupe est identifiable par "Numéro Mezzanine" (\num{0} ou \num{1}). À chaque strips touché est enregistré le numéro de la voie du PETIROC2 correspond, le temps permettant de se repérer dans un événement (BCID) de résolution \SI{200}{\nano\second} et le temps enregistré par le TDC (Coarse et Fine).
 
+\begin{table}[!ht]
+	\centering
+\begin{tabular}{|OOO|O|N}
+	\hline
+	\multicolumn{3}{|c|}{Contenu d'un événement}& Taille (octets) \\ 
+	\hline
+	\multicolumn{3}{|c|}{Nombre de Mezzanine $N_{mez}$}& 4 \\ 
+	\hline
+	\multirow{13}{1.5cm}{$N_{mez}\times $}&\multicolumn{2}{|c|}{Detector Id}& 4 \\ \cline{2-4}
+	&\multicolumn{2}{|c|}{Datasource Id }& 4 \\ \cline{2-4}
+	&\multicolumn{2}{|c|}{Event Id }& 4 \\ \cline{2-4}
+	&\multicolumn{2}{|c|}{Bunch Crossing Id}& 8 \\ \cline{2-4}
+	&\multicolumn{2}{|c|}{Numéro d'évènement}& 4 \\ \cline{2-4}
+	&\multicolumn{2}{|c|}{Global Trigger Counter (GTC)}&4\\\cline{2-4}
+	&\multicolumn{2}{|c|}{BCID Mezzanine}&8\\\cline{2-4}
+	&\multicolumn{2}{|c|}{Numéro Mezzanine}&4\\\cline{2-4}
+	&\multicolumn{2}{|c|}{IP Mézzanine}&4\\\cline{2-4}
+	&\multicolumn{2}{|c|}{Nombre de voies touchés $N_{touch}$}&4\\\cline{2-4}
+	&\multicolumn{1}{|c|}{\multirow{3}{1.5cm}{$N_{touch}\times $}}&Numéro de la voie&1\\\cline{3-4}
+	&\multicolumn{1}{|c|}{}&BCID Strip&2\\\cline{3-4}
+	&\multicolumn{1}{|c|}{}&Coarse&4\\\cline{3-4}
+	&\multicolumn{1}{|c|}{}&Fine&1\\\cline{3-4}
+	\hline
+	\multicolumn{3}{|c|}{Total}&$4+N_{mez}\times(48+N_{touch}\times8)$\\
+	\hline
+\end{tabular}
+\caption{Contenu d'un événement et taille en octets.}\label{donnees}
+\end{table}
+
+Les événements sont créer grâce à un générateur de fonction qui envoi un créneaux déclenchant ainsi le début et la fin d'un événement. A la fin d'un événement, les données sont envoyés et un signal "busy" est activé afin de bloquer la prise d'événement pendant l'exportation des données vers l'ordinateur.
+
+\subsection{Programme d'analyse}
+Le programme d'analyse est écrit en \Cpp en utilisant ROOT. Il permet de lire les données binaire et de chercher les hits correspondant à la coïncidence des scintillateurs et de trouver leur temps TDC $T_0$. Afin de simplifier l'analyse, seul les événements comportant un seul hit de ce type sont selectionnés. Les événements comportant un nombre de hits trop important ($>1000$) sont également rejetés.
+
+Pour chaque hits de l'événement, le temps d'arrivé $T$ de celui-ci par rapport au signal des scintillateurs est calculé :
+\begin{equation}
+	T_n=T'_n-T_0
+\end{equation}
+avec $T'$ la valeur du temps TDC du hit $n$. 
+
+Un ajustement par une fonction Gaussienne de la distribution de $T_n$ est ensuite effectué. La distribution présentant de nombreux pics, seul la zone proche du premier pics (proche du temps $T_0$) est prise en compte dans l'ajustement. La zone correspondant au signal est ensuite prise comme étant l'intervalle $\left[T_0-\num{1.5}\sigma,T_0-\num{1.5}\sigma\right]$.
 
 \begin{figure}[!ht]
 	\centering

@@ -6,26 +6,26 @@
 \lettrine[lines=4, slope=-0.5em]{C}{e} chapitre présente le développement d'un nouveau type de PCB avec lecture des deux côté des strips. Cette configuration permet, grâce au temps de propagation du signal de connaitre la position du hit le long du strip touché. Ce chapitre présente également les premiers résultats obtenus lors de tests en faisceaux au SPS en mai 2017.
 
 \section{Principe de fonctionnement}
-
+\vspace{-0.5cm}
 Chaque chambres actuels de CMS ont un PCB segmentés en trois zones selon $\eta$ appelées "$\eta$ segments", chaque $\eta$ segments contenant \num{32} strips. Lors du passage d'un muon, la position de celui-ci selon $\eta$ n'est connu qu'avec une résolution correspondant à la longueur du strip touché.
 
 Afin de résoudre ce problème et d'éviter la segmentation en $\eta$ du PCB, un type de PCB permettant la lecture des deux côté des strip a été proposé (cf.fig~\ref{PCB1}).
-\vspace*{0.5cm}
+\vspace*{-0.5cm}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=1\textwidth]{ELE/PCB1.png}
+	\includegraphics[width=0.50\textwidth]{ELE/PCB1.png}
 	\captionof{figure}{Schèma du PCB permettant la lecture des deux côté des strips.}
 	\label{PCB1}
 \end{figure}
-
+\vspace{-0.3cm}
 Les strips font toute la longeur de la chambre, chaque bouts du strips est relié à une voie d'électronique. Le retour du strips est effectué sur les côté du PCB, dans une zone protéger par un blindage relié à la masse afin qu'il ne soit pas affecter par le passage des particules.
-\newpage
-Ce type de configuration permet de connaitre la position du hits le long du strips. En effet en posant $L$ la longueur de la ligne (strip et retour), $Y$ la position du hits le long du strips, $t_1$ et $t_2$ le temps de propagation du signal pour rejoindre l'un et l'autre côté de la ligne, $t$ le temps de déclenchement et $v$ la vitesse de propagation du signal :
+
+Ce type de configuration permet de connaitre la position du hits le long du strips. En effet en posant $L$ la longueur de la ligne (strip et retour), $Y$ la position du hits le long du strips, $t_1$ et $t_2$ le temps de propagation du signal pour rejoindre l'un et l'autre côté de la ligne, $t$ le temps d'arrivée et $v$ la vitesse de propagation du signal :
 \begin{equation}
 Y=\frac{L}{2}-\frac{v(t_2-t_1)}{2}
 \end{equation} 
 
-La résolution temporelle du signal peut également être calculé :
+Le temps d'arrivée du signal peut également être calculé :
 \begin{equation}
 \label{myformule}
 t=-\frac{(t_1+t_2)}{2}+\frac{L}{2v}
@@ -78,8 +78,6 @@ Le PETIROC2 possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, 
 	\captionof{figure}{Gigue en fonction dela tension injectée. Le seuil est fixé à \SI{0.5}{\milli\volt}.}
 	\label{jitter}
 \end{figure}
-
-
 
 \vspace{0.4cm}
 \section{Résolution temporelle du PCB}

@@ -46,7 +46,7 @@ Le premier détecteur gazeux utilisant cette méthode est le compteur à étince
 Afin de résoudre ces problèmes, les électrodes métalliques peuvent être remplacées par des plaques de matériaux de haute résistivité (\SIrange{10e9}{10e10}{\ohm\centi\meter}) afin de limiter l'aire de décharge des électrodes autour du signal. Un mélange de gaz absorbant les photons permet d'éviter le mode streamer. Ce qui permet le fonctionnement du détecteur à des flux de particules plus important. Le champs électrique baissant localement du fait de la recharge plus lente des électrodes, le développement d'avalanches successives au même endroit est limité tout en laissant le détecteur opérationnel hors de cette zone.
 
 \subsubsection{Naissance des RPC}
-En 1981 R.Santonico et R.Cardarelli développent les Resistive Plate Chamber (RPC) \cite{Santonico:1981sc}. Ce détecteur utilise un matériau peu coûteux, très utilisé et de haute résistivité ($\sim$\SI{e10}{\ohm\centi\meter}), le High Pressure Laminate (HPL) fait de melamine ou résine phénol-formaldéhyde (Bakélite). Le temps de décharge d'une électrode d'une telle résistivité recevant une charge $Q_{0}$ est donné par :
+En 1981 R.Santonico et R.Cardarelli développent les Resistive Plate Chamber (RPC) \cite{Santonico:1981sc} \cite{CARDARELLI198820}. Ce détecteur utilise un matériau peu coûteux, très utilisé et de haute résistivité ($\sim$\SI{e10}{\ohm\centi\meter}), le High Pressure Laminate (HPL) fait de melamine ou résine phénol-formaldéhyde (Bakélite). Le temps de décharge d'une électrode d'une telle résistivité recevant une charge $Q_{0}$ est donné par :
 \begin{equation}
 Q(t)=Q_{0}e^{\frac{-t}{\rho\epsilon_{0}\epsilon_{r}}}=Q_{0}e^{\frac{-t}{\tau}}
 \end{equation}
@@ -278,7 +278,7 @@ avec la première équation décrivant la variation du nombre moyen d'électrons
 Le coefficient de Townsend dépend du champ électrique appliqué. La figure \ref{tow} montre cette dépendance pour un mélange de gaz.
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.75\textwidth]{RPC/tow.png}
+	\includegraphics[width=0.60\textwidth]{RPC/tow.png}
 	\captionof{figure}{Coefficient de Townsend et coefficient d'attachement calculés grâce à Imonte \cite{imonte} pour $T=296.15K$ et $p=1013mbar$ pour un mélange de gaz particulier \cite{Riegler:570462}. }
 	\label{tow}
 \end{figure}
@@ -291,6 +291,7 @@ En supposant $\alpha$ et $\beta$ constantes, la charge totale à l'emplacement $
 \begin{equation}
 q(z)=\sum_{j=1}^{n_c}q_{e}M_{j}n_{j,0}\exp^{(\alpha-\beta)(z-z_O^j)}
 \end{equation}
+\newpage
 Les fluctuations statistiques sont prises en compte par 4 variables aléatoires :
 \begin{itemize}[label=$\bullet$]
 	\item Le nombre d'amas $n_c$ qui suit une distribution poissonienne 
@@ -317,7 +318,7 @@ La vitesse de dérive pour les électrons dans différents mélanges de gaz est 
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.75\textwidth]{RPC/drift.png}
+	\includegraphics[width=0.60\textwidth]{RPC/drift.png}
 	\captionof{figure}{Vitesse de dérive calculé en utilisant le programme MAGBOLTZ \cite{MAGBOLTZ} pour différents mélanges de gaz à la température $T=$\SI{296.15}{\kelvin} et pression $p=$\SI{1013}{\milli\bar}.}
 	\label{drift}
 \end{figure}
@@ -325,3 +326,54 @@ La vitesse de dérive pour les électrons dans différents mélanges de gaz est 
 De par leur masse beaucoup plus élevée que les électrons, les ions se déplacent plus lentement et participent moins au courant induit, ils mettent en revanche plus de temps pour atteindre l'électrode, le signal induit est donc beaucoup plus long et accroit le temps mort du détecteur.
 
 \section{Les Resistive Plate Chambers de CMS}
+
+Le détecteur CMS utilise des chambres double gaps d'épaisseur \SI{2}{\milli\meter}, chacun formés par deux électrodes en Bakélite de résistivité comprise entre \SI{1e10}{\ohm\centi\meter} et \SI{6e10}{\ohm\centi\meter} (cf.fig\ref{cmsrpc}). 
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{RPC/CMSRPC.png}
+	\captionof{figure}{Schèma d'une chambre RPC dans CMS.}
+	\label{cmsrpc}
+\end{figure}
+
+Afin de maintenir la distance de \SI{2}{\milli\meter} entre les électrodes, des spacers en Polychlorure de vinyle (PVC) de \SI{8}{\milli\meter} de diamètre sont placés tous le \SI{10}{\centi\meter}. Les faces externes des électrodes sont recouverte d'une peinture de graphite de résistance surfacique $\approx$\SI{e5}{\ohm\per\sq} permettant la mise sous tension des chambres. Un film l'huile de lin d'épaisseur \SIrange{35}{45}{\micro\meter} est apliquée sur les faces constituant les parties internes des gaps afin d'améliorer la planéité des surfaces \cite{oil} et limiter les photons ultra-violet \cite{Lu:2009zzd}, ce qui a pour effet  de réduire le bruit et le courant de fuite des RPC.
+Le signal est récolté par des strips placé entre les deux chambres et séparé de celle-ci par une couche de Mylar. Les chambres opérent en mde avalanche pour les raisons déjà évoquées dans ce chapitres.
+
+\subsection{Le mélange gazeux}
+Le mélange gazeux utilisé par les RPC de CMS comporte :
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/C2H2F4.png}
+	\captionof{figure}{Structure chimique du Tétrafluoroéthane.}
+	\label{Tetra}
+}
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/Isobutane.png}
+	\captionof{figure}{Structure chimique de l'isobutane.}
+	\label{Iso}
+}
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/Sulfurhexafluoride.png}
+	\captionof{figure}{Structure chimique de l'hexafluorure de soufre.}
+	\label{hexa}
+}
+\begin{itemize}[label=$\bullet$]
+\item \num{95.2}\% de Tétrafluoroéthane \chemform{C_2H_2F_4} (R-134a) qui est le composant principal du mélange et permet une densité de cluster primaire élevé $\lambda=\SI{5.5}{\clusters\per\milli\meter}$ tout en gardant un coefficient de Townsend effectif élevé $\alpha_{eff}=\SI{9.15}{\per\milli\meter}$ \cite{CMS-NOTE-1997-004}.
+\item \num{4.5}\% d'isobutane \chemform{iso-C_4H_10} qui est utilisé comme qbsorbeur de photons ultraviolet (UV) produit par la dés-excitation des molécules du mélange gazeux.
+\item \num{0.3}\% d'hexafluorure de soufre \chemform{SF_6} qui est un gaz très électronégatif est permet de capturer l'excés d'électrons, il participe ainsi à augmenter le coefficient d'attachement $\beta$ et permet de réduire la probabilité de streamer \cite{Camarri:685607}.
+\end{itemize}
+
+Afin d'empêcher l'augmentation de la résistivité de la Bakélite, \num{35}\% à \num{40}\% d'humidité est ajouté au mélange gazeux \cite{Abbrescia:2004fv}.
+
+Les gaz \chemform{C_2H_2F_4} et \chemform{SF_6} ont un  potentiel de réchauffement global (PRG) \footnote{Le PRG d’un gaz est le rapport entre les effets causés par la libération en début de période d’une masse donnée de ce gaz et ceux causés par la même masse de dioxyde de carbone (\chemform{CO_2})} \textit{Global Warming Potential (GWP)} de \num{1000} et \num{23900} sur une période de \num{100} ans. Dans le but de rejeter et de réduire la consommation de ces gaz, celui-ci circule en circuit fermé avec un une injection de gaz pur de \num{5}\% à \num{10}\% \cite{5401780}. Cependant, ces recirculation de gaz amène à l'augmentation d'impuretés comme le \chemform{HF}, le \chemform{F^-} et d'autres type de molécules à base de Fréon \cite{1748-0221-8-08-T08003}, et à une étude et un monitorage par chromatographie de la composition du gaz injecté et circulant dans les chambres. 
+
+\subsection{Disposition des chambres RPC dans les secteurs des End-Caps de CMS}
+Le détecteur CMS comporte 
+
+
+

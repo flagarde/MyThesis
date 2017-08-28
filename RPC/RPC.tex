@@ -46,12 +46,7 @@ Le premier détecteur gazeux utilisant cette méthode est le compteur à étince
 Afin de résoudre ces problèmes, les électrodes métalliques peuvent être remplacées par des plaques de matériaux de haute résistivité (\SIrange{10e9}{10e10}{\ohm\centi\meter}) afin de limiter l'aire de décharge des électrodes autour du signal. Un mélange de gaz absorbant les photons permet d'éviter le mode streamer. Ce qui permet le fonctionnement du détecteur à des flux de particules plus important. Le champs électrique baissant localement du fait de la recharge plus lente des électrodes, le développement d'avalanches successives au même endroit est limité tout en laissant le détecteur opérationnel hors de cette zone.
 
 \subsubsection{Naissance des RPC}
-En 1981 R.Santonico et R.Cardarelli développent les Resistive Plate Chamber (RPC) \cite{Santonico:1981sc} \cite{CARDARELLI198820}. Ce détecteur utilise un matériau peu coûteux, très utilisé et de haute résistivité ($\sim$\SI{e10}{\ohm\centi\meter}), le High Pressure Laminate (HPL) fait de melamine ou résine phénol-formaldéhyde (Bakélite). Le temps de décharge d'une électrode d'une telle résistivité recevant une charge $Q_{0}$ est donné par :
-\begin{equation}
-Q(t)=Q_{0}e^{\frac{-t}{\rho\epsilon_{0}\epsilon_{r}}}=Q_{0}e^{\frac{-t}{\tau}}
-\end{equation}
-avec $\rho$ la resistivité volumique du matériau, $\epsilon_{0}$ la permittivité du vide et $\epsilon_{r}$ la permittivité relative du matériau.
-Les charges présentes sur les électrodes réduisent la haute tension appliquée et donc le champ électrique à l'endroit des charges. Le détecteur devient inefficace pour cette période de temps $\tau$ à l'endroit du dépôt des charges tout en restant efficace ailleurs. Pour le cas de la bakélite $\rho\simeq\SI{10e10}{\ohm\centi\meter}$ le temps de relaxation est de l'ordre de \SI{50}{\second}. Grâce à l'utilisation de matériaux de haute résistivité, l'utilisation de chambres de grande taille était désormais possible.
+En 1981 R.Santonico et R.Cardarelli développent les Resistive Plate Chamber (RPC) \cite{Santonico:1981sc} \cite{CARDARELLI198820}. Ce détecteur utilise un matériau peu coûteux, très utilisé et de haute résistivité ($\sim$\SI{e10}{\ohm\centi\meter}), le High Pressure Laminate (HPL) fait de melamine ou résine phénol-formaldéhyde (Bakélite). 
 
 Plusieurs configuration pour les RPC sont possibles, mais l'une des plus simples est donnée par la figure \ref{RPCscheme}.
 
@@ -63,6 +58,28 @@ Plusieurs configuration pour les RPC sont possibles, mais l'une des plus simples
 \end{figure}
 
 Une couche de gaz est comprise entre deux plaques d'électrodes résistives. Ces plaques sont peintes avec du graphite qui est utilisé pour distribuer la haute tension sur les électrodes. L'électronique est isolée de la chambre par un isolant fin, de type feuille de poly(téréphtalate d'éthylène) (Mylar). L'électronique peut être placée de chaque coté de la chambre et peut être constituée de carreaux ou de lamelles etc.
+
+Un modèle électrique simplifié d'un RPC peut être obtenu (cf.ref~\ref{RPCscheme}). En notant, $C_{b}$ la capacité de la bakélite, $R_{b}$ sa résistance et $C_{g}$ la capacité du gaz.
+
+La résistance de la bakélite est donnée par :
+\begin{equation}
+R_b=\frac{\rho d}{S}
+\end{equation}
+avec $\rho$ la résistivité de la bakélite, $d$ l'épaisseur de l'électrode et $S$ sa surface.
+
+La capacité de la bakélite est donnée quant à elle par :
+\begin{equation}
+C_{b}=\epsilon_0\epsilon_r\frac{S}{d}
+\end{equation} 
+avec $\epsilon_0$ la permittivité du vide et $\epsilon_r$ la permittivité relative de la Bakélite.
+
+Le temps de décharge d'une électrode de telle résistivitéet capacité recevant une charge $Q_{0}$ est donné par :
+\begin{equation}
+Q(t)=Q_{0}e^{\frac{-t}{R_bC_b}}=Q_{0}e^{\frac{-t}{\rho\epsilon_{0}\epsilon_{r}}}=Q_{0}e^{\frac{-t}{\tau}}
+\end{equation}
+Les charges présentes sur les électrodes réduisent la haute tension appliquée et donc le champ électrique à l'endroit des charges. Le détecteur devient inefficace pour cette période de temps $\tau$ à l'endroit du dépôt des charges tout en restant efficace ailleurs. Pour le cas de la bakélite $\rho\simeq\SI{10e10}{\ohm\centi\meter}$ le temps de relaxation est de l'ordre de \SI{10}{\micro\second}. Grâce à l'utilisation de matériaux de haute résistivité, l'utilisation de chambres de grande taille était désormais possible.
+
+
 Depuis, ces détecteurs de construction simple et robuste ont été utilisés dans de nombreuses expériences : ATLAS \cite{ATLAS}, BaBar \cite{Boutigny:1995ib} (cf.fig~\ref{babar}), BELLE \cite{ABASHIAN2002117} (cf.fig~\ref{belle}),  Oscillation Project with Emulsion-tRacking Apparatus (OPERA) \cite{1748-0221-9-10-C10003} (cf.fig~\ref{opera}) etc. Différentes solutions technologiques ont été développées selon les besoins des différentes expériences.
 
 \marginpar
@@ -372,8 +389,54 @@ Afin d'empêcher l'augmentation de la résistivité de la Bakélite, \num{35}\% 
 
 Les gaz \chemform{C_2H_2F_4} et \chemform{SF_6} ont un  potentiel de réchauffement global (PRG) \footnote{Le PRG d’un gaz est le rapport entre les effets causés par la libération en début de période d’une masse donnée de ce gaz et ceux causés par la même masse de dioxyde de carbone (\chemform{CO_2})} \textit{Global Warming Potential (GWP)} de \num{1000} et \num{23900} sur une période de \num{100} ans. Dans le but de rejeter et de réduire la consommation de ces gaz, celui-ci circule en circuit fermé avec un une injection de gaz pur de \num{5}\% à \num{10}\% \cite{5401780}. Cependant, ces recirculation de gaz amène à l'augmentation d'impuretés comme le \chemform{HF}, le \chemform{F^-} et d'autres type de molécules à base de Fréon \cite{1748-0221-8-08-T08003}, et à une étude et un monitorage par chromatographie de la composition du gaz injecté et circulant dans les chambres. 
 
-\subsection{Disposition des chambres RPC dans les secteurs des End-Caps de CMS}
-Le détecteur CMS comporte 
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/schemerpc.png}
+	\captionof{figure}{Schéma d'une chambre RPC dans les bouchons \cite{Tytgat:1477019}.}
+	\label{trap}
+}
 
+\subsection{Disposition des chambres RPC dans les secteurs des bouchons de CMS}
+La disposition des chambres RPC dans CMS a été présentée dans la section \ref{RPCPRE}. Ces chambres sont rectangulaires dans le tonneau et trapézoïdales dans les bouchons (cf.fig~\ref{trap}). L'aire des strips contenus dans les chambres ainsi que leur longueur ont été optimisées afin de limiter le bruit par strip qui pourrait augmenter la probabilité de coïncidences fortuites et être considéré comme le passage d'un muon. La longueur des strips est également limitée par le temps de propagation du signal le long de celui-ci. En effet, ce temps de propagation doit être plus cours que le temps de vol entre les stations. La changement de trajectoire du muon selon $\eta$ à cause du champ magnétique est également à prendre en compte pour la longueur des strips.
 
+Les chambres sont donc divisées en deux (trois) $\eta-sectors$ pour les chambres du tonneaux (des bouchons). Les strips ont une longueur comprises entre \num{57} et \SI{125}{\centi\meter} dans le tonneau et entre \num{39.8} et \SI{79.72}{\centi\meter} dans les bouchons. Ces trois $\eta-sectors$ sont notés $A$, $B$, $C$ selon $\eta$ décroissant et comporte \num{32} strips chacun.
 
+Cette divisions le long de $\eta$ amène à la segmentation des gaps des détecteurs afin d'extraire les signaux provenant des strips. Ainsi, les chambres des bouchons sont constitué non pas de deux mais de trois gaps noté $i$ (\textit{Bottom gap}), $ii$ (\textit{Top Wide gap}) et $iii$ (\textit{Top Narrow gap})
+ (cf.fig~\ref{gapslayout}). 
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.75\textwidth]{RPC/gaps.png}
+	\captionof{figure}{Disposition des gaps dans les chambres des bouchons \cite{gapss}.}
+	\label{gapslayout}
+\end{figure}
+
+\marginpar
+{
+	\centering
+	\includegraphics[width=\marginparwidth]{RPC/signalextraction.png}
+	\captionof{figure}{Zone d'exctraction des signaux.}
+	\label{extraction}
+}
+
+\subsection{Électronique de lecture des chambres dans les bouchons}
+L'électronique de lecture des signaux provenant des strips est composées de deux types de cartes :
+\begin{itemize}[label=$\bullet$]
+	\item Les \textbf{Front-End Boards} (FEB) (cf.fig~\ref{Feb}). Dans les bouchons, les FEB contiennent \num{4} ASIC appelées \textit{FEB Chips} s'occupant chacun de \num{8} strips qui sont connectés d'un côté grâce à des câbles coaxiaux. Le positionnement de ces FEB sur la chambre et les zones d'extraction des signaux ont été étudiés afin de limiter la gigue totale du signal (cf.fig~\ref{extraction}). Chaque chambre comporte \num{3} FEB.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.50\textwidth]{RPC/Feb.png}
+		\captionof{figure}{Une Front-End Board des chambres RPC dans les bouchons de CMS. Les \num{4} ASIC sont clairement visible sur le PCB. Les strips sont connectés aux connecteurs du bas et les signaux \textit{Low-Voltage Differential Signaling} (LVDS) sont envoyé grâce aux câbles connectés aux connecteurs du haut. Le connecteur sur la droite permet la connection du FEB au \textit{Distribution Board} (DB) et amène la basse tension et les siganux I$^2$C.}
+		\label{Feb}
+	\end{figure}
+	Le schéma de principe de l'électronique d'une voie du FEB est donné figure \ref{schemeelec} \cite{electro}, le signal est amplifié par un gain important variant linéaire $\approx$\SI{2}{\milli\volt\per\femto\coulomb} jusqu'à \SI{100}{\femto\coulomb} et un gain plus faible au delà. Un discriminateur compare ensuite le signal amplifier à un tension de seuil programmable (\SI{220}{\milli\volt} dans CMS) et permet de sélectionner la charge minimale de déclenchement, cependant ce circuit possède un time-walk de $\approx$\SI{10}{\nano\second} sur la gamme dynamique du signal d'entrée. Ce time-walk est incompatible avec l'utilisation des RPC comme système de déclenchement de CMS. Afin d'obtenir une bonne résolution temporelle en limitant le time-walk, un circuit RC différentie le signal d'entrée et l'envoie dans un zero-crossing discrimator. Ces deux signaux sont ensuite envoyé dans un circuit de coïncidence. Cette méthode permet de réduire le time-walk à $\approx$\SI{1}{\nano\second}. Le signal en sortie déclenche ensuite un circuit monostable qui définit la largeur réglable du signal de sortie. La largeur de ce signal à été réglé à $\approx$\SI{100}{\nano\second} afin de ne pas déclencher sur les rebond du signal d'entrée qui pourrait survenir étant donné qu'il n'y apas d'adaptation d'impédance au bout du strips. Finalement, le signal sort par transmission différentielle basse-tension \textit{Low-Voltage Differencial Signaling} (LVDS) grâce à des paires de câbles torsadées. Chaque FEB possède au moins un capteur de température afin de vérifier le bon fonctionnement de la carte.
+	
+	\item Les \textbf{Distribution Board} (DB) (cf.fig~\ref{DB}) permettent de configurer et de monitorer grâce à une interface I$^2$C les paramètres des FEB. Ces paramètres sont la tension de seuil du discriminateur (\textit{Threshold Voltage} $V_{Th}$), la largeur du signal de sortie (\textit{Monostable Voltage} $V_{Mon}$). Ces paramètre sont commun au \num{8} voies d'un même ASIC d'un FEB. Les valeurs par défaults de ces paramètres\footnote{En cas de perte de connexion} sont réglable par des potentiomètres placés sur le PCB des FEB pour les FEB servant de test. Pour les FEB présents dans les chambres de CMS, ces potentiomètres ont été remplacés par des convertisseur digital analogie (DAC). Chaque chambre des bouchons possède un DB.
+		\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.50\textwidth]{RPC/DB.png}
+		\captionof{figure}{Un DB.}
+		\label{DB}
+	\end{figure}
+\end{itemize}

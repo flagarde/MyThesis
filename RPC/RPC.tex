@@ -454,12 +454,12 @@ L'électronique de lecture des signaux provenant des strips est composées de de
 		\label{schemeelec}
 	\end{figure}
 	
-	\item Les \textbf{Distribution Board} (DB) (cf.fig~\ref{DB}) permettent de configurer et de monitorer grâce à une interface I$^2$C les paramètres des FEB. Ces paramètres sont la tension de seuil du discriminateur (\textit{Threshold Voltage} $V_{Th}$), la largeur du signal de sortie (\textit{Monostable Voltage} $V_{Mon}$). Ces paramètre sont commun au \num{8} voies d'un même ASIC d'un FEB. Les valeurs par défaults de ces paramètres\footnote{En cas de perte de connexion} sont réglable par des potentiomètres placés sur le PCB des FEB pour les FEB servant de test. Pour les FEB présents dans les chambres de CMS, ces potentiomètres ont été remplacés par des convertisseur digital analogie (DAC). Chaque chambre des bouchons possède un DB. Les DB fournissent aussi la basse tension aux FEB.
+	\item Les \textbf{Distribution Board} (DB) (cf.fig~\ref{DB}) permettent de configurer et de monitorer grâce à une interface \textit{Inter-Integrated Circuit} I$^2$C les paramètres des FEB. Ces paramètres sont la tension de seuil du discriminateur (\textit{Threshold Voltage} $V_{Th}$), la largeur du signal de sortie (\textit{Monostable Voltage} $V_{Mon}$). Ces paramètre sont commun au \num{8} voies d'un même ASIC d'un FEB. Les valeurs par défaults de ces paramètres\footnote{En cas de perte de connexion} sont réglable par des potentiomètres placés sur le PCB des FEB pour les FEB servant de test. Pour les FEB présents dans les chambres de CMS, ces potentiomètres ont été remplacés par des convertisseur digital analogie (DAC). Chaque chambre des bouchons possède un DB. Les DB fournissent aussi la basse tension aux FEB.
 	
 		\begin{figure}[ht!]
 		\centering
 		\includegraphics[width=0.35\textwidth]{RPC/DB.png}
-		\captionof{figure}{Un DB.}
+		\captionof{figure}{Un DB permettant les configurations des paramètres des FEB par I$^2$C et ainsi que leur alimentation.}
 		\label{DB}
 	\end{figure}
 

@@ -4,37 +4,37 @@
 \ThisULCornerWallPaper{1}{\chapterillustration}
 \minitoc
 
-\lettrine[lines=4, slope=-0.5em]{C}{e} chapitre présente le développement d'un nouveau type de PCB avec lecture des deux côté des strips. Cette configuration permet, grâce au temps de propagation du signal de connaitre la position du hit le long du strip touché. Ce chapitre présente également les premiers résultats obtenus lors de tests en faisceaux au SPS en mai 2017.
+\lettrine[lines=4, slope=-0.5em]{C}{e} chapitre présente le développement d'un nouveau type de PCB avec lecture des deux côtés des strips. Cette configuration permet, grâce au temps de propagation du signal de connaitre la position du hit le long du strip touché. Ce chapitre présente également les premiers résultats obtenus lors de tests en faisceaux au SPS en mai 2017.
 
 \section{Principe de fonctionnement}
 \vspace{-0.5cm}
-Chaque chambres actuels de CMS ont un PCB segmentés en trois zones selon $\eta$ appelées "$\eta$ segments", chaque $\eta$ segments contenant \num{32} strips. Lors du passage d'un muon, la position de celui-ci selon $\eta$ n'est connu qu'avec une résolution correspondant à la longueur du strip touché.
+Chaque chambre actuelle de CMS a un PCB segmenté en trois zones selon $\eta$ appelées "$\eta$ segments", chaque $\eta$ segment contenant \num{32} strips. Lors du passage d'un muon, la position de celui-ci selon $\eta$ n'est connu qu'avec une résolution correspondant à la longueur du strip touché.
 
-Afin de résoudre ce problème et d'éviter la segmentation en $\eta$ du PCB, un type de PCB permettant la lecture des deux côté des strip a été proposé (cf.fig~\ref{PCB1}).
+Afin de résoudre ce problème et d'éviter la segmentation en $\eta$ du PCB, un type de PCB permettant la lecture des deux côtés des strips a été proposé (cf.fig~\ref{PCB1}).
 \vspace*{-0.5cm}
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.50\textwidth]{ELE/PCB1.png}
-	\captionof{figure}{Schèma du PCB permettant la lecture des deux côté des strips.}
+	\captionof{figure}{Schèma du PCB permettant la lecture des deux côtés des strips.}
 	\label{PCB1}
 \end{figure}
 \vspace{-0.3cm}
-Les strips font toute la longeur de la chambre, chaque bouts du strips est relié à une voie d'électronique. Le retour du strips est effectué sur les côté du PCB, dans une zone protéger par un blindage relié à la masse afin qu'il ne soit pas affecter par le passage des particules.
+Les strips font toute la longeur de la chambre, chaque bout des strips est relié à une voie d'électronique. Le retour du strip est effectué sur les côtés du PCB, dans une zone protégée par un blindage relié à la masse afin de le retour ne soit pas affecté par le passage des particules.
 
-Ce type de configuration permet de connaitre la position du hits le long du strips. En effet en posant $L$ la longueur de la ligne (strip et retour), $Y$ la position du hits le long du strips, $t_1$ et $t_2$ le temps de propagation du signal pour rejoindre l'un et l'autre côté de la ligne, $t$ le temps d'arrivée et $v$ la vitesse de propagation du signal :
+Ce type de configuration permet de connaitre la position d'un hit le long du strip. En effet en posant $L$ la longueur de la ligne (strip et retour), $Y$ la position du hit le long du strip, $T_1$ et $T_2$ le temps de propagation du signal pour rejoindre l'un et l'autre côté de la ligne, $T$ le temps d'arrivée du signal sur le strip et $v$ la vitesse de propagation du signal :
 \begin{equation}
 \label{eqqq}
-Y=\frac{L}{2}-\frac{v(t_2-t_1)}{2}
+Y=\frac{L}{2}-\frac{v(T_2-T_1)}{2}
 \end{equation} 
 
 Le temps d'arrivée du signal peut également être calculé :
 \begin{equation}
 \label{myformule}
-t=-\frac{(t_1+t_2)}{2}+\frac{L}{2v}
+T=-\frac{(T_1+T_2)}{2}+\frac{L}{2v}
 \end{equation}
 
 \section{Le Prototype}
-Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.fig~\ref{PCB2}). Il est composé de \num{32} strips espacé de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC (appelés Mézzanines) de \num{24} voies chacun et de résolution temporelle \SI{25}{\pico\second}, développés par nos collègue de Tsinghua sont utilisé afin de mesurer le temps d'arrivé des signaux envoyé par les PETIROC2.
+Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.fig~\ref{PCB2}). Il est composé de \num{32} strips espacés de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC (appelés Mézzanines) de \num{24} voies chacun et de résolution temporelle \SI{25}{\pico\second}, développés par nos collègues de Tsinghua sont utilisés afin de mesurer le temps d'arrivé des signaux envoyés par les PETIROC2.
 
 \begin{figure}[ht!]
 	\centering
@@ -48,10 +48,10 @@ Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été
 	\vspace*{-1cm}
 	\centering
 	\includegraphics[width=0.30\textwidth]{ELE/TDC.png}
-	\caption{Un TDC fournit par nos collègues de Tsinghua.}
+	\caption{Un TDC fourni par nos collègues de Tsinghua.}
 	\label{tdc}
 \end{wrapfigure}
-Le TDC fournit par nos collègues chinois possède \num{24} voies et une résolution temporelle de \SI{25}{\pico\second}. Il est basé sur un FPGA de type Cyclone-II. Cette carte reçoit les données des PETIROC2 grâce à des connecteur à entrées différentielles. Les données sont envoyées grâce à un port Éthernet utilisant les protocoles TCP\footnote{Transmission Control Protocol.}/IP\footnote{Internet Protocol.}.
+Le TDC fourni par nos collègues chinois possède \num{24} voies et une résolution temporelle de \SI{25}{\pico\second}. Il est basé sur un FPGA de type Cyclone-II. Cette carte reçoit les données des PETIROC2 grâce à des connecteurs à entrées différentielles. En sortie, les données sont envoyées grâce à un port Éthernet utilisant les protocoles TCP\footnote{Transmission Control Protocol.}/IP\footnote{Internet Protocol.}.
 
 \subsection{L'ASIC PETIROC2}
 
@@ -63,7 +63,7 @@ Le TDC fournit par nos collègues chinois possède \num{24} voies et une résolu
 	\label{PETIROC2}
 \end{wrapfigure}
 
-Le PETIROC2 (cf.fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS SiGe \SI{0.35}{\micro\meter}. La puce est insérée dans un boitier de taille \num{4.6}$\times$\SI{42}{\square\milli\meter}, d'épaisseur \SI{1.6}{\milli\meter} et comporte \num{208} pattes dont \num{32} voies d'entrée. Le schéma simplifié du PETIROC2 est donné figure \ref{SchemePETIROC}. Chaque voie permet de mesurer le temps de vol grâce à un TDC intégré et un ADC de \num{10}bits ainsi que la charge sur \num{10}bits. La gamme de réglage du seuil est compris entre \SI{160}{\femto\coulomb} et \SI{400}{\pico\coulomb} global aux \num{32} voies. Un ajustement voie par voie est possible grâce à un DAC de \num{6}bits. 
+Le PETIROC2 (cf.fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS SiGe \SI{0.35}{\micro\meter}. La puce est insérée dans un boitier de taille \num{4.6}$\times$\SI{42}{\square\milli\meter}, d'épaisseur \SI{1.6}{\milli\meter} et comporte \num{208} pattes dont \num{32} voies d'entrée. Le schéma simplifié du PETIROC2 est donné figure \ref{SchemePETIROC}. Chaque voie permet de mesurer le temps de vol grâce à un TDC intégré et un ADC de \num{10}bits ainsi que la charge sur \num{10}bits. La gamme de réglage du seuil global aux \num{32} voies est comprise entre \SI{160}{\femto\coulomb} et \SI{400}{\pico\coulomb}. Un ajustement voie par voie est possible grâce à un DAC de \num{6}bits. 
 
 \begin{figure}[ht!]
 	\centering
@@ -72,39 +72,39 @@ Le PETIROC2 (cf.fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS S
 	\label{SchemePETIROC}
 \end{figure}
 
-Le PETIROC2 possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, provient des fluctuations statistiques et du bruit de l'électronique. À cause de ces fluctuations, deux signaux identiques ne vont pas passer le seuil de déclenchement au même point, donnant ainsi une variation temporelle du point de déclenchement qui dépend de l'amplitude des fluctuations.} faible ($<\SI{20}{\pico\second}$ pour une charge supérieur à \SI{1.5}{\milli\volt}) (cf.fig\ref{jitter}).
+Le PETIROC2 possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, provient des fluctuations statistiques et du bruit de l'électronique. À cause de ces fluctuations, deux signaux identiques ne vont pas passer le seuil de déclenchement au même point, donnant ainsi une variation temporelle du point de déclenchement qui dépend de l'amplitude des fluctuations.} faible ($<\SI{20}{\pico\second}$ pour une charge supérieure à \SI{1.5}{\milli\volt}) (cf.fig\ref{jitter}).
 
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.65\textwidth]{ELE/Jitter.png}
-	\captionof{figure}{Gigue en fonction dela tension injectée. Le seuil est fixé à \SI{0.5}{\milli\volt}.}
+	\captionof{figure}{Gigue en fonction de la tension injectée. Le seuil est fixé à \SI{0.5}{\milli\volt}. Dans notre cas, la gigue est donnée par la courbe verte.}
 	\label{jitter}
 \end{figure}
 
 \vspace{0.4cm}
 \section{Résolution temporelle du PCB}
-La résolution temporelle du PCB a été testé en injectant un signal carré de \SI{10}{\volt} d'amplitude et de durée \SI{10}{\nano\second} à travers un condensateur de \SI{1}{\pico\farad} sur des points de test (en bleu sur la figure \ref{PCB2}). Un exemple de la distribution temporelle de $t_{1}-t_{2}$ pour un strip est donné figure\ref{RESOLUTION}
+La résolution temporelle du PCB a été testée en injectant un signal carré de \SI{10}{\volt} d'amplitude et de durée \SI{10}{\nano\second} à travers un condensateur de \SI{1}{\pico\farad} sur des points de test (en bleu sur la figure \ref{PCB2}). Un exemple de la distribution temporelle de $T_{1}-T_{2}$ pour un strip est donné figure \ref{RESOLUTION}
 
 \begin{figure}[!ht]
 	\centering
 	\scalebox{1.5}{\includetex{ELE/TDCTimeResolution}}
-	\caption{Résolution temporelle d'un strips du PCB. Le signal est est carré d'amplitude \SI{10}{\volt} et de durée \SI{10}{\nano\second}. Le signal traverse un condensateur de \SI{1}{\pico\farad}.}
+	\caption{Résolution temporelle d'un strip du PCB. Le signal est un carré d'amplitude \SI{10}{\volt} et de durée \SI{10}{\nano\second}. Le signal traverse un condensateur de \SI{1}{\pico\farad}.}
 	\label{RESOLUTION}
 \end{figure}
 
-Un ajustement de la distribution temporelle de $T_{1}-T_{2}$ par une Gaussienne est effectué. La valeur moyen de la Gaussienne n'est pas pertinentes car les TDC n'ont pas été calibrés. Cependant, l'écart type de la Gaussienne $\sigma$ permet de déduire la résolution temporelle du PCB. En effet, en supposant les variables $t_1$ et $t_2$ décorrélées on a
+Un ajustement de la distribution temporelle de $T_{1}-T_{2}$ par une Gaussienne est effectué. La valeur moyenne de la Gaussienne n'est pas pertinente car les TDC n'ont pas été calibrés. Cependant, l'écart type $\sigma$ de la Gaussienne permet de déduire la résolution temporelle du PCB. En effet, en supposant les variables $T_1$ et $T_2$ décorrélées on a
 \begin{equation}
-\sigma_{t_1+t_2}=\sqrt{\sigma_{t_1}^2+\sigma_{t_2}^2}
+\sigma_{T_1+T_2}=\sqrt{\sigma_{T_1}^2+\sigma_{T_2}^2}
 \end{equation}
-En supposant de plus que $\sigma_{t_1}^2=\sigma_{t_2}^2=\sigma_{elec}^2$
+En supposant de plus que $\sigma_{T_1}^2=\sigma_{T_2}^2=\sigma_{elec}^2$
 \begin{equation}
-\frac{\sigma_{t_1+t_2}}{\sqrt{2}}=\sigma_{elec}
+\frac{\sigma_{T_1+T_2}}{\sqrt{2}}=\sigma_{elec}
 \end{equation}
-La résolution temporelle du PCB est estimé à \SIrange{20}{30}{\pico\second}
+La résolution temporelle du PCB est estimée entre \SI{20}{\pico\second} et \SI{30}{\pico\second}.
 
-\section{Test en faisceau au SPS (Mai 2017)}
+\section{Test en faisceaux au SPS (Mai 2017)}
 \vspace{-0.4cm}
-Deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) et épaisseur d'électrodes \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter})\footnote{Ce sont les deux types de chambres privilégiées par le TDR.} ont été instrumenté avec le PCB à strips et testées sur la ligne H4 du SPS dans la \textit{North Area} (cf.fig~\ref{complexe}). Les chambres ont été posées sur une table de positionnement réglable verticalement et horizontalement (cf.fig\ref{setup2017}).
+Deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) et épaisseur d'électrodes \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter})\footnote{Ce sont les deux types de chambres privilégiées par le TDR.} ont été instrumentées avec le PCB à strips et testées sur la ligne H4 du SPS dans la \textit{North Area} (cf.fig~\ref{complexe}). Les chambres ont été posées sur une table de positionnement réglable verticalement et horizontalement (cf.fig\ref{setup2017}).
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.55\textwidth]{ELE/setup2017.jpg}
@@ -112,21 +112,21 @@ Deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\
 	\label{setup2017}
 \end{figure}
 
-Deux groupes de deux PM de \SI{5}{\centi\meter} de largeur sont placé de part et d'autre des chambres. Les PM d'un même groupe sont placé perpendiculairement l'un par rapport à l'autre (cf.fig~\ref{setup2017}). Deux autres PM de plus petites dimensions (\SI{1.2}{\centi\meter}) sont placés d'un côté des chambres afin de réduire la zone de déclenchement (cf.fig~\ref{smallPM}).  
+Deux groupes de deux PM de \SI{5}{\centi\meter} de largeur sont placés de part et d'autre des chambres. Les PM d'un même groupe sont placés perpendiculairement l'un par rapport à l'autre (cf.fig~\ref{setup2017}). Deux autres PM de plus petites dimensions (\SI{1.2}{\centi\meter}) sont placés d'un côté des chambres afin de réduire la zone de déclenchement (cf.fig~\ref{smallPM}).  
 
 \marginpar
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{ELE/BigSmallScintillators.jpg}
-	\captionof{figure}{Les différents PM placé d'un côté des chambres.}
+	\captionof{figure}{Les différents PM placés d'un côté des chambres.}
 	\label{smallPM}
 }
 
-La coïncidence des scintillateurs est envoyé dans les données comme s'il s'agissait d'un signal d'un strips. Chaque Mezzanine reçoit le signal de coïncidence.
+La coïncidence des scintillateurs est envoyée dans les données comme s'il s'agissait du signal d'un strip. Chaque Mezzanine reçoit le signal de coïncidence.
 \vspace*{-0.4cm}
 \subsection{Format de données}
 \vspace*{-0.4cm}
-Les événement sont envoyés par TCP/IP et enregistrés sous forme de blocs binaires. Les informations codées dans ces blocs sont données tableau \ref{donnees}. Chaque Mézzanine est identifiable par son adresse IP, le côté des strips dont elle s'occupe est identifiable par "Numéro Mezzanine" (\num{0} ou \num{1}). À chaque strips touché est enregistré le numéro de la voie du PETIROC2 correspond, le temps permettant de se repérer dans un événement (BCID) de résolution \SI{200}{\nano\second} et le temps enregistré par le TDC (Coarse et Fine).
+Les événements sont envoyés par TCP/IP et enregistrés sous forme de blocs binaires. Les informations codées dans ces blocs sont données tableau \ref{donnees}. Chaque Mézzanine est identifiable par son adresse IP, le côté des strips dont elle s'occupe est identifiable par "Numéro Mezzanine" (\num{0} ou \num{1}). Pour chaque strip touché est enregistré le numéro de la voie du PETIROC2 correspondant, le temps permettant de se repérer dans un événement (BCID) de résolution \SI{200}{\nano\second} et le temps enregistré par le TDC (Coarse et Fine).
 
 \begin{table}[!ht]
 	\centering
@@ -158,18 +158,18 @@ Les événement sont envoyés par TCP/IP et enregistrés sous forme de blocs bin
 \end{table}
 
 \newpage
-Les événements sont créer grâce à un générateur de fonction qui envoi un créneaux déclenchant ainsi le début et la fin d'un événement. A la fin d'un événement, les données sont envoyés et un signal "busy" est activé afin de bloquer la prise d'événement pendant l'exportation des données vers l'ordinateur.
+Le démarrage et l'arrêt de l'acquisition sont pilotés grâce à un générateur de fonction qui envoit un créneau. Un événement tel que décrit dans la table \ref{donnees} est envoyé pour chaque créneau. Un signal "busy" est activé afin de bloquer la prise de données pendant l'exportation des données vers l'ordinateur.
 
 \subsection{Programme d'analyse}
-Le programme d'analyse est écrit en \Cpp en utilisant ROOT. Il permet de lire les données binaire et de chercher les hits correspondant à la coïncidence des scintillateurs et de trouver leur temps TDC $T_0$. Afin de simplifier l'analyse, seul les événements comportant un seul hit de ce type sont selectionnés. Les événements comportant un nombre de hits trop important ($>1000$) sont également rejetés.
+Le programme d'analyse est écrit en \Cpp en utilisant ROOT. Il permet de lire les données binaires et de chercher les hits correspondant à la coïncidence des scintillateurs et de trouver leur temps TDC $T_0$. Afin de simplifier l'analyse, seuls les événements comportant un seul hit de ce type sont selectionnés. Les événements comportant un nombre de hits trop important ($>1000$) sont également rejetés.
 
-Pour chaque hits de l'événement, le temps d'arrivé $T$ de celui-ci par rapport au signal des scintillateurs est calculé :
+Pour chaque hit de l'événement, le temps d'arrivé $T$ de celui-ci par rapport au signal des scintillateurs est calculé :
 \begin{equation}
 	T^n=T'^n-T_0
 \end{equation}
 avec $T'$ la valeur du temps TDC du hit $n$. 
 
-Un ajustement par une fonction Gaussienne de la distribution des $T^n$ est ensuite effectué. La distribution présentant de nombreux pics (cf.fig\ref{pics}), seul la zone proche du premier pics (proche du temps $T_0$) est prise en compte dans l'ajustement. La zone correspondant au signal est ensuite prise comme étant l'intervalle $\left[T_0-\num{1.5}\sigma,T_0-\num{1.5}\sigma\right]$.
+Un ajustement par une fonction Gaussienne de la distribution des $T^n$ est ensuite effectué. La distribution présentant de nombreux pics (cf.fig\ref{pics}), seule la zone proche du premier pic (proche du temps $T_0$) est prise en compte dans l'ajustement. La zone correspondant au signal est ensuite prise comme étant l'intervalle $\left[T_0-\num{1.5}\sigma,T_0+\num{1.5}\sigma\right]$.
 
 \begin{figure}[!ht]
 	\centering
@@ -178,7 +178,7 @@ Un ajustement par une fonction Gaussienne de la distribution des $T^n$ est ensui
 	\label{pics}
 \end{figure}
 
-Pour chaque strips, la distribution des $T^{n,s}_1-T^{n,s}_2$ où $T^{n,s}_1=T_{'n,s}^{1}-T_0$ ($T^{n,s}_2$) est le temp du hits $n$ du strips $s$ par rapport au temps du signal des scintillateur $T^{0}$ lus d'un côté (de l'autre).
+Pour chaque strip, la distribution des $T^{n,s}_1-T^{n,s}_2$ où $T^{n,s}_1=T_{n,s}^{'1}-T_0$ est le temp du hit $n$ du strip $s$ par rapport au temps du signal des scintillateurs $T^{0}$ lu d'un côté et $T^{n,s}_2$ celui lu par l'autre côté du strip.
 
 La figure \ref{t2t0} représente la distribution des $T^{n,21}_2$ de la chambre en Bakélite \SI{1.4}{\milli\meter}.
 \begin{figure}[ht!]
@@ -193,7 +193,7 @@ La figure permet d'en déduire que :
 \sigma_{T_2-T_0}=\sqrt{\sigma_{T_2}^2+\sigma_{T_0}^2}=\SI{2.0}{\nano\second}
 \end{equation}
 
-Malheureseument nous ne connaissant pas $\sigma_{T_0}^2$ afin d'en déduire $\sigma_{T_2}^2$. De plus les TDC n'ont pas était calibré avant le test en faisceau, ce qui affecte les résolution.
+Malheureseument nous ne connaissons pas $\sigma_{T_0}^2$ afin d'en déduire $\sigma_{T_2}^2$. De plus les TDC n'ont pas été calibrés avant le test en faisceau, ce qui affecte les résolutions.
 
 Le programme effectue le calcul de l'efficacité des chambres ainsi  qu'une clusterisation d'un côté et de l'autre afin d'obtenir le cluster size et la probabilité de streamer. Cependant, le PCB s'est avéré très épais \SI{750}{\micro\meter} de chaque côté des strips, en plus du Mylar, ce qui atténue le signal reçu par les strips.
 
@@ -201,22 +201,22 @@ Le programme effectue le calcul de l'efficacité des chambres ainsi  qu'une clus
 
 
 \subsubsection{Courants}
-Avant de nous intéresser à la précision spatiale et temporelle obtenue par ces chambres nous avons effectuer des scans en tension afin d'obtenir les courbes d'efficacités et de courants pour ces chambres. Ces chambres étant nouvelles et n'ayant jamais été testées avant, nous voulions nous assurer de leur bon fonctionnement.
+Avant de nous intéresser à la précision spatiale et temporelle obtenue par ces chambres nous avons effectué des balayages en tension afin d'obtenir les courbes d'efficacités et de courants pour ces chambres. Ces chambres étant nouvelles et n'ayant jamais été testées avant, nous voulions nous assurer de leur bon fonctionnement.
 
-La différence de courants parcourants les chambres entre les périodes sans faisceaux et avec faisceaux en fonction de la haute tension appliquée est donnée par la figure \ref{courant1.4} (\ref{courant1.6}) pour la chambre \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}).
+La différence de courants parcourant les chambres entre les périodes sans faisceaux et avec faisceaux en fonction de la haute tension appliquée est donnée par la figure \ref{courant1.4} (\ref{courant1.6}) pour la chambre \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}).
 
 \begin{figure}[ht!]
 	\vspace{-0.5cm}
 	\centering
 	\subfloat[chambre \SI{1.4}{\milli\meter}.]{\scalebox{0.68}{\includetex{ELE/1p4}}\label{courant1.4}}
 	\subfloat[chambre \SI{1.6}{\milli\meter}.]{\scalebox{0.68}{\includetex{ELE/1.6}}\label{courant1.6}}
-	\caption{différence de courants parcourants les chambres entre les périodes sans faisceaux et avec faisceaux en fonction de la haute tension appliquée.}
+	\caption{Différence de courants parcourant les chambres entre les périodes sans faisceaux et avec faisceaux en fonction de la haute tension appliquée.}
 	\label{courant1.41.6}
 \end{figure}
 
 Les deux chambres ont un comportement normal. De plus leur comportement est identique si l'on considère leur différences d'épaisseur d'électrodes et de gap.
 
-En effet, en considérant les tensions des figures \ref{courant1.4}, \ref{courant1.6} pour lesquelles les courants augmentent linéairement et en les ajustant par une droite. Les coordonnées de ces droites nous permet de calculer la valeur pour lesquelles elles coupent l'axe des abscisses $V^c$ (\SI{6768}{\volt} et \SI{8396}{\volt} respectivement). Les matériaux des chambres et le gas étant identiques, on peut donc considérer qu'a ces points les champs électriques sont identiques.
+En effet, en considérant les tensions des figures \ref{courant1.4}, \ref{courant1.6} pour lesquelles les courants augmentent linéairement et en les ajustant par une droite. Les coordonnées de ces droites nous permettent de calculer la valeur pour lesquelles elles coupent l'axe des abscisses $V^c$ (\SI{6768}{\volt} et \SI{8396}{\volt} respectivement). Les matériaux des chambres et le gaz étant identiques, on peut donc considérer qu'a ces points les champs électriques sont identiques.
 
 \begin{equation}
 E_{\num{1.4},\num{1.4}}\left( 6768 \right)=E_{\num{1.6},\num{1.6}}\left( 8396 \right)
@@ -224,13 +224,13 @@ E_{\num{1.4},\num{1.4}}\left( 6768 \right)=E_{\num{1.6},\num{1.6}}\left( 8396 \r
 \begin{equation}
 \frac{V^c_{1.4}-2\frac{\rho L I_{1.4}}{S} }{1.4}=\frac{V^c_{1.6}-2\frac{\rho L I_{1.6}}{S} }{1.6}
 \end{equation} 
-où $I$ le courant dans la chambre, $\rho$ la résistivité de la Bakélite, $L$ l'épaisseur des électrodes et $S$ la surface des chambres.
+où $I$ est le courant dans la chambre, $\rho$ la résistivité de la Bakélite, $L$ l'épaisseur des électrodes et $S$ la surface des chambres.
 
-En négligeant les pertes par effet ohmiques dans les électrodes et en comparant $\frac{V_{1.4}}{V_{1.6}}=\num{0.806}$ et $\frac{1.4}{1.6}=\num{0.875}$ on peut en déduire, qu'avec les hypothèses que nous nous sommes données que les chambres ont un le même comportement.
+En négligeant les pertes par effet ohmique dans les électrodes et en comparant $\frac{V_{1.4}}{V_{1.6}}=\num{0.806}$ et $\frac{1.4}{1.6}=\num{0.875}$ on peut en déduire, qu'avec les hypothèses que nous nous sommes données, les chambres ont un même comportement.
 
 \subsubsection{Résolution spatiale}
 
-Afin d'obtenir la résolution spatiale $\sigma_{Y}$ nous avons effectué plusieurs runs en bougeant la table de positionnement afin de déplacer la zone des strips touchées. Les figures \ref{25p5cm}, \ref{17p5cm} et \ref{5p5cm}
+Afin d'obtenir la résolution spatiale $\sigma_{Y}$ nous avons effectué plusieurs runs en bougeant la table de positionnement afin de déplacer la zone des strips touchés. Les figures \ref{25p5cm}, \ref{17p5cm} et \ref{5p5cm} montre la distribution des $T^{n,21}_2-T^{n,21}_1$ pour plusieurs positions de la table. 
 
 \begin{figure}[ht!]
 	\centering
@@ -239,16 +239,16 @@ Afin d'obtenir la résolution spatiale $\sigma_{Y}$ nous avons effectué plusieu
 	\subfloat[Distribution des $T^{n,21}_2-T^{n,21}_1$ lorsque le faisceau est à une distance \SI{17.5}{\centi\meter} des mezzanines.]{\includegraphics[width=\marginparwidth]{ELE/17p5cm.jpg}\label{17p5cm}}
 	\hfill
 	\subfloat[Distribution des $T^{n,21}_2-T^{n,21}_1$ lorsque le faisceau est à une distance \SI{5.5}{\centi\meter} des mezzanines.]{\includegraphics[width=\marginparwidth]{ELE/5p5cm.jpg}\label{5p5cm}}
-	\caption{différence de courants parcourants les chambres entre les périodes sans faisceaux et avec faisceaux en fonction de la haute tension appliquée.}
+	\caption{Distribution des $T^{n,21}_2-T^{n,21}_1$ pour différentes positions de la table.}
 	\label{move}
 \end{figure}
 
-En ajustant ces distributions par deux Gaussienne \footnote{Les impédance n'ayant pas été bien adaptées} et en reportant la valeur moyenne et le $\sigma$ de la Gaussienne la plus fine pour chaque distance $Y$ on obtient la figure \ref{Fit}.
+En ajustant ces distributions par deux Gaussienne \footnote{Les impédances n'ayant pas été bien adaptées} et en reportant la valeur moyenne et le $\sigma$ de la Gaussienne la plus fine pour chaque distance $Y$ on obtient la figure \ref{Fit}.
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.7\textwidth]{ELE/MeanT_Pos.jpg}
-	\caption{$<\Delta T>=<T_2-T_1>$ moyen en fonction de la position $Y$ du détecteur.}
+	\caption{$<\Delta T>=<T_2-T_1>$ en fonction de la position $Y$ du détecteur.}
 	\label{Fit}
 \end{figure}
 
@@ -262,7 +262,7 @@ De plus $\sigma_{T_2-T_1}\approx\SI{200}{\pico\second}$. En utilisant la formule
 \sigma_{Y}=\sigma_{T_2-T_1}\frac{v}{2}\approx\SI{1.8}{\centi\meter}
 \end{equation}
 
-La résolution spatiale a été estimé à \SI{1.8}{\centi\meter} ce qui est très bon vue les problème d'adaptations d'impédance et le fait que les TDC n'ont pas été correctement calibrés.
+La résolution spatiale a été estimée à \SI{1.8}{\centi\meter} ce qui est très bon vu les problèmes d'adaptations d'impédances et le fait que les TDC n'ont pas été correctement calibrés.
 
 \section{Conclusion}
-Le prototype de lecture des strips des deux côtés à été testé avec deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) et épaisseur d'électrodes \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) qui sont les candidats privilégiés par le TDR pour l'intégration dans CMS. Malgrés quelques problème sur la conception du PCB, nous avons pu montrer qu'il fonctionnait avec les chambres Bakélite et permettait d'obtenir une résolution spatiale de \SI{1.8}{\centi\meter} contre la longueur des strips pour l'électronique actuelle\footnote{entre \SI{20.5}{\centi\meter} et \SI{79.72}{\centi\meter} \cite{gapss}.} tout en évidant le partitionnement en $\eta$. Ce type de lecture permet aussi de limiter le nombre de voies électronique. En effet en considérant la solution privilégié par le TDR de \num{192} strips par chambres la solution de partitionnement en $\eta$ nécessite \num{768} voies de lecture contre deux fois moins pour le PCB à lecture des deux côté. Tous ces avantages ont amené à privilégier cette pour le TDR.
+Le prototype de lecture des strips des deux côtés à été testé avec deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) et épaisseur d'électrodes \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) qui sont les candidats privilégiés par le TDR pour l'intégration dans CMS. Malgré quelques problèmes sur la conception du PCB, nous avons pu montrer qu'il fonctionnait avec les chambres Bakélite et permettait d'obtenir une résolution spatiale de \SI{1.8}{\centi\meter} contre la longueur des strips pour l'électronique actuelle\footnote{entre \SI{20.5}{\centi\meter} et \SI{79.72}{\centi\meter} \cite{gapss}.} tout en évitant le partitionnement en $\eta$. Ce type de lecture permet aussi de limiter le nombre de voies électroniques. En effet en considérant la solution privilégiée par le TDR de \num{96} strips par chambres la solution de partitionnement en $\eta$ nécessite \num{384} voies de lecture contre deux fois moins pour le PCB à lecture des deux côtés. Tous ces avantages ont amené à privilégier cette électronique pour le TDR.

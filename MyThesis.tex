@@ -46,7 +46,7 @@
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{pgf}
-\usepackage{soul}
+\usepackage{soulutf8}
 \usepackage[outline]{contour}
 \usepackage{eqnarray}
 \usepackage{tikz}
@@ -463,13 +463,14 @@
 	\include{PG/PG}
 \end{titlepage}
 \begin{titlepage}	
+	\setcounter{page}{3}
 	\include{PG2/PG2}
 \end{titlepage}
 \microtypesetup{protrusion=false}
 \dominitoc
 \microtypesetup{protrusion=true}
 \begin{titlepage}
-\setcounter{page}{3}
+\setcounter{page}{5}
 \newgeometry{left=0cm,bottom=1.5cm,right=0cm,top=1.5cm,headheight=45pt}
 \vspace*{5cm}
 \begin{fquote}[(Ecc. I, 18)][][][275]
@@ -478,14 +479,14 @@ Qui addit scienciam addit et dolorem
 \end{flushright}
 \end{fquote}
 \end{titlepage}
-\setcounter{page}{4}
+\setcounter{page}{6}
 \frontmatter
-\setcounter{page}{5}
+\setcounter{page}{7}
 \begingroup
 \makeatletter
 \patchcmd{\l@section}{%
 	\addvspace{1.0em \@plus\p@}% original code line
-}{%
+}{
 	\addvspace{20pt \@plus 0.2\p@}% substitute code line
 }{}{}
 \makeatother

@@ -30,6 +30,8 @@
 \usepackage{booktabs}
 \usepackage{xcolor,colortbl}
 \usepackage[backend=biber,style=numeric,sorting=none,hyperref=true]{biblatex}
+\usepackage[toc,acronym,nomain,nonumberlist]{glossaries}
+\usepackage[acronym,automake,nomain]{glossaries-extra}
 \usepackage{csquotes}
 \usepackage{cellspace}
 \cellspacetoplimit=4pt
@@ -97,7 +99,7 @@
 \usepackage[tight]{shorttoc}
 \usepackage{chemist}
 \usepackage{listing}
-
+\usepackage{morewrites}
 \pgfplotsset{compat=newest}
 \usepgfplotslibrary{external,colormaps} 
 %\tikzexternalize
@@ -154,8 +156,6 @@
 \makeatletter
 \newcommand{\listequation}[2]{$\displaystyle #1$\hfill\refstepcounter{equation}\label{#2}\textup{\tagform@{\theequation}}}
 \makeatother
-
-
 
 \SetProtrusion{encoding={*},family={*},series={*},size={6,7,8}}{1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
 \microtypecontext{kerning=french}
@@ -444,6 +444,8 @@
 \makeatletter
 \def\cleardoublepage{\@supresstrue\clearpage\if@twoside \ifodd\c@page\else\hbox{}\newpage\if@twocolumn\hbox{}\newpage\fi\fi\fi\@supressfalse}
 \makeatother
+\makeglossaries
+\include{GLO/GLO}
 
 \begin{document}
 \pagestyle{void}
@@ -527,5 +529,7 @@ Qui addit scienciam addit et dolorem
 \pagestyle{void}
 \tableofcontents
 \printindex
+\glsaddall
+\printglossary[type=\acronymtype,title={Acronymes}]
 \microtypesetup{protrusion=true}
 \end{document}

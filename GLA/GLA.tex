@@ -728,12 +728,12 @@ Le télescope est constitué de chambres de verre de basse résistivité et de v
 
 En août 2015, avant le début du vieillissement des chambres un premier test en faisceaux a permis d'avoir des courbes de référence de la tenue des chambres au flux de gamma.
 
-Le télescope a été placé à 2m de la source du côté upstream (cf.fig~\ref{PositionChambre})
+Le télescope a été placé à 2m de la source du côté \textit{Upstream} (cf.fig~\ref{PositionChambre})
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.55\textwidth]{GLA/PositionChamber.png}
-	\caption{courant de photons total ($\gamma$ de toutes énergie de \SIrange{0}{662}{\kilo\eV}) dans le plan $xz$ pour $y=$\SI{0}{\meter}. La position du télescope est indiquée par le carré bleu.}
+	\caption{courant de photons total ($\gamma$ de toutes énergies de \SIrange{0}{662}{\kilo\eV}) dans le plan $xz$ pour $y=$\SI{0}{\meter}. La position du télescope est indiquée par le carré bleu.}
 	\label{PositionChambre}
 \end{figure}
 
@@ -759,7 +759,7 @@ Le courant de photons ne donne pas directement le flux de particules qui nous in
 	\label{GEANT4}
 }
 
-Une simulation GEANT4, modélisant le SDHCAL à été modifiée afin de prendre en compte la géométrie des chambres au GIF++ ainsi que leur position relative (cf.fig~\ref{GEANT4}). Un "particle gun" a été utilisé afin de tirer un photon de \SI{661.7}{\kilo\eV} à la fois. Les autres énergies de photons n'ont pas été simulées. La simulation nous permet de connaitre la fraction de photons émis par la source qui produisent un hits dans la couche de gaz des GRPC, ainsi que l'impact des absorptions et diffusions dans les GRPC. La composition exacte des verres de basse résistivité étant inconnue, la simulation se base sur des verres standards. La fraction de photon amenant à la création d'un hit dans les détecteurs, pour plusieurs listes physiques de GEANT 4 est donnée figure \ref{conversion}
+Une simulation GEANT4, modélisant le SDHCAL à été modifiée afin de prendre en compte la géométrie des chambres au GIF++ ainsi que leur position relative (cf.fig~\ref{GEANT4}). Un "particle gun" a été utilisé afin de tirer un photon de \SI{661.7}{\kilo\eV} à la fois. Les autres énergies de photons n'ont pas été simulées. La simulation nous permet de connaitre la fraction de photons émis par la source qui produisent un hit dans la couche de gaz des GRPC, ainsi que l'impact des absorptions et diffusions dans les GRPC. La composition exacte des verres de basse résistivité étant inconnue, la simulation se base sur des verres standards. La fraction de photons amenant à la création d'un hit dans les détecteurs, pour plusieurs listes physiques de GEANT 4 est donnée figure \ref{conversion}. Pour la première chambre, le taux de conversion $\gamma$--$e^{-}$ est ainsi estimé à $\approx\num{3.1}$\textperthousand
 
 \begin{figure}[!ht]
 	\centering
@@ -768,7 +768,7 @@ Une simulation GEANT4, modélisant le SDHCAL à été modifiée afin de prendre 
 	\label{conversion}
 \end{figure}
 
-Des scans en fonction du seuil appliqué et de la distance à la source ont également été effectués. Les figures \ref{bla1} , \ref{bla2} (\ref{bla3}, \ref{bla4}) représente l'efficacité et la multiplicité en fonction du seuil appliqué pour un facteur d'atténuation de la source de \num{220},\num{22} (\num{150}, \num{46}) dans le cas ou le détecteur est placé à \SI{2}{\meter} (\SI{5.5}{\meter}).
+Des scans en fonction du seuil appliqué et de la distance à la source ont également été effectués. Les figures \ref{bla1} , \ref{bla2} (\ref{bla3}, \ref{bla4}) représentent l'efficacité et la multiplicité en fonction du seuil appliqué pour un facteur d'atténuation de la source de \num{220}, \num{22} (\num{150}, \num{46}) dans le cas ou le détecteur est placé à \SI{2}{\meter} (\SI{5.5}{\meter}).
 
 \noindent
 \begin{minipage}[th!]{1\textwidth}
@@ -908,7 +908,7 @@ Des scans en fonction du seuil appliqué et de la distance à la source ont éga
 %	\label{att22}
 %\end{figure}
 %\vspace*{-0.5cm}
-On remarque une baisse significative de l'efficacité pour un même threshold lorsque le flux de particule est trop intense ($\sim$\num{6.8e5}$\gamma$\si{\per\square\centi\meter\per\second} pour \ref{att22eff},\ref{att22thre}) ce qui peut s'expliquer par le phénomène de saturation. On trouve bien une baisse de la multiplicité lorsqu'on augmente le seuil sauf pour la figure \ref{att22thre} dominée par les fluctuations statistiques. L'effet du flux de gammas sur la saturation de la chambre est clairement visible lorsqu'on compare les valeurs de la multiplicité de la chambres placé à \SI{5.5}{\meter} (\ref{att150thre} $\sim$\num{2e4}$\gamma$\si{\per\square\centi\meter\per\second}, \ref{att46thre} $\sim$\num{6.5e4}$\gamma$\si{\per\square\centi\meter\per\second})\footnote{La réduction du flux due aux autres setup placés devant n'est pas prise en compte.} à celles où la chambre est placé à \SI{2}{\meter} (\ref{att220thre} $\sim$\num{6.8e4}$\gamma$\si{\per\square\centi\meter\per\second},\ref{att22thre} $\sim$\num{6.8e5}$\gamma$\si{\per\square\centi\meter\per\second}).
+On remarque une baisse significative de l'efficacité pour un même seuil lorsque le flux de particules est trop intense ($\sim$\num{6.8e5}$\gamma$\si{\per\square\centi\meter\per\second} pour \ref{att22eff},\ref{att22thre}) ce qui peut s'expliquer par le phénomène de saturation. On trouve bien une baisse de la multiplicité lorsqu'on augmente le seuil sauf pour la figure \ref{att22thre} dominée par les fluctuations statistiques. L'effet du flux de gammas sur la saturation de la chambre est clairement visible lorsqu'on compare les valeurs de la multiplicité de la chambres placé à \SI{5.5}{\meter} (\ref{att150thre} $\sim$\num{2e4}$\gamma$\si{\per\square\centi\meter\per\second}, \ref{att46thre} $\sim$\num{6.5e4}$\gamma$\si{\per\square\centi\meter\per\second})\footnote{La réduction du flux due aux autres setup placés devant n'est pas prise en compte.} à celles où la chambre est placé à \SI{2}{\meter} (\ref{att220thre} $\sim$\num{6.8e4}$\gamma$\si{\per\square\centi\meter\per\second},\ref{att22thre} $\sim$\num{6.8e5}$\gamma$\si{\per\square\centi\meter\per\second}).
 
 %La figure \ref{att150} (\ref{att46}) représente l'efficacité et la multiplicité en fonction du seuil appliqué pour un facteur d'atténuation de la source de \num{150} (\num{46}) dans le cas ou le détecteur est placé à \SI{5.5}{\meter}.
 %\vspace*{-0.8cm}
@@ -944,9 +944,9 @@ Le ELOG du GIF++ contient des menus déroulants et des champs de texte à rempli
 \vspace*{-0.2cm}
 \section{Vieillissement des chambres au GIF++}
 \vspace*{-0.4cm}
-Afin de valider le choix des verres de basse résistivité comme électrodes, il est nécessaire d'étudier l'impact d'une exposition longue (correspondant à plusieurs années d'utilisation dans CMS) au bruit de fond. La mesure du courant en fonction du temps donne une idée précise du vieillissement des chambres et permet de calculer la charge totale ayant été déposée sur les électrodes. Selon le TDR, les chambres doivent conserver une bonne efficacité même après avoir subi une charge de 1C/cm2. En utilisant la source de photons du GIF++ dont le flux est supérieur de plusieurs ordres de grandeur à celui attendu dans les zones où seront instrumentées les chambres, il est possible d'obtenir la charge intégrée de \SI{1}{\coulomb\per\square\centi\meter} dans un temps raisonnable et ainsi d'accélérer le vieillissement des chambres et ainsi vérifier leur tenue dans le temps.
+Afin de valider le choix des verres de basse résistivité comme électrodes, il est nécessaire d'étudier l'impact d'une exposition longue (correspondant à plusieurs années d'utilisation dans CMS) au bruit de fond. La mesure du courant en fonction du temps donne une idée précise du vieillissement des chambres et permet de calculer la charge totale ayant été déposée sur les électrodes. Selon le TDR, les chambres doivent conserver une bonne efficacité même après avoir subi une charge de \SI{1}{\coulomb\per\square\centi\meter}. En utilisant la source de photons du GIF++ dont le flux est supérieur de plusieurs ordres de grandeur à celui attendu dans les zones où seront instrumentées les chambres, il est possible d'obtenir la charge intégrée de \SI{1}{\coulomb\per\square\centi\meter} dans un temps raisonnable et ainsi d'accélérer le vieillissement des chambres et ainsi vérifier leur tenue dans le temps.
 
-La figure \ref{CourantLR} (\ref{CourantHR}) montre, les valeurs d'atténuateur, la tension appliquée à la chambre, les courants, la charge intégrées en fonction de la date ainsi que la charge intégrée en fonction du temps effectif pour la chambre de verre standard la plus proche du faisceau (la chambre "float glas" en quatrième position). 
+La figure \ref{CourantLR} (\ref{CourantHR}) montre, les valeurs d'atténuateur, la tension appliquée à la chambre, les courants, la charge intégrée en fonction de la date ainsi que la charge intégrée en fonction du temps effectif pour la chambre de verre standard la plus proche du faisceau (la chambre "float glas" en quatrième position). 
 
 \begin{figure}[!ht]
 	\centering
@@ -959,27 +959,27 @@ La figure \ref{CourantLR} (\ref{CourantHR}) montre, les valeurs d'atténuateur, 
 \subfloat[Charge intégrée en fonction du nombre de jours depuis le 1\ier Août 2016. ]{\includegraphics[width=0.82\linewidth]{GLA/current/DIF16_LR_2.png}}
 \\
 \subfloat[Charge intégrée en fonction du nombres de jours effectifs.]{\includegraphics[width=0.82\linewidth]{GLA/current/DIF16_LR_5.png}}
-\caption{Valeur de l'atténuateur, de la tension appliquée, du courant dans les chambres, de la charge intégrée en fonction du nombres de jours depuis le 1\ier Août 2016  et de la charge intégrée en fonction du nombres de jours effectifs pour la chambre de basse résistivité la plus proche de la source.}
+\caption{Valeur de l'atténuateur, de la tension appliquée, du courant dans les chambres, de la charge intégrée en fonction du nombre de jours depuis le 1\ier Août 2016  et de la charge intégrée en fonction du nombres de jours effectifs de fonctionnement pour la chambre de basse résistivité la plus proche de la source.}
 	\label{CourantLR}
 \end{figure}
 
 
 \begin{figure}[!ht]
 	\centering
-	\subfloat[Valeur de l'atténuateur en fonction du nombre de jours depuis le 1\ier Août 2016.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_1.png}}
+	\subfloat[Valeur de l'atténuateur en fonction du nombre de jours depuis le 1\ier Août 2016.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_4.png}}
 	\hfill
-	\subfloat[Tension appliquée en fonction du nombre de jours depuis le 1\ier Août 2016.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_2.png}}
+	\subfloat[Tension appliquée en fonction du nombre de jours depuis le 1\ier Août 2016.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_3.png}}
 	\\
-	\subfloat[Courant dans la chambre en fonction du nombre de jours depuis le 1\ier Août 2016.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_3.png}}
+	\subfloat[Courant dans la chambre en fonction du nombre de jours depuis le 1\ier Août 2016.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_1.png}}
 	\hfill
-	\subfloat[Charge intégrée en fonction du nombre de jours depuis le 1\ier Août 2016.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_4.png}}
+	\subfloat[Charge intégrée en fonction du nombre de jours effectifs.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_2.png}}
 	\\
 	\subfloat[Charge intégrée en fonction du nombre de jours depuis le 1\ier Août 2016.]{\includegraphics[width=0.85\linewidth]{GLA/current/DIF32_HR_5.png}}
-	\caption{Valeur de l'atténuateur, de la tension appliquée, du courant dans les chambres, de la charge intégrée en fonction du nombres de jours depuis le 1\ier Août 2016  et de la charge intégrée en fonction du nombres de jours effectifs pour la chambre de "float glass" situé en deuxième position en partant de la source.}
+	\caption{Valeur de l'atténuateur, de la tension appliquée, du courant dans les chambres, de la charge intégrée en fonction du nombre de jours depuis le 1\ier Août 2016  et de la charge intégrée en fonction du nombres de jours effectifs de fonctionnement pour la chambre en verre standard située en deuxième position en partant de la source.}
 	\label{CourantHR}
 \end{figure}
 
-La chute du courant en fonction du temps de manière rapide montre un vieillissement prématuré des chambres. Le test en faisceau de mai 2016 a permis de comprendre les causes de ce vieillissement rapide.
+La chute du courant en fonction du temps de manière rapide montre un vieillissement prématuré des chambres. Le test en faisceaux de mai 2016 a permis de comprendre les causes de ce vieillissement rapide.
 
 \subsection{Tests en faisceaux (Mai-Juin 2016)}
 La structure des hits rejetés par Trivent pour les cinq chambres pour un facteur d'attenuation de la source de \num{22} est donnée figure \ref{struc}
@@ -995,12 +995,12 @@ La structure des hits rejetés par Trivent pour les cinq chambres pour un facteu
 	\subfloat[Chambre \num{4}.]{\includegraphics[width=.48\linewidth]{GLA/chamber2.png}}
 	\\
 	\vspace{0.4cm}
-	\subfloat[Chambre \num{5} (plus éloignée de la source).]{\includegraphics[width=.50\linewidth]{GLA/chamber1.png}}
-	\caption{Hits rejetés par Trivent (\si{\hertz}) pour les cinq chambres du télescope au GIF++. La chambre \num{5} est la plus éloignée du faisceau. La chambre \num{4} est une chambre construites en verre standard.}
+	\subfloat[Chambre \num{5} (la plus éloignée de la source).]{\includegraphics[width=.50\linewidth]{GLA/chamber1.png}}
+	\caption{Hits rejetés par Trivent (\si{\hertz}) pour les cinq chambres du télescope au GIF++. La chambre \num{5} est la plus éloignée du faisceau. La chambre \num{4} est une chambre construite en verre standard.}
 	\label{struc}
 \end{figure}
 
-Les chambres \num{3}, \num{4} et \num{5} présentent de nombreuses zones sans aucun hits. Ces zones sont proches des bords qui continuent de posséder des hits à cause des courants de fuites. La différences de comportements entre les chambres de basses résistivité et la chambre "float glass" est clairement visible. Le nombre de hits rejetés par Trivent\footnote{C'est à dire une bonne partie des hits de bruits} est beaucoup moins importants pour la chambre "float glass". Ceci tend à montrer que l'effet de saturation est beaucoup plus important pour cette chambre que pour les chambres de basse résistivité.
+Les chambres \num{3}, \num{4} et \num{5} présentent de nombreuses zones sans aucun hit. Ces zones sont proches des bords qui continuent de posséder des hits à cause des courants de fuites. La différence de comportement entre les chambres de basse résistivité et la chambre "float glass" est clairement visible. Le nombre de hits rejetés par Trivent\footnote{C'est à dire une bonne partie des hits de bruit.} est beaucoup moins important pour la chambre "float glass". Ceci tend à montrer que l'effet de saturation est beaucoup plus important pour cette chambre que pour les chambres de basse résistivité.
 
 \subsubsection{Étude des courants des chambres}
 Des mesures du courant des chambres en fonction du facteur d'atténuation ont été effectuées afin d'avoir une idée plus précise du comportement des chambres en fonction du flux de particules (cf.fig~\ref{courant})
@@ -1083,7 +1083,7 @@ Le tableau \ref{resistivite} donne la résistivité des chambres calculée grâc
 La résistivité des chambres de basse résistivité est beaucoup plus élevée qu'attendue ($\sim$\SI{e10}{\ohm.\centi\meter}). Toutes ces constatations (fig.\ref{CourantLR}, fig.\ref{struc}, tab.\ref{resistivite}) nous ont amené à ouvrir une chambre afin d'essayer de comprendre ces résultats.
 \vspace{0.4cm}
 \newpage
-L'ouverture d'une des chambres a montré que les spacers permettant le maintien des électrodes à une distance uniforme le long de la chambre ont disparu et qu'un dépôt s'est créé sur les électrodes de la chambre (cf.fig~\ref{depot}). Ces deux constatations peuvent expliquer les structure étonnantes de la distribution des hits rejetés par Trivent. En effet, sans spacer les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance à augmenter le champ électrique dans cette zone et donc le nombre de hits. La présence de dépôts permet également d'expliquer le fait que certaines zones de la chambre soient aveugles ainsi que la résistivité élevée de ces chambres.
+L'ouverture d'une des chambres a montré que les spacers permettant le maintien des électrodes à une distance uniforme le long de la chambre ont disparu et qu'un dépôt s'est créé sur les électrodes de la chambre (cf.fig~\ref{depot}). Ces deux constatations peuvent expliquer les structure étonnantes de la distribution des hits rejetés par Trivent (cd.fig~\ref{struc}). En effet, sans spacer les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance à augmenter le champ électrique dans cette zone et donc le nombre de hits. La présence de dépôts permet également d'expliquer le fait que certaines zones de la chambre soient aveugles ainsi que la résistivité élevée de ces chambres.
 
 \begin{figure}[!ht]
 	\centering
@@ -1166,7 +1166,7 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
  \end{figure}
  
  \subsubsection{Méthode par fixation mécanique}
- La deuxième méthode permet de se passer de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placés sur les pourtours de la cassette en aluminium (cf.fig~\ref{aa}, \ref{posverre}). Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes (cf.fig~\ref{cc}). Le gap entre les électrodes est assuré par des fils de pêche perlés (cf.fig~\ref{bb}). Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressorts qui une fois le capot posé, assurent le maintient et la planéité des verres sur le PCB.  Avec cette méthode, l'herméticité est assurée par la cassette (cf.fig~\ref{dd}), les électrodes d'un gap ne sont donc pas reliées entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme pour la méthode précédente.
+ La deuxième méthode permet de se passer de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placés sur les pourtours de la cassette en aluminium (cf.fig~\ref{aa}, \ref{posverre}). Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes (cf.fig~\ref{cc}). Le gap entre les électrodes est assuré par des fils de pêche perlés (cf.fig~\ref{bb}). Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressorts qui une fois le capot posé, assurent le maintien et la planéité des verres sur le PCB.  Avec cette méthode, l'herméticité est assurée par la cassette (cf.fig~\ref{dd}), les électrodes d'un gap ne sont donc pas reliées entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme pour la méthode précédente.
  
  \begin{figure}[ht!]
  	\centering
@@ -1179,7 +1179,7 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
  	\subfloat[La cassette fermée hermétiquement.]{\includegraphics[width=0.45\textwidth]{GLA/meca4.png}\label{dd}}
  	\\
  	\subfloat[Schéma de la cassette.]{\includegraphics[width=0.45\textwidth]{GLA/posverre.pdf}\label{posverre}}
- 	\caption{Photos et schéma du prototype de cassette construite selon la méthode par fixation mécanique.}
+ 	\caption{Photos et schéma du prototype de cassette construit selon la méthode par fixation mécanique.}
  	\label{meca}
  \end{figure}
  
@@ -1378,10 +1378,10 @@ Plusieurs fonction ont été testées :
 \begin{itemize}[label=$\bullet$]
 	\item Gaussienne et une constante : \\ $a.e^{-\frac{1}{2}\frac{(x-b)^2}{c}}+d$ 
 	\item Somme de deux Gaussiennes et d'une constante : \\ $a.e^{-\frac{1}{2}\frac{(x-b)^2}{c}}+d.e^{-\frac{1}{2}\frac{(x-e)^2}{f}}+g$ 
-	\item Crystal-Ball où $x$ est remplacé par $-x$ : \\ $\frac{1}{b\left(\frac{d}{|c|}\frac{1}{n-1}e^{-\frac{|c|^2}{2}}+\sqrt{\frac{\pi}{2}}\left(1+\erf\left(\frac{|c|}{\sqrt{2}}\right)\right) \right)}\left\{
+	\item Crystal-Ball : \\ $\frac{1}{b\left(\frac{d}{|c|}\frac{1}{n-1}e^{-\frac{|c|^2}{2}}+\sqrt{\frac{\pi}{2}}\left(1+\erf\left(\frac{|c|}{\sqrt{2}}\right)\right) \right)}\left\{
 	\begin{array}{ll}
-	e^{-\frac{1}{2}\frac{(-x-a)^2}{b^2}} & \mbox{si } \frac{-x-a}{b}>-c \\
-	\left(\frac{d}{|c|}\right)^d e^{-\frac{|c|^2}{2}} (\frac{d}{|c|}-|c|-\frac{-x-a}{b})^{-d} & \mbox{si }\frac{-x-a}{b}\leq c
+	e^{-\frac{1}{2}\frac{(x-a)^2}{b^2}} & \mbox{si } \frac{x-a}{b}<c \\
+	\left(\frac{d}{|c|}\right)^d e^{-\frac{|c|^2}{2}} (\frac{d}{|c|}-|c|-\frac{x-a}{b})^{-d} & \mbox{si }\frac{x-a}{b}\geq c
 	\end{array}
 	\right.$
 \end{itemize}
@@ -1576,7 +1576,7 @@ Grâce aux améliorations de la chambre, la diaphonie semble être devenue négl
  \begin{figure}[!ht]
  	\centering
  	\scalebox{1.35}{\includetex{GLA/SigmoidBC}}
- 	\caption{Efficacité de détection des muons en fonction de la tension appliquée et du flux de $\gamma$ de la source.}
+ 	\caption{Efficacité de détection des muons en fonction de la tension appliquée pour différents taux estimés d'avalanches produites par les $\gamma$ de la source.}
  	\label{effifi}
  \end{figure}
 
@@ -1593,7 +1593,7 @@ On remarque que l'efficacité reste supérieure à 80\% même pour un flux de ga
 \begin{figure}[!ht]
 	\centering
 	\scalebox{1.1}{\includetex{GLA/ClusterSizeBC}}
-	\caption{Taille moyenne d'un amas (cluster size) en fonction de la haute tension appliquée pour plusieurs valeurs de flux de $\gamma$.}
+	\caption{Taille moyenne d'un amas (cluster size) en fonction de la haute tension appliquée pour différents taux estimés d'avalanches produites par les $\gamma$ de la source.}
 	\label{clustersize}
 \end{figure}
 
@@ -1602,7 +1602,7 @@ On peut remarquer que le cluster size reste en dessous de \num{1.8} et baisse lo
 \begin{figure}[!ht]
 	\centering
 	\scalebox{1.1}{\includetex{GLA/ProbaStreamerBC}}
-	\caption{Probabilité du passage en mode streamer en fonction de la haute tension appliquée pour plusieurs valeurs de flux de $\gamma$.}
+	\caption{Probabilité du passage en mode streamer en fonction de la haute tension appliquée pour différents taux estimés d'avalanches produites par les $\gamma$ de la source.}
 	\label{probastreamer}
 \end{figure}
 

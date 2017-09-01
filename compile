@@ -1,6 +1,7 @@
 #!/bin/sh
 mkdir -p ./build
 pdflatex -output-directory=build -draftmode --shell-escape -file-line-error MyThesis
+makeglossaries -d ./build MyThesis
 biber --output-directory=build MyThesis
 pdflatex -output-directory=build -draftmode --shell-escape -interaction=batchmode -file-line-error MyThesis
 pdflatex -output-directory=build --shell-escape -interaction=batchmode -file-line-error -synctex=1 MyThesis

@@ -15,7 +15,7 @@ Parallèlement, nous avons proposé un nouveau type de PCB basé sur des ASIC PE
 
 De nombreuses améliorations et adaptations de cette électronique sont dès à présent prévu. La valeur minimale de la gamme dynamique du seuil va être baissée afin de déclencher sur des signaux de \SI{10}{\femto\coulomb}, la technologie \chemform{SiGe} à \SI{350}{\nano\meter} va être remplacée par une technologie CMOS à \SI{130}{\nano\meter} par l'entreprise \textit{Taiwan Semiconductor Manufacturing Company} (TSMC) afin de rendre cet ASIC plus tolérant aux radiations. Son nombre de voies d'entrées va également être augmenté et passer de \num{32} à \num{64}.
 
-Les mezzanines contenant les TDC vont être remplacées par des FPGA. Une alternative permettant d'intégrer les TDC directement dans les ASIC est également à l'étude. Cette solution, présente l'avantage de diminuer la consommation électrique et évite les problèmes de routage des données; elle reposera sur des TDC utilisant le principe de Vernier (cf.fig~\ref{vernier}). Ce type de TDC utilise deux oscillateurs de fréquences très proches l'une de l'autre afin de mesurer le temps.
+Les mezzanines contenant les TDC vont être remplacées par des FPGA. Une alternative permettant d'intégrer les TDC directement dans les ASIC est également à l'étude. Cette solution, présente l'avantage de diminuer la consommation électrique et évite les problèmes de routage des données; elle reposera sur des TDC utilisant le principe de Vernier (cf.Fig~\ref{vernier}). Ce type de TDC utilise deux oscillateurs de fréquences très proches l'une de l'autre afin de mesurer le temps.
 
 \begin{figure}[ht!]
 	\centering
@@ -26,7 +26,7 @@ Les mezzanines contenant les TDC vont être remplacées par des FPGA. Une altern
 	\label{vernier}
 \end{figure}
 
-Toute cette électronique est placée sur une mezzanine fixée directement sur les chambres (cf.fig~\ref{chamber}). Des câbles coaxiaux sont soudés à l'extremité des strips d'un côté et sont reliés de l'autre à une carte, raccordée à la mezzanine qui permet, pour chaque câble d'adapter l'impédance à celle des voies d'entrée des ASIC ($\sim$\SI{200}{\ohm}).  
+Toute cette électronique est placée sur une mezzanine fixée directement sur les chambres (cf.Fig~\ref{chamber}). Des câbles coaxiaux sont soudés à l'extremité des strips d'un côté et sont reliés de l'autre à une carte, raccordée à la mezzanine qui permet, pour chaque câble d'adapter l'impédance à celle des voies d'entrée des ASIC ($\sim$\SI{200}{\ohm}).  
 
 \begin{figure}[ht!]
 	\centering
@@ -35,7 +35,7 @@ Toute cette électronique est placée sur une mezzanine fixée directement sur l
 	\label{chamber}
 \end{figure}
 
-Les mezzanines seront reliées à la DAQ par des \textit{Low power GigaBit Transceiver} (LpGBT) qui assureront également la connexion entre les ASIC et les TDC (cf.fig~\ref{chambres}). 
+Les mezzanines seront reliées à la DAQ par des \textit{Low power GigaBit Transceiver} (LpGBT) qui assureront également la connexion entre les ASIC et les TDC (cf.Fig~\ref{chambres}). 
 
 \begin{figure}[ht!]
 	\centering
@@ -44,7 +44,7 @@ Les mezzanines seront reliées à la DAQ par des \textit{Low power GigaBit Trans
 	\label{chambres}
 \end{figure}
 
-Des prototypes de PCB comportant \num{96} strips et faisant la taille d'une demi chambre RE3/1 en $\phi$ \footnote{Ceci est nécessaire car la fabrication de PCB de grande taille est aujourd'hui très compliquée.} (cf.fig~\ref{proto}) ont été fabriqués et sont en phase de test à Lyon. Un autre type incorporant les retours des strips directement dans le PCB et ne nécessitant donc pas de souder des câbles coaxiaux aux strips est également à l'étude.
+Des prototypes de PCB comportant \num{96} strips et faisant la taille d'une demi chambre RE3/1 en $\phi$ \footnote{Ceci est nécessaire car la fabrication de PCB de grande taille est aujourd'hui très compliquée.} (cf.Fig~\ref{proto}) ont été fabriqués et sont en phase de test à Lyon. Un autre type incorporant les retours des strips directement dans le PCB et ne nécessitant donc pas de souder des câbles coaxiaux aux strips est également à l'étude.
 
 \begin{figure}[ht!]
 	\centering

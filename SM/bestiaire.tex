@@ -10,6 +10,7 @@
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
 \usepackage{etoolbox}
 \usepackage[french]{babel}
+\DeclareSIUnit{\c}{c}
 
 \tikzset{%
         brace/.style = { decorate, decoration={brace, amplitude=5pt} },
@@ -55,40 +56,40 @@
   \draw[round] (-0.7,0.7) rectangle (5.6,-3.5);
 
   \node at(0, 0)   {\particle[Orange]
-                   {$u$}        {up}       {$2.3$ MeV}{1/2}{$2/3$}{R/G/B}};
+                   {$u$}        {up}       {\SI{2.3}{\mega\eV/\square\c}}{1/2}{$2/3$}{R/G/B}};
   \node at(0,-1)   {\particle[Orange]
-                   {$d$}        {down}    {$4.8$ MeV}{1/2}{$-1/3$}{R/G/B}};
+                   {$d$}        {down}    {\SI{4.8}{\mega\eV/\square\c}}{1/2}{$-1/3$}{R/G/B}};
   \node at(0,-2)   {\particle[Green]
-                   {$e$}        {\'electron}       {$511$ keV}{1/2}{$-1$}{}};
+                   {$e$}        {\'electron}       {\SI{4.8}{\kilo\eV/\square\c}}{1/2}{$-1$}{}};
   \node at(0,-3)   {\particle[Green]
-                   {$\nu_e$}    {neutrino \'électronique}         {$<2$ eV}{1/2}{}{}};
+                   {$\nu_e$}    {neutrino \'électronique}         {$<$\SI{2}{\eV/\square\c}}{1/2}{}{}};
   \node at(1, 0)   {\particle[Orange]
-                   {$c$}        {charm}   {$1.28$ GeV}{1/2}{$2/3$}{R/G/B}};
+                   {$c$}        {charm}   {\SI{1.28}{\giga\eV/\square\c}}{1/2}{$2/3$}{R/G/B}};
   \node at(1,-1)   {\particle[Orange]
-                   {$s$}        {strange}  {$95$ MeV}{1/2}{$-1/3$}{R/G/B}};
+                   {$s$}        {strange}  {\SI{95}{\mega\eV/\square\c}}{1/2}{$-1/3$}{R/G/B}};
   \node at(1,-2)   {\particle[Green]
-                   {$\mu$}      {muon}         {$105.7$ MeV}{1/2}{$-1$}{}};
+                   {$\mu$}      {muon}         {\SI{105.7}{\mega\eV/\square\c}}{1/2}{$-1$}{}};
   \node at(1,-3)   {\particle[Green]
-                   {$\nu_\mu$}  {neutrino muonique}    {$<190$ keV}{1/2}{}{}};
+                   {$\nu_\mu$}  {neutrino muonique}    {$<$\SI{190}{\kilo\eV/\square\c}}{1/2}{}{}};
   \node at(2, 0)   {\particle[Orange]
-                   {$t$}        {top}    {$173.2$ GeV}{1/2}{$2/3$}{R/G/B}};
+                   {$t$}        {top}    {\SI{173.2}{\giga\eV/\square\c}}{1/2}{$2/3$}{R/G/B}};
   \node at(2,-1)   {\particle[Orange]
-                   {$b$}        {bottom}  {$4.7$ GeV}{1/2}{$-1/3$}{R/G/B}};
+                   {$b$}        {bottom}  {\SI{4.7}{\giga\eV/\square\c}}{1/2}{$-1/3$}{R/G/B}};
   \node at(2,-2)   {\particle[Green]
-                   {$\tau$}     {tau}          {$1.777$ GeV}{1/2}{$-1$}{}};
+                   {$\tau$}     {tau}          {\SI{1.777}{\giga\eV/\square\c}}{1/2}{$-1$}{}};
   \node at(2,-3)   {\particle[Green]
-                   {$\nu_\tau$} {neutrino tauique}  {$<18.2$ MeV}{1/2}{}{}};
+                   {$\nu_\tau$} {neutrino tauique}  {$<$\SI{18.2}{\mega\eV/\square\c}}{1/2}{}{}};
   \node at(3,-3)   {\particle[Red]
                    {$W^{\hspace{-.3ex}\scalebox{.5}{$\pm$}}$}
-                                {}              {$80.4$ GeV}{1}{$\pm1$}{}};
+                                {}              {\SI{80.4}{\giga\eV/\square\c}}{1}{$\pm1$}{}};
   \node at(4,-3)   {\particle[Red]
-                   {$Z$}        {}                    {$91.2$ GeV}{1}{}{}};
+                   {$Z$}        {}                    {\SI{91.2}{\giga\eV/\square\c}}{1}{}{}};
   \node at(3.5,-2) {\particle[Red]
                    {$\gamma$}   {photon}                        {}{1}{}{}};
   \node at(3.5,-1) {\particle[Red]
                    {$g$}        {gluon}                    {}{1}{}{color}};
   \node at(5,0)    {\particle[Blue]
-                   {$H$}        {Higgs}              {$125.1$ GeV}{0}{}{}};
+                   {$H$}        {Higgs}              {\SI{125.1}{\mega\eV/\square\c}}{0}{}{}};
   \node at(6.1,-3) {\particle
                    {}           {graviton}                       {}{}{}{}};
 

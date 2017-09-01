@@ -21,10 +21,13 @@
 \usepackage{amsmath}
 \usepackage{physics}
 \usepackage{cmap}
-\usepackage[T1,OT2]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{enumitem}
 \usepackage[utf8]{inputenc}
+\DeclareTextSymbolDefault{\cyre}{T2A}
+\DeclareTextSymbolDefault{\CYRE}{T2A}
+\DeclareTextSymbolDefault{\cyrf}{T2A}
 \usepackage{caption}
 \usepackage{collcell}
 \usepackage{booktabs}
@@ -136,6 +139,7 @@
 \DeclareSIUnit\sq{\ensuremath{\Box}}
 \DeclareSIUnit\clusters{cluster}
 \DeclareSIUnit{\c}{c}
+\DeclareSIUnit{\atm}{atm}
 
 \DeclareFontShape{OT1}{cmr}{bx}{sc}{<-> cmbcsc10}{}
 %"Bugfix" for fncychap:
@@ -446,7 +450,8 @@
 \makeatother
 \makeglossaries
 \include{GLO/GLO}
-
+\patchcmd{\chapter}{plain}{empty}{}{}
+\patchcmd{\part}{plain}{empty}{}{}
 \begin{document}
 \pagestyle{void}
 \nothing{}

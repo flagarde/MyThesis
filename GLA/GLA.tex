@@ -30,7 +30,7 @@ Une des solution pour augmenter la capacité de détection des RPC est d'utilise
 \captionof{table}{Caractéristiques du verre dopé.}
 \label{tabb1}
 \end{table}
-La résistivité de ce verre est \num{100} à \num{1000} fois moins importante que celle du verre standard (float glass), ce qui rend ce verre très intéressant pour la détection de particules à haut flux. La résistivité de ce matériau se révèle également très stable même après une charge intégrée de \SI{1}{\coulomb\per\square\centi\meter} (cf.fig~\ref{resi}).
+La résistivité de ce verre est \num{100} à \num{1000} fois moins importante que celle du verre standard (float glass), ce qui rend ce verre très intéressant pour la détection de particules à haut flux. La résistivité de ce matériau se révèle également très stable même après une charge intégrée de \SI{1}{\coulomb\per\square\centi\meter} (cf.Fig~\ref{resi}).
 
 \begin{figure}[ht!]
 	\centering
@@ -41,7 +41,7 @@ La résistivité de ce verre est \num{100} à \num{1000} fois moins importante q
 
 La rugosité est excellente ce qui permet de n'appliquer aucun traitement de surface; contrairement aux RPC en bakélite. Ces traitements se sont révélés problématiques au cours des années \cite{1352718}.
 
-L'inconvénient majeur de ce matériau est sa dimension maximale qui ne peut excéder \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.fig~\ref{verre}). En effet, de par le procédé de fabrication (cf.fig~\ref{cooling}) de ces verres et par leur polissage à la main, de plus grandes dimensions sont irréalisables.
+L'inconvénient majeur de ce matériau est sa dimension maximale qui ne peut excéder \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.Fig~\ref{verre}). En effet, de par le procédé de fabrication (cf.Fig~\ref{cooling}) de ces verres et par leur polissage à la main, de plus grandes dimensions sont irréalisables.
 \marginpar
 {
 	\centering
@@ -70,7 +70,7 @@ L'étude des GRPC passe par la connaissance de trois caractéristiques principal
 
 Un bon détecteur doit donc être proche d'une efficacité de 100\% avec une fréquence de bruit très basse. La multiplicité idéale dépend de la taille des cellules, du seuil appliqué et surtout de la résolution spatiale que l'on veut atteindre. D'autres caractéristiques du détecteur sont importantes telles que la sensibilité au bruit de fond (photons et neutrons par exemple) et l'évolution des caractéristiques du détecteur en fonction du temps, ce que l'on appelle le vieillissement du détecteur.
 
-Ces détecteurs ont été instrumentés avec une électronique dite semi-digitale utilisée depuis de nombreuses années au laboratoire dans un prototype de calorimètre hadronique semi digital (SDHCAL) (cf.fig~\ref{SDHCAL}) \cite{Buridon:2016ill} pour le détecteur International Large Detector (ILD) (cf.fig~\ref{ILD}), l'un des deux détecteurs de l'expérience International Linear Collider (ILC) (cf.fig~\ref{ILC}).
+Ces détecteurs ont été instrumentés avec une électronique dite semi-digitale utilisée depuis de nombreuses années au laboratoire dans un prototype de calorimètre hadronique semi digital (SDHCAL) (cf.Fig~\ref{SDHCAL}) \cite{Buridon:2016ill} pour le détecteur International Large Detector (ILD) (cf.Fig~\ref{ILD}), l'un des deux détecteurs de l'expérience International Linear Collider (ILC) (cf.Fig~\ref{ILC}).
 
 \marginpar
 {
@@ -100,7 +100,7 @@ Ces détecteurs ont été instrumentés avec une électronique dite semi-digital
 Le SDHCAL est un prototype de calorimètre ultra-granulaire pour le \textit{Particle Flow Algorithm} (PFA). La taille des cellules de lecture de y est  \SI{1}{\square\centi\meter}. La balance entre la saturation de l'électronique et le volume de données à traiter à amener à opter pour une lecture à trois seuils (\num{2} bits). Pour ne pas introduire d'inhomogénéités, voire de zones mortes dues au système de refroidissement, il a été décidé de ne pas en utiliser. Pour cela, la puissance consommée par l'\textit{Application-specific integrated circuit} (ASIC) et donc la chaleur à dissipée sont réduites par l'emploi d'une alimentation intermittente dite pulsée, permettant de n'allumer l'ASIC que lorsque des données sont à enregistrer. Ce prototype utilise un type d'ASIC développé spécialement pour cette occasion, le HAdronic Rpc Detector ReadOut Chip (HARDROC)\cite{Dulucq:2010ssa}.
 
 \subsection{La puce de lecture HARDROC}
-L'ASIC HARDROC (cf.fig~ \ref{hardroc2},\ref{hardroc}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience OPERA).
+L'ASIC HARDROC (cf.Fig~ \ref{hardroc2},\ref{hardroc}) est issu d'une collaboration entre le pôle de microélectronique Omega d'Orsay et l'Institut de Physique Nucléaire de Lyon (IPNL). Cette puce est basée sur celle appelée OPERAROC qui est utilisée dans l'expérience OPERA).
 
 \marginpar
 {
@@ -139,7 +139,7 @@ Chaque voie d'entrée comporte :
 Les \num{3}$\times$\num{64} discriminateurs sont lus toutes les \SI{200}{\nano\second}. Les trois seuils des discriminateurs peuvent être ajustés grâce à trois convertisseurs digital-analogiques (DAC) codés sur \num{10} bits. Ce réglage affecte l'ensemble des \num{64} voies de la puce.
 
 \subsubsection{Le préamplificateur}
-L'entrée des cellules actives est reliée aux pattes "in\_pa" d'un préamplificateur de type "Super Base Commune" (cf.fig~\ref{preampli}), ce qui permet de diminuer l'impédance d'entrée (\SIrange{50}{100}{\ohm}) et donc d'éviter la diaphonie (\textit{cross-talk}). L'impédance d'entrée est donnée par la formule suivante :
+L'entrée des cellules actives est reliée aux pattes "in\_pa" d'un préamplificateur de type "Super Base Commune" (cf.Fig~\ref{preampli}), ce qui permet de diminuer l'impédance d'entrée (\SIrange{50}{100}{\ohm}) et donc d'éviter la diaphonie (\textit{cross-talk}). L'impédance d'entrée est donnée par la formule suivante :
 
 \begin{equation}
 Z_{in}=\frac{R_0+1/g_{m2}}{1+g_{m1}R_c}
@@ -154,7 +154,7 @@ où $g_{m1}$ et $g_{m2}$ sont les transconductances des transistors $Q1$ et $Q2$
 \end{figure}
 
 \subsubsection{Miroir de courant à 8 bits}
-Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de courant de gains respectifs 1/128, 1/64, 1/32, 1/16, 1/8, 1/4, 1/2 et 1 (cf.fig~ \ref{mirror}). La sortie est la somme des courants des miroirs activés. Les huit miroirs sont activables séparément grâce à un mot de \num{8} bits appelé contrôle de gain. La plage d'amplification varie donc de \SIrange{0}{1.992}{}. La précision de ce gain est estimée à 1.5\%. 
+Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de courant de gains respectifs 1/128, 1/64, 1/32, 1/16, 1/8, 1/4, 1/2 et 1 (cf.Fig~ \ref{mirror}). La sortie est la somme des courants des miroirs activés. Les huit miroirs sont activables séparément grâce à un mot de \num{8} bits appelé contrôle de gain. La plage d'amplification varie donc de \SIrange{0}{1.992}{}. La précision de ce gain est estimée à 1.5\%. 
 
 \begin{figure}[ht!]
 	\centering
@@ -164,7 +164,7 @@ Le courant en sortie du préamplificateur est ensuite copié par huit miroirs de
 \end{figure}
 
 \subsubsection{Les trois traitements de mise en forme rapide (FSB)}
-En sortie du miroir à \num{8} bits, le signal passe dans trois circuits de traitement de mise en forme placés en parallèle. Ils consistent en un filtrage des signaux fournis en entrée afin d'éviter les perturbations dans le signal de sortie du préamplificateur ainsi que d'augmenter le rapport signal sur bruit. FSB1 et FSB2 (cf.fig~\ref{fsb1}) contrairement à FSB0 (cf.fig~\ref{fsb0}) possèdent un système de \num{4} miroirs de courant afin de réduire le gain en entrée et ainsi augmenter la gamme dynamique. Le filtre FSB0 est dédié aux charges d'entrée allant de \SI{10}{\femto\coulomb} à quelques centaines de \si{\femto\coulomb}, FSB1 qui possède \num{4} miroirs permet de traiter des signaux allant de \SI{100}{\femto\coulomb} à plus de \SI{1}{\pico\coulomb}; quant à FSB2 il permet de traiter des signaux de \SI{1}{\pico\coulomb} à \SI{30}{\pico\coulomb}.
+En sortie du miroir à \num{8} bits, le signal passe dans trois circuits de traitement de mise en forme placés en parallèle. Ils consistent en un filtrage des signaux fournis en entrée afin d'éviter les perturbations dans le signal de sortie du préamplificateur ainsi que d'augmenter le rapport signal sur bruit. FSB1 et FSB2 (cf.Fig~\ref{fsb1}) contrairement à FSB0 (cf.Fig~\ref{fsb0}) possèdent un système de \num{4} miroirs de courant afin de réduire le gain en entrée et ainsi augmenter la gamme dynamique. Le filtre FSB0 est dédié aux charges d'entrée allant de \SI{10}{\femto\coulomb} à quelques centaines de \si{\femto\coulomb}, FSB1 qui possède \num{4} miroirs permet de traiter des signaux allant de \SI{100}{\femto\coulomb} à plus de \SI{1}{\pico\coulomb}; quant à FSB2 il permet de traiter des signaux de \SI{1}{\pico\coulomb} à \SI{30}{\pico\coulomb}.
 
 \begin{figure}[ht!]
 	\centering
@@ -180,7 +180,7 @@ En sortie du miroir à \num{8} bits, le signal passe dans trois circuits de trai
 	\label{fsb1}
 \end{figure}
 
-Il est possible d'activer des résistances et des condensateurs dans la boucle de contre réaction du filtre (cf.fig~\ref{fsb0},cf.fig\ref{fsb1}). Tout comme les gains des FSB, ils sont réglables par des mots binaires envoyés lors de la configuration des puces au début d'un run (slow control). Une étude poussée à été réalisée lors des tests pour le SDHCAL et nous avons gardé les valeurs trouvées comme les plus adaptées pour le gain des miroirs ainsi que pour la configuration de la boucle de contre-réaction.
+Il est possible d'activer des résistances et des condensateurs dans la boucle de contre réaction du filtre (cf.Fig~\ref{fsb0},cf.Fig\ref{fsb1}). Tout comme les gains des FSB, ils sont réglables par des mots binaires envoyés lors de la configuration des puces au début d'un run (slow control). Une étude poussée à été réalisée lors des tests pour le SDHCAL et nous avons gardé les valeurs trouvées comme les plus adaptées pour le gain des miroirs ainsi que pour la configuration de la boucle de contre-réaction.
 
 La figure \ref{signal} montre la forme du signal en sortie des filtres FSB pour trois injections de charges différentes.
 \begin{figure}[ht!]
@@ -262,7 +262,7 @@ Il est également possible de masquer une cellule active bruyante en configurant
 Afin de configurer le HARDROC, une patte d'entrée est utilisée. Une ligne d'horloge est mise en marche et à chaque front montant, les informations sont propagées dans le registre à décalage présent dans le HARDROC. \num{872} fronts d'horloge sont nécessaires afin de régler le HARDROC (valeurs des seuils, gain des préamplificateurs, gains des FSB, masques etc...). Une fois toutes les informations envoyées, il suffit d'arrêter l'horloge. La dernière bascule du registre est connectée à une patte qui permet à la fois de chainer les HARDROC et ainsi les configurer en série, mais aussi de vérifier que les bascules sont dans le bon état. Pour cela il suffit de redémarrer l'horloge et de comparer le mot binaire récupéré en sortie et le mot envoyé en entrée.
 
 \subsubsection{La mémoire du HARDROC}
-À chaque coup d'horloge, lorsque la puce est en phase d'acquisition, un OU logique est réalisé entre les bascules des \num{64} voies de la puce. Si l'une d'elle est à l'état haut, la mémoire digitale (Digital Memory) (cf.fig~\ref{scheme}) reçoit un signal pour enregistrer l'événement. La valeur de l'horloge de l'événement, appelée Bunch Crossing ID (BCID) ainsi que le numéro d'identification de l'ASIC ainsi que la valeur de tous les encodeurs de la puce seront enregistrés. 
+À chaque coup d'horloge, lorsque la puce est en phase d'acquisition, un OU logique est réalisé entre les bascules des \num{64} voies de la puce. Si l'une d'elle est à l'état haut, la mémoire digitale (Digital Memory) (cf.Fig~\ref{scheme}) reçoit un signal pour enregistrer l'événement. La valeur de l'horloge de l'événement, appelée Bunch Crossing ID (BCID) ainsi que le numéro d'identification de l'ASIC ainsi que la valeur de tous les encodeurs de la puce seront enregistrés. 
 
 La mémoire du HARDROC permet de stocker \num{128} événements de \num{160} bits (cf.tab~\ref{bits}). Une fois sa mémoire pleine, un signal de saturation est émis sur une patte dédiée.
 
@@ -290,7 +290,7 @@ La mémoire du HARDROC permet de stocker \num{128} événements de \num{160} bit
 \end{table}
  
 \subsection{L'acquisition des données}
-Le HARDROC à été conçu pour être chaîné, afin de piloter de nombreuses puces avec un nombre réduit de lignes communes. L'exemple du slow control montre l'intérêt de ce chainage. Afin de gérer plusieurs HARDROC, une carte électronique composée d'un Field-Programmable Gate Array (FPGA), appellée Detector InterFace (DIF) (cf.fig~\ref{DIF}) a été développée en collaboration avec le Laboratoire d'Annecy de Physique des Particules (LAPP). Cette carte possède un controleur USB utilisé pour le rapatriement des données et l'envoi des informations du slow control, d'un port HDMI dont un protocole développé pour l'occasion permet la synchronisation des horloges et de connecter la DIF à une carte de contrôle. Elle dispose également de plusieurs entrées/sorties LEMO qui peuvent être utilisées entre autres pour injecter un signal de déclenchement externe ou que de remonter un signal "busy".
+Le HARDROC à été conçu pour être chaîné, afin de piloter de nombreuses puces avec un nombre réduit de lignes communes. L'exemple du slow control montre l'intérêt de ce chainage. Afin de gérer plusieurs HARDROC, une carte électronique composée d'un Field-Programmable Gate Array (FPGA), appellée Detector InterFace (DIF) (cf.Fig~\ref{DIF}) a été développée en collaboration avec le Laboratoire d'Annecy de Physique des Particules (LAPP). Cette carte possède un controleur USB utilisé pour le rapatriement des données et l'envoi des informations du slow control, d'un port HDMI dont un protocole développé pour l'occasion permet la synchronisation des horloges et de connecter la DIF à une carte de contrôle. Elle dispose également de plusieurs entrées/sorties LEMO qui peuvent être utilisées entre autres pour injecter un signal de déclenchement externe ou que de remonter un signal "busy".
 
 \begin{figure}[ht!]
 	\centering
@@ -314,7 +314,7 @@ où $n$ est le nombre de HARDROC. Une fois tous les événements récoltés, les
 	\label{temp}
 \end{figure}
 
-Afin de faciliter la reconstruction et l'analyse des données, des informations additionnelles sont ajoutées au flux de données des HARDROC par la DIF. À chaque ReadOut, les données des ASICS sont encapsulées par un header et un trailer ainsi que d'autres informations telles que des compteurs. Ces DIF sont reliées par l'intermédiaire de câbles HDMI à une Synchronous Data Concentrator Card\footnote{Le nombre de chambres testées a toujours été inférieur à \num{9} ce qui permet de se passer de DCC et de connecter directement les DIF des chambres à la SDCC.} (SDCC) (cf.fig~\ref{SDCC}) \cite{Baulieu:2015pfa} qui reçoit les busy et les RAMfull des DIF et envoie de manière synchrone l'horloge et les commandes. La carte SDCC est directement reliée par USB à l'ordinateur controllant la DAQ.
+Afin de faciliter la reconstruction et l'analyse des données, des informations additionnelles sont ajoutées au flux de données des HARDROC par la DIF. À chaque ReadOut, les données des ASICS sont encapsulées par un header et un trailer ainsi que d'autres informations telles que des compteurs. Ces DIF sont reliées par l'intermédiaire de câbles HDMI à une Synchronous Data Concentrator Card\footnote{Le nombre de chambres testées a toujours été inférieur à \num{9} ce qui permet de se passer de DCC et de connecter directement les DIF des chambres à la SDCC.} (SDCC) (cf.Fig~\ref{SDCC}) \cite{Baulieu:2015pfa} qui reçoit les busy et les RAMfull des DIF et envoie de manière synchrone l'horloge et les commandes. La carte SDCC est directement reliée par USB à l'ordinateur controllant la DAQ.
 
 \marginpar
 {
@@ -454,7 +454,7 @@ De nombreux tests en faisceaux ont été réalisés lors de cette thèse, notamm
 \vspace*{-0.25cm}
 \subsection{Tests en faisceaux à DESY}
 \vspace*{-0.25cm}
-Un test en faisceaux à DESY \cite{Haddad:2012fx} a été réalisé afin de vérifier les caractéristiques des verres de basse résistivité produits par l'université de Tsinghua. Des chambres en verre de basse résistivité de $30\times30$\si{\square\centi\meter} (GRPC) (cf.fig~\ref{chambre}) instrumentée par une électronique composée de HARDROC et de cellules de lecture en forme de pads (cf.fig~\ref{cellule}) ont été soumises à un faisceau intense et continu d'électrons d'énergie allant jusqu'à \SI{6}{\giga\eV} couvrant une surface de quelques \si{\square\centi\meter}. L'épaisseur des électrodes est de \SI{1}{\milli\meter} et celle du gap est de \SI{1.2}{\milli\meter}. Le flux d'électrons est au maximum de \SI{35}{\kilo\hertz}. Le mélange de gaz est composé de 93\% de \chemform{TFE}(\chemform{C_2F_4}), 5\% de \chemform{CO_2} et 2\% de \chemform{SF_6} (mélange ILC).
+Un test en faisceaux à DESY \cite{Haddad:2012fx} a été réalisé afin de vérifier les caractéristiques des verres de basse résistivité produits par l'université de Tsinghua. Des chambres en verre de basse résistivité de $30\times30$\si{\square\centi\meter} (GRPC) (cf.Fig~\ref{chambre}) instrumentée par une électronique composée de HARDROC et de cellules de lecture en forme de pads (cf.Fig~\ref{cellule}) ont été soumises à un faisceau intense et continu d'électrons d'énergie allant jusqu'à \SI{6}{\giga\eV} couvrant une surface de quelques \si{\square\centi\meter}. L'épaisseur des électrodes est de \SI{1}{\milli\meter} et celle du gap est de \SI{1.2}{\milli\meter}. Le flux d'électrons est au maximum de \SI{35}{\kilo\hertz}. Le mélange de gaz est composé de 93\% de \chemform{TFE}(\chemform{C_2F_4}), 5\% de \chemform{CO_2} et 2\% de \chemform{SF_6} (mélange ILC).
 
 \noindent
 \begin{minipage}[th!]{.48\textwidth}
@@ -471,7 +471,7 @@ Un test en faisceaux à DESY \cite{Haddad:2012fx} a été réalisé afin de vér
 \label{cellule}
 \end{minipage}
 
-Ce test en faisceau a montré que les verres de basse résistivité peuvent supporter un flux de particules de \SI{9}{\kilo\hertz\per\square\centi\meter} tout en gardant une efficacité proche de 90\% (cf.fig~\ref{effiDesy}). Le point de fonctionnement a été estimé à \SI{7.2}{\kilo\volt} donnant une efficacité de 95\% et une multiplicité de $1.4$, pour un seuil de \SI{50}{\femto\coulomb}. 
+Ce test en faisceau a montré que les verres de basse résistivité peuvent supporter un flux de particules de \SI{9}{\kilo\hertz\per\square\centi\meter} tout en gardant une efficacité proche de 90\% (cf.Fig~\ref{effiDesy}). Le point de fonctionnement a été estimé à \SI{7.2}{\kilo\volt} donnant une efficacité de 95\% et une multiplicité de $1.4$, pour un seuil de \SI{50}{\femto\coulomb}. 
 
 \begin{figure}[ht!]
 	\centering
@@ -483,7 +483,7 @@ Ce test en faisceau a montré que les verres de basse résistivité peuvent supp
 Alors que dès \SI{1}{\kilo\hertz\per\square\centi\meter}, les chambres de verre standard voient leur efficacité chuter autour de 20\%, les chambres construites avec des électrodes en verre de basse résistivité continuent à être efficaces même après \SI{9}{\kilo\hertz\per\square\centi\meter}. Leur efficacité décroit très lentement en fonction du flux de particules.
 
 \subsection{Tests en faisceaux au PS}
-Huit chambres GRPC ont été amenées au PS (cf.fig~\ref{complexe}) en Juin \num{2014} dans la Zone Est (ligne de faisceau T9), juste avant le début de cette thèse, afin de former un télescope (cf.fig~\ref{TelescopePS}).
+Huit chambres GRPC ont été amenées au PS (cf.Fig~\ref{complexe}) en Juin \num{2014} dans la Zone Est (ligne de faisceau T9), juste avant le début de cette thèse, afin de former un télescope (cf.Fig~\ref{TelescopePS}).
 
 \begin{figure}[ht!]
 	\centering
@@ -492,7 +492,7 @@ Huit chambres GRPC ont été amenées au PS (cf.fig~\ref{complexe}) en Juin \num
 	\label{TelescopePS}
 \end{figure}
 
-Une chambre possède une électronique à strips et les sept autres une électronique à pads. La chambre à strips est de type "double gap" (cf.fig~\ref{DoubleGap}) : deux GRPC de basse résistivité sont placées de chaque côté du PCB comportant les strips. \num{128} strips de \SI{2}{\milli\meter} de large et séparés de \SI{0.5}{\milli\meter} sont placés de chaque côté du PCB. Les strips d'un côté sont déplacés de \SI{1}{\milli\meter} par rapport à ceux de l'autre côté afin d'améliorer la résolution spatiale. Leur impédance est de \SI{24}{\ohm}. 
+Une chambre possède une électronique à strips et les sept autres une électronique à pads. La chambre à strips est de type "double gap" (cf.Fig~\ref{DoubleGap}) : deux GRPC de basse résistivité sont placées de chaque côté du PCB comportant les strips. \num{128} strips de \SI{2}{\milli\meter} de large et séparés de \SI{0.5}{\milli\meter} sont placés de chaque côté du PCB. Les strips d'un côté sont déplacés de \SI{1}{\milli\meter} par rapport à ceux de l'autre côté afin d'améliorer la résolution spatiale. Leur impédance est de \SI{24}{\ohm}. 
 
 \begin{figure}[ht!]
 	\centering
@@ -501,7 +501,7 @@ Une chambre possède une électronique à strips et les sept autres une électro
 	\label{DoubleGap}
 \end{figure}
 
-Deux HARDROC de chaque côté du PCB sont nécessaires pour la lecture des signaux, un des HARDROC lit les strips pairs et l'autre les impairs, ceci afin d'éviter de rendre inefficace une grande partie de la chambre en cas de défaillance de l'une des puces. Pour chaque côté deux DIF sont utilisées, la première sert à récolter et enregistrer le signal, la seconde est reliée à un TDC qui délivre le temps absolu de chaque hit enregistré grâce au signal venant de la sotie OR des HARDROC (cf.fig~\ref{SchemePS}).
+Deux HARDROC de chaque côté du PCB sont nécessaires pour la lecture des signaux, un des HARDROC lit les strips pairs et l'autre les impairs, ceci afin d'éviter de rendre inefficace une grande partie de la chambre en cas de défaillance de l'une des puces. Pour chaque côté deux DIF sont utilisées, la première sert à récolter et enregistrer le signal, la seconde est reliée à un TDC qui délivre le temps absolu de chaque hit enregistré grâce au signal venant de la sotie OR des HARDROC (cf.Fig~\ref{SchemePS}).
 
 \begin{figure}[ht!]
 	\centering
@@ -510,7 +510,7 @@ Deux HARDROC de chaque côté du PCB sont nécessaires pour la lecture des signa
 	\label{SchemePS}
 \end{figure}
 
-Le PS fournit des faisceaux d'électrons, de hadrons, de muons... avec une impulsion allant du de \SIrange{1}{15}{\giga\eV}/c. Le faisceau est composé de trains de particules envoyés toutes les \SI{33.6}{\second} en moyenne dans la zone d'expérience. La durée d'un train de particules est d'environ \SI{400}{\milli\second}. le flux de particules est compris entre $1$ et $2.10^{6}$ particules par train de faisceau. Dans notre cas, nous avons utilisé un faisceau de muons (cf.fig~\ref{faisceauPS}).
+Le PS fournit des faisceaux d'électrons, de hadrons, de muons... avec une impulsion allant du de \SIrange{1}{15}{\giga\eV}/c. Le faisceau est composé de trains de particules envoyés toutes les \SI{33.6}{\second} en moyenne dans la zone d'expérience. La durée d'un train de particules est d'environ \SI{400}{\milli\second}. le flux de particules est compris entre $1$ et $2.10^{6}$ particules par train de faisceau. Dans notre cas, nous avons utilisé un faisceau de muons (cf.Fig~\ref{faisceauPS}).
  
 \begin{figure}[ht!]
 	\centering
@@ -528,7 +528,7 @@ Un scan en tension pour toutes les chambres a permis de fixer le point de foncti
 	\label{ScanTensionPS}
 \end{figure}
 
-Une fois le point de fonctionnement fixé, un scan de l'efficacité en fonction du flux de particules incidentes a été réalisé (cf.fig~ \ref{ScanRatePS}).
+Une fois le point de fonctionnement fixé, un scan de l'efficacité en fonction du flux de particules incidentes a été réalisé (cf.Fig~ \ref{ScanRatePS}).
 
 \begin{figure}[!ht]
 	\centering
@@ -561,7 +561,7 @@ La multiplicité ainsi que la résolution spatiale calculées en fonction du flu
 On peut remarquer que la résolution spatiale est améliorée au fur et à mesure de l'augmentation du flux de particules. Elle passe de \SI{1.5}{\milli\meter} à environ \SI{1.1}{\milli\meter} pour $\sim$ \SI{10}{\kilo\hertz\per\square\centi\meter}. L'amélioration de la résolution spatiale en fonction du flux de particules peut s'expliquer par un effet d'écrantage dû à l'accumulation de charges sur les électrodes. Le champ électrique aux bornes s'en trouve diminué ce qui décroit le gain du gaz et donc amène à une réduction de la multiplicité.
 
 \subsection{Tests en faisceaux au SPS} 
-Cinq chambres à pads ont ensuite été amenées sur la ligne H2 \cite{H2line} du SPS en Juin 2015. La ligne H2 permet d'obtenir des faisceaux de hadrons, électrons ou muons d'impulsion entre 10 et 360 GeV/c ainsi que des protons primaires de 400 GeV/c. La ligne H2 est situé dans la \textit{North Area} (cf.fig~\ref{complexe}). Tout comme le PS, le faisceau du SPS est composé de trains de particules envoyés toutes les \SIrange{14}{48}{\second} dans la zone d’expérience selon la disponibilité du SPS et de la nécessité de réinjecter du faisceau dans le LHC. La durée d’un train de particules est compris entre \SI{4.8}{\second} et \SI{9.6}{\second}. L'intensité du faisceau peut aller jusqu'à $\sim 2.10^{8}$ particules par train. Dans notre cas un faisceau de muons (et quelques pions) durant environ \SI{7}{\second} a été utilisé (cf.fig~\ref{ProfilFaisceauSPS}).
+Cinq chambres à pads ont ensuite été amenées sur la ligne H2 \cite{H2line} du SPS en Juin 2015. La ligne H2 permet d'obtenir des faisceaux de hadrons, électrons ou muons d'impulsion entre 10 et 360 GeV/c ainsi que des protons primaires de 400 GeV/c. La ligne H2 est situé dans la \textit{North Area} (cf.Fig~\ref{complexe}). Tout comme le PS, le faisceau du SPS est composé de trains de particules envoyés toutes les \SIrange{14}{48}{\second} dans la zone d’expérience selon la disponibilité du SPS et de la nécessité de réinjecter du faisceau dans le LHC. La durée d’un train de particules est compris entre \SI{4.8}{\second} et \SI{9.6}{\second}. L'intensité du faisceau peut aller jusqu'à $\sim 2.10^{8}$ particules par train. Dans notre cas un faisceau de muons (et quelques pions) durant environ \SI{7}{\second} a été utilisé (cf.Fig~\ref{ProfilFaisceauSPS}).
 
 \begin{figure}[ht!]
 	\centering
@@ -572,7 +572,7 @@ Cinq chambres à pads ont ensuite été amenées sur la ligne H2 \cite{H2line} d
 	\label{ProfilFaisceauSPS}
 \end{figure}
 
-De par la structure en train du faisceau, l'efficacité de détection des muons des chambres pourrait être surestimée de façon notable. En effet entre deux trains de faisceau, les charges accumulées dans les chambres lors du train précédent ont le temps d'être évacuées grâce au générateur haute tension. Lors des premiers instants du passage des particules du train suivant, la chambre est donc efficace et enregistre quelques événements avant de voir son efficacité chuter peu à peu. Afin d'empêcher la surestimation de l'efficacité, le processeur Trivent a été modifié afin de détecter la structure en train de faisceau dans les données (cf.fig~\ref{StructureSpill}) et de supprimer les données des deux premières secondes de chaque train de particules.
+De par la structure en train du faisceau, l'efficacité de détection des muons des chambres pourrait être surestimée de façon notable. En effet entre deux trains de faisceau, les charges accumulées dans les chambres lors du train précédent ont le temps d'être évacuées grâce au générateur haute tension. Lors des premiers instants du passage des particules du train suivant, la chambre est donc efficace et enregistre quelques événements avant de voir son efficacité chuter peu à peu. Afin d'empêcher la surestimation de l'efficacité, le processeur Trivent a été modifié afin de détecter la structure en train de faisceau dans les données (cf.Fig~\ref{StructureSpill}) et de supprimer les données des deux premières secondes de chaque train de particules.
 \vspace*{0.4cm}
 \begin{figure}[!ht]
 	\centering
@@ -616,7 +616,7 @@ Comme prévu les cinq chambres ont une efficacité proche de 90\% à bas flux de
 Jusqu'à présent nous avons effectué des tests en faisceaux de flux assez important ($\sim$ \SI{10}{\kilo\hertz\per\square\centi\meter}). Cependant, ces faisceaux sont bien localisés et ne couvrent pas toute la surface des chambres. Des flux de particules similaires sur toute la surface du détecteur pourraient changer drastiquement les résultats sur l'efficacité et la multiplicité des chambres. En effet, si la surface entière des chambres est soumise à un flux de particules intense, le nombre de charges à évacuer par la haute tension est beaucoup plus importants, ce qui peut conduire à une accumulation de charges et à un effet d'écrantage conduisant à une baisse de l'efficacité. Afin de tester nos chambres dans des conditions plus proches de la situation à laquelle elles seront exposées, nous les avons amenées au Gamme Irradiation Facility (GIF++). De plus, jusqu'à présent, les résultats présentés ont été obtenus en utilisant le mélange de gaz ILC (93\% \chemform{TFE}, 5\% \chemform{CO_2}, 2\% \chemform{SF_6}). Au GIF++, le mélange de gaz de CMS (95.2\% \chemform{TFE}, 4.5\% \chemform{C_4H_{10}}, 0.3\% \chemform{SF_6}) non humidifié sera utilisé.
 
 \subsection{Le GIF++}
-Le GIF++ \cite{Jakel:1977147} (cf.fig~\ref{GIF2},cf.fig\ref{GIF}) est une installation de 100$m^2$ installé le long de la ligne de faisceau H4 dans la \textit{North Area} du CERN (cf.fig~\ref{complexe}). Il s'agit d'une installation qui permet à la fois de disposer d'un faisceau de particules (surtout des muons jusqu'à 100GeV/c d'impulsion.) et d'une source de Césium 137 de 14TBq. Cette source permet de baigner la zone d'un fond de $\gamma$ 30 fois supérieur à celui de son prédécesseur, le GIF.
+Le GIF++ \cite{Jakel:1977147} (cf.Fig~\ref{GIF2},cf.Fig\ref{GIF}) est une installation de 100$m^2$ installé le long de la ligne de faisceau H4 dans la \textit{North Area} du CERN (cf.Fig~\ref{complexe}). Il s'agit d'une installation qui permet à la fois de disposer d'un faisceau de particules (surtout des muons jusqu'à 100GeV/c d'impulsion.) et d'une source de Césium 137 de 14TBq. Cette source permet de baigner la zone d'un fond de $\gamma$ 30 fois supérieur à celui de son prédécesseur, le GIF.
 
 Cette installation a été conçue afin de tester les performances et la stabilité des nouvelles technologies et des nouveaux détecteurs pour le passage du LHC au HL-LHC. L'activité de la source présente au GIF++ permet de tester le vieillissement des détecteurs et d'accumuler une dose équivalente à celle des conditions expérimentales du HL-LHC et ce dans un temps raisonnable ($\sim$ année). 
 
@@ -638,7 +638,7 @@ Cette installation a été conçue afin de tester les performances et la stabili
 \end{figure}
 
 
-La source de Césium 137 (cf.fig~\ref{Source}) a une demi-vie de 30.08 années et se désintègre selon le diagramme \ref{Diagramme}. Dans 94.6\% il transmute en isomère\footnote{L’isomérie nucléaire est le fait qu'un même noyau atomique puisse exister dans des états énergétiques distincts caractérisés chacun par un spin et une énergie d'excitation particuliers.} $^{137m}$Ba du baryum 137 par désintégration $\beta^{-}$ lequel retombe à son état fondamental par transition isomérique émettant un rayonnement $\gamma$ de 661,7 keV avec une période de 2,552 minutes. Dans les 5,4\% des cas restants, il se désintègre directement en 137Ba avec une énergie de désintégration de 1 174 keV. Cette source est placée dans un irradiateur (cf.fig~\ref{Irradiateur})
+La source de Césium 137 (cf.Fig~\ref{Source}) a une demi-vie de 30.08 années et se désintègre selon le diagramme \ref{Diagramme}. Dans 94.6\% il transmute en isomère\footnote{L’isomérie nucléaire est le fait qu'un même noyau atomique puisse exister dans des états énergétiques distincts caractérisés chacun par un spin et une énergie d'excitation particuliers.} $^{137m}$Ba du baryum 137 par désintégration $\beta^{-}$ lequel retombe à son état fondamental par transition isomérique émettant un rayonnement $\gamma$ de 661,7 keV avec une période de 2,552 minutes. Dans les 5,4\% des cas restants, il se désintègre directement en 137Ba avec une énergie de désintégration de 1 174 keV. Cette source est placée dans un irradiateur (cf.Fig~\ref{Irradiateur})
 
 \begin{figure}[!ht]
 	\centering
@@ -691,7 +691,7 @@ La valeur des différents filtres des atténuateurs est donnée dans le tableau 
 	\label{Filter}
 \end{table}
 
-Au total, 24 configurations différentes d'atténuateurs sont possibles, allant d'un facteur d'atténuation de 1 à 46415. Ces facteurs d'atténuation ont été choisis afin d'être à peu prêt équidistants sur une échelle logarithmique sur les trois premiers ordres de grandeur (cf.fig~\ref{ValueAttenuateur} \cite{Pfeiffer:2016hnl}).
+Au total, 24 configurations différentes d'atténuateurs sont possibles, allant d'un facteur d'atténuation de 1 à 46415. Ces facteurs d'atténuation ont été choisis afin d'être à peu prêt équidistants sur une échelle logarithmique sur les trois premiers ordres de grandeur (cf.Fig~\ref{ValueAttenuateur} \cite{Pfeiffer:2016hnl}).
 
 \marginpar
 {
@@ -706,10 +706,10 @@ Les valeurs nominales des facteurs d'atténuation ont été calculées dans le c
 Un filtre de correction angulaire en acier est placé de chaque côté de l'irradiateur afin de supprimer la dépendance en $\frac{1}{r^2}$ du courant de photons et de rendre celui-ci uniforme dans le plan xy. Cette correction n'est valable que pour les photons de \SI{662}{\kilo\eV}. Pour les photons de plus basse énergie, créés soit par interaction avec la capsule de la source ou les collimateurs de l'irradiateur, la correction angulaire est beaucoup moins uniforme dans le plan $xy$.
 
 \subsection{Tests en faisceaux (Août 2015)}
-À partir de Juillet 2015, le télescope (cf.fig~\ref{GIFppChambers}) à été installé au GIF++ afin de reproduire des conditions de bruits de fond $\gamma$ et ainsi étudier les caractéristiques de ces chambres et le vieillissement de ces chambres sous ces conditions. Les chambres doivent être irradiées pendant plusieurs mois afin d'obtenir une charge intégrée de plus de \SI{1}{\coulomb}, ce qui correspond à la charge accumulée pendant \num{10} ans au HL-LHC.
+À partir de Juillet 2015, le télescope (cf.Fig~\ref{GIFppChambers}) à été installé au GIF++ afin de reproduire des conditions de bruits de fond $\gamma$ et ainsi étudier les caractéristiques de ces chambres et le vieillissement de ces chambres sous ces conditions. Les chambres doivent être irradiées pendant plusieurs mois afin d'obtenir une charge intégrée de plus de \SI{1}{\coulomb}, ce qui correspond à la charge accumulée pendant \num{10} ans au HL-LHC.
 Plusieurs périodes de tests en faisceaux sont aussi programmées afin de vérifier l'efficacité des chambres et ainsi vérifier la modification de leurs caractéristiques en fonction du temps.
 
-Le télescope est constitué de chambres de verre de basse résistivité et de verre standard afin de servir de témoins. Les chambres sont montées en série dans le circuit de gaz par des tube de polyuréthane. Ces tuyaux permettent une mise en œuvre plus facile et un retrait ou déplacement des chambres plus facile. Tout le système d'alimentation des chambres en basse tension, la SDCC etc est placé dans une boite conçu pour l'occasion (cf.fig~\ref{boite}), placée dans un château de plomb en bas du bâti afin d'éviter les radiations. Cette boite et ses sous composants (basse tension, SDCC) est entièrement contrôlable à distance. Les hautes tensions sont contrôlées par un module CAEN monitorable par telnet.
+Le télescope est constitué de chambres de verre de basse résistivité et de verre standard afin de servir de témoins. Les chambres sont montées en série dans le circuit de gaz par des tube de polyuréthane. Ces tuyaux permettent une mise en œuvre plus facile et un retrait ou déplacement des chambres plus facile. Tout le système d'alimentation des chambres en basse tension, la SDCC etc est placé dans une boite conçu pour l'occasion (cf.Fig~\ref{boite}), placée dans un château de plomb en bas du bâti afin d'éviter les radiations. Cette boite et ses sous composants (basse tension, SDCC) est entièrement contrôlable à distance. Les hautes tensions sont contrôlées par un module CAEN monitorable par telnet.
 
 \marginpar
 {
@@ -728,7 +728,7 @@ Le télescope est constitué de chambres de verre de basse résistivité et de v
 
 En août 2015, avant le début du vieillissement des chambres un premier test en faisceaux a permis d'avoir des courbes de référence de la tenue des chambres au flux de gamma.
 
-Le télescope a été placé à 2m de la source du côté \textit{Upstream} (cf.fig~\ref{PositionChambre})
+Le télescope a été placé à 2m de la source du côté \textit{Upstream} (cf.Fig~\ref{PositionChambre})
 
 \begin{figure}[!ht]
 	\centering
@@ -743,7 +743,7 @@ Lors de ce test en faisceaux, nous avons fait varier les valeurs d'atténuateur 
 
 \begin{figure}[!ht]
 	\centering
-	\scalebox{1.2}{\includetex{GLA/AttenuateurGIF}}
+	\scalebox{1.1}{\includetex{GLA/AttenuateurGIF}}
 	\caption{Efficacité en fonction du courant de $\gamma$ obtenue pour différentes valeurs d'atténuation de la source. Les effets d'écrantage dus à la présence des autres chambres placées devant ne sont pas inclus.}
 	\label{ATTENUATEURGIF}
 \end{figure}
@@ -759,7 +759,7 @@ Le courant de photons ne donne pas directement le flux de particules qui nous in
 	\label{GEANT4}
 }
 
-Une simulation GEANT4, modélisant le SDHCAL à été modifiée afin de prendre en compte la géométrie des chambres au GIF++ ainsi que leur position relative (cf.fig~\ref{GEANT4}). Un "particle gun" a été utilisé afin de tirer un photon de \SI{661.7}{\kilo\eV} à la fois. Les autres énergies de photons n'ont pas été simulées. La simulation nous permet de connaitre la fraction de photons émis par la source qui produisent un hit dans la couche de gaz des GRPC, ainsi que l'impact des absorptions et diffusions dans les GRPC. La composition exacte des verres de basse résistivité étant inconnue, la simulation se base sur des verres standards. La fraction de photons amenant à la création d'un hit dans les détecteurs, pour plusieurs listes physiques de GEANT 4 est donnée figure \ref{conversion}. Pour la première chambre, le taux de conversion $\gamma$--$e^{-}$ est ainsi estimé à $\approx\num{3.1}$\textperthousand
+Une simulation GEANT4, modélisant le SDHCAL à été modifiée afin de prendre en compte la géométrie des chambres au GIF++ ainsi que leur position relative (cf.Fig~\ref{GEANT4}). Un "particle gun" a été utilisé afin de tirer un photon de \SI{661.7}{\kilo\eV} à la fois. Les autres énergies de photons n'ont pas été simulées. La simulation nous permet de connaitre la fraction de photons émis par la source qui produisent un hit dans la couche de gaz des GRPC, ainsi que l'impact des absorptions et diffusions dans les GRPC. La composition exacte des verres de basse résistivité étant inconnue, la simulation se base sur des verres standards. La fraction de photons amenant à la création d'un hit dans les détecteurs, pour plusieurs listes physiques de GEANT 4 est donnée figure \ref{conversion}. Pour la première chambre, le taux de conversion $\gamma$--$e^{-}$ est ainsi estimé à $\approx\num{3.1}$\textperthousand
 
 \begin{figure}[!ht]
 	\centering
@@ -908,6 +908,7 @@ Des scans en fonction du seuil appliqué et de la distance à la source ont éga
 %	\label{att22}
 %\end{figure}
 %\vspace*{-0.5cm}
+
 On remarque une baisse significative de l'efficacité pour un même seuil lorsque le flux de particules est trop intense ($\sim$\num{6.8e5}$\gamma$\si{\per\square\centi\meter\per\second} pour \ref{att22eff},\ref{att22thre}) ce qui peut s'expliquer par le phénomène de saturation. On trouve bien une baisse de la multiplicité lorsqu'on augmente le seuil sauf pour la figure \ref{att22thre} dominée par les fluctuations statistiques. L'effet du flux de gammas sur la saturation de la chambre est clairement visible lorsqu'on compare les valeurs de la multiplicité de la chambres placé à \SI{5.5}{\meter} (\ref{att150thre} $\sim$\num{2e4}$\gamma$\si{\per\square\centi\meter\per\second}, \ref{att46thre} $\sim$\num{6.5e4}$\gamma$\si{\per\square\centi\meter\per\second})\footnote{La réduction du flux due aux autres setup placés devant n'est pas prise en compte.} à celles où la chambre est placé à \SI{2}{\meter} (\ref{att220thre} $\sim$\num{6.8e4}$\gamma$\si{\per\square\centi\meter\per\second},\ref{att22thre} $\sim$\num{6.8e5}$\gamma$\si{\per\square\centi\meter\per\second}).
 
 %La figure \ref{att150} (\ref{att46}) représente l'efficacité et la multiplicité en fonction du seuil appliqué pour un facteur d'atténuation de la source de \num{150} (\num{46}) dans le cas ou le détecteur est placé à \SI{5.5}{\meter}.
@@ -931,7 +932,7 @@ On remarque une baisse significative de l'efficacité pour un même seuil lorsqu
 \vspace*{-0.2cm}
 \section{Création du Electronic LOGbook (ELOG)}
 \vspace*{-0.4cm}
-À chaque nouvelle prise de données, une entrée dans le Electronic LOGbook (ELOG) \cite{ELOG} du SDHCAL, sorte de cahier de manipulation électronique est créé. Il s'agit d'un démon écrit en C, contenant un serveur web qui lit et écrit les entrées du cahier électronique et les affiche en format HTML. Le ELOG du SDHCAL, contenait quelques informations rudimentaires (numéro du fichier de la prise de données, date de création). Devant le nombre de fichiers à analyser et le nombre de paramètres à garder afin de les analyser, un ELOG plus adapté aux manipulations du GIF++ à été créé. Il a été décidé de garder un ELOG plutôt que de créer une database car l'utilisation est beaucoup plus facile et conviviale (cf.fig~ \ref{ELOG}), et la configuration d'un cahier (logbook) repose sur la création d'un simple fichier texte (elogd.cfg) (voir annexe~\ref{elogd.cfg}). 
+À chaque nouvelle prise de données, une entrée dans le Electronic LOGbook (ELOG) \cite{ELOG} du SDHCAL, sorte de cahier de manipulation électronique est créé. Il s'agit d'un démon écrit en C, contenant un serveur web qui lit et écrit les entrées du cahier électronique et les affiche en format HTML. Le ELOG du SDHCAL, contenait quelques informations rudimentaires (numéro du fichier de la prise de données, date de création). Devant le nombre de fichiers à analyser et le nombre de paramètres à garder afin de les analyser, un ELOG plus adapté aux manipulations du GIF++ à été créé. Il a été décidé de garder un ELOG plutôt que de créer une database car l'utilisation est beaucoup plus facile et conviviale (cf.Fig~ \ref{ELOG}), et la configuration d'un cahier (logbook) repose sur la création d'un simple fichier texte (elogd.cfg) (voir annexe~\ref{elogd.cfg}). 
 
 \begin{figure}[!ht]
 	\centering
@@ -1003,7 +1004,7 @@ La structure des hits rejetés par Trivent pour les cinq chambres pour un facteu
 Les chambres \num{3}, \num{4} et \num{5} présentent de nombreuses zones sans aucun hit. Ces zones sont proches des bords qui continuent de posséder des hits à cause des courants de fuites. La différence de comportement entre les chambres de basse résistivité et la chambre "float glass" est clairement visible. Le nombre de hits rejetés par Trivent\footnote{C'est à dire une bonne partie des hits de bruit.} est beaucoup moins important pour la chambre "float glass". Ceci tend à montrer que l'effet de saturation est beaucoup plus important pour cette chambre que pour les chambres de basse résistivité.
 
 \subsubsection{Étude des courants des chambres}
-Des mesures du courant des chambres en fonction du facteur d'atténuation ont été effectuées afin d'avoir une idée plus précise du comportement des chambres en fonction du flux de particules (cf.fig~\ref{courant})
+Des mesures du courant des chambres en fonction du facteur d'atténuation ont été effectuées afin d'avoir une idée plus précise du comportement des chambres en fonction du flux de particules (cf.Fig~\ref{courant})
 
 \begin{figure}[ht!]
 	\centering
@@ -1032,7 +1033,7 @@ On remarque que le courant dans les chambres de basse résistivité est toujours
 
 Le GIF++ permet également de faire circuler dans les chambres de l'argon afin de les purger et de les nettoyer. L'argon permet également de mesurer la résistivité des électrodes des chambres. Grâce à ce gaz, les chambres fonctionnent rapidement en mode streamer, la résistance de la couche de gaz devient négligeable  par rapport à la résistance des électrodes. 
 
-L'étude des courants des chambres en fonction de la tension a montré que les verres de basse résistivité possèdent une hystérésis du courant contrairement aux chambres "float glass" (cf.fig~\ref{hysteresis}). L'allure de la courbe montre également que les verres de basse résistivité on un comportement qui n'est pas ohmique contrairement au verre "float glass".
+L'étude des courants des chambres en fonction de la tension a montré que les verres de basse résistivité possèdent une hystérésis du courant contrairement aux chambres "float glass" (cf.Fig~\ref{hysteresis}). L'allure de la courbe montre également que les verres de basse résistivité on un comportement qui n'est pas ohmique contrairement au verre "float glass".
 
 
 \begin{figure}[ht!]
@@ -1083,7 +1084,7 @@ Le tableau \ref{resistivite} donne la résistivité des chambres calculée grâc
 La résistivité des chambres de basse résistivité est beaucoup plus élevée qu'attendue ($\sim$\SI{e10}{\ohm.\centi\meter}). Toutes ces constatations (fig.\ref{CourantLR}, fig.\ref{struc}, tab.\ref{resistivite}) nous ont amené à ouvrir une chambre afin d'essayer de comprendre ces résultats.
 \vspace{0.4cm}
 \newpage
-L'ouverture d'une des chambres a montré que les spacers permettant le maintien des électrodes à une distance uniforme le long de la chambre ont disparu et qu'un dépôt s'est créé sur les électrodes de la chambre (cf.fig~\ref{depot}). Ces deux constatations peuvent expliquer les structure étonnantes de la distribution des hits rejetés par Trivent (cd.fig~\ref{struc}). En effet, sans spacer les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance à augmenter le champ électrique dans cette zone et donc le nombre de hits. La présence de dépôts permet également d'expliquer le fait que certaines zones de la chambre soient aveugles ainsi que la résistivité élevée de ces chambres.
+L'ouverture d'une des chambres a montré que les spacers permettant le maintien des électrodes à une distance uniforme le long de la chambre ont disparu et qu'un dépôt s'est créé sur les électrodes de la chambre (cf.Fig~\ref{depot}). Ces deux constatations peuvent expliquer les structure étonnantes de la distribution des hits rejetés par Trivent (cd.fig~\ref{struc}). En effet, sans spacer les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance à augmenter le champ électrique dans cette zone et donc le nombre de hits. La présence de dépôts permet également d'expliquer le fait que certaines zones de la chambre soient aveugles ainsi que la résistivité élevée de ces chambres.
 
 \begin{figure}[!ht]
 	\centering
@@ -1139,12 +1140,12 @@ Au vu de l'état des chambres, il a été décidé de construire de nouvelles ch
 	\label{strips}
 \end{wrapfigure}
 
-En parallèle à la caractérisation des chambres de basse résistivité, l'étude de la faisabilité de chambres de grande dimension (reprenant de nombreuses caractéristiques des chambres RE1/1 \cite{gapss}) a été effectué. En effet, la limitation par la méthode de production de la taille des verres de basse résistivité nécessite de trouver une manière efficace et robuste d'assembler ces verres.  Deux prototypes basés sur deux méthodes d'assemblage différentes des verres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} ont été réalisés. Les chambres sont constituées de trois gap (cf.fig~\ref{gap}). Un PCB, placé entre les gaps du bas et celui du haut, possédant \num{4} rangées de \num{32} strips de $\sim$\SI{1}{\centi\meter} est utilisé afin de récolter le signal (cf.fig~\ref{strips}). Pour les deux prototypes, l'assemblage des verres est prévu de manière à éviter les zones mortes. Les deux prototypes ont été réalisés avec des verres "float glass" afin de limiter l'utilisation de verre de basse résistivité. La solution retenue sera ensuite produite avec des verres de basse résistivité.
+En parallèle à la caractérisation des chambres de basse résistivité, l'étude de la faisabilité de chambres de grande dimension (reprenant de nombreuses caractéristiques des chambres RE1/1 \cite{gapss}) a été effectué. En effet, la limitation par la méthode de production de la taille des verres de basse résistivité nécessite de trouver une manière efficace et robuste d'assembler ces verres.  Deux prototypes basés sur deux méthodes d'assemblage différentes des verres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} ont été réalisés. Les chambres sont constituées de trois gap (cf.Fig~\ref{gap}). Un PCB, placé entre les gaps du bas et celui du haut, possédant \num{4} rangées de \num{32} strips de $\sim$\SI{1}{\centi\meter} est utilisé afin de récolter le signal (cf.Fig~\ref{strips}). Pour les deux prototypes, l'assemblage des verres est prévu de manière à éviter les zones mortes. Les deux prototypes ont été réalisés avec des verres "float glass" afin de limiter l'utilisation de verre de basse résistivité. La solution retenue sera ensuite produite avec des verres de basse résistivité.
 
 \subsection{Les différentes méthodes d'assemblages} 
 \subsubsection{Méthode par collage}
 La première méthode consiste à coller les verres entre eux grâce à de la colle RHODORSIL\textsuperscript{\textregistered}
- CAF-4 afin de former les électrodes. La zone de collage est inférieure à \SI{100}{\micro\meter}. La peinture résistive est ensuite appliquée sur l'électrode ainsi formée (cf.fig~\ref{a}). Les trois gaps sont hermétiques (cf.fig~\ref{b}) et placés dans une cassette en aluminium (cf.fig~\ref{c}).
+ CAF-4 afin de former les électrodes. La zone de collage est inférieure à \SI{100}{\micro\meter}. La peinture résistive est ensuite appliquée sur l'électrode ainsi formée (cf.Fig~\ref{a}). Les trois gaps sont hermétiques (cf.Fig~\ref{b}) et placés dans une cassette en aluminium (cf.Fig~\ref{c}).
  
  \begin{figure}[ht!]
  	\centering
@@ -1166,7 +1167,7 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
  \end{figure}
  
  \subsubsection{Méthode par fixation mécanique}
- La deuxième méthode permet de se passer de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placés sur les pourtours de la cassette en aluminium (cf.fig~\ref{aa}, \ref{posverre}). Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes (cf.fig~\ref{cc}). Le gap entre les électrodes est assuré par des fils de pêche perlés (cf.fig~\ref{bb}). Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressorts qui une fois le capot posé, assurent le maintien et la planéité des verres sur le PCB.  Avec cette méthode, l'herméticité est assurée par la cassette (cf.fig~\ref{dd}), les électrodes d'un gap ne sont donc pas reliées entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme pour la méthode précédente.
+ La deuxième méthode permet de se passer de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placés sur les pourtours de la cassette en aluminium (cf.Fig~\ref{aa}, \ref{posverre}). Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes (cf.Fig~\ref{cc}). Le gap entre les électrodes est assuré par des fils de pêche perlés (cf.Fig~\ref{bb}). Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressorts qui une fois le capot posé, assurent le maintien et la planéité des verres sur le PCB.  Avec cette méthode, l'herméticité est assurée par la cassette (cf.Fig~\ref{dd}), les électrodes d'un gap ne sont donc pas reliées entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme pour la méthode précédente.
  
  \begin{figure}[ht!]
  	\centering
@@ -1189,9 +1190,9 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
  
  \subsubsection{Le banc de test cosmique}
  \label{banc}
- La Terre est constamment bombardée par des particules composant le rayonnement cosmique. Ce rayonnement est un flux de noyaux atomiques et de particules de haute énergie circulant dans le vide interstellaire. La plupart d'entre elles interagissent avec l'atmosphère terrestre et produisent des gerbes atmosphériques de particules secondaires (cf.fig~\ref{gerbe2}).
+ La Terre est constamment bombardée par des particules composant le rayonnement cosmique. Ce rayonnement est un flux de noyaux atomiques et de particules de haute énergie circulant dans le vide interstellaire. La plupart d'entre elles interagissent avec l'atmosphère terrestre et produisent des gerbes atmosphériques de particules secondaires (cf.Fig~\ref{gerbe2}).
  
- Au niveau du sol, le flux de particules est principalement composé de muons (cf.fig~\ref{flux}) ($\sim$\SI{100}{\per\square\meter\per\second\per\steradian}), ceux-ci interagissant très faiblement avec la matière.
+ Au niveau du sol, le flux de particules est principalement composé de muons (cf.Fig~\ref{flux}) ($\sim$\SI{100}{\per\square\meter\per\second\per\steradian}), ceux-ci interagissant très faiblement avec la matière.
  
 \vspace{0.5cm}
 \noindent
@@ -1213,7 +1214,7 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
 
 Le banc cosmique est constitué d'un ensemble de photomultiplicateurs (PM) (au moins deux) mis en coïncidence, qui détectent ainsi le passage des muons. Afin d'éviter tout déclenchement intempestif dû par exemple à l'alimentation électrique, un PM placé en dehors du banc cosmique assure un veto. Lorsque tous les PM sont déclenchés y compris celui hors du banc, ces déclenchement proviennent très vraisemblablement d'une perturbation électrique. Ce genre d'événement est donc rejeté et la lecture de ces événement ne sera pas effectuée.
 
-Les chambres sont insérées dans ce banc cosmique. Les strips des chambres sont connectées grâce à des câbles coaxiaux à une carte de test contenant un Asic HARDROC (cf.fig~\ref{carte}) ainsi qu'un FPGA contenant la machine d'état. La carte de test est reliée par USB à un ordinateur et est pilotée par une application développée sous l'environnement Laboratory Virtual Instrument Engineering Workbench (LabVIEW\textsuperscript{\textregistered}) (cf.fig~\ref{labview}). Cette application permet de sélectionner les paramètres du slowcontrol grâce à l'interface, qui sont ensuite chargés dans le HARDROC ainsi que de gérer le démarrage de l'acquisition, la lecture et le rapatriement des données. 
+Les chambres sont insérées dans ce banc cosmique. Les strips des chambres sont connectées grâce à des câbles coaxiaux à une carte de test contenant un Asic HARDROC (cf.Fig~\ref{carte}) ainsi qu'un FPGA contenant la machine d'état. La carte de test est reliée par USB à un ordinateur et est pilotée par une application développée sous l'environnement Laboratory Virtual Instrument Engineering Workbench (LabVIEW\textsuperscript{\textregistered}) (cf.Fig~\ref{labview}). Cette application permet de sélectionner les paramètres du slowcontrol grâce à l'interface, qui sont ensuite chargés dans le HARDROC ainsi que de gérer le démarrage de l'acquisition, la lecture et le rapatriement des données. 
 
 \noindent
 \begin{minipage}[t]{.48\textwidth}
@@ -1249,7 +1250,7 @@ La figure \ref{comparaison2} montre l'efficacité de détection des muons pour l
 Les efficacités sont similaires. Le prototype créé par fixation mécanique a cependant été choisi car il présente l'avantage de ne pas utiliser de colle et possède une cassette hermétique empêchant les problèmes rencontrés au GIF++. De plus le gonflement des chambres est impossible, la pression du gaz étant identique des deux côtés de l'électrode.
 
 \section{Tests en faisceaux au SPS}
-Deux chambres par fixation mécanique ont donc été construites (cf.fig~\ref{chamverre}), une constituée de verre "float glass" et une autre constituée de verre de basse résistivité. Elles ont été instrumentées avec la même électronique que les chambres de CMS (FEB, DB) (cf.section\label{cmselec}). Chaque chambre possède \num{4} FEB (deux FEB sont placées au dessus des deux autres) et une DB posés sur un support en plexiglas fixé au capot de la chambre (cf.fig~\ref{plexi}).
+Deux chambres par fixation mécanique ont donc été construites (cf.Fig~\ref{chamverre}), une constituée de verre "float glass" et une autre constituée de verre de basse résistivité. Elles ont été instrumentées avec la même électronique que les chambres de CMS (FEB, DB) (cf.section\label{cmselec}). Chaque chambre possède \num{4} FEB (deux FEB sont placées au dessus des deux autres) et une DB posés sur un support en plexiglas fixé au capot de la chambre (cf.Fig~\ref{plexi}).
 
 \begin{figure}[ht]
 	\centering
@@ -1287,8 +1288,8 @@ Deux chambres par fixation mécanique ont donc été construites (cf.fig~\ref{ch
 	\caption{Les deux chambres sur la ligne H2.}
 	\label{GCH2}
 \end{wrapfigure}
-Les deux chambres ont été placées sur la ligne H2 (cf.fig~\ref{GCH2}) située dans la "North Area" (cf.fig~\ref{complexe}) du SPS ainsi que deux autres chambres Bakélite appartenant à nos collègues italiens. Pour des raisons de simplicité et de sécurité \footnote{L'isobutane est imflammable.}, le mélange de gaz est constitué de 93\% \chemform{TFE}, 5\% \chemform{CO_2}, 2\% \chemform{SF_6}. Ce test en faisceaux avait pour but de se familiariser avec l'électronique de CMS ainsi que le système d'acquisition et le programme de prise de données utilisés par nos collègues du GIF++ travaillant sur les chambres de CMS. 
-Chacune des partitions de la chambre de basse résistivité (notée A, B, C et D) est reliée un Time-to-digital converter (TDC) CAEN V1190A (cf.fig~\ref{TDC}) \cite{TDC}. Pour des raisons de câbles, seul la partition A de la chambre "float glass" a été connectée. Les TDC sont enfichés dans un crate VERSAModule Eurocard (VME). Le crate est contrôlable à distance grâce à un module VME-USB2.0 Bridge CAEN V1718 (cf.fig~\ref{TDC}) \cite{VME} relié par USB à un ordinateur. Les DB permettant de régler les seuils des chambres sont contrôlées grâce à une application LabVIEW\textsuperscript{\textregistered}. Les hautes tensions des chambres sont contrôlables par telnet. 
+Les deux chambres ont été placées sur la ligne H2 (cf.Fig~\ref{GCH2}) située dans la "North Area" (cf.Fig~\ref{complexe}) du SPS ainsi que deux autres chambres Bakélite appartenant à nos collègues italiens. Pour des raisons de simplicité et de sécurité \footnote{L'isobutane est imflammable.}, le mélange de gaz est constitué de 93\% \chemform{TFE}, 5\% \chemform{CO_2}, 2\% \chemform{SF_6}. Ce test en faisceaux avait pour but de se familiariser avec l'électronique de CMS ainsi que le système d'acquisition et le programme de prise de données utilisés par nos collègues du GIF++ travaillant sur les chambres de CMS. 
+Chacune des partitions de la chambre de basse résistivité (notée A, B, C et D) est reliée un Time-to-digital converter (TDC) CAEN V1190A (cf.Fig~\ref{TDC}) \cite{TDC}. Pour des raisons de câbles, seul la partition A de la chambre "float glass" a été connectée. Les TDC sont enfichés dans un crate VERSAModule Eurocard (VME). Le crate est contrôlable à distance grâce à un module VME-USB2.0 Bridge CAEN V1718 (cf.Fig~\ref{TDC}) \cite{VME} relié par USB à un ordinateur. Les DB permettant de régler les seuils des chambres sont contrôlées grâce à une application LabVIEW\textsuperscript{\textregistered}. Les hautes tensions des chambres sont contrôlables par telnet. 
 
 Les TDC ont une résolution temporelle de \SI{100}{\pico\second}. Ils enregistrent en continu dans une mémoire tampon les hits. Un ensemble de quatre PM permet de détecter le passage des particules et de déclencher l'enregistrement d'une fenêtre temporelle de la mémoire tampon des TDC. Le timestamp du début de cette fenêtre sélectionnée est réaligné avec $0$.
 
@@ -1301,7 +1302,7 @@ L'efficacité est obtenue comme le rapport entre le nombre de lectures de la mé
 	\label{struch2}
 \end{figure}
 
-De nombreux scans ont été réalisés, notamment l'efficacité de la chambre en verre de basse résitivité en fonction de la haute tension pour différents seuils (cf.fig~\ref{HVH2}), l'efficacité de la chambre en fonction du seuil à tension fixe (\SI{7000}{\volt}) (cf.fig~\ref{THH2}).
+De nombreux scans ont été réalisés, notamment l'efficacité de la chambre en verre de basse résitivité en fonction de la haute tension pour différents seuils (cf.Fig~\ref{HVH2}), l'efficacité de la chambre en fonction du seuil à tension fixe (\SI{7000}{\volt}) (cf.Fig~\ref{THH2}).
 
 \noindent
 \begin{minipage}[t]{.48\textwidth}
@@ -1322,7 +1323,7 @@ De nombreux scans ont été réalisés, notamment l'efficacité de la chambre en
 
 On observe bien une baisse de l'efficacité avec l'augmentation du seuil appliqué. Un point de fonctionnement à \SI{7000}{\volt} pour un seuil de \SI{300}{\milli\volt} semble raisonnable. Une valeur plus petite du seuil augmenterait le niveau de bruit sans augmenter l'efficacité.
 
-Bien que l'efficacité semble correspondre à l'allure attendue, le niveau de bruit des chambres est très élevé, de l'ordre de $\sim\SI{e5}{\hit\per\strip\per\second}$ (cf.fig~\ref{noisH2B}) pour la chambre de basse résistivité et de l'ordre de $\sim\SI{e3}{\hit\per\strip\per\second}$ (cf.fig~\ref{noisH2H}) pour la chambre "float glass". 
+Bien que l'efficacité semble correspondre à l'allure attendue, le niveau de bruit des chambres est très élevé, de l'ordre de $\sim\SI{e5}{\hit\per\strip\per\second}$ (cf.Fig~\ref{noisH2B}) pour la chambre de basse résistivité et de l'ordre de $\sim\SI{e3}{\hit\per\strip\per\second}$ (cf.Fig~\ref{noisH2H}) pour la chambre "float glass". 
 
 Les figures ont été réalisées sans faisceau, en utilisant un générateur de signal pour mimer la coïncidence des scintillateurs "false-trigger".
 \vspace*{0.4cm}
@@ -1335,7 +1336,7 @@ Les figures ont été réalisées sans faisceau, en utilisant un générateur de
 	\caption{Taux de bruit par strips pour les deux chambres. Les traits verticaux rouges représentent les limites des partitions. La tension appliquée est fixée à \SI{7000}{\volt} et le seuil à \SI{220}{\milli\volt}}
 \end{figure}
 
-Une étude du taux de bruit en fonction de la haute tension (cf.fig~\ref{HVNOISEH2}) ainsi que du seuil (cf.fig~\ref{THNOISEH2}) a été effectuée. Afin de pouvoir comparer entre les deux chambres, seules les partitions C des deux chambres ont été analysées.
+Une étude du taux de bruit en fonction de la haute tension (cf.Fig~\ref{HVNOISEH2}) ainsi que du seuil (cf.Fig~\ref{THNOISEH2}) a été effectuée. Afin de pouvoir comparer entre les deux chambres, seules les partitions C des deux chambres ont été analysées.
 Il est à noter que le seuil minimal avant de souffrir du bruit électronique est $\sim$\SI{180}{\milli\volt}.
 
 \noindent
@@ -1449,20 +1450,20 @@ où l'on a supposé que le nombre de hits de bruit suivait une loi de Poisson :
 
 Le facteur $k$ permet de pondérer $\epsilon^{bruit}$, afin de tenir compte du fait que les intervalles $I$ et $T^{signal}$ ne sont pas égaux. Ce facteur représente le rapport entre la probabilité qu'il y ait au moins un hit de bruit dans l'intervalle $T^{signal}$ et la probabilité qu'il y ait au moins un hit de bruit dans l'intervalle $I$.
 
-Un test Monte Carlo à été effectué afin d'estimer le biais des deux méthodes pour chaque paires $\left(\epsilon^{signal},\epsilon^{bruit}\right)$. Le nombre de triggers a été fixé à \num{50000} et $\frac{T^{signal}}{I_{max}}=3$. La première formule s'avère être biaisée (cf.fig~\ref{biaismethod1}).
+Un test Monte Carlo à été effectué afin d'estimer le biais des deux méthodes pour chaque paires $\left(\epsilon^{signal},\epsilon^{bruit}\right)$. Le nombre de triggers a été fixé à \num{50000} et $\frac{T^{signal}}{I_{max}}=3$. La première formule s'avère être biaisée (cf.Fig~\ref{biaismethod1}).
 
 \tikzexternaldisable
 \begin{figure}[!ht]
 \centering
 \scalebox{0.75}{\includetex{GLA/biais1}}
-\caption{Biais ($\epsilon_{vrai} -\epsilon_{corrigée}$) pour la formule \ref{method2} de correction de l'efficacité. $\epsilon_{vrai}$ est l'efficacité réelle sans contamination par le bruit et $\epsilon_{corrigée}=\epsilon_{1}$ est l'efficacité trouvée après avoir appliqué la formule \ref{method1}. Les courbes sont obtenues par un programme Monte Carlo où le nombre de triggers a été fixé à \num{50000}.}
+\caption{Biais ($\epsilon_{vrai} -\epsilon_{corrig\acute ee}$) pour la formule \ref{method2} de correction de l'efficacité. $\epsilon_{vrai}$ est l'efficacité réelle sans contamination par le bruit et $\epsilon_{corrig\acute ee}=\epsilon_{1}$ est l'efficacité trouvée après avoir appliqué la formule \ref{method1}. Les courbes sont obtenues par un programme Monte Carlo où le nombre de triggers a été fixé à \num{50000}.}
 \label{biaismethod1}
 \end{figure}
 
 \begin{figure}[!ht]
 	\centering
 	\scalebox{0.75}{\includetex{GLA/biais2}}
-	\caption{Biais ($\epsilon_{vrai} -\epsilon_{corrigée}$) pour la formule \ref{method2} de correction de l'efficacité. $\epsilon_{vrai}$ est l'efficacité réelle sans contamination par le bruit et $\epsilon_{corrigée}=\epsilon_{2}$ est l'efficacité trouvée après avoir appliqué la formule \ref{method2}. Les courbes sont obtenues par un programme Monte Carlo où le nombre de triggers a été fixé à \num{50000}.}
+	\caption{Biais ($\epsilon_{vrai} -\epsilon_{corrig\acute ee}$) pour la formule \ref{method2} de correction de l'efficacité. $\epsilon_{vrai}$ est l'efficacité réelle sans contamination par le bruit et $\epsilon_{corrig\acute ee}=\epsilon_{2}$ est l'efficacité trouvée après avoir appliqué la formule \ref{method2}. Les courbes sont obtenues par un programme Monte Carlo où le nombre de triggers a été fixé à \num{50000}.}
 	\label{biaismethod2}
 \end{figure}
 
@@ -1470,7 +1471,7 @@ Un test Monte Carlo à été effectué afin d'estimer le biais des deux méthode
 La formule \ref{method1} est de plus en plus biaisée à mesure que $\epsilon_{signal}$ et $\epsilon_{bruit}$ s'approchent de \num {1}. En revanche, la formule \ref{method2} ne présente presque pas de biais \ref{biaismethod2}.
 
 \newpage
-Le Monte Carlo permet aussi d'estimer la déviation standard du biais pour la formule \ref{method2} pour chaque paire $\left(\epsilon^{signal},\epsilon^{bruit}\right)$ (cf.fig~ \ref{RMSmethod2}). Le nombre de triggers est fixé à \num{50000}.
+Le Monte Carlo permet aussi d'estimer la déviation standard du biais pour la formule \ref{method2} pour chaque paire $\left(\epsilon^{signal},\epsilon^{bruit}\right)$ (cf.Fig~ \ref{RMSmethod2}). Le nombre de triggers est fixé à \num{50000}.
 
 \begin{figure}[!ht]
 	\centering
@@ -1492,10 +1493,10 @@ Le test en faisceaux du mois d'Août nous a permis de comprendre certaines cause
 La chambre a donc subi quelques modifications notamment afin d'améliorer la compatibilité électromagnétique (CEM) \cite{charoy2012comp}:
 
 \begin{itemize}[label=$\bullet$]
-	\item Les FEB ont été approchés du plan de masse (cf.fig~\ref{b2}). Certaines étaient superposées sur les autres (cf.fig~\ref{b1}), les éloignant ainsi du plan de masse et créant des perturbations (création d'un effet capacitif entre les soudures des FEB du haut et celles du bas).
-	\item Le support des FEB, précédemment en plexiglas (cf.fig~\ref{b1}) a été remplacé par une plaque d'aluminium (cf.fig~\ref{b2}) afin d'assurer une bonne masse au FEB ainsi qu'une continuité de la masse avec le capot.
+	\item Les FEB ont été approchés du plan de masse (cf.Fig~\ref{b2}). Certaines étaient superposées sur les autres (cf.Fig~\ref{b1}), les éloignant ainsi du plan de masse et créant des perturbations (création d'un effet capacitif entre les soudures des FEB du haut et celles du bas).
+	\item Le support des FEB, précédemment en plexiglas (cf.Fig~\ref{b1}) a été remplacé par une plaque d'aluminium (cf.Fig~\ref{b2}) afin d'assurer une bonne masse au FEB ainsi qu'une continuité de la masse avec le capot.
 	\item Le câblage à été revu afin d'améliorer la connexion à la masse et d'éviter un éventuel effet antenne.
-	\item Les câbles à l'intérieur de la chambre (cf.fig~\ref{a1}) ont été remplacés par des câbles coaxiaux et un plan de masse en cuivre a été installé (cf.fig~\ref{a2}). Une extrémité de la masse des câbles coaxiaux a été soudée à ce plan de masse relié à la cassette afin d'éviter la diaphonie entre les câbles.
+	\item Les câbles à l'intérieur de la chambre (cf.Fig~\ref{a1}) ont été remplacés par des câbles coaxiaux et un plan de masse en cuivre a été installé (cf.Fig~\ref{a2}). Une extrémité de la masse des câbles coaxiaux a été soudée à ce plan de masse relié à la cassette afin d'éviter la diaphonie entre les câbles.
 \end{itemize}
 
 
@@ -1563,7 +1564,7 @@ La chambre a donc subi quelques modifications notamment afin d'améliorer la com
 \end{minipage}%
 
 \subsection{Résultats du test en faisceaux d'Octobre 2016}
-Grâce aux améliorations de la chambre, la diaphonie semble être devenue négligeable, ce qui a permis d'utiliser l'ajustement de la distribution du nombre de hits avec une Gaussienne plus constante (cf.fig~\ref{ajust}).
+Grâce aux améliorations de la chambre, la diaphonie semble être devenue négligeable, ce qui a permis d'utiliser l'ajustement de la distribution du nombre de hits avec une Gaussienne plus constante (cf.Fig~\ref{ajust}).
 \begin{figure}[!ht]
 	\centering
 	\scalebox{1.35}{\includetex{GLA/TimeDistryBC}}
@@ -1571,7 +1572,7 @@ Grâce aux améliorations de la chambre, la diaphonie semble être devenue négl
 	\label{ajust}
 \end{figure}
 
- Des scans en haute tension ont été effectués pour plusieurs valeurs de l'atténuateur de la source. Le programme d'analyse a permis de calculer l'efficacité (cf.fig~\ref{effifi}), la taille moyenne d'un amas ("cluster size") (cf.fig~\ref{clustersize}) et la probabilité de streamer comme définie précédemment (cf.fig~\ref{probastreamer}).
+ Des scans en haute tension ont été effectués pour plusieurs valeurs de l'atténuateur de la source. Le programme d'analyse a permis de calculer l'efficacité (cf.Fig~\ref{effifi}), la taille moyenne d'un amas ("cluster size") (cf.Fig~\ref{clustersize}) et la probabilité de streamer comme définie précédemment (cf.Fig~\ref{probastreamer}).
 
  \begin{figure}[!ht]
  	\centering
@@ -1588,7 +1589,7 @@ La valeur de l'efficacité est prise comme le centre de l'intervalle $\left[\eps
 \end{equation}
 où $\epsilon_{stat}$ est l'erreur statistique.
 
-On remarque que l'efficacité reste supérieure à 80\% même pour un flux de gamma estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}. Le plateau se déplace de plus en plus vers les hautes tensions à mesure que le flux de gamma augmente; cela est dû à l'effet d'écrantage. L'efficacité ainsi obtenue n'est cependant pas optimale. En effet, le centre du faisceau était proche de la zone morte d'environ \SI{2}{\centi\meter} entre les partitions $B$ et $C$ au milieu de la chambre, permettant de faire passer les câbles récoltant les signaux de ces partitions (cf.fig~\ref{a2}). En considérant le fait que le faisceau avait une largeur d'environ \SI{2}{\centi\meter}, la perte d'efficacité due à cette zone morte à été estimée à 10\%.
+On remarque que l'efficacité reste supérieure à 80\% même pour un flux de gamma estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}. Le plateau se déplace de plus en plus vers les hautes tensions à mesure que le flux de gamma augmente; cela est dû à l'effet d'écrantage. L'efficacité ainsi obtenue n'est cependant pas optimale. En effet, le centre du faisceau était proche de la zone morte d'environ \SI{2}{\centi\meter} entre les partitions $B$ et $C$ au milieu de la chambre, permettant de faire passer les câbles récoltant les signaux de ces partitions (cf.Fig~\ref{a2}). En considérant le fait que le faisceau avait une largeur d'environ \SI{2}{\centi\meter}, la perte d'efficacité due à cette zone morte à été estimée à 10\%.
 
 \begin{figure}[!ht]
 	\centering
@@ -1608,7 +1609,7 @@ On peut remarquer que le cluster size reste en dessous de \num{1.8} et baisse lo
 
 La probabilité de streamer reste inférieure à 10\% lorsque la source de $\gamma$ est OFF et est négligeable en présence d'un flux de $\gamma$ supérieur à \SI{0.7}{\kilo\hertz\per\square\centi\meter}.
 
-Après le test en faisceaux, nous avons procédé à l'ouverture de la chambre. Nous avons découvert que la peinture résistive avait accroché au PCB comportant les strips (cf.fig~\ref{peinture}). Des dépôts ainsi que la polymérisation de produits de réaction du gaz se sont également fixés sur les faces intérieures des électrodes (cf.fig~\ref{depot2}) et notamment près des perles servant de spacer (cf.fig~\ref{perle}). 
+Après le test en faisceaux, nous avons procédé à l'ouverture de la chambre. Nous avons découvert que la peinture résistive avait accroché au PCB comportant les strips (cf.Fig~\ref{peinture}). Des dépôts ainsi que la polymérisation de produits de réaction du gaz se sont également fixés sur les faces intérieures des électrodes (cf.Fig~\ref{depot2}) et notamment près des perles servant de spacer (cf.Fig~\ref{perle}). 
 
 \noindent
 \begin{minipage}[th!]{1\textwidth}
@@ -1719,7 +1720,7 @@ Les deux chambres présentent une bonne efficacité de détection des muons. La 
 \section{Tests en Faisceaux au GIF++ des chambres \texorpdfstring{\num{32}$\times$\num{30}\si{\square\centi\meter}}{30cm x 30cm} à strips}
 \label{smallchamber}
 
-Les deux chambres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} double gap à strips (cf. figs \ref{DoubleGap}, \ref{SchemePS} et \ref{nouvellestrip}) en verre de basse résistivité et en Bakélite ont été insérées dans le bâti des anciennes chambres de basse résistivité \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.fig~\ref{bati}) en octobre 2017. Les nouvelles chambres utilisent l'éléctronique HARDROC, tout comme les anciennes encore présentes sur le bâti. Cependant, il a été décidé de ne pas utiliser le programme développé section \ref{prog}. En effet, comme celui-ci repose sur la création de traces, afin de calculer l'efficacité des chambres, les anciennes chambres sont nécessaires à leurs créations. Cependant, au vu des vieillissements des chambres constatés, nous avons décidé de ne pas utiliser les données récoltées par celles-ci.
+Les deux chambres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} double gap à strips (cf. figs \ref{DoubleGap}, \ref{SchemePS} et \ref{nouvellestrip}) en verre de basse résistivité et en Bakélite ont été insérées dans le bâti des anciennes chambres de basse résistivité \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.Fig~\ref{bati}) en octobre 2017. Les nouvelles chambres utilisent l'éléctronique HARDROC, tout comme les anciennes encore présentes sur le bâti. Cependant, il a été décidé de ne pas utiliser le programme développé section \ref{prog}. En effet, comme celui-ci repose sur la création de traces, afin de calculer l'efficacité des chambres, les anciennes chambres sont nécessaires à leurs créations. Cependant, au vu des vieillissements des chambres constatés, nous avons décidé de ne pas utiliser les données récoltées par celles-ci.
 
 \marginpar
 {
@@ -1736,7 +1737,7 @@ Les deux chambres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} double g
 	\label{bati}
 \end{figure}
 \vspace*{-0.2cm}
-Afin de calculer l'efficacité des nouvelles chambres, le programme développé pour la chambre RE1/1, basé sur le comptage sera utilisé. Les scintillateurs nécessaires à la détection du passage des muons sont ceux fournis par nos collègues du GIF++. Les coïncidences des scintillateurs sont incluses dans les données grâce à une DIF configurée de telle manière à enregistrer ces coïncidences comme le passage d'un seuil d'un pad (cf.table~\ref{encodage}) (seuil0 pour le déclenchement d'un scintillateur, seuil1 pour le déclenchement de l'autre, et seuil2 pour la coïncidence des deux scintillateurs). Il est ainsi possible, de sélectionner une fenêtre temporelle autour de ces coïncidences, en tenant compte du décalage temporel dû à la longueur des câbles portant le signal des scintillateurs (cf.fig~\ref{decalage}). 
+Afin de calculer l'efficacité des nouvelles chambres, le programme développé pour la chambre RE1/1, basé sur le comptage sera utilisé. Les scintillateurs nécessaires à la détection du passage des muons sont ceux fournis par nos collègues du GIF++. Les coïncidences des scintillateurs sont incluses dans les données grâce à une DIF configurée de telle manière à enregistrer ces coïncidences comme le passage d'un seuil d'un pad (cf.table~\ref{encodage}) (seuil0 pour le déclenchement d'un scintillateur, seuil1 pour le déclenchement de l'autre, et seuil2 pour la coïncidence des deux scintillateurs). Il est ainsi possible, de sélectionner une fenêtre temporelle autour de ces coïncidences, en tenant compte du décalage temporel dû à la longueur des câbles portant le signal des scintillateurs (cf.Fig~\ref{decalage}). 
 
 \begin{figure}[ht!]
 	\centering
@@ -1759,7 +1760,7 @@ Afin de calculer l'efficacité des nouvelles chambres, le programme développé 
 
 Les hits correspondant au passage du faisceau arrivent donc entre  \SI{1.2}{\micro\second} et \SI{1.6}{\micro\second} avant les données de coïncidence des scintillateurs. Une fenêtre de temps centrée sur le temps $t_{scinti}-t_{retard}$ avec $t_{retard}=\SI{1.4}{\micro\second}$ est ensuite extraite des données LCIO pour chaque trigger. Un convertisseur permet ensuite de passer les données du format LCIO au format ROOT. Il est ainsi possible de tourner sur les données des HARDROC comme s'il s'agissait de données venant de l'électronique de CMS.
 
-Ce test en faisceaux a démontré l'utilité du elog. En effet, un programme en PYROOT a été réalisé afin de prendre en entrée les données du elog sous forme CSV et de générer des graphiques permettant de suivre les runs pris et leurs paramètres et d'améliorer la décision des types de runs qu'il restait à prendre (cf.figs~\ref{elogutil1}, \ref{elogutil2}, \ref{elogutil3}, \ref{elogutil4}). Le programme a permis également de créer automatiquement les listes de runs à utiliser selon le type de graphique à produire. 
+Ce test en faisceaux a démontré l'utilité du elog. En effet, un programme en PYROOT a été réalisé afin de prendre en entrée les données du elog sous forme CSV et de générer des graphiques permettant de suivre les runs pris et leurs paramètres et d'améliorer la décision des types de runs qu'il restait à prendre (cf.Figs~\ref{elogutil1}, \ref{elogutil2}, \ref{elogutil3}, \ref{elogutil4}). Le programme a permis également de créer automatiquement les listes de runs à utiliser selon le type de graphique à produire. 
 
 \begin{figure}[ht!]
 	\centering

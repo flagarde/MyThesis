@@ -10,7 +10,7 @@
 \vspace{-0.5cm}
 Chaque chambre actuelle de CMS a un PCB segmenté en trois zones selon $\eta$ appelées "$\eta$ segments", chaque $\eta$ segment contenant \num{32} strips. Lors du passage d'un muon, la position de celui-ci selon $\eta$ n'est connu qu'avec une résolution correspondant à la longueur du strip touché.
 
-Afin de résoudre ce problème et d'éviter la segmentation en $\eta$ du PCB, un type de PCB permettant la lecture des deux côtés des strips a été proposé (cf.fig~\ref{PCB1}).
+Afin de résoudre ce problème et d'éviter la segmentation en $\eta$ du PCB, un type de PCB permettant la lecture des deux côtés des strips a été proposé (cf.Fig~\ref{PCB1}).
 \vspace*{-0.5cm}
 \begin{figure}[ht!]
 	\centering
@@ -34,7 +34,7 @@ T=-\frac{(T_1+T_2)}{2}+\frac{L}{2v}
 \end{equation}
 
 \section{Le Prototype}
-Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.fig~\ref{PCB2}). Il est composé de \num{32} strips espacés de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC (appelés Mézzanines) de \num{24} voies chacun et de résolution temporelle \SI{25}{\pico\second}, développés par nos collègues de Tsinghua sont utilisés afin de mesurer le temps d'arrivé des signaux envoyés par les PETIROC2.
+Afin d'étudier la faisabilité, un PCB de \SI{50}{\centi\meter} de long a été créé (cf.Fig~\ref{PCB2}). Il est composé de \num{32} strips espacés de \SI{4}{\milli\meter}. Ces strips sont lus de chaque côté grâce à \num{2} ASIC appelé PETIROC2 \cite{Monzo:2017quz} de \num{32} entrées, développé par le groupe OMEGA. Ces ASIC sont utilisés pour mettre en forme les signaux. Deux TDC (appelés Mézzanines) de \num{24} voies chacun et de résolution temporelle \SI{25}{\pico\second}, développés par nos collègues de Tsinghua sont utilisés afin de mesurer le temps d'arrivé des signaux envoyés par les PETIROC2.
 
 \begin{figure}[ht!]
 	\centering
@@ -63,7 +63,7 @@ Le TDC fourni par nos collègues chinois possède \num{24} voies et une résolut
 	\label{PETIROC2}
 \end{wrapfigure}
 
-Le PETIROC2 (cf.fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS SiGe \SI{0.35}{\micro\meter}. La puce est insérée dans un boitier de taille \num{4.6}$\times$\SI{42}{\square\milli\meter}, d'épaisseur \SI{1.6}{\milli\meter} et comporte \num{208} pattes dont \num{32} voies d'entrée. Le schéma simplifié du PETIROC2 est donné figure \ref{SchemePETIROC}. Chaque voie permet de mesurer le temps de vol grâce à un TDC intégré et un ADC de \num{10}bits ainsi que la charge sur \num{10}bits. La gamme de réglage du seuil global aux \num{32} voies est comprise entre \SI{160}{\femto\coulomb} et \SI{400}{\pico\coulomb}. Un ajustement voie par voie est possible grâce à un DAC de \num{6}bits. 
+Le PETIROC2 (cf.Fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS SiGe \SI{0.35}{\micro\meter}. La puce est insérée dans un boitier de taille \num{4.6}$\times$\SI{42}{\square\milli\meter}, d'épaisseur \SI{1.6}{\milli\meter} et comporte \num{208} pattes dont \num{32} voies d'entrée. Le schéma simplifié du PETIROC2 est donné figure \ref{SchemePETIROC}. Chaque voie permet de mesurer le temps de vol grâce à un TDC intégré et un ADC de \num{10}bits ainsi que la charge sur \num{10}bits. La gamme de réglage du seuil global aux \num{32} voies est comprise entre \SI{160}{\femto\coulomb} et \SI{400}{\pico\coulomb}. Un ajustement voie par voie est possible grâce à un DAC de \num{6}bits. 
 
 \begin{figure}[ht!]
 	\centering
@@ -72,7 +72,7 @@ Le PETIROC2 (cf.fig~\ref{PETIROC2}) repose sur une technologie de fonderie AMS S
 	\label{SchemePETIROC}
 \end{figure}
 
-Le PETIROC2 possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, provient des fluctuations statistiques et du bruit de l'électronique. À cause de ces fluctuations, deux signaux identiques ne vont pas passer le seuil de déclenchement au même point, donnant ainsi une variation temporelle du point de déclenchement qui dépend de l'amplitude des fluctuations.} faible ($<\SI{20}{\pico\second}$ pour une charge supérieure à \SI{1.5}{\milli\volt}) (cf.fig\ref{jitter}).
+Le PETIROC2 possède une gigue\footnote{La gigue ou \textit{jitter} en anglais, provient des fluctuations statistiques et du bruit de l'électronique. À cause de ces fluctuations, deux signaux identiques ne vont pas passer le seuil de déclenchement au même point, donnant ainsi une variation temporelle du point de déclenchement qui dépend de l'amplitude des fluctuations.} faible ($<\SI{20}{\pico\second}$ pour une charge supérieure à \SI{1.5}{\milli\volt}) (cf.Fig\ref{jitter}).
 
 \begin{figure}[ht!]
 	\centering
@@ -104,7 +104,7 @@ La résolution temporelle du PCB est estimée entre \SI{20}{\pico\second} et \SI
 
 \section{Test en faisceaux au SPS (Mai 2017)}
 \vspace{-0.4cm}
-Deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) et épaisseur d'électrodes \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter})\footnote{Ce sont les deux types de chambres privilégiées par le TDR.} ont été instrumentées avec le PCB à strips et testées sur la ligne H4 du SPS dans la \textit{North Area} (cf.fig~\ref{complexe}). Les chambres ont été posées sur une table de positionnement réglable verticalement et horizontalement (cf.fig\ref{setup2017}).
+Deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter}) et épaisseur d'électrodes \SI{1.4}{\milli\meter} (\SI{1.6}{\milli\meter})\footnote{Ce sont les deux types de chambres privilégiées par le TDR.} ont été instrumentées avec le PCB à strips et testées sur la ligne H4 du SPS dans la \textit{North Area} (cf.Fig~\ref{complexe}). Les chambres ont été posées sur une table de positionnement réglable verticalement et horizontalement (cf.Fig\ref{setup2017}).
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.55\textwidth]{ELE/setup2017.jpg}
@@ -112,7 +112,7 @@ Deux chambres double gaps en Bakélite de gap \SI{1.4}{\milli\meter} (\SI{1.6}{\
 	\label{setup2017}
 \end{figure}
 
-Deux groupes de deux PM de \SI{5}{\centi\meter} de largeur sont placés de part et d'autre des chambres. Les PM d'un même groupe sont placés perpendiculairement l'un par rapport à l'autre (cf.fig~\ref{setup2017}). Deux autres PM de plus petites dimensions (\SI{1.2}{\centi\meter}) sont placés d'un côté des chambres afin de réduire la zone de déclenchement (cf.fig~\ref{smallPM}).  
+Deux groupes de deux PM de \SI{5}{\centi\meter} de largeur sont placés de part et d'autre des chambres. Les PM d'un même groupe sont placés perpendiculairement l'un par rapport à l'autre (cf.Fig~\ref{setup2017}). Deux autres PM de plus petites dimensions (\SI{1.2}{\centi\meter}) sont placés d'un côté des chambres afin de réduire la zone de déclenchement (cf.Fig~\ref{smallPM}).  
 
 \marginpar
 {
@@ -169,7 +169,7 @@ Pour chaque hit de l'événement, le temps d'arrivé $T$ de celui-ci par rapport
 \end{equation}
 avec $T'$ la valeur du temps TDC du hit $n$. 
 
-Un ajustement par une fonction Gaussienne de la distribution des $T^n$ est ensuite effectué. La distribution présentant de nombreux pics (cf.fig\ref{pics}), seule la zone proche du premier pic (proche du temps $T_0$) est prise en compte dans l'ajustement. La zone correspondant au signal est ensuite prise comme étant l'intervalle $\left[T_0-\num{1.5}\sigma,T_0+\num{1.5}\sigma\right]$.
+Un ajustement par une fonction Gaussienne de la distribution des $T^n$ est ensuite effectué. La distribution présentant de nombreux pics (cf.Fig\ref{pics}), seule la zone proche du premier pic (proche du temps $T_0$) est prise en compte dans l'ajustement. La zone correspondant au signal est ensuite prise comme étant l'intervalle $\left[T_0-\num{1.5}\sigma,T_0+\num{1.5}\sigma\right]$.
 
 \begin{figure}[!ht]
 	\centering

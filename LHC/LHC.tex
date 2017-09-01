@@ -2,18 +2,19 @@
 \renewcommand\chapterillustration{LHC/lhc}
 \ThisULCornerWallPaper{1}{\chapterillustration}
 \minitoc
-\lettrine[lines=4, slope=-0.5em]{C}{e} chapitre décrit le complexe des accélérateurs du CERN\footnote{Organisation Européenne pour le Recherche Nucléaire (Laboratoire européen de physique des particules)} qui permet d'accélérer les particules, afin d'avoir un faisceau de particules avec une énergie suffisante pour être injecté dans le Grand Collisionneur de Hadrons (LHC\footnote{Large Hadron Collider}) et atteindre une énergie finale de $7$ TeV. Cette description bien que succincte est nécessaire car de nombreux résultats obtenus durant cette thèse ont nécessité l'utilisation d'accélérateurs de ce complexe. Une description du LHC est également donnée, car ses performances présentes et futures déterminent les choix technologiques des détecteurs utilisant son faisceau.
+\lettrine[lines=4, slope=-0.5em]{C}{e} chapitre décrit le complexe des accélérateurs du CERN\footnote{Organisation Européenne pour le Recherche Nucléaire (Laboratoire européen de physique des particules)} qui permet d'accélérer les particules, afin d'avoir un faisceau de particules avec une énergie suffisante pour être injecté dans le Grand Collisionneur de Hadrons (LHC\footnote{Large Hadron Collider}) et atteindre une énergie finale de \SI{7}{\tera\eV}. Cette description bien que succincte est nécessaire car de nombreux résultats obtenus durant cette thèse ont nécessité l'utilisation d'accélérateurs de ce complexe. Une description du LHC est également donnée, car ses performances présentes et futures déterminent les choix technologiques des détecteurs utilisant son faisceau.
 
 \section{Le complexe d'accélérateurs du CERN}
 
 Le complexe d'accélération (\ref{complexe}) du CERN est une série de machines qui délivrent des faisceaux de particules d'énergies de plus en plus élevées. Chaque machine accélère les faisceaux et les injecte dans la machine suivante. Le dernier accélérateur du complexe est le LHC.
 
-Le programme de ce dernier est surtout basé sur des collisions protons-protons. Cependant chaque année, environ un mois est consacré aux collisions d'ions lourds (plomb-plomb) ou (proton-plomb) afin d'étudier notamment le plasma de quarks et gluons, l'une des phases de l'Univers peu après le Big Bang. Dans le cas de ces collisions, la chaine d'accélération est constituée du Linear Accelerator 3 (LINAC 3), du Low Energy Ion Ring (LEIR) utilisé pour le stockage des ions et leur refroidissement. La chaine d'accélération est ensuite identique à celle pour les collisions proton-proton.
+Le programme de ce dernier est surtout basé sur des collisions protons-protons. Cependant chaque année, environ un mois est consacré aux collisions d'ions lourds (plomb-plomb) ou (proton-plomb) afin d'étudier notamment le plasma de quarks et gluons, l'une des phases de l'Univers peu après le Big Bang. Dans le cas de ces collisions, la chaine d'accélération est constituée du Linear Accelerator \num{3} (LINAC \num{3}), du Low Energy Ion Ring (LEIR) utilisé pour le stockage des ions et leur refroidissement. La chaine d'accélération est ensuite identique à celle pour les collisions proton-proton.
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\vspace{0.5cm}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
   	\centering
 	\includegraphics[scale=0.40]{LHC/complexe.png}
-  	\captionof{figure}{Schéma du complexe d'accélération du CERN. La chaine d'injection du LHC est constituée du Linac 2, du Booster, du PS et du SPS}
+  	\captionof{figure}{Schéma du complexe d'accélération du CERN. La chaine d'injection du LHC est constituée du Linac \num{2}, du Booster, du PS et du SPS}
   	\label{complexe}
   	\par 		
 \end{minipagewithmarginpars}
@@ -27,7 +28,7 @@ Le programme de ce dernier est surtout basé sur des collisions protons-protons.
 \marginpar
 {
 	\includegraphics[width=\marginparwidth]{LHC/linac2.jpg}
-    \captionof{figure}{Photo du LINAC 2.}
+    \captionof{figure}{Photo du LINAC \num{2}.}
     	\label{linac2}
 }
 
@@ -54,21 +55,21 @@ Le programme de ce dernier est surtout basé sur des collisions protons-protons.
     \captionof{figure}{Photo du SPS.}
     	\label{sps}
 }
-Pour les collisions proton-proton, la source de protons est une bouteille de dihydrogène gazeux (cf.fig~\ref{bouteille}). Les atomes d’hydrogène sont injectés dans le Duoplasmatron Proton IOn Source où il sont chauffés et sont soumis à un champ électrique, qui arrache leurs électrons et les ionise en $H^{+}$ (proton). Les protons extraits sont ensuite envoyés dans l'accélérateur linaire (LINAC 2 (cf.fig~\ref{linac2})) où ils atteignent l'énergie de 50 MeV et sont $5\%$ plus massifs, leur vitesse est alors d'environ $0.3$c où c est la vitesse de la lumière dans le vide (c=$299 792 458$ m/s). Ils passent ensuite dans les 4 anneaux de 157m de circonférence du Booster du Synchrotron à protons (BOOSTER (cf.fig~\ref{booster})) qui les amènent à une énergie de 1.4 GeV avant de les injecter dans l'accélérateur suivant, le Synchrotron à protons (PS (cf.fig~\ref{ps})). Cet accélérateur circulaire de 628 mètres de circonférence, permet aux faisceaux d'atteindre une énergie de 25 GeV, leur vitesse est alors de 0.87c. Il sert aussi à préparer le faisceau en le découpant en série de paquets (bunchs) de particules nécessaires au LHC. Ces bunchs sont ensuite envoyés dans le supersynchrotron à protons (SPS (cf.fig~\ref{sps})) d'une circonférence de 7 km, où l'énergie du faisceau atteint 450 GeV soit une vitesse de 0.99c. Les paquets sont regroupés pour former des trains de paquets avant d'être enfin envoyés dans le Grand Collisionneur de Hadrons (LHC). L'injection et le guidage de faisceaux d'une telle énergie par des aimants supraconducteurs rapides est une tâche délicate et pourrait détériorer l'accélérateur. Un faisceau de test de faible intensité "pilot beam" est donc injecté afin de mesurer et vérifier les paramètres. Le faisceau de haute énergie est ensuite séparé en deux et injecté dans deux conduits différents, l'un circulant dans un sens et l'autre dans le sens contraire. Ces faisceaux sont ensuite accélérés jusqu'à une énergie de 7 TeV et ne se croisent qu'aux points d'intéractions. À ce stade, les protons ont une vitesse de 0.999999991c, soit 299 792 455,3 m/s. Ils ne se déplacent que 2.7m/s moins vite que la lumière. Afin d'accélérer les protons à une vitesse si proche de la lumière, d'importantes contraintes de pression et de température sont nécessaires. Un vide poussé est nécessaire à l'intérieur du LHC afin de minimiser les interactions, la pression interne est de l'ordre de $10^{-13}$atm soit 10 fois moins que la pression à la surface de la Lune. La présence d'aimants supraconducteurs nécessite un système de distribution cryogénique, qui assure la circulation d'hélium super-fluide et maintient le LHC à une température de $-271,3$\degre C ($1.9$K). Le LHC est donc plus froid que l'Univers \footnote{Le fond diffus cosmologique a en effet été évalué par le satellite Plank (cf.fig\ref{Plank}) (2009-2013) à $2,725$K}.
+Pour les collisions proton-proton, la source de protons est une bouteille de dihydrogène gazeux (cf.Fig~\ref{bouteille}). Les atomes d’hydrogène sont injectés dans le Duoplasmatron Proton IOn Source où il sont chauffés et sont soumis à un champ électrique, qui arrache leurs électrons et les ionise en $H^{+}$ (proton). Les protons extraits sont ensuite envoyés dans l'accélérateur linaire (LINAC 2 (cf.Fig~\ref{linac2})) où ils atteignent l'énergie de \SI{50}{\mega\eV} et sont \num{5}\% plus massifs, leur vitesse est alors d'environ \SI{0.3}{\c} où $c$ est la vitesse de la lumière dans le vide ($c=$\SI{299 792 458}{\meter\per\second}). Ils passent ensuite dans les \num{4} anneaux de \SI{157}{\meter} de circonférence du Booster du Synchrotron à protons (BOOSTER (cf.Fig~\ref{booster})) qui les amènent à une énergie de \SI{1.4}{\giga\eV} avant de les injecter dans l'accélérateur suivant, le Synchrotron à protons (PS (cf.Fig~\ref{ps})). Cet accélérateur circulaire de \num{628} mètres de circonférence, permet aux faisceaux d'atteindre une énergie de \SI{25}{\giga\eV}, leur vitesse est alors de \SI{0.87}{\c}. Il sert aussi à préparer le faisceau en le découpant en série de paquets (bunchs) de particules nécessaires au LHC. Ces bunchs sont ensuite envoyés dans le supersynchrotron à protons (SPS (cf.Fig~\ref{sps})) d'une circonférence de \SI{7}{\kilo\meter}, où l'énergie du faisceau atteint \SI{450}{\giga\eV} soit une vitesse de \SI{0.99}{\c}. Les paquets sont regroupés pour former des trains de paquets avant d'être enfin envoyés dans le Grand Collisionneur de Hadrons (LHC). L'injection et le guidage de faisceaux d'une telle énergie par des aimants supraconducteurs rapides est une tâche délicate et pourrait détériorer l'accélérateur. Un faisceau de test de faible intensité "pilot beam" est donc injecté afin de mesurer et vérifier les paramètres. Le faisceau de haute énergie est ensuite séparé en deux et injecté dans deux conduits différents, l'un circulant dans un sens et l'autre dans le sens contraire. Ces faisceaux sont ensuite accélérés jusqu'à une énergie de \SI{7}{\tera\eV} et ne se croisent qu'aux points d'interactions. À ce stade, les protons ont une vitesse de \SI{0.999999991}{\c}, soit \SI{299 792 455,3}{\meter\per\second}. Ils ne se déplacent que \SI{2.7}{\meter\per\second} moins vite que la lumière. Afin d'accélérer les protons à une vitesse si proche de la lumière, d'importantes contraintes de pression et de température sont nécessaires. Un vide poussé est nécessaire à l'intérieur du LHC afin de minimiser les interactions, la pression interne est de l'ordre de \SI{e-13}{\atm} soit \num{10} fois moins que la pression à la surface de la Lune. La présence d'aimants supraconducteurs nécessite un système de distribution cryogénique, qui assure la circulation d'hélium super-fluide et maintient le LHC à une température de \SI{-271,3}{\celsius} (\SI{1.9}{\kelvin}). Le LHC est donc plus froid que l'Univers \footnote{Le fond diffus cosmologique a en effet été évalué par le satellite Plank (cf.Fig~\ref{Plank}) (\num{2009}--\num{2013}) à \SI{2,725}{\kelvin}}.
 
 \section{Le Large Hadron Collider}
-Le LHC est le dernier accélérateur circulaire du complexe d'accélération.C'est actuellement le collisionner le plus puissant du monde (cf.fig\ref{livingston}) Il utilise le tunnel de 27 km de circonférence situé à une centaine de mètres sous terre, construit pour acceuillir le Grand collisionneur électron-positron (LEP\footnote{Large Electron Positron collider.}), qui fût en service de 1989 à 2000. Le LHC à été mis en service en 2008 et a été construit afin de produire de l'ordre de 600 millions de collisions proton-proton par seconde à une énergie au centre de masse de $\sqrt{s}=14$ TeV. Il est actuellement le collisionneur proton-proton le plus puissant du monde, et a permis de mettre en évidence l'existence du boson de Higgs, dernière pièce manquante du Modèle Standard.
+Le LHC est le dernier accélérateur circulaire du complexe d'accélération.C'est actuellement le collisionneur le plus puissant du monde (cf.Fig~\ref{livingston}) Il utilise le tunnel de \SI{27}{\kilo\meter} de circonférence situé à une centaine de mètres sous terre, construit pour accueillir le Grand collisionneur électron-positron (LEP\footnote{Large Electron Positron collider.}), qui fût en service de \num{1989} à \num{2000}. Le LHC à été mis en service en \num{2008} et a été construit afin de produire de l'ordre de \num{600} millions de collisions proton-proton par seconde à une énergie au centre de masse de $\sqrt{s}=$\SI{14}{\tera\eV}. Il est actuellement le collisionneur proton-proton le plus puissant du monde, et a permis de mettre en évidence l'existence du boson de Higgs, dernière pièce manquante du Modèle Standard.
 
-Le LHC est un collissioneur de particules non fondamentales (hadrons) à l'inverse de son prédécesseur, le LEP qui utilisait des électrons et des positrons. Lors d'une collission entre hadrons, ce sont leurs constituants élémentaires, les quarks et les gluons qui collissionnent entre eux. Ceux-ci possèdent seulement une portion de l'énergie du hadron qui les contient. L'énergie du centre de masse de cette collision n'est donc pas connue avec précision. Le LHC est donc une machine de découverte de particules plutôt qu'une machine de mesures de précision comme l'était le LEP, car il permet d'acceder à un large spectre en énergie. Généralement, les mesures de précision sont effectuées grâce à des collisionneurs utilisant des particules élémentaires ($e^{-}$,$e^{+}$); ils sont dans ce cas souvent linéaires afin d'éviter la perte d'énergie par rayonnement synchroton.
+Le LHC est un collisionneur de particules non fondamentales (hadrons) à l'inverse de son prédécesseur, le LEP qui utilisait des électrons et des positrons. Lors d'une collision entre hadrons, ce sont leurs constituants élémentaires, les quarks et les gluons qui se heurtent. Ceux-ci possèdent seulement une portion de l'énergie du hadron qui les contient. L'énergie du centre de masse de cette collision n'est donc pas connue avec précision. Le LHC est donc une machine de découverte de particules plutôt qu'une machine de mesures de précision comme l'était le LEP, car il permet d'accéder à un large spectre en énergie. Généralement, les mesures de précision sont effectuées grâce à des collisionneurs utilisant des particules élémentaires ($e^{-}$, $e^{+}$); ils sont dans ce cas souvent linéaires afin d'éviter la perte d'énergie par rayonnement synchroton.
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 	\centering
 	\includegraphics[width=0.8\textwidth]{LHC/Livingstone.jpg}
 	\captionof{figure}{Diagramme de Livingston : Énergie des  faisceau de particules accélérées pour différentes machines en fonction du temps. Afin de pouvoir comparer les différents accélérateurs et technologies, l'énergie des collisionneurs, qui s'exprime dans le centre de masse, a été recalculée comme si l'énergie des particules observées était le résultat d'une collision avec un proton au repos (cible fixe).}
 	\label{livingston}	
 \end{minipagewithmarginpars}
 
-La figure \ref{lhcschema} est une vue schématique du LHC. En vérité le LHC n'est pas parfaitement circulaire, mais est composé de $8$ octants(cf.fig~\ref{octants}) composés d'une section droite de longueur $528$m et d'un secteur courbe d'une longueur de $2.45$ km. Afin de courber les faisceaux, 1232 aimants dipolaires de 15 mètres de long sont utilisés et 392 aimants quadripolaires de 5 à 7 mètres servent à concentrer les faisceaux. Chaque section courbe est composée de 23 cellules de 106.9m de long de type "FODO" (cf.fig\ref{fodo}).
+La figure \ref{lhcschema} est une vue schématique du LHC. En vérité le LHC n'est pas parfaitement circulaire, mais est composé de \num{8} octants (cf.Fig~\ref{octants}) composés d'une section droite de longueur \SI{528}{\meter} et d'un secteur courbe d'une longueur de \SI{2.45}{\kilo\meter}. Afin de courber les faisceaux, \num{1232} aimants dipolaires de \num{15} mètres de long sont utilisés et \num{392} aimants quadripolaires de \num{5} à \num{7} mètres servent à concentrer les faisceaux. Chaque section courbe est composée de \num{23} cellules de \SI{106.9}{\meter} de long de type "FODO" (cf.Fig~\ref{fodo}).
 \marginpar
 {
 	\includegraphics[width=\marginparwidth]{LHC/RF.jpg}
@@ -104,32 +105,32 @@ La figure \ref{lhcschema} est une vue schématique du LHC. En vérité le LHC n'
 	\captionof{figure}{LHCb.}
 	\label{lhcb}
 }
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 	\centering
 	\includegraphics[width=0.8\textwidth]{LHC/arc.jpg}
 	\captionof{figure}{Structure d'une cellule d'un octant. Deux quadripoles MQ focalisent les faisceaux dans le plan vertical et horizontal respectivement, et six dipoles MBA, MBB courbent la trajectoire des particules. Les dipoles sont entourés de sextupoles,octopoles et décapoles afin de compenser les imperfections des champs magnétiques dipolaires. Des sextupoles quadrupoles et octupoles sont egalement positionnés près des quadrupoles afin de corriger les aberrations chromatiques.}
 	\label{fodo}	
 \end{minipagewithmarginpars}
 
-Les sections droites sont utilisées afin de faire rencontrer les deux faisceaux de protons venant en sens inverse l'un de l'autre. Il existe $8$ points potentiels d'interactions (P), mais seulement $4$ sont le siège de collisions et possèdent des détecteurs qui analysent les données issues de ces collisions : le point P1 pour ATLAS\footnote{A Toroidal LHC ApparatuS, détecteur généraliste.}, le point P2 pour ALICE\footnote{A Large Ion Collider Experiment, dédié à l'étude du plasma de quarks et gluons.}, le point P5 pour CMS\footnote{Compact Muon Solenoid, détecteur généraliste.} et le point P8 pour LHCb\footnote{Large Hadron Collider beauty experiment, dédié au quark b.}.Les sections droites de l'octant 3 et 7 contiennent des systèmes de nettoyage des faisceaux, le 6 un système d'arrêt des faisceaux et le 4 un système radiofréquence pour chaque faisceau (cf.fig\ref{radio}). Chaque système radiofréquence est composé de 8 cavités accélératrices ; des résonnateurs électromagnètiques, opérant à 400MHz qui accélerent les particules et compensent l'énergie perdue par radiation synchrotron.
+Les sections droites sont utilisées afin de faire rencontrer les deux faisceaux de protons venant en sens inverse l'un de l'autre. Il existe \num{8} points potentiels d'interactions (P), mais seulement \num{4} sont le siège de collisions et possèdent des détecteurs qui analysent les données issues de ces collisions : le point P1 pour ATLAS\footnote{A Toroidal LHC ApparatuS, détecteur généraliste.}, le point P2 pour ALICE\footnote{A Large Ion Collider Experiment, dédié à l'étude du plasma de quarks et gluons.}, le point P5 pour CMS\footnote{Compact Muon Solenoid, détecteur généraliste.} et le point P8 pour LHCb\footnote{Large Hadron Collider beauty experiment, dédié au quark b.}.Les sections droites de l'octant \num{3} et \num{7} contiennent des systèmes de nettoyage des faisceaux, le \num{6} un système d'arrêt des faisceaux et le \num{4} un système radiofréquence pour chaque faisceau (cf.Fig~\ref{radio}). Chaque système radiofréquence est composé de \num{8} cavités accélératrices ; des résonateurs électromagnétiques, opérant à \SI{400}{\mega\hertz} qui accélerent les particules et compensent l'énergie perdue par radiation synchrotron.
 
-\begin{minipagewithmarginpars}[h]{\textwidth}
+\begin{minipagewithmarginpars}[ht!]{\textwidth}
   	\centering
 	\includegraphics[scale=0.75]{LHC/CERNMap.jpg}
   	\captionof{figure}{Vue schématique du LHC.}
   	\label{lhcschema}	
 \end{minipagewithmarginpars}
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
   	\centering
 	\includegraphics[width=0.80\textwidth]{LHC/lhc-schematic.jpg}
   	\captionof{figure}{Vue schématique des octants du LHC ainsi que des positions des principaux détecteurs le long du LHC. Les faisceaux (en bleu et rouge) circulent en sens inverse l'un de l'autre.}
   	\label{octants}	
 \end{minipagewithmarginpars}
 
-La réutilisation du tunnel du LEP et l'énergie des faisceau (7 TeV) à obligé l'utilisation d'aimant supraconducteur produsant des champs magnétique de 8.4T. De plus l'utilisation de deux faisceaux de protons voyant en sens inverse et l'espace limité dans le tunnel à amené à la création d'un nouveau type d'aimants où les deux tubes contenant les deux faisceaux sont insérés dans un même cryostat (cf.fig\ref{dipole}).
+La réutilisation du tunnel du LEP et l'énergie des faisceau (\SI{7}{\tera\eV}) à obligé l'utilisation d'aimant supraconducteur produisant des champs magnétique de \SI{8.4}{\tesla}. De plus l'utilisation de deux faisceaux de protons voyant en sens inverse et l'espace limité dans le tunnel à amené à la création d'un nouveau type d'aimants où les deux tubes contenant les deux faisceaux sont insérés dans un même cryostat (cf.Fig~\ref{dipole}).
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 \centering
 \includegraphics[width=1.0\textwidth]{LHC/dipole.jpg}
 \captionof{figure}{Vue en transversale d'un dipole du LHC.}
@@ -147,29 +148,29 @@ La luminosité est déterminée par les paramètres des faisceaux de protons :
 \begin{equation}
 \mathcal{L}=\frac{f_{rev}n_{p}N_{}}{4\pi \sigma_{x} \sigma_{y}} F(\phi)
 \end{equation}
-avec $N_{f}$ le nombre de protons par paquet, $n_{p}$ le nombre de paquets, $f_{rev}$ la fréquence de rotation d'un paquet, $\sigma_{x}$,($\sigma_{y}$) la moyenne quadratique horizontale (verticale) transverse de la taille du faisceau au point d'intéraction et $F(\phi)$ est le facteur de réduction géométrique définit en fonction de l'angle $\phi$ de Piwinski.
+avec $N_{f}$ le nombre de protons par paquet, $n_{p}$ le nombre de paquets, $f_{rev}$ la fréquence de rotation d'un paquet, $\sigma_{x}$,($\sigma_{y}$) la moyenne quadratique horizontale (verticale) transverse de la taille du faisceau au point d'interaction et $F(\phi)$ est le facteur de réduction géométrique définit en fonction de l'angle $\phi$ de Piwinski.
 \begin{equation}
 F(\phi)=\frac{1}{\sqrt{1+\phi^{2}}}
 \end{equation}
-En considérant des faisceau se croisant dans le plan verticale (cf.fig\ref{collision}), l'angle de Piwinski peut s'écrire :
+En considérant des faisceau se croisant dans le plan verticale (cf.Fig~\ref{collision}), l'angle de Piwinski peut s'écrire :
 \begin{equation}
 \phi=\frac{\theta_{c}\sigma_{z}}{2\sigma_{y}}
 \end{equation}
 avec $\theta_{c}$ l'angle de croisement des faisceaux, $\sigma_{z}$ la moyenne quadratique de la longueur d'un paquet.
 
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 \centering
 \includegraphics[width=0.45\textwidth]{LHC/collision.png}
 \captionof{figure}{Schéma de colisions de paquets dans le plan transversale.}
 \label{collision}	
 \end{minipagewithmarginpars}
 
-Il est possible d'exprimer $\sigma_{x}$ et $\sigma_{y}$ en fonction de l'émittance $\epsilon$ et de la fonction $\beta(s)$. L'émittance est l'espace dans l'espace des phase qui contientun certain pourcentage des particules du faisceau (95\% pour les collisionneur hadroniques). Elle est supposée constante durant toute la durée du temps de mesure \footnote{d'après le théorème de Liouville} :
+Il est possible d'exprimer $\sigma_{x}$ et $\sigma_{y}$ en fonction de l'émittance $\epsilon$ et de la fonction $\beta(s)$. L'émittance est l'espace dans l'espace des phase qui contient un certain pourcentage des particules du faisceau (\num{95}\% pour les collisionneur hadroniques). Elle est supposée constante durant toute la durée du temps de mesure \footnote{d'après le théorème de Liouville} :
 \begin{equation}
 \sigma_{x}=\sqrt{\epsilon\beta_{x}}
 \end{equation}
-avec s la postion le long de la trajectoire nominale du faisceau.
+avec $s$ la position le long de la trajectoire nominale du faisceau.
 
 La valeur de la fonction $\beta$ au point d'interaction est noté $\beta^{*}$.En considérant de plus que $\sigma_{x}=\sigma_{x}=\sigma$ on peut réécrire $\mathcal{L}$ comme :
 \begin{equation}
@@ -177,9 +178,9 @@ La valeur de la fonction $\beta$ au point d'interaction est noté $\beta^{*}$.En
 \end{equation}
 où $\epsilon_{n}=\epsilon\gamma\beta$ est l'émittance normalisé, $\gamma$ le facteur de Lorentz $\beta=v/c$.
 
-D'après cette formule on peut remarqué qu'il peut être interéssant de réduire au maximun $\epsilon_{n}$ c'est à dire d'avoir des paquet dont les particules ont la même quantité de mouvement et son proche l'une de l'autre. Il est aussi possible de réduire le facteur de réduction géométrique en utilisant une configuration de faisceau dite en "crabe" (cf.fig\ref{crabe})
+D'après cette formule on peut remarqué qu'il peut être intéressant de réduire au maximum $\epsilon_{n}$ c'est à dire d'avoir des paquet dont les particules ont la même quantité de mouvement et son proche l'une de l'autre. Il est aussi possible de réduire le facteur de réduction géométrique en utilisant une configuration de faisceau dite en "crabe" (cf.Fig~\ref{crabe})
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 \centering
 \includegraphics[width=0.45\textwidth]{LHC/crab.png}
 \captionof{figure}{Schéma de colisions "en crab" de paquets dans le plan transversale.}
@@ -202,7 +203,7 @@ avec
 \frac{1}{\tau} = \frac{1}{\tau_{collisions}}+\frac{1}{\tau_{gaz}}+\frac{1}{\tau_{imper}}
 \end{equation}
 
-Lorsque l'intensité du faisceau devient trop faible pour une prise de données efficace, les faisceaux sont déviés de leurs trajectoires circulaires et envoyé dans les "dump blocks" (cf.fig\ref{dump})
+Lorsque l'intensité du faisceau devient trop faible pour une prise de données efficace, les faisceaux sont déviés de leurs trajectoires circulaires et envoyé dans les "\textit{dump blocks}" (cf.Fig~\ref{dump})
 \marginpar
 {
 	\includegraphics[width=\marginparwidth]{LHC/dump.png}
@@ -215,13 +216,13 @@ La luminosité intégré pour les collisions protons-protons délivré par le LH
 \begin{minipagewithmarginpars}[ht!]{0.80\textwidth}
 \centering
 \includegraphics[width=0.6\textwidth]{LHC/luminosity.png}
-    \captionof{figure}{Luminosité intégrée en fonction du jour de l'année 2016 délivrée (bleu) et enregistrée par CMS (orange) pendant les faisceaux stables et pour les collisions pp à 13 TeV d'énergie dans le centre de masse en 2016.}
+    \captionof{figure}{Luminosité intégrée en fonction du jour de l'année \num{2016} délivrée (bleu) et enregistrée par CMS (orange) pendant les faisceaux stables et pour les collisions $pp$ à \SI{13}{\tera\eV} d'énergie dans le centre de masse.}
 \end{minipagewithmarginpars}
 
 \subsection{Collisions protons-protons}
-Le proton n'est pas une particule élémentaire. Il est composé de 3 quarks de valence (uud) et de quarks, antiquarks et gluons regroupés sous le termes de partons (cf.fig\ref{proton})
+Le proton n'est pas une particule élémentaire. Il est composé de \num{3} quarks de valence ($uud$) et de quarks, antiquarks et gluons regroupés sous le termes de partons (cf.Fig~\ref{proton})
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 \centering
 \includegraphics[width=0.3\textwidth]{SM/quarks3.png}
 \captionof{figure}{Schéma d'un protons : les quarks (vert) et anti-quarks (bleu) sont en interactions par l'intermédiaire de gluons (noire).}
@@ -236,18 +237,18 @@ Les collisions proton-proton peuvent être rassemblés en trois groupes :
 \end{itemize}
 
 \subsubsection{Collisions inélastiques}
-Les collisions inélastique se produisent entre deux partons qui possèdent une fraction de la quantité de mouvement $x_{1}$ et $x_{2}$ du proton $1$ et $2$. Ces fractions sont décrites par des fonctions de distribution de partons $f(x,Q^{2})$. Il s'agit des densités de probabilités de trouver une particule avec une fraction $x$ de la quantité de mouvement longitudinale du hadron dont l'impulsion est $Q^{2}$. Il existe une fonction de distribution de parton par saveur de quark et une pour les gluons (cf.fig\ref{pdf}). La figure \ref{pdf} représente ces fonctions.
+Les collisions inélastique se produisent entre deux partons qui possèdent une fraction de la quantité de mouvement $x_{1}$ et $x_{2}$ du proton $1$ et $2$. Ces fractions sont décrites par des fonctions de distribution de partons $f(x,Q^{2})$. Il s'agit des densités de probabilités de trouver une particule avec une fraction $x$ de la quantité de mouvement longitudinale du hadron dont l'impulsion est $Q^{2}$. Il existe une fonction de distribution de parton par saveur de quark et une pour les gluons (cf.Fig~\ref{pdf}). La figure \ref{pdf} représente ces fonctions.
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 	\centering
 	\includegraphics[width=0.6\textwidth]{LHC/pdf.png}
-	\captionof{figure}{$x$ fois la  distribution de parton non-polarisé $f(x)$ ou $f=u_{v}$, $d_{v}$, $\bar{u}$, $\bar{d}$, $s$, $c$, $b$, $g$ et leurs incertitudes en utilisant la parametrisation NNLO MSTW2008 à l'échelle $10$GeV$^{2}$ (gauche) $10000$GeV$^{2}$ (droite).}
+	\captionof{figure}{$x$ fois la  distribution de parton non-polarisé $f(x)$ ou $f=u_{v}$, $d_{v}$, $\bar{u}$, $\bar{d}$, $s$, $c$, $b$, $g$ et leurs incertitudes en utilisant la parametrisation NNLO MSTW2008 à l'échelle \SI{10}{\square\giga\eV} (gauche) \SI{10000}{\square\giga\eV} (droite).}
 	\label{pdf}	
 \end{minipagewithmarginpars}
  
 Ces fonctions ne peuvent être déduites que des données expérimentales car l'échelle d'énergie de QCD à laquelle sont soumis les partons au sein du proton ne permet pas d'effectuer un calcul perturbatif. On peut remarquer que la contribution des gluons est la plus importante et que les quarks de valence ont une contribution plus importantes que ceux de la mer de partons.
 
-En utilisant ces fonctions et le théorème de factoriation de QCD, il est possible de calculer la section efficace d'un événement $A+B\rightarrow X$ par la formule :
+En utilisant ces fonctions et le théorème de factorisation de QCD, il est possible de calculer la section efficace d'un événement $A+B\rightarrow X$ par la formule :
 \begin{equation}
 \sigma_{A+B\rightarrow X}=\sum_{i=q,g}\int_{0}^{1} \mathrm{d}x_{a}\mathrm{d}x_{b}f_{a/A}(x_{a},\mu_{F}^{2})f_{b/B}(x_{b},\mu_{F}^{2})\sigma{_{a+b\rightarrow X}}
 \end{equation}
@@ -258,27 +259,27 @@ Il est ainsi possible de calculer $\sigma{_{a+b\rightarrow X}}$ par la méthode 
 \sigma_{a+a\rightarrow X}=\left[\sigma_{0}+\alpha_{S}\left(\mu_{R}^{2}\right)\sigma_{1}+\cdots\right]_{a+b\rightarrow X}
 \label{eq2}
 \end{equation}
-La figure fig.\ref{crosssection} montre quelques sections efficaces du Modèle Standard pour des collisions protons-protons protons-anti-protons calculés au "next-to-leading order" ($\sigma_{1}$ dans la formule \ref{eq2}).
+La figure \ref{crosssection} montre quelques sections efficaces du Modèle Standard pour des collisions protons-protons protons-anti-protons calculés au "next-to-leading order" ($\sigma_{1}$ dans la formule \ref{eq2}).
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 	\centering
 	\includegraphics[width=0.60\textwidth]{LHC/crosssections2008.png}
-	\captionof{figure}{Sections efficaces du Modèle Standard pour les collisionneurs LHC et Tevatron en fonction de l'énergie dans le centre de masse $\sqrt{s}$. Les lignes pointillées indiquent les énergies dans le centre de masse à laquelles le Tevatron (1.96TeV) et le LHC (7,10 et 14 TeV) vont foctionner. Les sections efficaces sont exprimées en nanobarn (gauche) et en Hz pour une luminosité instantannée de $\mathrm{L}=10^{33}$cm$^{-2}$s$^{-1}$, luminosité typique des premières années de fonctionnement du LHC.}
+	\captionof{figure}{Sections efficaces du Modèle Standard pour les collisionneurs LHC et Tevatron en fonction de l'énergie dans le centre de masse $\sqrt{s}$. Les lignes pointillées indiquent les énergies dans le centre de masse à laquelles le Tevatron (\SI{1.96}{\tera\eV}) et le LHC (\num{7}, \num{10} et \SI{14}{\tera\eV}) vont foctionner. Les sections efficaces sont exprimées en nanobarn (gauche) et en \si{\hertz} pour une luminosité instantannée de $\mathrm{L}=$\SI{e33}{\per\square\centi\meter\per\second}, luminosité typique des premières années de fonctionnement du LHC.}
 	\label{crosssection}	
 \end{minipagewithmarginpars}
 
 \subsection{Collisions proton-proton inélastiques}
-Les collisions inélastiques sont le siège de plusieurs processus (cf.fig~\ref{collision2}). Parmis les plus important citons :
+Les collisions inélastiques sont le siège de plusieurs processus (cf.Fig~\ref{collision2}). Parmis les plus important citons :
 \begin{itemize}[label=$\bullet$]
 	\item \textbf{La collision profondément inélastiques :} Deux partons très énergétique des deux protons rentre ne collision.
 	\item \textbf{Les collisions sous-jacentes :} Plusieurs collisions entre les partons restant des protons peuvent avoir lieux.
-	\item \textbf{Les radiations de l'état initial :} Avant l'interactions des deux partons responsable de la collsion principale, ces deux partons peuvent rayonnés des quarks et des gluons.
-	\item \textbf{Les radiations finales :} Les particules crééent après la collsion principale peuvent elles-mêmes rayonner des quarks et des gluons.
-	\item \textbf{L'hadronisation :} dû à la propriété du confinement, les quarks et gluons vont s'hadroniser afin de former des hadrons de couleur blanches qui formrnt des jets.
+	\item \textbf{Les radiations de l'état initial :} Avant l'interactions des deux partons responsable de la collision principale, ces deux partons peuvent rayonnés des quarks et des gluons.
+	\item \textbf{Les radiations finales :} Les particules créées après la collision principale peuvent elles-mêmes rayonner des quarks et des gluons.
+	\item \textbf{L'hadronisation :} dû à la propriété du confinement, les quarks et gluons vont s'hadroniser afin de former des hadrons de couleur blanches qui forment des jets.
 	\item \textbf{Les désintégrations :} Nombre des hadrons et mésons creés pendant le processus d'hadronisation ne sont pas stables et vont se désintégrer, parfois en cascade en particules stables.
 \end{itemize}
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 	\centering
 	\includegraphics[width=1.0\textwidth]{LHC/event.jpg}
 	\captionof{figure}{Schéma d'une collision proton-proton inélastique. Deux partons venant de deux protons différents interagissent inélastiquement (rouge), d'autres partons de ces deux protons produissent des collisions secondaires (magenta). Les partons ainsi créés s'hadronise (rouge) en creant des jets de particules (vert clair). Ces particules instables se désintégre en cascade en particules stables (vert foncé)}
@@ -286,9 +287,9 @@ Les collisions inélastiques sont le siège de plusieurs processus (cf.fig~\ref{
 \end{minipagewithmarginpars}
 
 \subsection{L'empilement en temps et hors-temps}
-Plusieurs collisions proton-proton peuvent avoir lieux lors d'un même croisement de faisceaux. Ces collisions appartiennent donc au même événement et forme un empilement en temp "on-time pile-up". De plus certaines désintégrations et phénoménes peuvent durée plus longtemps que le temps entre deux croisement de faisceaux. Ces événement sont appelés empilement hors-temps ou "off-time pile-up". Le phénomène d'empilement dépend de la luminosité et de l'énergie des faisceaux. La figure \ref{pile-up} montre la distribution du nombre d'événement par croisement de faisceaux dans CMS en 2012.
+Plusieurs collisions proton-proton peuvent avoir lieux lors d'un même croisement de faisceaux. Ces collisions appartiennent donc au même événement et forme un empilement en temps "\textit{on-time pile-up}". De plus certaines désintégrations et phénomènes peuvent durer plus longtemps que le temps entre deux croisements de faisceaux. Ces événement sont appelés empilement hors-temps ou "\textit{off-time pile-up}". Le phénomène d'empilement dépend de la luminosité et de l'énergie des faisceaux. La figure \ref{pile-up} montre la distribution du nombre d'événement par croisement de faisceaux dans CMS en \num{2012}.
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 	\centering
 	\includegraphics[width=0.60\textwidth]{LHC/pileup.png}
 	\captionof{figure}{Distribution du nombre de collisions par croisement de faisceaux.}
@@ -296,9 +297,9 @@ Plusieurs collisions proton-proton peuvent avoir lieux lors d'un même croisemen
 \end{minipagewithmarginpars}
 
 \subsection{Vers le High-Luminosity LHC (HL-LHC)}
-De par l'envergure de la machine, du nombre d'expériences nécessitant le bon fonctionnement du LHC et le nombre de personnes impliqués dans ce projet, celui-ci à fait l'object d'un calendrier prévisionnel (cf.fig\ref{roadmap}). Ce calendrier est diviser en deux grande période: la \textbf{Phase I} (2010-2023) et la  \textbf{Phase II} (2023-2035). Chaque phase est elle-même divisée en plusieurs périodes comportant des arrêts techniques et des arrêt beaucoup plus long appellé "Long Shut-down (LS)". Ces arrêts permettent d'améliorer le LHC ainsi que d'avoir accés au détecteurs à des fins de maintenance et d'améliorations. L'arrêt le plus important à venir est le LS3. Il est censé durer une trentaine de mois et permettre la mise à niveau du LHC vers le HL-LH.
+De par l'envergure de la machine, du nombre d'expériences nécessitant le bon fonctionnement du LHC et le nombre de personnes impliqués dans ce projet, celui-ci à fait l'objet d'un calendrier prévisionnel (cf.Fig~\ref{roadmap}). Ce calendrier est divisé en deux grande période: la \textbf{Phase I} (\num{2010}--\num{2023}) et la  \textbf{Phase II} (\num{2023}--\num{2035}). Chaque phase est elle-même divisée en plusieurs périodes comportant des arrêts techniques et des arrêts beaucoup plus long appelés "Long Shut-down (LS)". Ces arrêts permettent d'améliorer le LHC ainsi que d'avoir accès aux détecteurs à des fins de maintenances et d'améliorations. L'arrêt le plus important à venir est le LS3. Il est censé durer une trentaine de mois et permettre la mise à niveau du LHC vers le HL-LH.
 
-\begin{minipagewithmarginpars}[h]{0.95\textwidth}
+\begin{minipagewithmarginpars}[ht!]{0.95\textwidth}
 	\centering
 	\includegraphics[width=0.80\textwidth]{LHC/roadmap.png}
 	\captionof{figure}{Calendrier prévisionnel du LHC.}
@@ -306,23 +307,23 @@ De par l'envergure de la machine, du nombre d'expériences nécessitant le bon f
 \end{minipagewithmarginpars}
 
 \subsubsection{Le HL-LHC}
-La mise à niveau du LHC en HL-LHC vis à multiplier la luminosité par 10 par rapport à la luminosité nominale du LHC.
+La mise à niveau du LHC en HL-LHC vis à multiplier la luminosité par \num{5} à \num{7.5} par rapport à la luminosité nominale du LHC.
 
-Le but est de produire environ 140 événement de pile-up par croisement de faisceau contre une trentaite actuellement. Pour cela le faisceau devra être plus intense et plus concentré qu'actuellement.Afin d'y parvenir de nombreux paramètres du collisionneur et de la chaine d'accélération vont être mis à niveau (cf.fig\ref{man}).
+Le but est de produire environ \num{140} événement de \textit{pile-up} par croisement de faisceau contre une trentaine actuellement. Pour cela le faisceau devra être plus intense et plus concentré qu'actuellement. Afin d'y parvenir de nombreux paramètres du collisionneur et de la chaine d'accélération vont être mis à niveau (cf.Fig~\ref{man}).
 
 \begin{itemize}[label=$\bullet$]
 	
  \item Un nouveau système optique est à l'étude afin d'adapter la concentration du faisceau au cours du temps afin de maintenir une luminosité constante tout le long de la durée de vie du faisceau. D'autre instrument de mesures des paramètres des faisceaux seront également installés.
  
- \item Des aimants de 12T contre 8T pour le présent système seront installé à l'avant de ATLAS et CMS afin de mieux collimer les faisceaux.
+ \item Des aimants de \SI{12}{\tesla} contre \SI{8}{\tesla} pour le présent système seront installé à l'avant de ATLAS et CMS afin de mieux collimer les faisceaux.
  
- \item Des cavités supraconductrices vont être installé en vue d'orienté les paquets de particules en leur donnant un moment transverse afin d'augmenter la section efficace. Cette configuration est appellé configuration en "crabe".
+ \item Des cavités supraconductrices vont être installé en vue d'orienté les paquets de particules en leur donnant un moment transverse afin d'augmenter la section efficace. Cette configuration est appelée configuration en "crabe".
  
- \item L'accroissement du nombre de particule nécessite un renforcement des protections afin de ne pas abimer la machine. 60 des 118 collimateurs qui permettent l'absorptions de particules qui s'échappent de la trajectoire nominale du faisceaux seront remplacés et 15 à 20 nouveaux seront installés.
+ \item L'accroissement du nombre de particules nécessite un renforcement des protections afin de ne pas abimer la machine. \num{60} des \num{118} collimateurs qui permettent l'absorptions de particules qui s'échappent de la trajectoire nominale du faisceaux seront remplacés et \num{15} à \num{20} nouveaux seront installés.
  
- \item Afin d'insérer ces nouveaux collimateurs, quatre des dipoles de 15 mètres de long seront remplacés par quatre paires d'aimants beaucoups plus puissant. Il seront capable de produire un champ magnetique de 11T contr 8.3T pour les aimants actuels
+ \item Afin d'insérer ces nouveaux collimateurs, quatre des dipôles de \num{15} mètres de long seront remplacés par quatre paires d'aimants beaucoups plus puissant. Il seront capable de produire un champ magnétique de \SI{11}{\tesla} contre \SI{8.3}{\tesla} pour les aimants actuels
  
- \item Deux nouvelles caverne de service de 300 mètres de long vont être creusés prêt des expérience CMS et ATLAS. Elles abriteront les services nécessaires à ces expériences et ceux sensible aux radiactions (convertisseur de courant, cryogénie etc.)
+ \item Deux nouvelles cavernes de service de \num{300} mètres de long vont être creusées prêt des expérience CMS et ATLAS. Elles abriteront les services nécessaires à ces expériences et ceux sensible aux radiations (convertisseur de courant, cryogénie etc.)
  
  \marginpar
  {
@@ -332,16 +333,16 @@ Le but est de produire environ 140 événement de pile-up par croisement de fais
  	\label{linac4}
  }
  
- \item De nouvelles lignes de transmitions electrique vont également être iinstallé. Ces cables seront fait d'un matériaux superconducteur (diboride de magnésium) capable de fonctionner à haute température (20K) et beaucoup plus stable que les supraconducteur conventionnels. Il permettront de porter des courants de plus de 100 000 A.
- \item La chaine d'accélération sera elle aussi mise à niveau. Dés 2020, un nouveau Accélérateur linéaire appellé LINAC4 (cf.fig\ref{linac4}) va remplacer le LINAC2. Les trois autres accélerateur de la chaine (PSB, PS ET SPS) auront également droit à de améliorations.
+ \item De nouvelles lignes de transmitions électrique vont également être installées. Ces câbles seront fait d'un matériaux supraconducteur \chemform{MgB_2} (Diborure de magnésium) capable de fonctionner à haute température (\SI{20}{\kelvin}) et beaucoup plus stable que les supraconducteur conventionnels. Il permettront de porter des courants de plus de \SI{100 000}{\ampere}.
+ \item La chaine d'accélération sera elle aussi mise à niveau. Dès \num{2020}, un nouveau Accélérateur linéaire appelé LINAC4 (cf.Fig~\ref{linac4}) va remplacer le LINAC2. Les trois autres accélérateurs de la chaine (PSB, PS ET SPS) auront également droit à des améliorations.
 \end{itemize}
 
-\begin{minipagewithmarginpars}[!ht]{0.95\textwidth}
+\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=0.62\textwidth]{LHC/man.jpg}
-	\captionof{figure}{Schéma montrant les différents types de mise à niveau nécessaire au HL-LHC.}
-	\label{man}	
-\end{minipagewithmarginpars}
+\includegraphics[width=0.62\textwidth]{LHC/man.jpg}
+\captionof{figure}{Schéma montrant les différents types de mise à niveau nécessaire au HL-LHC.}
+\label{man}	
+\end{figure}
 
 Le tableau \ref{comparaison} donne les différents paramètres selon plusieurs configurations envisagés par rapport au paramètres nominaux actuels du LHC
 
@@ -350,57 +351,55 @@ Le tableau \ref{comparaison} donne les différents paramètres selon plusieurs c
 \centering
 \begin{tabular}{|O|Cc|Cc|Cc|Cc|N}
 	\hline 
-	\shortstack{Paramètre} &\shortstack{LHC Nominal\\(design report)}&\shortstack{HL-LHC 25ns\\(standard)}&\shortstack{HL-LHC 25ns\\(BCMS)}&\shortstack{HL-LHC\\8b+4e$^{12}$}\\ 
+	\shortstack{Paramètre} &\shortstack{LHC Nominal\\(design report)}&\shortstack{HL-LHC \SI{25}{\nano\second}\\(standard)}&\shortstack{HL-LHC \SI{25}{\nano\second}\\(BCMS)}&\shortstack{HL-LHC\\8b+4e$^{12}$}\\ 
 	\hline 
-	\shortstack{Énergie du faisceau [TeV]} & \shortstack{7} & \shortstack{7} & \shortstack{7} & \shortstack{7} \\ 
+	\shortstack{Énergie du faisceau [\si{\tera\eV}]} & \shortstack{7} & \shortstack{7} & \shortstack{7} & \shortstack{7} \\ 
 	\hline 
-	\shortstack{Nombre de proton par paquet $N_{b}$}&\shortstack{$1.15\times 10^{11}$}&\shortstack{$2.2\times 10^{11}$}& \shortstack{$2.2\times 10^{11}$}&\shortstack{$2.3\times 10^{11}$}\\ 
+	\shortstack{Nombre de proton par paquet $N_{b}$}&\shortstack{\num{1.15e11}}&\shortstack{\num{2.2e11}}& \shortstack{\num{2.2e11}}&\shortstack{\num{2.3e11}}\\ 
 	\hline 
-	Nombres de paquets $n_{b}$& 2808 & 2748 & 2604 & 1968 \\ 
+	Nombres de paquets $n_{b}$& \num{2808} & \num{2748} & \num{2604} & \num{1968} \\ 
 	\hline 
-	\shortstack{Nombre de collisons aux point P1 et P5}& 2808 & 2736 & 2592 & 1960 \\ 
+	\shortstack{Nombre de collisons aux point P1 et P5}& \num{2808} & \num{2736} & \num{2592} & \num{1960} \\ 
 	\hline 
-	Courant du faisceau [A]& 0.58 & 1.09 & 1.03 & 0.82 \\ 
+	Courant du faisceau [\si{\ampere}]& \num{0.58} & \num{1.09} & \num{1.03} & \num{0.82} \\ 
 	\hline 
-	angle x-ing [$\mu$ rad] & 285 & 590 & 590 & 554 \\ 
+	angle x-ing [\si{\micro\radian}] & \num{285} & \num{590} & \num{590} & \num{554} \\ 
 	\hline 
-	$\beta{*}$ [m]& 0.55  & 0.15 & 0.15 & 0.15 \\ 
+	$\beta{*}$ [\si{\meter}]& \num{0.55}  & \num{0.15} & \num{0.15} & \num{0.15} \\ 
 	\hline 
-	$\epsilon_{n}$ [$\mu$ m]& 3.75 & 2.50 & 2.50 & 2.20 \\ 
+	$\epsilon_{n}$ [\si{\micro\meter}]& \num{3.75} & \num{2.50} & \num{2.50} & \num{2.20} \\ 
 	\hline 
-	$\epsilon_{l} [eVS]$& 2.50 & 2.50 & 2.50 & 2.50 \\ 
+	r.m.s. de la longueur du paquet [\si{\meter}]& \num{7.55e-2}  & \num{7.55e-2} & \num{7.55e-2} & \num{7.55e-2} \\ 
 	\hline 
-	r.m.s. de la longueur du paquet [m]& $7.55\times 10^{-2}$  & $7.55\times 10^{-2}$ & $7.55\times 10^{-2}$ & $7.55\times 10^{-2}$ \\ 
+	paramètre de Piwinski & \num{0.65} & \num{3.14} & \num{3.14} & \num{3.14} \\ 
 	\hline 
-	paramètre de Piwinski & 0.65 & 3.14 & 3.14 & 3.14 \\ 
+	\shortstack{Facteur de perte total $R0$ sans cavité "crabes"}& \num{0.836} & \num{0.305} & \num{0.305} & \num{0.304} \\ 
 	\hline 
-	\shortstack{Facteur de perte total $R0$ sans cavité "crabes"}& 0.836 & 0.305 & 0.305 & 0.304 \\ 
+	\shortstack{Facteur de perte total $R1$ avec cavité "crabes"}& (\num{0.981}) & \num{0.829} & \num{0.829} & \num{0.828} \\ 
 	\hline 
-	\shortstack{Facteur de perte total $R1$ avec cavité "crabes"}& (0.981) & 0.829 & 0.829 & 0.828 \\ 
+	\shortstack{Pic de luminosité sans cavité de type "crabe" [\si{\per\square\centi\meter\per\second}]}& \num{1.00e34} & \num{7.18e34} &\num{6.80e34} & \num{6.38e34} \\ 
 	\hline 
-	\shortstack{Pic de luminosité sans cavité de type "crabe" [cm$^{-2}$s$^{-1}$]}& $1.00\times 10^{34}$ & $7.18\times 10^{34}$ &$6.80\times 10^{34}$ & $6.38\times 10^{34}$ \\ 
+	\shortstack{Luminosité virtuelle avec cavité de type "crabe" \\$L_{peak}R_{1}/R_{0}$[\si{\per\square\centi\meter\per\second}] } & \num{1.18e34} & \num{19.54e34} & \num{18.52e34} & \num{17.40e34} \\ 
 	\hline 
-	\shortstack{Luminosité virtuelle avec cavité de type "crabe" \\$L_{peak}R_{1}/R_{0}$[cm$^{-2}$s$^{-1}$] } & $1.18\times 10^{34}$ & $19.54\times 10^{34}$ & $18.52\times 10^{34}$ & $17.40\times 10^{34}$ \\ 
+	\shortstack{ Événements / croisement de faisceaux sans nivellement \\et sans cavités de type "crabe"}& \num{27} & \num{198} & \num{198} & \num{246} \\ 
 	\hline 
-	\shortstack{ Événements / croisement de faisceaux sans nivellement \\et sans cavités de type "crabe"}& 27 & 198 & 198 & 246 \\ 
+	Luminosité nivellé [\si{\per\square\centi\meter\per\second}]& - & \num{5.00e34} &  \num{5.00e34}& \num{3.63e34} \\ 
 	\hline 
-	Luminosité nivellé [cm$^{-2}$s$^{-1}$]& - & $5.00\times 10^{34}$ &  $5.00\times 10^{34}$& $3.63\times 10^{34}$ \\ 
+	\shortstack{Événements/croisement de faisceaux avec nivellement \\ et cavités de type "crabe" pour HL-LHC}& \num{27} & \num{138} & \num{146} & \num{140} \\ 
 	\hline 
-	\shortstack{Événements/croisement de faisceaux avec nivellement \\ et cavités de type "crabe" pour HL-LHC}& 27 & 138 & 146 & 140 \\ 
+	\shortstack{Pic de densité linéaire d'événement pile-up [evt/\si{\milli\meter}] \\(maximum pour des faisceaux stables)%Pic de densité linéaire d'événement pile-up \\ [événements/mm] (maximum pour des faisceaux stables)
+	} & \shortstack{\num{0.21}} & \shortstack{\num{1.25}} & \shortstack{\num{1.31}} & \shortstack{\num{1.28}} \\ 
 	\hline 
-	\shortstack{Pic de densité linéaire d'événement pile-up [evt/mm] \\(maximum pour des faisceaux stables)%Pic de densité linéaire d'événement pile-up \\ [événements/mm] (maximum pour des faisceaux stables)
-	} & \shortstack{0.21} & \shortstack{1.25} & \shortstack{1.31} & \shortstack{1.28} \\ 
+	\shortstack{temps de nivellement [\si{\hour}]\\ (aucune augmentation d'émittance)}& - & \num{8.3} & \num{7.6} & \num{9.5} \\ 
 	\hline 
-	\shortstack{temps de nivellement [h]\\ (aucune augmentation d'émittance)}& - & 8.3 & 7.6 & 9.5 \\ 
+	$N_{b}$ à l'injection dans le LHC& \num{1.20e11} & \num{2.30e11} & \num{2.30e11} &\num{2.40e11}  \\ 
 	\hline 
-	$N_{b}$ à l'injection dans le LHC& $1.20\times 10^{11}$ & $2.30\times 10^{11}$ & $2.30\times 10^{11}$ &$2.40\times 10^{11}$  \\ 
+	$n_{b}$ par injection& \num{288} & \num{288} & \num{288} & \num{224} \\ 
 	\hline 
-	$n_{b}$ par injection& 288 & 288 & 288 & 224 \\ 
-	\hline 
-	$\epsilon_{n}$ à l'extraction du SPS& 3.40 & 2.0 & <2.00 & 1.70 \\ 
+	$\epsilon_{n}$ à l'extraction du SPS& \num{3.40} & \num{2.0} & $<$\num{2.00} & \num{1.70} \\ 
 	\hline 
 \end{tabular} 
-\caption{List des principaux paramètres du faisceau du HL-LHC. La colonne intitulé "standard" est le design pris comme objectif, les deux autres colonnes reprèsentent des variantes de ce design. Pour comparaison, les paramètres du faisceau du LHC dans son design nominal est reporté dans la première colonne.}
+\caption{Liste des principaux paramètres du faisceau du HL-LHC. La colonne intitulé "standard" est le design pris comme objectif, les deux autres colonnes représentent des variantes de ce design. Pour comparaison, les paramètres du faisceau du LHC dans son design nominal est reporté dans la première colonne.}
 \label{comparaison}
 \end{table}
 

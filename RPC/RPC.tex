@@ -11,13 +11,13 @@
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{RPC/Geiger.png}
-	\captionof{figure}{Photo d'un des premiers tubes Geiger-Müller fabriqué en \num{1932} par Hans Geiger pour une utilisation en laboratoire.}
+	\captionof{figure}{Photo d'un des premiers tubes \bsc{Geiger}-\bsc{Müller} fabriqué en \num{1932} par \bsc{Hans Geiger} pour une utilisation en laboratoire.}
 	\label{Geiger}
 }
-Les RPC pour \textit{Resistive Plate Chambers} font partie d'une famille de détecteurs appelés détecteurs gazeux. Ces détecteurs ont joué un rôle dès le début de la Physique des Hautes Énergies dans la détection de nouvelles particules. Depuis le premier détecteur gazeux, le compteur proportionnel à un seul fil \textit{Single-wire proportional counter} inventé par Rutherford et Geiger, puis le compteur Geiger-Müller (cf.Fig~\ref{Geiger}) présenté en \num{1928}, les détecteurs gazeux n'ont cessé de se perfectionner et de devenir plus rapide et efficaces. Ils permettent de couvrir de grandes surfaces de détections à des coûts très modestes.
+Les RPC pour \textit{Resistive Plate Chambers} font partie d'une famille de détecteurs appelée détecteurs gazeux. Ces détecteurs ont joué un rôle dès le début de la Physique des Hautes Énergies dans la détection de nouvelles particules. Depuis le premier détecteur gazeux, le compteur proportionnel à un seul fil \textit{Single-wire proportional counter} inventé par \bsc{Rutherford} et \bsc{Geiger}, puis le compteur \bsc{Geiger}-\bsc{Müller} (cf.Fig~\ref{Geiger}) présenté en \num{1928}, les détecteurs gazeux n'ont cessé de se perfectionner et de devenir plus rapides et efficaces. Ils permettent de couvrir de grandes surfaces de détections à des coûts très modestes.
 
 \subsection{Les détecteurs gazeux}
-Les détecteurs gazeux reposent tous sur le même principe simple. Lorsqu'une particule traverse un gaz, elle l'ionise. Les ions et électrons créés lors de cette ionisation peuvent être accélérés grâce à un champ électrique. En choisissant judicieusement l'intensité du champ électrique, c'est à dire en appliquant une tension aux bornes des électrodes, les électrons peuvent gagner assez d'énergie pour ioniser le gaz à leur tour (seconde ionisation) et commencer une multiplication de charge. Le nombre de charges libérées détermine le mode de fonctionnement du détecteur. Le gaz est également un élément important du détecteur et a un rôle important sur le mode de fonctionnement de celui-ci. Le déplacement des charges à l'intérieur du gaz induit un déplacement de charges sur les électrodes, et crée un signal qui peut être récupéré par une électronique et donner une information sur le temps et la position de la trajectoire de la particule incidente. Ces charges peuvent donner lieu à un mode dit "streamer" voire donner lieu à la création d'étincelles entre l'anode et la cathode. La figure \ref{mult} montre le facteur d'amplification, ou le gain du gaz en fonction de la tension appliquée. 
+Les détecteurs gazeux reposent tous sur le même principe simple. Lorsqu'une particule traverse un gaz, elle l'ionise. Les ions et électrons créés lors de cette ionisation peuvent être accélérés grâce à un champ électrique. En choisissant judicieusement l'intensité du champ électrique, c'est à dire en appliquant une tension aux bornes des électrodes, les électrons peuvent gagner assez d'énergie pour ioniser le gaz à leur tour (seconde ionisation) et commencer une multiplication de charge. Le nombre de charges libérées détermine le mode de fonctionnement du détecteur. Le gaz est également un élément important du détecteur et a un rôle important sur le mode de fonctionnement de celui-ci. Le déplacement des charges à l'intérieur du gaz induit un déplacement de charges sur les électrodes, et crée un signal qui peut être récupéré par une électronique et donner une information sur le temps et la position de la trajectoire de la particule incidente. Ces charges peuvent donner lieu à un mode dit \textit{"streamer"} voire donner lieu à la création d'étincelles entre l'anode et la cathode. La figure \ref{mult} montre le facteur d'amplification, ou le gain du gaz en fonction de la tension appliquée. 
 
 \begin{figure}[ht!]
 	\centering
@@ -41,13 +41,13 @@ Les détecteurs gazeux à fils ont une résolution temporelle de l'ordre de la c
 
 En utilisant un champ électrique uniforme et important, une meilleure résolution temporelle est atteignable.
 
-Le premier détecteur gazeux utilisant cette méthode est le compteur à étincelle "Spark Counter" développé en \num{1948}, un détecteur qui présente une géométrie plane. Il est généralement constitué de deux électrodes métalliques entre lesquelles est présent un gaz. Le passage d'une particule ionise ce gaz et crée une avalanche qui rentre à un certain moment en mode streamer. Un plasma se crée entre les deux électrodes, les électrodes se déchargent et amènent à la création d'une étincelle. Ce type de détecteur présente un signal qui ne nécessite pas d'amplification, cependant le temps nécessaire à la recharge des électrodes est de l'ordre de quelques millisecondes. De plus la surface du détecteur ne doit pas être trop grande ($\sim$\SI{10}{\square\centi\meter}) afin de ne pas détruire les électrodes lors des décharges.
+Le premier détecteur gazeux utilisant cette méthode est le compteur à étincelle \textit{"Spark Counter"} développé en \num{1948}, un détecteur qui présente une géométrie plane. Il est généralement constitué de deux électrodes métalliques entre lesquelles est présent un gaz. Le passage d'une particule ionise ce gaz et crée une avalanche qui rentre à un certain moment en mode \textit{streamer}. Un plasma se crée entre les deux électrodes, celles-ci se déchargent et amènent à la création d'une étincelle. Ce type de détecteur présente un signal qui ne nécessite pas d'amplification, cependant le temps nécessaire à la recharge des électrodes est de l'ordre de quelques millisecondes. De plus la surface du détecteur ne doit pas être trop grande ($\sim$\SI{10}{\square\centi\meter}) afin de ne pas détruire les électrodes lors des décharges.
 
-Afin de résoudre ces problèmes, les électrodes métalliques peuvent être remplacées par des plaques de matériaux de haute résistivité (\SIrange{10e10}{10e11}{\ohm\centi\meter}) afin de limiter l'aire de décharge des électrodes autour du signal. Un mélange de gaz absorbant les photons permet d'éviter le mode streamer, ce qui permet le fonctionnement du détecteur à des flux de particules plus important. Le champ électrique baissant localement du fait de la recharge plus lente des électrodes, le développement d'avalanches successives au même endroit est limité tout en laissant le détecteur opérationnel hors de cette zone.
+Afin de résoudre ces problèmes, les électrodes métalliques peuvent être remplacées par des plaques de matériaux de haute résistivité (\SIrange{10e10}{10e11}{\ohm\centi\meter}) afin de limiter l'aire de décharge des électrodes autour du signal. Un mélange de gaz absorbant les photons permet d'éviter le mode \textit{streamer}, ce qui permet le fonctionnement du détecteur à des flux de particules plus important. Le champ électrique baissant localement du fait de la recharge plus lente des électrodes, le développement d'avalanches successives au même endroit est limité tout en laissant le détecteur opérationnel hors de cette zone.
 \vspace{-0.4cm}
 \subsubsection{Naissance des RPC}
 \vspace{-0.4cm}
-En \num{1981} R.Santonico et R.Cardarelli développent les Resistive Plate Chamber (RPC) \cite{Santonico:1981sc} \cite{CARDARELLI198820}. Ce détecteur utilise un matériau peu coûteux, très utilisé et de haute résistivité ($\sim$\SI{e10}{\ohm\centi\meter}), le High Pressure Laminate (HPL) fait de mélamine ou un type de résine phénol-formaldéhyde (anhydrure de polyoxybenzylméthylèneglycol ou Bakélite (cf.Fig~\ref{bakelite})). 
+En \num{1981} \bsc{R.Santonico} et \bsc{R.Cardarelli} développent les \textit{Resistive Plate Chamber} (RPC) \cite{Santonico:1981sc} \cite{CARDARELLI198820}. Ce détecteur utilise un matériau peu coûteux, très utilisé et de haute résistivité ($\sim$\SI{e10}{\ohm\centi\meter}), le \textit{High Pressure Laminate} (HPL) fait de mélamine ou un type de résine phénol-formaldéhyde (anhydrure de polyoxybenzylméthylèneglycol ou Bakélite (cf.Fig~\ref{bakelite})). 
 \marginpar
 {
 	\centering
@@ -87,7 +87,7 @@ Q(t)=Q_{0}e^{\frac{-t}{R_bC_b}}=Q_{0}e^{\frac{-t}{\rho\epsilon_{0}\epsilon_{r}}}
 Les charges présentes sur les électrodes réduisent la haute tension appliquée et donc le champ électrique à l'endroit des charges. Le détecteur devient inefficace pour cette période de temps $\tau$ à l'endroit du dépôt des charges tout en restant efficace ailleurs. Pour le cas de la bakélite $\rho\simeq\SI{10e10}{\ohm\centi\meter}$ le temps de relaxation est de l'ordre de \SI{10}{\milli\second}. Grâce à l'utilisation de matériaux de haute résistivité, l'utilisation de chambres de grande taille était désormais possible.
 
 
-Depuis, ces détecteurs de construction simple et robuste ont été utilisés dans de nombreuses expériences : ATLAS \cite{ATLAS}, BaBar \cite{Boutigny:1995ib} (cf.Fig~\ref{babar}), BELLE \cite{ABASHIAN2002117} (cf.Fig~\ref{belle}),  Oscillation Project with Emulsion-tRacking Apparatus (OPERA) \cite{1748-0221-9-10-C10003} (cf.Fig~\ref{opera}) etc. Différentes solutions technologiques ont été développées selon les besoins des différentes expériences.
+Depuis, ces détecteurs de construction simple et robuste ont été utilisés dans de nombreuses expériences : ATLAS \cite{ATLAS}, BaBar \cite{Boutigny:1995ib} (cf.Fig~\ref{babar}), BELLE \cite{ABASHIAN2002117} (cf.Fig~\ref{belle}),  \textit{Oscillation Project with Emulsion-tRacking Apparatus} (OPERA) \cite{1748-0221-9-10-C10003} (cf.Fig~\ref{opera}) etc. Différentes solutions technologiques ont été développées selon les besoins des différentes expériences.
 
 \marginpar
 {
@@ -114,7 +114,7 @@ Depuis, ces détecteurs de construction simple et robuste ont été utilisés da
 }
 
 \subsection{Principes de fonctionnement d'une RPC}
-Le principe d'une RPC repose sur l'ionisation d'un gaz. Lorsqu'une particule relativiste traverse le gaz d'une RPC, elle interagit avec les molécules de gaz principalement par interaction électromagnétique. La perte d'énergie moyenne par ionisation et excitation d'une particule relativiste massive ($m>m_{e}$) due à des électrons libres supposés au repos est donnée par la formule de Bethe-Bloch (cd.fig\ref{Bethe-Block})
+Le principe d'une RPC repose sur l'ionisation d'un gaz. Lorsqu'une particule relativiste traverse le gaz d'une RPC, elle interagit avec les molécules de gaz principalement par interaction électromagnétique. La perte d'énergie moyenne par ionisation et excitation d'une particule relativiste massive ($m>m_{e}$) due à des électrons libres supposés au repos est donnée par la formule de \bsc{Bethe}-\bsc{Bloch} (cd.fig\ref{Bethe-Block})
 \begin{equation}
 -\left<\frac{1}{\rho}\frac{\dd E}{\dd x}\right>=\frac{e^{4}}{4\pi \epsilon_{0}^{2}m_{e}c^{2}}z^{2}N_{A}\frac{Z}{A}\frac{1}{\beta^{2}}\left[\frac{1}{2}\ln\frac{2m_{e}c^{2}\beta^{2}\gamma^{2}E_{max}}{I^{2}}-\beta^{2}-\frac{\delta(\beta\gamma)}{2}\right]
 \end{equation}
@@ -126,7 +126,7 @@ avec :
 	\item $\epsilon_{0}$ la permittivité du vide,
 	\item $c$ la vitesse de la lumière dans le vide,
 	\item $z$ la charge de la particule incidente,
-	\item $N_{A}$ le nombre d'Avogadro,
+	\item $N_{A}$ le nombre d'\bsc{Avogadro},
 	\item $Z$ le numéro atomique du matériau,
 	\item $A$ le nombre de masse du matériau,
 	\item $\beta=\frac{v}{c}$ la vitesse de la particule incidente en unité de $c$,
@@ -174,7 +174,7 @@ avec :
 	\label{Brem}
 }
 
-Si un atome ou une molécule du gaz est ionisé par la collision inélastique de la particule incidente, des électrons sont éjectés de l'atome près du point de collision. En revanche, si l'atome n'est pas ionisé mais excité, l'énergie d'excitation est évacuée par l'émission d'un photon (cf.Fig~\ref{photon}), par un électron Auger (cf.Fig~\ref{Auger}) ou par ionisation Penning (cf.Fig~\ref{Penning}). Si ce photon a une énergie plus importante que le minimum du potentiel d'ionisation, le photon va être absorbé par effet photoélectrique et un électron va être éjecté de l'atome, sinon le photon ne sera pas détecté par les RPC.
+Si un atome ou une molécule du gaz est ionisé par la collision inélastique de la particule incidente, des électrons sont éjectés de l'atome près du point de collision. En revanche, si l'atome n'est pas ionisé mais excité, l'énergie d'excitation est évacuée par l'émission d'un photon (cf.Fig~\ref{photon}), par un électron \bsc{Auger} (cf.Fig~\ref{Auger}) ou par ionisation \bsc{Penning} (cf.Fig~\ref{Penning}). Si ce photon a une énergie plus importante que le minimum du potentiel d'ionisation, le photon va être absorbé par effet photoélectrique et un électron va être éjecté de l'atome, sinon le photon ne sera pas détecté par les RPC.
 
 Une particule chargée relativiste peut aussi perdre son énergie par rayonnement continu de freinage appelé \textit{Bremsstrahlung}(cf.Fig~\ref{Brem}), ce processus devient prédominant si l'énergie de la particule dépasse une certaine énergie critique ($E_{\mu c}$ sur la figure \ref{Bethe-Block}). Dans ce cas, la perte d'énergie n'est pas détectée par le RPC.
 
@@ -190,7 +190,7 @@ Le fonctionnement d'une RPC repose sur la perte d'énergie par ionisation et exc
 
 \subsection{Les modes de fonctionnement des RPC}
 
-Selon l'intensité du champ électrique appliqué  entre les électrodes, il est possible de choisir le mode de fonctionnement des chambres. La composition du mélange gazeux est également un élément déterminant. On distingue généralement trois modes de fonctionnement; le mode avalanche, le mode streamer et éclair (Spark).
+Selon l'intensité du champ électrique appliqué entre les électrodes, il est possible de choisir le mode de fonctionnement des chambres. La composition du mélange gazeux est également un élément déterminant. On distingue généralement trois modes de fonctionnement; le mode avalanche, le mode streamer et éclair (\textit{Spark}).
 
 \subsubsection{Le mode avalanche}
 
@@ -211,7 +211,7 @@ Le mode avalanche est le premier mode de fonctionnement qui apparait lorsqu'on a
 
 \subsubsection{Le mode streamer}
 
-Si l'on augmente la tension aux bornes des électrodes, le gain du gaz augmente, les ionisations primaires créent donc plus d'ionisations secondaires, il y'a donc création de paires électron-ion en plus grand nombre. De plus les photons peuvent commencer à contribuer à la propagation de l'avalanche, ce qui amène au mode streamer. Le signal engendré par ce mode est plutôt important (de 50pC à quelques nC), l'électronique peut donc se passer d'amplification et est donc beaucoup plus simple. Cependant, le flux de particules maximal est limité à quelques centaines de Hertz. Si le nombre d'électrons devient trop important (en moyenne $10^{8}$ électrons), ils engendrent la création d'un plasma reliant les deux électrodes (cf.Fig~ \ref{streamer}).
+Si l'on augmente la tension aux bornes des électrodes, le gain du gaz augmente, les ionisations primaires créent donc plus d'ionisations secondaires, il y'a donc création de paires électron-ion en plus grand nombre. De plus les photons peuvent commencer à contribuer à la propagation de l'avalanche, ce qui amène au mode \textit{streamer}. Le signal engendré par ce mode est plutôt important (de \SI{50}{\pico\coulomb} à quelques \si{\nano\coulomb}), l'électronique peut donc se passer d'amplification et est donc beaucoup plus simple. Cependant, le flux de particules maximal est limité à quelques centaines de Hertz. Si le nombre d'électrons devient trop important (en moyenne $10^{8}$ électrons), ils engendrent la création d'un plasma reliant les deux électrodes (cf.Fig~ \ref{streamer}).
 
 \begin{figure}[ht!]
 	\centering
@@ -219,29 +219,29 @@ Si l'on augmente la tension aux bornes des électrodes, le gain du gaz augmente,
 	\hfill
 	\subfloat[La taille de l'avalanche modifie fortement le champ électrique local de la couche de gaz. ]{\includegraphics[width=.49\linewidth]{RPC/streamer-22.png}\label{streamer-2}}
 	\\
-	\subfloat[les photons contribuent au développement de l'avalanche et étalent l'avalanche. Passage au mode streamer]{\includegraphics[width=.49\linewidth]{RPC/streamer-3.png}\label{streamer-3}}
+	\subfloat[les photons contribuent au développement de l'avalanche et étalent l'avalanche. Passage au mode \textit{streamer}]{\includegraphics[width=.49\linewidth]{RPC/streamer-3.png}\label{streamer-3}}
 	\hfill
 	\subfloat[Les charges de la couche Résistive induisent un temps mort important.]{\includegraphics[width=.49\linewidth]{RPC/streamer-5.png}\label{streamer-5}}
-	\caption{Vue schématique du développement d'un streamer. Le champ électrique appliqué aux électrodes est noté $E$, les électrons sont en bleu et les ions en rouge.}
+	\caption{Vue schématique du développement d'un \textit{streamer}. Le champ électrique appliqué aux électrodes est noté $E$, les électrons sont en bleu et les ions en rouge.}
 	\label{streamer}
 \end{figure}
 
 \subsubsection{Le mode éclair (Spark)}
-Si l'on augmente encore la tension ou si le mélange de gaz ne permet pas de limiter la propagation latérale de l'avalanche ou le mode streamer, les électrons migrateurs et les photons peuvent induire de proches en proches d'autres streamers, c'est le mode éclair, ou Spark. Les éclairs se propagent alors dans toute la chambre. Le temps de recouvrement de la chambre est alors très long et les charges accumulées peuvent détériorer rapidement le détecteur. De plus le flux de particules détectable est très faible (cf.Fig~ \ref{spark}).
+Si l'on augmente encore la tension ou si le mélange de gaz ne permet pas de limiter la propagation latérale de l'avalanche ou le mode streamer, les électrons migrateurs et les photons peuvent induire de proches en proches d'autres streamers, c'est le mode éclair, ou \textit{Spark}. Les éclairs se propagent alors dans toute la chambre. Le temps de recouvrement de la chambre est alors très long et les charges accumulées peuvent détériorer rapidement le détecteur. De plus le flux de particules détectable est très faible (cf.Fig~ \ref{spark}).
 \begin{figure}[ht!]
 	\centering
 	\subfloat[Des molècules du gaz sont ionisées par le passage d'une particule.]{\includegraphics[width=.49\linewidth]{RPC/avalanche-streamer-1.png}\label{spark-1}}
 	\hfill
 	\subfloat[La taille de l'avalanche modifie fortement le champ électrique local de la couche de gaz. ]{\includegraphics[width=.49\linewidth]{RPC/spark-2.png}\label{spark-2}}
 	\\
-	\subfloat[les photons contribuent au développement de l'avalanche et étalent l'avalanche. Passage au mode streamer]{\includegraphics[width=.49\linewidth]{RPC/streamer-3.png}\label{spark-3}}
+	\subfloat[les photons contribuent au développement de l'avalanche et étalent l'avalanche. Passage au mode \textit{streamer}]{\includegraphics[width=.49\linewidth]{RPC/streamer-3.png}\label{spark-3}}
 	\hfill
 	\subfloat[Un plasma peut se créer entre les électrodes et créer une étincelle. Les electrodes sont déchargées à cet endroit (mode éclair).]{\includegraphics[width=.49\linewidth]{RPC/streamer-4.png}\label{spark-4}}
     \\
 	\subfloat[Des éclairs se créent de proche en proche à cause des électrons migrateurs et des photons.]{\includegraphics[width=.49\linewidth]{RPC/spark-5.png}\label{spark-5}}
     \hfill
 	\subfloat[Le champ électrique est fortement baissé dans toute la chambre. Elle est aveugle.]{\includegraphics[width=.49\linewidth]{RPC/spark-6.png}\label{spark-6}}
-	\caption{Vue schématique du développement d'un spark. Le champ électrique appliqué aux électrodes est noté $E$, les électrons sont en bleu et les ions en rouge.}
+	\caption{Vue schématique du développement d'un \textit{spark}. Le champ électrique appliqué aux électrodes est noté $E$, les électrons sont en bleu et les ions en rouge.}
 	\label{spark}
 \end{figure}
 
@@ -251,7 +251,7 @@ Dans CMS le mélange de gaz ainsi que les tensions appliquées ont été judicie
 \subsection{Étude théorique du mode avalanche}
 
 \subsubsection{Ionisation primaire}
-Le mélange gazeux des détecteurs contient majoritairement un gaz à faible potentiel d'ionisation minimale afin d'être facilement ionisable. En pratique, la plupart des détecteurs utilisent du TFE de potentiel d'ionisation minimal $U_{i}=\SI{10.114 \pm0.010}{\eV}$ \cite{Chimie:chimie}. La création de charges primaires dues au passage d'une particule chargée dans le mélange de gaz est caractérisée par le nombre moyen d'amas créés par unité de longueur ainsi que par le nombre de paires électron-ion créées dans chaque amas.
+Le mélange gazeux des détecteurs contient majoritairement un gaz à faible potentiel d'ionisation minimale afin d'être facilement ionisable. En pratique, la plupart des détecteurs utilisent du \chemform{TFE} de potentiel d'ionisation minimal $U_{i}=\SI{10.114 \pm0.010}{\eV}$ \cite{Chimie:chimie}. La création de charges primaires dues au passage d'une particule chargée dans le mélange de gaz est caractérisée par le nombre moyen d'amas créés par unité de longueur ainsi que par le nombre de paires électron-ion créées dans chaque amas.
 
 \subsubsection{Distance entre les amas de l'ionisation primaire}
 Si l'on considère que l'énergie perdue dans le matériau par la particule incidente est négligeable par rapport à son énergie alors les probabilités de collisions ionisantes sont indépendantes. Les distances entre les amas d'ionisations primaires suivent donc une loi exponentielle :
@@ -271,7 +271,7 @@ La distance moyenne entre amas primaires peut se calculer en utilisant le progra
 	\label{lambda}
 \end{figure}
 
-Le nombre moyen d'amas contenus dans une couche de gaz d'épaisseur $e$ est donc $\bar{n}=\frac{e}{L}$. La probabilité d'avoir $n$ amas dans cette couche de gaz suit une loi de Poisson :
+Le nombre moyen d'amas contenus dans une couche de gaz d'épaisseur $e$ est donc $\bar{n}=\frac{e}{L}$. La probabilité d'avoir $n$ amas dans cette couche de gaz suit une loi de \bsc{Poisson} :
 \begin{equation}
 P(n)=\frac{1}{n!}\left(\frac{e}{L}\right)^{n}\exp\left(-\frac{e}{L}\right).
 \end{equation}
@@ -282,33 +282,33 @@ En supposant un détecteur parfait, l'efficacité maximale pour une chambre d'é
 où $P(0)$ est la probabilité qu'aucune ionisation ne soit créée dans l'épaisseur de gaz de la chambre.
 
 \subsubsection{Nombre d'électrons dans les amas primaires}
-Le nombre d'électrons par amas d'ionisation primaire est variable et dépend de l'énergie échangée entre le gaz et la particule incidente. La distribution du "cluster size" a été calculée par Riegler et al. \cite{Riegler:570462} en utilisant HEED pour des mélanges de gaz très utilisés pour les RPC (cf.Fig~\ref{cluster})
+Le nombre d'électrons par amas d'ionisation primaire est variable et dépend de l'énergie échangée entre le gaz et la particule incidente. La distribution du \textit{"cluster size"} a été calculée par \bsc{Riegler} et al. \cite{Riegler:570462} en utilisant HEED pour des mélanges de gaz très utilisés pour les RPC (cf.Fig~\ref{cluster})
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.60\textwidth]{RPC/cluster.png}
-	\captionof{figure}{Distributions du "cluster size" pour un mélange gazeux typique utilisé pour les RPC calculées en utilisant HEED. Les particules incidentes sont des pions de \SI{7}{\giga\eV} pour le mélange avec 10\% d'isobutane et \SI{120}{\giga\eV} pour le mélange avec 0.3\%. La température du gaz est $T=$\SI{296.15}{\kelvin} et la pression $p=$\SI{1013}{\milli\bar}. En coupant à 500 électrons et par intégration on trourve un nombre d'électron moyen par amas de 1.9 pour l'isobutane, 2.6 pour le mélange à 10\% de \chemform{SF_6} et 2.8 pour le mélange à 0.3\% de \chemform{SF_6}.}
+	\captionof{figure}{Distributions du \textit{"cluster size"} pour un mélange gazeux typique utilisé pour les RPC calculées en utilisant HEED. Les particules incidentes sont des pions de \SI{7}{\giga\eV} pour le mélange avec \num{10}\% d'isobutane et \SI{120}{\giga\eV} pour le mélange avec \num{0.3}\%. La température du gaz est $T=$\SI{296.15}{\kelvin} et la pression $p=$\SI{1013}{\milli\bar}. En coupant à \num{500} électrons et par intégration on trourve un nombre d'électron moyen par amas de \num{1.9} pour l'isobutane, \num{2.6} pour le mélange à \num{10}\% de \chemform{SF_6} et \num{2.8} pour le mélange à \num{0.3}\% de \chemform{SF_6}.}
 	\label{cluster}
 \end{figure}
 
 \subsection{Le facteur de multiplication}
-Après l'ionisation, les électrons primaires vont être accélérés grâce au champ électrique entre les électrodes ce qui peut donner lieu à une avalanche. Cependant afin d'éviter les modes streamer et spark, le mélange gazeux contient généralement des gaz très électronégatifs ce qui à pour effet de capturer certains électrons primaires, les molécule très électronégatives ayant tendance à vouloir former des anions, et de réduire ainsi la taille de l'avalanche. 
+Après l'ionisation, les électrons primaires vont être accélérés grâce au champ électrique entre les électrodes ce qui peut donner lieu à une avalanche. Cependant afin d'éviter les modes \textit{streamer} et \textit{spark}, le mélange gazeux contient généralement des gaz très électronégatifs ce qui à pour effet de capturer certains électrons primaires, les molécule très électronégatives ayant tendance à vouloir former des anions, et de réduire ainsi la taille de l'avalanche. 
 
 Tous les électrons non absorbés sont accélérés par le champ électrique et sont soumis à des chocs élastiques et inélastiques avec les autres molécules du gaz. Si l'énergie échangée lors de ces collisions est assez importante pour ioniser à son tour d'autres molécules du gaz, on assiste à une multiplication des paires électron-ion et à une réaction en cascade. Les électrons migrent vers l'anode et les cations vers la cathode mais à des vitesses beaucoup moins élevées que pour les électrons de par leur masse beaucoup plus importante. Ces processus ont de très grandes fluctuations stochastiques.
 
-En définissant $\alpha$ le taux de création de paires d'ion-électron secondaires créées par unité de distance (coefficient d'ionisation de Townsend) et  $\beta$ le taux d'électrons capturés par unité de distance par les molécules électronégatives pour former des anions (coefficient d'attachement), il vient pour un déplacement  $\dd z$.
+En définissant $\alpha$ le taux de création de paires d'ion-électron secondaires créées par unité de distance (coefficient d'ionisation de \bsc{Townsend}) et  $\beta$ le taux d'électrons capturés par unité de distance par les molécules électronégatives pour former des anions (coefficient d'attachement), il vient pour un déplacement  $\dd z$.
 \begin{equation}
 	\frac{\dd \bar{n}}{\dd z}=(\alpha-\beta)\bar{n} \quad  \frac{\dd \bar{p}}{\dd z}=\alpha\bar{n} 
 \end{equation}
-avec la première équation décrivant la variation du nombre moyen d'électrons et la deuxième celle du nombre moyen d'ions positifs. On peut définir également $\alpha_{eff}=\alpha-\beta$ qu'on appelle coefficient de Townsend effectif. En posant les conditions initiales $\bar{n}=1$ et $\bar{p}=0$, on obtient les nombres moyens d'électrons et d'ions positifs produits sur une distance $x$: 
+avec la première équation décrivant la variation du nombre moyen d'électrons et la deuxième celle du nombre moyen d'ions positifs. On peut définir également $\alpha_{eff}=\alpha-\beta$ qu'on appelle coefficient de \bsc{Townsend} effectif. En posant les conditions initiales $\bar{n}=1$ et $\bar{p}=0$, on obtient les nombres moyens d'électrons et d'ions positifs produits sur une distance $x$: 
 \begin{equation}
 \bar{n}=\exp(\alpha-\beta)z \quad \bar{p}=\frac{\alpha}{\alpha-\beta}\left(\exp^{(\alpha-\beta)z}-1\right)
 \end{equation}
-Le coefficient de Townsend dépend du champ électrique appliqué. La figure \ref{tow} montre cette dépendance pour un mélange de gaz.
+Le coefficient de \bsc{Townsend} dépend du champ électrique appliqué. La figure \ref{tow} montre cette dépendance pour un mélange de gaz.
 
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.62\textwidth]{RPC/tow.png}
-	\captionof{figure}{Coefficient de Townsend et coefficient d'attachement calculés grâce à Imonte \cite{imonte} pour $T=296.15K$ et $p=1013mbar$ pour un mélange de gaz particulier \cite{Riegler:570462}. }
+	\captionof{figure}{Coefficient de \bsc{Townsend} et coefficient d'attachement calculés grâce à Imonte \cite{imonte} pour $T=296.15K$ et $p=1013mbar$ pour un mélange de gaz particulier \cite{Riegler:570462}. }
 	\label{tow}
 \end{figure}
 
@@ -320,7 +320,7 @@ En supposant $\alpha$ et $\beta$ constantes, la charge totale à l'emplacement $
 q(z)=\sum_{j=1}^{n_c}q_{e}M_{j}n_{j,0}\exp^{(\alpha-\beta)(z-z_O^j)}
 \end{equation}
 \newpage
-Les fluctuations statistiques sont prises en compte par 4 variables aléatoires :
+Les fluctuations statistiques sont prises en compte par \num{4} variables aléatoires :
 \begin{itemize}[label=$\bullet$]
 	\item Le nombre d'amas $n_c$ qui suit une distribution poissonienne 
 	\begin{equation}
@@ -332,12 +332,12 @@ Les fluctuations statistiques sont prises en compte par 4 variables aléatoires 
 	P_{j}(z_0^j=x)=\frac{x^{j-1}\lambda_{eff}^{j}}{\Gamma(j)}\exp^{-x\lambda_{eff}} \quad 0<x<d
 	\end{equation}
 	\item Le nombre d'électrons $n_{0}^{j}$ dans le cluster $j$ suit la loi de distribution trouvé par le programme Heed (cf.Fig~\ref{cluster}) 
-	\item Le facteur $M_{j}$ qui prend en compte les fluctuations de l'avalanche et la diminution par les ions lorsque l'avalanche devient trop importante du champ électrique réduit $E/p$ avec $p$ la pression du gaz . Ce facteur est obtenu concrètement en tirant d'une distribution de Polya une valeur puis en la divisant par le nombre moyen d'électrons de l'avalanche.
+	\item Le facteur $M_{j}$ qui prend en compte les fluctuations de l'avalanche et la diminution par les ions lorsque l'avalanche devient trop importante du champ électrique réduit $E/p$ avec $p$ la pression du gaz . Ce facteur est obtenu concrètement en tirant d'une distribution de \bsc{Polya} une valeur puis en la divisant par le nombre moyen d'électrons de l'avalanche.
 \end{itemize}
 \vspace*{-0.2cm}
 \subsection{Signal induit sur l'électronique}
 \vspace*{-0.6cm}
-En utilisant le théorème de Ramo et Shockley \cite{HE2001250}, il peut être montré que le courant électrique induit sur l'électronique est dû au mouvement des charges entre les électrodes qui change les lignes de champ électrique et non la quantité de charge reçue par seconde par l'électrode. C'est ce courant qui peut ensuite être traité par l'électronique de lecture.
+En utilisant le théorème de \bsc{Ramo} et \bsc{Shockley} \cite{HE2001250}, il peut être montré que le courant électrique induit sur l'électronique est dû au mouvement des charges entre les électrodes qui change les lignes de champ électrique et non la quantité de charge reçue par seconde par l'électrode. C'est ce courant qui peut ensuite être traité par l'électronique de lecture.
 \begin{equation}
 i_{ind}(t)=-q(x/v_{d})\vec{v_{d}}\cdot \overrightarrow{E_{w}}
 \end{equation}
@@ -365,7 +365,7 @@ Le détecteur CMS utilise des chambres double gaps d'épaisseur \SI{2}{\milli\me
 	\label{cmsrpc}
 \end{figure}
 
-Afin de maintenir la distance de \SI{2}{\milli\meter} entre les électrodes, des spacers en Polychlorure de vinyle (PVC) de \SI{8}{\milli\meter} de diamètre sont placés tous le \SI{10}{\centi\meter}. Les faces externes des électrodes sont recouvertes d'une peinture de graphite de résistance surfacique $\approx$\SI{e5}{\ohm\per\sq} permettant la mise sous tension des chambres. Un film d'huile de lin d'épaisseur \SIrange{35}{45}{\micro\meter} est appliqué sur les faces constituant les parties internes des gaps afin d'améliorer la planéité des surfaces \cite{oil} et limiter les photons ultra-violet \cite{Lu:2009zzd}, ce qui a pour effet  de réduire le bruit et le courant de fuite des RPC.
+Afin de maintenir la distance de \SI{2}{\milli\meter} entre les électrodes, des \textit{spacers} en Polychlorure de vinyle (PVC) de \SI{8}{\milli\meter} de diamètre sont placés tous le \SI{10}{\centi\meter}. Les faces externes des électrodes sont recouvertes d'une peinture de graphite de résistance surfacique $\approx$\SI{e5}{\ohm\per\sq} permettant la mise sous tension des chambres. Un film d'huile de lin d'épaisseur \SIrange{35}{45}{\micro\meter} est appliqué sur les faces constituant les parties internes des gaps afin d'améliorer la planéité des surfaces \cite{oil} et limiter les photons ultra-violet \cite{Lu:2009zzd}, ce qui a pour effet  de réduire le bruit et le courant de fuite des RPC.
 Le signal est récolté par des strips placés entre les deux chambres et séparés de celles-ci par une couche de Mylar. Les chambres opèrent en mode avalanche pour les raisons déjà évoquées dans ce chapitre.
 
 \subsection{Le mélange gazeux}
@@ -393,7 +393,7 @@ Le mélange gazeux utilisé par les RPC de CMS comporte :
 }
 
 \begin{itemize}[label=$\bullet$]
-\item \num{95.2}\% de Tétrafluoroéthane \chemform{C_2H_2F_4} (R-134a) qui est le composant principal du mélange et permet une densité d'amas primaires élevée $\lambda=\SI{5.5}{\clusters\per\milli\meter}$ tout en gardant un coefficient de Townsend effectif élevé $\alpha_{eff}=\SI{9.15}{\per\milli\meter}$ \cite{CMS-NOTE-1997-004}.
+\item \num{95.2}\% de Tétrafluoroéthane \chemform{C_2H_2F_4} (R-134a) qui est le composant principal du mélange et permet une densité d'amas primaires élevée $\lambda=\SI{5.5}{\clusters\per\milli\meter}$ tout en gardant un coefficient de \bsc{Townsend} effectif élevé $\alpha_{eff}=\SI{9.15}{\per\milli\meter}$ \cite{CMS-NOTE-1997-004}.
 \item \num{4.5}\% d'isobutane \chemform{iso-C_4H_{10}} qui est utilisé comme absorbeur de photons ultraviolets (UV) produits par la dés-excitation des molécules du mélange gazeux.
 \item \num{0.3}\% d'hexafluorure de soufre \chemform{SF_6}, un gaz très électronégatif, qui permet de capturer l'excès d'électrons, il participe ainsi à augmenter le coefficient d'attachement $\beta$ et permet de réduire la probabilité de streamer \cite{Camarri:685607}.
 \end{itemize}
@@ -408,7 +408,7 @@ La disposition des chambres RPC dans CMS a été présentée dans la section \re
 
 Les chambres sont donc divisées en deux (trois) $\eta-sectors$ pour les chambres du tonneau (des bouchons). Les strips ont une longueur comprise entre \num{57} et \SI{125}{\centi\meter} dans le tonneau et entre \num{39.8} et \SI{79.72}{\centi\meter} dans les bouchons. Ces trois $\eta-sectors$ sont notés $A$, $B$, $C$ selon $\eta$ décroissant et comportent \num{32} strips chacun.
 
-Cette division le long de $\eta$ amène à la segmentation des gaps des détecteurs afin d'extraire les signaux provenant des strips. Ainsi, les chambres des bouchons sont constituées non pas de deux mais de trois gaps noté $i$ (\textit{Bottom gap}), $ii$ (\textit{Top Wide gap}) et $iii$ (\textit{Top Narrow gap})
+Cette division le long de $\eta$ amène à la segmentation des \textit{gaps} des détecteurs afin d'extraire les signaux provenant des strips. Ainsi, les chambres des bouchons sont constituées non pas de deux mais de trois \textit{gaps} notés $i$ (\textit{Bottom gap}), $ii$ (\textit{Top Wide gap}) et $iii$ (\textit{Top Narrow gap})
  (cf.Fig~\ref{gapslayout}). 
 \marginpar
 {
@@ -420,7 +420,7 @@ Cette division le long de $\eta$ amène à la segmentation des gaps des détecte
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.50\textwidth]{RPC/gaps.png}
-	\captionof{figure}{Disposition des gaps dans les chambres des bouchons \cite{gapss}.}
+	\captionof{figure}{Disposition des \textit{gaps} dans les chambres des bouchons \cite{gapss}.}
 	\label{gapslayout}
 \end{figure}
 
@@ -441,11 +441,11 @@ L'électronique de lecture des signaux provenant des strips est composée de deu
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[width=0.35\textwidth]{RPC/Feb.png}
-		\captionof{figure}{Une Front-End Board des chambres RPC dans les bouchons de CMS. Les \num{4} ASIC sont clairement visibles sur le PCB. Les strips sont connectés aux connecteurs du bas et les signaux \textit{Low-Voltage Differential Signaling} (LVDS) sont envoyés grâce aux câbles connectés aux connecteurs du haut. Le connecteur sur la droite permet la connection du FEB au \textit{Distribution Board} (DB) et amène la basse tension et les siganux I$^2$C.}
+		\captionof{figure}{Une \textit{Front-End Board }des chambres RPC dans les bouchons de CMS. Les \num{4} ASIC sont clairement visibles sur le PCB. Les strips sont connectés aux connecteurs du bas et les signaux \textit{Low-Voltage Differential Signaling} (LVDS) sont envoyés grâce aux câbles connectés aux connecteurs du haut. Le connecteur sur la droite permet la connection du FEB au \textit{Distribution Board} (DB) et amène la basse tension et les siganux I$^2$C.}
 		\label{Feb}
 	\end{figure}
 
-	Le schéma de principe de l'électronique d'une voie du FEB est donné figure \ref{schemeelec} \cite{electro}, le signal est amplifié par un gain important variant linéairement ($\sim$\SI{2}{\milli\volt\per\femto\coulomb}) jusqu'à \SI{100}{\femto\coulomb} et un gain plus faible au delà. Un discriminateur compare ensuite le signal amplifié à une tension de seuil programmable (\SI{220}{\milli\volt} dans CMS) et permet de sélectionner la charge minimale de déclenchement. Cependant ce circuit possède un time-walk de $\sim$\SI{10}{\nano\second} sur la gamme dynamique du signal d'entrée. Ce time-walk est incompatible avec l'utilisation des RPC comme système de déclenchement de CMS. Afin d'obtenir une bonne résolution temporelle en limitant le time-walk, un circuit RC différentie le signal d'entrée et l'envoie dans un \textit{zero-crossing discriminator}. Ces deux signaux sont ensuite envoyés dans un circuit de coïncidence. Cette méthode permet de réduire le time-walk à $\sim$\SI{1}{\nano\second}. Le signal en sortie déclenche ensuite un circuit monostable qui définit la largeur réglable du signal de sortie. La largeur de ce signal à été réglée à $\sim$\SI{100}{\nano\second} afin de ne pas déclencher sur les rebonds du signal d'entrée qui pourraient survenir étant donné qu'il n'y a pas d'adaptation d'impédance au bout des strips. Finalement, le signal sort par transmission différentielle basse-tension \textit{Low-Voltage Differencial Signaling} (LVDS) grâce à des paires de câbles torsadées. Chaque FEB possède au moins un capteur de température afin de vérifier le bon fonctionnement de la carte.
+	Le schéma de principe de l'électronique d'une voie du FEB est donné figure \ref{schemeelec} \cite{electro}, le signal est amplifié par un gain important variant linéairement ($\sim$\SI{2}{\milli\volt\per\femto\coulomb}) jusqu'à \SI{100}{\femto\coulomb} et un gain plus faible au delà. Un discriminateur compare ensuite le signal amplifié à une tension de seuil programmable (\SI{220}{\milli\volt} dans CMS) et permet de sélectionner la charge minimale de déclenchement. Cependant ce circuit possède un \textit{time-walk} de $\sim$\SI{10}{\nano\second} sur la gamme dynamique du signal d'entrée. Ce \textit{time-walk} est incompatible avec l'utilisation des RPC comme système de déclenchement de CMS. Afin d'obtenir une bonne résolution temporelle en limitant le \textit{time-walk}, un circuit RC différentie le signal d'entrée et l'envoie dans un \textit{zero-crossing discriminator}. Ces deux signaux sont ensuite envoyés dans un circuit de coïncidence. Cette méthode permet de réduire le \textit{time-walk} à $\sim$\SI{1}{\nano\second}. Le signal en sortie déclenche ensuite un circuit monostable qui définit la largeur réglable du signal de sortie. La largeur de ce signal à été réglée à $\sim$\SI{100}{\nano\second} afin de ne pas déclencher sur les rebonds du signal d'entrée qui pourraient survenir étant donné qu'il n'y a pas d'adaptation d'impédance au bout des strips. Finalement, le signal sort par transmission différentielle basse-tension \textit{Low-Voltage Differencial Signaling} (LVDS) grâce à des paires de câbles torsadées. Chaque FEB possède au moins un capteur de température afin de vérifier le bon fonctionnement de la carte.
 	
 	\begin{figure}[ht!]
 		\centering
@@ -487,24 +487,24 @@ Les trois paramètres de l'ajustement sont l'efficacité maximale $\epsilon_{max
 \lambda=\frac{4}{\epsilon_{max}}\frac{\dd \epsilon}{\dd \left(HV_{eff}\right)}
 \end{equation}
 
-Le point de fonctionnement $H_{work}$ est ensuite défini par $HV_{knee}+\SI{120}{\volt}$ ($HV_{knee}+\SI{100}{\volt}$) dans les bouchons (le tonneau), où $HV_{knee}$ est la tension pour laquelle l'ajustement donne une efficacité de 95\%.
+Le point de fonctionnement $H_{work}$ est ensuite défini par $HV_{knee}+\SI{120}{\volt}$ ($HV_{knee}+\SI{100}{\volt}$) dans les bouchons (le tonneau), où $HV_{knee}$ est la tension pour laquelle l'ajustement donne une efficacité de \num{95}\%.
 
-La figure \ref{working} montre le point de fonctionnement moyen, l'efficacité moyenne au point de fonctionnement et la tension moyenne pour laquelle l'efficacité est de 50\% pour les différents scans en tension effectués depuis \num{2011}.
+La figure \ref{working} montre le point de fonctionnement moyen, l'efficacité moyenne au point de fonctionnement et la tension moyenne pour laquelle l'efficacité est de \num{50}\% pour les différents scans en tension effectués depuis \num{2011}.
 \vspace{0.5cm}
 \begin{figure}[ht!]
 	\centering
 	\subfloat[Pour le tonneau.]{\includegraphics[width=.50\linewidth]{RPC/barrel.pdf}}
 	\hfill
 	\subfloat[Pour les bouchons.]{\includegraphics[width=.50\linewidth]{RPC/endcap.pdf}}
-	\caption{point de fonctionnement moyen, efficacité moyenne au point de fonctionnement et la tension moyenne pour laquelle l'efficacité est de 50\% pour les différents scans en tension effectués depuis \num{2011} \cite{working2}.}
+	\caption{point de fonctionnement moyen, efficacité moyenne au point de fonctionnement et la tension moyenne pour laquelle l'efficacité est de \num{50}\% pour les différents scans en tension effectués depuis \num{2011} \cite{working2}.}
 	\label{working}
 \end{figure}
 \newpage
 \section{Mise à niveau des RPC pour la Phase-2 de CMS}
-Avec le passage du LHC au HL-LHC vers 2026, la luminosité est prévue pour être multipliée par un facteur \num{5} à \num{7} et le nombre d'événements pile-up devrait passer de $\sim 40$ à $\sim 140$ voire $\sim 200$. Afin de maintenir les performances de CMS, celui-ci doit également être mis à niveau. Certaines de ces améliorations ont été détaillées dans le chapitre précédent. La mise à niveau du trajectographe à muons a fait l'objet de nombreuses études compilées dans le TDR \textit{The Phase-2 Upgrade of the CMS Muon Detectors}. Les tests de vieillissement effectués montrent que la plupart des chambres du trajectographe à muons seront capables de résister à l'environnement du HL-LHC jusqu'à la fin de la Phase-2 prévue en \num{2038} sans une perte significative de l'efficacité. Pour ce qui concerne les chambres RPC des bouchons, les mises à niveaux notables sont :
+Avec le passage du LHC au HL-LHC vers 2026, la luminosité est prévue pour être multipliée par un facteur \num{5} à \num{7} et le nombre d'événements \textit{pile-up} devrait passer de $\sim 40$ à $\sim 140$ voire $\sim 200$. Afin de maintenir les performances de CMS, celui-ci doit également être mis à niveau. Certaines de ces améliorations ont été détaillées dans le chapitre précédent. La mise à niveau du trajectographe à muons a fait l'objet de nombreuses études compilées dans le TDR \textit{The Phase-2 Upgrade of the CMS Muon Detectors}. Les tests de vieillissement effectués montrent que la plupart des chambres du trajectographe à muons seront capables de résister à l'environnement du HL-LHC jusqu'à la fin de la Phase-2 prévue en \num{2038} sans une perte significative de l'efficacité. Pour ce qui concerne les chambres RPC des bouchons, les mises à niveaux notables sont :
 
 \begin{itemize}[label=$\bullet$]
-	\item le changement du \textit{Link System} des RPC responsable d'envoyer les données des chambres RPC au système de déclenchement et au système de lecture des données. Le \textit{Link System} actuel possède des éléments qui peuvent être perturbés par des bruits électromagnétiques et ne sont pas certifiés pour toute la durée de vie du HL-LHC. De plus le système actuel enregistre les temps des hits avec une résolution temporelle de \SI{25}{\nano\second}, synchronisée avec les croisements de faisceaux de CMS ce qui est un ordre de grandeur au dessus de la résolution des chambres RPC $\sim$\SI{1.5}{\nano\second}. Le nouveau système enregistrera les hits avec une résoluton de \SI{1}{\nano\second}. Cette amélioration permettra notamment de supprimer les hits de bruit arrivant hors temps, de faciliter la synchronisation du système des RPC. Un déclenchement pour la détection d'hypothétiques particules chargées lourdes et stables, \textit{Heavy Stable Charged Particles} (HSCP) est en cours d'étude.
+	\item le changement du \textit{Link System} des RPC responsable d'envoyer les données des chambres RPC au système de déclenchement et au système de lecture des données. Le \textit{Link System} actuel possède des éléments qui peuvent être perturbés par des bruits électromagnétiques et ne sont pas certifiés pour toute la durée de vie du HL-LHC. De plus le système actuel enregistre les temps des hits avec une résolution temporelle de \SI{25}{\nano\second}, synchronisée avec les croisements de faisceaux de CMS ce qui est un ordre de grandeur au dessus de la résolution des chambres RPC $\sim$\SI{1.5}{\nano\second}. Le nouveau système enregistrera les hits avec une résolution de \SI{1}{\nano\second}. Cette amélioration permettra notamment de supprimer les hits de bruit arrivant hors temps, de faciliter la synchronisation du système des RPC. Un déclenchement pour la détection d'hypothétiques particules chargées lourdes et stables, \textit{Heavy Stable Charged Particles} (HSCP) est en cours d'étude.
 	
 	\item L'instrumentation des régions RE3/1 et RE4/1 (cf.Fig~\ref{end}) par des RPC de nouvelle génération pour les zones RE3/1 et RE4/1. Ces chambres permettront d'étendre l'acceptance géométrique de $|\eta|=\num{1.9}$ à  $|\eta|=\num{2.4}$. L'instrumentation de ces zones a été prévue dès le début de CMS, mais n'avait pas été réalisée à cause des flux de particules importants présents dans ces zones. 
 	
@@ -518,7 +518,7 @@ Avec le passage du LHC au HL-LHC vers 2026, la luminosité est prévue pour êtr
 	\end{figure}
 	Les nouvelles chambres RPC, \textit{improved RPC} (iRPC) auront une meilleure résolution spatiale de l'ordre de quelques centimètres le long des strips \footnote{La courbure de la trajectoire causée par le champ magnétique n'est pas prise en compte.} en utilisant un PCB permettant une lecture des strips des deux côtés. Ce type de lecture et de PCB est l'object du chapitre \ref{time} de cette thèse.
 	\newpage
-	Bien que les CSC puissent identifier et déclencher sur des muons dans la région des bouchons avec une efficacité élevée, ces chambres sont moins efficaces dans certaines zone en $|\eta|$ à cause des spacers dans les chambres. En incluant les hits des RPC dans l'algorithme de recherche de segment élémentaire pour le trigger, il est possible de récupérer une bonne efficacité dans ces zones (cf.Fig~\ref{effii}). Il est également possible de lever les ambiguïtés des hits CSC (\textit{ghost})  au niveau du trigger L1.
+	Bien que les CSC puissent identifier et déclencher sur des muons dans la région des bouchons avec une efficacité élevée, ces chambres sont moins efficaces dans certaines zone en $|\eta|$ à cause des \textit{spacers} dans les chambres. En incluant les hits des RPC dans l'algorithme de recherche de segment élémentaire pour le \textit{trigger}, il est possible de récupérer une bonne efficacité dans ces zones (cf.Fig~\ref{effii}). Il est également possible de lever les ambiguïtés des hits CSC (\textit{ghost})  au niveau du trigger L1.
 	
 	\begin{figure}[ht!]
 	 	\centering
@@ -533,12 +533,12 @@ Avec le passage du LHC au HL-LHC vers 2026, la luminosité est prévue pour êtr
 \end{itemize}
 
 \subsection{Les iRPC retenues par le TDR}
-De nombreux types de chambres différents ont été testés afin de vérifier leurs caractéristiques et de vérifier s'ils étaient de bons candidats en vue de l'instrumentation des zones RE3/1 et RE4/1.
+De nombreux types de chambres différents ont été testés afin de vérifier leurs caractéristiques et de déterminer s'ils étaient de bons candidats en vue de l'instrumentation des zones RE3/1 et RE4/1.
 
-Dans le cadre de cette thèse, des chambres construites à partir de verres de basse résistivité (\SI{10e10}{\ohm\centi\meter}) de taille \num{32}$\times$\SI{30}{\centi\meter\square} ont été testées dans ce but. La caractérisation de ces chambres est l'object du chapitre \ref{glagla}.
+Dans le cadre de cette thèse, des chambres construites à partir de verres de basse résistivité (\SI{10e10}{\ohm\centi\meter}) de taille \num{32}$\times$\SI{30}{\centi\meter\square} ont été testées dans ce but. La caractérisation de ces chambres est l'objet du chapitre \ref{glagla}.
 
 
-Le type de chambre retenu par le TDR comme solution privilégiée est la chambre double gap d'épaisseur \SI{1.4}{\milli\meter} construite avec des électrodes en Bakélite de résistivité comprise entre \num{0.9} et \SI{3.0e10}{\ohm\centi\meter} et d'épaisseur \SI{1.4}{\milli\meter} développées par nos collègues de Kodel entre lesquelles est placé un PCB permettant la lecture des strips des deux côtés, développé par l'IPNL et qui sera décrit au chapitre \ref{time}. 
+Le type de chambre retenu par le TDR comme solution privilégiée est la chambre double \textit{gaps} d'épaisseur \SI{1.4}{\milli\meter} construite avec des électrodes en Bakélite de résistivité comprise entre \num{0.9} et \SI{3.0e10}{\ohm\centi\meter} et d'épaisseur \SI{1.4}{\milli\meter} développées par nos collègues de Kodel entre lesquelles est placé un PCB permettant la lecture des strips des deux côtés, développé par l'IPNL et qui sera décrit au chapitre \ref{time}. 
 
 La figure \ref{datairpc} donne l'efficacité et la taille moyenne d'un amas on fonction de la tension effective appliquée, en absence et en présence d'un flux de gammas de \SI{1.91}{\kilo\hertz\per\square\centi\meter}. Le déplacement du point de fonctionnement est de moins de \SI{300}{\volt} et l'efficacité reste autour des \num{95}\% même en présence du flux de gammas. La chambre utilisée pour ces résultats est de forme trapézoïdale (grande base : \SI{92}{\centi\meter}, petite base : \SI{63}{\centi\meter}, longueur : \SI{166.3}{\centi\meter}) avec une électronique à strips de \SI{2}{\centi\meter} de largeur\footnote{Cette électronique n'est pas la solution privilégié par le TDR.}.
 
@@ -548,7 +548,7 @@ La figure \ref{datairpc} donne l'efficacité et la taille moyenne d'un amas on f
 	\\
 	\subfloat[En présence d'un flux de gammas de \SI{1.91}{\kilo\hertz\per\square\centi\meter}.]{\includegraphics[width=.65\linewidth]{RPC/gamma.png}}
 	\\
-	\caption{Efficacité et taille moyenne d'un amas en fonction de la tension appliqué.}
+	\caption{Efficacité et taille moyenne d'un amas en fonction de la tension appliquée.}
 	\label{datairpc}
 \end{figure}
 

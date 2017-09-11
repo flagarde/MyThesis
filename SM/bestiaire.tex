@@ -1,12 +1,16 @@
 % Standard model of physics
 % Author: Carsten Burgard
 \documentclass[12pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{xcolor,colortbl}
 \definecolor{Orange}{HTML}{FFDD00}
 \definecolor{Green}{HTML}{8FB73E}
 \definecolor{Red}{HTML}{EF4123}
 \definecolor{Blue}{HTML}{1E90FF}
 \usepackage{tikz}
+\usepackage{siunitx}
 \usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing}
 \usepackage{etoolbox}
 \usepackage[french]{babel}
@@ -62,7 +66,7 @@
   \node at(0,-2)   {\particle[Green]
                    {$e$}        {\'electron}       {\SI{4.8}{\kilo\eV/\square\c}}{1/2}{$-1$}{}};
   \node at(0,-3)   {\particle[Green]
-                   {$\nu_e$}    {neutrino \'électronique}         {$<$\SI{2}{\eV/\square\c}}{1/2}{}{}};
+                   {$\nu_e$}    {neutrino électronique}         {$<$\SI{2}{\eV/\square\c}}{1/2}{}{}};
   \node at(1, 0)   {\particle[Orange]
                    {$c$}        {charm}   {\SI{1.28}{\giga\eV/\square\c}}{1/2}{$2/3$}{R/G/B}};
   \node at(1,-1)   {\particle[Orange]
@@ -94,7 +98,7 @@
                    {}           {graviton}                       {}{}{}{}};
 
   \node at(4.25,-0.5) [force]      {force nucléaire forte (couleur)};
-  \node at(4.85,-1.5) [force]    {force \'electromagnetic (charge)};
+  \node at(4.85,-1.5) [force]    {force électromagnetique (charge)};
   \node at(5.45,-2.4) [force] {force nucléaire faible (isospin faible)};
   \node at(6.75,-2.5) [force]        {force gravitationnelle (masse)};
 
@@ -113,15 +117,15 @@
   \draw [mbrace] (2.5,-3.6) -- (5.5,-3.6)
                  node[bottomlabel] {12 bosons};
 
-  \draw [brace] (-0.5,.8) -- (0.5,.8) node[toplabel]         {mati\`ere standard};
-  \draw [brace] (0.5,.8)  -- (2.5,.8) node[toplabel]         {mati\`ere instable};
-  \draw [brace] (2.5,.8)  -- (4.5,.8) node[toplabel]          {m\'ediateur de forces};
+  \draw [brace] (-0.5,.8) -- (0.5,.8) node[toplabel]         {matière standard};
+  \draw [brace] (0.5,.8)  -- (2.5,.8) node[toplabel]         {matière instable};
+  \draw [brace] (2.5,.8)  -- (4.5,.8) node[toplabel]          {médiateur de forces};
   \draw [brace] (4.5,.8)  -- (5.5,.8) node[toplabel]       {boson\\de Goldstone};
-  \draw [brace] (5.5,.8)  -- (7,.8)   node[toplabel] {hors\\Mod\`ele Standard};
+  \draw [brace] (5.5,.8)  -- (7,.8)   node[toplabel] {hors\\Modèle Standard};
 
   \node at (0,1.2)   [generation] {1\iere};
   \node at (1,1.2)   [generation] {2\ieme};
   \node at (2,1.2)   [generation] {3\ieme};
-  \node at (2.8,1.2) [generation] {\tiny g\'en\'eration};
+  \node at (2.8,1.2) [generation] {\tiny génération};
 \end{tikzpicture}
 \end{document}

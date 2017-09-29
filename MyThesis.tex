@@ -28,7 +28,7 @@
 \DeclareTextSymbolDefault{\cyre}{T2A}
 \DeclareTextSymbolDefault{\CYRE}{T2A}
 \DeclareTextSymbolDefault{\cyrf}{T2A}
-\usepackage{caption}
+\usepackage[hypcap=true]{caption}
 \usepackage{collcell}
 \usepackage{booktabs}
 \usepackage{xcolor,colortbl}
@@ -82,7 +82,7 @@
 %%% --- The following two lines are what needs to be added --- %%%
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
-\usepackage[all]{hypcap}
+%\usepackage[all]{hypcap}
 \usepackage[french,tight]{minitoc}
 \hypersetup{colorlinks=true,breaklinks=true,bookmarksopen=true,urlcolor=gray,citecolor=gray,linkcolor=gray}                                                    
 \setlength{\fboxsep}{0mm}
@@ -121,7 +121,7 @@
 	\tikzsetnextfilename{#1}%
 	\input{#1.tex}%
 }
-
+\newcommand*\rot{\rotatebox{90}}
 \usepackage{ifthen}
 \newcommand{\Cpp}[1][]{$\text{C\hspace{-.25ex}}^{_{_{_{++}}}}\ifthenelse{\equal{#1}{}}{}{\text{\hspace{-.625ex}#1}}$}
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
@@ -229,7 +229,7 @@
 	\ClearShipoutPicture
 	\AddToShipoutPicture{}
 }
-
+\usepackage[nokeyprefix]{refstyle}
 \mtcsetdepth{minitoc}{2}
 \mtcsettitle{minitoc}{Contenu :}
 \usepackage{listings}
@@ -482,7 +482,7 @@
 \vspace*{5cm}
 \begin{fquote}[(Ecc. I, 18)][][][275]
 \begin{flushright}
-Qui addit scienciam addit et dolorem
+Qui addit scientiam addit et dolorem
 \end{flushright}
 \end{fquote}
 \end{titlepage}
@@ -516,6 +516,7 @@ Qui addit scienciam addit et dolorem
 \include{ELE/ELE}
 \include{CON/CON}
 \appendix
+\include{TAB/TAB}
 \include{ELOG/ELOG}
 }
 \backmatter

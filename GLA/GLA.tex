@@ -708,6 +708,7 @@ Les valeurs nominales des facteurs d'atténuation ont été calculées dans le c
 Un filtre de correction angulaire en acier est placé de chaque côté de l'irradiateur afin de supprimer la dépendance en $\frac{1}{r^2}$ du courant de photons et de rendre celui-ci uniforme dans le plan $xy$. Cette correction n'est valable que pour les photons de \SI{662}{\kilo\eV}. Pour les photons de plus basse énergie, créés soit par interaction avec la capsule de la source soit par les collimateurs de l'irradiateur, la correction angulaire est beaucoup moins uniforme dans le plan $xy$.
 
 \subsection{Tests en faisceaux (août 2015)}
+\label{GIFFF}
 À partir de juillet \num{2015}, le télescope (cf.Fig~\ref{GIFppChambers}) à été installé au GIF++ afin de reproduire des conditions de bruits de fond $\gamma$ et ainsi étudier les caractéristiques de ces chambres et leur vieillissement sous ces conditions. Les chambres doivent être irradiées pendant plusieurs mois afin d'obtenir une charge intégrée de plus de \SI{1}{\coulomb}, ce qui correspond à la charge accumulée pendant \num{10} ans au HL-LHC.
 Plusieurs périodes de tests en faisceaux sont aussi programmées afin de vérifier l'efficacité des chambres et de constater l'évolution de leurs caractéristiques en fonction du temps. %ainsi vérifier la modification de leurs caractéristiques en fonction du temps.
 
@@ -946,6 +947,7 @@ On remarque une baisse significative de l'efficacité pour un même seuil lorsqu
 Le ELOG du GIF++ contient des menus déroulants et des champs de texte à remplir à chaque nouvelle prise de données. À chaque début de prise de mesures, lors de la création d'une entrée dans le ELOG, la simple lecture du fichier de configuration XML sur la géométrie du détecteur permet déjà de remplir une bonne partie des informations. Le \textit{shifter} peut ensuite compléter les informations manquantes, concernant la source, les atténuateurs, le faisceau etc. La validation d'une entrée ELOG est conditionnée au remplissage des informations les plus utiles selon les circonstances (il est par exemple obligatoire de renseigner les valeurs des atténuateurs si l'état de la source a été sélectionné comme étant "ON"). Cette validation des entrées dans le ELOG permet de s'assurer que la plupart des informations nécessaires à l'analyse des données sont bien présentes. Toutes ces informations sont ensuite exportables sous format XML ou CSV ce qui rend réalisable la création de programmes sélectionnant les fichiers de données automatiquement en fonction du type de scan que l'on souhaite réaliser (scan en tension, atténuateur etc.)
 \vspace*{-0.2cm}
 \section{Vieillissement des chambres au GIF++}
+\label{VIEE}
 \vspace*{-0.4cm}
 Afin de valider le choix des verres de basse résistivité comme électrodes, il est nécessaire d'étudier l'impact d'une exposition longue (correspondant à plusieurs années d'utilisation dans CMS) au bruit de fond. La mesure du courant en fonction du temps donne une idée précise du vieillissement des chambres et permet de calculer la charge totale ayant été déposée sur les électrodes. Selon le TDR, les chambres doivent conserver une bonne efficacité même après avoir subi une charge de \SI{1}{\coulomb\per\square\centi\meter}. En utilisant la source de photons du GIF++, dont le flux est supérieur de plusieurs ordres de grandeur à celui attendu dans les zones où seront instrumentées les chambres, il est possible d'obtenir la charge intégrée de \SI{1}{\coulomb\per\square\centi\meter} dans un temps raisonnable et ainsi d'accélérer le vieillissement des chambres pour vérifier leur évolution dans le temps.
 
@@ -985,6 +987,7 @@ La figure \ref{CourantLR} (\ref{CourantHR}) montre, les valeurs d'atténuateur, 
 La chute du courant en fonction du temps de manière rapide montre un vieillissement prématuré des chambres. Le test en faisceaux de mai 2016 a permis de comprendre les causes de ce vieillissement prématuré.
 
 \subsection{Tests en faisceaux (mai-juin 2016)}
+\label{GIFFF2}
 La structure des \textit{hits} rejetés par \textit{Trivent} pour les cinq chambres pour un facteur d'atténuation de la source de \num{22} est donnée figure \ref{struc}.
 \begin{figure}[ht!]
 	\centering
@@ -1237,6 +1240,7 @@ Nos chambres prototypes sont insérées dans ce banc cosmique. Les \textit{strip
 La phase de lecture est déclenchée dès que les photomultiplicateurs (PM) sont en coïncidence (hormis le PM assurant le veto). L'application LabVIEW\textsuperscript{\textregistered} effectue à chaque lecture une sélection temporelle et affiche les \textit{strips} touchées pour chacun des trois seuils du HARDROC. Elle permet également d'afficher l'histogramme du nombre de fois ou une \textit{strip} a été touchée pour chaque seuil ainsi que la multiplicité pour chaque seuil. L'efficacité ainsi que la multiplicité pour chaque seuil sont aussi calculées.
 
  \subsubsection{Comparaison des efficacités des deux méthodes de construction}
+ \label{BANCC}
 L'utilisation du banc cosmique a permis d'effectuer une mesure de l'efficacité des deux chambres pour comparer les deux méthodes de fabrication.
 
 La figure \ref{comparaison2} montre l'efficacité de détection des muons pour les deux chambres.
@@ -1251,6 +1255,7 @@ La figure \ref{comparaison2} montre l'efficacité de détection des muons pour l
 Les efficacités sont similaires. Le prototype créé par fixation mécanique a cependant été retenu car il présente l'avantage de ne pas utiliser de colle et possède une cassette hermétique résolvant les problèmes rencontrés au GIF++. De plus le gonflement des chambres y est impossible, la pression du gaz étant identique des deux côtés de l'électrode.
 
 \section{Tests en faisceaux au SPS (mai--juin 2016)}
+\label{SPSS2}
 Deux chambres par fixation mécanique ont donc été construites (cf.Fig~\ref{chamverre}), l'une constituée de verre \textit{"float glass"} et l'autre de verre de basse résistivité. Elles ont été instrumentées avec la même électronique que les chambres de CMS (FEB, DB) (cf.section~\ref{elecc}, page~\pageref{elecc}). Chaque chambre possède \num{4} FEB (deux FEB sont placées au dessus des deux autres) et une DB posée sur un support en plexiglas fixé au capot de la chambre (cf.Fig~\ref{plexi}).
 
 \begin{figure}[ht]
@@ -1489,6 +1494,7 @@ Le programme effectue également un calcul du taux de bruit et regroupe les \tex
 La chambre en verre de basse résistivité à été placée au GIF++ en août 2016 puis en octobre 2016.
 \vspace{-0.3cm}
 \subsection{Amélioration de la chambre RE1/1}
+\label{GIFFF3}
 \vspace{-0.3cm}
 Le test en faisceaux du mois d'août nous a permis de comprendre certaines causes du bruit et d'essayer de les supprimer.
 La chambre a donc subi quelques modifications notamment afin d'améliorer la compatibilité électromagnétique (CEM) \cite{charoy2012comp}:
@@ -1565,6 +1571,7 @@ La chambre a donc subi quelques modifications notamment afin d'améliorer la com
 \end{minipage}%
 
 \subsection{Résultats du test en faisceaux d'octobre 2016}
+\label{GIFFF4}
 Grâce aux améliorations de la chambre, la diaphonie semble être devenue négligeable, ce qui a permis d'utiliser l'ajustement de la distribution du nombre de \textit{hits} avec une gaussienne plus constante (cf.Fig~\ref{ajust}).
 \begin{figure}[!ht]
 	\centering
@@ -1657,7 +1664,7 @@ Après le test en faisceaux, nous avons procédé à l'ouverture de la chambre. 
  À certains endroits, le verre a même été attaqué. Ceci pourrait expliquer le bruit important (\SI{400}{\hertz\per\square\centi\meter}) et semble compatible avec les observations faites sur les chambres de petites dimensions. Cependant, la circulation du gaz était régulière et les tuyaux étaient en cuivre afin d'éviter la contamination du gaz par l'humidité. Un test de l'humidité sur la ligne de gaz n'a pas révélé de contamination (\num{750} ppm pour notre ligne sèche contre \num{12000} ppm pour la ligne humide). Ceci nous a amené à penser que le gaz de CMS n'était peut être pas adapté à ces chambres. De plus nos collègues chinois nous ont signalé que le taux de \chemform{SF_6} était peut-être trop faible pour ces verres. L'attaque du verre par le gaz a dû être accéléré par les valeurs du courant lorsque nous avons poussé les valeurs de la haute tension ($>$\SI{10}{\kilo\volt}) à comparer à la valeur de fonctionnement typique de \SI{7}{\kilo\volt}.
  
  \section{Étude du bruit et du courant en fonction du pourcentage de \texorpdfstring{\chemform{SF_6}}{SF6}}
- 
+ \label{SF66}
  Afin de faire les tests de bruit en fonction du pourcentage de \chemform{SF_6} dans le mélange gazeux, la chambre a été démontée et les verres nettoyés de leur peinture. Les verres ont été retournés et repeints des côtés intacts avant d'être remontés faces abîmées en dehors des \textit{gaps}. Le PCB a été changé et une couche de Mylar a été insérée entre les verres et celui-ci. De plus, lors des tests après montage, nous avons constaté des créations de plasma entre les couches des verres sur les bords de ceux-ci. Un film de Kapton a donc été ajouté sur les bords des verres. Le gaz utilisé est celui de ILC (\chemform{TFE}, \chemform{CO_2}, \chemform{SF_6}). En parallèle, un test avec une nouvelle chambre $\num{32}\times\num{30}\si{\square\centi\meter}$ utilisée au GIF++ a été effectué au CERN avec le gaz de CMS, l'électronique basée sur les HARDROC et le PCB à \textit{strips}.
  
  La chambre de type RE1/1 a été amenée au banc de test cosmique précédemment décrit section \ref{banc}, page~\pageref{banc}. La carte de test est la même que précédemment. Cependant, afin de mesurer le taux de bruit de la chambre, la coïncidence des scintillateurs a été remplacée par un générateur de fonctions mimant le signal de la coïncidence des scintillateurs à haute fréquence afin que celle-ci soit largement supérieure au taux de muons traversant la chambre. Les \textit{hits} ainsi enregistrés sont donc majoritairement des \textit{hits} de bruit. Le taux de bruit estimé pour un \textit{strip} $n$ est donné par la formule :
@@ -1720,6 +1727,7 @@ Les deux chambres présentent une bonne efficacité de détection des muons. La 
 
 
 \section{Tests en Faisceaux au GIF++ des chambres \texorpdfstring{\num{32}$\times$\num{30}\si{\square\centi\meter}}{32cm x 30cm} à \textit{strips}}
+\label{GIFF4}
 \label{smallchamber}
 
 Les deux chambres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} double \textit{gaps} à \textit{strips} (cf. figs \ref{DoubleGap}, \ref{SchemePS} et \ref{nouvellestrip}) en verre de basse résistivité et en Bakélite ont été insérées dans le bâti des anciennes chambres de basse résistivité \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.Fig~\ref{bati}) en octobre 2017. Les nouvelles chambres utilisent l'électronique HARDROC, tout comme les anciennes encore présentes sur le bâti. Cependant, il a été décidé de ne pas utiliser le programme développé section \ref{prog}, page~\pageref{prog}. En effet, celui-ci reposant sur la création de traces, afin de calculer l'efficacité des chambres, les anciennes chambres sont nécessaires à leurs créations. Cependant, au vu des vieillissements constatés des chambres, nous avons décidé d'occulter les données récoltées par celles-ci.

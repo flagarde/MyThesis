@@ -1,4 +1,5 @@
-/build
+Thesis/build
+Presentation/build
 *.aux
 *.idx
 *.lof

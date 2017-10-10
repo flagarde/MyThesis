@@ -1,9 +1,9 @@
 #!/bin/sh
 mkdir -p ./build
-lualatex -output-directory=build -draftmode --shell-escape -file-line-error Presentation
-makeglossaries -d ./build Presentation
-biber --output-directory=build Presentation
-lualatex -output-directory=build -draftmode --shell-escape -interaction=batchmode -file-line-error Presentation
+#pdflatex -output-directory=build -draftmode --shell-escape -file-line-error Presentation
+#makeglossaries -d ./build Presentation
+#biber --output-directory=build Presentation
+#lualatex -output-directory=build -draftmode --shell-escape -interaction=batchmode -file-line-error Presentation
 lualatex -output-directory=build --shell-escape -interaction=batchmode -file-line-error -synctex=1 Presentation
 cp ./build/Presentation.pdf ../Presentation.pdf
 #latex2rtf Mythesis.tex

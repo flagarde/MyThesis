@@ -1,15 +1,18 @@
 \documentclass[10pt,a4paper,french]{beamer}
-\usepackage{mmap}
-\usepackage[utf8]{luainputenc}
-\usepackage{polyglossia}
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
 \usepackage{siunitx}
-\setmainlanguage{french}
 \usepackage{graphicx}
-\usepackage{fontspec}
 \usepackage{amsmath}
 \usetheme{Darmstadt}
 \usepackage{xcolor,colortbl}
 \usepackage{subfig}
+\usepackage{tikz}
+\usepackage{lmodern}
+\usepackage{chemist}
+\usetikzlibrary{arrows,shapes,backgrounds}
 \definecolor{Orange}{HTML}{FFDD00}
 \definecolor{Orange2}{HTML}{FFC000}
 \definecolor{Green}{HTML}{8FB73E}
@@ -53,6 +56,8 @@
 }
 
 \begin{document}
+	\tikzstyle{every picture}+=[remember picture]
+	\tikzstyle{na} = [baseline=-.5ex]
 	%titre
 	\begin{frame}
 		\titlepage
@@ -64,14 +69,14 @@
 	\end{frame}
 
 	\section{Introduction}
-	\subsection{Structure de la matière}
-	\begin{frame}
-		\begin{columns}
-			\column{.6\textwidth}
-			\includegraphics[height=0.7\textheight]{structure.jpg}
-			\column{.4\textwidth}
-			\end{columns}
-	\end{frame}
+	%\subsection{Structure de la matière}
+	%\begin{frame}
+	%	\begin{columns}
+	%		\column{.6\textwidth}
+	%		\includegraphics[height=0.7\textheight]{structure.jpg}
+	%		\column{.4\textwidth}
+	%		\end{columns}
+	%\end{frame}
 	\subsection{Les particules élémentaires}
 	\begin{frame}
 	\begin{columns}
@@ -256,11 +261,11 @@
    	\begin{block}{\centering Le HL-LHC (2023-2035)}
    	Augmenter la luminosité $\mathcal{L}(t)$ ($\times$ \SIrange{5}{7}{}):
    	\begin{equation}
-   	N_{event}=\int \mathcal{L}(t)\sigma \mathrm dt
+   	N_{event}=\int_{t=0}^{t=T} \mathcal{L}(t)\sigma \mathrm dt
    	\end{equation}
    	\begin{itemize}
    		\item $\sigma$ est la section efficace du processus
-   		\item $t$ la durée de prise de données
+   		\item $T$ la durée de prise de données
    		\item $\mathcal{L}$ la luminosité instantanée délivrée par le LHC.
    	\end{itemize}
      	\end{block}
@@ -286,7 +291,134 @@
 		\only<6>{\includegraphics[width=0.95\textwidth]{cms_spectro.png}}
 	\end{block}
 	\end{frame}
+    \subsection{Le spectomètre à muons}
+    \begin{frame}
+    \begin{columns}
+    	\column{.5\textwidth}
+    	\begin{block}{\centering Chambres actuelles}
+    		\begin{itemize}
+    			\item \textit{Drift Tube} dans le tonneau
+    			\item \textit{Cathode Strip Chamber} dans les bouchons
+    			\item \textit{Resistive Plate Chamber}  dans les bouchons et le tonneau.
+    		\end{itemize}
+    	\end{block}
+    \visible<2-5>{
+          	\begin{block}{\centering Chambres pour la mise à niveau}
+       	\begin{itemize}
+       		\item <1-| alert@3> \textit{Gas Electron Multiplifier}\,\tikz[na] \coordinate (gem);
+       		\item <1-| alert@4-5> \textit{improved RPC}\,\tikz[na] \coordinate (irpc);
+       	\end{itemize}
+       \end{block}}
+    	\column{.60\textwidth}
+    	\begin{tikzpicture} 
+    		\node [inner sep=0pt,above right]{\includegraphics[width=1\textwidth]{endcap.png}};
+    		\path (5.3,1.4) coordinate (irpc2);
+    		\path (4.9,1.4) coordinate (irpc3);
+    		\path (4.1,1.1) coordinate (gem2);
+    		\path (3.0,1.1) coordinate (gem3);
+    	\end{tikzpicture}
+    \end{columns}
+    \begin{tikzpicture}[overlay]
+		\draw<3> [thin, red,opacity=.8, fill=red,fill opacity=0.3](gem2) circle (4pt);
+		\path<3>[->,>=latex', red, shorten >=4pt, opacity=.6] (gem) edge  (gem2);
+		\draw<3> [thin, red,opacity=.8, fill=red,fill opacity=0.3](gem3) circle (4pt);
+		\path<3>[->,>=latex', red, shorten >=4pt, opacity=.6] (gem) edge  (gem3);
+		\draw<4> [thin, red,opacity=.8, fill=red,fill opacity=0.3](irpc2) circle (4pt);
+		\path<4>[->, >=latex', red, shorten >=4pt, opacity=.6] (irpc) edge  (irpc2);
+		\draw<4> [thin, red,opacity=.8, fill=red,fill opacity=0.3](irpc3) circle (4pt);
+		\path<4>[->, >=latex', red, shorten >=4pt, opacity=.6] (irpc) edge (irpc3);
+		\draw<5> [thin, red,opacity=.8, fill=red,fill opacity=0.3](irpc2) circle (4pt);
+		\path<5>[->, >=latex', red, shorten >=4pt, opacity=.6] (irpc) edge  (irpc2);
+		\draw<5> [thin, red,opacity=.8, fill=red,fill opacity=0.3](irpc3) circle (4pt);
+		\path<5>[->, >=latex', red, shorten >=4pt, opacity=.6] (irpc) edge (irpc3);
+	\end{tikzpicture}
+	\end{frame}
 	\section{RPC}
+	\subsection{Description d'une RPC}
+	\begin{frame}
+	\begin{block}{\centering Schéma typique d'une RPC}
+		\includegraphics[width=1\linewidth]{scheme_first.png}
+	\end{block}
+    \visible<2-5>{
+	\begin{block}{Le mode avalanche}
+		\only<2>{\includegraphics[width=1\linewidth]{avalanche-1.png}}
+		\only<2>{\centering Ionisation primaire.}
+		\only<3>{\includegraphics[width=1\linewidth]{avalanche-2.png}}
+		\only<3>{\centering Ionisation secondaires. Création de l'avalanche.}
+		\only<4>{\includegraphics[width=1\linewidth]{avalanche-3.png}}
+		\only<4>{\centering Les électrons atteignent l'anode, les ions sont beaucoup plus lents.}
+		\only<5>{\includegraphics[width=1\linewidth]{avalanche-4.png}}
+		\only<5>{\centering Les charges sur les électrodes induisent un temps mort.}
+	\end{block}}
+	\end{frame}	
+    \subsection{Les RPC dans les bouchons de CMS}
+    \begin{frame}
+    \begin{block}{\centering Les détecteurs}
+   	\includegraphics[width=0.6\linewidth]{CMSRPC.png}\includegraphics[width=0.4\linewidth]{gaps.png}
+    	\begin{itemize}
+    		\item Chambre \textit{double gaps} de \SI{2}{\milli\meter}
+    		\item Électrodes en Bakélite ($\rho=1-6\times10^{10}$\si{\ohm\centi\meter})
+    		\item Gas gap de \SI{2}{\milli\meter}
+    	\end{itemize}
+    \end{block}
+	\begin{block}{\centering Mélange gazeux}
+			\begin{itemize}
+				\item 95.2\% de Tétrafluoroéthane \chemform{C_2H_2F_4} (R-134a).
+				\item \num{4.5}\% d'isobutane \chemform{iso-C_4H_{10}}, absorbeur de photons UV. 
+				\item \num{0.3}\% d'hexafluorure de soufre \chemform{SF_6}, capture l'excès d'électrons.
+			\end{itemize}
+	\end{block}
+	\end{frame}
+  	\begin{frame}
+	\begin{block}{\centering Électronique}
+			\begin{itemize}
+				\item Partition en $\eta$ (A,B,C) de 32 strips chacunes. 
+				\item 3 Front-End Boards (mise en forme du signal).
+				\begin{center}
+				\includegraphics[width=0.35\linewidth]{Feb.png}
+				\end{center}
+				\item Distribution Board (paramètrage des FEBs).
+				\begin{center}
+				\includegraphics[width=0.30\linewidth]{DB.png}
+				\end{center}
+			\end{itemize}
+	\end{block}
+	\end{frame}
+	\subsection{Mise à niveau des RPC}
+	\begin{frame}
+    	\begin{block}{Instrumentation des zone RE3/1 et RE4/1 (1.8<$\eta$<2.4)}
+    		\begin{itemize}
+    			\item Améliorer la résolution temporelle des traces muons
+    			 	\begin{center}
+    				\includegraphics[width=0.45\linewidth]{intrasec.png}
+    			\end{center}
+    			\item recouvrer les zones moins efficaces des CSC
+    			\begin{center}
+    				\includegraphics[width=0.35\linewidth]{effstation4.png}
+    			\end{center}
+    			\item Augmenter la redondance dans cette zone (En cas de CSC défaillants)
+    		\end{itemize}
+    	\end{block}
+	\end{frame}
+	\subsection{Les improved Resistive Plate Chambers}
+	\begin{frame}
+	Les RPC actuelles sont incapables de supporter le flux de particules présents dans les zones RE3/1 et RE4/1
+	\begin{block}{\centering improved Resistive Plate Chambers}
+	\begin{itemize}
+		\item Résister au flux de particules ($\sim$\SI{700}{\hertz\per\square\centi\meter}),
+		\item (\SI{2}{\kilo\hertz\per\square\centi\meter}) en prenant en compte un facteur 3 de sécurité
+	\end{itemize}
+	\end{block}
+	
+	\begin{block}{\centering Possibilités}
+		\begin{itemize}
+		\item Réduire l'épaisseur $d$ des électrodes $\rightarrow$ Nouvelles chambres Bakélite
+		\item Réduire la charge $q$ créée par l'avalanche $\rightarrow$ Réduire l'épaisseur de gas.
+		\item {\only<2>{\color{red}}Réduire la résistivité des électrodes $\rightarrow$ \textit{Low Resistivity Glass}}
+	\end{itemize}
+	\end{block}
+	\end{frame}
+
 	\section{Électrodes de verre de basse résistivité}
 	\section{Électronique pour le timing}
 	\section{Conclusion}

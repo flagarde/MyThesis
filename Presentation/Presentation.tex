@@ -38,12 +38,6 @@
 	\setbeamercolor{block body}{fg=black, bg=Red}%
 	\begin{block}#2{#1}}{\end{block}}
 
-%\setbeamercolor{block title}{use=structure,fg=structure.fg,bg=structure.fg!20!bg}
-%\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!50!bg}
-
-%\setbeamercolor{block title example}{use=example text,fg=example text.fg,bg=example text.fg!20!bg}
-%\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!50!bg}
-
 \addtobeamertemplate{proof begin}{%
 	\setbeamercolor{block title}{fg=black,bg=red!50!white}
 	\setbeamercolor{block body}{fg=red, bg=red!30!white}
@@ -78,6 +72,11 @@
 \DeclareSIUnit{\hit}{Hits}
 \DeclareSIUnit{\hitt}{Hit}
 \DeclareSIUnit{\strip}{Strip}
+\usepackage{appendixnumberbeamer}
+% Add total frame count to slides, optional. From Stefan,
+% http://www.latex-community.org/forum/viewtopic.php?f=4&t=2173
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+	\insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
 
 \mode<presentation>
 \title{Caractérisation de détecteurs à plaques résistives de verres de basse résistivité en vue de la mise à niveau de CMS} 
@@ -101,24 +100,16 @@
 	%sommaire
 	\begin{frame}
 		\frametitle{Sommaire}
-		\tableofcontents[pausesections,hideallsubsections]
+		\tableofcontents[hideallsubsections]
 	\end{frame}
 
 	\section{Contexte}
-	%\subsection{Structure de la matière}
-	%\begin{frame}
-	%	\begin{columns}
-	%		\column{.6\textwidth}
-	%		\includegraphics[height=0.7\textheight]{structure.jpg}
-	%		\column{.4\textwidth}
-	%		\end{columns}
-	%\end{frame}
-	\subsection{Les particules élémentaires}
+	\subsection{Les particules élémentaires, le Modèle Standard}
 	\begin{frame}
 	\begin{columns}
 		\column{.6\textwidth}
 		\begin{center}
-		\includegraphics[height=0.7\textheight]{bestiaire.png}
+		\includegraphics[height=0.6\textheight]{bestiaire.png}
 		\end{center}
 		\column{.45\textwidth}
 		\begin{block}{\centering Fermions (Spin demi-entier)}
@@ -144,86 +135,23 @@
 			\end{itemize}
 		\end{block}
 	\end{columns}
-	\end{frame}
-	\subsection{Le Modèle Standard}
-	\begin{frame}
-	    \begin{block}{\centering Le modèle standard}
-	    	\begin{itemize}
-	    		\item Théorie non-abélienne
-	    		\item Théorie perturbative
-	    		\item Théorie quantique des champs (relativiste et quantique)
-	    		\item l'ensemble des informations de la théorie est contenue dans un Lagrangien $\mathcal{L_{MS}}$
-	    	\end{itemize}
-	    \end{block}
-		\begin{block}{\centering Lagrangien du Modèle Standard}
-			\begin{equation}
-			\only<1>{\mathcal{L_{MS}}=\textcolor{red}{\mathcal{L}_{\mathrm{Yang-Mills}}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
-			\only<2>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\textcolor{red}{\mathcal{L}_{\mathrm{Dirac}}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
-			\only<3>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\textcolor{red}{\mathcal{L}_{\mathrm{Higgs}}}+\mathcal{L}_{\mathrm{Yukawa}}}
-			\only<4>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\textcolor{red}{\mathcal{L}_{\mathrm{Yukawa}}}}
-			\end{equation}
-			\begin{itemize}
-				\item {\only<1>{\color{red}}$\mathcal{L}_{\mathrm{Yang-Mills}}$ Partie cinétique des champs de jauges.}
-
-				\item {\only<2>{\color{red}}$\mathcal{L}_{\mathrm{Dirac}}$ Interactions entre fermions et bosons de jauges.}
-
-				\item {\only<3>{\color{red}}$\mathcal{L}_{\mathrm{Higgs}}$ Donne la masse aux bosons $Z^{0}$,$Z^{\pm}$.}
-
-				\item {\only<4>{\color{red}}$\mathcal{L}_{\mathrm{Yukawa}}$ Interactions entre le boson de Higgs et les fermions (donne une partie de la masse des fermions).}
-			\end{itemize}
-		\end{block}
-	\end{frame}
-	\subsection{Succès et lacunes du Modèle Standard}
-	\begin{frame}
-	\begin{columns}
-		\column{.5\textwidth}
-		\begin{vert}{\centering Ses succès}
-			\begin{itemize}
-				\item Prédiction du courant neutre
-				\item Théorie renormalisable
-				\item Excellents accords avec les mesures expérimentales 
-			\end{itemize}
-			\vspace*{-0.5cm}
-			\begin{figure}[ht!]
-				\centering
-				\includegraphics[width=0.60\textwidth]{mesure.png}
-				%\caption{Comparaison des résultats d'ajustement avec les mesures directes de certains paramètres du Modèle Standard.}
-			\end{figure}
-		\end{vert}
-		\column{.5\textwidth}
-		\begin{rouge}{\centering Ses lacunes}
+	\begin{block}{\centering Lagrangien du Modèle Standard}
+		\begin{equation}
+		\only<1>{\mathcal{L_{MS}}=\textcolor{red}{\mathcal{L}_{\mathrm{Yang-Mills}}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
+		\only<2>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\textcolor{red}{\mathcal{L}_{\mathrm{Dirac}}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
+		\only<3>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\textcolor{red}{\mathcal{L}_{\mathrm{Higgs}}}+\mathcal{L}_{\mathrm{Yukawa}}}
+		\only<4>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\textcolor{red}{\mathcal{L}_{\mathrm{Yukawa}}}}
+		\end{equation}
+		\begin{overlayarea}{0.99\textwidth}{1cm}
 		\begin{itemize}
-			\item Le nombre de familles
-			\item Asymétrie baryon-antibaryons
-			\item Gravitation non incluse
-			\item Matière Noire et Énergie Noire 
-			\begin{center}
-			\includegraphics[width=0.50\textwidth]{darkmatter.png}
-			\end{center}
-			\item Le nombre important de paramètres libres
-			\item Neutrinos massifs
-			\item non unification des couplages
-			\item Naturalité
+			{\only<1>{\color{red}\item $\mathcal{L}_{\mathrm{Yang-Mills}}$ Partie cinétique des champs de jauges.}}
+			{\only<2>{\color{red}\item $\mathcal{L}_{\mathrm{Dirac}}$ Interactions entre fermions et bosons de jauges.}}
+			{\only<3>{\color{red}\item $\mathcal{L}_{\mathrm{Higgs}}$ Donne la masse aux bosons $Z^{0}$,$W^{\pm}$.}}
+			{\only<4>{\color{red}\item $\mathcal{L}_{\mathrm{Yukawa}}$ Interactions entre le boson de Higgs et les fermions.}}
 		\end{itemize}
-		\end{rouge}
-	\end{columns}
-	\end{frame}
-	\subsection{Au-delà du Modèle Standard}
-	\begin{frame}
-		\begin{block}{\centering Modèles au-delà du Modèle standard}
-			Extension du Modèle Standard :
-			\begin{itemize}
-				\item \textit{Grand Unified Theories} : unifier les interactions sous une même symétrie.
-				Basé sur un groupe $G\supset SU(3)\times SU(2) \times U(1)$
-				\item Supersymétrie (SuSy) : supprimer le problème de la naturalité en associant à chaque fermions un  boson superpartenaire et réciproquement. 
-				\begin{figure}
-					\centering
-					\includegraphics[width=0.60\textwidth]{SuSy.png}
-				\end{figure}
-				\item Modèle avec dimensions supplémentaires enroulées.
-			\end{itemize}
-		\end{block}
-	\end{frame}
+		\end{overlayarea}
+	\end{block}
+\end{frame}
 	\subsection{Le complexe d'accélération du CERN}	
 	\begin{frame}
 	    	\begin{columns}
@@ -232,40 +160,16 @@
 	    		\includegraphics[width=1.1\textwidth]{complexe.png}
 	    		\end{center}
 	    		\column{.5\textwidth}
-	    		\begin{block}{ Pour les collisions proton-proton}
+	    		\begin{block}{\centering Pour les collisions proton-proton}
 	    			\begin{itemize}
 	    				\item LINAC 2 ($\SI{50}{\mega\eV}$)
 	    				\item BOOSTER ($\SI{1.4}{\giga\eV}$)
-	    				\item {\only<2>{\color{red}}Synchrotron à protons (PS) ($\SI{25}{\giga\eV}$)}
-	    				\item {\only<3>{\color{red}}SuperSynchrotron à protons (SPS) ($\SI{450}{\giga\eV}$)}
+	    				\item Synchrotron à protons (PS) ($\SI{25}{\giga\eV}$)
+	    				\item SuperSynchrotron à protons (SPS) ($\SI{450}{\giga\eV}$)
 	    				\item Large Hadron Collider (LHC) ($\SI{7}{\tera\eV}$)
 	    			\end{itemize}
 	    		\end{block}
 	    \end{columns}
-		\only<2>{\begin{block}{\centering Ligne de faisceaux (East Area)}
-			\begin{itemize}
-				\item Particules : électrons, hadrons, muons...
-				\item quantité de mouvement : \SIrange{1}{15}{\giga\eV}
-				\item Intensité du faisceau : $\sim1-2\times 10^{6}$part/Spill
-				\item Structure du Spill : 
-				\begin{itemize}
-					\item \SI{400}{\milli\second} 
-					\item 1 Spill toute les \SI{33}{\second} (ou plus)
-				\end{itemize}
-			\end{itemize}
-		\end{block}}
-		\only<3>{\begin{block}{\centering Ligne de faisceaux (North Area)}
-				\begin{itemize}
-					\item Particules : électrons, hadrons, muons...
-					\item quantité de mouvement : \SIrange{10}{400}{\giga\eV}
-					\item Intensité du faisceau : $\sim1-2\times 10^{8}$part/Spill
-					\item Structure du Spill : 
-					\begin{itemize}
-						\item \SIrange{4.8}{9.6}{\second} 
-						\item 1 Spill toute les \SIrange{14}{48}{\second}
-					\end{itemize}
-				\end{itemize}
-		\end{block}}
 	\end{frame}
 	\subsection{Le LHC}
 	\begin{frame}
@@ -275,14 +179,13 @@
 		\includegraphics[width=0.99\textwidth]{lhc-schematic.jpg}
 		\end{center}
 		\column{.65\textwidth}
-		\begin{block}{Le LHC}
+		\begin{block}{\centering Le LHC}
 			\begin{itemize}
 				\item Collisions p-p, ion-ion, ion-proton
 				\item \SI{27}{\kilo\meter} de circonférence
-				\item 600 000 collisions par seconde
-				\item $\sqrt{s}=\SI{14}{\tera\eV}$
+				\item 1 collision toutes les \SI{25}{\nano\second}
+				\item $\sqrt{s_{pp}}=\SI{14}{\tera\eV}$
 				\item Luminosité instantanée $\sim\SI{e34}{\per\square\centi\meter\per\second}$
-				\item \textit{pile-up} $\sim\num{40}$
 			\end{itemize}
 		\end{block}
 	\end{columns}
@@ -315,22 +218,19 @@
      	\end{block}
    \column{.5\textwidth}
    \begin{center}
-   \only<1>{\includegraphics[width=1\textwidth]{roadmap.png}}
-   \end{center}
-	\begin{center}
-   \only<2-3>{\includegraphics[width=1\textwidth]{man.jpg}}
+   \includegraphics[width=1\textwidth]{roadmap.png}
    \end{center}
    	\end{columns}
-   \visible<3>
+   \visible<2>
   	{
   		\begin{block}{}
   		{\color{red}Augmentation de la luminosité $\Rightarrow$ Augmentation du \textit{pile-up} ($\sim$ 140-200) et du flux de particules dans les détecteurs $\Rightarrow$ Mise à niveau de CMS.}
   		\end{block}
   	}
 	\end{frame}
-	\subsection{CMS}
+	\subsection{Le Compact Muon Solenoid (CMS)}
 	\begin{frame}
-	\begin{block}{\centering CMS}
+	\begin{block}{\centering Le Compact Muon Solenoid (CMS)}
 		\only<1>{\begin{center}
 		\includegraphics[width=0.95\textwidth]{cms_empty.png}
 		\end{center}}
@@ -362,11 +262,11 @@
     			\item \textit{Resistive Plate Chamber}  dans les bouchons et le tonneau.
     		\end{itemize}
     	\end{block}
-    \visible<2-5>{
+    \visible<2-4>{
           	\begin{block}{\centering Chambres pour la mise à niveau}
        	\begin{itemize}
        		\item <1-| alert@3> \textit{Gas Electron Multiplier}\,\tikz[na] \coordinate (gem);
-       		\item <1-| alert@4-5> \textit{improved RPC}\,\tikz[na] \coordinate (irpc);
+       		\item <1-| alert@4> \textit{improved RPC}\,\tikz[na] \coordinate (irpc);
        	\end{itemize}
        \end{block}}
     	\column{.60\textwidth}
@@ -387,22 +287,20 @@
 		\path<4>[->, >=latex', red, shorten >=4pt, opacity=.6] (irpc) edge  (irpc2);
 		\draw<4> [thin, red,opacity=.8, fill=red,fill opacity=0.3](irpc3) circle (4pt);
 		\path<4>[->, >=latex', red, shorten >=4pt, opacity=.6] (irpc) edge (irpc3);
-		\draw<5> [thin, red,opacity=.8, fill=red,fill opacity=0.3](irpc2) circle (4pt);
-		\path<5>[->, >=latex', red, shorten >=4pt, opacity=.6] (irpc) edge  (irpc2);
-		\draw<5> [thin, red,opacity=.8, fill=red,fill opacity=0.3](irpc3) circle (4pt);
-		\path<5>[->, >=latex', red, shorten >=4pt, opacity=.6] (irpc) edge (irpc3);
 	\end{tikzpicture}
 	\end{frame}
-	\section{RPC}
+	\section[RPC]{Les Resistive Plate Chambers (RPC)}
 	\subsection{Description d'une RPC}
 	\begin{frame}
+	\begin{overlayarea}{0.99\textwidth}{8cm}
 	\begin{block}{\centering Schéma typique d'une RPC}
 		\begin{center}
 		\includegraphics[width=1\linewidth]{scheme_first.png}
 		\end{center}
 	\end{block}
     \visible<2-5>{
-	\begin{block}{Le mode avalanche}
+	\begin{block}{\centering Le mode avalanche}
+		\begin{overlayarea}{0.99\textwidth}{4cm}
 		\begin{center}
 		\only<2>{\includegraphics[width=1\linewidth]{avalanche-1.png}}
 		\only<2>{\centering Ionisation primaire.}
@@ -413,7 +311,9 @@
 		\only<5>{\includegraphics[width=1\linewidth]{avalanche-4.png}}
 		\only<5>{\centering Les charges sur les électrodes induisent un temps mort.}
 		\end{center}
+		\end{overlayarea}
 	\end{block}}
+    \end{overlayarea}
 	\end{frame}	
     \subsection{Les RPC dans les bouchons de CMS}
     \begin{frame}
@@ -434,37 +334,6 @@
 				\item \num{0.3}\% d'hexafluorure de soufre \chemform{SF_6}, capture l'excès d'électrons.
 			\end{itemize}
 	\end{block}
-	\end{frame}
-  	\begin{frame}
-	\begin{block}{\centering Électronique}
-			\begin{itemize}
-				\item Partition en $\eta$ (A,B,C) de 32 strips chacunes. 
-				\item 3 Front-End Boards (mise en forme du signal).
-				\begin{center}
-				\includegraphics[width=0.35\linewidth]{Feb.png}
-				\end{center}
-				\item Distribution Board (paramètrage des FEBs).
-				\begin{center}
-				\includegraphics[width=0.30\linewidth]{DB.png}
-				\end{center}
-			\end{itemize}
-	\end{block}
-	\end{frame}
-	\subsection{Mise à niveau des RPC}
-	\begin{frame}
-    	\begin{block}{Instrumentation des zone RE3/1 et RE4/1 (1.8<$\eta$<2.4)}
-    		\begin{itemize}
-    			\item Améliorer la résolution temporelle des traces muons
-    			 	\begin{center}
-    				\includegraphics[width=0.45\linewidth]{intrasec.png}
-    			\end{center}
-    			\item recouvrer les zones moins efficaces des CSC
-    			\begin{center}
-    				\includegraphics[width=0.35\linewidth]{effstation4.png}
-    			\end{center}
-    			\item Augmenter la redondance dans cette zone (En cas de CSC défaillants)
-    		\end{itemize}
-    	\end{block}
 	\end{frame}
 	\subsection{Les improved Resistive Plate Chambers}
 	\begin{frame}
@@ -489,7 +358,7 @@
 	\begin{frame}
 	\begin{columns}
 		\column{.65\textwidth}
-		\begin{block}{Caractéristiques}
+		\begin{block}{\centering Caractéristiques}
 			\begin{itemize}
 				\item {\only<2>{\color{red}}Dimension maximale} : {\only<2>{\color{red}}\SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}}
 				\item {\only<2>{\color{green}}Résistivité volumique} : {\only<2>{\color{green}}\SI{e10}{\ohm.\centi\meter}}
@@ -557,7 +426,7 @@
     		\item L'efficacité de détection :  le rapport entre le nombre de particules ayant réellement été détectées et le nombre total de particules ayant traversé la chambre. 
     		\item La multiplicité (\textit{Cluster Size}) : Le nombre de pads ou strips touchés lorsqu’une particule traverse la chambre.
     		\item Le bruit électronique : La fréquence de détection par l’électronique, d’un signal considéré comme non physique. 
-    		\item Sensibilité au bruit de fond (photons, neutrons)
+    		\item Sensibilité au bruit de fond (photons, neutrons, \ldots)
     		\item Le vieillissement : Évolution des caractéristiques de la chambre en fonction du temps.
     	\end{itemize}
     \end{block}
@@ -588,7 +457,7 @@
 	\begin{frame}
 		\begin{columns}
 			\column{.6\textwidth}
-			\begin{block}{Test du programme d'analyse}
+			\begin{block}{\centering Test du programme d'analyse}
 				Simulation GEANT4 de SDHCAL développée à l'IPNL 
 				\begin{itemize}
 					\item Calcul de la longueur des segments contenus dans le volume de gaz correspondant à un pads $C_{0}$
@@ -601,36 +470,10 @@
 				\end{itemize}
 			\end{block}
 			\column{.5\textwidth}
+			\begin{center}
 			\includegraphics[width=1\textwidth]{effisimul.jpg}
+			\end{center}
 		\end{columns}
-	\end{frame}
-	\subsection{Premiers résultats à DESY (janvier 2012)}
-		\begin{frame}
-			\begin{columns}
-			\column{.6\textwidth}
-			\begin{block}{\centering Chambres}
-				\begin{itemize}
-						\item 5 chambres (1 "float glass", 4 "Basse Résistivité")
-					\item Électronique HARDROC 
-					\item Pads
-				\end{itemize}
-			\end{block}
-		    \begin{block}{\centering Faisceau}
-		    	\begin{itemize}
-		    	\item Électrons (Jusqu'à \SI{6}{\giga\eV})
-		    	\item  Surface de quelques \si{\square\centi\meter}
-		    \end{itemize}
-		    \end{block}
-	        \begin{block}{\centering Mélange gazeux (ILC)}
-	        	\begin{itemize}
-				\item 93\% de Tétrafluoroéthane \chemform{C_2H_2F_4}.
-				\item \num{5}\% \chemform{CO_2}, absorbeur de photons UV. 
-				\item \num{2}\% d'hexafluorure de soufre \chemform{SF_6}, capture l'excès d'électrons.
-			\end{itemize}
-	        \end{block}
-			\column{.5\textwidth}
-			\includegraphics[width=1\textwidth]{effiDesy.png}
-			\end{columns}
 	\end{frame}
     \subsection{Test en faisceaux au PS (Zone Est) en juin 2014}
     \begin{frame}
@@ -640,10 +483,14 @@
     			\begin{itemize}
     				\item 8 chambres
     				\item 5 "float glass", 3 "Basse Résistivité"
+    				\begin{center}
     				\includegraphics[width=0.65\textwidth]{TelescopePS.png}
+    				\end{center}
     				\item Électronique HARDROC 
     				\item 7 à Pads, 1 à strips (Double gaps)
+    				\begin{center}
     				\includegraphics[width=0.8\textwidth]{DoubleGap.png}
+    				\end{center}
     			\end{itemize}
     		\end{block}
     		\column{.5\textwidth}
@@ -683,7 +530,7 @@
 			\column{.50\textwidth}
 			\begin{itemize}
 				
-				\item 5 chambres
+				\item 5 chambres single-gap à pads
 				\item Électronique HARDROC 
 				\item Faisceau de muon 
 			\end{itemize}
@@ -711,7 +558,7 @@
 			\scalebox{1.1}{\includetex{RateSPS}}
 		\end{center}
 		Les verres de basse résistivité ont une efficacité supérieur à 70\% même à plus de \SI{7}{\kilo\hertz\per\square\centi\meter}.\\
-		L'Éficacité du verre "standard" chute brutalement $\sim$40\% à \SI{0.1}{\kilo\hertz\per\square\centi\meter}.
+		L'Efficacité du verre "standard" chute brutalement $\sim$40\% à \SI{0.1}{\kilo\hertz\per\square\centi\meter}.
 	\end{block}}
 	\only<2>{
 	\begin{block}{\centering Multiplicité en fonction du flux de muons}
@@ -727,7 +574,7 @@
 			\begin{block}{\centering Le GIF++}
 				\begin{itemize}
 					\item Placé sur la ligne H4 du SPS.
-					\item Faisceau de muons \SI{100}{\giga\eV}
+					\item Faisceau de muons \SI{150}{\giga\eV}
 					\item Source radioactive :  Cs$^{137}$ (\SI{14}{\tera\becquerel}) 
 				\end{itemize}
 			\end{block}
@@ -799,11 +646,6 @@
 	\subsection{Vieillissement des chambres}
 	\begin{frame}
 	Les chambres doivent supporter une charge intégrée de \SI{1}{\coulomb\per\square\centi\meter}. \\
-	%\begin{block}{\centering Valeur de l'atténuateur}
-	%	\begin{center}
-	%	\includegraphics[width=0.6\textwidth]{DIF32_HR_4.png}
-	%	\end{center}
-	%\end{block}
 	\begin{block}{\centering Charges intégrées en fonction du nombre de jours effectifs}
 			\begin{center}
 			Float glass
@@ -835,8 +677,10 @@
 	\end{frame}
 	\subsection{Test en faisceau au GIF++ (mai-juin 2016)}
 	\begin{frame}
-		\begin{block}{Courant parcourant les chambres en l'inverse de la valeur d'atténuation}
+		\begin{block}{\centering Courant parcourant les chambres en l'inverse de la valeur d'atténuation}
+			\begin{center}
 			\includegraphics[width=0.8\textwidth]{current_same_HV.png}
+			\end{center}
 		\end{block}
 		La saturation arrive autour d'un facteur d'atténuation 68.1 pour la float glass alors que la chambre de verre de basse résistivité ne semble pas saturer. 
 	\end{frame}
@@ -866,7 +710,7 @@
 			\hline
 		\end{tabular} 
 	\end{columns}
-{\color{red} La résistivité des verres de basses résistivité est beaucoup plus élevé qu'attendue $sim$\SI{1e10}{\omega\centi\meter}}	
+{\color{red} La résistivité des verres de basses résistivité est beaucoup plus élevé qu'attendue $\sim$\SI{1e10}{\ohm\centi\meter}}	
 \end{block}	
 
 	\end{frame}
@@ -874,7 +718,7 @@
 	\begin{frame}
 	\begin{columns}
 	\column{.40\textwidth}
-	\begin{block}{Ouverture d'une chambre}
+	\begin{block}{\centering Ouverture d'une chambre}
 		\begin{center}
 	\includegraphics[width=0.5\textwidth]{depot.jpg}
 	\end{center}
@@ -904,11 +748,12 @@
 			$\Rightarrow$ depôt 
 			\item Attaque du verre par l'acide fluorhydrique \\
 			$\Rightarrow$ dépôt aqueux d'acide fluorosilicique (\chemform{H_2SiF_6}) \\
-			$\Rightarrow$ Diminution de la résistivité et augmentation du taux de bruit.
+			%$\Rightarrow$ Diminution de la résistivité et augmentation du taux de bruit.
 			\end{itemize}
 	\end{block}
 	\end{columns}
 	\end{frame}
+	\section{Chambres de grandes dimensions}
 	\subsection{Construction de chambre de grande taille (RE1/1)}
 	\begin{frame}
 	\begin{center}
@@ -917,21 +762,30 @@
 		\begin{block}{\centering Méthode par collage}
 				\begin{columns}
 				\column{.45\textwidth}
-				\includegraphics[width=0.5\textwidth]{Glass-glued.png}
+				\begin{center}
+					\includegraphics[width=0.5\textwidth]{Glass-glued.png}
+				\end{center}
 				\column{.45\textwidth}
+				\begin{center}
 				\includegraphics[width=0.7\textwidth]{Glass-glued2.png}
+				\end{center}
 				\end{columns}
 				Les gaps sont hermétiques.
 		\end{block}
 		\begin{block}{\centering Méthode par fixation mécanique}
 			\begin{columns}
 			\column{.45\textwidth}
-			\includegraphics[width=0.5\textwidth]{meca1.jpg}
+			\begin{center}
+				\includegraphics[width=0.5\textwidth]{meca1.png}
+			\end{center}
 			\column{.45\textwidth}
+			\begin{center}
 			\includegraphics[width=0.5\textwidth]{meca2.png}
+			\end{center}
 		\end{columns}
-			
+			\begin{center}
 			La cassette est hermétique.
+			\end{center}
 		\end{block}
 	\end{frame}
 
@@ -959,7 +813,7 @@
 	\begin{block}{\centering Setup}
 		\begin{itemize}
 			\item 2 chambres RE1/1 
-			\includegraphics[width=0.5\textwidth]{ChamberFloat.png}
+			\includegraphics[width=1\textwidth]{ChamberFloat.png}
 			\item Fixation mécanique
 			\item 1 verre standard
 			\item 1 verre basse résistivité
@@ -975,72 +829,22 @@
 			\includegraphics[width=0.55\textwidth]{HVNOISEH2.png}
 		\end{center}
 	\end{block}
-	\begin{block}{\centering Bruit en fonction du seuils}
-		\begin{center}
-	\includegraphics[width=0.55\textwidth]{THNOISEH2.png}
-	\end{center}
-	\end{block}
+	%\begin{block}{\centering Bruit en fonction du seuils}
+	%	\begin{center}
+	%\includegraphics[width=0.55\textwidth]{THNOISEH2.png}
+	%\end{center}
+	%\end{block}
 \end{columns}
 \begin{center}
 	Bruit très important $\sim\SI{e5}{\hit\per\strip\per\second}$ pour le verre basse résistivité.
 	Réduction d'un facteur $\sim100$ après amélioration du câblage.
 \end{center}
 \end{frame}
-
-\subsection{Programme d'analyse pour les chambres à électronique CMS}
-{\fontsize{8pt}{7.2}\selectfont
-\begin{frame}
-\begin{overlayarea}{0.99\textwidth}{8cm}
-\begin{block}{\centering Méthode de suppression du bruit}
-	\begin{center}
-	Sélection de la zone temporelle du signal:
-	\end{center}
-		\vspace*{-0.3cm}
-		\begin{itemize}
-			\item Réalignement des timestamps des hits avec le timestamp moyen de la chambre.
-			\visible<2->{\item Ajustement de la distribution des hits en fonction du timestamp par une Gaussienne+constante}
-			\only<2-3>{\begin{center}\scalebox{0.3}{\includetex{fitting_aligned}}\end{center}}
-			\visible<3->{\item Sélection de la fenêtre [$\mu$-3$\sigma$,$\mu$-3$\sigma$]}
-		\end{itemize}
-		\visible<4->{\begin{center}
-		Estimation de l'efficacité réelle:
-	\end{center}}
-	\vspace*{-0.3cm}
-	\begin{itemize}
-	\visible<5->{\item Calcule de l'efficacité dans la zone du signal $\epsilon^{signal}$}
-	\visible<6->{\item Découpe de la partie temporelle avant le signal en intervalles $I_{n}=\left[t_{n}-t_{win},t_{n}+t_{win}\right]$}
-	\visible<7->{\item Calcul de l'efficacité $\epsilon^{bruit}$ et du taux moyens de bruit $\overline{N^{hits}_n}$ dans ces intervalles.}
-	\visible<8->{\item Sélection de $I_{n}$ pour lequel $\overline{N^{hits}_n}$ est maximale.}
-	\visible<9->{\item Calcul de l'estimateur de l'efficacité :$\epsilon=\frac{\epsilon^{signal}-k\epsilon^{bruit}}{1-k\epsilon^{bruit}}$\\
-	\begin{equation}
-	k=\frac{1-\mbox{Poisson}\left(k=0,\lambda=\frac{\overline{N^{hits}_{max}}T^{signal}}{T^{bruit}}\right)}{1-\mbox{Poisson}\left(k=0,\lambda=\frac{\overline{N^{hits}_{max}}}{T^{bruit}}\right)}
-	\end{equation}	
-} 
-	\end{itemize}
-	\end{block}
-	\end{overlayarea}
-\end{frame}}
-\subsection{Test de la méthode de suppression du bruit}
-\begin{frame}
-\begin{overlayarea}{0.99\textwidth}{8cm}
-	\only<1>{
-	\begin{block}{\centering Biais de l'estimateur $\epsilon$}
-		Monte Carlo : 50 000 triggers pour chaque paire $\left(\epsilon^{signal},\epsilon^{bruit}\right)$  ($T_{signal}=3\times T_{bruit}$).
-		
-		\scalebox{0.4}{\includetex{biais2}}
-	\end{block}}
-	\only<2>{\begin{block}{\centering Écart-type de l'estimateur $\epsilon$}
-		Monte Carlo : 2 500 000 expériences réparties dans 50$\times$50 bins.
-		
-		\scalebox{0.5}{\includetex{std}}
-	\end{block}}
-\end{overlayarea}
-\end{frame}
 \subsection{Amélioration de la chambre RE1/1}
 \begin{frame}
 \begin{columns}
 	\column{0.5\textwidth}
-	\begin{block}{Améliorations}
+	\begin{block}{\centering Améliorations}
 		\begin{itemize}
 			\item FEB approchés du plan de masse
 			\item Meilleur masse entre les FEB et le capot
@@ -1058,21 +862,21 @@
 \end{frame}
 \subsection{Résultats du beam test GIF++ (octobre 2016)}
 \begin{frame}
-\begin{block}{Efficacité en fonction de la HV}
+\begin{block}{\centering Efficacité en fonction de la HV}
 	\begin{center}
 	\scalebox{0.8}{\includetex{SigmoidBC}}
 	\end{center}
 \end{block}
 \end{frame}
 \begin{frame}
-\begin{block}{Cluster Size en fonction de la tension}
+\begin{block}{\centering Cluster Size en fonction de la tension}
 	\begin{center}
 	\scalebox{0.8}{\includetex{ClusterSizeBC}}
 	\end{center}
 \end{block}
 \end{frame}
 \begin{frame}
-\begin{block}{Probabilité de streamer}
+\begin{block}{\centering Probabilité de streamer}
 	\begin{center}
 		Probabilité définit comme la probabilité d'avoir un cluster de taille supérieur à 7.
 	\end{center}
@@ -1085,11 +889,11 @@
 \begin{frame}
 \begin{columns}
 	\column{0.5\textwidth}
-	\begin{block}{Taux de bruit dans la chambre RE1/1 vs \% SF6}
+	\begin{block}{\centering Taux de bruit dans la chambre RE1/1 vs \% SF6}
 		\scalebox{0.4}{\includetex{CurrentRE11}}
 	\end{block}
 	\column{0.5\textwidth}
-	\begin{block}{Taux de bruit dans la double gap 32$\times$30\si{\square\centi\meter} vs \% SF6}
+	\begin{block}{\centering Taux de bruit dans la double gap 32$\times$30\si{\square\centi\meter} vs \% SF6}
 		\scalebox{0.4}{\includetex{EffiNoiseChi}}
 		
 	\end{block}
@@ -1097,7 +901,7 @@
 \end{frame}
 \subsection{Conclusion}
 \begin{frame}
-\begin{block}{Conclusion}
+\begin{block}{\centering Conclusion}
 \begin{itemize}
 	\item Chambres testées sur de nombreuses lignes de faisceaux (DESY,PS,SPS) et au GIF++.
 	\item Testées avec différents mélange gazeux (ILC,CMS) et divers proportion de SF6.
@@ -1110,10 +914,10 @@
 \end{block}
 \end{frame}
 
-	\section{L'Électronique pour les iRPC}
+	\section{L'électronique pour les iRPC}
 	\subsection{Principe de la nouvelle Électronique}
 	\begin{frame}
-	\begin{block}{Principe de la nouvelle Électronique}
+	\begin{block}{\centering Principe de la nouvelle Électronique}
 		Les strips font toute la longueur de la chambre
 	\begin{itemize}
 		\item Pas de segmentation en $\eta$ (A,B,C)
@@ -1125,78 +929,353 @@
 		$T_1$ et $T_2$ le temps de propagation du signal pour rejoindre l'un et l'autre côté de la ligne, \\
 		$T$ le temps d'arrivée du signal sur le \textit{strip} \\ $v$ la vitesse de propagation du signal.
 	\end{itemize}
+	\begin{center}
 	\includegraphics[width=0.4\textwidth]{PCB1.png}
+	\end{center}
 	\end{block}
 	\end{frame}
 	\subsection{Le prototype}
 	\begin{frame}
-	
+	\begin{block}{\centering Le prototype}
 		\begin{columns}
-			\column{0.45\textwidth}
-				\begin{block}{Le prototype}
-				\includegraphics[width=0.4\textwidth]{PCB2.png}
+			\column{0.25\textwidth}
+		\begin{center}
+			\includegraphics[width=0.75\textwidth]{PCB2.png}
+		\end{center}
+	\column{0.750\textwidth}
+		\begin{itemize}
+			\item \SI{50}{\centi\meter} de long
+			\item 32 strips espacés de \SI{4}{\milli\meter}
+		\end{itemize}
+	\end{columns}
+	\end{block}
+		\begin{columns}
+			\column{0.50\textwidth}
+			\begin{block}{\centering Électronique}
 				\begin{itemize}
-					\item \SI{50}{\centi\meter} de long
-					\item 32 strips espacés de \SI{4}{\milli\meter}
-					\item 2 PETIROC qui lisent les strips de chaque côté. (32 vois chacun)
-					\item 2 TDC (24 voies )
+					\item 2 PETIROC (32 vois chacun).
+					\begin{center}
+					\includegraphics[width=0.4\textwidth]{PETIROC.png}
+					\end{center}
+					\item 2 TDC (24 voies chacun).
+					\begin{center}
+					\includegraphics[width=0.4\textwidth]{TDC.png}
+					\end{center}
 				\end{itemize}
 			\end{block}
-			\column{0.45\textwidth}
-				\begin{block}{Électronique}
-					\begin{itemize}
-						\item 2 PETIROC qui lisent les strips de chaque côté. (32 vois chacun)
-						\includegraphics[width=0.4\textwidth]{PETIROC.png}
-						\item 2 TDC (24 voies chacun)
-						\includegraphics[width=0.4\textwidth]{TDC.png}
-					\end{itemize}
-				\end{block}
+			\column{0.50\textwidth}
+		\begin{block}{\centering Résolution temporelle du PCB}
+			\begin{itemize}
+				\item Injection d'un signal carré de \SI{10}{\volt} et de durée \SI{10}{\nano\second} à travers un condensateur de \SI{1}{\pico\farad}
+				\item $\frac{\sigma_{T_1+T_2}}{\sqrt{2}}=\sigma_{elec}=\num{30.8}\pm\num{0.5}\si{\pico\second}$.
+				\begin{center}
+					\scalebox{0.5}{\includetex{TDCTimeResolution}}
+				\end{center}
+			\end{itemize}
+		\end{block}
 		\end{columns}
 	
 	\end{frame}
 	\subsection{Résolution temporelle de l'électronique}
-	\begin{frame}
-	\begin{block}{Résolution temporelle du PCB}
-		\begin{itemize}
-			\item Injection d'un signal carré de \SI{10}{\volt} et de durée \SI{10}{\nano\second} à travers un condensateur de \SI{1}{\pico\farad}
-			\item $\frac{\sigma_{T_1+T_2}}{\sqrt{2}}=\sigma_{elec}$.
-			\scalebox{0.6}{\includetex{TDCTimeResolution}}
-		\end{itemize}
-	\end{block}
-\end{frame}
-\subsection{Test en faisceau SPS mai 2017}
+	%\begin{frame}
+%
+%\end{frame}
+%\subsection{Test en faisceau SPS mai 2017}
 \begin{frame}
-\begin{columns}
-	\column{0.5\textwidth}
-	\begin{block}{Setup }
-		\begin{itemize}
-			\item Chambre Bakélite gap:\SI{1.4}{\milli\meter} électrode:\SI{1.4}{\milli\meter}
-			\item Chambre Bakélite gap:\SI{1.6}{\milli\meter} électrode:\SI{1.6}{\milli\meter}
-			\item PCB identique au prototype
-			\item Posée sur une table de positionnement.
+				\begin{block}{\centering Setup }
+						\begin{columns}
+						\column{0.50\textwidth}
+			\begin{itemize}
+				\item Chambre Bakélite gap : \SI{1.4}{\milli\meter} électrodes : \SI{1.4}{\milli\meter}
+				%\item Chambre Bakélite gap:\SI{1.6}{\milli\meter} électrode:\SI{1.6}{\milli\meter}
+				%\item PCB identique au prototype
+				\item Posée sur une table de positionnement.
 			
-			\includegraphics[width=0.4\textwidth]{setup2017.jpg}
-		\end{itemize}
+			\end{itemize}
+			\column{0.50\textwidth}
+		\begin{center}
+			\includegraphics[width=0.5\textwidth]{setup2017.jpg}
+		\end{center}
+	\end{columns}
+		\end{block}
+	\begin{block}{\centering Résolution temporelle T2-T1}
+		\begin{center}
+		\includegraphics[width=0.6\textwidth]{25p5cm.png}
+		\end{center}
 	\end{block}
-	\column{0.5\textwidth}
-	\begin{block}{Résolution temporelle T2-T1}
-		\includegraphics[width=0.6\textwidth]{25p5cm.jpg}
-	\end{block}
-\end{columns}
 \end{frame}
 \subsection{Résolution Spatiale}
 \begin{frame}
-\begin{block}{Résolution Spatiale}
-	\includegraphics[width=0.8\textwidth]{MeanT_Pos.jpg}
+\begin{block}{\centering Résolution Spatiale}
+	\begin{center}
+	\includegraphics[width=0.8\textwidth]{MeanT_Pos.png}
+	\end{center}
 	$<\Delta T>=<T_2-T_1>$ en fonction de la position $Y$ du détecteur.
 	$v=2\frac{\diff Y}{\diff <\Delta T>}=2*\frac{1}{0.11}=\SI{18.18}{\centi\meter\per\nano\second}$
 	$=> \sigma_{Y}=\sigma_{T_2-T_1}\frac{v}{2}\approx\SI{1.8}{\centi\meter}$
 \end{block}
 \end{frame}
-	\section{Conclusion}
+	\section{Conclusion et perspectives}
 	\begin{frame}
-	\begin{block}{Conclusion et perspective}
+	\begin{block}{\centering Conclusion et perspectives}
 		Blabla
 	\end{block}
+	\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\appendix
+\subsection{Le Modèle Standard}
+\begin{frame}
+\begin{block}{\centering Le modèle standard}
+	\begin{itemize}
+		\item Théorie non-abélienne
+		\item Théorie perturbative
+		\item Théorie quantique des champs (relativiste et quantique)
+		\item l'ensemble des informations de la théorie est contenue dans un Lagrangien $\mathcal{L_{MS}}$
+	\end{itemize}
+\end{block}
+\begin{block}{\centering Lagrangien du Modèle Standard}
+	\begin{equation}
+	\only<1>{\mathcal{L_{MS}}=\textcolor{red}{\mathcal{L}_{\mathrm{Yang-Mills}}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
+	\only<2>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\textcolor{red}{\mathcal{L}_{\mathrm{Dirac}}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
+	\only<3>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\textcolor{red}{\mathcal{L}_{\mathrm{Higgs}}}+\mathcal{L}_{\mathrm{Yukawa}}}
+	\only<4>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\textcolor{red}{\mathcal{L}_{\mathrm{Yukawa}}}}
+	\end{equation}
+	\begin{itemize}
+		\item {\only<1>{\color{red}}$\mathcal{L}_{\mathrm{Yang-Mills}}$ Partie cinétique des champs de jauges.}
+		
+		\item {\only<2>{\color{red}}$\mathcal{L}_{\mathrm{Dirac}}$ Interactions entre fermions et bosons de jauges.}
+		
+		\item {\only<3>{\color{red}}$\mathcal{L}_{\mathrm{Higgs}}$ Donne la masse aux bosons $Z^{0}$,$W^{\pm}$.}
+		
+		\item {\only<4>{\color{red}}$\mathcal{L}_{\mathrm{Yukawa}}$ Interactions entre le boson de Higgs et les fermions.}
+	\end{itemize}
+\end{block}
+\end{frame}
+\subsection{Succès et lacunes du Modèle Standard}
+\begin{frame}
+\begin{columns}
+\column{.5\textwidth}
+\begin{vert}{\centering Ses succès}
+	\begin{itemize}
+		\item Prédiction du courant neutre
+		\item Théorie renormalisable
+		\item Excellents accords avec les mesures expérimentales 
+	\end{itemize}
+	\vspace*{-0.5cm}
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width=0.60\textwidth]{mesure.png}
+		%\caption{Comparaison des résultats d'ajustement avec les mesures directes de certains paramètres du Modèle Standard.}
+	\end{figure}
+\end{vert}
+\column{.5\textwidth}
+\begin{rouge}{\centering Ses lacunes}
+	\begin{itemize}
+		\item Le nombre de familles
+		\item Asymétrie baryon-antibaryons
+		\item Gravitation non incluse
+		\item Matière Noire et Énergie Noire 
+		\begin{center}
+			\includegraphics[width=0.50\textwidth]{darkmatter.png}
+		\end{center}
+		\item Le nombre important de paramètres libres
+		\item Neutrinos massifs
+		\item non unification des couplages
+		\item Naturalité
+	\end{itemize}
+\end{rouge}
+\end{columns}
+\end{frame}
+\subsection{Au-delà du Modèle Standard}
+\begin{frame}
+\begin{block}{\centering Modèles au-delà du Modèle standard}
+Extension du Modèle Standard :
+\begin{itemize}
+\item \textit{Grand Unified Theories} : unifier les interactions sous une même symétrie.
+Basé sur un groupe $G\supset SU(3)\times SU(2) \times U(1)$
+\item Supersymétrie (SuSy) : supprimer le problème de la naturalité en associant à chaque fermions un  boson superpartenaire et réciproquement. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.60\textwidth]{SuSy.png}
+\end{figure}
+\item Modèle avec dimensions supplémentaires enroulées.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\subsection{Le complexe d'accélération du CERN}	
+\begin{frame}
+\begin{columns}
+	\column{.5\textwidth}
+	\begin{center}
+		\includegraphics[width=1.1\textwidth]{complexe.png}
+	\end{center}
+	\column{.5\textwidth}
+	\begin{block}{\centering Pour les collisions proton-proton}
+		\begin{itemize}
+			\item LINAC 2 ($\SI{50}{\mega\eV}$)
+			\item BOOSTER ($\SI{1.4}{\giga\eV}$)
+			\item {\only<1>{\color{red}}Synchrotron à protons (PS) ($\SI{25}{\giga\eV}$)}
+			\item {\only<2>{\color{red}}SuperSynchrotron à protons (SPS) ($\SI{450}{\giga\eV}$)}
+			\item Large Hadron Collider (LHC) ($\SI{7}{\tera\eV}$)
+		\end{itemize}
+	\end{block}
+\end{columns}
+\only<1>{\begin{block}{\centering Ligne de faisceaux (East Area)}
+		\begin{itemize}
+			\item Particules : électrons, hadrons, muons...
+			\item quantité de mouvement : \SIrange{1}{15}{\giga\eV}
+			\item Intensité du faisceau : $\sim1-2\times 10^{6}$part/Spill
+			\item Structure du Spill : 
+			\begin{itemize}
+				\item \SI{400}{\milli\second} 
+				\item 1 Spill toutes les \SI{33}{\second} (ou plus)
+			\end{itemize}
+		\end{itemize}
+\end{block}}
+\only<2>{\begin{block}{\centering Ligne de faisceaux (North Area)}
+		\begin{itemize}
+			\item Particules : électrons, hadrons, muons...
+			\item quantité de mouvement : \SIrange{10}{400}{\giga\eV}
+			\item Intensité du faisceau : $\sim1-2\times 10^{8}$part/Spill
+			\item Structure du Spill : 
+			\begin{itemize}
+				\item \SIrange{4.8}{9.6}{\second} 
+				\item 1 Spill toutes les \SIrange{14}{48}{\second}
+			\end{itemize}
+		\end{itemize}
+\end{block}}
+\end{frame}
+\begin{frame}
+\begin{block}{\centering Électronique}
+	\begin{itemize}
+		\item Partition en $\eta$ (A,B,C) de 32 strips chacunes. 
+		\item 3 Front-End Boards (mise en forme du signal).
+		\begin{center}
+			\includegraphics[width=0.35\linewidth]{Feb.png}
+		\end{center}
+		\item Distribution Board (paramètrage des FEBs).
+		\begin{center}
+			\includegraphics[width=0.30\linewidth]{DB.png}
+		\end{center}
+	\end{itemize}
+\end{block}
+\end{frame}
+\subsection{Mise à niveau des RPC}
+\begin{frame}
+\begin{block}{\centering Instrumentation des zone RE3/1 et RE4/1 (1.8<$\eta$<2.4)}
+\begin{itemize}
+	\item Améliorer la résolution temporelle des traces muons
+	\begin{center}
+		\includegraphics[width=0.45\linewidth]{intrasec.png}
+	\end{center}
+	\item recouvrer les zones moins efficaces des CSC
+	\begin{center}
+		\includegraphics[width=0.35\linewidth]{effstation4.png}
+	\end{center}
+	\item Augmenter la redondance dans cette zone (En cas de CSC défaillants)
+\end{itemize}
+\end{block}
+\end{frame}
+\subsection{Premiers résultats à DESY (janvier 2012)}
+\begin{frame}
+\begin{columns}
+	\column{.6\textwidth}
+	\begin{block}{\centering Chambres}
+		\begin{itemize}
+			\item 5 chambres (1 "float glass", 4 "Basse Résistivité")
+			\item Électronique HARDROC 
+			\item Pads
+		\end{itemize}
+	\end{block}
+	\begin{block}{\centering Faisceau}
+		\begin{itemize}
+			\item Électrons (Jusqu'à \SI{6}{\giga\eV})
+			\item  Surface de quelques \si{\square\centi\meter}
+		\end{itemize}
+	\end{block}
+	\begin{block}{\centering Mélange gazeux (ILC)}
+		\begin{itemize}
+			\item 93\% de Tétrafluoroéthane \chemform{C_2H_2F_4}.
+			\item \num{5}\% \chemform{CO_2}, absorbeur de photons UV. 
+			\item \num{2}\% d'hexafluorure de soufre \chemform{SF_6}, capture l'excès d'électrons.
+		\end{itemize}
+	\end{block}
+	\column{.5\textwidth}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{effiDesy.png}
+	\end{center}
+\end{columns}
+\end{frame}
+
+\subsection{Programme d'analyse pour les chambres à électronique CMS}
+{\fontsize{8pt}{7.2}\selectfont
+	\begin{frame}
+	\begin{overlayarea}{0.99\textwidth}{8cm}
+		\begin{block}{\centering Méthode de suppression du bruit}
+			\begin{center}
+				Sélection de la zone temporelle du signal:
+			\end{center}
+			\vspace*{-0.3cm}
+			\begin{itemize}
+				\item Réalignement des timestamps des hits avec le timestamp moyen de la chambre.
+				\visible<2->{\item Ajustement de la distribution des hits en fonction du timestamp par une Gaussienne+constante}
+				\only<2-3>{\begin{center}\scalebox{0.3}{\includetex{fitting_aligned}}\end{center}}
+				\visible<3->{\item Sélection de la fenêtre [$\mu$-3$\sigma$,$\mu$-3$\sigma$]}
+			\end{itemize}
+			\visible<4->{\begin{center}
+					Estimation de l'efficacité réelle:
+			\end{center}}
+			\vspace*{-0.3cm}
+			\begin{itemize}
+				\visible<5->{\item Calcule de l'efficacité dans la zone du signal $\epsilon^{signal}$}
+				\visible<6->{\item Découpe de la partie temporelle avant le signal en intervalles $I_{n}=\left[t_{n}-t_{win},t_{n}+t_{win}\right]$}
+				\visible<7->{\item Calcul de l'efficacité $\epsilon^{bruit}$ et du taux moyens de bruit $\overline{N^{hits}_n}$ dans ces intervalles.}
+				\visible<8->{\item Sélection de $I_{n}$ pour lequel $\overline{N^{hits}_n}$ est maximale.}
+				\visible<9->{\item Calcul de l'estimateur de l'efficacité :$\epsilon=\frac{\epsilon^{signal}-k\epsilon^{bruit}}{1-k\epsilon^{bruit}}$\\
+					\begin{equation}
+					k=\frac{1-\mbox{Poisson}\left(k=0,\lambda=\frac{\overline{N^{hits}_{max}}T^{signal}}{T^{bruit}}\right)}{1-\mbox{Poisson}\left(k=0,\lambda=\frac{\overline{N^{hits}_{max}}}{T^{bruit}}\right)}
+					\end{equation}	
+				} 
+			\end{itemize}
+		\end{block}
+	\end{overlayarea}
+\end{frame}}
+\subsection{Test de la méthode de suppression du bruit}
+\begin{frame}
+\begin{overlayarea}{0.99\textwidth}{8cm}
+\only<1>{
+	\begin{block}{\centering Biais de l'estimateur $\epsilon$}
+		Monte Carlo : 50 000 triggers pour chaque paire $\left(\epsilon^{signal},\epsilon^{bruit}\right)$  ($T_{signal}=3\times T_{bruit}$).
+		
+		\scalebox{0.4}{\includetex{biais2}}
+\end{block}}
+\only<2>{\begin{block}{\centering Écart-type de l'estimateur $\epsilon$}
+		Monte Carlo : 2 500 000 expériences réparties dans 50$\times$50 bins.
+		
+		\scalebox{0.5}{\includetex{std}}
+\end{block}}
+\end{overlayarea}
 \end{frame}
 \end{document}

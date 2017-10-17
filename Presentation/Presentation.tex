@@ -360,13 +360,12 @@
 		\column{.65\textwidth}
 		\begin{block}{\centering Caractéristiques}
 			\begin{itemize}
-				\item {\only<2>{\color{red}}Dimension maximale} : {\only<2>{\color{red}}\SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}}
-				\item {\only<2>{\color{green}}Résistivité volumique} : {\only<2>{\color{green}}\SI{e10}{\ohm.\centi\meter}}
-				\item {\only<2>{\color{green}}Épaisseur} : {\only<2>{\color{green}}\SIrange{0.5}{2}{\milli\meter}}
-				\item {\only<2>{\color{green}}Uniformité de l'épaisseur} : {\only<2>{\color{green}}\SI{0.02}{\milli\meter}} 
-				\item Constante diélectrique : \SIrange{7.5}{9.5}{}
-				\item {\only<2>{\color{green}}Rugosité} : {\only<2>{\color{green}}$<$\SI{10}{\nano\meter}}
-				\item {\only<2>{\color{green}}Comportement ohmique} : {\only<2>{\color{green}} stable (\SI{1}{\coulomb})}
+				\item {\color{Green}Résistivité volumique} : {\color{Green}\SI{e10}{\ohm.\centi\meter}}
+				\item {\color{Green}Épaisseur} : {\color{Green}\SIrange{0.5}{2}{\milli\meter}}
+				\item {\color{Green}Uniformité de l'épaisseur} : {\color{Green}\SI{0.02}{\milli\meter}}
+				\item {\color{Green}Rugosité} : {\color{Green}$<$\SI{10}{\nano\meter}}
+				\item {\color{Green}Comportement ohmique} : {\color{Green} stable (\SI{1}{\coulomb})}
+				\item {\color{red}Dimension maximale} : {\color{red}\SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}}
 			\end{itemize}
 		\end{block}
 		\column{.3\textwidth}
@@ -643,9 +642,23 @@
 		\end{center}
 	\end{block}
 	\end{frame}
+	\begin{frame}
+	\begin{block}{\centering Courant parcourant les chambres en l'inverse de la valeur d'atténuation}
+		\begin{center}
+			\includegraphics[width=0.8\textwidth]{current_same_HV.png}
+		\end{center}
+	\end{block}
+	\begin{center}
+		{\fontsize{9pt}{7.2}\selectfont
+	La saturation arrive autour d'un facteur d'atténuation 68.1 pour la float glass.\\
+	La chambre en verre de basse résistivité ne semble pas saturer. }
+	\end{center}
+	\end{frame}
 	\subsection{Vieillissement des chambres}
 	\begin{frame}
-	Les chambres doivent supporter une charge intégrée de \SI{1}{\coulomb\per\square\centi\meter}. \\
+	\begin{center}
+	Les chambres doivent supporter une charge intégrée de \SI{1}{\coulomb\per\square\centi\meter}.
+	\end{center}
 	\begin{block}{\centering Charges intégrées en fonction du nombre de jours effectifs}
 			\begin{center}
 			Float glass
@@ -677,14 +690,6 @@
 	\end{frame}
 	\subsection{Test en faisceau au GIF++ (mai-juin 2016)}
 	\begin{frame}
-		\begin{block}{\centering Courant parcourant les chambres en l'inverse de la valeur d'atténuation}
-			\begin{center}
-			\includegraphics[width=0.8\textwidth]{current_same_HV.png}
-			\end{center}
-		\end{block}
-		La saturation arrive autour d'un facteur d'atténuation 68.1 pour la float glass alors que la chambre de verre de basse résistivité ne semble pas saturer. 
-	\end{frame}
-	\begin{frame}
 	\begin{block}{\centering Mesure à l'argon de la résistivité des électrodes}
 			\begin{center}
 				\scalebox{0.47}{\includetex{Argon_current}}
@@ -692,12 +697,14 @@
 	\end{block}
 		\begin{block}{\centering Estimation de la résistivité}
 	\begin{columns}
-		\column{.35\textwidth}
-		$\rho=\frac{RS}{e}$ \\
+		\column{.38\textwidth}
+		\begin{center}
+		$\rho=\frac{RS}{e}$
+		\end{center}
 		$R$ : résistance de l'électrode \\
 		$S$ : Surface des électrodes \\ 
-		$e$ : épaisseur totale des électrodes.
-		\column{.45\textwidth}
+		$e$ : épaisseur des électrodes.
+		\column{.55\textwidth}
 		\begin{tabular}{|c|c|}
 			\hline 
 			Chambre 1 (BR)  &\SI{2.4e11}{\ohm.\centi\meter} \\ 
@@ -710,7 +717,9 @@
 			\hline
 		\end{tabular} 
 	\end{columns}
-{\color{red} La résistivité des verres de basses résistivité est beaucoup plus élevé qu'attendue $\sim$\SI{1e10}{\ohm\centi\meter}}	
+	\begin{center}
+{\color{red} La résistivité des verres de basses résistivité est beaucoup plus élevé qu'attendue $\sim$\SIrange{1e10}{5e10}{\ohm\centi\meter}}	
+	\end{center}
 \end{block}	
 
 	\end{frame}
@@ -729,8 +738,8 @@
 	\end{itemize}
 	Explique :
 	\begin{itemize}
-	\item La résistivité élevé
-	\item Les distribution de hits dans l'analyse
+	\item La résistivité élevée
+	\item Les distributions de hits dans l'analyse
 	\\
 	\includegraphics[width=0.25\textwidth]{chamber1.png}
 	\includegraphics[width=0.25\textwidth]{chamber2.png}
@@ -770,7 +779,10 @@
 				\includegraphics[width=0.7\textwidth]{Glass-glued2.png}
 				\end{center}
 				\end{columns}
-				Les gaps sont hermétiques.
+				\begin{center}
+					Les gaps sont hermétiques.
+				\end{center}
+				
 		\end{block}
 		\begin{block}{\centering Méthode par fixation mécanique}
 			\begin{columns}
@@ -813,7 +825,7 @@
 	\begin{block}{\centering Setup}
 		\begin{itemize}
 			\item 2 chambres RE1/1 
-			\includegraphics[width=1\textwidth]{ChamberFloat.png}
+			\includegraphics[width=0.60\textwidth]{ChamberFloat.png}
 			\item Fixation mécanique
 			\item 1 verre standard
 			\item 1 verre basse résistivité
@@ -864,14 +876,14 @@
 \begin{frame}
 \begin{block}{\centering Efficacité en fonction de la HV}
 	\begin{center}
-	\scalebox{0.8}{\includetex{SigmoidBC}}
+	\scalebox{0.90}{\includetex{SigmoidBC}}
 	\end{center}
 \end{block}
 \end{frame}
 \begin{frame}
 \begin{block}{\centering Cluster Size en fonction de la tension}
 	\begin{center}
-	\scalebox{0.8}{\includetex{ClusterSizeBC}}
+	\scalebox{0.90}{\includetex{ClusterSizeBC}}
 	\end{center}
 \end{block}
 \end{frame}
@@ -881,7 +893,7 @@
 		Probabilité définit comme la probabilité d'avoir un cluster de taille supérieur à 7.
 	\end{center}
 \begin{center}
-	\scalebox{0.8}{\includetex{ProbaStreamerBC}}
+	\scalebox{0.88}{\includetex{ProbaStreamerBC}}
 	\end{center}
 \end{block}
 \end{frame}
@@ -930,7 +942,7 @@
 		$T$ le temps d'arrivée du signal sur le \textit{strip} \\ $v$ la vitesse de propagation du signal.
 	\end{itemize}
 	\begin{center}
-	\includegraphics[width=0.4\textwidth]{PCB1.png}
+	\includegraphics[width=0.50\textwidth]{PCB1.png}
 	\end{center}
 	\end{block}
 	\end{frame}
@@ -938,15 +950,15 @@
 	\begin{frame}
 	\begin{block}{\centering Le prototype}
 		\begin{columns}
-			\column{0.25\textwidth}
-		\begin{center}
-			\includegraphics[width=0.75\textwidth]{PCB2.png}
-		\end{center}
-	\column{0.750\textwidth}
+		\column{0.50\textwidth}
 		\begin{itemize}
 			\item \SI{50}{\centi\meter} de long
 			\item 32 strips espacés de \SI{4}{\milli\meter}
 		\end{itemize}
+	\column{0.50\textwidth}
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{PCB2.png}
+	\end{center}
 	\end{columns}
 	\end{block}
 		\begin{columns}
@@ -955,11 +967,11 @@
 				\begin{itemize}
 					\item 2 PETIROC (32 vois chacun).
 					\begin{center}
-					\includegraphics[width=0.4\textwidth]{PETIROC.png}
+					\includegraphics[width=0.35\textwidth]{PETIROC.png}
 					\end{center}
 					\item 2 TDC (24 voies chacun).
 					\begin{center}
-					\includegraphics[width=0.4\textwidth]{TDC.png}
+					\includegraphics[width=0.35\textwidth]{TDC.png}
 					\end{center}
 				\end{itemize}
 			\end{block}
@@ -969,7 +981,7 @@
 				\item Injection d'un signal carré de \SI{10}{\volt} et de durée \SI{10}{\nano\second} à travers un condensateur de \SI{1}{\pico\farad}
 				\item $\frac{\sigma_{T_1+T_2}}{\sqrt{2}}=\sigma_{elec}=\num{30.8}\pm\num{0.5}\si{\pico\second}$.
 				\begin{center}
-					\scalebox{0.5}{\includetex{TDCTimeResolution}}
+					\scalebox{0.40}{\includetex{TDCTimeResolution}}
 				\end{center}
 			\end{itemize}
 		\end{block}
@@ -994,13 +1006,13 @@
 			\end{itemize}
 			\column{0.50\textwidth}
 		\begin{center}
-			\includegraphics[width=0.5\textwidth]{setup2017.jpg}
+			\includegraphics[width=0.45\textwidth]{setup2017.jpg}
 		\end{center}
 	\end{columns}
 		\end{block}
 	\begin{block}{\centering Résolution temporelle T2-T1}
 		\begin{center}
-		\includegraphics[width=0.6\textwidth]{25p5cm.png}
+		\includegraphics[width=0.40\textwidth]{25p5cm.png}
 		\end{center}
 	\end{block}
 \end{frame}
@@ -1008,10 +1020,14 @@
 \begin{frame}
 \begin{block}{\centering Résolution Spatiale}
 	\begin{center}
-	\includegraphics[width=0.8\textwidth]{MeanT_Pos.png}
+	\includegraphics[width=0.76\textwidth]{MeanT_Pos.png}
 	\end{center}
+	\begin{center}
 	$<\Delta T>=<T_2-T_1>$ en fonction de la position $Y$ du détecteur.
+	\end{center}
+	\begin{center}
 	$v=2\frac{\diff Y}{\diff <\Delta T>}=2*\frac{1}{0.11}=\SI{18.18}{\centi\meter\per\nano\second}$
+	\end{center}
 	$=> \sigma_{Y}=\sigma_{T_2-T_1}\frac{v}{2}\approx\SI{1.8}{\centi\meter}$
 \end{block}
 \end{frame}
@@ -1075,19 +1091,16 @@
 \end{block}
 \begin{block}{\centering Lagrangien du Modèle Standard}
 	\begin{equation}
-	\only<1>{\mathcal{L_{MS}}=\textcolor{red}{\mathcal{L}_{\mathrm{Yang-Mills}}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
-	\only<2>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\textcolor{red}{\mathcal{L}_{\mathrm{Dirac}}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
-	\only<3>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\textcolor{red}{\mathcal{L}_{\mathrm{Higgs}}}+\mathcal{L}_{\mathrm{Yukawa}}}
-	\only<4>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\textcolor{red}{\mathcal{L}_{\mathrm{Yukawa}}}}
+	\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}
 	\end{equation}
 	\begin{itemize}
-		\item {\only<1>{\color{red}}$\mathcal{L}_{\mathrm{Yang-Mills}}$ Partie cinétique des champs de jauges.}
+		\item $\mathcal{L}_{\mathrm{Yang-Mills}}$ Partie cinétique des champs de jauges.
 		
-		\item {\only<2>{\color{red}}$\mathcal{L}_{\mathrm{Dirac}}$ Interactions entre fermions et bosons de jauges.}
+		\item $\mathcal{L}_{\mathrm{Dirac}}$ Interactions entre fermions et bosons de jauges.
 		
-		\item {\only<3>{\color{red}}$\mathcal{L}_{\mathrm{Higgs}}$ Donne la masse aux bosons $Z^{0}$,$W^{\pm}$.}
+		\item $\mathcal{L}_{\mathrm{Higgs}}$ Donne la masse aux bosons $Z^{0}$,$W^{\pm}$.
 		
-		\item {\only<4>{\color{red}}$\mathcal{L}_{\mathrm{Yukawa}}$ Interactions entre le boson de Higgs et les fermions.}
+		\item $\mathcal{L}_{\mathrm{Yukawa}}$ Interactions entre le boson de Higgs et les fermions.
 	\end{itemize}
 \end{block}
 \end{frame}
@@ -1104,7 +1117,7 @@
 	\vspace*{-0.5cm}
 	\begin{figure}[ht!]
 		\centering
-		\includegraphics[width=0.60\textwidth]{mesure.png}
+		\includegraphics[width=0.55\textwidth]{mesure.png}
 		%\caption{Comparaison des résultats d'ajustement avec les mesures directes de certains paramètres du Modèle Standard.}
 	\end{figure}
 \end{vert}
@@ -1212,9 +1225,10 @@ Basé sur un groupe $G\supset SU(3)\times SU(2) \times U(1)$
 	\end{center}
 	\item recouvrer les zones moins efficaces des CSC
 	\begin{center}
-		\includegraphics[width=0.35\linewidth]{effstation4.png}
+		\includegraphics[width=0.32\linewidth]{effstation4.png}
 	\end{center}
-	\item Augmenter la redondance dans cette zone (En cas de CSC défaillants)
+	\item Augmenter la redondance dans cette zone \\
+	En cas de CSC défaillants.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -1224,7 +1238,8 @@ Basé sur un groupe $G\supset SU(3)\times SU(2) \times U(1)$
 	\column{.6\textwidth}
 	\begin{block}{\centering Chambres}
 		\begin{itemize}
-			\item 5 chambres (1 "float glass", 4 "Basse Résistivité")
+			\item 5 chambres \\
+			\item 1 "float glass", 4 "Basse Résistivité"
 			\item Électronique HARDROC 
 			\item Pads
 		\end{itemize}
@@ -1252,32 +1267,30 @@ Basé sur un groupe $G\supset SU(3)\times SU(2) \times U(1)$
 \subsection{Programme d'analyse pour les chambres à électronique CMS}
 {\fontsize{8pt}{7.2}\selectfont
 	\begin{frame}
+	\vspace*{-0.3cm}
 	\begin{overlayarea}{0.99\textwidth}{8cm}
 		\begin{block}{\centering Méthode de suppression du bruit}
 			\begin{center}
 				Sélection de la zone temporelle du signal:
 			\end{center}
-			\vspace*{-0.3cm}
 			\begin{itemize}
 				\item Réalignement des timestamps des hits avec le timestamp moyen de la chambre.
-				\visible<2->{\item Ajustement de la distribution des hits en fonction du timestamp par une Gaussienne+constante}
-				\only<2-3>{\begin{center}\scalebox{0.3}{\includetex{fitting_aligned}}\end{center}}
-				\visible<3->{\item Sélection de la fenêtre [$\mu$-3$\sigma$,$\mu$-3$\sigma$]}
+				\item Ajustement de la distribution des hits en fonction du timestamp par une Gaussienne+constante
+				%\only<2-3>{\begin{center}\scalebox{0.22}{\includetex{fitting_aligned}}\end{center}}
+				\item Sélection de la fenêtre [$\mu$-3$\sigma$,$\mu$-3$\sigma$]
 			\end{itemize}
-			\visible<4->{\begin{center}
+		\begin{center}
 					Estimation de l'efficacité réelle:
-			\end{center}}
-			\vspace*{-0.3cm}
+			\end{center}
 			\begin{itemize}
-				\visible<5->{\item Calcule de l'efficacité dans la zone du signal $\epsilon^{signal}$}
-				\visible<6->{\item Découpe de la partie temporelle avant le signal en intervalles $I_{n}=\left[t_{n}-t_{win},t_{n}+t_{win}\right]$}
-				\visible<7->{\item Calcul de l'efficacité $\epsilon^{bruit}$ et du taux moyens de bruit $\overline{N^{hits}_n}$ dans ces intervalles.}
-				\visible<8->{\item Sélection de $I_{n}$ pour lequel $\overline{N^{hits}_n}$ est maximale.}
-				\visible<9->{\item Calcul de l'estimateur de l'efficacité :$\epsilon=\frac{\epsilon^{signal}-k\epsilon^{bruit}}{1-k\epsilon^{bruit}}$\\
+				\item Calcule de l'efficacité dans la zone du signal $\epsilon^{signal}$
+				\item Découpe de la partie temporelle avant le signal en intervalles $I_{n}=\left[t_{n}-t_{win},t_{n}+t_{win}\right]$
+				\item Calcul de l'efficacité $\epsilon^{bruit}$ et du taux moyens de bruit $\overline{N^{hits}_n}$ dans ces intervalles.
+				\item Sélection de $I_{n}$ pour lequel $\overline{N^{hits}_n}$ est maximale.
+				\item Calcul de l'estimateur de l'efficacité :$\epsilon=\frac{\epsilon^{signal}-k\epsilon^{bruit}}{1-k\epsilon^{bruit}}$\\
 					\begin{equation}
 					k=\frac{1-\mbox{Poisson}\left(k=0,\lambda=\frac{\overline{N^{hits}_{max}}T^{signal}}{T^{bruit}}\right)}{1-\mbox{Poisson}\left(k=0,\lambda=\frac{\overline{N^{hits}_{max}}}{T^{bruit}}\right)}
 					\end{equation}	
-				} 
 			\end{itemize}
 		\end{block}
 	\end{overlayarea}
@@ -1288,14 +1301,46 @@ Basé sur un groupe $G\supset SU(3)\times SU(2) \times U(1)$
 \only<1>{
 	\begin{block}{\centering Biais de l'estimateur $\epsilon$}
 		Monte Carlo : 50 000 triggers pour chaque paire $\left(\epsilon^{signal},\epsilon^{bruit}\right)$  ($T_{signal}=3\times T_{bruit}$).
-		
-		\scalebox{0.4}{\includetex{biais2}}
+		\begin{center}
+		\scalebox{0.4}{\includetex{biais2}}\end{center}
 \end{block}}
 \only<2>{\begin{block}{\centering Écart-type de l'estimateur $\epsilon$}
 		Monte Carlo : 2 500 000 expériences réparties dans 50$\times$50 bins.
 		
-		\scalebox{0.5}{\includetex{std}}
+		\begin{center}\scalebox{0.5}{\includetex{std}}\end{center}
 \end{block}}
 \end{overlayarea}
+\end{frame}
+
+\subsection{Le SDHCAL}
+\begin{frame}
+\begin{columns}
+	\column{0.7\textwidth}
+	\begin{block}{\centering Prototype SDHCAL}
+		\begin{columns}
+			\column{0.45\textwidth}
+		Calorimètre hadronique Semi-digital pour ILD.
+				\begin{itemize}
+			\item \SI{1}{\cubic\meter}
+			\item 48 GRPC "verre standard"
+		\end{itemize}
+		\column{0.45\textwidth}
+		\begin{center}
+		\includegraphics[width=1\textwidth]{SDHCAL.jpg}
+		\end{center}
+	\end{columns}
+	\end{block}
+	\column{0.3\textwidth}
+	\begin{block}{\centering International Large Detector}
+		\begin{center}
+		\includegraphics[width=0.80\textwidth]{ILD.png}
+		\end{center}
+	\end{block}
+\end{columns}
+\begin{block}{\centering International Linear Collider}
+	\begin{center}
+	\includegraphics[width=0.6\textwidth]{ILC.png}
+	\end{center}
+\end{block}
 \end{frame}
 \end{document}

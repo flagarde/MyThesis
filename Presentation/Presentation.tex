@@ -18,7 +18,7 @@
 \usetikzlibrary{arrows,shapes,backgrounds}
 \definecolor{Orange}{HTML}{FFDD00}
 \definecolor{Orange2}{HTML}{FFC000}
-\definecolor{Green}{HTML}{8FB73E}
+\definecolor{Green}{HTML}{21610B}
 \definecolor{Green2}{HTML}{4EA700}
 \definecolor{Red}{HTML}{EF4123}
 \definecolor{Red2}{HTML}{EF2300}
@@ -135,21 +135,11 @@
 			\end{itemize}
 		\end{block}
 	\end{columns}
-	\begin{block}{\centering Lagrangien du Modèle Standard}
-		\begin{equation}
-		\only<1>{\mathcal{L_{MS}}=\textcolor{red}{\mathcal{L}_{\mathrm{Yang-Mills}}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
-		\only<2>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\textcolor{red}{\mathcal{L}_{\mathrm{Dirac}}}+\mathcal{L}_{\mathrm{Higgs}}+\mathcal{L}_{\mathrm{Yukawa}}}
-		\only<3>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\textcolor{red}{\mathcal{L}_{\mathrm{Higgs}}}+\mathcal{L}_{\mathrm{Yukawa}}}
-		\only<4>{\mathcal{L_{MS}}=\mathcal{L}_{\mathrm{Yang-Mills}}+\mathcal{L}_{\mathrm{Dirac}}+\mathcal{L}_{\mathrm{Higgs}}+\textcolor{red}{\mathcal{L}_{\mathrm{Yukawa}}}}
-		\end{equation}
-		\begin{overlayarea}{0.99\textwidth}{1cm}
+	\begin{block}{Découverte du boson de Higgs en 2012 au LHC}
 		\begin{itemize}
-			{\only<1>{\color{red}\item $\mathcal{L}_{\mathrm{Yang-Mills}}$ Partie cinétique des champs de jauges.}}
-			{\only<2>{\color{red}\item $\mathcal{L}_{\mathrm{Dirac}}$ Interactions entre fermions et bosons de jauges.}}
-			{\only<3>{\color{red}\item $\mathcal{L}_{\mathrm{Higgs}}$ Donne la masse aux bosons $Z^{0}$,$W^{\pm}$.}}
-			{\only<4>{\color{red}\item $\mathcal{L}_{\mathrm{Yukawa}}$ Interactions entre le boson de Higgs et les fermions.}}
+			\item $m_{h}=\SI{125.2}{\giga\eV}$
+			\item Spin 0
 		\end{itemize}
-		\end{overlayarea}
 	\end{block}
 \end{frame}
 	\subsection{Le complexe d'accélération du CERN}	
@@ -183,7 +173,7 @@
 			\begin{itemize}
 				\item Collisions p-p, ion-ion, ion-proton
 				\item \SI{27}{\kilo\meter} de circonférence
-				\item 1 collision toutes les \SI{25}{\nano\second}
+				\item 1 croisement de faisceaux toutes les \SI{25}{\nano\second}
 				\item $\sqrt{s_{pp}}=\SI{14}{\tera\eV}$
 				\item Luminosité instantanée $\sim\SI{e34}{\per\square\centi\meter\per\second}$
 			\end{itemize}
@@ -205,7 +195,10 @@
     \begin{frame}
     \begin{columns}
     	\column{.6\textwidth}
-   	\begin{block}{\centering Le HL-LHC (2023-2035)}
+   	\begin{block}{\centering Le High Luminosity LHC  (2023-2035)}
+   	Augmenter la statistique d'un facteur $\sim$10 dans un temps raisonnable $\sim$10 ans.\\
+   	
+   	
    	Augmenter la luminosité $\mathcal{L}(t)$ ($\times$ \SIrange{5}{7}{}):
    	\begin{equation}
    	N_{event}=\int_{t=0}^{t=T} \mathcal{L}(t)\sigma \mathrm dt
@@ -213,18 +206,26 @@
    	\begin{itemize}
    		\item $\sigma$ est la section efficace du processus
    		\item $T$ la durée de prise de données
-   		\item $\mathcal{L}$ la luminosité instantanée délivrée par le LHC.
+   		\item $\mathcal{L}$ la luminosité instantanée.
    	\end{itemize}
      	\end{block}
    \column{.5\textwidth}
    \begin{center}
-   \includegraphics[width=1\textwidth]{roadmap.png}
+   \includegraphics[width=0.90\textwidth]{roadmap.png}
+   \visible<2>{
+   \includegraphics[width=0.50\textwidth]{PILE-UP.png}
+   \begin{center}
+   Empilement de 78 collisions.
+   \end{center}
+}
    \end{center}
    	\end{columns}
    \visible<2>
   	{
   		\begin{block}{}
-  		{\color{red}Augmentation de la luminosité $\Rightarrow$ Augmentation du \textit{pile-up} ($\sim$ 140-200) et du flux de particules dans les détecteurs $\Rightarrow$ Mise à niveau de CMS.}
+  		{\color{red}Augmentation de la luminosité \\
+  		$\Rightarrow$ Augmentation de l'empilement ($\sim$ 140-200 collisions par croisement de faisceaux) et du flux de particules dans les détecteurs\\
+  		 $\Rightarrow$ Mise à niveau de CMS.}
   		\end{block}
   	}
 	\end{frame}
@@ -278,6 +279,13 @@
     		\path (3.0,1.1) coordinate (gem3);
     	\end{tikzpicture}
     \end{columns}
+	\visible<4>{\begin{block}{\centering Instrumentation des zone RE3/1 et RE4/1 (1.8<$\eta$<2.4)}
+			\begin{itemize}
+				\item Améliorer la résolution temporelle des traces muons.
+				\item récupérer les zones moins efficaces des CSC.
+				\item Augmenter la redondance dans ces zones.\\
+				En cas de CSC défaillants.
+			\end{itemize}\end{block}}
     \begin{tikzpicture}[overlay]
 		\draw<3> [thin, red,opacity=.8, fill=red,fill opacity=0.3](gem2) circle (4pt);
 		\path<3>[->,>=latex', red, shorten >=4pt, opacity=.6] (gem) edge  (gem2);
@@ -303,7 +311,7 @@
 		\begin{overlayarea}{0.99\textwidth}{4cm}
 		\begin{center}
 		\only<2>{\includegraphics[width=1\linewidth]{avalanche-1.png}}
-		\only<2>{\centering Ionisation primaire.}
+		\only<2>{\centering Ionisations primaires.}
 		\only<3>{\includegraphics[width=1\linewidth]{avalanche-2.png}}
 		\only<3>{\centering Ionisation secondaires. Création de l'avalanche.}
 		\only<4>{\includegraphics[width=1\linewidth]{avalanche-3.png}}
@@ -319,11 +327,12 @@
     \begin{frame}
     \begin{block}{\centering Les détecteurs}
     \begin{center}
-   	\includegraphics[width=0.6\linewidth]{CMSRPC.png}\includegraphics[width=0.4\linewidth]{gaps.png}
+   	\includegraphics[width=0.5\linewidth]{CMSRPC.png}\includegraphics[width=0.35\linewidth]{gaps.png}
    	\end{center}
     	\begin{itemize}
     		\item Chambre \textit{double gaps} de \SI{2}{\milli\meter}
     		\item Électrodes en Bakélite ($\rho=1-6\times10^{10}$\si{\ohm\centi\meter})
+    		\item Rugosité $\sim$\SI{100}{\nano\meter}$\Rightarrow$ Traitement de surface à l'huile de lin
     		\item Gas gap de \SI{2}{\milli\meter}
     	\end{itemize}
     \end{block}
@@ -332,26 +341,45 @@
 				\item 95.2\% de Tétrafluoroéthane \chemform{C_2H_2F_4} (R-134a).
 				\item \num{4.5}\% d'isobutane \chemform{iso-C_4H_{10}}, absorbeur de photons UV. 
 				\item \num{0.3}\% d'hexafluorure de soufre \chemform{SF_6}, capture l'excès d'électrons.
+				\item 40-50\% d'humidité.
 			\end{itemize}
 	\end{block}
 	\end{frame}
 	\subsection{Les improved Resistive Plate Chambers}
 	\begin{frame}
-	Les RPC actuelles sont incapables de supporter le flux de particules présent dans les zones RE3/1 et RE4/1
+	Les RPC actuelles ont été testées jusqu'à $\sim$\SI{300}{\hertz\per\square\centi\meter}.\\
+	Incapables de supporter le flux de particules présent dans les zones RE3/1 et RE4/1.
 	\begin{block}{\centering improved Resistive Plate Chambers}
 	\begin{itemize}
-		\item Résister au flux de particules ($\sim$\SI{700}{\hertz\per\square\centi\meter}),
-		\item (\SI{2}{\kilo\hertz\per\square\centi\meter}) en prenant en compte un facteur 3 de sécurité
+		\item Résister au flux de particules ($\sim$\SI{700}{\hertz\per\square\centi\meter}).
+		\item \SI{2}{\kilo\hertz\per\square\centi\meter} en prenant en compte un facteur 3 de sécurité.
 	\end{itemize}
 	\end{block}
 	
 	\begin{block}{\centering Possibilités}
 		\begin{itemize}
-		\item Réduire l'épaisseur $d$ des électrodes $\rightarrow$ Nouvelles chambres Bakélite
-		\item Réduire la charge $q$ créée par l'avalanche $\rightarrow$ Réduire l'épaisseur de gas.
-		\item {\only<2>{\color{red}}Réduire la résistivité des électrodes $\rightarrow$ \textit{Low Resistivity Glass}}
+		\item Réduire l'épaisseur $d$ des électrodes $\rightarrow$ Nouvelles chambres en Bakélite.
+		\item Réduire la charge $q$ créée par l'avalanche $\rightarrow$ Réduire l'épaisseur de gaz.
+		\item Réduire la résistivité des électrodes $\rightarrow$ \textit{Low Resistivity Glass}.
 	\end{itemize}
 	\end{block}
+	\end{frame}
+	\subsection{Technologie proposée par l'IPNL}
+	\begin{frame}
+		\begin{block}{\centering Technologie proposée par l'IPNL}
+			\begin{center}
+			Combine toute les possibilités d'amélioration :
+			\end{center}
+			\begin{itemize}
+				\item Réduire la charge $q$ créée par l'avalanche :\\
+				$\rightarrow$ Réduire l'épaisseur de gas \SI{1.2}{\milli\meter} (\SI{2}{\milli\meter} CMS).\\
+				$\rightarrow$ Électronique à bas bruit développée par le groupe OMEGA.
+				\item Réduire l'épaisseur $d$ des électrodes :\\
+				$\rightarrow$ \SI{1}{\milli\meter} (\SI{2}{\milli\meter} CMS).
+				\item Réduire la résistivité des électrodes :\\
+				$\rightarrow$ \textit{Low Resistivity Glass} 1 à \SI{5e10}{\ohm\centi\meter}.
+			\end{itemize}
+		\end{block}
 	\end{frame}
 	\section{Électrodes de verre de basse résistivité}
 	\subsection{Les verres de basse résistivité}
@@ -364,7 +392,7 @@
 				\item {\color{Green}Épaisseur} : {\color{Green}\SIrange{0.5}{2}{\milli\meter}}
 				\item {\color{Green}Uniformité de l'épaisseur} : {\color{Green}\SI{0.02}{\milli\meter}}
 				\item {\color{Green}Rugosité} : {\color{Green}$<$\SI{10}{\nano\meter}}
-				\item {\color{Green}Comportement ohmique} : {\color{Green} stable (\SI{1}{\coulomb})}
+				\item {\color{Green}Comportement ohmique} : {\color{Green} stable (\SI{1}{\coulomb\per\square\centi\meter})}
 				\item {\color{red}Dimension maximale} : {\color{red}\SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}}
 			\end{itemize}
 		\end{block}
@@ -377,7 +405,7 @@
 	\begin{block}{\centering Chambre single gap}
 		\begin{itemize}
 			\item Épaisseur des électrodes \SI{1}{\milli\meter}
-			\item Épaisseur du gaz \SI{1.2}{\milli\meter}
+			\item Épaisseur du gaz \SI{1.2}{\milli\meter} (93\% TFE \chemform{C_2H_2F_4}, \num{5}\% \chemform{CO_2}, \num{2}\% \chemform{SF_6})
 			\begin{center}
 			\includegraphics[width=0.8\textwidth]{gap.png}
 			\end{center}
@@ -422,11 +450,11 @@
     \begin{frame}
     \begin{block}{\centering Éléments importants pour la caractérisation d'une chambre}
     	\begin{itemize}
-    		\item L'efficacité de détection :  le rapport entre le nombre de particules ayant réellement été détectées et le nombre total de particules ayant traversé la chambre. 
-    		\item La multiplicité (\textit{Cluster Size}) : Le nombre de pads ou strips touchés lorsqu’une particule traverse la chambre.
-    		\item Le bruit électronique : La fréquence de détection par l’électronique, d’un signal considéré comme non physique. 
-    		\item Sensibilité au bruit de fond (photons, neutrons, \ldots)
-    		\item Le vieillissement : Évolution des caractéristiques de la chambre en fonction du temps.
+    		\item \textbf{L'efficacité de détection} :  le rapport entre le nombre de particules ayant réellement été détectées et le nombre total de particules ayant traversé la chambre. 
+    		\item \textbf{La multiplicité (\textit{Cluster Size}) }: Le nombre de pads ou strips touchés lorsqu’une particule traverse la chambre.
+    		\item \textbf{Le bruit électronique} : La fréquence de détection par l’électronique, d’un signal considéré comme non physique. 
+    		\item \textbf{Sensibilité au bruit de fond} : photons, neutrons, \ldots
+    		\item \textbf{Le vieillissement} : Évolution des caractéristiques de la chambre en fonction du temps.
     	\end{itemize}
     \end{block}
 	\end{frame}
@@ -434,45 +462,37 @@
 	\begin{frame}
 	\begin{block}{\centering Méthode par reconstruction de traces}
 		\begin{itemize}
-			\item Mise en forme des données brute
-			\item Prise en compte de la géométrie du détecteur (XML)
+			\item Mise en forme des données brute.
+			\item Prise en compte de la géométrie du détecteur.
 			\item Présélection des candidats muon (agrégation en temps) :
 				\begin{itemize}
-					\item $>$3 Hits dans un coup d'horloge.
-					\item Sélection d'une fenêtre $t_{fen}=\pm3$ 
+					\item $\geq$3 Hits dans un coup d'horloge.
+					\item Sélection d'une fenêtre $t_{fen}=\pm3$.
 				\end{itemize}
-			\item Barycentre des hits dans chaque chambre
-			\item Création d'un candidat trace par minimisation du $\chi^2$
+			\item Des hits dans au moins 3 chambres
+			\item Barycentre des hits dans chaque chambre.
+			\item Création d'un candidat trace par minimisation du $\chi^2$.
 			\item Sélection des hits dans la chambre étudiée qui sont a $\pm3$ pads (strips) de la trace .
 		\end{itemize}
-		\includegraphics[width=0.25\textwidth]{1.png}
+		\includegraphics[width=0.23\textwidth]{1.png}
 		\hfill
-		\includegraphics[width=0.25\textwidth]{2.png}
+		\includegraphics[width=0.23\textwidth]{2.png}
 		\hfill
-		\includegraphics[width=0.285\textwidth]{3.png}
+		\includegraphics[width=0.265\textwidth]{3.png}
 	\end{block}
 	\end{frame}
 	\subsection{Programme d'analyse des données}
 	\begin{frame}
-		\begin{columns}
-			\column{.6\textwidth}
 			\begin{block}{\centering Test du programme d'analyse}
-				Simulation GEANT4 de SDHCAL développée à l'IPNL 
+				Simulation GEANT4 du SDHCAL (48 GRPC) développée à l'IPNL :
 				\begin{itemize}
-					\item Calcul de la longueur des segments contenus dans le volume de gaz correspondant à un pads $C_{0}$
-					\item Application d'une carte d'efficacité 
-					\item Sélection de la charge induite pour chaque segment en utilisant une Polya
-					$P(q)=\left[\frac{q}{\bar{q}}(1+\theta)\right]^\theta\exp^{-\left[\frac{q}{\bar{q}}(1+\theta)\right]}$
-					\item Correction de la charge en fonction de l'angle incident 
-					\item Répartition des charges sur les cellules voisines se trouvant à une distance inférieur à $R_{max}$ de $C_0$
-					\item Application des seuils électronique.
+					\item Simulation du passage de muons de \SI{100}{\giga\eV}
+					\item Permet d'appliquer des cartes d'efficacités
 				\end{itemize}
 			\end{block}
-			\column{.5\textwidth}
 			\begin{center}
-			\includegraphics[width=1\textwidth]{effisimul.jpg}
+			\includegraphics[width=0.70\textwidth]{effisimul.jpg}
 			\end{center}
-		\end{columns}
 	\end{frame}
     \subsection{Test en faisceaux au PS (Zone Est) en juin 2014}
     \begin{frame}
@@ -481,12 +501,12 @@
     		\begin{block}{\centering Chambres}
     			\begin{itemize}
     				\item 8 chambres
-    				\item 5 "float glass", 3 "Basse Résistivité"
+    				\item 5 "float glass", 3 basse résistivité
     				\begin{center}
     				\includegraphics[width=0.65\textwidth]{TelescopePS.png}
     				\end{center}
     				\item Électronique HARDROC 
-    				\item 7 à Pads, 1 à strips (Double gaps)
+    				\item 7 à Pads, 1 à strips (double gaps)
     				\begin{center}
     				\includegraphics[width=0.8\textwidth]{DoubleGap.png}
     				\end{center}
@@ -496,13 +516,15 @@
     		\begin{block}{\centering Efficacité en fonction de la HV}
     			%flux $\sim$\SI{3.5}{\kilo\hertz\per\square\centi\meter}
     			\begin{center}
-    			\scalebox{0.45}{\includetex{HVPS}}
+    			\scalebox{0.43}{\includetex{HVPS}}\\
+    			
+    			Flux de muons : \SI{3.5}{\kilo\hertz\per\square\centi\meter}
     			\end{center}
     		\end{block}
     		\begin{block}{\centering Efficacité en fonction du flux}
     			%HV=\SI{7.2}{\kilo\volt}
     			\begin{center}
-    		\scalebox{0.45}{\includetex{RatePS}}
+    		\scalebox{0.43}{\includetex{RatePS}}
     			\end{center}
     	\end{block}
     	\end{columns}
@@ -510,10 +532,10 @@
 	\begin{frame}
 		\begin{block}{\centering Multiplicité et Résolution spatiale}
 			\begin{itemize}
-				\item $\sigma=\frac{Nd}{\sqrt{12}}$
+				\item $\sigma_{1 side}=\frac{Nd}{\sqrt{12}}$
 					$N$ est le nombre de \textit{strips} touchés dans une zone de $\pm$\num{3} \textit{strips} autour du point d’impact de la trace reconstruite.
 				$d$ le pas des \textit{strips}.
-				\item  $\sigma=\frac{D}{\sqrt{12}}$
+				\item  $\sigma_{2 side}=\frac{D}{\sqrt{12}}$
 				$D$ est la distance entre les deux bords les plus éloignés de l'amas constitué des \textit{strips} se chevauchant.
 			\end{itemize}
 			\begin{center}
@@ -631,6 +653,9 @@
 		Simulation GEANT4 (verre standard).
 		\includegraphics[width=0.8\textwidth]{taux.png}
 		\end{center}
+			\begin{center}
+			$\Rightarrow$ 46500 $e^{-}$\si{\per\square\centi\meter\per\second}
+		\end{center}
 	\end{block}
 	\end{columns}
 	\end{frame}
@@ -650,8 +675,8 @@
 	\end{block}
 	\begin{center}
 		{\fontsize{9pt}{7.2}\selectfont
-	La saturation arrive autour d'un facteur d'atténuation 68.1 pour la float glass.\\
-	La chambre en verre de basse résistivité ne semble pas saturer. }
+	La saturation arrive vers \SI{700}{\hertz\per\square\centi\meter} (1/ATT=0.015) pour la float glass.\\
+	La chambre en verre de basse résistivité continue de fonctionner $\Rightarrow$ Possibilité de récupérer la perte d'efficacité en augmentant la HV. }
 	\end{center}
 	\end{frame}
 	\subsection{Vieillissement des chambres}
@@ -766,17 +791,18 @@
 	\subsection{Construction de chambre de grande taille (RE1/1)}
 	\begin{frame}
 	\begin{center}
-	La taille des verre de basse résistivité est limité à \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}.
+	La taille des verre de basse résistivité est limité à \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}\\
+	$\Rightarrow$ Construire des chambres de type RE1/1 (\SI{1.1}{\meter}$\times$\SI{60}{\centi\meter})
 	\end{center}
 		\begin{block}{\centering Méthode par collage}
 				\begin{columns}
 				\column{.45\textwidth}
 				\begin{center}
-					\includegraphics[width=0.5\textwidth]{Glass-glued.png}
+					\includegraphics[width=0.42\textwidth]{Glass-glued.png}
 				\end{center}
 				\column{.45\textwidth}
 				\begin{center}
-				\includegraphics[width=0.7\textwidth]{Glass-glued2.png}
+				\includegraphics[width=0.60\textwidth]{Glass-glued2.png}
 				\end{center}
 				\end{columns}
 				\begin{center}
@@ -859,7 +885,7 @@
 	\begin{block}{\centering Améliorations}
 		\begin{itemize}
 			\item FEB approchés du plan de masse
-			\item Meilleur masse entre les FEB et le capot
+			\item Meilleure masse entre les FEB et le capot
 			\item Amélioration du câblage
 			\item Remplacement des câbles à l'intérieur de la chambre par des câbles coaxiaux.
 		\end{itemize}
@@ -878,6 +904,9 @@
 	\begin{center}
 	\scalebox{0.90}{\includetex{SigmoidBC}}
 	\end{center}
+	\begin{center}
+		5\% d'inefficacité en tenant compte des effets d'acceptance géométrique.
+	\end{center}
 \end{block}
 \end{frame}
 \begin{frame}
@@ -890,38 +919,39 @@
 \begin{frame}
 \begin{block}{\centering Probabilité de streamer}
 	\begin{center}
-		Probabilité définit comme la probabilité d'avoir un cluster de taille supérieur à 7.
+		Probabilité définit comme la probabilité d'avoir un cluster de taille supérieure à 7.
 	\end{center}
 \begin{center}
 	\scalebox{0.88}{\includetex{ProbaStreamerBC}}
 	\end{center}
 \end{block}
 \end{frame}
-\subsection{Étude du bruit en fonction de la proportion de SF6}
+\subsection{Étude du bruit en fonction de la proportion de \chemform{SF_6}}
 \begin{frame}
-\begin{columns}
-	\column{0.5\textwidth}
-	\begin{block}{\centering Taux de bruit dans la chambre RE1/1 vs \% SF6}
-		\scalebox{0.4}{\includetex{CurrentRE11}}
+%\begin{columns}
+%	\column{0.5\textwidth}
+	\begin{block}{\centering Courant dans la chambre RE1/1 vs \% \chemform{SF_6}}
+		\begin{center}
+		\scalebox{0.51}{\includetex{CurrentRE11}}
+		\end{center}
 	\end{block}
-	\column{0.5\textwidth}
-	\begin{block}{\centering Taux de bruit dans la double gap 32$\times$30\si{\square\centi\meter} vs \% SF6}
-		\scalebox{0.4}{\includetex{EffiNoiseChi}}
+%	\column{0.5\textwidth}
+	\begin{block}{\centering Taux de bruit dans la chambre RE1/1 vs \% \chemform{SF_6}}
+		\begin{center}
+		\includegraphics[width=0.70\textwidth]{NoisvsSF6.png}
+		\end{center}
 		
 	\end{block}
-\end{columns}
+%\end{columns}
 \end{frame}
-\subsection{Conclusion}
+\subsection[Résumé des expériences pour les électrodes en verre de basse résistivité]{Résumé des tests pour les LR-GRPC}
 \begin{frame}
-\begin{block}{\centering Conclusion}
+\begin{block}{\centering Résumé des expériences pour les électrodes en verre de basse résistivité}
 \begin{itemize}
-	\item Chambres testées sur de nombreuses lignes de faisceaux (DESY,PS,SPS) et au GIF++.
-	\item Testées avec différents mélange gazeux (ILC,CMS) et divers proportion de SF6.
-	\item Testées avec différentes cellules de lecture (pads,strips) et single, double gaps.
-	\item Les verres de basse résistivité sont capable de supporter le flux présent dans les zones RE3/1 et RE4/1.
-	\item Il est possible de construire des chambres de grande dimensions avec les verres de basse résistivité de 32$\times$30\si{\square\centi\meter} (2 méthodes)
+	\item Les verres de basse résistivité sont capables de supporter le flux présent dans les zones RE3/1 et RE4/1.
+	\item Il est possible de construire des chambres de grandes dimensions avec les verres de basse résistivité de 32$\times$30\si{\square\centi\meter} (2 méthodes).
 	\item Le pourcentage de SF6 semble déterminant pour ce type de chambre.
-	\item Le vieillissement des chambres n'a pas pu être aboutit.
+	\item Le vieillissement des chambres doit être poursuivi.
 \end{itemize}
 \end{block}
 \end{frame}
@@ -930,7 +960,9 @@
 	\subsection{Principe de la nouvelle Électronique}
 	\begin{frame}
 	\begin{block}{\centering Principe de la nouvelle Électronique}
-		Les strips font toute la longueur de la chambre
+		\begin{center}
+		Les strips font toute la longueur de la chambre :
+		\end{center}
 	\begin{itemize}
 		\item Pas de segmentation en $\eta$ (A,B,C)
 		\item Lecture des deux côtés pour le mesurer la position le long du strip 
@@ -939,10 +971,10 @@
 		\end{equation} 
 		$Y$ la position du \textit{hit},$L$ la longueur de la ligne, \\
 		$T_1$ et $T_2$ le temps de propagation du signal pour rejoindre l'un et l'autre côté de la ligne, \\
-		$T$ le temps d'arrivée du signal sur le \textit{strip} \\ $v$ la vitesse de propagation du signal.
+		$T$ le temps d'arrivée du signal sur le strip\\ $v$ la vitesse de propagation du signal.
 	\end{itemize}
 	\begin{center}
-	\includegraphics[width=0.50\textwidth]{PCB1.png}
+	\includegraphics[width=0.40\textwidth]{PCB1.png}
 	\end{center}
 	\end{block}
 	\end{frame}
@@ -965,7 +997,7 @@
 			\column{0.50\textwidth}
 			\begin{block}{\centering Électronique}
 				\begin{itemize}
-					\item 2 PETIROC (32 vois chacun).
+					\item 2 PETIROC (32 voies chacun).
 					\begin{center}
 					\includegraphics[width=0.35\textwidth]{PETIROC.png}
 					\end{center}
@@ -1027,14 +1059,33 @@
 	\end{center}
 	\begin{center}
 	$v=2\frac{\diff Y}{\diff <\Delta T>}=2*\frac{1}{0.11}=\SI{18.18}{\centi\meter\per\nano\second}$
-	\end{center}
 	$=> \sigma_{Y}=\sigma_{T_2-T_1}\frac{v}{2}\approx\SI{1.8}{\centi\meter}$
+		\end{center}
 \end{block}
 \end{frame}
 	\section{Conclusion et perspectives}
 	\begin{frame}
-	\begin{block}{\centering Conclusion et perspectives}
-		Blabla
+	\begin{block}{\centering Conclusion}
+		\begin{itemize}
+			\item Les verres de basse résistivité sont capables de supporter le flux présent dans les zones RE3/1 et RE4/1.
+			\item Il est possible de construire des chambres de grandes dimensions avec les verres de basse résistivité de 32$\times$\SI{30}{\square\centi\meter} (2 méthodes).
+			\item Le pourcentage de SF6 semble déterminant pour ce type de chambre.
+			\item La nouvelle électronique permet d'obtenir la position le long des strips.
+			\item Résolution spatiale le long des strip de (\SI{1.8}{\centi\meter}).
+		\end{itemize}
+	\end{block}
+\end{frame}
+\begin{frame}
+	\begin{block}{Perspectives}
+		\begin{itemize}
+			\item Tester les verres de basse résistivité avec des éco-gaz (\chemform{CF_3I}, HFO-1234yf)
+			\item Abaisser la gamme dynamique du PETIROC (\SI{10}{\femto\coulomb})
+			\item Remplacer les TDC actuels par de ASICs (voire les intégrer au PETIROC).
+			\item Des tests de prototypes taille réelle sont déjà en cours.
+			\begin{center}
+			\includegraphics[width=0.45\textwidth]{proto.png}
+			\end{center}
+		\end{itemize}
 	\end{block}
 	\end{frame}
 
@@ -1079,6 +1130,13 @@
 
 \appendix
 \section{Backup}
+\begin{frame}
+\begin{block}{}
+	\begin{center}
+		BACKUP...
+	\end{center}
+\end{block}
+\end{frame}
 \subsection{Le Modèle Standard}
 \begin{frame}
 \begin{block}{\centering Le modèle standard}
@@ -1263,7 +1321,28 @@ Basé sur un groupe $G\supset SU(3)\times SU(2) \times U(1)$
 	\end{center}
 \end{columns}
 \end{frame}
-
+\subsection{Programme d'analyse des données}
+\begin{frame}
+\begin{columns}
+	\column{.6\textwidth}
+	\begin{block}{\centering Test du programme d'analyse}
+		Simulation GEANT4 de SDHCAL développée à l'IPNL 
+		\begin{itemize}
+			\item Calcul de la longueur des segments contenus dans le volume de gaz correspondant à un pads $C_{0}$
+			\item Application d'une carte d'efficacité 
+			\item Sélection de la charge induite pour chaque segment en utilisant une Polya
+			$P(q)=\left[\frac{q}{\bar{q}}(1+\theta)\right]^\theta\exp^{-\left[\frac{q}{\bar{q}}(1+\theta)\right]}$
+			\item Correction de la charge en fonction de l'angle incident 
+			\item Répartition des charges sur les cellules voisines se trouvant à une distance inférieur à $R_{max}$ de $C_0$
+			\item Application des seuils électronique.
+		\end{itemize}
+	\end{block}
+	\column{.5\textwidth}
+	\begin{center}
+		\includegraphics[width=1\textwidth]{effisimul.jpg}
+	\end{center}
+\end{columns}
+\end{frame}
 \subsection{Programme d'analyse pour les chambres à électronique CMS}
 {\fontsize{8pt}{7.2}\selectfont
 	\begin{frame}
@@ -1318,13 +1397,13 @@ Basé sur un groupe $G\supset SU(3)\times SU(2) \times U(1)$
 	\column{0.7\textwidth}
 	\begin{block}{\centering Prototype SDHCAL}
 		\begin{columns}
-			\column{0.45\textwidth}
+			\column{0.50\textwidth}
 		Calorimètre hadronique Semi-digital pour ILD.
 				\begin{itemize}
 			\item \SI{1}{\cubic\meter}
 			\item 48 GRPC "verre standard"
 		\end{itemize}
-		\column{0.45\textwidth}
+		\column{0.40\textwidth}
 		\begin{center}
 		\includegraphics[width=1\textwidth]{SDHCAL.jpg}
 		\end{center}

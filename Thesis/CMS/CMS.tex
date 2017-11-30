@@ -9,22 +9,22 @@
 Le détecteur Solénoïde Compact à Muons abrégé en CMS (pour \textit{Compact Muon Solenoid}) est avec ATLAS une expérience généraliste qui a comme buts majeurs :
 
 \begin{itemize}[label=$\bullet$]
-	\item \textbf{La recherche du boson de Higgs : } Lors de la conception de CMS dans les années \num{1990}, la détection du boson de Higgs a été prise comme référence afin de tester les performances du design du détecteur. Ce but a été atteint avec la découverte d'une particule compatible avec le boson de Higgs le \num{4} juillet \num{2012}.
-	\item \textbf{Confirmer et préciser les mesures de la physique du Modèle Standard : } Des mesures de précision dans des domaines tels que la QCD, le couplage électrofaible, et la physique des saveurs pourraient donner des indications d'une physique au-delà du Modèle Standard.
+	\item \textbf{La recherche du boson de Higgs : } lors de la conception de CMS dans les années \num{1990}, la détection du boson de Higgs a été prise comme référence afin de tester les performances du design du détecteur. Ce but a été atteint avec la découverte d'une particule compatible avec le boson de Higgs le \num{4} juillet \num{2012}.
+	\item \textbf{Confirmer et préciser les mesures de la physique du Modèle Standard : } des mesures de précision dans des domaines tels que la QCD, le couplage électrofaible, et la physique des saveurs pourraient donner des indications d'une physique au-delà du Modèle Standard.
 	\item \textbf{La recherche de signes de physique au-delà du Modèle Standard : }CMS permet la recherche de particules supersymétriques, de nouveaux bosons vecteurs massifs ($Z'$) ou encore la recherche de dimensions supplémentaires \ldots.
 	\item \textbf{Étudier les collisions d'ions lourds.}
 \end{itemize}
 
 Afin de répondre à ces objectifs, le "\textit{Technical Design Report}" (TDR) \cite{Bayatian:922757} a fixé le cahier des charges et les caractéristiques essentielles du détecteur CMS, à savoir :
 \begin{itemize}[label=$\bullet$]
-	\item Une bonne identification des muons et une bonne résolution en impulsion sur une vaste gamme d'impulsions pour la région $|\eta|<$\num{2.5}, une bonne résolution en masse pour les dimuons ($\approx$ \num{1}\% à \SI{100}{\giga\eV/\square\c}) et la capacité à déterminer de manière certaine la charge des muons d'impulsion $p<$ \SI{1}{\tera\eV/\c}.
+	\item Une bonne identification des muons et une bonne résolution en impulsion sur une vaste gamme d'impulsions pour la région $|\eta|<$\num{2.5}, une bonne résolution en masse pour les dimuons ($\approx$ \num{1}\% à \SI{100}{\giga\eV/\square\c}) et la capacité à déterminer de manière certaine la charge des muons d'impulsion $p<$ \SI{1}{\tera\eV/\c}. $\eta$ est la pseudo-rapidité (cf.Éq~\ref{eta})
 	\item Une bonne résolution en impulsion pour les particules chargées ainsi qu'une bonne efficacité de reconstruction dans le trajectographe interne (\textit{inner tracker}). Un déclenchement et un étiquetage efficace pour les jets venant de quarks $\tau$ et $b$, ce qui requiert un détecteur à pixels proche du point d'interaction.
 	\item Une bonne résolution pour l'énergie électromagnétique et une bonne résolution en masse pour les diphotons et diélectrons  ($\approx$ \num{1}\% à \SI{100}{\giga\eV/\square\c}), une grande couverture géométrique ($|\eta|<2.5$), une mesure de la direction des photons et/ou une localisation correcte du vertex primaire d'interaction ainsi qu'une bon rejet des $\pi_{0}$ et une isolation des photons et leptons efficace à haute luminosité.
-	\item une bonne résolution en masse des dijets et une bonne résolution en masse de l'énergie transverse manquante $E_{T}^{miss}$. Ceci requiert un calorimètre hadronique hermétique de très grande couverture géométrique ($|\eta|<5$) et une fine segmentation latérale ($\Delta\eta\times\Delta\phi<0.1\times0.1$).
+	\item Une bonne résolution en masse des dijets et une bonne résolution en masse de l'énergie transverse manquante $E_{T}^{miss}$. Ceci requiert un calorimètre hadronique hermétique de très grande couverture géométrique ($|\eta|<5$) et une fine segmentation latérale ($\Delta\eta\times\Delta\phi<0.1\times0.1$), où $\phi$ est l'angle d'émission par rapport à l'axe du faisceau.
 \end{itemize} 
 
 \subsection{Systèmes de coordonnées conventionnels}
-Le système de coordonnées utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère et coïncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnées est déterminé par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire vue de dessus. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ et pointe vers le haut. CMS possédant une symétrie cylindrique, le repère $\left(O,\vec{r},\vec{\phi},\vec{z}\right)$ est souvent utilisé. $z$ correspond à la distance entre le plan perpendiculaire à l'axe du faisceau (appelé plan transverse) passant par le point considéré et l'origine $O$ du repère; $\phi$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et $r=\sqrt{x^2+y^2}$. L'angle polaire $\theta$ est définit par rapport à $z$. Un troisième type de coordonnées, utilisant le fait que les particules produites au LHC sont relativistes, est également utilisé. En décomposant l'impulsion de la particule en une composante transverse et longitudinale $p=p_{T}+p_{L}=\sqrt{p_{x}^{2}+p_{y}^{2}}+p_{z}$ :
+Le système de coordonnées utilisé dans CMS est un repère cartésien $\left(O,\vec{x},\vec{y},\vec{z}\right)$ où $O$ est l'origine du repère et coïncide avec le point nominal d'interaction (IP) qui est le centre du détecteur. Le système de coordonnées est déterminé par l'axe $z$ qui est défini comme étant parallèle et dans la même direction que le faisceau allant dans le sens anti-horaire en vue de dessus. L'axe $x$ pointe vers le centre du collisionneur LHC. L'axe $y$ est orthogonal au plan $xz$ et pointe vers le haut. CMS possédant une symétrie cylindrique, le repère $\left(O,\vec{r},\vec{\phi},\vec{z}\right)$ est souvent utilisé. $z$ correspond à la distance entre le plan perpendiculaire à l'axe du faisceau (appelé plan transverse) passant par le point considéré et l'origine $O$ du repère; $\phi$ est mesuré par rapport à l'axe $\vec{x}$ dans le plan $xy$ (angle d'émission par rapport à l'axe du faisceau) et $r=\sqrt{x^2+y^2}$. L'angle polaire $\theta$ est défini par rapport à $z$. Un troisième type de coordonnées, utilisant le fait que les particules produites au LHC sont relativistes, est également utilisé. En décomposant l'impulsion de la particule en une composante transverse et longitudinale $p=p_{T}+p_{L}=\sqrt{p_{x}^{2}+p_{y}^{2}}+p_{z}$, il vient :
 \begin{equation}
 (E/c)^{2}=(mc)^{2}+p_{T}^{2}+p_{L}^{2}\Longrightarrow (E/c)^{2}-p_{L}^{2}=(mc)^{2}+p_{T}^{2}\Longrightarrow  \begin{cases}
 \left(E/c \right)=\sqrt{\left(mc \right)^{2}+p_{T}^{2}}\cosh(y) \\
@@ -35,9 +35,9 @@ p_{L}=\sqrt{\left(mc \right)^{2}+p_{T}^{2}}\sinh(y)
 %\begin{equation}
 %\left(E/c \right)=\sqrt{\left(mc \right)^{2}+p_{T}^{2}}\cosh(y), p_{L}=\sqrt{\left(mc \right)^{2}+p_{T}^{2}}\sinh(y)
 %\end{equation}
-avec $y$ un paramètre appelé rapidité. En remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de $E=\sqrt{m^{2}c^{4}+p^{2}c^{2}}$:
+avec $y$ un paramètre appelé rapidité. En remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de $E=\sqrt{m^{2}c^{4}+p^{2}c^{2}}$ on a :
 \begin{equation}
-y=\arctan\left(\frac{p_{l}c}{E}\right)=\frac{1}{2}\log\left(\frac{E+p_{l}c}{E-p_{l}c}\right)=\frac{1}{2}\log\left(\frac{\cos^2 \theta/2+\cdots}{\sin^2 \theta/2+\cdots}\right)\backsimeq-\log\tan\left(\frac{\theta}{2}\right)=\eta
+y=\arctan\left(\frac{p_{l}c}{E}\right)=\frac{1}{2}\log\left(\frac{E+p_{l}c}{E-p_{l}c}\right)=\frac{1}{2}\log\left(\frac{\cos^2 \theta/2+\cdots}{\sin^2 \theta/2+\cdots}\right)\backsimeq-\log\tan\left(\frac{\theta}{2}\right)=\eta \label{eta}
 \end{equation}
 %en remarquant que $p_{l}=p_{z}=p\cos(\theta)$ et en faisant le développement de $E=\sqrt{m^{2}c^{4}+p^{2}c^{2}}$
 %\begin{equation}
@@ -51,25 +51,49 @@ Le détecteur CMS se trouve dans une caverne située au point \num{5} (P5) du LH
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/slice.jpg}
-	\captionof{figure}{Descente d'une tranche de CMS.}
+	\captionsetup{type=figure}\caption{Descente d'une tranche de CMS.}
 	\label{slice}
 }
-Chaque tranche à ensuite été descendue dans la caverne et assemblée à \SI{100}{\meter} sous terre (cf.Fig~\ref{slice}).
-CMS est une détecteur cylindrique de \SI{24}{\meter} de long et de \SI{14.6}{\meter} de diamètre pour une masse de plus de \num{16000} tonnes (cf.Fig~\ref{cmsexploded}). Il est composé d'une succession de sous-détecteurs concentriques.
+Chaque tranche a ensuite été descendue dans la caverne et assemblée à \SI{100}{\meter} sous terre (cf.Fig~\ref{slice}).
+CMS est un détecteur cylindrique de \SI{24}{\meter} de long et de \SI{14.6}{\meter} de diamètre pour une masse de plus de \num{16000} tonnes (cf.Fig~\ref{cmsexploded}). Il est composé d'une succession de sous-détecteurs concentriques.
 
 \begin{sidewaysfigure}
 	\centering
-	\includegraphics[width=0.80\textwidth]{CMS/cms.png}
-	\caption{\label{cmsexploded}Vue éclatée du détecteur CMS.}
+	\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0,0) {\includegraphics[width=0.75\textwidth]{CMS/Schematic.eps}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+	%% next four lines will help you to locate the point needed by forming a grid. comment these four lines in the final picture.↓
+	%\draw[help lines,xstep=.01,ystep=.01] (0,0) grid (1,1);
+	%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+	%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y};}
+	%% upto here↑
+    \draw[o,fill=black] (0.9,0.43) -- (0.95,0.82) node[above, scale = 1.3] {\scriptsize \begin{tabular}{c}Calorimètre \\ à l'arrière \end{tabular}};
+    \draw[o,fill=black] (0.385,0.632) -- (0.75,0.90) node[above, scale = 1.3] {\scriptsize  Détecteur à pixels};
+    \draw[o,fill=black] (0.263,0.58) -- (0.10,1.0) node[above, scale = 1.3] {\scriptsize  Chambres à muons};
+    \draw[o,fill=black] (0.283,0.58) -- (0.10,1.0) ;
+    \draw[o,fill=black] (0.302,0.58) -- (0.10,1.0);
+    \draw[o,fill=black] (0.315,0.58) -- (0.10,1.0);
+    \draw[o,fill=black] (0.350,0.49) -- (0.15,0.20)node[below, scale = 1.3] {\scriptsize  \begin{tabular}{c}Culasse de retour \\du champ magnétique \end{tabular}};
+    \draw[o,fill=black] (0.340,0.46) -- (0.15,0.20);
+    \draw[o,fill=black] (0.33,0.425) -- (0.15,0.20);
+    \draw[o,fill=black] (0.38,0.53) -- (0.40,0.10) node[below, scale = 1.3] {\scriptsize  \begin{tabular}{c}Aimant \\supraconducteur \end{tabular}};
+    \draw[o,fill=black] (0.37,0.667) -- (0.30,0.98) node[above, scale = 1.3] {\scriptsize \begin{tabular}{c}Détecteur \\à pistes de silicium\end{tabular}};
+    \draw[o,fill=black] (0.43,0.69) -- (0.58,0.88)node[above, scale = 1.3] {\scriptsize  \begin{tabular}{c}Calorimètre \\hadronique \end{tabular}};
+    \draw[o,fill=black] (0.405,0.675) -- (0.48,0.98)node[above, scale = 1.3] {\scriptsize  \begin{tabular}{c}Calorimètre \\électromagnétique \end{tabular}};
+    \end{scope}
+	\end{tikzpicture}
+	%\centering
+	%\includegraphics[width=0.80\textwidth]{CMS/Schematic.eps}
+	\caption{\label{cmsexploded}Vue éclatée du détecteur CMS \cite{Collaboration:1433717}.}
 \end{sidewaysfigure}
 \newpage
 En partant du centre vers l'extérieur :
 \begin{itemize}[label=$\bullet$]
-	\item \textbf{Le trajectographe : } C'est le sous-détecteur le plus proche du point d'interaction. Il permet de reconstruire la trajectoire des particules chargées.
-	 \item \textbf{Le calorimètre électromagnétique (ECAL\footnote{Pour \textit{Electromagnetic CALorimeter}.})}: Il permet de mesurer l'énergie des photons et des électrons.
-	 \item \textbf{Le calorimètre hadronique (HCAL\footnote{Pour \textit{Hadronic CALorimeter}.})}: Il permet de mesurer l'énergie des hadrons.
-	 \item \textbf{L'aimant supra-conducteur : } Il produit un champ de \SI{3.8}{\tesla} et permet de courber la trajectoire des particules chargées.
-	 \item \textbf{Les chambres à muons : } Elles permettent d'identifier, reconstruire la trajectoire et mesurer l'énergie des muons. 
+	\item \textbf{Le trajectographe : } c'est le sous-détecteur le plus proche du point d'interaction. Il permet de reconstruire la trajectoire des particules chargées.
+	 \item \textbf{Le calorimètre électromagnétique (ECAL\footnote{Pour \textit{Electromagnetic CALorimeter}.})}: il permet de mesurer l'énergie des photons et des électrons.
+	 \item \textbf{Le calorimètre hadronique (HCAL\footnote{Pour \textit{Hadronic CALorimeter}.})}: il permet de mesurer l'énergie des hadrons.
+	 \item \textbf{L'aimant supra-conducteur : } il produit un champ de \SI{3.8}{\tesla} et permet de courber la trajectoire des particules chargées.
+	 \item \textbf{Les chambres à muons : } elles permettent d'identifier les muons, de reconstruire leur trajectoire et de mesurer leur énergie. 
 \end{itemize}
 Chaque composant de CMS fera l'objet d'une description plus détaillée dans les paragraphes suivants.
 
@@ -86,18 +110,18 @@ p=\frac{p_{T}}{\sin\theta}
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.65\textwidth]{CMS/tracker.png}
-	\captionof{figure}{Schéma du trajectographe de CMS. Chaque trait représente un module du détecteur. Les lignes doubles correspondent à des modules mis dos à dos produisant des hits dits "stéréos". Le détecteur à pistes est composé de quatre sous-détecteurs : Les tonneaux internes (TIB), les tonneaux externes (TOB), les disques internes (TID) et les bouchons (TEC).}
+	\captionsetup{type=figure}\caption{Schéma du trajectographe de CMS. Chaque trait représente un module du détecteur. Les lignes doubles correspondent à des modules mis dos-à-dos produisant des hits dits "stéréos". Le détecteur à pistes est composé de quatre sous-détecteurs : les tonneaux internes (TIB), les tonneaux externes (TOB), les disques internes (TID) et les bouchons (TEC).}
 	\label{trajectographe}
 \end{figure}
 
 \subsubsection{Le détecteur à pixels}
-Le détecteur à pixels de CMS a récemment été remplacé afin de garder une trajectographie performante à des luminosités au-dessus de \SI{2e34}{\per\square\centi\meter\per\second} et avec un empilement de plus de \num{50}. Ce remplacement a eu lieu du \num{28} février au \num{7} mars \num{2017} durant l'arrêt technique hivernal prolongé (EYETS). Le nouveau détecteur à pixels se compose d'un tonneau constitué de quatre couches de détection (BPIX) à des distances du faisceau $r=\SI{3.0}{\centi\meter}$, \SI{6.8}{\centi\meter}, \SI{10.2}{\centi\meter} et \SI{16}{\centi\meter}, d'une longueur de \SI{548.8}{\milli\meter} et de six bouchons (FPIX) (trois d'un côté du tonneau, trois de l'autre) situés à $\pm$\SI{29.1}{\centi\meter}, $\pm$\SI{39.6}{\centi\meter} et $\pm$\SI{51.6}{\centi\meter} pour une couverture radiale allant de \num{4.5} à \SI{16.1}{\centi\meter}. Une comparaison entre l'ancien détecteur à pixel et le nouveau est donnée figure \ref{pixel}.
+Le détecteur à pixels de CMS a récemment été remplacé afin de garder une trajectographie performante à des luminosités au-dessus de \SI{2e34}{\per\square\centi\meter\per\second} et avec un empilement de plus de \num{50}. Ce remplacement a eu lieu du \num{28} février au \num{7} mars \num{2017} durant l'arrêt technique hivernal prolongé (EYETS). Le nouveau détecteur à pixels se compose d'un tonneau constitué de quatre couches de détection (BPIX), à des distances respectives du faisceau $r=\SI{3.0}{\centi\meter}$, \SI{6.8}{\centi\meter}, \SI{10.2}{\centi\meter} et \SI{16}{\centi\meter}, d'une longueur de \SI{548.8}{\milli\meter} et de six bouchons (FPIX) (trois d'un côté du tonneau, trois de l'autre) situés respectivement à $\pm$\SI{29.1}{\centi\meter}, $\pm$\SI{39.6}{\centi\meter} et $\pm$\SI{51.6}{\centi\meter} pour une couverture radiale allant de \num{4.5} à \SI{16.1}{\centi\meter}. Une comparaison entre l'ancien détecteur à pixels et le nouveau est donnée figure \ref{pixel}.
 
 	\begin{figure}[ht!]
 	\subfloat[Vue oblique-transverse comparant les couches des tonneaux de l'ancien (gauche) et du nouveau détecteur (droite).]{\includegraphics[width=.45\linewidth]{CMS/pixel.png}}
 	\hfill
 	\subfloat[Ancien détecteur à pixels (bas) et nouveau (haut).]{\includegraphics[width=.45\linewidth]{CMS/pixel2.png}}
-	\caption{Comparaison entre le nouveau et l'ancien trajectographe à pixels.}
+	\caption{Comparaison entre le nouveau et l'ancien trajectographe à pixels \cite{Dominguez:1481838}.}
 	\label{pixel}
 \end{figure}
 
@@ -106,7 +130,7 @@ L'ajout d'une quatrième couche de détection dans le barrel assure une redondan
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.75\textwidth]{CMS/pixel3.png}
-	\captionof{figure}{Vue explosée du nouveau détecteur à pixels. La figure montre les positions des différentes partitions FPIX et BPIX ainsi que leurs cylindres contenant leurs services respectifs. Les services nécessaires au détecteur (connectiques, fibres optiques, convertisseurs DC-DC sont situés à haut $\eta$, hors du volume de trajectographie).}
+	\captionsetup{type=figure}\caption{Vue explosée du nouveau détecteur à pixels. La figure montre les positions des différentes partitions FPIX et BPIX ainsi que leurs cylindres contenant leurs services respectifs. Les services nécessaires au détecteur (connectiques, fibres optiques, convertisseurs DC-DC sont situés à haut $\eta$, hors du volume de trajectographie) \cite{Dominguez:1481838}.}
 	\label{pixel2}
 \end{figure}
 
@@ -117,7 +141,7 @@ Ce détecteur contient plus de \num{97} millions de pixels (\num{79} pour les BP
 	\subfloat[Module pour les couches \num{2} à \num{4} des BPIX et des FPIX (gauche) et de la couche \num{1} de BPIX (droite).]{\includegraphics[width=.46\linewidth]{CMS/module.png}}
 	\hfill
 	\subfloat[Schéma de l'électronique de lecture d'un module.]{\includegraphics[width=.46\linewidth]{CMS/module2.png}}
-	\caption{Modules de pixels.}
+	\caption{Modules de pixels \cite{Dominguez:1481838}.}
 	\label{module}
 \end{figure}
 \subsubsection{Le détecteur à pistes}
@@ -131,7 +155,7 @@ Le détecteur à pistes mesure \SI{5.5}{\meter} de long pour \SI{2.4}{\meter} de
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/TOB_TEC.png}
-	\captionof{figure}{Différents modules utilisés pour la construction du TOB et du TEC.}
+	\captionsetup{type=figure}\caption{Différents modules utilisés pour la construction du TOB et du TEC.}
 	\label{TOB_TEC}
 }
 \item \textbf{Le tonneau externe } (TOB) (cf.Fig~\ref{TOB}) pour \textit{Tracker Outer Barrel} entoure les TIB et TID pour couvrir un espace entre \num{60} et \SI{100}{\centi\meter} en rayon et $|z|<$\SI{110}{\centi\meter}. Il est composé de \num{5208} modules (cf.Fig~\ref{TOB_TEC}) de pistes orientées parallèlement aux faisceaux et de pas compris entre \num{122} et \SI{183}{\micro\meter}. Ces modules sont répartis en six couches dont les deux dernières sont "stéréos". L'épaisseur de ces modules est de \SI{500}{\micro\meter}.   
@@ -155,7 +179,7 @@ Le calorimètre électromagnétique de CMS ou \textit{Electromagnetic CALorimete
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.90\textwidth]{CMS/ECAL.png}
-	\captionof{figure}{Schéma du ECAL de CMS.}
+	\captionsetup{type=figure}\caption{Schéma du ECAL de CMS.}
 	\label{ECAL}
 \end{figure}
 
@@ -166,7 +190,7 @@ Le calorimètre électromagnétique est composé de \num{75848} cristaux (cf.Fig
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/Crystaux.png}
-		\captionof{figure}{Un cristal de \chemform{PbWO_4}.}
+		\captionsetup{type=figure}\caption{Un cristal de \chemform{PbWO_4}.}
 		\label{crystaux}
 	}
 	
@@ -174,28 +198,28 @@ Le calorimètre électromagnétique est composé de \num{75848} cristaux (cf.Fig
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/APD.png}
-		\captionof{figure}{Un groupe de deux APD.}
+		\captionsetup{type=figure}\caption{Un groupe de deux APD.}
 		\label{APD}
 	}
 	\marginpar
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/dee.jpg}
-		\captionof{figure}{Un \textit{"Dee"}.}
+		\captionsetup{type=figure}\caption{Un \textit{"Dee"}.}
 		\label{DEE}
 	}
 	\marginpar
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/20SCs.jpg}
-		\captionof{figure}{Montage de \num{20} Super-Cristaux sur un des \textit{Dee}.}
+		\captionsetup{type=figure}\caption{Montage de \num{20} Super-Cristaux sur un des \textit{Dee}.}
 		\label{SP}
 	}
 	\marginpar
 	{
 		\centering
 		\includegraphics[width=\marginparwidth]{CMS/VPT.png}
-		\captionof{figure}{Une VPT.}
+		\captionsetup{type=figure}\caption{Une VPT.}
 		\label{VPT}
 	}
 	
@@ -215,35 +239,35 @@ Le calorimètre électromagnétique est composé de \num{75848} cristaux (cf.Fig
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/LAITON.jpg}
-	\captionof{figure}{Photo de douilles de la marine russe réutilisées pour la construction du HCAL.}
+	\captionsetup{type=figure}\caption{Photo de douilles de la marine russe réutilisées pour la construction du HCAL.}
 	\label{LAITON}
 }
 	\marginpar
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/SCINTI.png}
-	\captionof{figure}{Photo d'une tuile du HO avec des fibres WLS insérées dans les \num{4} $\sigma$-rainures.}
+	\captionsetup{type=figure}\caption{Photo d'une tuile du HO avec des fibres WLS insérées dans les \num{4} $\sigma$-rainures.}
 	\label{SCINTI}
 }
 \marginpar
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/MPPC.png}
-	\captionof{figure}{Photo d'un MPPC.}
+	\captionsetup{type=figure}\caption{Photo d'un MPPC.}
 	\label{MPPC}
 }
 \marginpar
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/HPD.png}
-	\captionof{figure}{Photo d'une HPD.}
+	\captionsetup{type=figure}\caption{Photo d'une HPD.}
 	\label{HPD}
 }
 Le calorimètre hadronique de CMS ou \textit{Hadronic CALorimeter} (HCAL) (cf.Fig~\ref{HCAL}) permet de mesurer l'énergie et la direction des hadrons issus de l'hadronisation des quarks et gluons produits lors des collisions. Ce détecteur a une grande compacité spatiale et énergétique et est très compact car il se trouve pour une grande partie entre le ECAL et l'aimant supraconducteur. Cette disposition a nécessité de maximiser la quantité d'absorbeur et de minimiser les parties actives du détecteur. L'absorbeur est constitué de laiton (cf.Fig~\ref{LAITON}) qui possède une faible longueur d'interaction $\lambda_{l}$ et un faible taux de diffusions multiples. Les hadrons perdent majoritairement leur énergie par interaction nucléaire avec l'absorbeur. La plupart des hadrons sont stoppés avec \num{9}$\lambda_{l}$. Le laiton est également non magnétique ce qui est nécessaire vu l'emplacement du calorimètre. Le matériau actif est composé de feuilles de scintillateurs fluorescents (cf.Fig~\ref{SCINTI}). La scintillation est ensuite récoltée par des fibres optiques qui décalent la longueur d'onde de la lumière (WLS). Le signal est ensuite lu par des \textit{Multi-Pixel Photon Counter} (MPPC) (cf.Fig~\ref{MPPC}) pour le sous-détecteur \textit{Hadronic Outward calorimeter} et par des photodiodes hybrides (HPD) (cf.Fig~\ref{HPD}) pour les autres sous-détecteurs.
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.95\textwidth]{CMS/HCALSCHEME.png}
-	\captionof{figure}{Schéma d'un quart d'une coupe du HCAL de CMS.}
+	\captionsetup{type=figure}\caption{Schéma d'un quart d'une coupe du HCAL de CMS.}
 	\label{HCAL}
 \end{figure}
 
@@ -272,13 +296,13 @@ L'aimant supraconducteur de CMS (cf.Fig~\ref{MAGNET}) est un solénoïde de \SI{
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/CULASSE.jpg}
-	\captionof{figure}{Photo d'une culasse.}
+	\captionsetup{type=figure}\caption{Photo d'une culasse.}
 	\label{CULASSE}
 }
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.50\textwidth]{CMS/MAGNET.png}
-	\captionof{figure}{Schéma de l'aimant supraconducteur de CMS.}
+	\captionsetup{type=figure}\caption{Schéma de l'aimant supraconducteur de CMS.}
 	\label{MAGNET}
 \end{figure}
 \newpage
@@ -286,7 +310,7 @@ La figure \ref{CHAMP} montre une simulation par éléments-finis de la valeur du
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.90\textwidth]{CMS/CHAMP.png}
-	\captionof{figure}{Valeur du champ magnétique (gauche) et lignes de champ (droite) selon une coupe longitudinale du détecteur CMS, prédits par la simulation. Pour une valeur du champ central de \SI{3.8}{\tesla}.}
+	\captionsetup{type=figure}\caption{Valeur du champ magnétique (gauche) et lignes de champ (droite) selon une coupe longitudinale du détecteur CMS, prédits par la simulation. Pour une valeur du champ central de \SI{3.8}{\tesla}.}
 	\label{CHAMP}
 \end{figure}
 \subsection{Le spectrographe à muons}
@@ -296,14 +320,14 @@ Le spectographe à muons (cf.Fig~\ref{CMS1}, Fig.~\ref{CMS2}) a pour but d'ident
 {
 	\centering
 	\includegraphics[width=\marginparwidth]{CMS/MUON.png}
-	\captionof{figure}{Quart d'une coupe dans le plan transverse du détecteur CMS montrant la trajectoire d'un muon (courbe bleue).}
+	\captionsetup{type=figure}\caption{Quart d'une coupe dans le plan transverse du détecteur CMS montrant la trajectoire d'un muon (courbe bleue).}
 	\label{MUON}
 } Les muons ont un très grand pouvoir de pénétration. Il est donc possible d'utiliser à la fois les traces chargées laissées dans le trajectographe et dans des détecteurs placés après l'aimant pour les identifier et les reconstruire de manière précise. Une bonne résolution de la quantité de mouvement des muons et leur bonne identification sont obtenues grâce au champ magnétique intense de l'aimant et du retour de champ dans la culasse qui assure une trajectoire avec une double courbure. Cette culasse doit contenir des détecteurs de grande taille afin d'augmenter la probabilité de détection. Ils faut donc qu'ils soient peu onéreux et fiables. Il faut également que ces détecteurs ne soient pas atteints par d'autres particules afin d'assurer un signal propre, pour ce faire la distance depuis l'aimant jusqu'à la dernière station du spectrographe et de l'ordre de \num{16} longueurs de radiation, ce qui évite le bruit de fond hadronique résiduel venant du faisceau.
 
 \begin{sidewaysfigure}
 \centering
 \includegraphics[width=0.80\textwidth]{CMS/CMSLONG.png}
-\captionof{figure}{Coupe longitudinale d'un quart de CMS.}
+\captionsetup{type=figure}\caption{Coupe longitudinale d'un quart de CMS.}
 \label{CMS1}
 \end{sidewaysfigure}
 
@@ -311,7 +335,7 @@ Le spectographe à muons (cf.Fig~\ref{CMS1}, Fig.~\ref{CMS2}) a pour but d'ident
 \begin{figure}[p]
 \centering
 \includegraphics[width=0.98\textwidth]{CMS/CMSTRANS.png}
-\captionof{figure}{Coupe transversale de la partie centrale CMS.}
+\captionsetup{type=figure}\caption{Coupe transversale de la partie centrale CMS.}
 \label{CMS2}
 \end{figure}
 
@@ -321,7 +345,7 @@ Le spectrographe à muons, est composé de \num{3} sous-détecteurs :
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[width=0.40\textwidth]{CMS/DTchamber.png}
-		\captionof{figure}{Schéma d'une chambre à dérive.}
+		\captionsetup{type=figure}\caption{Schéma d'une chambre à dérive.}
 		\label{DT1}
 	\end{figure}
 
@@ -330,7 +354,7 @@ Le spectrographe à muons, est composé de \num{3} sous-détecteurs :
     	\begin{figure}[ht!]
     	\centering
     	\includegraphics[width=0.45\textwidth]{CMS/DTTUBE.png}
-    	\captionof{figure}{Schéma d'un tube d'une chambre à dérive.}
+    	\captionsetup{type=figure}\caption{Schéma d'un tube d'une chambre à dérive.}
     	\label{DT2}
     	\end{figure}
     En estimant le temps d'arrivée des électrons sur l'anode, en supposant le temps d'interaction connu et en ayant trois couches d'un superlayer touchées, il est possible d'estimer la position et le temps de la trace. Dans un superlayer une résolution de \SI{20}{\milli\radian} en angle, de \SI{100}{\micro\meter} en position et de quelques \si{\nano\second} en temps est atteinte.
@@ -344,7 +368,7 @@ Le spectrographe à muons, est composé de \num{3} sous-détecteurs :
     \begin{figure}[ht!]
     	\centering
     	\includegraphics[width=0.60\textwidth]{CMS/CSC2.png}
-    	\captionof{figure}{Schéma d'une chambre CSC.}
+    	\captionsetup{type=figure}\caption{Schéma d'une chambre CSC.}
     	\label{CSC2}
     \end{figure}
     
@@ -355,7 +379,7 @@ Le spectrographe à muons, est composé de \num{3} sous-détecteurs :
 	  \begin{figure}[ht!]
 		\centering
 		\includegraphics[width=0.80\textwidth]{CMS/RPC2.jpg}
-		\captionof{figure}{Schéma en vue éclatée d'un gap d'une RPC et des pistes de lecture.}
+		\captionsetup{type=figure}\caption{Schéma en vue éclatée d'un gap d'une RPC et des pistes de lecture.}
 		\label{RPC2}
 	\end{figure}
 	
@@ -376,7 +400,7 @@ Chaque type de particules lors de son passage dans CMS va créer des types de tr
 	  \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.52\textwidth]{CMS/particles.png}
-	\captionof{figure}{Schéma des traces laissées par différents types de particules dans les sous détecteurs de CMS.}
+	\captionsetup{type=figure}\caption{Schéma des traces laissées par différents types de particules dans les sous détecteurs de CMS.}
 	\label{particules}
 \end{figure}
 
@@ -388,7 +412,7 @@ Le \textit{trigger} de niveau I (L1) (cf.Fig~ \ref{L1}) opère à la fréquence 
 	  \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.70\textwidth]{CMS/L1.png}
-	\captionof{figure}{Schéma du Level-1 Trigger (L1).}
+	\captionsetup{type=figure}\caption{Schéma du Level-1 Trigger (L1).}
 	\label{L1}
 \end{figure}
 
@@ -409,7 +433,7 @@ Le détecteur CMS à déjà subi de nombreuses améliorations depuis le début d
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[width=0.88\textwidth]{CMS/tracker2.png}
-		\captionof{figure}{Schéma d'un quart du trajectographe prévu pour la mise à niveau de CMS.}
+		\captionsetup{type=figure}\caption{Schéma d'un quart du trajectographe prévu pour la mise à niveau de CMS.}
 		\label{tracker2}
 	\end{figure}
 	\item Les bouchons des calorimètres devront être remplacés par des calorimètres de haute granularité \textit{High Granularity Calorimeter} (HGC) d'une profondeur totale de $\sim$\num{10}$\lambda_{I}$ qui fourniront des images tridimensionnelles détaillées des gerbes. La section électromagnétique est composée d'une trentaine de couches de tungstène et de plaques de cuivre intercalées avec des capteurs de silicium comme matière active. Les capteurs auront des aires variables inférieures à $\sim$\SI{1,0}{\square\centi\meter}. La section électromagnétique fait environs \num{25}$X_0$ et une longueur d'interaction ($\lambda_{I}$). La partie hadronique possède \num{12} plaques de laiton et de cuivre intercalées avec des capteurs de silicium d'une longueur représentant \num{3,5}$\lambda_{I}$ ce qui couvre la majorité d'une gerbe hadronique. Il est suivi d'un "calorimètre hadronique à l'arrière" de conception similaire à l'actuel HE (des plaques en laiton intercalées avec des carreaux scintillants en plastique lus avec des fibres optiques à décalage de longueur d'ondes). La conception de ce calorimètre à grande granularité s'appuie sur les concepts du ILC/CALICE pour la mesure 3D des gerbes.
@@ -417,14 +441,14 @@ Le détecteur CMS à déjà subi de nombreuses améliorations depuis le début d
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[width=0.55\textwidth]{CMS/L1_2.png}
-		\captionof{figure}{Schéma du nouveau L1 pour la partie calorimètre et muons.}
+		\captionsetup{type=figure}\caption{Schéma du nouveau L1 pour la partie calorimètre et muons.}
 		\label{L1_2}
 	\end{figure}
 \item Le trajectographe à muons dans les bouchons ne possède actuellement que des CSC dans la zone \num{1.6}$<|\eta|<$\num{2.4}. C'est la seule région du trajectographe qui ne possède pas de RPC afin d'assurer une redondance malgré le fait qu'il s'agisse d'une région dont la résolution de la quantité de mouvement est moins bonne et dont le bruit de fond est important. Afin d'améliorer le L1 dans cette région il est proposé d'instrumenter cette zone avec des chambres de nouvelle technologie. Il est donc prévu d'utiliser des \textit{Gas Electron Multiplier} (GEM) dans les stations ME1 et ME2 qui présentent une bonne résolution spatiale et qui résistent au champ magnétique important présent dans ces zones. Elles permettront d'améliorer la résolution en quantité de mouvement et d'améliorer la correspondance avec les traces dans le \textit{Global Muon Trigger}. Pour les deux dernières zones ME3 et ME4, des RPC de meilleure granularité et de bonne résolution temporelle seront utilisés afin de réduire le bruit de fond.  De plus, une nouvelle station ME0 de GEM sera insérée dans l'espace libéré par les nouveaux bouchons de CMS, ce qui augmentera la couverture de détection des muons jusqu'à $|\eta|\approx$\num{3} (cf.Fig~\ref{end}). 
 	\begin{figure}[ht!]
 	\centering
 	\includegraphics[width=0.60\textwidth]{CMS/endcap.png}
-	\captionof{figure}{Schéma d'un quart du détecteur CMS montrant les différentes technologies qui seront utilisées dans les bouchons du spectrographe à muons.}
+	\captionsetup{type=figure}\caption{Schéma d'un quart du détecteur CMS montrant les différentes technologies qui seront utilisées dans les bouchons du spectrographe à muons.}
 	\label{end}
 \end{figure}
 \end{itemize}

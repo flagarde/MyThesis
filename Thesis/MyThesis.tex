@@ -97,6 +97,8 @@
 \usepackage{wallpaper}
 \pgfplotsset{width=10cm,compat=newest}
 \usepackage{silence}
+\WarningFilter{latex}{Underfull \vbox }
+\WarningFilter{latex}{Overfull \hbox }
 \WarningFilter{Fancyhdr}{\headheight is too small}
 \usepackage[tight]{shorttoc}
 \usepackage{chemist}
@@ -162,7 +164,24 @@
 
 \SetProtrusion{encoding={*},family={*},series={*},size={6,7,8}}{1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
 \microtypecontext{kerning=french}
-\usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing,shapes,positioning,patterns,plotmarks}
+\usetikzlibrary{calc,positioning,shadows.blur,decorations.pathreplacing,shapes,positioning,patterns,plotmarks,decorations.markings}
+
+\tikzset{
+	o/.style={
+		shorten >=#1,
+		decoration={
+			markings,
+			mark={
+				at position 0
+				with {
+					\draw[radius=2pt,fill=black] (0,0) circle;
+				}
+			}
+		},
+		postaction=decorate
+	},
+	o/.default=2pt
+}
 \usepackage{etoolbox}
 \newcolumntype{Y}[1]{>{\centering\arraybackslash}p{#1}<{\centering\arraybackslash}}
 \newcolumntype{L}{>{\arraybackslash\vspace{0.1cm}}Cc<{\vspace{0.1cm}\arraybackslash}}
@@ -236,7 +255,7 @@
 %\let\oldfootnotesize\footnotesize
 %\renewcommand*{\footnotesize}{\oldfootnotesize\fontsize{5}{7}}
 %\renewcommand{\footnotesize}{\tiny}
-\captionsetup{justification=raggedright,labelfont={color=gray,bf,small},font=small}
+\captionsetup{justification=raggedright,labelfont={color=gray,bf,small},font=small,labelsep = space}
 
 \newcommand{\ligne}{\color{gray}{\rule{\linewidth}{5pt}}\vspace{0.2cm}\color{black}}
 
@@ -451,9 +470,17 @@
 \include{GLO/GLO}
 \patchcmd{\chapter}{plain}{empty}{}{}
 \patchcmd{\part}{plain}{empty}{}{}
-
 \let\oldmarginpar\marginpar
-\renewcommand{\marginpar}[1]{\oldmarginpar{\captionsetup{font=footnotesize,labelfont=footnotesize}{#1}}}
+\renewcommand{\marginpar}[1]{%
+	\oldmarginpar{%
+	\renewcommand{\thesubfigure}{(\alph{subfigure})}	
+		
+		#1%
+	}
+}
+
+
+
 
 \begin{document}
 \pagestyle{void}

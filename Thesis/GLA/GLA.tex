@@ -952,7 +952,7 @@ Le ELOG du GIF++ contient des menus déroulants et des champs de texte à rempli
 \vspace*{-0.4cm}
 Afin de valider le choix des verres de basse résistivité comme électrodes, il est nécessaire d'étudier l'impact d'une exposition longue (correspondant à plusieurs années d'utilisation dans CMS) au bruit de fond. La mesure du courant en fonction du temps donne une idée précise du vieillissement des chambres et permet de calculer la charge totale ayant été déposée sur les électrodes. Selon le TDR \cite{Lourenco:2283189}, les chambres doivent conserver une bonne efficacité même après avoir subi une charge de \SI{1}{\coulomb\per\square\centi\meter}. En utilisant la source de photons du GIF++, dont le flux est supérieur de plusieurs ordres de grandeur à celui attendu dans les zones où seront instrumentées les chambres, il est possible d'obtenir la charge intégrée de \SI{1}{\coulomb\per\square\centi\meter} dans un temps raisonnable et ainsi d'accélérer le vieillissement des chambres pour vérifier leur évolution dans le temps.
 
-La figure \ref{CourantLR} (\ref{CourantHR}) montre les valeurs d'atténuateur \ref{a}, la tension appliquée à la chambre \ref{b}, les courants \ref{c}, la charge intégrée \ref{d} en fonction de la date ainsi que la charge intégrée \ref{e} en fonction du temps effectif pour la chambre de verre standard la plus proche du faisceau (la chambre "\textit{float glass}" en deuxième position). 
+La figure \ref{CourantLR} (\ref{CourantHR}) montre les valeurs d'atténuateur \textcolor{gray}{(a)}, la tension appliquée à la chambre \textcolor{gray}{(b)}, les courants \textcolor{gray}{(c)}, la charge intégrée \textcolor{gray}{(d)} en fonction de la date ainsi que la charge intégrée \textcolor{gray}{(e)} en fonction du temps effectif pour la chambre de verre standard la plus proche du faisceau (la chambre "\textit{float glass}" en deuxième position). 
 
 \begin{figure}[!ht]
 	\centering
@@ -1010,7 +1010,7 @@ La structure des \textit{hits} rejetés par \textit{Trivent} pour les cinq chamb
 Les chambres \num{3}, \num{4} et \num{5} présentent de nombreuses zones sans aucun \textit{hit}. Ces zones sont proches des bords qui continuent de posséder des \textit{hits} à cause des courants de fuites. La différence de comportement entre les chambres de basse résistivité et la chambre \textit{"float glass"} est clairement visible. Le nombre de \textit{hits} rejetés par \textit{Trivent}\footnote{C'est-à-dire une bonne partie des \textit{hits} de bruit.} est beaucoup moins important pour la chambre \textit{"float glass"}. Ceci tend à montrer que l'effet de saturation est beaucoup plus important pour cette chambre que pour les chambres de basse résistivité.
 
 \subsubsection{Étude des courants des chambres}
-Des mesures du courant des chambres en fonction du facteur d'atténuation ont été effectuées afin d'avoir une idée plus précise du comportement des chambres en fonction du flux de particules (cf.Fig~\ref{courant}).
+Des mesures du courant des chambres en fonction du facteur d'atténuation ont été effectuées afin d'avoir une idée plus précise de leur comportement en fonction du flux de particules (cf.Fig~\ref{courant}).
 
 \begin{figure}[ht!]
 	\centering
@@ -1021,7 +1021,7 @@ Des mesures du courant des chambres en fonction du facteur d'atténuation ont é
 	\label{courant}
 \end{figure}
 
-Les courants des chambres de basse résistivité ont tous le même comportement et présentent un profil non linéaire contrairement à celui de la chambre \textit{"float glass"}.
+Les courants dans la chambre 1 en verre de basse résistivité ont tous le même comportement et présentent un profil non linéaire, contrairement à ceux de la chambre \textit{"float glass"}.
 
 La figure \ref{currentsamHV} montre le courant parcourant les chambres de basse résistivité et \textit{"float glass"} en fonction de l'inverse du facteur d'atténuation de la source pour une même valeur de haute tension (\SI{6900}{\volt}).
 
@@ -1032,13 +1032,13 @@ La figure \ref{currentsamHV} montre le courant parcourant les chambres de basse 
 	\label{currentsamHV}
 \end{figure}
 
-On remarque que le courant dans les chambres de basse résistivité est toujours plus élevé que pour la \textit{"float glass"}. Une partie est due à l'effet d'écrantage produit par la présence de la chambre de basse résistivité placée devant la \textit{"float glass"}. On remarque également que la \textit{"float glass"} sature plus rapidement que la chambre de basse résistivité. Cette dernière ne semble pas saturer, même pour un facteur d'atténuation de \num{4.64}.
+On remarque que le courant dans la chambre de basse résistivité est toujours plus élevé que pour la \textit{"float glass"}. Une partie est due à l'effet d'écrantage produit par la présence de la chambre de basse résistivité placée devant la \textit{"float glass"}. On remarque également que la \textit{"float glass"} sature plus rapidement que la chambre de basse résistivité. Cette dernière ne semble pas saturer, même pour un facteur d'atténuation de \num{4.64}.
 
 \subsubsection{Estimation de la résistivité des életrodes}
 
 Le GIF++ offre la possibilité de faire circuler de l'argon dans les chambres afin de les purger et de les nettoyer. L'argon permet également de mesurer la résistivité des électrodes des chambres. Grâce à ce gaz, les chambres fonctionnent rapidement en mode \textit{streamer}, la résistance de la couche de gaz devient négligeable  par rapport à la résistance des électrodes. 
 
-L'étude des courants des chambres en fonction de la tension a montré que les verres de basse résistivité possèdent une hystérésis du courant contrairement aux chambres \textit{"float glass"} (cf.Fig~\ref{hysteresis}). L'allure de la courbe montre également que les verres de basse résistivité ont un comportement qui n'est pas ohmique contrairement au verre \textit{"float glass"}.
+L'étude des courants des chambres en fonction de la tension a montré que les verres de basse résistivité possèdent une hystérésis du courant, contrairement aux chambres \textit{"float glass"} (cf.Fig~\ref{hysteresis}). L'allure de la courbe montre également que les verres de basse résistivité ont un comportement qui n'est pas ohmique, contrairement au verre \textit{"float glass"}.
 
 
 \begin{figure}[ht!]
@@ -1086,10 +1086,10 @@ Le tableau \ref{resistivite} donne la résistivité des chambres calculée grâc
 	\label{resistivite}
 \end{table}
 
-La résistivité des chambres de basse résistivité est beaucoup plus élevée qu'attendue ($\sim$\SI{e10}{\ohm.\centi\meter}). Toutes ces constatations (cd.Fig~\ref{CourantLR}, Fig~\ref{struc}, Table~\ref{resistivite}) nous ont amené à ouvrir une chambre afin d'essayer de comprendre ces résultats.
+La résistivité des chambres de basse résistivité est beaucoup plus élevée qu'attendue ($\sim$\SI{e10}{\ohm.\centi\meter}). Toutes ces constatations (cf.Fig~\ref{CourantLR},cf.Fig~\ref{struc},cf.Table~\ref{resistivite}) nous ont amené à ouvrir une chambre afin d'essayer de comprendre ces résultats.
 \vspace{0.4cm}
 \newpage
-L'ouverture d'une des chambres a montré que les \textit{spacers} permettant le maintien des électrodes à une distance uniforme le long de la chambre ont disparu et qu'un dépôt s'est créé sur les électrodes de la chambre (cf.Fig~\ref{depot}). Ces deux constatations peuvent expliquer les structure étonnantes de la distribution des \textit{hits} rejetés par \textit{Trivent} (cf.Fig~\ref{struc}). En effet, sans \textit{spacer} les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance à augmenter le champ électrique dans cette zone et donc le nombre de \textit{hits}. La présence de dépôts permet également d'expliquer le fait que certaines zones de la chambre soient devenues aveugles ainsi que la résistivité élevée de ces chambres.
+L'ouverture d'une des chambres a montré que les \textit{spacers} permettant le maintien des électrodes à une distance uniforme le long de la chambre ont disparu et qu'un dépôt s'est créé sur les électrodes de la chambre (cf.Fig~\ref{depot}). Ces deux constatations peuvent expliquer les structures étonnantes de la distribution des \textit{hits} rejetés par \textit{Trivent} (cf.Fig~\ref{struc}). En effet, sans \textit{spacer} les parties centrales des électrodes se trouvent attirées l'une vers l'autre, ce qui a tendance à augmenter le champ électrique dans cette zone et donc le nombre de \textit{hits}. La présence de dépôts permet également d'expliquer le fait que certaines zones de la chambre soient devenues aveugles, ainsi que la résistivité élevée de ces chambres.
 \vspace*{0.3cm}
 \begin{figure}[!ht]
 	\centering
@@ -1099,32 +1099,32 @@ L'ouverture d'une des chambres a montré que les \textit{spacers} permettant le 
 \end{figure}
 
 \subsection{Causes connues du vieillissement des RPC }
-Plusieurs causes du vieillissement prématuré des chambres RPC peuvent être trouvées dans la littérature :
+Pour comprendre ces problèmes, nous avons commencé par étudier les causes du vieillissement prématuré des chambres RPC, dont plusieurs peuvent être trouvées dans la littérature :
 
 \subsubsection{La contamination par l'eau}
-Après quelques semaines de prises de données, les GRPC du sous-système $K_{L}/\mu$ de l'expérience BELLE ont perdu une grande partie de leur efficacité et ont vu augmenter leur bruit de fond. Les physiciens de cette expérience se sont aperçus en analysant la sortie de certaines chambres que le gaz avait une concentration en eau allant jusqu'à \num{2000} ppm. La cause de cette concentration en eau s'avéra être la migration de la vapeur d'eau de l'air ambiant vers les tubes de polyoléfine de plusieurs mètres de long amenant le gaz dans les chambres. La solution trouvée fût de remplacer ces tuyaux en plastique par des tuyaux de cuivre \cite{Abashian:2000vb}. D'autres études démontrent les effets de la vapeur d'eau sur le vieillissement des électrodes de verre notamment en présence de fréon (l'un des noms du \chemform{TFE} est Freon 134a) \cite{Sakai:772080}, \cite{Kubo:2002jq}.
+Après quelques semaines de prises de données, les GRPC du sous-système $K_{L}/\mu$ de l'expérience BELLE ont perdu une grande partie de leur efficacité et ont vu leur bruit de fond augmenter. Les physiciens de cette expérience se sont aperçus en analysant la sortie de certaines chambres que le gaz avait une concentration en eau allant jusqu'à \num{2000} ppm. La cause de cette concentration en eau s'avéra être due à la migration de la vapeur d'eau de l'air ambiant vers les tubes de polyoléfine de plusieurs mètres de long amenant le gaz dans les chambres. La solution trouvée fût de remplacer ces tuyaux en plastique par des tuyaux de cuivre \cite{Abashian:2000vb}. D'autres études démontrent les effets de la vapeur d'eau sur le vieillissement des électrodes de verre, notamment en présence de fréon (l'un des noms du \chemform{TFE} est Freon 134a) \cite{Sakai:772080}, \cite{Kubo:2002jq}.
 
 \newpage
-Bien qu'ayant utilisé des tuyaux de polyamide, qui présente un coefficient d'absorption faible en présence d'humidité et une bonne résistance aux radiations, nous avons décidé de remplacer ces tuyaux par des tuyaux en cuivre. Le choix des tuyaux en polyamide s'était imposé pour leur facilité de mise en œuvre (découpe, remplacement etc.). 
+Bien qu'ayant utilisé des tuyaux de polyamide, qui présentent un coefficient d'absorption faible en présence d'humidité et une bonne résistance aux radiations, nous avons décidé de remplacer ces tuyaux par des tuyaux en cuivre. Le choix des tuyaux en polyamide s'était imposé pour leur facilité de mise en œuvre (découpe, remplacement etc.). 
 
 \subsubsection{La polymérisation de l'isobutane}
  L'isobutane \chemform{iC_4H_{10}} appartient à la classe des alcanes. Il est connu pour produire des réactions de polymérisation, ce qui entraine un dépôt dans les chambres \cite{na60}. L'isobutane est également très inflammable ce qui complique son utilisation en laboratoire. C'est l'une des raisons du choix de son remplacement par du \chemform{CO_2} dans le prototype SDHCAL et également de son utilisation hors du GIF++. De plus le \chemform{CO_2} ne crée pas de dépôt supplémentaire.
 
 \subsubsection{L'attaque du verre par l'acide fluorhydrique \texorpdfstring{\chemform{HF}}{HF}}
-L'acide fluorhydrique \chemform{HF} provient de la décomposition du \chemform{TFE} lors de l'ionisation en avalanche. Des études ont montré qu'en mode \textit{streamer} la production de \chemform{HF} est comprise entre \num{1.19e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Lu:2009zzd} et $\sim$\num{3e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Abbrescia:2006hk} (\num{1.3e19}\chemform{F^{-}}\si{\per\coulomb} pour \cite{Aielli:2006ih}). Ce composant chimique, très corrosif peut même dissoudre le verre selon la réaction :
+L'acide fluorhydrique \chemform{HF} provient de la décomposition du \chemform{TFE} lors de l'ionisation en avalanche. Des études ont montré qu'en mode \textit{streamer} la production de \chemform{HF} est comprise entre \num{1.19e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Lu:2009zzd} et $\sim$\num{3e19}\chemform{F^{-}}\si{\per\coulomb} \cite{Abbrescia:2006hk} (\num{1.3e19}\chemform{F^{-}}\si{\per\coulomb} pour \cite{Aielli:2006ih}). Ce composant chimique, très corrosif, peut même dissoudre le verre selon la réaction :
 \begin{chemeqn}
 SiO_2+6 HF\longrightarrow H_2SiF_6+H_2O
 \end{chemeqn}
-L'acide hexafluorosilicique ou fluorosilicique (\chemform{H_2SiF_6}) se retrouve ainsi présent sous forme de dépôt aqueux sur les surfaces internes des électrodes amenant à une diminution de la résistivité de surface de ces parois. Cet acide également corrosif peut attaquer également le verre et détériorer leur état de surface. Les défauts de surface conduisent à une déformation du champ électrique à cause notamment de l'effet de pointe et augmentent ainsi le taux de bruit dans les chambres. Ce qui accélère à son tour la production de \chemform{HF}, entraînant un processus en chaine.
+L'acide hexafluorosilicique ou fluorosilicique (\chemform{H_2SiF_6}) se retrouve ainsi présent sous forme de dépôt aqueux sur les surfaces internes des électrodes, amenant à une diminution de la résistivité de surface de ces parois. Cet acide également corrosif peut aussi attaquer le verre et détériorer son état de surface. Les défauts de surface conduisent à une déformation du champ électrique à cause notamment de l'effet de pointe et augmentent ainsi le taux de bruit dans les chambres. Ce qui accélère à son tour la production de \chemform{HF}, entraînant un processus en chaine.
 
 Ces attaques des électrodes par les composés fluorés peuvent également faire varier la résistivité volumique du matériau et donc modifier sa fréquence maximale de détection.
 
 Il a été montré que la création de l'acide \chemform{HF} est proportionnelle à la charge parcourant les électrodes. Le mode de fonctionnement avalanche permet donc de limiter la création de cet acide. De plus, la circulation du gaz dans les chambres permet d'évacuer une partie des composés fluorés. Dans CMS, la moitié du \chemform{HF} produit est évacué en faisant circuler le gaz dans les chambres avec un débit permettant de remplacer le volume de gaz des chambres une fois par heure \cite{Abbrescia:2006hk}. Les dépôts fluorés absorbés à la surface du verre peuvent également être libérés en utilisant de l'argon pur \cite{Band:2008zza}.
 
 Afin de limiter les dépôts dans nos chambres, nous avons donc essayé d'augmenter le débit de gaz. Cependant, cette augmentation s'est révélée impossible à réaliser car le débit total du gaz CMS permis au GIF++ doit être partagé entre toutes les autres expériences utilisant celui-ci.
-Nous avons également remarqué que certaines de nos chambres comportaient des fuites, ce qui amenait de l'humidité lors des arrêts de gaz par exemple. De plus, les chambres étant montées en série, cette configuration pouvait augmenter la résistance du système. Certaines chambres pouvaient ainsi gonfler et augmenter les fuites diminuant de fait le débit de gaz introduit dans les chambres suivantes. Afin de pallier ce problème, nous avons décidé de monter les chambres en parallèle et de placer à chacune de leurs entrées un débitmètre à vanne de régulation. Ceci permettant d'ajuster le débit de chaque chambre afin de vérifier que chacune d'elles possédait bien une circulation de gaz.
+Nous avons également remarqué que certaines de nos chambres comportaient des fuites, ce qui amenait de l'humidité lors des arrêts de gaz par exemple. De plus, les chambres étant montées en série, cette configuration pouvait augmenter la résistance du système. Certaines chambres pouvaient ainsi gonfler et augmenter les fuites, diminuant de fait le débit de gaz introduit dans les chambres suivantes. Afin de pallier ce problème, nous avons décidé de monter les chambres en parallèle et de placer à chacune de leurs entrées un débitmètre à vanne de régulation. Ceci a permis d'ajuster le débit de chaque chambre afin de vérifier que chacune d'elles possédait bien une circulation de gaz.
 
-Au vu de l'état des chambres, il a été décidé de construire de nouvelles chambres de basse résistivité de taille \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}. Malheureusement seuls \num{4} verres nous sont arrivés en bon état, ce qui n'a permis de créer que deux nouvelles chambres seulement. Ce nombre étant insuffisant pour une étude du vieillissement, nous avons décidé de les utiliser afin d'instrumenter une chambre double \textit{gaps} avec l'électronique présentée figures \ref{DoubleGap} et \ref{SchemePS}. Un même type de PCB a été utilisé afin de créer une chambre avec des électrodes en Bakélite de \SI{2}{\milli\meter} d'épaisseur et un \textit{gap} de \SI{2}{\milli\meter}. Les résultats de ces tests sont présentés section \ref{smallchamber}, page~\pageref{smallchamber}.
+Au vu de l'état des chambres, il a été décidé d'en construire de nouvelles de basse résistivité de taille \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter}. Malheureusement seuls \num{4} verres sont arrivés en bon état, ce qui n'a permis de créer que deux nouvelles chambres. Ce nombre étant insuffisant pour une étude du vieillissement, nous avons décidé de les utiliser afin d'instrumenter une chambre double \textit{gaps} avec l'électronique présentée figures \ref{DoubleGap} et \ref{SchemePS}. Un même type de PCB a été utilisé afin de créer une chambre avec des électrodes en Bakélite de \SI{2}{\milli\meter} d'épaisseur et un \textit{gap} de \SI{2}{\milli\meter}. Les résultats de ces tests sont présentés section \ref{smallchamber}, page~\pageref{smallchamber}.
 
 \newpage
 \section{Les chambres de basse résistivité de taille RE1/1}
@@ -1145,7 +1145,7 @@ Au vu de l'état des chambres, il a été décidé de construire de nouvelles ch
 	\label{strips}
 \end{wrapfigure}
 
-En parallèle à la caractérisation des chambres de basse résistivité, l'étude de la faisabilité de chambres de grande dimension (reprenant de nombreuses caractéristiques des chambres RE1/1 \cite{gapss}) a été effectuée. En effet, la limitation par la méthode de production de la taille des verres de basse résistivité nécessite de trouver une manière efficace et robuste d'assembler ces verres.  Deux prototypes basés sur deux méthodes d'assemblage différentes des verres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} ont été réalisés. Les chambres sont constituées de trois \textit{gaps} (cf.Fig~\ref{gap}). Un PCB, placé entre les \textit{gaps} du bas et celui du haut, possédant \num{4} rangées de \num{32} \textit{strips} de $\sim$\SI{1}{\centi\meter} est utilisé afin de récolter le signal (cf.Fig~\ref{strips}). Pour les deux prototypes, l'assemblage des verres est prévu de manière à éviter les zones mortes. Les deux prototypes ont été réalisés avec des verres \textit{"float glass"} afin de limiter l'utilisation de verre de basse résistivité. La solution retenue sera ensuite produite avec des verres de basse résistivité.
+En parallèle à la caractérisation des chambres de basse résistivité, l'étude de la faisabilité de chambres de grande dimension (reprenant de nombreuses caractéristiques des chambres RE1/1 \cite{gapss}) a été effectuée. En effet, la limitation de la taille des verres de basse résistivité par la méthode de production nécessite de trouver une manière efficace et robuste d'assembler ces verres.  Deux prototypes, basés sur deux méthodes d'assemblage différentes des verres de $\SI{32}{\centi\meter}\times\SI{30}{\centi\meter}$, ont été réalisés. Les chambres sont constituées de trois \textit{gaps} (cf.Fig~\ref{gap}). Un PCB, placé entre le \textit{gap} du bas et ceux du haut, et possédant \num{4} rangées de \num{32} \textit{strips} de $\sim\SI{1}{\centi\meter}$, est utilisé afin de récolter le signal (cf.Fig~\ref{strips}). Pour les deux prototypes, l'assemblage des verres est prévu de manière à éviter les zones mortes. Les deux prototypes ont été réalisés avec des verres \textit{"float glass"} afin de limiter l'utilisation de verre de basse résistivité. La solution retenue sera ensuite produite avec des verres de basse résistivité.
 
 \subsection{Les différentes méthodes d'assemblage} 
 \subsubsection{Méthode par collage}
@@ -1157,12 +1157,12 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
  	\begin{minipage}[t]{.45\textwidth}
  	\centering
  	\vspace*{1.cm}
- 	\subfloat[Gap (i) hermétique formé par collage des verres. On distingue clairement les zones de collage.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued.png}\label{a}}
+ 	\subfloat[\textit{Gap(i)} hermétique formé par collage des verres. On distingue clairement les zones de collage.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued.png}\label{a}}
  	\end{minipage}
     \hfill
     \begin{minipage}[t]{.45\textwidth}
     \centering
-    \subfloat[\textit{Gap(ii)} et \textit{gap(iii)} hermétique formé par collage des verres dans la cassette evec les \textit{strips} et le \textit{gap(i)} au dessous.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued2.png}\label{b}}
+    \subfloat[\textit{Gap(ii)} et \textit{gap(iii)} hermétiques formés par collage des verres dans la cassette, avec les \textit{strips} et le \textit{gap(i)} au dessous.]{\includegraphics[width=1\textwidth]{GLA/Glass-glued2.png}\label{b}}
     \\
     \vspace*{1cm}
     \subfloat[La cassette fermée.]{\includegraphics[width=1\textwidth]{GLA/cassette_colle.jpg}\label{c}}
@@ -1172,7 +1172,7 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
  \end{figure}
  
  \subsubsection{Méthode par fixation mécanique}
- La deuxième méthode permet de ne pas utiliser de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placés sur les pourtours de la cassette en aluminium (cf.Fig~\ref{aa}, \ref{posverre}). Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes (cf.Fig~\ref{cc}). Le \textit{gap} entre les électrodes est assuré par des fils de pêche perlés (cf.Fig~\ref{bb}). Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressorts qui, une fois le capot posé, assure le maintien et la planéité des verres sur le PCB.  Avec cette méthode, l'herméticité est assurée par la cassette (cf.Fig~\ref{dd}), les électrodes d'un \textit{gap} ne sont donc pas reliées entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme dans la méthode précédente.
+ La deuxième méthode permet de ne pas utiliser de colle, celle-ci pouvant se détériorer sous les radiations. Les carreaux de verre sont tenus par des plots placés sur les pourtours de la cassette en aluminium (cf.Fig~\ref{aa}, \ref{posverre}). Les verres sont reliés électriquement par des adhésifs en cuivre et forment ainsi les électrodes (cf.Fig~\ref{cc}). Le \textit{gap} entre les électrodes est assuré par des fils de pêche perlés (cf.Fig~\ref{bb}). Une plaque de poly(méthacrylate de méthyle) (PMMA) de la même taille que l'intérieur de la chambre est équipée de plusieurs ressorts qui, une fois le capot posé, assurent le maintien et la planéité des verres sur le PCB.  Avec cette méthode, l'herméticité est assurée par la cassette (cf.Fig~\ref{dd}), les électrodes d'un \textit{gap} ne sont donc pas reliées entre-elles. Le gaz circule donc dans toute la chambre et pas seulement entre les électrodes comme dans la méthode précédente.
  
  \begin{figure}[ht!]
  	\centering
@@ -1191,7 +1191,7 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
  
  \subsection{Comparaison des deux méthodes de construction}
  
- Pour pouvoir comparer les deux méthodes de construction, un banc cosmique à été mis en place afin de vérifier l'efficacité de chacun des deux prototypes.
+ Pour comparer les deux méthodes de construction, un banc de test cosmique a été mis en place afin de mesurer l'efficacité de chacun des deux prototypes.
  
  \subsubsection{Le banc de test cosmique}
  \label{banc}
@@ -1217,9 +1217,9 @@ La première méthode consiste à coller les verres entre eux grâce à de la co
 \label{flux}
 \end{minipage}
 
-Le banc cosmique est constitué d'un ensemble de photomultiplicateurs (PM) (au moins deux) mis en coïncidence, qui détectent ainsi le passage des muons. Afin d'éviter tout déclenchement intempestif dû par exemple à l'alimentation électrique, un PM placé en dehors du banc cosmique assure un veto. Lorsque tous les PM sont déclenchés, y compris celui hors du banc, ces déclenchement proviennent très vraisemblablement d'une perturbation électrique. Ce genre d'événement est donc rejeté et la lecture de ceux-ci ne sera pas effectuée.
+Le banc cosmique est constitué d'un ensemble de photomultiplicateurs (PM) (au moins deux) mis en coïncidence, qui détectent ainsi le passage des muons. Afin d'éviter tout déclenchement intempestif dû par exemple à l'alimentation électrique, un PM placé en dehors du banc cosmique assure un veto. Lorsque tous les PM sont déclenchés, y compris celui hors du banc, ces déclenchement proviennent très vraisemblablement d'une perturbation électrique. Ce genre d'événement est donc rejeté et la lecture des PM n'est alors pas effectuée.
 
-Nos chambres prototypes sont insérées dans ce banc cosmique. Les \textit{strips} des chambres sont connectées par des câbles coaxiaux à une carte de test contenant un ASIC HARDROC (cf.Fig~\ref{carte}) ainsi qu'un FPGA contenant la machine d'état. La carte de test est reliée par USB à un ordinateur et est pilotée par une application développée sous l'environnement \textit{Laboratory Virtual Instrument Engineering Workbench} (LabVIEW\textsuperscript{\textregistered}) (cf.Fig~\ref{labview}). L'interface de cette application permet de sélectionner les paramètres du \textit{slow control}, qui sont chargés dans le HARDROC ainsi que de gérer le démarrage de l'acquisition, la lecture et le rapatriement des données. 
+Nos chambres prototypes sont insérées dans ce banc cosmique. Les \textit{strips} des chambres sont connectées par des câbles coaxiaux à une carte de test contenant un ASIC HARDROC (cf.Fig~\ref{carte}) ainsi qu'un FPGA contenant la machine d'état. La carte de test est reliée par USB à un ordinateur et est pilotée par une application développée sous l'environnement \textit{Laboratory Virtual Instrument Engineering Workbench} (LabVIEW\textsuperscript{\textregistered}) (cf.Fig~\ref{labview}). L'interface de cette application permet de sélectionner les paramètres du \textit{slow control}, qui sont chargés dans le HARDROC, ainsi que de gérer le démarrage de l'acquisition, la lecture et le rapatriement des données. 
 
 \noindent
 \begin{minipage}[t]{.48\textwidth}
@@ -1238,7 +1238,7 @@ Nos chambres prototypes sont insérées dans ce banc cosmique. Les \textit{strip
 	\label{labview}
 \end{minipage}
 
-La phase de lecture est déclenchée dès que les photomultiplicateurs (PM) sont en coïncidence (hormis le PM assurant le veto). L'application LabVIEW\textsuperscript{\textregistered} effectue à chaque lecture une sélection temporelle et affiche les \textit{strips} touchées pour chacun des trois seuils du HARDROC. Elle permet également d'afficher l'histogramme du nombre de fois ou une \textit{strip} a été touchée pour chaque seuil ainsi que la multiplicité pour chaque seuil. L'efficacité ainsi que la multiplicité pour chaque seuil sont aussi calculées.
+La phase de lecture est déclenchée dès que les photomultiplicateurs sont en coïncidence (hormis celui assurant le veto). L'application LabVIEW\textsuperscript{\textregistered} effectue à chaque lecture une sélection temporelle et affiche les \textit{strips} touchées pour chacun des trois seuils du HARDROC. Elle permet également d'afficher l'histogramme du nombre de fois où une \textit{strip} a été touchée pour chaque seuil. L'efficacité ainsi que la multiplicité pour chaque seuil sont aussi calculées.
 
  \subsubsection{Comparaison des efficacités des deux méthodes de construction}
  \label{BANCC}
@@ -1295,10 +1295,10 @@ Deux chambres par fixation mécanique ont donc été construites (cf.Fig~\ref{ch
 	\caption{Les deux chambres sur la ligne H2.}
 	\label{GCH2}
 \end{wrapfigure}
-Les deux chambres ont été placées sur la ligne H2 (cf.Fig~\ref{GCH2}) située dans la "North Area" (cf.Fig~\ref{complexe}) du SPS ainsi que deux autres chambres Bakélite appartenant à nos collègues italiens. Pour des raisons de simplicité et de sécurité \footnote{L'isobutane est imflammable.}, le mélange de gaz est constitué de 93\% \chemform{TFE}, 5\% \chemform{CO_2}, 2\% \chemform{SF_6}. Ce test en faisceaux avait pour but de se familiariser avec l'électronique de CMS ainsi que le système d'acquisition et le programme de prise de données utilisés par nos collègues du GIF++ travaillant sur les chambres de CMS. 
-Chacune des partitions de la chambre de basse résistivité (notée $A$, $B$, $C$ et $D$) est reliée un \textit{Time-to-Digital Converter} (TDC) CAEN V1190A (cf.Fig~\ref{TDC}) \cite{TDC}. Pour des raisons de câblage, seule la partition $A$ de la chambre \textit{"float glass"} a été connectée. Les TDC sont enfichés dans un \textit{crate} VERSAModule Eurocard (VME). Le crate est contrôlable à distance grâce à un module VME-USB2.0 Bridge CAEN V1718 (cf.Fig~\ref{TDC}) \cite{VME} relié par USB à un ordinateur. Les DB permettant de régler les seuils des chambres sont contrôlées grâce à une application LabVIEW\textsuperscript{\textregistered}. Les hautes tensions des chambres sont contrôlables par \textit{telnet}. 
+Les deux chambres ont été placées sur la ligne H2 (cf.Fig~\ref{GCH2}) située dans la "North Area" (cf.Fig~\ref{complexe}) du SPS ainsi que deux autres chambres en Bakélite appartenant à nos collègues italiens. Pour des raisons de simplicité et de sécurité \footnote{L'isobutane est imflammable.}, le mélange de gaz est constitué de 93\% \chemform{TFE}, 5\% \chemform{CO_2}, 2\% \chemform{SF_6}. Ce test en faisceaux avait pour but de se familiariser avec l'électronique de CMS ainsi qu'avec le système d'acquisition et le programme de prise de données utilisés par nos collègues du GIF++ travaillant sur les chambres de CMS. 
+Chacune des partitions de la chambre de basse résistivité (notée $A$, $B$, $C$ et $D$) est reliée à un \textit{Time-to-Digital Converter} (TDC) CAEN V1190A (cf.Fig~\ref{TDC}) \cite{TDC}. Pour des raisons de câblage, seule la partition $A$ de la chambre \textit{"float glass"} a été connectée. Les TDC sont enfichés dans un châssis VERSAModule Eurocard (VME). Le châssis est contrôlable à distance grâce à un module VME-USB2.0 Bridge CAEN V1718 (cf.Fig~\ref{TDC}) \cite{VME} relié par USB à un ordinateur. Les DB permettant de régler les seuils des chambres sont contrôlées grâce à une application LabVIEW\textsuperscript{\textregistered}. Les hautes tensions des chambres sont contrôlables par \textit{telnet}. 
 
-Les TDC ont une résolution temporelle de \SI{100}{\pico\second}. Ils enregistrent en continu dans une mémoire tampon les \textit{hits}. Un ensemble de quatre PM permet de détecter le passage des particules et de déclencher l'enregistrement d'une fenêtre temporelle de la mémoire tampon des TDC. Le \textit{timestamp} du début de cette fenêtre sélectionnée est réaligné avec $0$.
+Les TDC ont une résolution temporelle de \SI{100}{\pico\second}. Ils enregistrent en continu les hits dans une mémoire tampon. Un ensemble de quatre PM permet de détecter le passage des particules et de déclencher l'enregistrement d'une fenêtre temporelle de la mémoire tampon des TDC. Le \textit{timestamp} du début de cette fenêtre sélectionnée est réaligné avec $0$.
 
 L'efficacité est obtenue comme le rapport entre le nombre de lectures de la mémoire tampon contenant au moins un \textit{hit} dans la zone spatiale touchée par le faisceau ainsi que dans la fenêtre temporelle correspondant au signal (en rouge sur la figure \ref{struch2}) et le nombre total de lectures de la mémoire. L'estimation du bruit par \textit{strips} est obtenue par simple comptage du nombre de \textit{hits} en dehors de la zone du signal divisé par la durée totale d'enregistrement d'où l'on a soustrait la durée correspondant au signal.
 
@@ -1309,14 +1309,14 @@ L'efficacité est obtenue comme le rapport entre le nombre de lectures de la mé
 	\label{struch2}
 \end{figure}
 
-De nombreux scans ont été réalisés, notamment l'efficacité de la chambre en verre de basse résistivité en fonction de la haute tension pour différents seuils (cf.Fig~\ref{HVH2}), l'efficacité de la chambre en fonction du seuil à tension fixe (\SI{7000}{\volt}) (cf.Fig~\ref{THH2}).
+De nombreux scans ont été réalisés, notamment pour mesurer l'efficacité de la chambre en verre de basse résistivité en fonction de la haute tension pour différents seuils (cf.Fig~\ref{HVH2}), ou l'efficacité de la chambre en fonction du seuil à tension fixe (\SI{7000}{\volt}) (cf.Fig~\ref{THH2}).
 
 \noindent
 \begin{minipage}[t]{.48\textwidth}
 	\noindent
 	\centering
 	\includegraphics[width=1\textwidth]{GLA/HVH2.png}
-	\captionsetup{type=figure}\caption{Efficacité de la chambre en verre de basse résistivité en fonction de la haute tension appliquée pour différents seuils \SI{220}{\milli\volt} en noir, \SI{275}{\milli\volt} en rouge, \SI{300}{\milli\volt} en vert, \SI{350}{\milli\volt} en bleu. }
+	\captionsetup{type=figure}\caption{Efficacité de la chambre en verre de basse résistivité en fonction de la haute tension appliquée pour différents seuils (\SI{220}{\milli\volt} en noir, \SI{275}{\milli\volt} en rouge, \SI{300}{\milli\volt} en vert, \SI{350}{\milli\volt} en bleu). }
 	\label{HVH2}
 \end{minipage}%
 \hfill
@@ -1332,7 +1332,7 @@ On observe bien une baisse de l'efficacité avec l'augmentation du seuil appliqu
 
 Bien que l'efficacité semble correspondre aux résultats attendus, le niveau de bruit des chambres est très élevé, de l'ordre de $\sim\SI{e5}{\hit\per\strip\per\second}$ (cf.Fig~\ref{noisH2B}) pour la chambre de basse résistivité et de l'ordre de $\sim\SI{e3}{\hit\per\strip\per\second}$ (cf.Fig~\ref{noisH2H}) pour la chambre \textit{"float glass"}. 
 
-Les figures ont été réalisées sans faisceau, en utilisant un générateur de signal pour mimer la coïncidence des scintillateurs \textit{"false-trigger"}.
+Les mesures présentées sur ces figures ont été réalisées sans faisceau, en utilisant un générateur de signal pour mimer la coïncidence des scintillateurs \textit{"false-trigger"}.
 \vspace*{0.4cm}
 \begin{figure}[ht!]
 	\centering
@@ -1343,7 +1343,7 @@ Les figures ont été réalisées sans faisceau, en utilisant un générateur de
 	\caption{Taux de bruit par \textit{strip} pour les deux chambres. Les traits verticaux rouges représentent les limites des partitions. La tension appliquée est fixée à \SI{7000}{\volt} et le seuil à \SI{220}{\milli\volt}.}
 \end{figure}
 
-Une étude du taux de bruit en fonction de la haute tension (cf.Fig~\ref{HVNOISEH2}) ainsi que du seuil (cf.Fig~\ref{THNOISEH2}) a été effectuée. Afin de pouvoir comparer les deux chambres, seules leurs partitions C ont été analysées.
+Une étude du taux de bruit en fonction de la haute tension (cf.Fig~\ref{HVNOISEH2}) ainsi que du seuil (cf.Fig~\ref{THNOISEH2}) a été effectuée. Afin de pouvoir comparer les deux chambres, seules leurs partitions $C$ ont été analysées.
 Il est à noter que le seuil minimal avant de souffrir du bruit électronique est $\sim$\SI{180}{\milli\volt}.
 
 \noindent
@@ -1361,11 +1361,11 @@ Il est à noter que le seuil minimal avant de souffrir du bruit électronique es
 	\noindent
 	\centering
 	\includegraphics[width=0.70\textwidth]{GLA/THNOISEH2.png}
-	\captionsetup{type=figure}\caption{Taux de bruit des partitions C des chambres en fonction du seuil appliqué. La tension appliquée est fixée à \SI{7000}{\volt}. La chambre en verre standard (de basse résitivité) est en rouge (noir).}
+	\captionsetup{type=figure}\caption{Taux de bruit des partitions $C$ des chambres en fonction du seuil appliqué. La tension appliquée est fixée à \SI{7000}{\volt}. La chambre en verre standard (de basse résitivité) est en rouge (noir).}
 	\label{THNOISEH2}
 \end{minipage}%
 
-Une investigation approfondie a permis d'améliorer le câblage et notamment sa mise à la masse afin de réduire le bruit. Des tests plus poussés ont également été effectués à Lyon afin de mieux caractériser les FEB et de déceler ceux présentant des défauts. Tout ceci à conduit à la réduction du bruit d'un facteur \num{100}, celui-ci passant de $\sim\SI{e5}{\hit\per\strip\per\second}$ à $\sim\SI{e3}{\hit\per\strip\per\second}$.
+Une investigation approfondie a permis d'améliorer le câblage et notamment sa mise à la masse afin de réduire le bruit. Des tests plus poussés ont également été effectués à Lyon afin de mieux caractériser les FEB et de déceler ceux présentant des défauts. Tout ceci a conduit à la réduction du bruit d'un facteur \num{100}, celui-ci passant de $\sim\SI{e5}{\hit\per\strip\per\second}$ à $\sim\SI{e3}{\hit\per\strip\per\second}$.
 \vspace*{-0.5cm}
 \section{Programme d’analyse pour les chambres à électronique CMS}
 \vspace*{-0.4cm}
@@ -1378,9 +1378,9 @@ Chaque \textit{timestamp} des \textit{hits} d'un \textit{strip} est réaligné a
 \begin{equation}
 T^{'}_{n}=T_{n}-\bar{T}_{strip\, n}+\bar{T}_{chambre}
 \end{equation}
-avec $T^{'}_{n}$ le \textit{timestamp} du \textit{strip} $n$ aligné, $T_{n}$ le \textit{timestamp} du \textit{strip} $n$ non aligné $\bar{T}_{strip\, n}$ le \textit{timestamp} moyen du \textit{strip} $n$ et $\bar{T}_{chambre}$ le \textit{timestamp} moyen de la chambre. 
+avec $T^{'}_{n}$ le \textit{timestamp} du \textit{strip} $n$ aligné, $T_{n}$ le \textit{timestamp} du \textit{strip} $n$ non aligné, $\bar{T}_{strip\, n}$ le \textit{timestamp} moyen du \textit{strip} $n$ et $\bar{T}_{chambre}$ le \textit{timestamp} moyen de la chambre. 
 
-Un ajustement de la distribution des \textit{hits} en fonction du \textit{timestamp} grâce à MINUIT est effectué. 
+Un ajustement (avec MINUIT) de la distribution des \textit{hits} en fonction du \textit{timestamp} est effectué. 
 
 Plusieurs fonctions ont été testées :
 \begin{itemize}[label=$\bullet$]
@@ -1413,7 +1413,7 @@ La figure \ref{align} (\ref{nonalign}) montre un exemple d'ajustement du nombre 
 
 \subsection{Contamination de l'efficacité par les \textit{hits} de bruit}
 
-Le bruit dans nos chambres étant très élevé, nous avons développé un algorithme afin d'essayer de corriger l'efficacité afin de supprimer la contamination de celle-ci par les \textit{hits} provenant du bruit.
+Le bruit dans nos chambres étant très élevé, nous avons développé un algorithme afin d'essayer de corriger l'efficacité afin de supprimer sa contamination par les \textit{hits} provenant du bruit.
 
 L'efficacité dans la zone de détection $\epsilon^{signal}$ est calculée comme le nombre de déclenchements ayant au moins un \textit{hit} dans la zone temporelle $T^{signal}=\left[b-3c,b+3c\right]$ et dans la zone spatiale affectée par le faisceau.
 
@@ -1428,7 +1428,7 @@ L'efficacité dans la zone de détection $\epsilon^{signal}$ est calculée comme
 \end{equation}
 où $N^{lecture}$ est le nombre de déclenchements de lecture (nombre de \textit{triggers}).
 
-La partie de la fenêtre temporelle avant le début du passage des particules\footnote{La zone correspondant au bruit après le passage des particules n'est pas prise en compte afin d'éviter l'augmentation du bruit dû aux éventuels rebonds et diaphonies qui pourraient survenir après le passage des particules.} est découpée en intervalles $I_{n}=\left[t_{n}-t_{win},t_{n}+t_{win}\right]$ où $t_{n}$ représente le milieu de l'intervalle $n$ et $t_{win}$ la demie largeur de cet intervalle. Pour chaque intervalle $n$, le nombre moyen de \textit{hits} de bruit $\overline{N^{hits}_n}$ dans l'intervalle $n$ est calculé :
+La partie de la fenêtre temporelle avant le début du passage des particules\footnote{La zone correspondant au bruit après le passage des particules n'est pas prise en compte afin d'éviter l'augmentation du bruit dû aux éventuels rebonds et diaphonies qui pourraient survenir après leur passage.} est découpée en intervalles $I_{n}=\left[t_{n}-t_{win},t_{n}+t_{win}\right]$ où $t_{n}$ représente le milieu de l'intervalle $n$ et $t_{win}$ la demie largeur de cet intervalle. Pour chaque intervalle $n$, le nombre moyen de \textit{hits} de bruit $\overline{N^{hits}_n}$ dans l'intervalle $n$ est calculé :
 \begin{equation}
 \overline{N^{hits}_n}=\frac{\sum\limits_{i=1}^{N^{lecture}} N^{hits}_{n,i}}{N^{lecture}}
 \end{equation}
@@ -1492,7 +1492,7 @@ Le programme effectue également un calcul du taux de bruit et regroupe les \tex
 
 \section{Tests au GIF++}
 \vspace{-0.3cm}
-La chambre en verre de basse résistivité à été placée au GIF++ en août 2016 puis en octobre 2016.
+La chambre en verre de basse résistivité a été placée au GIF++ en août 2016 puis en octobre 2016.
 \vspace{-0.3cm}
 \subsection{Amélioration de la chambre RE1/1}
 \label{GIFFF3}
@@ -1501,7 +1501,7 @@ Le test en faisceaux du mois d'août nous a permis de comprendre certaines cause
 La chambre a donc subi quelques modifications notamment afin d'améliorer la compatibilité électromagnétique (CEM) \cite{charoy2012comp}:
 
 \begin{itemize}[label=$\bullet$]
-	\item Les FEB ont été rapprochées du plan de masse (cf.Fig~\ref{b2}). En effet, du fait de leur empilement, certaines des FEB se trouvaient éloignées du plan de masse. Ceci créant des perturbations par effet capacitif entre les soudures des FEB du haut et celles du bas.
+	\item Les FEB ont été rapprochées du plan de masse (cf.Fig~\ref{b2}). En effet, du fait de leur empilement, certaines des FEB s'en trouvaient éloignées, ce qui créait des perturbations par effet capacitif entre les soudures des FEB du haut et celles du bas.
 	\item Le support des FEB, précédemment en plexiglas (cf.Fig~\ref{b1}) a été remplacé par une plaque d'aluminium (cf.Fig~\ref{b2}) afin d'assurer une bonne masse au FEB ainsi que la continuité de la masse avec le capot.
 	\item Le câblage a été revu afin d'améliorer la connexion à la masse et d'éviter un éventuel effet antenne.
 	\item Les câbles à l'intérieur de la chambre (cf.Fig~\ref{a1}) ont été remplacés par des câbles coaxiaux et un plan de masse en cuivre a été installé (cf.Fig~\ref{a2}). Une extrémité de la masse des câbles coaxiaux a été soudée à ce plan de masse relié à la cassette afin d'éviter la diaphonie entre les câbles.
@@ -1573,11 +1573,11 @@ La chambre a donc subi quelques modifications notamment afin d'améliorer la com
 
 \subsection{Résultats du test en faisceaux d'octobre 2016}
 \label{GIFFF4}
-Grâce aux améliorations de la chambre, la diaphonie semble être devenue négligeable, ce qui a permis d'utiliser l'ajustement de la distribution du nombre de \textit{hits} avec une gaussienne plus constante (cf.Fig~\ref{ajust}).
+Grâce aux améliorations apportées à la chambre, la diaphonie semble être devenue négligeable, ce qui a permis d'utiliser l'ajustement de la distribution du nombre de \textit{hits} avec une gaussienne plus un terme constant (cf.Fig~\ref{ajust}).
 \begin{figure}[!ht]
 	\centering
 	\scalebox{1.35}{\includetex{GLA/TimeDistryBC}}
-	\caption{Distribution temporelle des \textit{hits}. La distribution correspond à \num{5000} événements déclenchés par des muons. La tension appliquée est fixée à \SI{8.6}{\kilo\volt} et le seuil à \SI{150}{\pico\coulomb}. Le signal provenant des muons est observé autour de $t_0=\SI{270}{\nano\second}$ et peut être ajusté par la somme d'une Gaussienne de résolution $\sigma=\SI{11}{\nano\second}$ et d'une constante. La zone du signal correspond à une fenêtre de $\pm 3 \sigma$ autour de $t_0$. Le flux de $\gamma$ de la source est estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}.}.
+	\caption{Distribution temporelle des \textit{hits}. La distribution correspond à \num{5000} événements déclenchés par des muons. La tension appliquée est fixée à \SI{8.6}{\kilo\volt} et le seuil à \SI{0.15}{\pico\coulomb}. Le signal provenant des muons est observé autour de $t_0=\SI{270}{\nano\second}$ et peut être ajusté par la somme d'une Gaussienne de résolution $\sigma=\SI{11}{\nano\second}$ et d'une constante. La zone du signal correspond à une fenêtre de $\pm 3 \sigma$ autour de $t_0$. Le flux de $\gamma$ de la source est estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}.}.
 	\label{ajust}
 \end{figure}
 
@@ -1598,7 +1598,7 @@ La valeur de l'efficacité est prise comme le centre de l'intervalle $\left[\eps
 \end{equation}
 où $\epsilon_{stat}$ est l'erreur statistique.
 
-On remarque que l'efficacité reste supérieure à 80\% même pour un flux de gammas estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}. Le plateau se déplace de plus en plus vers les hautes tensions à mesure que le flux de gammas augmente; cela est dû à l'effet d'écrantage. L'efficacité ainsi obtenue n'est cependant pas optimale. En effet, le centre du faisceau était proche de la zone morte d'environ \SI{2}{\centi\meter} entre les partitions $B$ et $C$, au milieu de la chambre, créée pour faire passer les câbles récoltant les signaux de ces partitions (cf.Fig~\ref{a2}). En considérant le fait que le faisceau avait une largeur d'environ \SI{2}{\centi\meter}, la perte d'efficacité due à cette zone morte à été estimée à \num{10}\%.
+On remarque que l'efficacité reste supérieure à 80\% même pour un flux de gammas estimé à \SI{3}{\kilo\hertz\per\square\centi\meter}. Le plateau se déplace de plus en plus vers les hautes tensions à mesure que le flux de gammas augmente; cela est dû à l'effet d'écrantage. L'efficacité ainsi obtenue n'est cependant pas optimale. En effet, le centre du faisceau était proche de la zone morte d'environ \SI{2}{\centi\meter} entre les partitions $B$ et $C$, au milieu de la chambre, créée pour faire passer les câbles récoltant les signaux de ces partitions (cf.Fig~\ref{a2}). En considérant le fait que le faisceau avait une largeur d'environ \SI{2}{\centi\meter}, la perte d'efficacité due à cette zone morte a été estimée à \num{10}\%.
 
 \begin{figure}[!ht]
 	\centering
@@ -1618,7 +1618,7 @@ On peut remarquer que le \textit{cluster size} reste en dessous de \num{1.8} et 
 
 La probabilité de \textit{streamer} reste inférieure à 10\% lorsque la source de $\gamma$ est OFF et est négligeable en présence d'un flux de $\gamma$ supérieur à \SI{0.7}{\kilo\hertz\per\square\centi\meter}.
 
-Après le test en faisceaux, nous avons procédé à l'ouverture de la chambre. Nous avons découvert que la peinture résistive avait accroché au PCB comportant les \textit{strips} (cf.Fig~\ref{peinture}). Des dépôts ainsi que la polymérisation de produits de réaction du gaz se sont également fixés sur les faces intérieures des électrodes (cf.Fig~\ref{depot2}) et notamment près des perles servant de \textit{spacer} (cf.Fig~\ref{perle}). 
+Après le test en faisceaux, nous avons procédé à l'ouverture de la chambre. Nous avons découvert que la peinture résistive avait accroché au PCB comportant les \textit{strips} (cf.Fig~\ref{peinture}). Des dépôts, ainsi que la polymérisation de produits de réaction du gaz, se sont également fixés sur les faces intérieures des électrodes (cf.Fig~\ref{depot2}) et notamment près des perles servant de \textit{spacer} (cf.Fig~\ref{perle}). 
 
 \noindent
 \begin{minipage}[th!]{1\textwidth}
@@ -1660,80 +1660,80 @@ Après le test en faisceaux, nous avons procédé à l'ouverture de la chambre. 
 		\end{minipage}%
 	\end{minipage}%
 	\addtocounter{figure}{-1}
-	\captionsetup{type=figure}\caption{Différents problèmes rencontrés à l'ouverture de la chambre.}
+	\captionsetup{type=figure}\caption{Différents problèmes observés à l'ouverture de la chambre.}
 	\label{probs}
 \end{minipage}%
 
- À certains endroits, le verre a même été attaqué. Ceci pourrait expliquer le bruit important (\SI{400}{\hertz\per\square\centi\meter}) et semble compatible avec les observations faites sur les chambres de petites dimensions. Cependant, la circulation du gaz était régulière et les tuyaux étaient en cuivre afin d'éviter la contamination du gaz par l'humidité. Un test de l'humidité sur la ligne de gaz n'a pas révélé de contamination (\num{750} ppm pour notre ligne sèche contre \num{12000} ppm pour la ligne humide). Ceci nous a amené à penser que le gaz de CMS n'était peut être pas adapté à ces chambres. De plus nos collègues chinois nous ont signalé que le taux de \chemform{SF_6} était peut-être trop faible pour ces verres. L'attaque du verre par le gaz a dû être accéléré par les valeurs du courant lorsque nous avons poussé les valeurs de la haute tension ($>$\SI{10}{\kilo\volt}) à comparer à la valeur de fonctionnement typique de \SI{7}{\kilo\volt}.
+ À certains endroits, le verre a même été attaqué. Ceci pourrait expliquer le bruit important (\SI{400}{\hertz\per\square\centi\meter}) et semble compatible avec les observations faites sur les chambres de petites dimensions. Cependant, la circulation du gaz était régulière et les tuyaux étaient en cuivre afin d'éviter la contamination du gaz par l'humidité. Un test de l'humidité sur la ligne de gaz n'a pas révélé de contamination (\num{750} ppm pour notre ligne sèche contre \num{12000} ppm pour la ligne humide). Ceci nous a amenés à penser que le gaz de CMS n'était peut-être pas adapté à ces chambres. De plus nos collègues chinois nous ont signalés que le taux de \chemform{SF_6} était peut-être trop faible pour ces verres. L'attaque du verre par le gaz a dû être accéléré par les valeurs du courant lors de l'augmentation de la haute tension ($>$\SI{10}{\kilo\volt}) par rapport à la valeur de fonctionnement typique de \SI{7}{\kilo\volt}.
  
  \section{Étude du bruit et du courant en fonction du pourcentage de \texorpdfstring{\chemform{SF_6}}{SF6}}
  \label{SF66}
- Afin de faire les tests de bruit en fonction du pourcentage de \chemform{SF_6} dans le mélange gazeux, la chambre a été démontée et les verres nettoyés de leur peinture. Les verres ont été retournés et repeints des côtés intacts avant d'être remontés faces abîmées en dehors des \textit{gaps}. Le PCB a été changé et une couche de Mylar a été insérée entre les verres et celui-ci. De plus, lors des tests après montage, nous avons constaté des créations de plasma entre les couches des verres sur les bords de ceux-ci. Un film de Kapton a donc été ajouté sur les bords des verres. Le gaz utilisé est celui de ILC (\chemform{TFE}, \chemform{CO_2}, \chemform{SF_6}). En parallèle, un test avec une nouvelle chambre $\num{32}\times\num{30}\si{\square\centi\meter}$ utilisée au GIF++ a été effectué au CERN avec le gaz de CMS, l'électronique basée sur les HARDROC et le PCB à \textit{strips}.
+ Afin de réaliser des les tests de bruit en fonction du pourcentage de \chemform{SF_6} dans le mélange gazeux, la chambre a été démontée et les verres nettoyés de leur peinture. Les verres ont été retournés et repeints sur les côtés intacts avant d'être remontés, faces abîmées en dehors des \textit{gaps}. Le PCB a été changé et une couche de Mylar a été insérée entre les verres et celui-ci. De plus, lors des tests après montage, nous avons constaté des créations de plasma entre les couches des verres sur leurs bords. Un film de Kapton a donc été ajouté sur ces bords. Le gaz utilisé est celui de ILC (\chemform{TFE}, \chemform{CO_2}, \chemform{SF_6}). En parallèle, un test avec une nouvelle chambre $\num{32}\times\num{30} \si{\square\centi\meter}$ utilisée au GIF++ a été effectué au CERN avec le gaz de CMS, l'électronique basée sur les HARDROC et le PCB à \textit{strips}.
  
- La chambre de type RE1/1 a été amenée au banc de test cosmique précédemment décrit section \ref{banc}, page~\pageref{banc}. La carte de test est la même que précédemment. Cependant, afin de mesurer le taux de bruit de la chambre, la coïncidence des scintillateurs a été remplacée par un générateur de fonctions mimant le signal de la coïncidence des scintillateurs à haute fréquence afin que celle-ci soit largement supérieure au taux de muons traversant la chambre. Les \textit{hits} ainsi enregistrés sont donc majoritairement des \textit{hits} de bruit. Le taux de bruit estimé pour un \textit{strip} $n$ est donné par la formule :
+ La chambre de type RE1/1 a été testée sur le banc cosmique décrit précédemment section \ref{banc}, page~\pageref{banc}. La carte de test est la même que précédemment. Cependant, afin de mesurer le taux de bruit de la chambre, la coïncidence des scintillateurs a été remplacée par un générateur de fonctions mimant le signal de la coïncidence des scintillateurs à haute fréquence, afin que celle-ci soit largement supérieure au taux de muons traversant la chambre. Les \textit{hits} ainsi enregistrés sont donc majoritairement des \textit{hits} de bruit. Le taux de bruit estimé pour un \textit{strip} $n$ est donné par la formule :
  \begin{equation}
  N_n^{bruit}=\frac{N_n^{hits}}{N_{trigger}T}
  \end{equation}
- où $N_n^{hits}$ est le nombre de \textit{hits} enregistrés pendant la prise de mesure, $N_{trigger}$ le nombre de \textit{"false trigger"} produit par le générateur de fonction et $T$ la durée d'une fenêtre d'acquisition.
+ où $N_n^{hits}$ est le nombre de \textit{hits} enregistrés pendant la prise de mesures, $N_{trigger}$ le nombre de \textit{"false trigger"} produits par le générateur de fonction et $T$ la durée d'une fenêtre d'acquisition.
  
- La figure \ref{CurrentDOME} montre le courant dans la chambre de type RE1/1 en fonction du pourcentage de \chemform{SF_6} dans le mélange de gaz. Pour les mesures prises sur le banc cosmique un ajustement des tensions en tenant compte de la variation de la température et de la pression est effectué. Cet ajustement applique la même formule que celle de CMS. Les valeurs des courants sont les moyennes de \num{30} mesures. À titre de comparaison, le courant de la chambre quand celle-ci était au GIF++ avec la source OFF est également présent. Cependant, ces courants ne sont pas moyennés et aucun ajustement de la tension n'était effectué.
+ La figure \ref{CurrentDOME} montre le courant dans la chambre de type RE1/1 en fonction du pourcentage de \chemform{SF_6} dans le mélange de gaz. Pour les mesures prises sur le banc cosmique, un ajustement des tensions en tenant compte de la variation de la température et de la pression est effectué. Cet ajustement applique la même formule que celle de CMS. Les valeurs des courants sont les moyennes de \num{30} mesures. À titre de comparaison, le courant de la chambre quand celle-ci était au GIF++ avec la source OFF est également présenté. Cependant, ces courants ne sont pas moyennés et aucun ajustement de la tension n'a été effectué.
  
 \begin{figure}[ht!]
 	\centering
 	\scalebox{1.55}{\includetex{GLA/CurrentRE11}}
-	\captionsetup{type=figure}\caption{Courant dans la chambre RE1/1 en fonction du pourcentage de \chemform{SF_6} dans le mélange de gaz de type ILC(\chemform{TFE}, \chemform{CO_2}, \chemform{SF_6}) ainsi que pour le mélange de gaz CMS.}
+	\captionsetup{type=figure}\caption{Courant dans la chambre RE1/1 en fonction du pourcentage de \chemform{SF_6} dans le mélange de gaz de type ILC (\chemform{TFE}, \chemform{CO_2}, \chemform{SF_6}), ainsi que pour le mélange de gaz CMS.}
 	\label{CurrentDOME}
 \end{figure}
 
 Comme prévu, le \chemform{SF_6} étant un gaz très électronégatif servant à contrôler l'excès d'électrons lors d'une avalanche, moins celui-ci est abondant dans le mélange de gaz et plus le courant dans la chambre augmente. Cela est dû au fait que les avalanches contiennent plus d'électrons puisqu'ils ne sont pas réabsorbés. La probabilité de \textit{streamer} augmente également, accroissant le courant dans les chambres. Un facteur de $\sim 3-4$ est constaté entre le courant de la chambre avec le mélange à 5\% de \chemform{SF_6} et celui avec le mélange à \num{0.3}\% de \chemform{SF_6}.
 
-Le courant mesuré pour la chambre de basse résistivité de taille $\num{32}\times\num{30}\si{\square\centi\meter}$ donne des résultats similaires lorsque l'on tient compte de sa surface plus petite que celle de la chambre RE1/1.
+Le courant mesuré pour la chambre de basse résistivité de taille $\num{32}\times\num{30} \si{\square\centi\meter}$ donne des résultats similaires lorsque l'on tient compte de sa surface plus petite que celle de la chambre RE1/1.
 
 \newpage
-Le taux de bruit moyen pour la partition B de la chambre RE1/1 en fonction de la tension pour différentes proportions de \chemform{SF_6} est donné figure \ref{bruitB}.
+Le taux de bruit moyen pour la partition $B$ de la chambre RE1/1 en fonction de la tension pour différentes proportions de \chemform{SF_6} est montré \ref{bruitB}.
 
  
  \begin{figure}[ht!]
  	\centering
  	\includegraphics[width=0.705\textwidth]{GLA/NoisvsSF6.png}
- 	\captionsetup{type=figure}\caption{Taux de bruit dans la partition B de la chambre RE1/1 en fonction de la tension appliquée pour différentes proportions de \chemform{SF_6}. Le seuil appliqué est de \SI{0.17}{\pico\coulomb}.}
+ 	\captionsetup{type=figure}\caption{Taux de bruit dans la partition $B$ de la chambre RE1/1 en fonction de la tension appliquée pour différentes proportions de \chemform{SF_6}. Le seuil appliqué est de \SI{0.17}{\pico\coulomb}.}
  	\label{bruitB}
  \end{figure}
  
  Le bruit a été réduit par rapport à la période de tests en faisceaux. Ceci peut être dû à une meilleure compatibilité électromagnétique ainsi qu'à la pose du kapton le long des verres. Comme attendu, le taux de bruit augmente à mesure que baisse la proportion de \chemform{SF_6}. Pour le gaz avec 5\% de \chemform{SF_6}, le taux de \textit{hits} de bruit est compris entre \num{10} et \num{20} \si{\hertz\per\square\centi\meter}.
  
- Le taux de bruit de la partition B en fonction de la tension pour plusieurs seuils dans le cas du mélange de gaz à 5\% et 3\% de \chemform{SF_6} est donné par la figure \ref{bruitB2}.
+ Le taux de bruit de la partition $B$ en fonction de la tension pour plusieurs seuils dans le cas du mélange de gaz à 5\% et 3\% de \chemform{SF_6} est présenté figure \ref{bruitB2}.
   
 \begin{figure}[ht!]
 	\centering
-	\subfloat[]{\includegraphics[width=0.705\textwidth]{GLA/Noise5p100.png}} 
+	\subfloat[\label{ta}]{\includegraphics[width=0.705\textwidth]{GLA/Noise5p100.png}} 
 	\hfill
-	\subfloat[]{\includegraphics[width=0.705\textwidth]{GLA/Noise3p100.png}}
-	\caption{Taux de bruit dans la partition B de la chambre RE1/1 en fonction de la tension appliquée pour différents seuils. La proportion de \chemform{SF_6} est de \num{5}\% (haut) et \num{3}\% (bas).}
+	\subfloat[\label{tb}]{\includegraphics[width=0.705\textwidth]{GLA/Noise3p100.png}}
+	\caption{Taux de bruit dans la partition $B$ de la chambre RE1/1 en fonction de la tension appliquée pour différents seuils. La proportion de \chemform{SF_6} est de \num{5}\% (\textcolor{gray}{a}) et \num{3}\% (\textcolor{gray}{b}).}
     \label{bruitB2}
 \end{figure}  
   
 Pour les chambres placées dans le banc de test au CERN, un scan en tension a été effectué afin de mesurer le taux de bruit et l'efficacité des chambres.
 
-La figure \ref{effi904Chi} (\ref{effi904Bak}) montre l'efficacité et le taux de bruit pour la chambre en verre de basse résistivité (en Bakélite) en fonction de la tension appliquée pour le mélange de gaz CMS. Le seuil appliqué est de \SI{72}{\femto\coulomb}. Dans le cas de la chambre en verre une étude de l'efficacité en fonction de la haute tension appliquée pour un proportion de \num{5}\% de \chemform{SF_6} a également été réalisée (courbe rouge sur la figure \ref{effi904Chi}).
+La figure \ref{effi904Chi} (\ref{effi904Bak}) montre l'efficacité et le taux de bruit pour la chambre en verre de basse résistivité (en Bakélite) en fonction de la tension appliquée pour le mélange de gaz CMS. Le seuil appliqué est de \SI{72}{\femto\coulomb}. Dans le cas de la chambre en verre, une étude de l'efficacité en fonction de la haute tension appliquée pour une proportion de \num{5}\% de \chemform{SF_6} a également été réalisée (courbe rouge sur la figure \ref{effi904Chi}).
  
 \begin{figure}[ht!]
 	\centering
-	\subfloat[Efficacité et taux de bruit pour la chambre en verre de basse résistivité.]{\scalebox{0.95}{\includetex{GLA/EffiNoiseChi}}\label{effi904Chi}} 
+	\subfloat[Efficacité et taux de bruit pour la chambre en verre de basse résistivité.\label{tta}]{\scalebox{0.95}{\includetex{GLA/EffiNoiseChi}}\label{effi904Chi}} 
 	\\
 	\vspace*{-0.2cm}
-	\subfloat[Efficacité et taux de bruit pour la chambre en Bakélite.]{\scalebox{0.95}{\includetex{GLA/EffiNoiseBak}}\label{effi904Bak}}
-	\caption{Efficacité (vert) et taux de bruit (bleu) pour la chambre en verre de basse résistivité (haut) et en Bakélite (bas) pour le mélange de gaz CMS. Le taux de bruit de la chambre de basse résistivité pour le mélange à 5\% de \chemform{SF_6} est également donné (rouge). Le seuil appliqué est de \SI{72}{\femto\coulomb}.}
+	\subfloat[Efficacité et taux de bruit pour la chambre en Bakélite.\label{ttb}]{\scalebox{0.95}{\includetex{GLA/EffiNoiseBak}}\label{effi904Bak}}
+	\caption{Efficacité (vert) et taux de bruit (bleu) pour la chambre en verre de basse résistivité (\textcolor{gray}{a}) et en Bakélite (\textcolor{gray}{b}) pour le mélange de gaz CMS. Le taux de bruit de la chambre de basse résistivité pour le mélange à 5\% de \chemform{SF_6} est également donné (rouge). Le seuil appliqué est de \SI{72}{\femto\coulomb}.}
 \end{figure}  
 
-Les deux chambres présentent une bonne efficacité de détection des muons. La chambre en Bakélite fonctionne parfaitement avec l'électronique à base de HARDROC et à très bas seuils. Cependant la chambre en verre de basse résistivité a un taux de bruit nettement supérieur à la chambre en Bakélite ($\sim$\num{7}). Les résultats du taux de bruit de la chambre de basse résistivité semblent confirmer ceux obtenus en parallèle à Lyon. Le taux de \chemform{SF_6} est un facteur très important pour les électrodes en verre de basse résistivité. Vers le point de fonctionnement (\SI{7000}{\volt}) le taux de bruit pour un mélange composé de \num{0.3}\% de \chemform{SF_6} est multiplié par \num{5} par rapport au mélange avec \num{5}\% de \chemform{SF_6}. De plus, des problèmes de CEM semblent demeurer pour la chambre RE1/1.
+Les deux chambres présentent une bonne efficacité de détection des muons. La chambre en Bakélite fonctionne parfaitement avec l'électronique à base de HARDROC et à très bas seuils. Cependant la chambre en verre de basse résistivité a un taux de bruit nettement supérieur à la chambre en Bakélite (facteur $\sim\num{7}$). Les résultats du taux de bruit de la chambre de basse résistivité semblent confirmer ceux obtenus en parallèle à Lyon. Le taux de \chemform{SF_6} est un facteur très important pour les électrodes en verre de basse résistivité. Vers le point de fonctionnement (\SI{7000}{\volt}) le taux de bruit pour un mélange composé de \num{0.3}\% de \chemform{SF_6} est multiplié par \num{5} par rapport au mélange avec \num{5}\% de \chemform{SF_6}. De plus, des problèmes de CEM semblent demeurer pour la chambre RE1/1.
 
 
-\section{Tests en faisceaux au GIF++ des chambres \texorpdfstring{\num{32}$\times$\num{30} \si{\square\centi\meter}}{32cm x 30cm} à \textit{strips}}
+\section{Tests en faisceaux au GIF++ des chambres \texorpdfstring{$\num{32}\times\num{30}\si{\square\centi\meter}$}{32cm x 30cm} à \textit{strips}}
 \label{GIFF4}
 \label{smallchamber}
 
-Les deux chambres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} double \textit{gaps} à \textit{strips} (cf. figs \ref{DoubleGap}, \ref{SchemePS} et \ref{nouvellestrip}) en verre de basse résistivité et en Bakélite ont été insérées dans le bâti des anciennes chambres de basse résistivité \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.Fig~\ref{bati}) en octobre 2017. Les nouvelles chambres utilisent l'électronique HARDROC, tout comme les anciennes encore présentes sur le bâti. Cependant, il a été décidé de ne pas utiliser le programme développé section \ref{prog}, page~\pageref{prog}. En effet, celui-ci reposant sur la création de traces, afin de calculer l'efficacité des chambres, les anciennes chambres sont nécessaires à leurs créations. Cependant, au vu des vieillissements constatés des chambres, nous avons décidé d'occulter les données récoltées par celles-ci.
+Les deux chambres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} double \textit{gaps} à \textit{strips} (cf. figs \ref{DoubleGap}, \ref{SchemePS} et \ref{nouvellestrip}), en verre de basse résistivité et en Bakélite, ont été insérées dans le bâti des anciennes chambres de basse résistivité \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} (cf.Fig~\ref{bati}) en octobre 2017. Les nouvelles chambres utilisent l'électronique HARDROC, tout comme les anciennes encore présentes sur le bâti. Cependant, il a été décidé de ne pas utiliser le programme développé section \ref{prog}, page~\pageref{prog}. En effet, celui-ci reposant sur la création de traces afin de calculer l'efficacité des chambres, les anciennes chambres sont nécessaires à leurs créations. Au vu des vieillissements constatés des chambres, nous avons donc décidé d'occulter les données récoltées par celles-ci.
 
 \marginpar
 {
@@ -1750,7 +1750,7 @@ Les deux chambres de \SI{32}{\centi\meter}$\times$\SI{30}{\centi\meter} double \
 	\label{bati}
 \end{figure}
 \vspace*{-0.2cm}
-Afin de calculer l'efficacité des nouvelles chambres, le programme développé pour la chambre RE1/1, basé sur le comptage sera utilisé. Les scintillateurs nécessaires à la détection du passage des muons sont ceux fournis par nos collègues du GIF++. Les coïncidences des scintillateurs sont incluses dans les données grâce à une DIF configurée pour enregistrer ces coïncidences comme le passage d'un seuil d'un \textit{pad} (cf.Table~\ref{encodage}) (seuil0 pour le déclenchement d'un scintillateur, seuil1 pour le déclenchement de l'autre et seuil2 pour la coïncidence des deux scintillateurs). Il est ainsi possible, de sélectionner une fenêtre temporelle autour de ces coïncidences, en tenant compte du décalage temporel dû à la longueur des câbles portant le signal des scintillateurs (cf.Fig~\ref{decalage}). 
+Afin de calculer l'efficacité des nouvelles chambres, le programme développé pour la chambre RE1/1 et basé sur le comptage est utilisé. Les scintillateurs nécessaires à la détection du passage des muons sont ceux fournis par nos collègues du GIF++. Les coïncidences des scintillateurs sont incluses dans les données grâce à une DIF configurée pour enregistrer ces coïncidences comme le passage d'un seuil d'un \textit{pad} (cf.Table~\ref{encodage}) (seuil0 pour le déclenchement d'un scintillateur, seuil1 pour le déclenchement de l'autre et seuil2 pour la coïncidence des deux scintillateurs). Il est ainsi possible de sélectionner une fenêtre temporelle autour de ces coïncidences, en tenant compte du décalage temporel dû à la longueur des câbles portant le signal des scintillateurs (cf.Fig~\ref{decalage}). 
 
 \begin{figure}[ht!]
 	\centering
@@ -1767,32 +1767,32 @@ Afin de calculer l'efficacité des nouvelles chambres, le programme développé 
 	\subfloat[\SI{1.8}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration6.png}} 
 	\hfill
 	\subfloat[\SI{2}{\micro\second}]{\includegraphics[width=0.14\textwidth]{GLA/BIFtimeCalibration7.png}} 
-	\caption{Distribution du nombre de \textit{hits} en fonction du numéro du \textit{strip} pour divers temps, avant le signal de la coïncidence des scintillateurs, reçue dans les données LCIO.}
+	\caption{Distribution du nombre de \textit{hits} en fonction du numéro du \textit{strip}, pour divers temps avant le signal de la coïncidence des scintillateurs, reçue dans les données LCIO.}
 	\label{decalage}
 \end{figure}  
 
-Les \textit{hits} correspondant au passage du faisceau arrivent donc entre  \SI{1.2}{\micro\second} et \SI{1.6}{\micro\second} avant les données de coïncidence des scintillateurs. Une fenêtre de temps centrée sur le temps $t_{scinti}-t_{retard}$ avec $t_{retard}=\SI{1.4}{\micro\second}$ est ensuite extraite des données LCIO pour chaque trigger. Un convertisseur permet ensuite de passer les données du format LCIO au format ROOT. Il est ainsi possible de tourner sur les données des HARDROC comme s'il s'agissait de données venant de l'électronique de CMS.
+Les \textit{hits} correspondant au passage du faisceau arrivent donc entre  \SI{1.2}{\micro\second} et \SI{1.6}{\micro\second} avant les données de coïncidence des scintillateurs. Une fenêtre de temps centrée sur le temps $t_{scinti}-t_{retard}$ avec $t_{retard}=\SI{1.4}{\micro\second}$ est ensuite extraite des données LCIO pour chaque trigger. Un convertisseur permet alors de passer les données du format LCIO au format ROOT. Il est ainsi possible de tourner sur les données des HARDROC comme s'il s'agissait de données venant de l'électronique de CMS.
 
 Ce test en faisceaux a démontré l'utilité du elog. En effet, un programme en PYROOT a été réalisé afin d'accepter en entrée les données du elog sous forme CSV et de générer en sortie des graphiques permettant de suivre les \textit{runs} pris et leurs paramètres et d'améliorer la décision des types de \textit{runs} qu'il restait à prendre (cf.Figs~\ref{elogutil1}, \ref{elogutil2}, \ref{elogutil3}, \ref{elogutil4}). Le programme a permis également de créer automatiquement les listes de \textit{runs} à utiliser selon le type de graphique à produire. 
 
 \begin{figure}[ht!]
 	\centering
 	\scalebox{1.13}{\includetex{GLA/hSetupName_order}} 
-	\caption{Distribution du nombres de \textit{runs} en fonction du nom de la configuration dans la \textit{database}. \num{30} \textit{runs} ont été écrits dans le mauvais elog (M3) suite à une erreur de configuration.}
+	\caption{Distribution du nombres de \textit{runs} en fonction du nom de la configuration dans la \textit{database}.}
 	\label{elogutil1}	
 \end{figure}
 
 \begin{figure}[ht!]
 	\centering
 	\scalebox{1.13}{\includetex{GLA/hStatusBeamVsSource}}
-	\caption{Corrélation entre le statut du faisceau et le statut de la source pour les \num{126} \textit{runs} ayant été inscrits dans le bon elog.}
+	\caption{Corrélation entre le statut du faisceau et le statut de la source pour les \num{126} \textit{runs} ayant été inscrits dans le bon elog.\num{30} \textit{runs} ont été écrits dans le mauvais elog (M3) suite à une erreur de configuration.}
 	\label{elogutil2}	
 \end{figure}
 
 \begin{figure}[ht!]
 	\centering
 	\scalebox{1.313}{\includetex{GLA/hAttScanThresholdVsNrun}}
-	\caption{Nombre de \textit{runs} en fonction du seuil, l'axe $z$ est le nombre d'atténuateurs de la source pour les seuils correspondants. Un exemple avec "PAD1(3,250L)" qui représente le nom de la chambre (PAD1), le numéro du seuil ($i'=$1,2 ou 3) et la valeur $\mbox{DAQ}_{i=i'-1}$ appliquée (250) (cf.Eq~\ref{equationn}).}
+	\caption{Nombre de \textit{runs} en fonction du seuil, l'axe $z$ étant le nombre d'atténuateurs de la source pour les seuils correspondants. Un exemple avec "PAD1(3,250L)" qui représente le nom de la chambre (PAD1), le numéro du seuil ($i'=$1,2 ou 3) et la valeur $\mbox{DAQ}_{i=i'-1}$ appliquée (250) (cf.Eq~\ref{equationn}).}
 	\label{elogutil3}	
 \end{figure}
 
@@ -1826,4 +1826,4 @@ L'intégration de ces courbes permet d'en déduire la charge moyenne récoltée 
 
 \section{Conclusion}
 
-Le comportement des chambres constituées d'électrodes de verre de basse résistivité a été analysé lors de nombreux tests en faisceaux (DESY, PS, SPS, GIF++). Tous ces tests ont montré que ces chambres sont capables de supporter des flux de particules importants tout en conservant une très bonne efficacité. Deux types de mélanges gazeux ont été testés (ILC et CMS) ainsi que plusieurs mélanges comportant diverses proportions de \chemform{SF_6}. La proportion de \chemform{SF_6} s'avère être un facteur important du bruit des chambres construites avec ces verres. Dans le cas du mélange de CMS (\num{0.3}\% de \chemform{SF_6}) le taux de bruit est de l'ordre de \SI{50}{\hertz\per\square\centi\meter}. Le vieillissement au GIF++ a montré les limites de notre installation de gaz. Une meilleure disposition a été réalisée, mais les chambres avaient déjà souffert de notre mauvaise installation. Deux solutions ont été apportées afin de construire des chambres de grandes dimensions (RE1/1) avec ces verres dont la dimension ne peut excéder \num{32}$\times$\num{30}\si{\square\centi\meter}. La méthode par fixation mécanique a été retenue car elle n'utilise pas de colle qui pourrait se dégrader avec le temps et les radiations. L'étanchéité de cette chambre est également assurée par la cassette elle-même évitant ainsi le gonflement de la couche de gaz entre les électrodes. Cependant, une étude plus approfondie de la CEM de cette chambre est nécessaire afin de réduire encore le bruit. Cette chambre a cependant montré une très bonne efficacité ($\sim$\num{90}\%) même à un flux de $\gamma$ de \SI{3}{\kilo\hertz\per\square\centi\meter}, soit \num{3} fois le flux demandé dans le TDR. Finalement, des tests ont montré que l'électronique à base de HARDROC fonctionne parfaitement avec des chambres en Bakélite.
+Le comportement des chambres constituées d'électrodes de verre de basse résistivité a été analysé lors de nombreux tests en faisceaux (DESY, PS, SPS, GIF++). Tous ces tests ont montré que ces chambres sont capables de supporter des flux de particules importants tout en conservant une très bonne efficacité. Deux types de mélanges gazeux ont été testés (ILC et CMS) ainsi que plusieurs mélanges comportant diverses proportions de \chemform{SF_6}. La proportion de \chemform{SF_6} s'avère être un facteur important du bruit des chambres construites avec ces verres. Dans le cas du mélange de CMS (\num{0.3}\% de \chemform{SF_6}) le taux de bruit est de l'ordre de \SI{50}{\hertz\per\square\centi\meter}. Le vieillissement au GIF++ a montré les limites de notre installation de gaz. Un dispositif mieux adapté a été réalisé, mais les chambres avaient déjà souffert de notre mauvaise installation. Deux solutions ont été apportées afin de construire des chambres de grandes dimensions (RE1/1) avec ces verres, dont la dimension ne peut excéder $\num{32}\times\num{30} \si{\square\centi\meter}$. La méthode par fixation mécanique a été retenue car elle n'utilise pas de colle qui pourrait se dégrader avec le temps et les radiations. L'étanchéité de cette chambre est également assurée par la cassette elle-même, évitant ainsi le gonflement de la couche de gaz entre les électrodes. Cependant, une étude plus approfondie de la CEM de cette chambre est nécessaire afin de réduire encore le bruit. Cette chambre a cependant montré une très bonne efficacité ($\sim$\num{90}\%) même à un flux de $\gamma$ de \SI{3}{\kilo\hertz\per\square\centi\meter}, soit \num{3} fois le flux demandé dans le TDR. Finalement, des tests ont montré que l'électronique à base de HARDROC fonctionne parfaitement avec des chambres en Bakélite.
